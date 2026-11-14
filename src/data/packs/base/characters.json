@@ -3,6 +3,9 @@
   "characters": [
     {
       "id": "antonio-belpaese",
+      "gameIds": [
+        "ANTONIO"
+      ],
       "name": "Antonio Belpaese",
       "source": "base",
       "startingWeapons": [
@@ -19,6 +22,9 @@
     },
     {
       "id": "imelda-belpaese",
+      "gameIds": [
+        "IMELDA"
+      ],
       "name": "Imelda Belpaese",
       "source": "base",
       "startingWeapons": [
@@ -35,6 +41,9 @@
     },
     {
       "id": "pasqualina-belpaese",
+      "gameIds": [
+        "PASQUALINA"
+      ],
       "name": "Pasqualina Belpaese",
       "source": "base",
       "startingWeapons": [
@@ -51,6 +60,9 @@
     },
     {
       "id": "gennaro-belpaese",
+      "gameIds": [
+        "GENNARO"
+      ],
       "name": "Gennaro Belpaese",
       "source": "base",
       "startingWeapons": [
@@ -67,6 +79,9 @@
     },
     {
       "id": "arca-ladonna",
+      "gameIds": [
+        "CIRO"
+      ],
       "name": "Arca Ladonna",
       "source": "base",
       "startingWeapons": [
@@ -83,6 +98,9 @@
     },
     {
       "id": "porta-ladonna",
+      "gameIds": [
+        "PORTA"
+      ],
       "name": "Porta Ladonna",
       "source": "base",
       "startingWeapons": [
@@ -99,6 +117,9 @@
     },
     {
       "id": "lama-ladonna",
+      "gameIds": [
+        "LAMA"
+      ],
       "name": "Lama Ladonna",
       "source": "base",
       "startingWeapons": [
@@ -115,6 +136,9 @@
     },
     {
       "id": "poe-ratcho",
+      "gameIds": [
+        "CAMILLO"
+      ],
       "name": "Poe Ratcho",
       "source": "base",
       "startingWeapons": [
@@ -131,6 +155,9 @@
     },
     {
       "id": "suor-clerici",
+      "gameIds": [
+        "GERMANA"
+      ],
       "name": "Suor Clerici",
       "source": "base",
       "startingWeapons": [
@@ -147,6 +174,9 @@
     },
     {
       "id": "dommario",
+      "gameIds": [
+        "DOMMARIO"
+      ],
       "name": "Dommario",
       "source": "base",
       "startingWeapons": [
@@ -163,6 +193,9 @@
     },
     {
       "id": "krochi-freetto",
+      "gameIds": [
+        "CROCI"
+      ],
       "name": "Krochi Freetto",
       "source": "base",
       "startingWeapons": [
@@ -179,6 +212,9 @@
     },
     {
       "id": "christine-davain",
+      "gameIds": [
+        "CRISTINA"
+      ],
       "name": "Christine Davain",
       "source": "base",
       "startingWeapons": [
@@ -195,6 +231,9 @@
     },
     {
       "id": "pugnala-provola",
+      "gameIds": [
+        "PUGNALA"
+      ],
       "name": "Pugnala Provola",
       "source": "base",
       "startingWeapons": [
@@ -212,6 +251,9 @@
     },
     {
       "id": "giovanna-grana",
+      "gameIds": [
+        "GIOVANNA"
+      ],
       "name": "Giovanna Grana",
       "source": "base",
       "startingWeapons": [
@@ -228,6 +270,9 @@
     },
     {
       "id": "poppea-pecorina",
+      "gameIds": [
+        "POPPEA"
+      ],
       "name": "Poppea Pecorina",
       "source": "base",
       "startingWeapons": [
@@ -244,6 +289,9 @@
     },
     {
       "id": "concetta-caciotta",
+      "gameIds": [
+        "CONCETTA"
+      ],
       "name": "Concetta Caciotta",
       "source": "base",
       "startingWeapons": [
@@ -260,6 +308,9 @@
     },
     {
       "id": "mortaccio",
+      "gameIds": [
+        "MORTACCIO"
+      ],
       "name": "Mortaccio",
       "source": "base",
       "startingWeapons": [
@@ -276,6 +327,9 @@
     },
     {
       "id": "yatta-cavallo",
+      "gameIds": [
+        "CAVALLO"
+      ],
       "name": "Yatta Cavallo",
       "source": "base",
       "startingWeapons": [
@@ -292,6 +346,9 @@
     },
     {
       "id": "bianca-ramba",
+      "gameIds": [
+        "MARIA"
+      ],
       "name": "Bianca Ramba",
       "source": "base",
       "startingWeapons": [
@@ -308,6 +365,9 @@
     },
     {
       "id": "o-sole-meeo",
+      "gameIds": [
+        "TATANKA"
+      ],
       "name": "O'Sole Meeo",
       "source": "base",
       "startingWeapons": [
@@ -324,6 +384,9 @@
     },
     {
       "id": "sir-ambrojoe",
+      "gameIds": [
+        "AMBROGIO"
+      ],
       "name": "Sir Ambrojoe",
       "source": "base",
       "startingWeapons": [
@@ -340,6 +403,9 @@
     },
     {
       "id": "iguana-gallo-valletto",
+      "gameIds": [
+        "PINO"
+      ],
       "name": "Iguana Gallo Valletto",
       "source": "base",
       "startingWeapons": [
@@ -356,6 +422,9 @@
     },
     {
       "id": "divano-thelma",
+      "gameIds": [
+        "FEBBRA"
+      ],
       "name": "Divano Thelma",
       "source": "base",
       "startingWeapons": [
@@ -372,6 +441,9 @@
     },
     {
       "id": "zi-assunta-belpaese",
+      "gameIds": [
+        "ASSUNTA"
+      ],
       "name": "Zi'Assunta Belpaese",
       "source": "base",
       "startingWeapons": [
@@ -388,6 +460,9 @@
     },
     {
       "id": "queen-sigma",
+      "gameIds": [
+        "SIGMA"
+      ],
       "name": "Queen Sigma",
       "nameDeHint": "Königin Sigma",
       "source": "base",
@@ -405,6 +480,9 @@
     },
     {
       "id": "bat-robbert",
+      "gameIds": [
+        "TUPU"
+      ],
       "name": "Bat Robbert",
       "source": "base",
       "startingWeapons": [
@@ -421,6 +499,9 @@
     },
     {
       "id": "zi-appunta-belpaese",
+      "gameIds": [
+        "EX_ZIAPPUNTA"
+      ],
       "name": "Zi'Appunta Belpaese",
       "source": "base",
       "startingWeapons": [
@@ -437,6 +518,9 @@
     },
     {
       "id": "big-troubler",
+      "gameIds": [
+        "EX_BIGTROUBLER"
+      ],
       "name": "Big Troubler",
       "nameDeHint": "Großer Unruhestifter",
       "source": "base",
@@ -454,6 +538,9 @@
     },
     {
       "id": "she-moon-eeta",
+      "gameIds": [
+        "SHEMOONITA"
+      ],
       "name": "She-Moon Eeta",
       "source": "base",
       "startingWeapons": [
@@ -470,6 +557,9 @@
     },
     {
       "id": "para-kooleo",
+      "gameIds": [
+        "EX_PARACOOLIO"
+      ],
       "name": "Para Kooleo",
       "source": "base",
       "startingWeapons": [
@@ -486,6 +576,9 @@
     },
     {
       "id": "santa-ladonna",
+      "gameIds": [
+        "SANTA"
+      ],
       "name": "Santa Ladonna",
       "source": "base",
       "startingWeapons": [
@@ -502,6 +595,9 @@
     },
     {
       "id": "gazebo",
+      "gameIds": [
+        "YOLO"
+      ],
       "name": "Gazebo",
       "source": "base",
       "startingWeapons": [
@@ -518,6 +614,9 @@
     },
     {
       "id": "chula-reh",
+      "gameIds": [
+        "EX_CHULAREH"
+      ],
       "name": "Chula-Reh",
       "source": "base",
       "startingWeapons": [
@@ -534,6 +633,9 @@
     },
     {
       "id": "space-dude",
+      "gameIds": [
+        "SPACEDUDE"
+      ],
       "name": "Space Dude",
       "nameDeHint": "Weltraum-Typ",
       "source": "base",
@@ -551,6 +653,9 @@
     },
     {
       "id": "exdash-exiviiq",
+      "gameIds": [
+        "EXDASH"
+      ],
       "name": "Exdash Exiviiq",
       "source": "base",
       "startingWeapons": [
@@ -567,6 +672,9 @@
     },
     {
       "id": "toastie",
+      "gameIds": [
+        "PANINI"
+      ],
       "name": "Toastie",
       "source": "base",
       "startingWeapons": [
@@ -583,6 +691,9 @@
     },
     {
       "id": "smith-iv",
+      "gameIds": [
+        "SMITH"
+      ],
       "name": "Smith IV",
       "source": "base",
       "startingWeapons": [
@@ -599,6 +710,9 @@
     },
     {
       "id": "random",
+      "gameIds": [
+        "ARENGIJUS"
+      ],
       "name": "Random",
       "source": "base",
       "startingWeapons": [],
@@ -617,6 +731,9 @@
     },
     {
       "id": "boon-marrabbio",
+      "gameIds": [
+        "NEO"
+      ],
       "name": "Boon Marrabbio",
       "source": "base",
       "startingWeapons": [
@@ -633,6 +750,9 @@
     },
     {
       "id": "avatar-infernas",
+      "gameIds": [
+        "AVATAR"
+      ],
       "name": "Avatar Infernas",
       "source": "base",
       "startingWeapons": [
@@ -649,6 +769,9 @@
     },
     {
       "id": "minnah-mannarah",
+      "gameIds": [
+        "GRAZIELLA"
+      ],
       "name": "Minnah Mannarah",
       "source": "base",
       "startingWeapons": [
@@ -665,6 +788,9 @@
     },
     {
       "id": "leda",
+      "gameIds": [
+        "VERANDA"
+      ],
       "name": "Leda",
       "source": "base",
       "startingWeapons": [
@@ -681,6 +807,9 @@
     },
     {
       "id": "cosmo-pavone",
+      "gameIds": [
+        "PAVONE"
+      ],
       "name": "Cosmo Pavone",
       "source": "base",
       "startingWeapons": [],
@@ -699,6 +828,9 @@
     },
     {
       "id": "peppino",
+      "gameIds": [
+        "PEPPINO"
+      ],
       "name": "Peppino",
       "source": "base",
       "startingWeapons": [
@@ -715,6 +847,9 @@
     },
     {
       "id": "big-trouser",
+      "gameIds": [
+        "PANTALONE"
+      ],
       "name": "Big Trouser",
       "nameDeHint": "Große Hose",
       "source": "base",
@@ -732,6 +867,9 @@
     },
     {
       "id": "missingn",
+      "gameIds": [
+        "FINO"
+      ],
       "name": "missingN▯",
       "source": "base",
       "startingWeapons": [
@@ -752,6 +890,9 @@
     },
     {
       "id": "gains-boros",
+      "gameIds": [
+        "BOROS"
+      ],
       "name": "Gains Boros",
       "source": "base",
       "startingWeapons": [
@@ -768,6 +909,9 @@
     },
     {
       "id": "gyorunton",
+      "gameIds": [
+        "DRAGOGION"
+      ],
       "name": "Gyorunton",
       "source": "base",
       "startingWeapons": [
@@ -784,6 +928,9 @@
     },
     {
       "id": "mask-of-the-red-death",
+      "gameIds": [
+        "NOSTRO"
+      ],
       "name": "Mask of the Red Death",
       "nameDeHint": "Maske des Roten Todes",
       "source": "base",
@@ -801,6 +948,9 @@
     },
     {
       "id": "bats-bats-bats",
+      "gameIds": [
+        "BATSBATSBATS"
+      ],
       "name": "Bats Bats Bats",
       "nameDeHint": "Fledermäuse Fledermäuse Fledermäuse",
       "source": "base",
@@ -818,6 +968,9 @@
     },
     {
       "id": "rose-de-infernas",
+      "gameIds": [
+        "ROSE"
+      ],
       "name": "Rose De Infernas",
       "source": "base",
       "startingWeapons": [
@@ -834,6 +987,9 @@
     },
     {
       "id": "torino",
+      "gameIds": [
+        "TORINO"
+      ],
       "name": "Torino",
       "source": "base",
       "startingWeapons": [],
@@ -852,6 +1008,9 @@
     },
     {
       "id": "scorej-oni",
+      "gameIds": [
+        "SCOREJ"
+      ],
       "name": "Scorej-Oni",
       "source": "base",
       "startingWeapons": [],
@@ -870,6 +1029,9 @@
     },
     {
       "id": "gyoruntin",
+      "gameIds": [
+        "GYORUNTIN"
+      ],
       "name": "Gyoruntin",
       "source": "base",
       "startingWeapons": [
@@ -886,6 +1048,9 @@
     },
     {
       "id": "secretino-dagsson",
+      "gameIds": [
+        "EX_GIOCARE"
+      ],
       "name": "Secretino Dagsson",
       "source": "base",
       "startingWeapons": [
@@ -902,6 +1067,9 @@
     },
     {
       "id": "space-dette",
+      "gameIds": [
+        "SPACEDUDETTE"
+      ],
       "name": "Space Dette",
       "source": "base",
       "startingWeapons": [

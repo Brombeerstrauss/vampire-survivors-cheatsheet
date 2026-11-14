@@ -3,6 +3,9 @@
   "characters": [
     {
       "id": "crewmate-dino",
+      "gameIds": [
+        "C1_CREWMATE"
+      ],
       "name": "Crewmate Dino",
       "nameDeHint": "Crewmitglied Dino",
       "source": "emergency-meeting",
@@ -20,6 +23,9 @@
     },
     {
       "id": "engineer-gino",
+      "gameIds": [
+        "C1_ENGINEER"
+      ],
       "name": "Engineer Gino",
       "nameDeHint": "Ingenieur Gino",
       "source": "emergency-meeting",
@@ -37,6 +43,9 @@
     },
     {
       "id": "ghost-lino",
+      "gameIds": [
+        "C1_GHOST"
+      ],
       "name": "Ghost Lino",
       "nameDeHint": "Geist Lino",
       "source": "emergency-meeting",
@@ -54,6 +63,9 @@
     },
     {
       "id": "shapeshifter-nino",
+      "gameIds": [
+        "C1_SHAPESHIFTER"
+      ],
       "name": "Shapeshifter Nino",
       "nameDeHint": "Gestaltwandler Nino",
       "source": "emergency-meeting",
@@ -71,6 +83,9 @@
     },
     {
       "id": "guardian-pina",
+      "gameIds": [
+        "C1_GUARDIAN"
+      ],
       "name": "Guardian Pina",
       "nameDeHint": "Wächterin Pina",
       "source": "emergency-meeting",
@@ -88,6 +103,9 @@
     },
     {
       "id": "impostor-rina",
+      "gameIds": [
+        "C1_IMPOSTOR"
+      ],
       "name": "Impostor Rina",
       "nameDeHint": "Hochstaplerin Rina",
       "source": "emergency-meeting",
@@ -105,6 +123,9 @@
     },
     {
       "id": "scientist-mina",
+      "gameIds": [
+        "C1_SCIENTIST"
+      ],
       "name": "Scientist Mina",
       "nameDeHint": "Wissenschaftlerin Mina",
       "source": "emergency-meeting",
@@ -122,6 +143,9 @@
     },
     {
       "id": "horse",
+      "gameIds": [
+        "C1_HORSE"
+      ],
       "name": "Horse",
       "nameDeHint": "Pferd",
       "source": "emergency-meeting",
@@ -139,6 +163,9 @@
     },
     {
       "id": "megalo-impostor-rina",
+      "gameIds": [
+        "C1_MEGAIMPOSTOR"
+      ],
       "name": "Megalo Impostor Rina",
       "nameDeHint": "Megalo-Hochstaplerin Rina",
       "source": "emergency-meeting",

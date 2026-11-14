@@ -3,6 +3,9 @@
   "characters": [
     {
       "id": "tsunanori-mido",
+      "gameIds": [
+        "EME_RAPIERDUAL"
+      ],
       "name": "Tsunanori Mido",
       "source": "emerald-diorama",
       "startingWeapons": [
@@ -23,6 +26,9 @@
     },
     {
       "id": "bonnie-blair",
+      "gameIds": [
+        "EME_PUNCHKICK"
+      ],
       "name": "Bonnie Blair",
       "source": "emerald-diorama",
       "startingWeapons": [
@@ -43,6 +49,9 @@
     },
     {
       "id": "formina-franklyn",
+      "gameIds": [
+        "EME_CANNONGUN"
+      ],
       "name": "Formina Franklyn",
       "source": "emerald-diorama",
       "startingWeapons": [
@@ -63,6 +72,9 @@
     },
     {
       "id": "diva-no-5",
+      "gameIds": [
+        "EME_MECHKATANA"
+      ],
       "name": "Diva No. 5",
       "source": "emerald-diorama",
       "startingWeapons": [
@@ -80,6 +92,9 @@
     },
     {
       "id": "ameya-aisling",
+      "gameIds": [
+        "EME_MAGICALL"
+      ],
       "name": "Ameya Aisling",
       "source": "emerald-diorama",
       "startingWeapons": [
@@ -100,6 +115,9 @@
     },
     {
       "id": "siugnas",
+      "gameIds": [
+        "EME_SWORDBITE"
+      ],
       "name": "Siugnas",
       "source": "emerald-diorama",
       "startingWeapons": [
@@ -120,6 +138,9 @@
     },
     {
       "id": "final-emperor",
+      "gameIds": [
+        "EME_EXGREATSWORD"
+      ],
       "name": "Final Emperor",
       "nameDeHint": "Letzter Kaiser",
       "source": "emerald-diorama",
@@ -137,6 +158,9 @@
     },
     {
       "id": "dolores",
+      "gameIds": [
+        "EME_EXAXE"
+      ],
       "name": "Dolores",
       "source": "emerald-diorama",
       "startingWeapons": [
@@ -153,6 +177,9 @@
     },
     {
       "id": "macha-alter-ego",
+      "gameIds": [
+        "EME_EXKNIFE"
+      ],
       "name": "Macha Alter Ego",
       "source": "emerald-diorama",
       "startingWeapons": [
@@ -173,6 +200,9 @@
     },
     {
       "id": "lita-caryx",
+      "gameIds": [
+        "EME_EXSPEAR"
+      ],
       "name": "Lita Caryx",
       "source": "emerald-diorama",
       "startingWeapons": [
@@ -189,6 +219,9 @@
     },
     {
       "id": "kugutsu",
+      "gameIds": [
+        "EME_PUPALL"
+      ],
       "name": "Kugutsu",
       "source": "emerald-diorama",
       "startingWeapons": [
@@ -208,6 +241,9 @@
     },
     {
       "id": "mr-s",
+      "gameIds": [
+        "EME_MRS"
+      ],
       "name": "Mr. S",
       "source": "emerald-diorama",
       "startingWeapons": [
@@ -224,6 +260,9 @@
     },
     {
       "id": "lolo-hiss-meow-and-purr",
+      "gameIds": [
+        "EME_CATS"
+      ],
       "name": "Lolo, Hiss, Meow, and Purr",
       "source": "emerald-diorama",
       "startingWeapons": [],
@@ -238,6 +277,9 @@
     },
     {
       "id": "kina",
+      "gameIds": [
+        "EME_KINA"
+      ],
       "name": "Kina",
       "source": "emerald-diorama",
       "startingWeapons": [],
@@ -252,6 +294,9 @@
     },
     {
       "id": "imakoo",
+      "gameIds": [
+        "EME_IMAKOO"
+      ],
       "name": "Imakoo",
       "source": "emerald-diorama",
       "startingWeapons": [],
@@ -266,6 +311,9 @@
     },
     {
       "id": "malevolent-door-spirit",
+      "gameIds": [
+        "EME_DEMON"
+      ],
       "name": "Malevolent Door Spirit",
       "nameDeHint": "Bösartiger Türgeist",
       "source": "emerald-diorama",

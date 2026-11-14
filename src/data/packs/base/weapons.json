@@ -3,6 +3,9 @@
   "weapons": [
     {
       "id": "whip",
+      "gameIds": [
+        "WHIP"
+      ],
       "name": "Whip",
       "nameDe": "Peitsche",
       "source": "base",
@@ -18,6 +21,9 @@
     },
     {
       "id": "magic-wand",
+      "gameIds": [
+        "MAGIC_MISSILE"
+      ],
       "name": "Magic Wand",
       "nameDe": "Zauberstab",
       "source": "base",
@@ -33,6 +39,9 @@
     },
     {
       "id": "knife",
+      "gameIds": [
+        "KNIFE"
+      ],
       "name": "Knife",
       "nameDe": "Messer",
       "source": "base",
@@ -48,6 +57,9 @@
     },
     {
       "id": "axe",
+      "gameIds": [
+        "AXE"
+      ],
       "name": "Axe",
       "nameDe": "Axt",
       "source": "base",
@@ -63,6 +75,9 @@
     },
     {
       "id": "cross",
+      "gameIds": [
+        "CROSS"
+      ],
       "name": "Cross",
       "nameDe": "Kreuz",
       "source": "base",
@@ -78,6 +93,9 @@
     },
     {
       "id": "king-bible",
+      "gameIds": [
+        "HOLYBOOK"
+      ],
       "name": "King Bible",
       "nameDe": "Königsbibel",
       "source": "base",
@@ -93,6 +111,9 @@
     },
     {
       "id": "fire-wand",
+      "gameIds": [
+        "FIREBALL"
+      ],
       "name": "Fire Wand",
       "nameDe": "Feuerstab",
       "source": "base",
@@ -108,6 +129,9 @@
     },
     {
       "id": "garlic",
+      "gameIds": [
+        "GARLIC"
+      ],
       "name": "Garlic",
       "nameDe": "Knoblauch",
       "source": "base",
@@ -123,6 +147,9 @@
     },
     {
       "id": "santa-water",
+      "gameIds": [
+        "HOLYWATER"
+      ],
       "name": "Santa Water",
       "nameDe": "Santa Wasser",
       "source": "base",
@@ -138,6 +165,9 @@
     },
     {
       "id": "runetracer",
+      "gameIds": [
+        "DIAMOND"
+      ],
       "name": "Runetracer",
       "nameDe": "Runenläufer",
       "source": "base",
@@ -153,6 +183,9 @@
     },
     {
       "id": "lightning-ring",
+      "gameIds": [
+        "LIGHTNING"
+      ],
       "name": "Lightning Ring",
       "nameDe": "Blitzring",
       "source": "base",
@@ -168,6 +201,9 @@
     },
     {
       "id": "pentagram",
+      "gameIds": [
+        "PENTAGRAM"
+      ],
       "name": "Pentagram",
       "nameDe": "Pentagramm",
       "source": "base",
@@ -183,6 +219,9 @@
     },
     {
       "id": "peachone",
+      "gameIds": [
+        "SILF"
+      ],
       "name": "Peachone",
       "source": "base",
       "kind": "base",
@@ -197,6 +236,9 @@
     },
     {
       "id": "ebony-wings",
+      "gameIds": [
+        "SILF2"
+      ],
       "name": "Ebony Wings",
       "nameDe": "Ebenholz-Flügel",
       "source": "base",
@@ -212,6 +254,9 @@
     },
     {
       "id": "phiera-der-tuphello",
+      "gameIds": [
+        "GUNS"
+      ],
       "name": "Phiera Der Tuphello",
       "source": "base",
       "kind": "base",
@@ -226,6 +271,9 @@
     },
     {
       "id": "eight-the-sparrow",
+      "gameIds": [
+        "GUNS2"
+      ],
       "name": "Eight The Sparrow",
       "nameDe": "Acht der Spatz",
       "source": "base",
@@ -241,6 +289,9 @@
     },
     {
       "id": "gatti-amari",
+      "gameIds": [
+        "GATTI"
+      ],
       "name": "Gatti Amari",
       "source": "base",
       "kind": "base",
@@ -255,6 +306,9 @@
     },
     {
       "id": "song-of-mana",
+      "gameIds": [
+        "SONG"
+      ],
       "name": "Song of Mana",
       "nameDe": "Mana-Lied",
       "source": "base",
@@ -270,6 +324,9 @@
     },
     {
       "id": "shadow-pinion",
+      "gameIds": [
+        "TRAPANO"
+      ],
       "name": "Shadow Pinion",
       "source": "base",
       "kind": "base",
@@ -284,6 +341,9 @@
     },
     {
       "id": "clock-lancet",
+      "gameIds": [
+        "LANCET"
+      ],
       "name": "Clock Lancet",
       "nameDe": "Uhr-Lanzette",
       "source": "base",
@@ -299,6 +359,9 @@
     },
     {
       "id": "laurel",
+      "gameIds": [
+        "LAUREL"
+      ],
       "name": "Laurel",
       "nameDe": "Lorbeer",
       "source": "base",
@@ -314,6 +377,9 @@
     },
     {
       "id": "vento-sacro",
+      "gameIds": [
+        "VENTO"
+      ],
       "name": "Vento Sacro",
       "source": "base",
       "kind": "base",
@@ -328,6 +394,9 @@
     },
     {
       "id": "bone",
+      "gameIds": [
+        "BONE"
+      ],
       "name": "Bone",
       "nameDe": "Knochen",
       "source": "base",
@@ -343,6 +412,9 @@
     },
     {
       "id": "cherry-bomb",
+      "gameIds": [
+        "CHERRY"
+      ],
       "name": "Cherry Bomb",
       "nameDe": "Kirschbombe",
       "source": "base",
@@ -358,6 +430,9 @@
     },
     {
       "id": "carrello",
+      "gameIds": [
+        "CART2"
+      ],
       "name": "Carréllo",
       "source": "base",
       "kind": "base",
@@ -372,6 +447,9 @@
     },
     {
       "id": "celestial-dusting",
+      "gameIds": [
+        "FLOWER"
+      ],
       "name": "Celestial Dusting",
       "source": "base",
       "kind": "base",
@@ -386,6 +464,9 @@
     },
     {
       "id": "la-robba",
+      "gameIds": [
+        "ROBBA"
+      ],
       "name": "La Robba",
       "source": "base",
       "kind": "base",
@@ -400,6 +481,9 @@
     },
     {
       "id": "greatest-jubilee",
+      "gameIds": [
+        "JUBILEE"
+      ],
       "name": "Greatest Jubilee",
       "nameDeHint": "Größtes Jubiläum",
       "source": "base",
@@ -415,6 +499,9 @@
     },
     {
       "id": "bracelet",
+      "gameIds": [
+        "TRIASSO1"
+      ],
       "name": "Bracelet",
       "source": "base",
       "kind": "base",
@@ -429,6 +516,9 @@
     },
     {
       "id": "candybox",
+      "gameIds": [
+        "CANDYBOX"
+      ],
       "name": "Candybox",
       "source": "base",
       "kind": "base",
@@ -443,6 +533,9 @@
     },
     {
       "id": "victory-sword",
+      "gameIds": [
+        "VICTORY"
+      ],
       "name": "Victory Sword",
       "source": "base",
       "kind": "base",
@@ -457,6 +550,9 @@
     },
     {
       "id": "flames-of-misspell",
+      "gameIds": [
+        "MISSPELL"
+      ],
       "name": "Flames of Misspell",
       "nameDeHint": "Flammen des Verschreibens",
       "source": "base",
@@ -472,6 +568,9 @@
     },
     {
       "id": "pako-battiliar",
+      "gameIds": [
+        "BATTILIA"
+      ],
       "name": "Pako Battiliar",
       "source": "base",
       "kind": "base",
@@ -486,6 +585,9 @@
     },
     {
       "id": "ammo-appalate",
+      "gameIds": [
+        "EX_AMMO1"
+      ],
       "name": "Ammo Appalate",
       "source": "base",
       "kind": "base",
@@ -500,6 +602,9 @@
     },
     {
       "id": "unearthly-bolt",
+      "gameIds": [
+        "EX_FLIK1"
+      ],
       "name": "Unearthly Bolt",
       "nameDeHint": "Überirdischer Blitz",
       "source": "base",
@@ -515,6 +620,9 @@
     },
     {
       "id": "glass-fandango",
+      "gameIds": [
+        "ICELANCE"
+      ],
       "name": "Glass Fandango",
       "nameDeHint": "Glas-Fandango",
       "source": "base",
@@ -530,6 +638,9 @@
     },
     {
       "id": "penshin-fatcha",
+      "gameIds": [
+        "EX_PENSHIN"
+      ],
       "name": "Penshin Fatcha",
       "source": "base",
       "kind": "base",
@@ -544,6 +655,10 @@
     },
     {
       "id": "tonno-subito",
+      "gameIds": [
+        "EX_PENSHIN_EVO7",
+        "EX_PENSHIN_STATIC7"
+      ],
       "name": "Tonno Subito",
       "source": "base",
       "kind": "base",
@@ -558,6 +673,10 @@
     },
     {
       "id": "tonnado",
+      "gameIds": [
+        "EX_PENSHIN_EVO2",
+        "EX_PENSHIN_STATIC2"
+      ],
       "name": "Tonnado",
       "source": "base",
       "kind": "base",
@@ -572,6 +691,10 @@
     },
     {
       "id": "tonn-omoto",
+      "gameIds": [
+        "EX_PENSHIN_EVO3",
+        "EX_PENSHIN_STATIC3"
+      ],
       "name": "Tonn'omoto",
       "source": "base",
       "kind": "base",
@@ -586,6 +709,10 @@
     },
     {
       "id": "tonn-oddeeo",
+      "gameIds": [
+        "EX_PENSHIN_EVO4",
+        "EX_PENSHIN_STATIC4"
+      ],
       "name": "Tonn'oddeeo",
       "source": "base",
       "kind": "base",
@@ -600,6 +727,10 @@
     },
     {
       "id": "tonne",
+      "gameIds": [
+        "EX_PENSHIN_EVO1",
+        "EX_PENSHIN_STATIC1"
+      ],
       "name": "Tonne",
       "source": "base",
       "kind": "base",
@@ -614,6 +745,10 @@
     },
     {
       "id": "unsurpassed",
+      "gameIds": [
+        "EX_PENSHIN_EVO6",
+        "EX_PENSHIN_STATIC6"
+      ],
       "name": "Unsurpassed",
       "nameDeHint": "Unübertroffen",
       "source": "base",
@@ -629,6 +764,9 @@
     },
     {
       "id": "santa-javelin",
+      "gameIds": [
+        "SANTAJAVELIN"
+      ],
       "name": "Santa Javelin",
       "nameDeHint": "Heiliger Wurfspeer",
       "source": "base",
@@ -644,6 +782,9 @@
     },
     {
       "id": "gaze-of-gaea",
+      "gameIds": [
+        "EX_GAEA1"
+      ],
       "name": "Gaze of Gaea",
       "nameDeHint": "Blick der Gaia",
       "source": "base",
@@ -659,6 +800,9 @@
     },
     {
       "id": "magi-stone",
+      "gameIds": [
+        "EX_MAGISTONE1"
+      ],
       "name": "Magi-Stone",
       "nameDeHint": "Magierstein",
       "source": "base",
@@ -674,6 +818,9 @@
     },
     {
       "id": "phas3r",
+      "gameIds": [
+        "PHASER"
+      ],
       "name": "Phas3r",
       "source": "base",
       "kind": "base",
@@ -688,6 +835,9 @@
     },
     {
       "id": "chaos-rune",
+      "gameIds": [
+        "FOLLOWER_KNIFE1"
+      ],
       "name": "Chaos Rune",
       "nameDeHint": "Chaosrune",
       "source": "base",
@@ -703,6 +853,9 @@
     },
     {
       "id": "arma-dio",
+      "gameIds": [
+        "ARMADIO"
+      ],
       "name": "Arma Dio",
       "source": "base",
       "kind": "base",
@@ -717,6 +870,9 @@
     },
     {
       "id": "bloody-tear",
+      "gameIds": [
+        "VAMPIRICA"
+      ],
       "name": "Bloody Tear",
       "nameDe": "Blutige Träne",
       "source": "base",
@@ -732,6 +888,9 @@
     },
     {
       "id": "holy-wand",
+      "gameIds": [
+        "HOLY_MISSILE"
+      ],
       "name": "Holy Wand",
       "nameDe": "Heiliger Zauberstab",
       "source": "base",
@@ -747,6 +906,9 @@
     },
     {
       "id": "thousand-edge",
+      "gameIds": [
+        "THOUSAND"
+      ],
       "name": "Thousand Edge",
       "nameDe": "Tausendschneide",
       "source": "base",
@@ -762,6 +924,9 @@
     },
     {
       "id": "death-spiral",
+      "gameIds": [
+        "SCYTHE"
+      ],
       "name": "Death Spiral",
       "nameDe": "Todesspirale",
       "source": "base",
@@ -777,6 +942,9 @@
     },
     {
       "id": "heaven-sword",
+      "gameIds": [
+        "HEAVENSWORD"
+      ],
       "name": "Heaven Sword",
       "nameDe": "Himmelsschwert",
       "source": "base",
@@ -792,6 +960,9 @@
     },
     {
       "id": "unholy-vespers",
+      "gameIds": [
+        "VESPERS"
+      ],
       "name": "Unholy Vespers",
       "nameDe": "Unheilige Vesper",
       "source": "base",
@@ -807,6 +978,9 @@
     },
     {
       "id": "hellfire",
+      "gameIds": [
+        "HELLFIRE"
+      ],
       "name": "Hellfire",
       "nameDe": "Höllenfeuer",
       "source": "base",
@@ -822,6 +996,9 @@
     },
     {
       "id": "soul-eater",
+      "gameIds": [
+        "VORTEX"
+      ],
       "name": "Soul Eater",
       "nameDe": "Seelenfresser",
       "source": "base",
@@ -837,6 +1014,9 @@
     },
     {
       "id": "la-borra",
+      "gameIds": [
+        "BORA"
+      ],
       "name": "La Borra",
       "source": "base",
       "kind": "evolved",
@@ -851,6 +1031,9 @@
     },
     {
       "id": "no-future",
+      "gameIds": [
+        "ROCHER"
+      ],
       "name": "NO FUTURE",
       "source": "base",
       "kind": "evolved",
@@ -865,6 +1048,9 @@
     },
     {
       "id": "thunder-loop",
+      "gameIds": [
+        "LOOP"
+      ],
       "name": "Thunder Loop",
       "nameDe": "Donnerschlinge",
       "source": "base",
@@ -880,6 +1066,9 @@
     },
     {
       "id": "gorgeous-moon",
+      "gameIds": [
+        "SIRE"
+      ],
       "name": "Gorgeous Moon",
       "nameDe": "Prächtiger Mond",
       "source": "base",
@@ -895,6 +1084,9 @@
     },
     {
       "id": "vicious-hunger",
+      "gameIds": [
+        "STIGRANGATTI"
+      ],
       "name": "Vicious Hunger",
       "source": "base",
       "kind": "evolved",
@@ -909,6 +1101,9 @@
     },
     {
       "id": "mannajja",
+      "gameIds": [
+        "MANNAGGIA"
+      ],
       "name": "Mannajja",
       "source": "base",
       "kind": "evolved",
@@ -923,6 +1118,9 @@
     },
     {
       "id": "valkyrie-turner",
+      "gameIds": [
+        "TRAPANO2"
+      ],
       "name": "Valkyrie Turner",
       "source": "base",
       "kind": "evolved",
@@ -937,6 +1135,9 @@
     },
     {
       "id": "infinite-corridor",
+      "gameIds": [
+        "CORRIDOR"
+      ],
       "name": "Infinite Corridor",
       "source": "base",
       "kind": "evolved",
@@ -951,6 +1152,9 @@
     },
     {
       "id": "crimson-shroud",
+      "gameIds": [
+        "SHROUD"
+      ],
       "name": "Crimson Shroud",
       "source": "base",
       "kind": "evolved",
@@ -965,6 +1169,9 @@
     },
     {
       "id": "bi-bracelet",
+      "gameIds": [
+        "TRIASSO2"
+      ],
       "name": "Bi-Bracelet",
       "source": "base",
       "kind": "evolved",
@@ -979,6 +1186,9 @@
     },
     {
       "id": "tri-bracelet",
+      "gameIds": [
+        "TRIASSO3"
+      ],
       "name": "Tri-Bracelet",
       "source": "base",
       "kind": "evolved",
@@ -993,6 +1203,9 @@
     },
     {
       "id": "ashes-of-muspell",
+      "gameIds": [
+        "MISSPELL2"
+      ],
       "name": "Ashes of Muspell",
       "nameDeHint": "Asche von Muspell",
       "source": "base",
@@ -1008,6 +1221,9 @@
     },
     {
       "id": "anima-of-mortaccio",
+      "gameIds": [
+        "BONE2"
+      ],
       "name": "Anima of Mortaccio",
       "nameDeHint": "Seele von Mortaccio",
       "source": "base",
@@ -1023,6 +1239,9 @@
     },
     {
       "id": "yatta-daikarin",
+      "gameIds": [
+        "CHERRY2"
+      ],
       "name": "Yatta Daikarin",
       "source": "base",
       "kind": "evolved",
@@ -1037,6 +1256,9 @@
     },
     {
       "id": "carrozza",
+      "gameIds": [
+        "CART2EVO"
+      ],
       "name": "Carrozza!",
       "source": "base",
       "kind": "evolved",
@@ -1051,6 +1273,9 @@
     },
     {
       "id": "profusione-d-amore",
+      "gameIds": [
+        "FLOWER2"
+      ],
       "name": "Profusione D'Amore",
       "nameDeHint": "Fülle der Liebe",
       "source": "base",
@@ -1066,6 +1291,9 @@
     },
     {
       "id": "mazo-familiar",
+      "gameIds": [
+        "BATTILIA2"
+      ],
       "name": "Mazo Familiar",
       "source": "base",
       "kind": "evolved",
@@ -1080,6 +1308,9 @@
     },
     {
       "id": "gunastrophe",
+      "gameIds": [
+        "EX_AMMO2"
+      ],
       "name": "Gunastrophe",
       "source": "base",
       "kind": "evolved",
@@ -1094,6 +1325,9 @@
     },
     {
       "id": "spirit-disturbance",
+      "gameIds": [
+        "EX_FLIK2"
+      ],
       "name": "Spirit Disturbance",
       "nameDeHint": "Geisterstörung",
       "source": "base",
@@ -1109,6 +1343,9 @@
     },
     {
       "id": "celestial-voulge",
+      "gameIds": [
+        "ICELANCE2"
+      ],
       "name": "Celestial Voulge",
       "nameDeHint": "Himmlische Glefe",
       "source": "base",
@@ -1124,6 +1361,9 @@
     },
     {
       "id": "miracle-of-multiplication",
+      "gameIds": [
+        "EX_PENSHIN_UNION"
+      ],
       "name": "Miracle of Multiplication",
       "nameDeHint": "Wunder der Vermehrung",
       "source": "base",
@@ -1139,6 +1379,9 @@
     },
     {
       "id": "seraphic-cry",
+      "gameIds": [
+        "SANTAJAVELIN2"
+      ],
       "name": "Seraphic Cry",
       "nameDeHint": "Seraphischer Schrei",
       "source": "base",
@@ -1154,6 +1397,9 @@
     },
     {
       "id": "embrace-of-gaea",
+      "gameIds": [
+        "EX_GAEA2"
+      ],
       "name": "Embrace of Gaea",
       "nameDeHint": "Umarmung der Gaia",
       "source": "base",
@@ -1169,6 +1415,9 @@
     },
     {
       "id": "kyra-stones",
+      "gameIds": [
+        "EX_MAGISTONE2"
+      ],
       "name": "Kyra-Stones",
       "source": "base",
       "kind": "evolved",
@@ -1183,6 +1432,9 @@
     },
     {
       "id": "photonstorm",
+      "gameIds": [
+        "PHASER2"
+      ],
       "name": "Photonstorm",
       "nameDeHint": "Photonensturm",
       "source": "base",
@@ -1198,6 +1450,9 @@
     },
     {
       "id": "wicked-ruler",
+      "gameIds": [
+        "FOLLOWER_KNIFE2"
+      ],
       "name": "Wicked Ruler",
       "nameDeHint": "Böser Herrscher",
       "source": "base",
@@ -1213,6 +1468,9 @@
     },
     {
       "id": "vandalier",
+      "gameIds": [
+        "SILF3"
+      ],
       "name": "Vandalier",
       "source": "base",
       "kind": "evolved",
@@ -1227,6 +1485,9 @@
     },
     {
       "id": "phieraggi",
+      "gameIds": [
+        "GUNS3"
+      ],
       "name": "Phieraggi",
       "source": "base",
       "kind": "evolved",
@@ -1241,6 +1502,9 @@
     },
     {
       "id": "fuwalafuwaloo",
+      "gameIds": [
+        "VENTO2"
+      ],
       "name": "Fuwalafuwaloo",
       "source": "base",
       "kind": "evolved",
@@ -1255,6 +1519,9 @@
     },
     {
       "id": "super-candybox-ii-turbo",
+      "gameIds": [
+        "CANDYBOX2"
+      ],
       "name": "Super Candybox II Turbo",
       "source": "base",
       "kind": "evolved",
@@ -1269,6 +1536,9 @@
     },
     {
       "id": "sole-solution",
+      "gameIds": [
+        "SOLES"
+      ],
       "name": "Sole Solution",
       "source": "base",
       "kind": "evolved",

@@ -22,6 +22,21 @@ export function checkIntegrity(data: GameData): string[] {
   const passives = idsOf('Gegenstand', data.passives)
   idsOf('Entwicklung', data.evolutions)
 
+  // Eine Spielkennung muss eindeutig auf einen Eintrag zeigen, sonst ordnet der Mod falsch zu.
+  const gameIdsOf = (label: string, entries: { id: string; gameIds?: string[] }[]) => {
+    const owner = new Map<string, string>()
+    for (const { id, gameIds } of entries) {
+      for (const gameId of gameIds ?? []) {
+        const other = owner.get(gameId)
+        if (other && other !== id) problems.push(`${label} "${id}": Spielkennung ${gameId} gehört schon zu "${other}"`)
+        owner.set(gameId, id)
+      }
+    }
+  }
+  gameIdsOf('Charakter', data.characters)
+  gameIdsOf('Waffe', data.weapons)
+  gameIdsOf('Gegenstand', data.passives)
+
   const weaponById = new Map(data.weapons.map((weapon) => [weapon.id, weapon]))
 
   const checkSource = (where: string, source: string) => {

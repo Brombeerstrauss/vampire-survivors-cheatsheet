@@ -3,6 +3,9 @@
   "weapons": [
     {
       "id": "report",
+      "gameIds": [
+        "C1_REPORT1"
+      ],
       "name": "Report!",
       "nameDeHint": "Melden!",
       "source": "emergency-meeting",
@@ -18,6 +21,9 @@
     },
     {
       "id": "lucky-swipe",
+      "gameIds": [
+        "C1_SWIPECARD1"
+      ],
       "name": "Lucky Swipe",
       "nameDeHint": "Glücksstreich",
       "source": "emergency-meeting",
@@ -33,6 +39,9 @@
     },
     {
       "id": "lifesign-scan",
+      "gameIds": [
+        "C1_MEDICAL1"
+      ],
       "name": "Lifesign Scan",
       "nameDeHint": "Lebenszeichen-Scan",
       "source": "emergency-meeting",
@@ -48,6 +57,9 @@
     },
     {
       "id": "just-vent",
+      "gameIds": [
+        "C1_VENT1"
+      ],
       "name": "Just Vent",
       "nameDeHint": "Ab in den Schacht",
       "source": "emergency-meeting",
@@ -63,6 +75,9 @@
     },
     {
       "id": "clear-debris",
+      "gameIds": [
+        "C1_GARBA1"
+      ],
       "name": "Clear Debris",
       "nameDeHint": "Trümmer beseitigen",
       "source": "emergency-meeting",
@@ -78,6 +93,9 @@
     },
     {
       "id": "sharp-tongue",
+      "gameIds": [
+        "C1_TONGUE1"
+      ],
       "name": "Sharp Tongue",
       "nameDeHint": "Spitze Zunge",
       "source": "emergency-meeting",
@@ -93,6 +111,9 @@
     },
     {
       "id": "science-rocks",
+      "gameIds": [
+        "C1_SAMPLES1"
+      ],
       "name": "Science Rocks",
       "nameDeHint": "Wissenschaft rockt",
       "source": "emergency-meeting",
@@ -108,6 +129,9 @@
     },
     {
       "id": "hats",
+      "gameIds": [
+        "C1_HATCOLLECTION1"
+      ],
       "name": "Hats",
       "nameDeHint": "Hüte",
       "source": "emergency-meeting",
@@ -123,6 +147,9 @@
     },
     {
       "id": "emergency-meeting",
+      "gameIds": [
+        "C1_REPORT2"
+      ],
       "name": "Emergency Meeting",
       "nameDeHint": "Notfallbesprechung",
       "source": "emergency-meeting",
@@ -138,6 +165,9 @@
     },
     {
       "id": "crossed-wires",
+      "gameIds": [
+        "C1_SWIPECARD2"
+      ],
       "name": "Crossed Wires",
       "nameDeHint": "Gekreuzte Drähte",
       "source": "emergency-meeting",
@@ -153,6 +183,9 @@
     },
     {
       "id": "paranormal-scan",
+      "gameIds": [
+        "C1_MEDICAL2"
+      ],
       "name": "Paranormal Scan",
       "nameDeHint": "Paranormaler Scan",
       "source": "emergency-meeting",
@@ -168,6 +201,9 @@
     },
     {
       "id": "unjust-ejection",
+      "gameIds": [
+        "C1_VENT2"
+      ],
       "name": "Unjust Ejection",
       "nameDeHint": "Ungerechter Rauswurf",
       "source": "emergency-meeting",
@@ -183,6 +219,9 @@
     },
     {
       "id": "clear-asteroids",
+      "gameIds": [
+        "C1_GARBA2"
+      ],
       "name": "Clear Asteroids",
       "nameDeHint": "Asteroiden beseitigen",
       "source": "emergency-meeting",
@@ -198,6 +237,9 @@
     },
     {
       "id": "impostongue",
+      "gameIds": [
+        "C1_TONGUE2"
+      ],
       "name": "Impostongue",
       "source": "emergency-meeting",
       "kind": "evolved",
@@ -212,6 +254,9 @@
     },
     {
       "id": "rocket-science",
+      "gameIds": [
+        "C1_SAMPLES2"
+      ],
       "name": "Rocket Science",
       "nameDeHint": "Raketenwissenschaft",
       "source": "emergency-meeting",

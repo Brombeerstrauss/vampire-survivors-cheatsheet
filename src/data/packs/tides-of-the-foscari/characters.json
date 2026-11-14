@@ -3,6 +3,9 @@
   "characters": [
     {
       "id": "eleanor-uziron",
+      "gameIds": [
+        "ELEANOR"
+      ],
       "name": "Eleanor Uziron",
       "source": "tides-of-the-foscari",
       "startingWeapons": [
@@ -23,6 +26,9 @@
     },
     {
       "id": "maruto-cuts",
+      "gameIds": [
+        "VICTOR"
+      ],
       "name": "Maruto Cuts",
       "source": "tides-of-the-foscari",
       "startingWeapons": [
@@ -39,6 +45,9 @@
     },
     {
       "id": "keitha-muort",
+      "gameIds": [
+        "KEIRA"
+      ],
       "name": "Keitha Muort",
       "source": "tides-of-the-foscari",
       "startingWeapons": [
@@ -55,6 +64,9 @@
     },
     {
       "id": "luminaire-foscari",
+      "gameIds": [
+        "LUMINAIRE"
+      ],
       "name": "Luminaire Foscari",
       "source": "tides-of-the-foscari",
       "startingWeapons": [
@@ -71,6 +83,9 @@
     },
     {
       "id": "genevieve-gruyere",
+      "gameIds": [
+        "GENEVIEVE"
+      ],
       "name": "Genevieve Gruyère",
       "source": "tides-of-the-foscari",
       "startingWeapons": [
@@ -87,6 +102,9 @@
     },
     {
       "id": "je-ne-viv",
+      "gameIds": [
+        "MEGAGENEVIEVE"
+      ],
       "name": "Je-Ne-Viv",
       "source": "tides-of-the-foscari",
       "startingWeapons": [
@@ -103,6 +121,9 @@
     },
     {
       "id": "sammy",
+      "gameIds": [
+        "CTRPCAKE"
+      ],
       "name": "Sammy",
       "source": "tides-of-the-foscari",
       "startingWeapons": [
@@ -119,6 +140,9 @@
     },
     {
       "id": "rottin-ghoul",
+      "gameIds": [
+        "GHOUL"
+      ],
       "name": "Rottin'Ghoul",
       "source": "tides-of-the-foscari",
       "startingWeapons": [

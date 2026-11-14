@@ -3,6 +3,9 @@
   "characters": [
     {
       "id": "jimbo",
+      "gameIds": [
+        "LEM_JIMBO"
+      ],
       "name": "Jimbo",
       "source": "ante-chamber",
       "startingWeapons": [
@@ -19,6 +22,9 @@
     },
     {
       "id": "canio",
+      "gameIds": [
+        "LEM_CANIO"
+      ],
       "name": "Canio",
       "source": "ante-chamber",
       "startingWeapons": [
@@ -35,6 +41,9 @@
     },
     {
       "id": "chicot",
+      "gameIds": [
+        "LEM_CHICOT"
+      ],
       "name": "Chicot",
       "source": "ante-chamber",
       "startingWeapons": [
@@ -51,6 +60,9 @@
     },
     {
       "id": "perkeo",
+      "gameIds": [
+        "LEM_PERKEO"
+      ],
       "name": "Perkeo",
       "source": "ante-chamber",
       "startingWeapons": [

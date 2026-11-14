@@ -3,6 +3,9 @@
   "characters": [
     {
       "id": "miang-moonspell",
+      "gameIds": [
+        "MIANG"
+      ],
       "name": "Miang Moonspell",
       "source": "legacy-of-the-moonspell",
       "startingWeapons": [
@@ -19,6 +22,9 @@
     },
     {
       "id": "menya-moonspell",
+      "gameIds": [
+        "MENYA"
+      ],
       "name": "Menya Moonspell",
       "source": "legacy-of-the-moonspell",
       "startingWeapons": [
@@ -35,6 +41,9 @@
     },
     {
       "id": "syuuto-moonspell",
+      "gameIds": [
+        "SYUUTO"
+      ],
       "name": "Syuuto Moonspell",
       "source": "legacy-of-the-moonspell",
       "startingWeapons": [
@@ -51,6 +60,9 @@
     },
     {
       "id": "babi-onna",
+      "gameIds": [
+        "ONNA"
+      ],
       "name": "Babi-Onna",
       "source": "legacy-of-the-moonspell",
       "startingWeapons": [
@@ -67,6 +79,9 @@
     },
     {
       "id": "megalo-miang-moonspell",
+      "gameIds": [
+        "MEGAMIANG"
+      ],
       "name": "Megalo Miang Moonspell",
       "source": "legacy-of-the-moonspell",
       "startingWeapons": [
@@ -87,6 +102,9 @@
     },
     {
       "id": "megalo-menya-moonspell",
+      "gameIds": [
+        "MEGAMENYA"
+      ],
       "name": "Megalo Menya Moonspell",
       "source": "legacy-of-the-moonspell",
       "startingWeapons": [],
@@ -105,6 +123,9 @@
     },
     {
       "id": "megalo-syuuto-moonspell",
+      "gameIds": [
+        "MEGASYUUTO"
+      ],
       "name": "Megalo Syuuto Moonspell",
       "source": "legacy-of-the-moonspell",
       "startingWeapons": [
@@ -121,6 +142,9 @@
     },
     {
       "id": "mccoy-oni",
+      "gameIds": [
+        "MCCOY"
+      ],
       "name": "McCoy-Oni",
       "source": "legacy-of-the-moonspell",
       "startingWeapons": [
@@ -137,6 +161,9 @@
     },
     {
       "id": "gav-et-oni",
+      "gameIds": [
+        "TONY"
+      ],
       "name": "Gav'Et-Oni ★",
       "source": "legacy-of-the-moonspell",
       "startingWeapons": [
@@ -153,6 +180,9 @@
     },
     {
       "id": "spiritoso",
+      "gameIds": [
+        "SPIRITOSO"
+      ],
       "name": "Spiritoso",
       "source": "legacy-of-the-moonspell",
       "startingWeapons": [
@@ -169,6 +199,9 @@
     },
     {
       "id": "spiritosa",
+      "gameIds": [
+        "SPIRITOSA"
+      ],
       "name": "Spiritosa",
       "source": "legacy-of-the-moonspell",
       "startingWeapons": [
@@ -189,6 +222,9 @@
     },
     {
       "id": "gekkojin",
+      "gameIds": [
+        "GEKKOJIN"
+      ],
       "name": "Gekkojin",
       "source": "legacy-of-the-moonspell",
       "startingWeapons": [

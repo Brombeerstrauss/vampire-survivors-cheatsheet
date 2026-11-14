@@ -3,6 +3,9 @@
   "passives": [
     {
       "id": "academy-badge",
+      "gameIds": [
+        "ACADEMYBADGE"
+      ],
       "name": "Academy Badge",
       "nameDeHint": "Akademieabzeichen",
       "source": "tides-of-the-foscari",

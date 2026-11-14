@@ -20,6 +20,11 @@ und danach mit `git diff` vergleichen.
 - `texts/names_de.py`: eigene deutsche Übersetzungen für Namen ohne offiziellen deutschen Namen.
 - `parse_localisation.py`: liest die offiziellen deutschen Namen aus poncles öffentlicher
   Lokalisierungs-Tabelle, die das Skript bei jedem Lauf frisch herunterlädt.
+- `game_ids.py`: trägt bei Charakteren, Waffen und Gegenständen `gameIds` ein, die internen
+  Kennungen des Spiels aus der Infobox jeder Wiki-Seite (Feld `id`, z. B. `MAGIC_MISSILE` für
+  Magic Wand). Über sie ordnet die App die Daten des Mods unter `mod/` zu. Läuft am Ende von
+  `run.sh`, geht aber auch allein, ohne Handänderungen zu verlieren:
+  `python3 -I tools/wiki-import/game_ids.py https://vampire.survivors.wiki/api.php src/data/packs`
 - `build_pack.py`: setzt `verified` nur, wenn Entwicklungsliste, Waffenliste und
   Gegenstandsliste übereinstimmen; Abweichungen landen im Feld `note`.
 

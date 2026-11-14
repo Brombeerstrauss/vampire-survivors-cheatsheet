@@ -3,6 +3,9 @@
   "passives": [
     {
       "id": "velvet-dodecahedron",
+      "gameIds": [
+        "BMN_DODECAHEDRON"
+      ],
       "name": "Velvet Dodecahedron",
       "nameDeHint": "Samt-Dodekaeder",
       "source": "legacy-of-the-bloodmoon",

@@ -47,6 +47,16 @@ describe('Spieldaten', () => {
     expect(order).toEqual(data.packs.map((p) => p.id).filter((id) => order.includes(id)))
     expect(data.characters[0]?.source).toBe('base')
   })
+
+  // Ohne Spielkennung kann die App den Eintrag nicht aus dem Mod übernehmen.
+  // Nachtragen: python3 -I tools/wiki-import/game_ids.py https://vampire.survivors.wiki/api.php src/data/packs
+  it('Charaktere, Waffen und Gegenstände haben Spielkennungen (gameIds)', () => {
+    const { data } = loadGameData(packsFile, files)
+    const missing = [...data.characters, ...data.weapons, ...data.passives]
+      .filter((entry) => !entry.gameIds?.length)
+      .map((entry) => entry.id)
+    expect(missing).toEqual([])
+  })
 })
 
 describe('Schemas lehnen fehlerhafte Einträge ab', () => {
@@ -127,6 +137,12 @@ describe('checkIntegrity', () => {
       'Entwicklung "bloody-tear": unbekannte Waffe "whipp"',
       'Entwicklung "bloody-tear": unbekannter Gegenstand "hollow-hart"',
     ])
+  })
+
+  it('meldet Spielkennungen, die zu zwei Einträgen gehören', () => {
+    const [whip, tear] = base.weapons
+    const data = { ...base, weapons: [{ ...whip!, gameIds: ['WHIP'] }, { ...tear!, gameIds: ['VAMPIRICA', 'WHIP'] }] }
+    expect(checkIntegrity(data)).toEqual(['Waffe "bloody-tear": Spielkennung WHIP gehört schon zu "whip"'])
   })
 
   it('meldet Ergebnisse, die keine entwickelte Waffe sind', () => {

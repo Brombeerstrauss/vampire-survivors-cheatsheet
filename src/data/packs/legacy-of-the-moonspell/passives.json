@@ -3,6 +3,9 @@
   "passives": [
     {
       "id": "pearl-magatama",
+      "gameIds": [
+        "PEARLMAGATAMA"
+      ],
       "name": "Pearl magatama",
       "nameDeHint": "Perlen-Magatama",
       "source": "legacy-of-the-moonspell",

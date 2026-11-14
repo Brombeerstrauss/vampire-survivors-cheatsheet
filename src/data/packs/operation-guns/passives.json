@@ -3,6 +3,9 @@
   "passives": [
     {
       "id": "weapon-power-up",
+      "gameIds": [
+        "FB_WEAPONPU"
+      ],
       "name": "Weapon Power-Up",
       "nameDeHint": "Waffen-Power-up",
       "source": "operation-guns",

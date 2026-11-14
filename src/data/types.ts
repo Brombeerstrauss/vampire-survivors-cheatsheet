@@ -42,6 +42,11 @@ export interface Pack {
 /** Felder, die Charaktere, Waffen und passive Gegenstände gemeinsam haben. */
 interface Entry {
   id: string
+  /**
+   * Interne Kennungen des Spiels aus der Wiki-Infobox (Feld `id`), z. B. `MAGIC_MISSILE`
+   * für Magic Wand. Meist genau eine; daran ordnet die App die Daten aus dem Mod zu.
+   */
+  gameIds?: string[]
   /** Englischer Name wie im Spiel. */
   name: string
   /** Offizieller deutscher Name aus dem Spiel, falls er vom englischen abweicht. */

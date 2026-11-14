@@ -3,6 +3,9 @@
   "weapons": [
     {
       "id": "silver-wind",
+      "gameIds": [
+        "SILVERWIND"
+      ],
       "name": "Silver Wind",
       "nameDeHint": "Silberwind",
       "source": "legacy-of-the-moonspell",
@@ -18,6 +21,9 @@
     },
     {
       "id": "four-seasons",
+      "gameIds": [
+        "FOURSEASONS"
+      ],
       "name": "Four Seasons",
       "nameDeHint": "Vier Jahreszeiten",
       "source": "legacy-of-the-moonspell",
@@ -33,6 +39,9 @@
     },
     {
       "id": "summon-night",
+      "gameIds": [
+        "SUMMONNIGHT"
+      ],
       "name": "Summon Night",
       "nameDeHint": "Nacht beschwören",
       "source": "legacy-of-the-moonspell",
@@ -48,6 +57,9 @@
     },
     {
       "id": "mirage-robe",
+      "gameIds": [
+        "MIRAGEROBE"
+      ],
       "name": "Mirage Robe",
       "nameDeHint": "Trugbildrobe",
       "source": "legacy-of-the-moonspell",
@@ -63,6 +75,9 @@
     },
     {
       "id": "night-sword",
+      "gameIds": [
+        "NIGHTSWORD"
+      ],
       "name": "Night Sword",
       "nameDeHint": "Nachtschwert",
       "source": "legacy-of-the-moonspell",
@@ -78,6 +93,9 @@
     },
     {
       "id": "mille-bolle-blu",
+      "gameIds": [
+        "BUBBLES"
+      ],
       "name": "Mille Bolle Blu",
       "source": "legacy-of-the-moonspell",
       "kind": "base",
@@ -92,6 +110,9 @@
     },
     {
       "id": "108-bocce",
+      "gameIds": [
+        "BOCCE"
+      ],
       "name": "108 Bocce",
       "source": "legacy-of-the-moonspell",
       "kind": "base",
@@ -106,6 +127,9 @@
     },
     {
       "id": "lunarmight",
+      "gameIds": [
+        "MS_LUNAR1_MIGHT"
+      ],
       "name": "LunarMight",
       "nameDeHint": "Mondmacht",
       "source": "legacy-of-the-moonspell",
@@ -121,6 +145,9 @@
     },
     {
       "id": "lunarsight",
+      "gameIds": [
+        "MS_LUNAR2_SIGHT"
+      ],
       "name": "LunarSight",
       "nameDeHint": "Mondsicht",
       "source": "legacy-of-the-moonspell",
@@ -136,6 +163,9 @@
     },
     {
       "id": "lunarbight",
+      "gameIds": [
+        "MS_LUNAR3_BIGHT"
+      ],
       "name": "LunarBight",
       "nameDeHint": "Mondbiss",
       "source": "legacy-of-the-moonspell",
@@ -151,6 +181,9 @@
     },
     {
       "id": "festive-winds",
+      "gameIds": [
+        "SILVERWIND2"
+      ],
       "name": "Festive Winds",
       "nameDeHint": "Festliche Winde",
       "source": "legacy-of-the-moonspell",
@@ -166,6 +199,9 @@
     },
     {
       "id": "argent-flow",
+      "gameIds": [
+        "SILVERWIND3"
+      ],
       "name": "Argent Flow",
       "nameDeHint": "Silberstrom",
       "source": "legacy-of-the-moonspell",
@@ -181,6 +217,9 @@
     },
     {
       "id": "godai-shuffle",
+      "gameIds": [
+        "FOURSEASONS2"
+      ],
       "name": "Godai Shuffle",
       "source": "legacy-of-the-moonspell",
       "kind": "evolved",
@@ -195,6 +234,9 @@
     },
     {
       "id": "echo-night",
+      "gameIds": [
+        "SUMMONNIGHT2"
+      ],
       "name": "Echo Night",
       "nameDeHint": "Echonacht",
       "source": "legacy-of-the-moonspell",
@@ -210,6 +252,9 @@
     },
     {
       "id": "j-odore",
+      "gameIds": [
+        "MIRAGEROBE2"
+      ],
       "name": "J'Odore",
       "source": "legacy-of-the-moonspell",
       "kind": "evolved",
@@ -224,6 +269,9 @@
     },
     {
       "id": "muramasa",
+      "gameIds": [
+        "NIGHTSWORD2"
+      ],
       "name": "Muramasa",
       "source": "legacy-of-the-moonspell",
       "kind": "evolved",
@@ -238,6 +286,9 @@
     },
     {
       "id": "boo-roo-boolle",
+      "gameIds": [
+        "BUBBLES2"
+      ],
       "name": "Boo Roo Boolle",
       "source": "legacy-of-the-moonspell",
       "kind": "evolved",
@@ -252,6 +303,9 @@
     },
     {
       "id": "lunarflight",
+      "gameIds": [
+        "MS_LUNAR4"
+      ],
       "name": "LunarFlight",
       "nameDeHint": "Mondflug",
       "source": "legacy-of-the-moonspell",

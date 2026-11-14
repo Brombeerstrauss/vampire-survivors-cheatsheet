@@ -3,6 +3,9 @@
   "passives": [
     {
       "id": "mini-crewmate",
+      "gameIds": [
+        "C1_SHRINK_CREWMA"
+      ],
       "name": "Mini Crewmate",
       "nameDeHint": "Mini-Crewmitglied",
       "source": "emergency-meeting",
@@ -18,6 +21,9 @@
     },
     {
       "id": "mini-engineer",
+      "gameIds": [
+        "C1_SHRINK_ENGINE"
+      ],
       "name": "Mini Engineer",
       "nameDeHint": "Mini-Ingenieur",
       "source": "emergency-meeting",
@@ -33,6 +39,9 @@
     },
     {
       "id": "mini-ghost",
+      "gameIds": [
+        "C1_SHRINK_GHOSTT"
+      ],
       "name": "Mini Ghost",
       "nameDeHint": "Mini-Geist",
       "source": "emergency-meeting",
@@ -48,6 +57,9 @@
     },
     {
       "id": "mini-shapeshifter",
+      "gameIds": [
+        "C1_SHRINK_SHAPES"
+      ],
       "name": "Mini Shapeshifter",
       "nameDeHint": "Mini-Gestaltwandler",
       "source": "emergency-meeting",
@@ -63,6 +75,9 @@
     },
     {
       "id": "mini-guardian",
+      "gameIds": [
+        "C1_SHRINK_GUARDI"
+      ],
       "name": "Mini Guardian",
       "nameDeHint": "Mini-Wächter",
       "source": "emergency-meeting",
@@ -78,6 +93,9 @@
     },
     {
       "id": "mini-impostor",
+      "gameIds": [
+        "C1_SHRINK_IMPOST"
+      ],
       "name": "Mini Impostor",
       "nameDeHint": "Mini-Hochstapler",
       "source": "emergency-meeting",
@@ -93,6 +111,9 @@
     },
     {
       "id": "mini-scientist",
+      "gameIds": [
+        "C1_SHRINK_SCIENT"
+      ],
       "name": "Mini Scientist",
       "nameDeHint": "Mini-Wissenschaftler",
       "source": "emergency-meeting",
@@ -108,6 +129,9 @@
     },
     {
       "id": "mini-horse",
+      "gameIds": [
+        "C1_SHRINK_HORSEE"
+      ],
       "name": "Mini Horse",
       "nameDeHint": "Mini-Pferd",
       "source": "emergency-meeting",

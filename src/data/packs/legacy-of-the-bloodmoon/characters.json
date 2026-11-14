@@ -3,6 +3,9 @@
   "characters": [
     {
       "id": "malice-bloodmoon",
+      "gameIds": [
+        "MALICE"
+      ],
       "name": "Malice Bloodmoon",
       "source": "legacy-of-the-bloodmoon",
       "startingWeapons": [
@@ -19,6 +22,9 @@
     },
     {
       "id": "calogero-bloodmoon",
+      "gameIds": [
+        "CALOGERO"
+      ],
       "name": "Calogero Bloodmoon",
       "source": "legacy-of-the-bloodmoon",
       "startingWeapons": [
@@ -35,6 +41,9 @@
     },
     {
       "id": "ashtart",
+      "gameIds": [
+        "ASHTART"
+      ],
       "name": "Ashtart",
       "source": "legacy-of-the-bloodmoon",
       "startingWeapons": [
@@ -51,6 +60,9 @@
     },
     {
       "id": "sargon",
+      "gameIds": [
+        "SARGON"
+      ],
       "name": "Sargon",
       "source": "legacy-of-the-bloodmoon",
       "startingWeapons": [
@@ -69,6 +81,9 @@
     },
     {
       "id": "nameless-fool",
+      "gameIds": [
+        "NAMELESSFOOL"
+      ],
       "name": "Nameless Fool",
       "nameDeHint": "Namenloser Narr",
       "source": "legacy-of-the-bloodmoon",
@@ -86,6 +101,9 @@
     },
     {
       "id": "congregation",
+      "gameIds": [
+        "CONGREGATION"
+      ],
       "name": "Congregation",
       "nameDeHint": "Gemeinde",
       "source": "legacy-of-the-bloodmoon",
@@ -103,6 +121,9 @@
     },
     {
       "id": "nameless-saint",
+      "gameIds": [
+        "NAMELESSSAINT"
+      ],
       "name": "Nameless Saint",
       "nameDeHint": "Namenloser Heiliger",
       "source": "legacy-of-the-bloodmoon",
@@ -118,6 +139,9 @@
     },
     {
       "id": "baal-thasar",
+      "gameIds": [
+        "BAALTHASAR"
+      ],
       "name": "Baal'Thasar",
       "source": "legacy-of-the-bloodmoon",
       "startingWeapons": [
@@ -134,6 +158,9 @@
     },
     {
       "id": "jaman-jato",
+      "gameIds": [
+        "JAMANJATO"
+      ],
       "name": "Jaman Jato ★",
       "source": "legacy-of-the-bloodmoon",
       "startingWeapons": [
@@ -154,6 +181,9 @@
     },
     {
       "id": "in-kujata",
+      "gameIds": [
+        "KUJATA"
+      ],
       "name": "In' Kujata",
       "source": "legacy-of-the-bloodmoon",
       "startingWeapons": [],
@@ -172,6 +202,9 @@
     },
     {
       "id": "megalo-sargon",
+      "gameIds": [
+        "MEGASARGON"
+      ],
       "name": "Megalo Sargon",
       "source": "legacy-of-the-bloodmoon",
       "startingWeapons": [
@@ -188,6 +221,9 @@
     },
     {
       "id": "baal-thamut",
+      "gameIds": [
+        "MEGABAALTHASAR"
+      ],
       "name": "Baal'Thamut",
       "source": "legacy-of-the-bloodmoon",
       "startingWeapons": [
