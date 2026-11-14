@@ -1,0 +1,185 @@
+{
+  "$schema": "../../schema/weapons.schema.json",
+  "weapons": [
+    {
+      "id": "scarlet-needle",
+      "name": "Scarlet Needle",
+      "source": "legacy-of-the-bloodmoon",
+      "kind": "base",
+      "description": "Schadensnadeln heften den nächsten Gegner an Ort und Stelle.",
+      "maxLevel": 8,
+      "emoji": "📍",
+      "verified": true
+    },
+    {
+      "id": "ashella",
+      "name": "Ashella",
+      "source": "legacy-of-the-bloodmoon",
+      "kind": "base",
+      "description": "Kann kritisch treffen.",
+      "maxLevel": 8,
+      "emoji": "🪶",
+      "verified": true
+    },
+    {
+      "id": "incineration",
+      "name": "Incineration",
+      "source": "legacy-of-the-bloodmoon",
+      "kind": "base",
+      "description": "Löscht Gegner in Blickrichtung aus.",
+      "maxLevel": 8,
+      "emoji": "🔥",
+      "verified": true
+    },
+    {
+      "id": "screams-from-the-void",
+      "name": "Screams from the Void",
+      "source": "legacy-of-the-bloodmoon",
+      "kind": "base",
+      "description": "Stößt Schreie mit starkem Rückstoß aus; schlägt zurück.",
+      "maxLevel": 8,
+      "emoji": "😱",
+      "verified": true
+    },
+    {
+      "id": "blacken-firmament",
+      "name": "Blacken Firmament",
+      "source": "legacy-of-the-bloodmoon",
+      "kind": "base",
+      "description": "Löscht einen zufälligen Gegner aus und hinterlässt manchmal einen schädlichen Riss in der Wirklichkeit.",
+      "maxLevel": 8,
+      "emoji": "🌑",
+      "verified": true
+    },
+    {
+      "id": "108-responsive-prayers",
+      "name": "108 Responsive Prayers",
+      "source": "legacy-of-the-bloodmoon",
+      "kind": "base",
+      "description": "Eigentlich nur 16; der Schaden hängt vom Unterschied zwischen Fluch und Glück ab.",
+      "maxLevel": 8,
+      "emoji": "📿",
+      "verified": true
+    },
+    {
+      "id": "firefall",
+      "name": "FireFall",
+      "source": "legacy-of-the-bloodmoon",
+      "kind": "base",
+      "description": "Trifft den entferntesten Gegner; der Schaden wird zusätzlich mit der Macht multipliziert.",
+      "maxLevel": 6,
+      "emoji": "☄️",
+      "verified": true
+    },
+    {
+      "id": "fireball",
+      "name": "FireBall",
+      "source": "legacy-of-the-bloodmoon",
+      "kind": "base",
+      "description": "Erzeugt eine wachsende Schadenszone; der Schaden wird mit der Fläche multipliziert.",
+      "maxLevel": 6,
+      "emoji": "🔥",
+      "verified": true
+    },
+    {
+      "id": "firewall",
+      "name": "FireWall",
+      "source": "legacy-of-the-bloodmoon",
+      "kind": "base",
+      "description": "Erzeugt eine gerichtete Schadenszone; wächst stark mit der Anzahl.",
+      "maxLevel": 6,
+      "emoji": "🧱",
+      "verified": true
+    },
+    {
+      "id": "descent-into-misery",
+      "name": "Descent Into Misery",
+      "source": "legacy-of-the-bloodmoon",
+      "kind": "base",
+      "description": "Verfluchter Gegenstand: die Anzahl erhöht den Schaden; kritische Treffer oder Richtungswechsel lösen Zusatzangriffe aus.",
+      "maxLevel": 9,
+      "emoji": "⬇️",
+      "verified": true
+    },
+    {
+      "id": "cardinal-rain",
+      "name": "Cardinal Rain",
+      "source": "legacy-of-the-bloodmoon",
+      "kind": "evolved",
+      "description": "Entwicklung von Scarlet Needle: endloser Regen, der in jede Richtung treffen kann.",
+      "maxLevel": 1,
+      "emoji": "🌧️",
+      "verified": true
+    },
+    {
+      "id": "bloodlust",
+      "name": "Bloodlust",
+      "source": "legacy-of-the-bloodmoon",
+      "kind": "evolved",
+      "description": "Entwicklung von Ashella: kritischer Schaden hängt von der Anzahl ab.",
+      "maxLevel": 1,
+      "emoji": "🩸",
+      "verified": true
+    },
+    {
+      "id": "dust-to-dust",
+      "name": "Dust to Dust",
+      "source": "legacy-of-the-bloodmoon",
+      "kind": "evolved",
+      "description": "Entwicklung von Incineration: höllische Asche weht zurück und löscht Gegner aus.",
+      "maxLevel": 1,
+      "emoji": "⚱️",
+      "verified": true
+    },
+    {
+      "id": "forbidden-siren",
+      "name": "Forbidden Siren",
+      "source": "legacy-of-the-bloodmoon",
+      "kind": "evolved",
+      "description": "Entwicklung von Screams from the Void: zieht Gegner an und entwaffnet sie.",
+      "maxLevel": 1,
+      "emoji": "🧜",
+      "verified": true
+    },
+    {
+      "id": "damnation",
+      "name": "Damnation",
+      "source": "legacy-of-the-bloodmoon",
+      "kind": "evolved",
+      "description": "Entwicklung von Blacken Firmament: zieht Gegner ins Verderben.",
+      "maxLevel": 1,
+      "emoji": "⛓️",
+      "verified": true
+    },
+    {
+      "id": "road-to-heaven",
+      "name": "Road to Heaven",
+      "source": "legacy-of-the-bloodmoon",
+      "kind": "evolved",
+      "description": "Union aus 108 Bocce und 108 Responsive Prayers: 108-mal auslösen, um die Erleuchtung zu erahnen.",
+      "maxLevel": 1,
+      "emoji": "🛕",
+      "verified": true
+    },
+    {
+      "id": "firestall",
+      "name": "FireStall",
+      "source": "legacy-of-the-bloodmoon",
+      "kind": "evolved",
+      "description": "Union aus FireFall, FireBall und FireWall: wird nach jeder Singularität stärker.",
+      "maxLevel": 1,
+      "emoji": "🌋",
+      "verified": true
+    },
+    {
+      "id": "shimmering-sands",
+      "name": "Shimmering Sands",
+      "source": "legacy-of-the-bloodmoon",
+      "kind": "evolved",
+      "description": "Union aus Kyra-Stones und Descent Into Misery: Treibsand zieht Gegner in die Hölle.",
+      "maxLevel": 1,
+      "emoji": "⏳",
+      "verified": true
+    }
+  ]
+}

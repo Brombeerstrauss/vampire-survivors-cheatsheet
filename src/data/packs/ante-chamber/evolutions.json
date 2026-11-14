@@ -1,0 +1,77 @@
+{
+  "$schema": "../../schema/evolutions.schema.json",
+  "evolutions": [
+    {
+      "id": "naneinferno",
+      "kind": "evolution",
+      "source": "ante-chamber",
+      "result": "naneinferno",
+      "weapons": [
+        {
+          "id": "infernolatro"
+        }
+      ],
+      "passives": [
+        {
+          "id": "outer-saboteur",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "cavendish",
+      "kind": "evolution",
+      "source": "ante-chamber",
+      "result": "cavendish",
+      "weapons": [
+        {
+          "id": "gros-michel"
+        }
+      ],
+      "passives": [
+        {
+          "id": "outer-saboteur",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "royal-flush",
+      "kind": "evolution",
+      "source": "ante-chamber",
+      "result": "royal-flush",
+      "weapons": [
+        {
+          "id": "fibonacci-spritz"
+        }
+      ],
+      "passives": [
+        {
+          "id": "outer-saboteur",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "negative-space",
+      "kind": "evolution",
+      "source": "ante-chamber",
+      "result": "negative-space",
+      "weapons": [
+        {
+          "id": "celestial-booster"
+        }
+      ],
+      "passives": [
+        {
+          "id": "outer-saboteur",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    }
+  ]
+}

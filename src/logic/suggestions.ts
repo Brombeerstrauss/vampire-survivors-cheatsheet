@@ -108,7 +108,10 @@ export function suggestNext(run: RunState, catalog: Catalog): SuggestionResult {
   // Warnungen zu knappen Slots
   const warnings: string[] = []
   const hints: string[] = []
-  const slotNeeded = (id: string) => !catalog.passive(id)?.noSlot
+  const slotNeeded = (id: string) => {
+    const passive = catalog.passive(id)
+    return !passive?.noSlot && !passive?.ignoresSlotLimit
+  }
   const passiveSlotsNeeded = [...neededPassives.keys()].filter(slotNeeded)
 
   if (passiveSlotsNeeded.length > freePassives) {

@@ -74,6 +74,8 @@ export interface PassiveItem extends Entry {
   stageOnly?: boolean
   /** Belegt keinen der 6 passiven Slots (z. B. Geschenke aus DLCs). */
   noSlot?: boolean
+  /** Belegt zwar einen Slot, kann aber auch bei vollen Slots gewählt werden (z. B. Mini Crewmates). */
+  ignoresSlotLimit?: boolean
 }
 
 /** Stufe, die eine Zutat haben muss: Maximalstufe oder egal. */
@@ -89,6 +91,8 @@ export interface PassiveRequirement {
   id: PassiveId
   /** Standard: `any` (es reicht, den Gegenstand zu besitzen). */
   level?: RequiredLevel
+  /** Der Gegenstand wird bei der Entwicklung verbraucht (z. B. Weapon Power-Up). */
+  consumed?: boolean
 }
 
 /**

@@ -1,0 +1,135 @@
+{
+  "$schema": "../../schema/weapons.schema.json",
+  "weapons": [
+    {
+      "id": "spellstring",
+      "name": "SpellString",
+      "source": "tides-of-the-foscari",
+      "kind": "base",
+      "description": "Trifft Gegner in der Nähe; der Schaden wird mit der Geschwindigkeit multipliziert.",
+      "maxLevel": 6,
+      "emoji": "🪡",
+      "verified": true
+    },
+    {
+      "id": "spellstream",
+      "name": "SpellStream",
+      "source": "tides-of-the-foscari",
+      "kind": "base",
+      "description": "Erzeugt eine wachsende Schadenszone; der Schaden wird mit der Fläche multipliziert.",
+      "maxLevel": 6,
+      "emoji": "🌊",
+      "verified": true
+    },
+    {
+      "id": "spellstrike",
+      "name": "SpellStrike",
+      "source": "tides-of-the-foscari",
+      "kind": "base",
+      "description": "Trifft den nächsten Gegner; der Schaden wird zusätzlich mit der Macht multipliziert.",
+      "maxLevel": 6,
+      "emoji": "⚡",
+      "verified": true
+    },
+    {
+      "id": "eskizzibur",
+      "name": "Eskizzibur",
+      "source": "tides-of-the-foscari",
+      "kind": "base",
+      "description": "Greift Gegner in der Nähe an; schlägt zurück.",
+      "maxLevel": 8,
+      "emoji": "🗡️",
+      "verified": true
+    },
+    {
+      "id": "flash-arrow",
+      "name": "Flash Arrow",
+      "source": "tides-of-the-foscari",
+      "kind": "base",
+      "description": "Kann kritisch treffen; die Anzahl erhöht stattdessen den Schaden.",
+      "maxLevel": 8,
+      "emoji": "🏹",
+      "verified": true
+    },
+    {
+      "id": "prismatic-missile",
+      "name": "Prismatic Missile",
+      "source": "tides-of-the-foscari",
+      "kind": "base",
+      "description": "Erzeugt Explosionen um den Charakter; wird von der zuerst gewählten Arcana II, XIV oder XIX beeinflusst.",
+      "maxLevel": 8,
+      "emoji": "🔷",
+      "verified": true
+    },
+    {
+      "id": "shadow-servant",
+      "name": "Shadow Servant",
+      "source": "tides-of-the-foscari",
+      "kind": "base",
+      "description": "Kann Gegner verlangsamen.",
+      "maxLevel": 8,
+      "emoji": "👤",
+      "verified": true
+    },
+    {
+      "id": "party-popper",
+      "name": "Party Popper",
+      "source": "tides-of-the-foscari",
+      "kind": "base",
+      "description": "Wirft abprallende Projektile.",
+      "maxLevel": 8,
+      "emoji": "🎉",
+      "verified": true
+    },
+    {
+      "id": "legionnaire",
+      "name": "Legionnaire",
+      "source": "tides-of-the-foscari",
+      "kind": "evolved",
+      "description": "Entwicklung von Eskizzibur: erzeugt zusätzliche Projektile mit Vergeltungsschaden.",
+      "maxLevel": 1,
+      "emoji": "🛡️",
+      "verified": true
+    },
+    {
+      "id": "millionaire",
+      "name": "Millionaire",
+      "source": "tides-of-the-foscari",
+      "kind": "evolved",
+      "description": "Entwicklung von Flash Arrow: feuert zusätzliche Projektile je nach Anzahl und beim Aufsammeln von Goldmünzen.",
+      "maxLevel": 1,
+      "emoji": "💰",
+      "verified": true
+    },
+    {
+      "id": "luminaire",
+      "name": "Luminaire",
+      "source": "tides-of-the-foscari",
+      "kind": "evolved",
+      "description": "Entwicklung von Prismatic Missile: erhöht den Wert von Edelsteinen und Münzen am Boden.",
+      "maxLevel": 1,
+      "emoji": "💡",
+      "verified": true
+    },
+    {
+      "id": "ophion",
+      "name": "Ophion",
+      "source": "tides-of-the-foscari",
+      "kind": "evolved",
+      "description": "Entwicklung von Shadow Servant: kann Gegner sofort töten.",
+      "maxLevel": 1,
+      "emoji": "🐍",
+      "verified": true
+    },
+    {
+      "id": "spellstrom",
+      "name": "SpellStrom",
+      "source": "tides-of-the-foscari",
+      "kind": "evolved",
+      "description": "Union aus SpellString, SpellStream und SpellStrike: wird nach jeder Singularität stärker.",
+      "maxLevel": 1,
+      "emoji": "🌪️",
+      "verified": true
+    }
+  ]
+}

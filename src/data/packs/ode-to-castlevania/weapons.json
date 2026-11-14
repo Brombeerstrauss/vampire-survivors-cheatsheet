@@ -1,0 +1,1305 @@
+{
+  "$schema": "../../schema/weapons.schema.json",
+  "weapons": [
+    {
+      "id": "alchemy-whip",
+      "name": "Alchemy Whip",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Wird mit jedem besiegten Boss stärker.",
+      "maxLevel": 8,
+      "emoji": "🪢",
+      "verified": true
+    },
+    {
+      "id": "wind-whip",
+      "name": "Wind Whip",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Der Schaden hängt vom Wachstum ab.",
+      "maxLevel": 8,
+      "emoji": "🌬️",
+      "verified": true
+    },
+    {
+      "id": "platinum-whip",
+      "name": "Platinum Whip",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Jede 3. Auslösung feuert Projektile in feste Richtungen.",
+      "maxLevel": 8,
+      "emoji": "⚪",
+      "verified": true
+    },
+    {
+      "id": "dragon-water-whip",
+      "name": "Dragon Water Whip",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Jede 7. Auslösung feuert einen schlängelnden Drachen.",
+      "maxLevel": 8,
+      "emoji": "🐉",
+      "verified": true
+    },
+    {
+      "id": "sonic-whip",
+      "name": "Sonic Whip",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Chance auf Sofort-Tod, abhängig vom Fluch.",
+      "maxLevel": 8,
+      "emoji": "💨",
+      "verified": true
+    },
+    {
+      "id": "jet-black-whip",
+      "name": "Jet Black Whip",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Trifft den nächsten Gegner und erzeugt eine gerade Schadenszone.",
+      "maxLevel": 8,
+      "emoji": "⚫",
+      "verified": true
+    },
+    {
+      "id": "vibhuti-whip",
+      "name": "Vibhuti Whip",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Trifft den nächsten Gegner und erzeugt eine Gruppe von Explosionen.",
+      "maxLevel": 8,
+      "emoji": "💥",
+      "verified": true
+    },
+    {
+      "id": "vanitas-whip",
+      "name": "Vanitas Whip",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Trifft den nächsten Gegner und erzeugt eine querliegende Schadenszone; deren Schaden hängt von der max. Gesundheit ab.",
+      "maxLevel": 8,
+      "emoji": "🖤",
+      "verified": true
+    },
+    {
+      "id": "shuriken",
+      "name": "Shuriken",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Feuert Projektile in Blickrichtung.",
+      "maxLevel": 8,
+      "emoji": "✴️",
+      "verified": true
+    },
+    {
+      "id": "curved-knife",
+      "name": "Curved Knife",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Wirft ein rotierendes Projektil auf einen zufälligen Gegner.",
+      "maxLevel": 8,
+      "emoji": "🔪",
+      "verified": true
+    },
+    {
+      "id": "javelin",
+      "name": "Javelin",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Feuert ein durchdringendes Projektil in eine feste Richtung.",
+      "maxLevel": 8,
+      "emoji": "🏹",
+      "verified": true
+    },
+    {
+      "id": "discus",
+      "name": "Discus",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Feuert ein schützendes Projektil.",
+      "maxLevel": 8,
+      "emoji": "🥏",
+      "verified": true
+    },
+    {
+      "id": "iron-ball",
+      "name": "Iron Ball",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Der Schaden hängt von der Rüstung ab.",
+      "maxLevel": 8,
+      "emoji": "⚙️",
+      "verified": true
+    },
+    {
+      "id": "silver-revolver",
+      "name": "Silver Revolver",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Feuert sechsmal ein starkes Projektil.",
+      "maxLevel": 8,
+      "emoji": "🔫",
+      "verified": true
+    },
+    {
+      "id": "hand-grenade",
+      "name": "Hand Grenade",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Feuert ein explodierendes Projektil.",
+      "maxLevel": 8,
+      "emoji": "💣",
+      "verified": true
+    },
+    {
+      "id": "wine-glass",
+      "name": "Wine Glass",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Wirft ein explodierendes Projektil.",
+      "maxLevel": 8,
+      "emoji": "🍷",
+      "verified": true
+    },
+    {
+      "id": "raging-fire",
+      "name": "Raging Fire",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Erzeugt eine explodierende Schadenszone.",
+      "maxLevel": 8,
+      "emoji": "🔥",
+      "verified": true
+    },
+    {
+      "id": "ice-fang",
+      "name": "Ice Fang",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Erzeugt Schadenszonen in einer geraden Linie.",
+      "maxLevel": 8,
+      "emoji": "🧊",
+      "verified": true
+    },
+    {
+      "id": "gale-force",
+      "name": "Gale Force",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Feuert leicht treffende Projektile nach hinten.",
+      "maxLevel": 8,
+      "emoji": "🌪️",
+      "verified": true
+    },
+    {
+      "id": "rock-riot",
+      "name": "Rock Riot",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Feuert Projektile von einem festen Ort aus.",
+      "maxLevel": 8,
+      "emoji": "🪨",
+      "verified": true
+    },
+    {
+      "id": "fulgur",
+      "name": "Fulgur",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Schlägt an festen Orten ein.",
+      "maxLevel": 8,
+      "emoji": "⚡",
+      "verified": true
+    },
+    {
+      "id": "keremet-bubbles",
+      "name": "Keremet Bubbles",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Feuert langsame Schadenszonen.",
+      "maxLevel": 8,
+      "emoji": "🫧",
+      "verified": true
+    },
+    {
+      "id": "hex",
+      "name": "Hex",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Erzeugt eine wandernde Schadenszone; der Schaden hängt vom Fluch ab.",
+      "maxLevel": 8,
+      "emoji": "🔮",
+      "verified": true
+    },
+    {
+      "id": "refectio",
+      "name": "Refectio",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Erzeugt eine Schadenszone, die auch leicht heilt.",
+      "maxLevel": 8,
+      "emoji": "💚",
+      "verified": true
+    },
+    {
+      "id": "mace",
+      "name": "Mace",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Die Anzahl bestimmt die Zahl der Treffer.",
+      "maxLevel": 8,
+      "emoji": "🔨",
+      "verified": true
+    },
+    {
+      "id": "star-flail",
+      "name": "Star Flail",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Feuert verweilende Projektile; der Schaden wird mit der Regeneration multipliziert.",
+      "maxLevel": 8,
+      "emoji": "⭐",
+      "verified": true
+    },
+    {
+      "id": "alucard-spear",
+      "name": "Alucard Spear",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Führt beim Richtungswechsel nach links oder rechts einen Drehangriff aus.",
+      "maxLevel": 8,
+      "emoji": "🔱",
+      "verified": true
+    },
+    {
+      "id": "trident",
+      "name": "Trident",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Schlägt an festen Orten zu.",
+      "maxLevel": 8,
+      "emoji": "🔱",
+      "verified": true
+    },
+    {
+      "id": "iron-shield",
+      "name": "Iron Shield",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Schlägt mit verweilenden Projektilen zurück.",
+      "maxLevel": 8,
+      "emoji": "🛡️",
+      "verified": true
+    },
+    {
+      "id": "guardian-s-targe",
+      "name": "Guardian's Targe",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Ruft schützende Begleiter; Überheilung löst zusätzliche Angriffe der Begleiter aus.",
+      "maxLevel": 8,
+      "emoji": "🛡️",
+      "verified": true
+    },
+    {
+      "id": "tyrfing",
+      "name": "Tyrfing",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Kehrt wie ein Bumerang zurück; kann kritisch treffen.",
+      "maxLevel": 8,
+      "emoji": "🗡️",
+      "verified": true
+    },
+    {
+      "id": "alucart-sworb",
+      "name": "Alucart Sworb",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Trifft angeblich den nächsten Gegner.",
+      "maxLevel": 8,
+      "emoji": "🗡️",
+      "verified": true
+    },
+    {
+      "id": "confodere",
+      "name": "Confodere",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Greift Gegner in der Nähe an; Geschwindigkeit erhöht den Schaden.",
+      "maxLevel": 6,
+      "emoji": "🤺",
+      "verified": true
+    },
+    {
+      "id": "globus",
+      "name": "Globus",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Feuert zwei abprallende Projektile; die Anzahl erhöht die Dauer.",
+      "maxLevel": 8,
+      "emoji": "🔵",
+      "verified": true
+    },
+    {
+      "id": "optical-shot",
+      "name": "Optical Shot",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Feuert zwei durchdringende Projektile.",
+      "maxLevel": 8,
+      "emoji": "👁️",
+      "verified": true
+    },
+    {
+      "id": "dextro-custos",
+      "name": "Dextro Custos",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Ruft den feurigen Kopf von Cerberus in Blickrichtung.",
+      "maxLevel": 6,
+      "emoji": "🐕",
+      "verified": true
+    },
+    {
+      "id": "sinestro-custos",
+      "name": "Sinestro Custos",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Ruft den eisigen Kopf von Cerberus in Blickrichtung.",
+      "maxLevel": 6,
+      "emoji": "🐕",
+      "verified": true
+    },
+    {
+      "id": "centralis-custos",
+      "name": "Centralis Custos",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Ruft den rachsüchtigen Kopf von Cerberus; erhöht bei Schaden Rüstung, Regeneration und senkt die Abklingzeit.",
+      "maxLevel": 6,
+      "emoji": "🐕",
+      "verified": true
+    },
+    {
+      "id": "dominus-anger",
+      "name": "Dominus Anger",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Feuert ein durchdringendes Projektil; zehrt an der Gesundheit.",
+      "maxLevel": 6,
+      "emoji": "🔴",
+      "verified": true
+    },
+    {
+      "id": "dominus-hatred",
+      "name": "Dominus Hatred",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Feuert Projektile von oben; zehrt an der Gesundheit.",
+      "maxLevel": 6,
+      "emoji": "🟣",
+      "verified": true
+    },
+    {
+      "id": "dominus-agony",
+      "name": "Dominus Agony",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Erhöht Macht, Geschwindigkeit, Dauer und Fläche; zehrt an der Gesundheit.",
+      "maxLevel": 6,
+      "emoji": "⚫",
+      "verified": true
+    },
+    {
+      "id": "sonic-dash",
+      "name": "Sonic Dash",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "+10 % Laufgeschwindigkeit pro Stufe und Schaden an Gegnern in der Nähe; Fläche und Geschwindigkeit erhöhen den Schaden.",
+      "maxLevel": 8,
+      "emoji": "💨",
+      "verified": true
+    },
+    {
+      "id": "luminatio",
+      "name": "Luminatio",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Feuert rotierende Projektile aus Licht.",
+      "maxLevel": 6,
+      "emoji": "☀️",
+      "verified": true
+    },
+    {
+      "id": "umbra",
+      "name": "Umbra",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Feuert rotierende Projektile aus Dunkelheit.",
+      "maxLevel": 6,
+      "emoji": "🌑",
+      "verified": true
+    },
+    {
+      "id": "morning-star",
+      "name": "Morning Star",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Lässt dich aus einer Auswahl magischer Peitschen wählen.",
+      "maxLevel": 1,
+      "emoji": "🌟",
+      "verified": true
+    },
+    {
+      "id": "coat-of-arms",
+      "name": "Coat of Arms",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Lässt dich aus einer Auswahl von Vampirjäger-Werkzeugen wählen.",
+      "maxLevel": 1,
+      "emoji": "🛡️",
+      "verified": true
+    },
+    {
+      "id": "belnades-spellbook",
+      "name": "Belnades' Spellbook",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Lässt dich aus einer Auswahl von Zaubern wählen.",
+      "maxLevel": 1,
+      "emoji": "📘",
+      "verified": true
+    },
+    {
+      "id": "spectral-sword",
+      "name": "Spectral Sword",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Lässt dich aus einer Auswahl magischer Waffen wählen.",
+      "maxLevel": 1,
+      "emoji": "🗡️",
+      "verified": true
+    },
+    {
+      "id": "ebony-diabologue",
+      "name": "Ebony Diabologue",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Lässt dich aus einer Auswahl zwiespältiger Kräfte wählen.",
+      "maxLevel": 1,
+      "emoji": "📕",
+      "verified": true
+    },
+    {
+      "id": "valmanway",
+      "name": "Valmanway",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Feuert schneller, während du dich bewegst.",
+      "maxLevel": 8,
+      "emoji": "⚔️",
+      "verified": true
+    },
+    {
+      "id": "icebrand",
+      "name": "Icebrand",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Feuert verweilende Projektile; kann Gegner einfrieren.",
+      "maxLevel": 8,
+      "emoji": "❄️",
+      "verified": true
+    },
+    {
+      "id": "arrow-of-goth",
+      "name": "Arrow of Goth",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Kritische Treffer maximieren die Zahl der Projektile.",
+      "maxLevel": 8,
+      "emoji": "🏹",
+      "verified": true
+    },
+    {
+      "id": "aura-blast",
+      "name": "Aura Blast",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Erzeugt seitliche Explosionen.",
+      "maxLevel": 8,
+      "emoji": "💥",
+      "verified": true
+    },
+    {
+      "id": "kaiser-knuckle",
+      "name": "Kaiser Knuckle",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Teilt eine Serie von Schlägen auf kurze Distanz aus.",
+      "maxLevel": 8,
+      "emoji": "🥊",
+      "verified": true
+    },
+    {
+      "id": "pocket-knife",
+      "name": "Pocket Knife",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Wirft ein kurzlebiges Messer in Blickrichtung.",
+      "maxLevel": 8,
+      "emoji": "🔪",
+      "verified": true
+    },
+    {
+      "id": "svarog-statue",
+      "name": "Svarog Statue",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Erzeugt beim Laufen Schadenszonen.",
+      "maxLevel": 8,
+      "emoji": "🗿",
+      "verified": true
+    },
+    {
+      "id": "troll-bomb",
+      "name": "Troll Bomb",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Diese hier prallt nicht ab.",
+      "maxLevel": 8,
+      "emoji": "💣",
+      "verified": true
+    },
+    {
+      "id": "hydro-storm",
+      "name": "Hydro Storm",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Erzeugt Schadenswellen abhängig von Projektilgeschwindigkeit und Dauer.",
+      "maxLevel": 8,
+      "emoji": "🌊",
+      "verified": true
+    },
+    {
+      "id": "grand-cross",
+      "name": "Grand Cross",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Ruft heiliges Licht herbei.",
+      "maxLevel": 8,
+      "emoji": "✝️",
+      "verified": true
+    },
+    {
+      "id": "summon-spirit",
+      "name": "Summon Spirit",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Feuert ein zielsuchendes Projektil.",
+      "maxLevel": 8,
+      "emoji": "👻",
+      "verified": true
+    },
+    {
+      "id": "soul-steal",
+      "name": "Soul Steal",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Schadet allen sichtbaren Gegnern und versucht, sie in Herzen zu verwandeln.",
+      "maxLevel": 8,
+      "emoji": "💔",
+      "verified": true
+    },
+    {
+      "id": "dark-rift",
+      "name": "Dark Rift",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Erzeugt senkrechte Schadenszonen.",
+      "maxLevel": 8,
+      "emoji": "🌌",
+      "verified": true
+    },
+    {
+      "id": "sword-brothers",
+      "name": "Sword Brothers",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Gibt kurz Unverwundbarkeit und erzeugt eine Schadenswelle.",
+      "maxLevel": 8,
+      "emoji": "⚔️",
+      "verified": true
+    },
+    {
+      "id": "summon-spirit-tornado",
+      "name": "Summon Spirit Tornado",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Ruft Geister, die gelegentlich Erfahrungs-Edelsteine für dich einsammeln.",
+      "maxLevel": 8,
+      "emoji": "🌪️",
+      "verified": true
+    },
+    {
+      "id": "anura",
+      "name": "Anura",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Ruft Frösche, die Gegnern beim Springen schaden.",
+      "maxLevel": 8,
+      "emoji": "🐸",
+      "verified": true
+    },
+    {
+      "id": "endo-gears",
+      "name": "Endo Gears",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Löst auch andere Uhrwerk-Waffen aus; Anzahl und gefundene Orologions erhöhen den Schaden.",
+      "maxLevel": 9,
+      "emoji": "⚙️",
+      "verified": true
+    },
+    {
+      "id": "peri-pendulum",
+      "name": "Peri Pendulum",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Löst auch andere Uhrwerk-Waffen aus; Anzahl und gefundene Orologions erhöhen den Schaden.",
+      "maxLevel": 9,
+      "emoji": "🕰️",
+      "verified": true
+    },
+    {
+      "id": "myo-lift",
+      "name": "Myo Lift",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Löst auch andere Uhrwerk-Waffen aus; Anzahl und gefundene Orologions erhöhen den Schaden.",
+      "maxLevel": 9,
+      "emoji": "🛗",
+      "verified": true
+    },
+    {
+      "id": "epi-head",
+      "name": "Epi Head",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Löst auch andere Uhrwerk-Waffen aus; Anzahl und gefundene Orologions erhöhen den Schaden.",
+      "maxLevel": 9,
+      "emoji": "🗿",
+      "verified": true
+    },
+    {
+      "id": "familiar-forge",
+      "name": "Familiar Forge",
+      "source": "ode-to-castlevania",
+      "kind": "base",
+      "description": "Lässt dich einen Familiar beschwören.",
+      "maxLevel": 1,
+      "emoji": "🔨",
+      "verified": true
+    },
+    {
+      "id": "vampire-killer",
+      "name": "Vampire Killer",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Alchemy Whip: jede 3. Auslösung feuert zusätzliche Projektile; grelles Sonnenlicht verbrennt Bosse.",
+      "maxLevel": 1,
+      "emoji": "🪢",
+      "verified": true
+    },
+    {
+      "id": "spirit-tornado-tip",
+      "name": "Spirit Tornado Tip",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Wind Whip: jede 7. Auslösung ruft einen Geist, der heftig Erfahrungs-Edelsteine einsammelt.",
+      "maxLevel": 1,
+      "emoji": "🌪️",
+      "verified": true
+    },
+    {
+      "id": "cross-crasher-tip",
+      "name": "Cross Crasher Tip",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Platinum Whip: jede 7. Auslösung feuert zusätzlich besondere Projektile.",
+      "maxLevel": 1,
+      "emoji": "✝️",
+      "verified": true
+    },
+    {
+      "id": "hydrostormer-tip",
+      "name": "Hydrostormer Tip",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Dragon Water Whip: jede 13. Auslösung erzeugt Schadenswellen abhängig von Projektilgeschwindigkeit und Dauer.",
+      "maxLevel": 1,
+      "emoji": "🌊",
+      "verified": true
+    },
+    {
+      "id": "crissaegrim-tip",
+      "name": "Crissaegrim Tip",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Sonic Whip: jede 5. Auslösung löst zusätzlich eine Welle von Schadenswellen aus.",
+      "maxLevel": 1,
+      "emoji": "🗡️",
+      "verified": true
+    },
+    {
+      "id": "mormegil-tip",
+      "name": "Mormegil Tip",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Jet Black Whip: jede 8. Auslösung erzeugt zusätzlich Schadenszonen.",
+      "maxLevel": 1,
+      "emoji": "⚫",
+      "verified": true
+    },
+    {
+      "id": "daybreaker-tip",
+      "name": "Daybreaker Tip",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Vibhuti Whip: kritische Treffer maximieren die Zahl der Projektile.",
+      "maxLevel": 1,
+      "emoji": "🌅",
+      "verified": true
+    },
+    {
+      "id": "aurablaster-tip",
+      "name": "Aurablaster Tip",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Vanitas Whip: jede 7. Auslösung erzeugt eine Explosion.",
+      "maxLevel": 1,
+      "emoji": "💥",
+      "verified": true
+    },
+    {
+      "id": "yagyu-shuriken",
+      "name": "Yagyu Shuriken",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Shuriken: feuert ohne Pause.",
+      "maxLevel": 1,
+      "emoji": "✴️",
+      "verified": true
+    },
+    {
+      "id": "bwaka-knife",
+      "name": "Bwaka Knife",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Curved Knife: Projektile prallen endlos ab, bis die Dauer abläuft.",
+      "maxLevel": 1,
+      "emoji": "🔪",
+      "verified": true
+    },
+    {
+      "id": "long-inus",
+      "name": "Long Inus",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Javelin: Projektile tauchen wieder auf, nachdem sie den Bildschirm verlassen haben.",
+      "maxLevel": 1,
+      "emoji": "🏹",
+      "verified": true
+    },
+    {
+      "id": "stellar-blade",
+      "name": "Stellar Blade",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Discus: läuft an Wänden entlang; trifft kritisch, solange du unverwundbar bist.",
+      "maxLevel": 1,
+      "emoji": "🌟",
+      "verified": true
+    },
+    {
+      "id": "wrecking-ball",
+      "name": "Wrecking Ball",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Iron Ball: feuert ein sehr schweres Projektil.",
+      "maxLevel": 1,
+      "emoji": "🏗️",
+      "verified": true
+    },
+    {
+      "id": "jewel-gun",
+      "name": "Jewel Gun",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Silver Revolver: kritische Treffer töten sofort und verwandeln Gegner in Juwelen.",
+      "maxLevel": 1,
+      "emoji": "💎",
+      "verified": true
+    },
+    {
+      "id": "the-rpg",
+      "name": "The RPG",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Hand Grenade: Explosionen breiten sich aus.",
+      "maxLevel": 1,
+      "emoji": "🚀",
+      "verified": true
+    },
+    {
+      "id": "meal-ticket",
+      "name": "Meal Ticket",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Wine Glass: seelenvolles Essen richtet Schaden abhängig von den Wiederbelebungen an.",
+      "maxLevel": 1,
+      "emoji": "🍽️",
+      "verified": true
+    },
+    {
+      "id": "salamender",
+      "name": "Salamender",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Raging Fire: ruft zusätzlich eine Feuerschlange.",
+      "maxLevel": 1,
+      "emoji": "🦎",
+      "verified": true
+    },
+    {
+      "id": "cocytus",
+      "name": "Cocytus",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Ice Fang: löst zusätzlich einen eisigen Wind aus.",
+      "maxLevel": 1,
+      "emoji": "🌨️",
+      "verified": true
+    },
+    {
+      "id": "pneuma-tempestas",
+      "name": "Pneuma Tempestas",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Gale Force: löst zusätzlich einen kreiselnden Tornado aus.",
+      "maxLevel": 1,
+      "emoji": "🌪️",
+      "verified": true
+    },
+    {
+      "id": "gemma-torpor",
+      "name": "Gemma Torpor",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Rock Riot: zusätzlich ein Kristallregen, der Gegner in wertvolle Juwelen verwandeln kann.",
+      "maxLevel": 1,
+      "emoji": "💎",
+      "verified": true
+    },
+    {
+      "id": "tenebris-tonitrus",
+      "name": "Tenebris Tonitrus",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Fulgur: löst zusätzlich Kugelblitze aus.",
+      "maxLevel": 1,
+      "emoji": "🌩️",
+      "verified": true
+    },
+    {
+      "id": "keremet-morbus",
+      "name": "Keremet Morbus",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Keremet Bubbles: zusätzlich ein schleimiger Schwarm, der Gegner jagt.",
+      "maxLevel": 1,
+      "emoji": "🦠",
+      "verified": true
+    },
+    {
+      "id": "nightmare",
+      "name": "Nightmare",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Hex: zusätzlich eine Zone negativer Energie, die beim Betreten den Fluch verdoppelt.",
+      "maxLevel": 1,
+      "emoji": "😱",
+      "verified": true
+    },
+    {
+      "id": "sanctuary",
+      "name": "Sanctuary",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Refectio: heilt in festen Abständen vollständig und läutert alle sichtbaren Gegner.",
+      "maxLevel": 1,
+      "emoji": "⛪",
+      "verified": true
+    },
+    {
+      "id": "stamazza",
+      "name": "Stamazza",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Mace: extrem hoher kritischer Schadensmultiplikator.",
+      "maxLevel": 1,
+      "emoji": "🔨",
+      "verified": true
+    },
+    {
+      "id": "moon-rod",
+      "name": "Moon Rod",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Star Flail: Projektile werden in Blickrichtung geschossen.",
+      "maxLevel": 1,
+      "emoji": "🌙",
+      "verified": true
+    },
+    {
+      "id": "thunderbolt-spear",
+      "name": "Thunderbolt Spear",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Alucard Spear: jede 7. Auslösung löst einen Spezialangriff abhängig von der Geschwindigkeit aus.",
+      "maxLevel": 1,
+      "emoji": "⚡",
+      "verified": true
+    },
+    {
+      "id": "gungnir-souris",
+      "name": "Gungnir-Souris",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Trident: kritische Treffer feuern zusätzlich einen Strahl.",
+      "maxLevel": 1,
+      "emoji": "🔱",
+      "verified": true
+    },
+    {
+      "id": "dark-iron-shield",
+      "name": "Dark Iron Shield",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Iron Shield: kritische Treffer schlagen mit rotierenden Schwertern zurück.",
+      "maxLevel": 1,
+      "emoji": "🛡️",
+      "verified": true
+    },
+    {
+      "id": "sacred-beasts-tower-shield",
+      "name": "Sacred Beasts Tower Shield",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Guardian's Targe: Überheilung gibt zusätzlich eine Zeit der Unverwundbarkeit.",
+      "maxLevel": 1,
+      "emoji": "🛡️",
+      "verified": true
+    },
+    {
+      "id": "rune-sword",
+      "name": "Rune Sword",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Tyrfing: kritischer Schaden hängt zusätzlich von Fläche, Geschwindigkeit und Dauer ab.",
+      "maxLevel": 1,
+      "emoji": "🗡️",
+      "verified": true
+    },
+    {
+      "id": "alucard-swords",
+      "name": "Alucard Swords",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Alucart Sworb: Erscheinungen des wahren Schwertträgers suchen Gegner auf.",
+      "maxLevel": 1,
+      "emoji": "⚔️",
+      "verified": true
+    },
+    {
+      "id": "vol-confodere",
+      "name": "Vol Confodere",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Greift Gegner in der Nähe an; Geschwindigkeit erhöht den Schaden.",
+      "maxLevel": 6,
+      "emoji": "🤺",
+      "verified": true
+    },
+    {
+      "id": "melio-confodere",
+      "name": "Melio Confodere",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Greift Gegner in der Nähe an; Geschwindigkeit verkürzt die Abklingzeit und erhöht den Schaden.",
+      "maxLevel": 6,
+      "emoji": "🤺",
+      "verified": true
+    },
+    {
+      "id": "nitesco",
+      "name": "Nitesco",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Globus: feuert einen durchdringenden Energiestrahl in Blickrichtung.",
+      "maxLevel": 1,
+      "emoji": "🔦",
+      "verified": true
+    },
+    {
+      "id": "acerbatus",
+      "name": "Acerbatus",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Optical Shot: der Schaden hängt von der Zahl besiegter Gegner ab.",
+      "maxLevel": 1,
+      "emoji": "👁️",
+      "verified": true
+    },
+    {
+      "id": "rapidus-fio",
+      "name": "Rapidus Fio",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Sonic Dash: löst zusätzlich einen Schildstoß aus.",
+      "maxLevel": 1,
+      "emoji": "💨",
+      "verified": true
+    },
+    {
+      "id": "vol-luminatio",
+      "name": "Vol Luminatio",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Luminatio: Schaden, Geschwindigkeit, Fläche und Dauer hängen vom Wachstum ab.",
+      "maxLevel": 3,
+      "emoji": "☀️",
+      "verified": true
+    },
+    {
+      "id": "vol-umbra",
+      "name": "Vol Umbra",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Umbra: Schaden, Geschwindigkeit, Fläche und Dauer hängen vom Magnet ab.",
+      "maxLevel": 3,
+      "emoji": "🌑",
+      "verified": true
+    },
+    {
+      "id": "claimh-solais",
+      "name": "Claimh Solais",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Entwicklung von Pocket Knife: erhöht für jeden sichtbaren Gegner Macht, Rüstung und kritischen Schaden.",
+      "maxLevel": 1,
+      "emoji": "🗡️",
+      "verified": true
+    },
+    {
+      "id": "trinum-custodem",
+      "name": "Trinum Custodem",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Union aus Dextro Custos, Sinestro Custos und Centralis Custos.",
+      "maxLevel": 1,
+      "emoji": "🐕",
+      "verified": true
+    },
+    {
+      "id": "power-of-sire",
+      "name": "Power of Sire",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Union aus Dominus Anger, Dominus Hatred und Dominus Agony: kritischer Schaden an allem Sichtbaren; zehrt an der Gesundheit.",
+      "maxLevel": 1,
+      "emoji": "🩸",
+      "verified": true
+    },
+    {
+      "id": "million-cut",
+      "name": "Million Cut",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Union aus Valmanway und Thousand Edge: schlitzt endlos und wird bei ununterbrochener Bewegung größer.",
+      "maxLevel": 1,
+      "emoji": "⚔️",
+      "verified": true
+    },
+    {
+      "id": "ninth-circle",
+      "name": "Ninth Circle",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Union aus Icebrand und Unholy Vespers: die Hölle ist wirklich zugefroren.",
+      "maxLevel": 1,
+      "emoji": "❄️",
+      "verified": true
+    },
+    {
+      "id": "dies-irae",
+      "name": "Dies Irae",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Union aus Arrow of Goth und Mannajja: Alamaric Snipers lassen Pfeile regnen, bei kritischen Treffern noch mehr.",
+      "maxLevel": 1,
+      "emoji": "🏹",
+      "verified": true
+    },
+    {
+      "id": "kardia-phlegeton",
+      "name": "Kardía Phlegeton",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Union aus Aura Blast und Hellfire: ruft einen gewaltigen Vulkanausbruch.",
+      "maxLevel": 1,
+      "emoji": "🌋",
+      "verified": true
+    },
+    {
+      "id": "lapiste-tepisto",
+      "name": "Lapiste Tepisto",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Union aus Kaiser Knuckle und Tri-Bracelet: entfesselt ein Sperrfeuer steinerner Fäuste.",
+      "maxLevel": 1,
+      "emoji": "🪨",
+      "verified": true
+    },
+    {
+      "id": "darkness-illusion",
+      "name": "Darkness Illusion",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Union aus Svarog Statue und Valkyrie Turner: karmesinrote Klone tanzen mit dir in den Flammen.",
+      "maxLevel": 1,
+      "emoji": "🔥",
+      "verified": true
+    },
+    {
+      "id": "carnage-heart",
+      "name": "Carnage Heart",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Union aus Troll Bomb und NO FUTURE: diese hier prallt tatsächlich ab.",
+      "maxLevel": 1,
+      "emoji": "💣",
+      "verified": true
+    },
+    {
+      "id": "hydro-pump-climax",
+      "name": "Hydro Pump Climax",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Union aus Hydro Storm und La Borra: wenn es regnet, dann schüttet es.",
+      "maxLevel": 1,
+      "emoji": "🌊",
+      "verified": true
+    },
+    {
+      "id": "arch-angle",
+      "name": "Arch Angle",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Union aus Grand Cross und Heaven Sword: der zentrale Strahl pulsiert, wenn Kreuze ihn kreuzen.",
+      "maxLevel": 1,
+      "emoji": "✝️",
+      "verified": true
+    },
+    {
+      "id": "spirit-of-light",
+      "name": "Spirit of Light",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Union aus Summon Spirit und Holy Wand: feuert zielsuchende Geister aus einem Lichtportal.",
+      "maxLevel": 1,
+      "emoji": "✨",
+      "verified": true
+    },
+    {
+      "id": "power-of-lire",
+      "name": "Power of Lire",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Union aus Soul Steal und Vicious Hunger: verschlingt Gegner mit unstillbarer Gier.",
+      "maxLevel": 1,
+      "emoji": "💰",
+      "verified": true
+    },
+    {
+      "id": "legacy-of-death-soul-river",
+      "name": "Legacy of Death: Soul River",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Union aus Dark Rift und Death Spiral: der Tod steht dir gut.",
+      "maxLevel": 1,
+      "emoji": "💀",
+      "verified": true
+    },
+    {
+      "id": "vjaya-sisters",
+      "name": "Vjaya Sisters",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Union aus Sword Brothers und Thunder Loop: Blitze lösen Schwertexplosionen mit kurzer Unverwundbarkeit aus.",
+      "maxLevel": 1,
+      "emoji": "⚡",
+      "verified": true
+    },
+    {
+      "id": "venus-crescent",
+      "name": "Venus Crescent",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Union aus Summon Spirit Tornado und Gorgeous Moon: Liebe, Schönheit und Licht.",
+      "maxLevel": 1,
+      "emoji": "🌙",
+      "verified": true
+    },
+    {
+      "id": "dark-frogamorphosis",
+      "name": "Dark Frogamorphosis",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Union aus Anura und Soul Eater: kann Gegner tatsächlich fressen.",
+      "maxLevel": 1,
+      "emoji": "🐸",
+      "verified": true
+    },
+    {
+      "id": "clock-tower",
+      "name": "Clock Tower",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Union aus Endo Gears, Peri Pendulum, Myo Lift und Epi Head.",
+      "maxLevel": 1,
+      "emoji": "🕰️",
+      "verified": true
+    },
+    {
+      "id": "alucard-shield",
+      "name": "Alucard Shield",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Geschenk von Alucard Swords: nimmt alle anderen ausgerüsteten Entwicklungen auf und löst sie aus; der schwebende Schild schadet Gegnern; belegt einen Waffen-Slot.",
+      "maxLevel": 1,
+      "emoji": "🛡️",
+      "verified": true
+    },
+    {
+      "id": "universitas",
+      "name": "Universitas",
+      "source": "ode-to-castlevania",
+      "kind": "evolved",
+      "description": "Geschenk von Vol Luminatio und Vol Umbra: lässt in festen Abständen Meteore auf Gegner regnen.",
+      "maxLevel": 1,
+      "emoji": "☄️",
+      "verified": true
+    }
+  ]
+}

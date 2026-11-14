@@ -1,0 +1,102 @@
+{
+  "$schema": "../../schema/characters.schema.json",
+  "characters": [
+    {
+      "id": "eleanor-uziron",
+      "name": "Eleanor Uziron",
+      "source": "tides-of-the-foscari",
+      "startingWeapons": [
+        "spellstring"
+      ],
+      "bonus": "Erhält SpellStream auf Level 10, SpellStrike auf Level 20 und Academy Badge auf Level 30.",
+      "secret": false,
+      "emoji": "🧙‍♀️",
+      "verified": true,
+      "note": "SpellStream und SpellStrike kommen erst auf Level 10 und 20 dazu."
+    },
+    {
+      "id": "maruto-cuts",
+      "name": "Maruto Cuts",
+      "source": "tides-of-the-foscari",
+      "startingWeapons": [
+        "eskizzibur"
+      ],
+      "bonus": "Erhält nach erlittenem Schaden kurz mehr Rüstung; Academy Badge auf Level 30.",
+      "secret": false,
+      "emoji": "🛡️",
+      "verified": true
+    },
+    {
+      "id": "keitha-muort",
+      "name": "Keitha Muort",
+      "source": "tides-of-the-foscari",
+      "startingWeapons": [
+        "flash-arrow"
+      ],
+      "bonus": "Glücksabhängige Aufladung feuert eine Salve Flash Arrows; +1 % Glück pro Level; Academy Badge auf Level 30.",
+      "secret": false,
+      "emoji": "🏹",
+      "verified": true
+    },
+    {
+      "id": "luminaire-foscari",
+      "name": "Luminaire Foscari",
+      "source": "tides-of-the-foscari",
+      "startingWeapons": [
+        "prismatic-missile"
+      ],
+      "bonus": "Löst beim Level-up einen Rosary aus; nach einer Wiederbelebung kurz mehr Macht, Laufgeschwindigkeit und kürzere Abklingzeit.",
+      "secret": false,
+      "emoji": "✨",
+      "verified": true
+    },
+    {
+      "id": "genevieve-gruyere",
+      "name": "Genevieve Gruyère",
+      "source": "tides-of-the-foscari",
+      "startingWeapons": [
+        "shadow-servant"
+      ],
+      "bonus": "Löst beim Level-up einen Vacuum aus; einmal pro Leben World Eater nach tödlichem Schaden.",
+      "secret": false,
+      "emoji": "🧀",
+      "verified": true
+    },
+    {
+      "id": "je-ne-viv",
+      "name": "Je-Ne-Viv",
+      "source": "tides-of-the-foscari",
+      "startingWeapons": [
+        "shadow-servant"
+      ],
+      "bonus": "„Es frisst buchstäblich die Welt.“",
+      "secret": false,
+      "emoji": "🌍",
+      "verified": true
+    },
+    {
+      "id": "sammy",
+      "name": "Sammy",
+      "source": "tides-of-the-foscari",
+      "startingWeapons": [
+        "vicious-hunger"
+      ],
+      "bonus": "Erhält Erfahrung beim Aufsammeln von Goldmünzen und Geldbeuteln; startet mit zeitweise verringerter Macht.",
+      "secret": false,
+      "emoji": "🐟",
+      "verified": true
+    },
+    {
+      "id": "rottin-ghoul",
+      "name": "Rottin'Ghoul",
+      "source": "tides-of-the-foscari",
+      "startingWeapons": [
+        "party-popper"
+      ],
+      "bonus": "Erhält alle 20 Level mehr Projektile (max. +4).",
+      "secret": false,
+      "emoji": "🧟",
+      "verified": true
+    }
+  ]
+}

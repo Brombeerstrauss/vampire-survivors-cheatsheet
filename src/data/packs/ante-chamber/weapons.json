@@ -1,0 +1,85 @@
+{
+  "$schema": "../../schema/weapons.schema.json",
+  "weapons": [
+    {
+      "id": "infernolatro",
+      "name": "Infernolatro",
+      "source": "ante-chamber",
+      "kind": "base",
+      "description": "Erzeugt eine Flammenzone in Blickrichtung; wird durch besiegte Gegner stärker.",
+      "maxLevel": 9,
+      "emoji": "🔥",
+      "verified": true
+    },
+    {
+      "id": "gros-michel",
+      "name": "Gros Michel",
+      "source": "ante-chamber",
+      "kind": "base",
+      "description": "Wirft gebogene Bananen; 1 zu 6 Chance auf kritischen Treffer mit Explosion.",
+      "maxLevel": 9,
+      "emoji": "🍌",
+      "verified": true
+    },
+    {
+      "id": "fibonacci-spritz",
+      "name": "Fibonacci Spritz",
+      "source": "ante-chamber",
+      "kind": "base",
+      "description": "Versprüht spiralförmig Sprudelwasser; kann eine andere ausgerüstete Waffe mit auslösen.",
+      "maxLevel": 9,
+      "emoji": "🫧",
+      "verified": true
+    },
+    {
+      "id": "celestial-booster",
+      "name": "Celestial Booster",
+      "source": "ante-chamber",
+      "kind": "base",
+      "description": "Planeten kreisen um dich; der Schaden steigt mit den in diesem Lauf gesammelten Münzen.",
+      "maxLevel": 9,
+      "emoji": "🪐",
+      "verified": true
+    },
+    {
+      "id": "naneinferno",
+      "name": "NaneInferno",
+      "source": "ante-chamber",
+      "kind": "evolved",
+      "description": "Entwicklung von Infernolatro: fügt eine zweite Zone hinzu; überlagerte Zonen vervielfachen ihre Wirkung.",
+      "maxLevel": 1,
+      "emoji": "🔥",
+      "verified": true
+    },
+    {
+      "id": "cavendish",
+      "name": "Cavendish",
+      "source": "ante-chamber",
+      "kind": "evolved",
+      "description": "Entwicklung von Gros Michel: trifft immer kritisch und explodiert immer; andere Waffen treffen öfter kritisch.",
+      "maxLevel": 1,
+      "emoji": "🍌",
+      "verified": true
+    },
+    {
+      "id": "royal-flush",
+      "name": "Royal Flush",
+      "source": "ante-chamber",
+      "kind": "evolved",
+      "description": "Entwicklung von Fibonacci Spritz: 55 % Chance, 1, 2, 3 oder 5 andere Waffen mit auszulösen.",
+      "maxLevel": 1,
+      "emoji": "🂡",
+      "verified": true
+    },
+    {
+      "id": "negative-space",
+      "name": "Negative Space",
+      "source": "ante-chamber",
+      "kind": "evolved",
+      "description": "Entwicklung von Celestial Booster: enthüllt geheime Planeten, die gelegentlich negativ werden.",
+      "maxLevel": 1,
+      "emoji": "🌌",
+      "verified": true
+    }
+  ]
+}

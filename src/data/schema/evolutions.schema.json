@@ -52,6 +52,10 @@
                 "level": {
                   "$ref": "common.schema.json#/definitions/level",
                   "description": "Standard: any (Besitz reicht)."
+                },
+                "consumed": {
+                  "type": "boolean",
+                  "description": "Der Gegenstand wird bei der Entwicklung verbraucht (z. B. Weapon Power-Up)."
                 }
               }
             }

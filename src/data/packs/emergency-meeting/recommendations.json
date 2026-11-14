@@ -1,0 +1,143 @@
+{
+  "$schema": "../../schema/recommendations.schema.json",
+  "recommendations": [
+    {
+      "character": "crewmate-dino",
+      "source": "emergency-meeting",
+      "weapons": [
+        {
+          "id": "report",
+          "reason": "Startwaffe; mit Mini Crewmate wird sie zu Emergency Meeting.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "mini-crewmate",
+          "reason": "Nötig für Emergency Meeting.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "engineer-gino",
+      "source": "emergency-meeting",
+      "weapons": [
+        {
+          "id": "lucky-swipe",
+          "reason": "Startwaffe; mit Mini Engineer wird sie zu Crossed Wires.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "mini-engineer",
+          "reason": "Nötig für Crossed Wires.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "ghost-lino",
+      "source": "emergency-meeting",
+      "weapons": [
+        {
+          "id": "lifesign-scan",
+          "reason": "Startwaffe; mit Mini Ghost wird sie zu Paranormal Scan.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "mini-ghost",
+          "reason": "Nötig für Paranormal Scan.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "shapeshifter-nino",
+      "source": "emergency-meeting",
+      "weapons": [
+        {
+          "id": "just-vent",
+          "reason": "Startwaffe; mit Mini Shapeshifter wird sie zu Unjust Ejection.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "mini-shapeshifter",
+          "reason": "Nötig für Unjust Ejection.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "guardian-pina",
+      "source": "emergency-meeting",
+      "weapons": [
+        {
+          "id": "clear-debris",
+          "reason": "Startwaffe; mit Mini Guardian wird sie zu Clear Asteroids.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "mini-guardian",
+          "reason": "Nötig für Clear Asteroids.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "impostor-rina",
+      "source": "emergency-meeting",
+      "weapons": [
+        {
+          "id": "sharp-tongue",
+          "reason": "Startwaffe; mit Mini Impostor wird sie zu Impostongue.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "mini-impostor",
+          "reason": "Nötig für Impostongue.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "scientist-mina",
+      "source": "emergency-meeting",
+      "weapons": [
+        {
+          "id": "science-rocks",
+          "reason": "Startwaffe; mit Mini Scientist wird sie zu Rocket Science.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "mini-scientist",
+          "reason": "Nötig für Rocket Science.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "horse",
+      "source": "emergency-meeting",
+      "weapons": [
+        {
+          "id": "hats",
+          "reason": "Startwaffe.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    }
+  ]
+}

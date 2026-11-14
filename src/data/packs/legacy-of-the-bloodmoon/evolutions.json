@@ -1,0 +1,156 @@
+{
+  "$schema": "../../schema/evolutions.schema.json",
+  "evolutions": [
+    {
+      "id": "cardinal-rain",
+      "kind": "evolution",
+      "source": "legacy-of-the-bloodmoon",
+      "result": "cardinal-rain",
+      "weapons": [
+        {
+          "id": "scarlet-needle"
+        }
+      ],
+      "passives": [
+        {
+          "id": "pummarola",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "dust-to-dust",
+      "kind": "evolution",
+      "source": "legacy-of-the-bloodmoon",
+      "result": "dust-to-dust",
+      "weapons": [
+        {
+          "id": "incineration"
+        }
+      ],
+      "passives": [
+        {
+          "id": "candelabrador",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "bloodlust",
+      "kind": "evolution",
+      "source": "legacy-of-the-bloodmoon",
+      "result": "bloodlust",
+      "weapons": [
+        {
+          "id": "ashella"
+        }
+      ],
+      "passives": [
+        {
+          "id": "duplicator",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "forbidden-siren",
+      "kind": "evolution",
+      "source": "legacy-of-the-bloodmoon",
+      "result": "forbidden-siren",
+      "weapons": [
+        {
+          "id": "screams-from-the-void"
+        }
+      ],
+      "passives": [
+        {
+          "id": "attractorb",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "damnation",
+      "kind": "evolution",
+      "source": "legacy-of-the-bloodmoon",
+      "result": "damnation",
+      "weapons": [
+        {
+          "id": "blacken-firmament"
+        }
+      ],
+      "passives": [
+        {
+          "id": "torrona-s-box",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "firestall",
+      "kind": "union",
+      "source": "legacy-of-the-bloodmoon",
+      "result": "firestall",
+      "weapons": [
+        {
+          "id": "firefall"
+        },
+        {
+          "id": "fireball"
+        },
+        {
+          "id": "firewall"
+        }
+      ],
+      "passives": [],
+      "conditions": [
+        "Kein Gegenstand nötig; alle drei Feuerwaffen auf Maximalstufe."
+      ],
+      "verified": true
+    },
+    {
+      "id": "shimmering-sands",
+      "kind": "union",
+      "source": "legacy-of-the-bloodmoon",
+      "result": "shimmering-sands",
+      "weapons": [
+        {
+          "id": "descent-into-misery"
+        },
+        {
+          "id": "kyra-stones"
+        }
+      ],
+      "passives": [],
+      "conditions": [
+        "Kein Gegenstand nötig; Kyra-Stones ist selbst eine Entwicklung von Magi-Stone."
+      ],
+      "verified": true
+    },
+    {
+      "id": "road-to-heaven",
+      "kind": "union",
+      "source": "legacy-of-the-bloodmoon",
+      "result": "road-to-heaven",
+      "weapons": [
+        {
+          "id": "108-bocce"
+        },
+        {
+          "id": "108-responsive-prayers"
+        }
+      ],
+      "passives": [],
+      "conditions": [
+        "Kein Gegenstand nötig."
+      ],
+      "verified": true,
+      "note": "Braucht 108 Bocce aus Legacy of the Moonspell."
+    }
+  ]
+}

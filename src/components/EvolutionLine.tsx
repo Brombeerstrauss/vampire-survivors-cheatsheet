@@ -23,12 +23,14 @@ function Chip({
   requirement,
   check,
   highlight,
+  extra,
 }: {
   href: string
   entry: { name: string; emoji?: string; icon?: string } | undefined
   requirement?: 'max' | 'any'
   check?: RequirementCheck
   highlight?: boolean
+  extra?: string
 }) {
   const tone =
     check?.state === 'missing'
@@ -46,6 +48,7 @@ function Chip({
       {entry && <EntryIcon entry={entry} size="sm" />}
       <span className="truncate">{entry?.name ?? '?'}</span>
       {requirement === 'max' && <Pill>Max</Pill>}
+      {extra && <Pill>{extra}</Pill>}
       <StateMark check={check} />
     </a>
   )
@@ -98,6 +101,7 @@ export function EvolutionLine({
               entry={catalog.passive(p.id)}
               requirement={p.level === 'max' ? 'max' : undefined}
               check={reqCheck('passive', p.id)}
+              extra={p.consumed ? 'wird verbraucht' : undefined}
             />
           </span>
         ))}

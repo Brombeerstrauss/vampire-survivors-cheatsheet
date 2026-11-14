@@ -11,6 +11,7 @@ import {
   addPassive,
   addWeapon,
   applyEvolution,
+  canAddPassive,
   EMPTY_RUN,
   freePassiveSlots,
   freeWeaponSlots,
@@ -133,7 +134,7 @@ export function RunView() {
             ))}
             <AddButton
               label="Gegenstand hinzufügen"
-              full={freePassiveSlots(run, fullCatalog) === 0}
+              full={!catalog.passives.some((p) => canAddPassive(run, fullCatalog, p.id))}
               fullLabel="Alle passiven Slots belegt"
               onClick={() => setPicker('passive')}
             />
@@ -517,7 +518,7 @@ function Pickers({
             rank: (tags.get(w.id)?.rank ?? 50) + (w.kind === 'evolved' ? 100 : 0),
           }))
       : catalog.passives
-          .filter((p) => !owned.has(p.id))
+          .filter((p) => !owned.has(p.id) && canAddPassive(run, catalog, p.id))
           .map((p) => ({
             ...p,
             detail: p.stageOnly ? `Nur als Fundstück · ${p.description}` : p.description,

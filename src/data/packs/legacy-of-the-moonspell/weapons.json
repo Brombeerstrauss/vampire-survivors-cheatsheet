@@ -1,0 +1,185 @@
+{
+  "$schema": "../../schema/weapons.schema.json",
+  "weapons": [
+    {
+      "id": "silver-wind",
+      "name": "Silver Wind",
+      "source": "legacy-of-the-moonspell",
+      "kind": "base",
+      "description": "Besiegte Gegner können Herzen fallen lassen.",
+      "maxLevel": 8,
+      "emoji": "🌬️",
+      "verified": true
+    },
+    {
+      "id": "four-seasons",
+      "name": "Four Seasons",
+      "source": "legacy-of-the-moonspell",
+      "kind": "base",
+      "description": "Erzeugt 4 Explosionen; Anzahl und Dauer erhöhen stattdessen den Schaden.",
+      "maxLevel": 8,
+      "emoji": "🍂",
+      "verified": true
+    },
+    {
+      "id": "summon-night",
+      "name": "Summon Night",
+      "source": "legacy-of-the-moonspell",
+      "kind": "base",
+      "description": "Erzeugt Schadenszonen über dem Charakter.",
+      "maxLevel": 8,
+      "emoji": "🌌",
+      "verified": true
+    },
+    {
+      "id": "mirage-robe",
+      "name": "Mirage Robe",
+      "source": "legacy-of-the-moonspell",
+      "kind": "base",
+      "description": "Erzeugt einfrierende, stehende Projektile, die explodieren können.",
+      "maxLevel": 8,
+      "emoji": "🧥",
+      "verified": true
+    },
+    {
+      "id": "night-sword",
+      "name": "Night Sword",
+      "source": "legacy-of-the-moonspell",
+      "kind": "base",
+      "description": "Schlägt mit Bonusschaden zurück, der von der Gier abhängt; kann Herzen stehlen.",
+      "maxLevel": 8,
+      "emoji": "🗡️",
+      "verified": true
+    },
+    {
+      "id": "mille-bolle-blu",
+      "name": "Mille Bolle Blu",
+      "source": "legacy-of-the-moonspell",
+      "kind": "base",
+      "description": "Feuert Projektile, die eine Weile bleiben.",
+      "maxLevel": 8,
+      "emoji": "🫧",
+      "verified": true
+    },
+    {
+      "id": "108-bocce",
+      "name": "108 Bocce",
+      "source": "legacy-of-the-moonspell",
+      "kind": "base",
+      "description": "Eigentlich nur 8; der Schaden hängt vom Unterschied zwischen Fluch und Glück ab.",
+      "maxLevel": 8,
+      "emoji": "🎱",
+      "verified": true
+    },
+    {
+      "id": "lunarmight",
+      "name": "LunarMight",
+      "source": "legacy-of-the-moonspell",
+      "kind": "base",
+      "description": "Erzeugt eine Schadenszone, die die Macht leicht erhöht.",
+      "maxLevel": 6,
+      "emoji": "🌑",
+      "verified": true
+    },
+    {
+      "id": "lunarsight",
+      "name": "LunarSight",
+      "source": "legacy-of-the-moonspell",
+      "kind": "base",
+      "description": "Erzeugt Schadenszonen, die dem Charakter gelegentlich folgen.",
+      "maxLevel": 6,
+      "emoji": "🌒",
+      "verified": true
+    },
+    {
+      "id": "lunarbight",
+      "name": "LunarBight",
+      "source": "legacy-of-the-moonspell",
+      "kind": "base",
+      "description": "Kann getroffene Gegner verlangsamen.",
+      "maxLevel": 6,
+      "emoji": "🌘",
+      "verified": true
+    },
+    {
+      "id": "festive-winds",
+      "name": "Festive Winds",
+      "source": "legacy-of-the-moonspell",
+      "kind": "evolved",
+      "description": "Entwicklung von Silver Wind: schwächt die Abwehr der Gegner.",
+      "maxLevel": 1,
+      "emoji": "🎐",
+      "verified": true
+    },
+    {
+      "id": "argent-flow",
+      "name": "Argent Flow",
+      "source": "legacy-of-the-moonspell",
+      "kind": "evolved",
+      "description": "Entwicklung von Festive Winds: zerfetzt die Abwehr der Gegner.",
+      "maxLevel": 1,
+      "emoji": "🌊",
+      "verified": true
+    },
+    {
+      "id": "godai-shuffle",
+      "name": "Godai Shuffle",
+      "source": "legacy-of-the-moonspell",
+      "kind": "evolved",
+      "description": "Entwicklung von Four Seasons: erzeugt eine zusätzliche Explosion.",
+      "maxLevel": 1,
+      "emoji": "🎴",
+      "verified": true
+    },
+    {
+      "id": "echo-night",
+      "name": "Echo Night",
+      "source": "legacy-of-the-moonspell",
+      "kind": "evolved",
+      "description": "Entwicklung von Summon Night: erzeugt auch Schadenszonen unter dem Charakter.",
+      "maxLevel": 1,
+      "emoji": "🌃",
+      "verified": true
+    },
+    {
+      "id": "j-odore",
+      "name": "J'Odore",
+      "source": "legacy-of-the-moonspell",
+      "kind": "evolved",
+      "description": "Entwicklung von Mirage Robe: Projektile bewegen sich und verwirren Gegner.",
+      "maxLevel": 1,
+      "emoji": "🌫️",
+      "verified": true
+    },
+    {
+      "id": "muramasa",
+      "name": "Muramasa",
+      "source": "legacy-of-the-moonspell",
+      "kind": "evolved",
+      "description": "Entwicklung von Night Sword: ermöglicht kritische Treffer und einen Kombo-Abschluss; saugt Gesundheit ab.",
+      "maxLevel": 1,
+      "emoji": "⚔️",
+      "verified": true
+    },
+    {
+      "id": "boo-roo-boolle",
+      "name": "Boo Roo Boolle",
+      "source": "legacy-of-the-moonspell",
+      "kind": "evolved",
+      "description": "Entwicklung von Mille Bolle Blu: Projektile können dasselbe Ziel mehrfach treffen.",
+      "maxLevel": 1,
+      "emoji": "🫧",
+      "verified": true
+    },
+    {
+      "id": "lunarflight",
+      "name": "LunarFlight",
+      "source": "legacy-of-the-moonspell",
+      "kind": "evolved",
+      "description": "Union aus LunarMight, LunarSight und LunarBight: werde eins mit den Mondzeichen.",
+      "maxLevel": 1,
+      "emoji": "🌙",
+      "verified": true
+    }
+  ]
+}

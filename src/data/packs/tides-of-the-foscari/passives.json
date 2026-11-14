@@ -1,0 +1,14 @@
+{
+  "$schema": "../../schema/passives.schema.json",
+  "passives": [
+    {
+      "id": "academy-badge",
+      "name": "Academy Badge",
+      "source": "tides-of-the-foscari",
+      "description": "Mehr Anzahl und Wiederbelebungen, dafür weniger Wachstum.",
+      "maxLevel": 6,
+      "emoji": "🎓",
+      "verified": true
+    }
+  ]
+}

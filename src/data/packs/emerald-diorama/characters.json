@@ -1,0 +1,201 @@
+{
+  "$schema": "../../schema/characters.schema.json",
+  "characters": [
+    {
+      "id": "tsunanori-mido",
+      "name": "Tsunanori Mido",
+      "source": "emerald-diorama",
+      "startingWeapons": [
+        "fleuret"
+      ],
+      "bonus": "Erhält alle 20 Level einen Kugutsu als Begleiter (max. 4); löst bei kritischer Gesundheit Showstopper aus.",
+      "secret": false,
+      "emoji": "🤺",
+      "verified": true,
+      "note": "Alternativ wählbare Startwaffe: Splashers."
+    },
+    {
+      "id": "bonnie-blair",
+      "name": "Bonnie Blair",
+      "source": "emerald-diorama",
+      "startingWeapons": [
+        "punch"
+      ],
+      "bonus": "Erhält Macht beim Einsatz geglimmerter Techniken; bildet ein Team mit Formina; Showstopper bei kritischer Gesundheit.",
+      "secret": false,
+      "emoji": "🥊",
+      "verified": true,
+      "note": "Alternativ wählbare Startwaffe: Kick."
+    },
+    {
+      "id": "formina-franklyn",
+      "name": "Formina Franklyn",
+      "source": "emerald-diorama",
+      "startingWeapons": [
+        "saber-machine-gun"
+      ],
+      "bonus": "Erhält Dauer beim Einsatz geglimmerter Techniken; bildet ein Team mit Bonnie; Showstopper bei kritischer Gesundheit.",
+      "secret": false,
+      "emoji": "🔫",
+      "verified": true,
+      "note": "Alternativ wählbare Startwaffe: Eagle Gun."
+    },
+    {
+      "id": "diva-no-5",
+      "name": "Diva No. 5",
+      "source": "emerald-diorama",
+      "startingWeapons": [
+        "super-missile",
+        "twin-dragon"
+      ],
+      "bonus": "Verschiedene Skins haben verschiedene Werte; Showstopper bei kritischer Gesundheit.",
+      "secret": false,
+      "emoji": "🤖",
+      "verified": true
+    },
+    {
+      "id": "ameya-aisling",
+      "name": "Ameya Aisling",
+      "source": "emerald-diorama",
+      "startingWeapons": [
+        "spirit-rings"
+      ],
+      "bonus": "Erhält Werte-Boni beim Einsammeln ihrer herbeigerufenen Katzen; Showstopper bei kritischer Gesundheit.",
+      "secret": false,
+      "emoji": "🐈‍⬛",
+      "verified": true,
+      "note": "Alternativ wählbare Startwaffe: Intuition."
+    },
+    {
+      "id": "siugnas",
+      "name": "Siugnas",
+      "source": "emerald-diorama",
+      "startingWeapons": [
+        "town-sword"
+      ],
+      "bonus": "Besiegte Gegner werden zu Begleitern; mehr max. Gesundheit erlaubt mehr Begleiter; Showstopper bei kritischer Gesundheit.",
+      "secret": false,
+      "emoji": "💀",
+      "verified": true,
+      "note": "Alternativ wählbare Startwaffe: Sanguine Star."
+    },
+    {
+      "id": "final-emperor",
+      "name": "Final Emperor",
+      "source": "emerald-diorama",
+      "startingWeapons": [
+        "flamberge"
+      ],
+      "bonus": "Löst geglimmerte Techniken öfter aus als üblich; Showstopper bei kritischer Gesundheit.",
+      "secret": false,
+      "emoji": "👑",
+      "verified": true
+    },
+    {
+      "id": "dolores",
+      "name": "Dolores",
+      "source": "emerald-diorama",
+      "startingWeapons": [
+        "bullova"
+      ],
+      "bonus": "Showstopper bei kritischer Gesundheit und bei Wiederbelebung; jeder Showstopper senkt die Abklingzeit (max. −20 %).",
+      "secret": false,
+      "emoji": "🌹",
+      "verified": true
+    },
+    {
+      "id": "macha-alter-ego",
+      "name": "Macha Alter Ego",
+      "source": "emerald-diorama",
+      "startingWeapons": [
+        "khukuri"
+      ],
+      "bonus": "Startet mit verstecktem Rings of Calamity; +50 erscheinende Gegner; Showstopper bei kritischer Gesundheit.",
+      "secret": false,
+      "emoji": "🗡️",
+      "verified": true,
+      "note": "Versteckte Waffe: Rings of Calamity."
+    },
+    {
+      "id": "lita-caryx",
+      "name": "Lita Caryx",
+      "source": "emerald-diorama",
+      "startingWeapons": [
+        "glaive"
+      ],
+      "bonus": "Beherrscht von Anfang an die Technik „Heaven's Thunder“; Showstopper bei kritischer Gesundheit.",
+      "secret": false,
+      "emoji": "⚡",
+      "verified": true
+    },
+    {
+      "id": "kugutsu",
+      "name": "Kugutsu",
+      "source": "emerald-diorama",
+      "startingWeapons": [
+        "twin-dragon",
+        "khukuri",
+        "eagle-gun",
+        "punch"
+      ],
+      "bonus": "Erhält für jede neu geglimmerte Technik 1 Wiederbelebung und 5 % Wachstum; Showstopper bei kritischer Gesundheit.",
+      "secret": false,
+      "emoji": "🎎",
+      "verified": true
+    },
+    {
+      "id": "mr-s",
+      "name": "Mr. S",
+      "source": "emerald-diorama",
+      "startingWeapons": [
+        "intuition"
+      ],
+      "bonus": "Zeigt sein Können mit Techniken; erhält alle 20 Level mehr Projektile (max. +4).",
+      "secret": false,
+      "emoji": "🎩",
+      "verified": true
+    },
+    {
+      "id": "lolo-hiss-meow-and-purr",
+      "name": "Lolo, Hiss, Meow, and Purr",
+      "source": "emerald-diorama",
+      "startingWeapons": [],
+      "bonus": "Showstopper bei kritischer Gesundheit; erhält bei jedem Showstopper einen Begleiter.",
+      "secret": true,
+      "emoji": "🐈",
+      "verified": true
+    },
+    {
+      "id": "kina",
+      "name": "Kina",
+      "source": "emerald-diorama",
+      "startingWeapons": [],
+      "bonus": "Beherrscht von Anfang an „Swallow Slice“ und „Airwave“; erhält Regeneration bei jedem Showstopper durch kritische Gesundheit.",
+      "secret": true,
+      "emoji": "🌸",
+      "verified": true
+    },
+    {
+      "id": "imakoo",
+      "name": "Imakoo",
+      "source": "emerald-diorama",
+      "startingWeapons": [],
+      "bonus": "Beherrscht von Anfang an „Hell's Fury“ und „Blood Rage“; erhält Macht bei jedem Showstopper durch kritische Gesundheit.",
+      "secret": true,
+      "emoji": "🎻",
+      "verified": true
+    },
+    {
+      "id": "malevolent-door-spirit",
+      "name": "Malevolent Door Spirit",
+      "source": "emerald-diorama",
+      "startingWeapons": [
+        "blood-chalice"
+      ],
+      "bonus": "Beherrscht von Anfang an die Technik „Vermillion Sands“.",
+      "secret": true,
+      "emoji": "🚪",
+      "verified": true
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../../schema/passives.schema.json",
+  "passives": [
+    {
+      "id": "velvet-dodecahedron",
+      "name": "Velvet Dodecahedron",
+      "source": "legacy-of-the-bloodmoon",
+      "description": "Geschenk: mehr Wachstum und Gier, dafür weniger max. Gesundheit; löst Fähigkeiten für letzten Atemzug, Wiederbelebung und kritische Gesundheit aus.",
+      "maxLevel": 6,
+      "noSlot": true,
+      "emoji": "🎲",
+      "verified": true
+    }
+  ]
+}

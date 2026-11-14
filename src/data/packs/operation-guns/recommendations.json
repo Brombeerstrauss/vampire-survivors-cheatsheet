@@ -1,0 +1,197 @@
+{
+  "$schema": "../../schema/recommendations.schema.json",
+  "recommendations": [
+    {
+      "character": "bill-rizer",
+      "source": "operation-guns",
+      "weapons": [
+        {
+          "id": "long-gun",
+          "reason": "Startwaffe; mit Weapon Power-Up wird sie zu Prototype A.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "lance-bean",
+      "source": "operation-guns",
+      "weapons": [
+        {
+          "id": "short-gun",
+          "reason": "Startwaffe; mit Weapon Power-Up und Bracer wird sie zu Prototype B.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "bracer",
+          "reason": "Nötig für Prototype B.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "ariana",
+      "source": "operation-guns",
+      "weapons": [
+        {
+          "id": "spread-shot",
+          "reason": "Startwaffe; mit Weapon Power-Up und Empty Tome wird sie zu Prototype C.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "empty-tome",
+          "reason": "Nötig für Prototype C.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "lucia-zero",
+      "source": "operation-guns",
+      "weapons": [
+        {
+          "id": "c-u-laser",
+          "reason": "Startwaffe; mit Weapon Power-Up und Tirajisú wird sie zu Pronto Beam.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "tirajisu",
+          "reason": "Nötig für Pronto Beam.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "brad-fang",
+      "source": "operation-guns",
+      "weapons": [
+        {
+          "id": "firearm",
+          "reason": "Startwaffe; mit Weapon Power-Up und Candelabrador wird sie zu Fire-L3GS.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "candelabrador",
+          "reason": "Nötig für Fire-L3GS.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "browny",
+      "source": "operation-guns",
+      "weapons": [
+        {
+          "id": "sonic-bloom",
+          "reason": "Startwaffe; mit Weapon Power-Up und Armor wird sie zu Wave Beam.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "armor",
+          "reason": "Nötig für Wave Beam.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "sheena-etranzi",
+      "source": "operation-guns",
+      "weapons": [
+        {
+          "id": "blade-crossbow",
+          "reason": "Startwaffe; mit Weapon Power-Up und Clover wird sie zu BFC2000-AD.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "clover",
+          "reason": "Nötig für BFC2000-AD.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "probotector",
+      "source": "operation-guns",
+      "weapons": [
+        {
+          "id": "prism-lass",
+          "reason": "Startwaffe; mit Weapon Power-Up und Wings wird sie zu Time Warp.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "wings",
+          "reason": "Nötig für Time Warp.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "stanley",
+      "source": "operation-guns",
+      "weapons": [
+        {
+          "id": "homing-miss",
+          "reason": "Startwaffe; mit Weapon Power-Up und Duplicator wird sie zu Multistage Missiles.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "duplicator",
+          "reason": "Nötig für Multistage Missiles.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "newt-plissken",
+      "source": "operation-guns",
+      "weapons": [
+        {
+          "id": "diver-mines",
+          "reason": "Startwaffe; mit Weapon Power-Up und Attractorb wird sie zu Atmo-Torpedo.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "attractorb",
+          "reason": "Nötig für Atmo-Torpedo.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "colonel-bahamut",
+      "source": "operation-guns",
+      "weapons": [
+        {
+          "id": "metal-claw",
+          "reason": "Startwaffe; mit Weapon Power-Up und Hollow Heart wird sie zu Big Fuzzy Fist.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "hollow-heart",
+          "reason": "Nötig für Big Fuzzy Fist.",
+          "priority": 1
+        }
+      ]
+    }
+  ]
+}

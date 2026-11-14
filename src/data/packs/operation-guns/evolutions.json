@@ -1,0 +1,233 @@
+{
+  "$schema": "../../schema/evolutions.schema.json",
+  "evolutions": [
+    {
+      "id": "prototype-a",
+      "kind": "evolution",
+      "source": "operation-guns",
+      "result": "prototype-a",
+      "weapons": [
+        {
+          "id": "long-gun"
+        }
+      ],
+      "passives": [
+        {
+          "id": "weapon-power-up",
+          "consumed": true
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "prototype-b",
+      "kind": "evolution",
+      "source": "operation-guns",
+      "result": "prototype-b",
+      "weapons": [
+        {
+          "id": "short-gun"
+        }
+      ],
+      "passives": [
+        {
+          "id": "weapon-power-up",
+          "consumed": true
+        },
+        {
+          "id": "bracer"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "prototype-c",
+      "kind": "evolution",
+      "source": "operation-guns",
+      "result": "prototype-c",
+      "weapons": [
+        {
+          "id": "spread-shot"
+        }
+      ],
+      "passives": [
+        {
+          "id": "weapon-power-up",
+          "consumed": true
+        },
+        {
+          "id": "empty-tome"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "pronto-beam",
+      "kind": "evolution",
+      "source": "operation-guns",
+      "result": "pronto-beam",
+      "weapons": [
+        {
+          "id": "c-u-laser"
+        }
+      ],
+      "passives": [
+        {
+          "id": "weapon-power-up",
+          "consumed": true
+        },
+        {
+          "id": "tirajisu"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "fire-l3gs",
+      "kind": "evolution",
+      "source": "operation-guns",
+      "result": "fire-l3gs",
+      "weapons": [
+        {
+          "id": "firearm"
+        }
+      ],
+      "passives": [
+        {
+          "id": "weapon-power-up",
+          "consumed": true
+        },
+        {
+          "id": "candelabrador"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "wave-beam",
+      "kind": "evolution",
+      "source": "operation-guns",
+      "result": "wave-beam",
+      "weapons": [
+        {
+          "id": "sonic-bloom"
+        }
+      ],
+      "passives": [
+        {
+          "id": "weapon-power-up",
+          "consumed": true
+        },
+        {
+          "id": "armor"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "multistage-missiles",
+      "kind": "evolution",
+      "source": "operation-guns",
+      "result": "multistage-missiles",
+      "weapons": [
+        {
+          "id": "homing-miss"
+        }
+      ],
+      "passives": [
+        {
+          "id": "weapon-power-up",
+          "consumed": true
+        },
+        {
+          "id": "duplicator"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "atmo-torpedo",
+      "kind": "evolution",
+      "source": "operation-guns",
+      "result": "atmo-torpedo",
+      "weapons": [
+        {
+          "id": "diver-mines"
+        }
+      ],
+      "passives": [
+        {
+          "id": "weapon-power-up",
+          "consumed": true
+        },
+        {
+          "id": "attractorb"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "bfc2000-ad",
+      "kind": "evolution",
+      "source": "operation-guns",
+      "result": "bfc2000-ad",
+      "weapons": [
+        {
+          "id": "blade-crossbow"
+        }
+      ],
+      "passives": [
+        {
+          "id": "weapon-power-up",
+          "consumed": true
+        },
+        {
+          "id": "clover"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "time-warp",
+      "kind": "evolution",
+      "source": "operation-guns",
+      "result": "time-warp",
+      "weapons": [
+        {
+          "id": "prism-lass"
+        }
+      ],
+      "passives": [
+        {
+          "id": "weapon-power-up",
+          "consumed": true
+        },
+        {
+          "id": "wings"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "big-fuzzy-fist",
+      "kind": "evolution",
+      "source": "operation-guns",
+      "result": "big-fuzzy-fist",
+      "weapons": [
+        {
+          "id": "metal-claw"
+        }
+      ],
+      "passives": [
+        {
+          "id": "weapon-power-up",
+          "consumed": true
+        },
+        {
+          "id": "hollow-heart"
+        }
+      ],
+      "verified": true
+    }
+  ]
+}

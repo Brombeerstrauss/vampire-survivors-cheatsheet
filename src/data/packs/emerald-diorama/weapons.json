@@ -1,0 +1,405 @@
+{
+  "$schema": "../../schema/weapons.schema.json",
+  "weapons": [
+    {
+      "id": "fleuret",
+      "name": "Fleuret",
+      "source": "emerald-diorama",
+      "kind": "base",
+      "description": "Geschwindigkeit erhöht den Schaden; kann die Technik „Crystalline Carve“ glimmern.",
+      "maxLevel": 6,
+      "emoji": "🤺",
+      "verified": true
+    },
+    {
+      "id": "town-sword",
+      "name": "Town Sword",
+      "source": "emerald-diorama",
+      "kind": "base",
+      "description": "Schlägt in Blickrichtung zu; kann „Swallow Slice“ glimmern.",
+      "maxLevel": 6,
+      "emoji": "🗡️",
+      "verified": true
+    },
+    {
+      "id": "splashers",
+      "name": "Splashers",
+      "source": "emerald-diorama",
+      "kind": "base",
+      "description": "Dauer erhöht den Schaden; kann „Dual Whirlwind“ glimmern.",
+      "maxLevel": 8,
+      "emoji": "💦",
+      "verified": true
+    },
+    {
+      "id": "flamberge",
+      "name": "Flamberge",
+      "source": "emerald-diorama",
+      "kind": "base",
+      "description": "Wirft rotierende Schwerter nach oben; kann „Bull Crush“ glimmern.",
+      "maxLevel": 6,
+      "emoji": "⚔️",
+      "verified": true
+    },
+    {
+      "id": "punch",
+      "name": "Punch",
+      "source": "emerald-diorama",
+      "kind": "base",
+      "description": "Greift seitlich an; kann „Raksha“ glimmern.",
+      "maxLevel": 6,
+      "emoji": "👊",
+      "verified": true
+    },
+    {
+      "id": "kick",
+      "name": "Kick",
+      "source": "emerald-diorama",
+      "kind": "base",
+      "description": "Mehr Schaden bei voller Gesundheit; kann „Thunder Kick“ glimmern.",
+      "maxLevel": 8,
+      "emoji": "🦵",
+      "verified": true
+    },
+    {
+      "id": "saber-machine-gun",
+      "name": "Saber Machine Gun",
+      "source": "emerald-diorama",
+      "kind": "base",
+      "description": "Feuert in Blickrichtung; kann „Shockwave“ glimmern.",
+      "maxLevel": 6,
+      "emoji": "🔫",
+      "verified": true
+    },
+    {
+      "id": "super-missile",
+      "name": "Super Missile",
+      "source": "emerald-diorama",
+      "kind": "base",
+      "description": "Feuert explodierende Projektile; kann „Ballistic Missiles“ glimmern.",
+      "maxLevel": 6,
+      "emoji": "🚀",
+      "verified": true
+    },
+    {
+      "id": "eagle-gun",
+      "name": "Eagle Gun",
+      "source": "emerald-diorama",
+      "kind": "base",
+      "description": "Schießt auf Gegner in der Nähe; kann „Falconfire“ glimmern.",
+      "maxLevel": 8,
+      "emoji": "🦅",
+      "verified": true
+    },
+    {
+      "id": "khukuri",
+      "name": "Khukuri",
+      "source": "emerald-diorama",
+      "kind": "base",
+      "description": "Schattenklone treffen Gegner in der Nähe; kann „Moonfall Slash“ glimmern.",
+      "maxLevel": 8,
+      "emoji": "🔪",
+      "verified": true
+    },
+    {
+      "id": "twin-dragon",
+      "name": "Twin Dragon",
+      "source": "emerald-diorama",
+      "kind": "base",
+      "description": "Greift waagerecht an; kann „Gravedigger“ glimmern.",
+      "maxLevel": 8,
+      "emoji": "🐉",
+      "verified": true
+    },
+    {
+      "id": "bullova",
+      "name": "Bullova",
+      "source": "emerald-diorama",
+      "kind": "base",
+      "description": "Durchdringt Gegner; kann „Hell's Fury“ glimmern.",
+      "maxLevel": 8,
+      "emoji": "🪓",
+      "verified": true
+    },
+    {
+      "id": "sanguine-star",
+      "name": "Sanguine Star",
+      "source": "emerald-diorama",
+      "kind": "base",
+      "description": "Trifft die nächsten Gegner; kann „Blood Rage“ glimmern (doppelter Schaden, doppelte Fläche).",
+      "maxLevel": 8,
+      "emoji": "🩸",
+      "verified": true
+    },
+    {
+      "id": "glaive",
+      "name": "Glaive",
+      "source": "emerald-diorama",
+      "kind": "base",
+      "description": "Sticht in Blickrichtung; kann „Divine Lancer“ glimmern.",
+      "maxLevel": 6,
+      "emoji": "🔱",
+      "verified": true
+    },
+    {
+      "id": "spirit-rings",
+      "name": "Spirit Rings",
+      "source": "emerald-diorama",
+      "kind": "base",
+      "description": "Löst zusätzliche Techniken aus, wenn Fläche, Geschwindigkeit, Dauer und/oder Wachstum bei 155 % oder mehr liegen.",
+      "maxLevel": 8,
+      "emoji": "💍",
+      "verified": true
+    },
+    {
+      "id": "emerald-rapture",
+      "name": "Emerald Rapture",
+      "source": "emerald-diorama",
+      "kind": "base",
+      "description": "Teleportiert zufällige Gegner weg, die dann eventuell keine Erfahrung fallen lassen.",
+      "maxLevel": 8,
+      "emoji": "💚",
+      "verified": true
+    },
+    {
+      "id": "intuition",
+      "name": "Intuition",
+      "source": "emerald-diorama",
+      "kind": "base",
+      "description": "Lässt dich aus einer Auswahl von Emerald-Diorama-Waffen wählen.",
+      "maxLevel": 1,
+      "emoji": "💭",
+      "verified": true
+    },
+    {
+      "id": "dress-sword",
+      "name": "Dress Sword",
+      "source": "emerald-diorama",
+      "kind": "evolved",
+      "description": "Entwicklung von Fleuret: kann „Shocking Rush“ glimmern.",
+      "maxLevel": 6,
+      "emoji": "🤺",
+      "verified": true
+    },
+    {
+      "id": "espada-ropera",
+      "name": "Espada Ropera",
+      "source": "emerald-diorama",
+      "kind": "evolved",
+      "description": "Entwicklung von Dress Sword: erlaubt die Technik „Mega Thrust“.",
+      "maxLevel": 1,
+      "emoji": "🗡️",
+      "verified": true
+    },
+    {
+      "id": "lordstar",
+      "name": "Lordstar",
+      "source": "emerald-diorama",
+      "kind": "evolved",
+      "description": "Entwicklung von Town Sword: kann „Airwave“ glimmern (fünffacher Schaden).",
+      "maxLevel": 6,
+      "emoji": "⭐",
+      "verified": true
+    },
+    {
+      "id": "dayblade",
+      "name": "Dayblade",
+      "source": "emerald-diorama",
+      "kind": "evolved",
+      "description": "Entwicklung von Lordstar: kann „Life Sprinkler“ glimmern.",
+      "maxLevel": 1,
+      "emoji": "☀️",
+      "verified": true
+    },
+    {
+      "id": "pursuant-blades",
+      "name": "Pursuant Blades",
+      "source": "emerald-diorama",
+      "kind": "evolved",
+      "description": "Entwicklung von Splashers: kann „Dual Torrent“ glimmern.",
+      "maxLevel": 8,
+      "emoji": "🌊",
+      "verified": true
+    },
+    {
+      "id": "zweihander",
+      "name": "Zweihander",
+      "source": "emerald-diorama",
+      "kind": "evolved",
+      "description": "Entwicklung von Flamberge: kann „Absetzen“ glimmern.",
+      "maxLevel": 6,
+      "emoji": "⚔️",
+      "verified": true
+    },
+    {
+      "id": "galatyn",
+      "name": "Galatyn",
+      "source": "emerald-diorama",
+      "kind": "evolved",
+      "description": "Entwicklung von Zweihander: kann „Vandalize“ glimmern.",
+      "maxLevel": 1,
+      "emoji": "🗡️",
+      "verified": true
+    },
+    {
+      "id": "pressure-point",
+      "name": "Pressure Point",
+      "source": "emerald-diorama",
+      "kind": "evolved",
+      "description": "Entwicklung von Punch: kann „Shenlong Firefist“ glimmern.",
+      "maxLevel": 6,
+      "emoji": "👊",
+      "verified": true
+    },
+    {
+      "id": "gilded-hand",
+      "name": "Gilded Hand",
+      "source": "emerald-diorama",
+      "kind": "evolved",
+      "description": "Entwicklung von Pressure Point: kann „Guanyin“ glimmern.",
+      "maxLevel": 1,
+      "emoji": "✋",
+      "verified": true
+    },
+    {
+      "id": "triangle-kick",
+      "name": "Triangle Kick",
+      "source": "emerald-diorama",
+      "kind": "evolved",
+      "description": "Entwicklung von Kick: glimmert „Triple Dragon“, dessen Schaden von der gesamten Überheilung abhängt.",
+      "maxLevel": 8,
+      "emoji": "🔺",
+      "verified": true
+    },
+    {
+      "id": "hecaton-machine-gun",
+      "name": "Hecaton Machine Gun",
+      "source": "emerald-diorama",
+      "kind": "evolved",
+      "description": "Entwicklung von Saber Machine Gun: kann „Bombarding Fire“ glimmern.",
+      "maxLevel": 6,
+      "emoji": "🔫",
+      "verified": true
+    },
+    {
+      "id": "divergence",
+      "name": "Divergence",
+      "source": "emerald-diorama",
+      "kind": "evolved",
+      "description": "Entwicklung von Hecaton Machine Gun: kann „Sunlight Shower“ glimmern.",
+      "maxLevel": 1,
+      "emoji": "🌦️",
+      "verified": true
+    },
+    {
+      "id": "hydra-cannon",
+      "name": "Hydra Cannon",
+      "source": "emerald-diorama",
+      "kind": "evolved",
+      "description": "Entwicklung von Super Missile: kann „Artificial Hailstorm“ glimmern.",
+      "maxLevel": 6,
+      "emoji": "🐍",
+      "verified": true
+    },
+    {
+      "id": "hyperion-bazooka",
+      "name": "Hyperion Bazooka",
+      "source": "emerald-diorama",
+      "kind": "evolved",
+      "description": "Entwicklung von Hydra Cannon: kann „Cosmic Rave“ glimmern.",
+      "maxLevel": 1,
+      "emoji": "🚀",
+      "verified": true
+    },
+    {
+      "id": "pendragon",
+      "name": "Pendragon",
+      "source": "emerald-diorama",
+      "kind": "evolved",
+      "description": "Entwicklung von Eagle Gun: kann „Bounding Shot“ glimmern.",
+      "maxLevel": 8,
+      "emoji": "🐲",
+      "verified": true
+    },
+    {
+      "id": "jetstream",
+      "name": "Jetstream",
+      "source": "emerald-diorama",
+      "kind": "evolved",
+      "description": "Entwicklung von Khukuri: kritische Treffer können kurz unverwundbar machen; kann „Kaleidoscope“ glimmern.",
+      "maxLevel": 8,
+      "emoji": "💨",
+      "verified": true
+    },
+    {
+      "id": "gekkabijin",
+      "name": "Gekkabijin",
+      "source": "emerald-diorama",
+      "kind": "evolved",
+      "description": "Entwicklung von Twin Dragon: kann „Scattered Petals“ glimmern.",
+      "maxLevel": 8,
+      "emoji": "🌺",
+      "verified": true
+    },
+    {
+      "id": "falconwind",
+      "name": "Falconwind",
+      "source": "emerald-diorama",
+      "kind": "evolved",
+      "description": "Entwicklung von Bullova: kann „Reverse Delta“ glimmern.",
+      "maxLevel": 8,
+      "emoji": "🦅",
+      "verified": true
+    },
+    {
+      "id": "blood-chalice",
+      "name": "Blood Chalice",
+      "source": "emerald-diorama",
+      "kind": "evolved",
+      "description": "Entwicklung von Sanguine Star: kann „Scarlet Harbinger“ glimmern (Schaden hängt von der Gier ab, kann Herzen stehlen).",
+      "maxLevel": 8,
+      "emoji": "🍷",
+      "verified": true
+    },
+    {
+      "id": "feather-spear",
+      "name": "Feather Spear",
+      "source": "emerald-diorama",
+      "kind": "evolved",
+      "description": "Entwicklung von Glaive: kann „Stardust“ glimmern.",
+      "maxLevel": 6,
+      "emoji": "🪶",
+      "verified": true
+    },
+    {
+      "id": "lohengrin",
+      "name": "Lohengrin",
+      "source": "emerald-diorama",
+      "kind": "evolved",
+      "description": "Entwicklung von Feather Spear: kann „Triumvirate“ glimmern (dreifacher Schaden).",
+      "maxLevel": 1,
+      "emoji": "🦢",
+      "verified": true
+    },
+    {
+      "id": "rings-of-calamity",
+      "name": "Rings of Calamity",
+      "source": "emerald-diorama",
+      "kind": "evolved",
+      "description": "Entwicklung von Spirit Rings: löst zusätzlich die Technik „Chaos Disaster“ aus.",
+      "maxLevel": 1,
+      "emoji": "💫",
+      "verified": true
+    },
+    {
+      "id": "emerald-wave",
+      "name": "Emerald Wave",
+      "source": "emerald-diorama",
+      "kind": "evolved",
+      "description": "Entwicklung von Emerald Rapture: teleportiert alle Gegner auf ihrem Weg, die dann immer ihre besten Erfahrungs-Edelsteine fallen lassen.",
+      "maxLevel": 1,
+      "emoji": "🌊",
+      "verified": true
+    }
+  ]
+}

@@ -26,6 +26,10 @@
             "type": "boolean",
             "description": "Belegt keinen der 6 passiven Slots (z. B. Geschenke aus DLCs)."
           },
+          "ignoresSlotLimit": {
+            "type": "boolean",
+            "description": "Belegt zwar einen Slot, kann aber auch bei vollen Slots gewählt werden (z. B. Mini Crewmates)."
+          },
           "unlock": { "type": "string", "description": "Wie man den Gegenstand freischaltet." },
           "emoji": { "$ref": "common.schema.json#/definitions/emoji" },
           "icon": { "$ref": "common.schema.json#/definitions/icon" },

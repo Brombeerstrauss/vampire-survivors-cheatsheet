@@ -1,0 +1,153 @@
+{
+  "$schema": "../../schema/evolutions.schema.json",
+  "evolutions": [
+    {
+      "id": "festive-winds",
+      "kind": "evolution",
+      "source": "legacy-of-the-moonspell",
+      "result": "festive-winds",
+      "weapons": [
+        {
+          "id": "silver-wind"
+        }
+      ],
+      "passives": [
+        {
+          "id": "pummarola",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "argent-flow",
+      "kind": "evolution",
+      "source": "legacy-of-the-moonspell",
+      "result": "argent-flow",
+      "weapons": [
+        {
+          "id": "festive-winds"
+        }
+      ],
+      "passives": [
+        {
+          "id": "torrona-s-box",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "godai-shuffle",
+      "kind": "evolution",
+      "source": "legacy-of-the-moonspell",
+      "result": "godai-shuffle",
+      "weapons": [
+        {
+          "id": "four-seasons"
+        }
+      ],
+      "passives": [
+        {
+          "id": "candelabrador",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "echo-night",
+      "kind": "evolution",
+      "source": "legacy-of-the-moonspell",
+      "result": "echo-night",
+      "weapons": [
+        {
+          "id": "summon-night"
+        }
+      ],
+      "passives": [
+        {
+          "id": "duplicator",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "j-odore",
+      "kind": "evolution",
+      "source": "legacy-of-the-moonspell",
+      "result": "j-odore",
+      "weapons": [
+        {
+          "id": "mirage-robe"
+        }
+      ],
+      "passives": [
+        {
+          "id": "attractorb",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "muramasa",
+      "kind": "evolution",
+      "source": "legacy-of-the-moonspell",
+      "result": "muramasa",
+      "weapons": [
+        {
+          "id": "night-sword"
+        }
+      ],
+      "passives": [
+        {
+          "id": "stone-mask",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "boo-roo-boolle",
+      "kind": "evolution",
+      "source": "legacy-of-the-moonspell",
+      "result": "boo-roo-boolle",
+      "weapons": [
+        {
+          "id": "mille-bolle-blu"
+        }
+      ],
+      "passives": [
+        {
+          "id": "spellbinder",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "lunarflight",
+      "kind": "union",
+      "source": "legacy-of-the-moonspell",
+      "result": "lunarflight",
+      "weapons": [
+        {
+          "id": "lunarmight"
+        },
+        {
+          "id": "lunarsight"
+        },
+        {
+          "id": "lunarbight"
+        }
+      ],
+      "passives": [],
+      "conditions": [
+        "Kein Gegenstand nötig; alle drei Mondwaffen auf Maximalstufe."
+      ],
+      "verified": true
+    }
+  ]
+}

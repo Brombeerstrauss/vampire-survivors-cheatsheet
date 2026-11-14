@@ -1,0 +1,225 @@
+{
+  "$schema": "../../schema/weapons.schema.json",
+  "weapons": [
+    {
+      "id": "long-gun",
+      "name": "Long Gun",
+      "source": "operation-guns",
+      "kind": "base",
+      "description": "Feuert ununterbrochen in Blickrichtung.",
+      "maxLevel": 8,
+      "emoji": "🔫",
+      "verified": true
+    },
+    {
+      "id": "short-gun",
+      "name": "Short Gun",
+      "source": "operation-guns",
+      "kind": "base",
+      "description": "Feuert waagerechte Salven kurzlebiger Projektile.",
+      "maxLevel": 8,
+      "emoji": "🔫",
+      "verified": true
+    },
+    {
+      "id": "spread-shot",
+      "name": "Spread Shot",
+      "source": "operation-guns",
+      "kind": "base",
+      "description": "Feuert breit gestreut in Blickrichtung.",
+      "maxLevel": 8,
+      "emoji": "🎆",
+      "verified": true
+    },
+    {
+      "id": "c-u-laser",
+      "name": "C-U-Laser",
+      "source": "operation-guns",
+      "kind": "base",
+      "description": "Feuert ein durchdringendes Projektil in Blickrichtung.",
+      "maxLevel": 8,
+      "emoji": "🔦",
+      "verified": true
+    },
+    {
+      "id": "firearm",
+      "name": "Firearm",
+      "source": "operation-guns",
+      "kind": "base",
+      "description": "Feuert rotierende Projektile auf den nächsten Gegner.",
+      "maxLevel": 8,
+      "emoji": "🔥",
+      "verified": true
+    },
+    {
+      "id": "sonic-bloom",
+      "name": "Sonic Bloom",
+      "source": "operation-guns",
+      "kind": "base",
+      "description": "Feuert wachsende Projektile in Blickrichtung.",
+      "maxLevel": 8,
+      "emoji": "🌸",
+      "verified": true
+    },
+    {
+      "id": "homing-miss",
+      "name": "Homing Miss",
+      "source": "operation-guns",
+      "kind": "base",
+      "description": "Feuert explodierende, zielsuchende Projektile.",
+      "maxLevel": 8,
+      "emoji": "🚀",
+      "verified": true
+    },
+    {
+      "id": "diver-mines",
+      "name": "Diver Mines",
+      "source": "operation-guns",
+      "kind": "base",
+      "description": "Feuert explosive Projektile, die an Wänden entlanglaufen.",
+      "maxLevel": 8,
+      "emoji": "💣",
+      "verified": true
+    },
+    {
+      "id": "blade-crossbow",
+      "name": "Blade Crossbow",
+      "source": "operation-guns",
+      "kind": "base",
+      "description": "Feuert zielsuchende Projektile, die sich beim Treffer auf der Stelle drehen.",
+      "maxLevel": 8,
+      "emoji": "🏹",
+      "verified": true
+    },
+    {
+      "id": "prism-lass",
+      "name": "Prism Lass",
+      "source": "operation-guns",
+      "kind": "base",
+      "description": "Kann Gegner mit kleiner Chance einfrieren.",
+      "maxLevel": 8,
+      "emoji": "💎",
+      "verified": true
+    },
+    {
+      "id": "metal-claw",
+      "name": "Metal Claw",
+      "source": "operation-guns",
+      "kind": "base",
+      "description": "Die Abklingzeit hängt von der fehlenden Gesundheit ab.",
+      "maxLevel": 8,
+      "emoji": "🦀",
+      "verified": true
+    },
+    {
+      "id": "prototype-a",
+      "name": "Prototype A",
+      "source": "operation-guns",
+      "kind": "evolved",
+      "description": "Entwicklung von Long Gun: ruft 2 Drohnen zur Feuerunterstützung.",
+      "maxLevel": 1,
+      "emoji": "🛸",
+      "verified": true
+    },
+    {
+      "id": "prototype-b",
+      "name": "Prototype B",
+      "source": "operation-guns",
+      "kind": "evolved",
+      "description": "Entwicklung von Short Gun: ruft 2 Drohnen zur Feuerunterstützung.",
+      "maxLevel": 1,
+      "emoji": "🛸",
+      "verified": true
+    },
+    {
+      "id": "prototype-c",
+      "name": "Prototype C",
+      "source": "operation-guns",
+      "kind": "evolved",
+      "description": "Entwicklung von Spread Shot: ruft 2 Drohnen zur Feuerunterstützung.",
+      "maxLevel": 1,
+      "emoji": "🛸",
+      "verified": true
+    },
+    {
+      "id": "pronto-beam",
+      "name": "Pronto Beam",
+      "source": "operation-guns",
+      "kind": "evolved",
+      "description": "Entwicklung von C-U-Laser: Laser teilen sich beim Treffer in mehrere Strahlen.",
+      "maxLevel": 1,
+      "emoji": "🔆",
+      "verified": true
+    },
+    {
+      "id": "fire-l3gs",
+      "name": "Fire-L3GS",
+      "source": "operation-guns",
+      "kind": "evolved",
+      "description": "Entwicklung von Firearm: feuert erneut, wenn eine Lichtquelle oder ein zerstörbares Objekt zerstört wird.",
+      "maxLevel": 1,
+      "emoji": "🔥",
+      "verified": true
+    },
+    {
+      "id": "wave-beam",
+      "name": "Wave Beam",
+      "source": "operation-guns",
+      "kind": "evolved",
+      "description": "Entwicklung von Sonic Bloom: lädt im Stehen einen stärkeren, automatisch zielenden Schuss auf.",
+      "maxLevel": 1,
+      "emoji": "〰️",
+      "verified": true
+    },
+    {
+      "id": "multistage-missiles",
+      "name": "Multistage Missiles",
+      "source": "operation-guns",
+      "kind": "evolved",
+      "description": "Entwicklung von Homing Miss: Projektile teilen sich beim Treffer in kleinere.",
+      "maxLevel": 1,
+      "emoji": "🚀",
+      "verified": true
+    },
+    {
+      "id": "atmo-torpedo",
+      "name": "Atmo-Torpedo",
+      "source": "operation-guns",
+      "kind": "evolved",
+      "description": "Entwicklung von Diver Mines: erzeugt Schadenszonen, die Gegner anziehen.",
+      "maxLevel": 1,
+      "emoji": "🌀",
+      "verified": true
+    },
+    {
+      "id": "bfc2000-ad",
+      "name": "BFC2000-AD",
+      "source": "operation-guns",
+      "kind": "evolved",
+      "description": "Entwicklung von Blade Crossbow: ruft göttliches Eingreifen, je öfter, desto mehr Glück.",
+      "maxLevel": 1,
+      "emoji": "✝️",
+      "verified": true
+    },
+    {
+      "id": "time-warp",
+      "name": "Time Warp",
+      "source": "operation-guns",
+      "kind": "evolved",
+      "description": "Entwicklung von Prism Lass: kann Gegner einfrieren, verlangsamen oder entwaffnen.",
+      "maxLevel": 1,
+      "emoji": "⏳",
+      "verified": true
+    },
+    {
+      "id": "big-fuzzy-fist",
+      "name": "Big Fuzzy Fist",
+      "source": "operation-guns",
+      "kind": "evolved",
+      "description": "Entwicklung von Metal Claw: verprügelt die stärksten sichtbaren Gegner.",
+      "maxLevel": 1,
+      "emoji": "👊",
+      "verified": true
+    }
+  ]
+}

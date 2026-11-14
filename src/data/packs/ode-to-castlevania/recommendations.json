@@ -1,0 +1,1668 @@
+{
+  "$schema": "../../schema/recommendations.schema.json",
+  "recommendations": [
+    {
+      "character": "leon-belmont",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "alchemy-whip",
+          "reason": "Startwaffe; mit Tirajisú wird sie zu Vampire Killer.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "tirajisu",
+          "reason": "Nötig für Vampire Killer.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "sonia-belmont",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "sonic-whip",
+          "reason": "Startwaffe; mit Skull O'Maniac wird sie zu Crissaegrim Tip.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "skull-o-maniac",
+          "reason": "Nötig für Crissaegrim Tip.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "trevor-belmont",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "dragon-water-whip",
+          "reason": "Startwaffe; mit Attractorb wird sie zu Hydrostormer Tip.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "attractorb",
+          "reason": "Nötig für Hydrostormer Tip.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "christopher-belmont",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "jet-black-whip",
+          "reason": "Startwaffe; mit Stone Mask wird sie zu Mormegil Tip.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "stone-mask",
+          "reason": "Nötig für Mormegil Tip.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "simon-belmont",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "wind-whip",
+          "reason": "Startwaffe; mit Crown wird sie zu Spirit Tornado Tip.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "crown",
+          "reason": "Nötig für Spirit Tornado Tip.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "juste-belmont",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "vibhuti-whip",
+          "reason": "Startwaffe; mit Candelabrador wird sie zu Daybreaker Tip.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "candelabrador",
+          "reason": "Nötig für Daybreaker Tip.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "richter-belmont",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "platinum-whip",
+          "reason": "Startwaffe; mit Clover wird sie zu Cross Crasher Tip.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "clover",
+          "reason": "Nötig für Cross Crasher Tip.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "julius-belmont",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "vanitas-whip",
+          "reason": "Startwaffe; mit Hollow Heart wird sie zu Aurablaster Tip.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "hollow-heart",
+          "reason": "Nötig für Aurablaster Tip.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "grant-danasty",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "curved-knife",
+          "reason": "Startwaffe; mit Bracer wird sie zu Bwaka Knife.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "bracer",
+          "reason": "Nötig für Bwaka Knife.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "john-morris",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "iron-ball",
+          "reason": "Startwaffe; mit Armor wird sie zu Wrecking Ball.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "armor",
+          "reason": "Nötig für Wrecking Ball.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "jonathan-morris",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "javelin",
+          "reason": "Startwaffe; mit Spellbinder wird sie zu Long Inus.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "spellbinder",
+          "reason": "Nötig für Long Inus.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "soma-cruz",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "hand-grenade",
+          "reason": "Startwaffe; mit Candelabrador wird sie zu The RPG.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "candelabrador",
+          "reason": "Nötig für The RPG.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "charlotte-aulin",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "raging-fire",
+          "reason": "Startwaffe; mit Spinach wird sie zu Salamender.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "spinach",
+          "reason": "Nötig für Salamender.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "sypha-belnades",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "ice-fang",
+          "reason": "Startwaffe; mit Spellbinder wird sie zu Cocytus.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "spellbinder",
+          "reason": "Nötig für Cocytus.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "yoko-belnades",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "fulgur",
+          "reason": "Startwaffe; mit Duplicator wird sie zu Tenebris Tonitrus.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "duplicator",
+          "reason": "Nötig für Tenebris Tonitrus.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "alucard",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "alucart-sworb",
+          "reason": "Startwaffe; entwickelt sich zu Alucard Swords.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "eric-lecarde",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "alucard-spear",
+          "reason": "Startwaffe; mit Wings wird sie zu Thunderbolt Spear.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "wings",
+          "reason": "Nötig für Thunderbolt Spear.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "hector",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "mace",
+          "reason": "Startwaffe; mit Hollow Heart wird sie zu Stamazza.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "hollow-heart",
+          "reason": "Nötig für Stamazza.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "maria-renard",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "guardian-s-targe",
+          "reason": "Startwaffe; mit Pummarola wird sie zu Sacred Beasts Tower Shield.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "pummarola",
+          "reason": "Nötig für Sacred Beasts Tower Shield.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "shanoa",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "confodere",
+          "reason": "Startwaffe; entwickelt sich zu Vol Confodere.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "quincy-morris",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "shuriken",
+          "reason": "Startwaffe; mit Empty Tome wird sie zu Yagyu Shuriken.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "empty-tome",
+          "reason": "Nötig für Yagyu Shuriken.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "maxim-kischine",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "discus",
+          "reason": "Startwaffe; mit Parm Aegis wird sie zu Stellar Blade.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "parm-aegis",
+          "reason": "Nötig für Stellar Blade.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "henry",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "silver-revolver",
+          "reason": "Startwaffe; mit Karoma's Mana wird sie zu Jewel Gun.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "karoma-s-mana",
+          "reason": "Nötig für Jewel Gun.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "vlad-tepes-dracula",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "wine-glass",
+          "reason": "Startwaffe; mit Tirajisú wird sie zu Meal Ticket.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "tirajisu",
+          "reason": "Nötig für Meal Ticket.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "julia-laforeze",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "gale-force",
+          "reason": "Startwaffe; mit Bracer wird sie zu Pneuma Tempestas.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "bracer",
+          "reason": "Nötig für Pneuma Tempestas.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "carrie-fernandez",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "rock-riot",
+          "reason": "Startwaffe; mit Stone Mask wird sie zu Gemma Torpor.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "stone-mask",
+          "reason": "Nötig für Gemma Torpor.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "rinaldo-gandolfi",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "keremet-bubbles",
+          "reason": "Startwaffe; mit Armor wird sie zu Keremet Morbus.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "armor",
+          "reason": "Nötig für Keremet Morbus.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "mina-hakuba",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "refectio",
+          "reason": "Startwaffe; mit Clover wird sie zu Sanctuary.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "clover",
+          "reason": "Nötig für Sanctuary.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "elizabeth-bartley",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "hex",
+          "reason": "Startwaffe; mit Skull O'Maniac wird sie zu Nightmare.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "skull-o-maniac",
+          "reason": "Nötig für Nightmare.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "reinhardt-schneider",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "tyrfing",
+          "reason": "Startwaffe; mit Spinach wird sie zu Rune Sword.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "spinach",
+          "reason": "Nötig für Rune Sword.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "isaac",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "trident",
+          "reason": "Startwaffe; mit Duplicator wird sie zu Gungnir-Souris.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "duplicator",
+          "reason": "Nötig für Gungnir-Souris.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "sara-trantoul",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "star-flail",
+          "reason": "Startwaffe; mit Pummarola wird sie zu Moon Rod.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "pummarola",
+          "reason": "Nötig für Moon Rod.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "vincent-dorin",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "iron-shield",
+          "reason": "Startwaffe; mit Parm Aegis wird sie zu Dark Iron Shield.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "parm-aegis",
+          "reason": "Nötig für Dark Iron Shield.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "albus",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "optical-shot",
+          "reason": "Startwaffe; mit Karoma's Mana wird sie zu Acerbatus.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "karoma-s-mana",
+          "reason": "Nötig für Acerbatus.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "lisa-tepes",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "luminatio",
+          "reason": "Startwaffe; mit Crown wird sie zu Vol Luminatio.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "crown",
+          "reason": "Nötig für Vol Luminatio.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "shaft",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "umbra",
+          "reason": "Startwaffe; mit Attractorb wird sie zu Vol Umbra.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "attractorb",
+          "reason": "Nötig für Vol Umbra.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "saint-germain",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "globus",
+          "reason": "Startwaffe; mit Empty Tome wird sie zu Nitesco.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "empty-tome",
+          "reason": "Nötig für Nitesco.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "nathan-graves",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "sonic-dash",
+          "reason": "Startwaffe; mit Wings wird sie zu Rapidus Fio.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "wings",
+          "reason": "Nötig für Rapidus Fio.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "cornell",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "dextro-custos",
+          "reason": "Startwaffe; zusammen mit Centralis Custos, Sinestro Custos entsteht die Union Trinum Custodem.",
+          "priority": 1
+        },
+        {
+          "id": "centralis-custos",
+          "reason": "Partner für die Union Trinum Custodem.",
+          "priority": 1
+        },
+        {
+          "id": "sinestro-custos",
+          "reason": "Partner für die Union Trinum Custodem.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "barlowe",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "dominus-anger",
+          "reason": "Startwaffe; zusammen mit Dominus Agony, Dominus Hatred entsteht die Union Power of Sire.",
+          "priority": 1
+        },
+        {
+          "id": "dominus-agony",
+          "reason": "Partner für die Union Power of Sire.",
+          "priority": 1
+        },
+        {
+          "id": "dominus-hatred",
+          "reason": "Partner für die Union Power of Sire.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "young-maria-renard",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "familiar-forge",
+          "reason": "Startwaffe.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "familiar",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "raging-fire",
+          "reason": "Startwaffe; mit Spinach wird sie zu Salamender.",
+          "priority": 1
+        },
+        {
+          "id": "fulgur",
+          "reason": "Startwaffe; mit Duplicator wird sie zu Tenebris Tonitrus.",
+          "priority": 1
+        },
+        {
+          "id": "ice-fang",
+          "reason": "Startwaffe; mit Spellbinder wird sie zu Cocytus.",
+          "priority": 1
+        },
+        {
+          "id": "rock-riot",
+          "reason": "Startwaffe; mit Stone Mask wird sie zu Gemma Torpor.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "spinach",
+          "reason": "Nötig für Salamender.",
+          "priority": 1
+        },
+        {
+          "id": "duplicator",
+          "reason": "Nötig für Tenebris Tonitrus.",
+          "priority": 1
+        },
+        {
+          "id": "spellbinder",
+          "reason": "Nötig für Cocytus.",
+          "priority": 1
+        },
+        {
+          "id": "stone-mask",
+          "reason": "Nötig für Gemma Torpor.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "innocent-devil",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "trident",
+          "reason": "Startwaffe; mit Duplicator wird sie zu Gungnir-Souris.",
+          "priority": 1
+        },
+        {
+          "id": "summon-spirit",
+          "reason": "Startwaffe; zusammen mit Holy Wand entsteht die Union Spirit of Light.",
+          "priority": 1
+        },
+        {
+          "id": "holy-wand",
+          "reason": "Partner für die Union Spirit of Light.",
+          "priority": 1
+        },
+        {
+          "id": "garlic",
+          "reason": "Startwaffe; mit Pummarola wird sie zu Soul Eater.",
+          "priority": 1
+        },
+        {
+          "id": "fire-wand",
+          "reason": "Startwaffe; mit Spinach wird sie zu Hellfire.",
+          "priority": 1
+        },
+        {
+          "id": "lightning-ring",
+          "reason": "Startwaffe; mit Duplicator wird sie zu Thunder Loop.",
+          "priority": 1
+        },
+        {
+          "id": "magic-wand",
+          "reason": "Startwaffe; mit Empty Tome wird sie zu Holy Wand.",
+          "priority": 1
+        },
+        {
+          "id": "curved-knife",
+          "reason": "Startwaffe; mit Bracer wird sie zu Bwaka Knife.",
+          "priority": 1
+        },
+        {
+          "id": "troll-bomb",
+          "reason": "Startwaffe; zusammen mit NO FUTURE entsteht die Union Carnage Heart.",
+          "priority": 1
+        },
+        {
+          "id": "no-future",
+          "reason": "Partner für die Union Carnage Heart.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "duplicator",
+          "reason": "Nötig für Thunder Loop.",
+          "priority": 1
+        },
+        {
+          "id": "pummarola",
+          "reason": "Nötig für Soul Eater.",
+          "priority": 1
+        },
+        {
+          "id": "spinach",
+          "reason": "Nötig für Hellfire.",
+          "priority": 1
+        },
+        {
+          "id": "empty-tome",
+          "reason": "Nötig für Holy Wand.",
+          "priority": 1
+        },
+        {
+          "id": "bracer",
+          "reason": "Nötig für Bwaka Knife.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "blue-crescent-moon-cornell",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "trinum-custodem",
+          "reason": "Startwaffe.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "master-librarian",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "rapidus-fio",
+          "reason": "Startwaffe.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "hammer",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "the-rpg",
+          "reason": "Startwaffe.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "wind",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "aura-blast",
+          "reason": "Startwaffe; zusammen mit Hellfire entsteht die Union Kardía Phlegeton.",
+          "priority": 1
+        },
+        {
+          "id": "hellfire",
+          "reason": "Partner für die Union Kardía Phlegeton.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "hugh-baldwin",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "valmanway",
+          "reason": "Startwaffe; zusammen mit Thousand Edge entsteht die Union Million Cut.",
+          "priority": 1
+        },
+        {
+          "id": "thousand-edge",
+          "reason": "Partner für die Union Million Cut.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "morris-baldwin",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "kaiser-knuckle",
+          "reason": "Startwaffe; zusammen mit Tri-Bracelet entsteht die Union Lapiste Tepisto.",
+          "priority": 1
+        },
+        {
+          "id": "tri-bracelet",
+          "reason": "Partner für die Union Lapiste Tepisto.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "annette",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "endo-gears",
+          "reason": "Startwaffe; zusammen mit Peri Pendulum, Myo Lift, Epi Head entsteht die Union Clock Tower.",
+          "priority": 1
+        },
+        {
+          "id": "peri-pendulum",
+          "reason": "Partner für die Union Clock Tower.",
+          "priority": 1
+        },
+        {
+          "id": "myo-lift",
+          "reason": "Partner für die Union Clock Tower.",
+          "priority": 1
+        },
+        {
+          "id": "epi-head",
+          "reason": "Partner für die Union Clock Tower.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "tera",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "grand-cross",
+          "reason": "Startwaffe; zusammen mit Heaven Sword entsteht die Union Arch Angle.",
+          "priority": 1
+        },
+        {
+          "id": "heaven-sword",
+          "reason": "Partner für die Union Arch Angle.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "jonathan-charlotte",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "javelin",
+          "reason": "Startwaffe; mit Spellbinder wird sie zu Long Inus.",
+          "priority": 1
+        },
+        {
+          "id": "morning-star",
+          "reason": "Startwaffe.",
+          "priority": 1
+        },
+        {
+          "id": "coat-of-arms",
+          "reason": "Startwaffe.",
+          "priority": 1
+        },
+        {
+          "id": "spectral-sword",
+          "reason": "Startwaffe.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "spellbinder",
+          "reason": "Nötig für Long Inus.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "charlotte-jonathan",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "raging-fire",
+          "reason": "Startwaffe; mit Spinach wird sie zu Salamender.",
+          "priority": 1
+        },
+        {
+          "id": "belnades-spellbook",
+          "reason": "Startwaffe.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "spinach",
+          "reason": "Nötig für Salamender.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "stella-loretta-lecarde",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "pneuma-tempestas",
+          "reason": "Startwaffe.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "loretta-stella-lecarde",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "cocytus",
+          "reason": "Startwaffe.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "stella-lecarde",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "pneuma-tempestas",
+          "reason": "Startwaffe.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "loretta-lecarde",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "cocytus",
+          "reason": "Startwaffe.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "brauner",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "ebony-diabologue",
+          "reason": "Startwaffe.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "soleil-belmont",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "jet-black-whip",
+          "reason": "Startwaffe; mit Stone Mask wird sie zu Mormegil Tip.",
+          "priority": 1
+        },
+        {
+          "id": "vibhuti-whip",
+          "reason": "Startwaffe; mit Candelabrador wird sie zu Daybreaker Tip.",
+          "priority": 1
+        },
+        {
+          "id": "vanitas-whip",
+          "reason": "Startwaffe; mit Hollow Heart wird sie zu Aurablaster Tip.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "stone-mask",
+          "reason": "Nötig für Mormegil Tip.",
+          "priority": 1
+        },
+        {
+          "id": "candelabrador",
+          "reason": "Nötig für Daybreaker Tip.",
+          "priority": 1
+        },
+        {
+          "id": "hollow-heart",
+          "reason": "Nötig für Aurablaster Tip.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "dario-bossi",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "salamender",
+          "reason": "Startwaffe.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "dmitrii-blinov",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "ebony-diabologue",
+          "reason": "Startwaffe.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "celia-fortner",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "luminatio",
+          "reason": "Startwaffe; mit Crown wird sie zu Vol Luminatio.",
+          "priority": 1
+        },
+        {
+          "id": "umbra",
+          "reason": "Startwaffe; mit Attractorb wird sie zu Vol Umbra.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "crown",
+          "reason": "Nötig für Vol Luminatio.",
+          "priority": 1
+        },
+        {
+          "id": "attractorb",
+          "reason": "Nötig für Vol Umbra.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "graham-jones",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "vol-umbra",
+          "reason": "Startwaffe; entwickelt sich zu Universitas.",
+          "priority": 1
+        },
+        {
+          "id": "vol-luminatio",
+          "reason": "Partner für die Union Universitas.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "genya-arikado",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "pocket-knife",
+          "reason": "Startwaffe; mit Torrona's Box wird sie zu Claimh Solais.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "torrona-s-box",
+          "reason": "Nötig für Claimh Solais.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "joachim-armster",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "rune-sword",
+          "reason": "Startwaffe.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "walter-bernhard",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "nitesco",
+          "reason": "Startwaffe.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "cave-troll",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "troll-bomb",
+          "reason": "Startwaffe; zusammen mit NO FUTURE entsteht die Union Carnage Heart.",
+          "priority": 1
+        },
+        {
+          "id": "no-future",
+          "reason": "Partner für die Union Carnage Heart.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "axe-armor",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "axe",
+          "reason": "Startwaffe; mit Candelabrador wird sie zu Death Spiral.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "candelabrador",
+          "reason": "Nötig für Death Spiral.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "frozenshade",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "icebrand",
+          "reason": "Startwaffe; zusammen mit Unholy Vespers entsteht die Union Ninth Circle.",
+          "priority": 1
+        },
+        {
+          "id": "unholy-vespers",
+          "reason": "Partner für die Union Ninth Circle.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "alamaric-sniper",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "arrow-of-goth",
+          "reason": "Startwaffe; zusammen mit Mannajja entsteht die Union Dies Irae.",
+          "priority": 1
+        },
+        {
+          "id": "mannajja",
+          "reason": "Partner für die Union Dies Irae.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "ruler-sword",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "sword-brothers",
+          "reason": "Startwaffe; zusammen mit Thunder Loop entsteht die Union Vjaya Sisters.",
+          "priority": 1
+        },
+        {
+          "id": "thunder-loop",
+          "reason": "Partner für die Union Vjaya Sisters.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "persephone",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "summon-spirit-tornado",
+          "reason": "Startwaffe; zusammen mit Gorgeous Moon entsteht die Union Venus Crescent.",
+          "priority": 1
+        },
+        {
+          "id": "gorgeous-moon",
+          "reason": "Partner für die Union Venus Crescent.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "keremet",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "keremet-morbus",
+          "reason": "Startwaffe.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "drolta-tzuentes",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "anura",
+          "reason": "Startwaffe; zusammen mit Soul Eater entsteht die Union Dark Frogamorphosis.",
+          "priority": 1
+        },
+        {
+          "id": "soul-eater",
+          "reason": "Partner für die Union Dark Frogamorphosis.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "witch-actrise",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "gemma-torpor",
+          "reason": "Startwaffe.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "atlantis-shrine-wizard",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "hydro-storm",
+          "reason": "Startwaffe; zusammen mit La Borra entsteht die Union Hydro Pump Climax.",
+          "priority": 1
+        },
+        {
+          "id": "la-borra",
+          "reason": "Partner für die Union Hydro Pump Climax.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "succubus",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "nightmare",
+          "reason": "Startwaffe.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "fake-trio",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "bone",
+          "reason": "Startwaffe.",
+          "priority": 1
+        },
+        {
+          "id": "bracelet",
+          "reason": "Startwaffe; entwickelt sich zu Bi-Bracelet.",
+          "priority": 1
+        },
+        {
+          "id": "pocket-knife",
+          "reason": "Startwaffe; mit Torrona's Box wird sie zu Claimh Solais.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "torrona-s-box",
+          "reason": "Nötig für Claimh Solais.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "slogra-and-gaibon",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "trident",
+          "reason": "Startwaffe; mit Duplicator wird sie zu Gungnir-Souris.",
+          "priority": 1
+        },
+        {
+          "id": "fire-wand",
+          "reason": "Startwaffe; mit Spinach wird sie zu Hellfire.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "duplicator",
+          "reason": "Nötig für Gungnir-Souris.",
+          "priority": 1
+        },
+        {
+          "id": "spinach",
+          "reason": "Nötig für Hellfire.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "zephyr",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "knife",
+          "reason": "Startwaffe; mit Bracer wird sie zu Thousand Edge.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "bracer",
+          "reason": "Nötig für Thousand Edge.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "jiangshi",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "soul-steal",
+          "reason": "Startwaffe; zusammen mit Vicious Hunger entsteht die Union Power of Lire.",
+          "priority": 1
+        },
+        {
+          "id": "vicious-hunger",
+          "reason": "Partner für die Union Power of Lire.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "blackmore",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "summon-spirit",
+          "reason": "Startwaffe; zusammen mit Holy Wand entsteht die Union Spirit of Light.",
+          "priority": 1
+        },
+        {
+          "id": "holy-wand",
+          "reason": "Partner für die Union Spirit of Light.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "count-olrox",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "dark-rift",
+          "reason": "Startwaffe; zusammen mit Death Spiral entsteht die Union Legacy of Death: Soul River.",
+          "priority": 1
+        },
+        {
+          "id": "death-spiral",
+          "reason": "Partner für die Union Legacy of Death: Soul River.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "death-character",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "death-spiral",
+          "reason": "Startwaffe; zusammen mit Dark Rift entsteht die Union Legacy of Death: Soul River.",
+          "priority": 1
+        },
+        {
+          "id": "dark-rift",
+          "reason": "Partner für die Union Legacy of Death: Soul River.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "galamoth",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "tenebris-tonitrus",
+          "reason": "Startwaffe.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "megalo-elizabeth-bartley",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "belnades-spellbook",
+          "reason": "Startwaffe.",
+          "priority": 1
+        },
+        {
+          "id": "ebony-diabologue",
+          "reason": "Startwaffe.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "megalo-olrox",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "dark-rift",
+          "reason": "Startwaffe; zusammen mit Death Spiral entsteht die Union Legacy of Death: Soul River.",
+          "priority": 1
+        },
+        {
+          "id": "death-spiral",
+          "reason": "Partner für die Union Legacy of Death: Soul River.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "megalo-death",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "death-spiral",
+          "reason": "Startwaffe; zusammen mit Dark Rift entsteht die Union Legacy of Death: Soul River.",
+          "priority": 1
+        },
+        {
+          "id": "dark-rift",
+          "reason": "Partner für die Union Legacy of Death: Soul River.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "megalo-dracula",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "wine-glass",
+          "reason": "Startwaffe; mit Tirajisú wird sie zu Meal Ticket.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "tirajisu",
+          "reason": "Nötig für Meal Ticket.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "chaos",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "infinite-corridor",
+          "reason": "Startwaffe.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    }
+  ]
+}

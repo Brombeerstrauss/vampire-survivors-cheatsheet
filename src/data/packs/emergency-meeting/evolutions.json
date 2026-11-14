@@ -1,0 +1,131 @@
+{
+  "$schema": "../../schema/evolutions.schema.json",
+  "evolutions": [
+    {
+      "id": "emergency-meeting",
+      "kind": "evolution",
+      "source": "emergency-meeting",
+      "result": "emergency-meeting",
+      "weapons": [
+        {
+          "id": "report"
+        }
+      ],
+      "passives": [
+        {
+          "id": "mini-crewmate",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "crossed-wires",
+      "kind": "evolution",
+      "source": "emergency-meeting",
+      "result": "crossed-wires",
+      "weapons": [
+        {
+          "id": "lucky-swipe"
+        }
+      ],
+      "passives": [
+        {
+          "id": "mini-engineer",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "paranormal-scan",
+      "kind": "evolution",
+      "source": "emergency-meeting",
+      "result": "paranormal-scan",
+      "weapons": [
+        {
+          "id": "lifesign-scan"
+        }
+      ],
+      "passives": [
+        {
+          "id": "mini-ghost",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "unjust-ejection",
+      "kind": "evolution",
+      "source": "emergency-meeting",
+      "result": "unjust-ejection",
+      "weapons": [
+        {
+          "id": "just-vent"
+        }
+      ],
+      "passives": [
+        {
+          "id": "mini-shapeshifter",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "clear-asteroids",
+      "kind": "evolution",
+      "source": "emergency-meeting",
+      "result": "clear-asteroids",
+      "weapons": [
+        {
+          "id": "clear-debris"
+        }
+      ],
+      "passives": [
+        {
+          "id": "mini-guardian",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "impostongue",
+      "kind": "evolution",
+      "source": "emergency-meeting",
+      "result": "impostongue",
+      "weapons": [
+        {
+          "id": "sharp-tongue"
+        }
+      ],
+      "passives": [
+        {
+          "id": "mini-impostor",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "rocket-science",
+      "kind": "evolution",
+      "source": "emergency-meeting",
+      "result": "rocket-science",
+      "weapons": [
+        {
+          "id": "science-rocks"
+        }
+      ],
+      "passives": [
+        {
+          "id": "mini-scientist",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    }
+  ]
+}

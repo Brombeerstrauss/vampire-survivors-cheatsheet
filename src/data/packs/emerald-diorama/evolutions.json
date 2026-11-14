@@ -1,0 +1,403 @@
+{
+  "$schema": "../../schema/evolutions.schema.json",
+  "evolutions": [
+    {
+      "id": "dress-sword",
+      "kind": "evolution",
+      "source": "emerald-diorama",
+      "result": "dress-sword",
+      "weapons": [
+        {
+          "id": "fleuret"
+        }
+      ],
+      "passives": [],
+      "conditions": [
+        "Glimmer-Technik „Crystalline Carve“ freischalten (passiert zufällig beim Angreifen)."
+      ],
+      "verified": true
+    },
+    {
+      "id": "espada-ropera",
+      "kind": "evolution",
+      "source": "emerald-diorama",
+      "result": "espada-ropera",
+      "weapons": [
+        {
+          "id": "dress-sword"
+        }
+      ],
+      "passives": [],
+      "conditions": [
+        "Glimmer-Technik „Shocking Rush“ freischalten (passiert zufällig beim Angreifen)."
+      ],
+      "verified": true
+    },
+    {
+      "id": "pursuant-blades",
+      "kind": "evolution",
+      "source": "emerald-diorama",
+      "result": "pursuant-blades",
+      "weapons": [
+        {
+          "id": "splashers"
+        }
+      ],
+      "passives": [
+        {
+          "id": "spellbinder"
+        }
+      ],
+      "conditions": [
+        "Glimmer-Technik „Dual Whirlwind“ freischalten (passiert zufällig beim Angreifen)."
+      ],
+      "verified": true
+    },
+    {
+      "id": "hydra-cannon",
+      "kind": "evolution",
+      "source": "emerald-diorama",
+      "result": "hydra-cannon",
+      "weapons": [
+        {
+          "id": "super-missile"
+        }
+      ],
+      "passives": [],
+      "conditions": [
+        "Glimmer-Technik „Ballistic Missiles“ freischalten (passiert zufällig beim Angreifen)."
+      ],
+      "verified": true
+    },
+    {
+      "id": "hyperion-bazooka",
+      "kind": "evolution",
+      "source": "emerald-diorama",
+      "result": "hyperion-bazooka",
+      "weapons": [
+        {
+          "id": "hydra-cannon"
+        }
+      ],
+      "passives": [],
+      "conditions": [
+        "Glimmer-Technik „Artificial Hailstorm“ freischalten (passiert zufällig beim Angreifen)."
+      ],
+      "verified": true
+    },
+    {
+      "id": "gekkabijin",
+      "kind": "evolution",
+      "source": "emerald-diorama",
+      "result": "gekkabijin",
+      "weapons": [
+        {
+          "id": "twin-dragon"
+        }
+      ],
+      "passives": [
+        {
+          "id": "karoma-s-mana"
+        }
+      ],
+      "conditions": [
+        "Glimmer-Technik „Gravedigger“ freischalten (passiert zufällig beim Angreifen)."
+      ],
+      "verified": true
+    },
+    {
+      "id": "pressure-point",
+      "kind": "evolution",
+      "source": "emerald-diorama",
+      "result": "pressure-point",
+      "weapons": [
+        {
+          "id": "punch"
+        }
+      ],
+      "passives": [],
+      "conditions": [
+        "Glimmer-Technik „Raksha“ freischalten (passiert zufällig beim Angreifen)."
+      ],
+      "verified": true
+    },
+    {
+      "id": "gilded-hand",
+      "kind": "evolution",
+      "source": "emerald-diorama",
+      "result": "gilded-hand",
+      "weapons": [
+        {
+          "id": "pressure-point"
+        }
+      ],
+      "passives": [],
+      "conditions": [
+        "Glimmer-Technik „Shenlong Firefist“ freischalten (passiert zufällig beim Angreifen)."
+      ],
+      "verified": true
+    },
+    {
+      "id": "triangle-kick",
+      "kind": "evolution",
+      "source": "emerald-diorama",
+      "result": "triangle-kick",
+      "weapons": [
+        {
+          "id": "kick"
+        }
+      ],
+      "passives": [
+        {
+          "id": "pummarola"
+        }
+      ],
+      "conditions": [
+        "Glimmer-Technik „Thunder Kick“ freischalten (passiert zufällig beim Angreifen)."
+      ],
+      "verified": true
+    },
+    {
+      "id": "rings-of-calamity",
+      "kind": "evolution",
+      "source": "emerald-diorama",
+      "result": "rings-of-calamity",
+      "weapons": [
+        {
+          "id": "spirit-rings"
+        }
+      ],
+      "passives": [],
+      "conditions": [
+        "Beliebige 5 passive Gegenstände auf Maximalstufe."
+      ],
+      "verified": true
+    },
+    {
+      "id": "hecaton-machine-gun",
+      "kind": "evolution",
+      "source": "emerald-diorama",
+      "result": "hecaton-machine-gun",
+      "weapons": [
+        {
+          "id": "saber-machine-gun"
+        }
+      ],
+      "passives": [],
+      "conditions": [
+        "Glimmer-Technik „Shockwave“ freischalten (passiert zufällig beim Angreifen)."
+      ],
+      "verified": true
+    },
+    {
+      "id": "divergence",
+      "kind": "evolution",
+      "source": "emerald-diorama",
+      "result": "divergence",
+      "weapons": [
+        {
+          "id": "hecaton-machine-gun"
+        }
+      ],
+      "passives": [],
+      "conditions": [
+        "Glimmer-Technik „Bombarding Fire“ freischalten (passiert zufällig beim Angreifen)."
+      ],
+      "verified": true
+    },
+    {
+      "id": "pendragon",
+      "kind": "evolution",
+      "source": "emerald-diorama",
+      "result": "pendragon",
+      "weapons": [
+        {
+          "id": "eagle-gun"
+        }
+      ],
+      "passives": [
+        {
+          "id": "spinach"
+        }
+      ],
+      "conditions": [
+        "Glimmer-Technik „Falconfire“ freischalten (passiert zufällig beim Angreifen)."
+      ],
+      "verified": true
+    },
+    {
+      "id": "lordstar",
+      "kind": "evolution",
+      "source": "emerald-diorama",
+      "result": "lordstar",
+      "weapons": [
+        {
+          "id": "town-sword"
+        }
+      ],
+      "passives": [],
+      "conditions": [
+        "Glimmer-Technik „Swallow Slice“ freischalten (passiert zufällig beim Angreifen)."
+      ],
+      "verified": true
+    },
+    {
+      "id": "dayblade",
+      "kind": "evolution",
+      "source": "emerald-diorama",
+      "result": "dayblade",
+      "weapons": [
+        {
+          "id": "lordstar"
+        }
+      ],
+      "passives": [],
+      "conditions": [
+        "Glimmer-Technik „Airwave“ freischalten (passiert zufällig beim Angreifen)."
+      ],
+      "verified": true
+    },
+    {
+      "id": "blood-chalice",
+      "kind": "evolution",
+      "source": "emerald-diorama",
+      "result": "blood-chalice",
+      "weapons": [
+        {
+          "id": "sanguine-star"
+        }
+      ],
+      "passives": [
+        {
+          "id": "stone-mask"
+        }
+      ],
+      "conditions": [
+        "Glimmer-Technik „Blood Rage“ freischalten (passiert zufällig beim Angreifen)."
+      ],
+      "verified": true
+    },
+    {
+      "id": "jetstream",
+      "kind": "evolution",
+      "source": "emerald-diorama",
+      "result": "jetstream",
+      "weapons": [
+        {
+          "id": "khukuri"
+        }
+      ],
+      "passives": [
+        {
+          "id": "parm-aegis"
+        }
+      ],
+      "conditions": [
+        "Glimmer-Technik „Moonfall Slash“ freischalten (passiert zufällig beim Angreifen)."
+      ],
+      "verified": true
+    },
+    {
+      "id": "falconwind",
+      "kind": "evolution",
+      "source": "emerald-diorama",
+      "result": "falconwind",
+      "weapons": [
+        {
+          "id": "bullova"
+        }
+      ],
+      "passives": [
+        {
+          "id": "skull-o-maniac"
+        }
+      ],
+      "conditions": [
+        "Glimmer-Technik „Hell's Fury“ freischalten (passiert zufällig beim Angreifen)."
+      ],
+      "verified": false,
+      "note": "Ungeprüft: Waffenliste verlangt Skull O'Maniac auf Maximalstufe, die Entwicklungsseite nicht."
+    },
+    {
+      "id": "feather-spear",
+      "kind": "evolution",
+      "source": "emerald-diorama",
+      "result": "feather-spear",
+      "weapons": [
+        {
+          "id": "glaive"
+        }
+      ],
+      "passives": [],
+      "conditions": [
+        "Glimmer-Technik „Divine Lancer“ freischalten (passiert zufällig beim Angreifen)."
+      ],
+      "verified": true
+    },
+    {
+      "id": "lohengrin",
+      "kind": "evolution",
+      "source": "emerald-diorama",
+      "result": "lohengrin",
+      "weapons": [
+        {
+          "id": "feather-spear"
+        }
+      ],
+      "passives": [],
+      "conditions": [
+        "Glimmer-Technik „Stardust“ freischalten (passiert zufällig beim Angreifen)."
+      ],
+      "verified": true
+    },
+    {
+      "id": "zweihander",
+      "kind": "evolution",
+      "source": "emerald-diorama",
+      "result": "zweihander",
+      "weapons": [
+        {
+          "id": "flamberge"
+        }
+      ],
+      "passives": [],
+      "conditions": [
+        "Glimmer-Technik „Bull Crush“ freischalten (passiert zufällig beim Angreifen)."
+      ],
+      "verified": true
+    },
+    {
+      "id": "galatyn",
+      "kind": "evolution",
+      "source": "emerald-diorama",
+      "result": "galatyn",
+      "weapons": [
+        {
+          "id": "zweihander"
+        }
+      ],
+      "passives": [],
+      "conditions": [
+        "Glimmer-Technik „Absetzen“ freischalten (passiert zufällig beim Angreifen)."
+      ],
+      "verified": true
+    },
+    {
+      "id": "emerald-wave",
+      "kind": "evolution",
+      "source": "emerald-diorama",
+      "result": "emerald-wave",
+      "weapons": [
+        {
+          "id": "emerald-rapture"
+        }
+      ],
+      "passives": [
+        {
+          "id": "crown"
+        }
+      ],
+      "verified": true
+    }
+  ]
+}

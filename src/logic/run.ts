@@ -53,8 +53,13 @@ export function addWeapon(run: RunState, catalog: Catalog, id: WeaponId): RunSta
 export function addPassive(run: RunState, catalog: Catalog, id: PassiveId): RunState {
   const passive = catalog.passive(id)
   if (!passive || run.passives.some((p) => p.id === id)) return run
-  if (!passive.noSlot && freePassiveSlots(run, catalog) === 0) return run
+  if (!passive.noSlot && !passive.ignoresSlotLimit && freePassiveSlots(run, catalog) === 0) return run
   return { ...run, passives: [...run.passives, { id, level: 1 }] }
+}
+
+/** Kann dieser Gegenstand gerade noch aufgenommen werden? */
+export function canAddPassive(run: RunState, catalog: Catalog, id: PassiveId): boolean {
+  return addPassive(run, catalog, id) !== run
 }
 
 export function removeWeapon(run: RunState, id: WeaponId): RunState {
@@ -80,16 +85,18 @@ export function setPassiveLevel(run: RunState, catalog: Catalog, id: PassiveId, 
  * - Entwicklung und Morph ersetzen die Ausgangswaffe an ihrem Platz
  * - Union ersetzt alle beteiligten Waffen durch eine (gibt Slots frei)
  * - Geschenk kommt zusätzlich dazu
- * Passive Gegenstände bleiben immer erhalten.
+ * Passive Gegenstände bleiben erhalten, außer sie werden verbraucht (`consumed`).
  */
 export function applyEvolution(run: RunState, catalog: Catalog, evolution: Evolution): RunState {
   const result = catalog.weapon(evolution.result)
   if (!result || run.weapons.some((w) => w.id === result.id)) return run
   const evolved: OwnedItem = { id: result.id, level: result.maxLevel > 1 ? 1 : result.maxLevel }
   const inputs = new Set(evolution.weapons.map((w) => w.id))
+  const consumed = new Set(evolution.passives.filter((p) => p.consumed).map((p) => p.id))
+  const passives = consumed.size > 0 ? run.passives.filter((p) => !consumed.has(p.id)) : run.passives
 
   if (evolution.kind === 'gift') {
-    return { ...run, weapons: [...run.weapons, evolved] }
+    return { ...run, weapons: [...run.weapons, evolved], passives }
   }
 
   const firstIndex = run.weapons.findIndex((w) => inputs.has(w.id))
@@ -99,7 +106,7 @@ export function applyEvolution(run: RunState, catalog: Catalog, evolution: Evolu
     if (index === firstIndex) weapons.push(evolved)
     else if (!inputs.has(w.id)) weapons.push(w)
   })
-  return { ...run, weapons }
+  return { ...run, weapons, passives }
 }
 
 /** Prüft gespeicherte Daten und wirft unbekannte oder doppelte Einträge heraus. */

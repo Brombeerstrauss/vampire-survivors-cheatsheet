@@ -1,0 +1,112 @@
+{
+  "$schema": "../../schema/characters.schema.json",
+  "characters": [
+    {
+      "id": "crewmate-dino",
+      "name": "Crewmate Dino",
+      "source": "emergency-meeting",
+      "startingWeapons": [
+        "report"
+      ],
+      "bonus": "Erhält Werte-Boni, sobald irgendeine Waffe die Maximalstufe erreicht.",
+      "secret": false,
+      "emoji": "🧑‍🚀",
+      "verified": true
+    },
+    {
+      "id": "engineer-gino",
+      "name": "Engineer Gino",
+      "source": "emergency-meeting",
+      "startingWeapons": [
+        "lucky-swipe"
+      ],
+      "bonus": "Wählt auf Level 2, 12 und 22 einen zusätzlichen passiven Gegenstand.",
+      "secret": false,
+      "emoji": "🔧",
+      "verified": true
+    },
+    {
+      "id": "ghost-lino",
+      "name": "Ghost Lino",
+      "source": "emergency-meeting",
+      "startingWeapons": [
+        "lifesign-scan"
+      ],
+      "bonus": "Kann weder Schaden nehmen noch austeilen, verschwindet aber beim Zeitlimit; ignoriert Wände.",
+      "secret": false,
+      "emoji": "👻",
+      "verified": true
+    },
+    {
+      "id": "shapeshifter-nino",
+      "name": "Shapeshifter Nino",
+      "source": "emergency-meeting",
+      "startingWeapons": [
+        "just-vent"
+      ],
+      "bonus": "Hinterlässt bei Schaden überzählige Körperteile und kann die Gestalt wechseln.",
+      "secret": false,
+      "emoji": "🫥",
+      "verified": true
+    },
+    {
+      "id": "guardian-pina",
+      "name": "Guardian Pina",
+      "source": "emergency-meeting",
+      "startingWeapons": [
+        "clear-debris"
+      ],
+      "bonus": "Kann +1 Wiederbelebung erhalten, wenn jemand wiederbelebt wird; erhöht Rüstung und Regeneration in der Nähe; ignoriert Wände.",
+      "secret": false,
+      "emoji": "🛡️",
+      "verified": true
+    },
+    {
+      "id": "impostor-rina",
+      "name": "Impostor Rina",
+      "source": "emergency-meeting",
+      "startingWeapons": [
+        "sharp-tongue"
+      ],
+      "bonus": "Wird nach vielen besiegten Gegnern oder einem besiegten Verbündeten stärker und kurz unverwundbar.",
+      "secret": false,
+      "emoji": "🔪",
+      "verified": true
+    },
+    {
+      "id": "scientist-mina",
+      "name": "Scientist Mina",
+      "source": "emergency-meeting",
+      "startingWeapons": [
+        "science-rocks"
+      ],
+      "bonus": "Alle 10 Level −10 % Glück (max. −90 %); kann alle 10 Level einen Bonus pro Level wählen (max. 5-mal).",
+      "secret": false,
+      "emoji": "🧪",
+      "verified": true
+    },
+    {
+      "id": "horse",
+      "name": "Horse",
+      "source": "emergency-meeting",
+      "startingWeapons": [
+        "hats"
+      ],
+      "bonus": "Erhält alle 20 Level mehr Projektile (max. +4).",
+      "secret": false,
+      "emoji": "🐴",
+      "verified": true
+    },
+    {
+      "id": "megalo-impostor-rina",
+      "name": "Megalo Impostor Rina",
+      "source": "emergency-meeting",
+      "startingWeapons": [],
+      "bonus": "„Ich bin nicht der Impostor.“",
+      "secret": false,
+      "emoji": "🟥",
+      "verified": true,
+      "note": "Versteckte Waffe: Sharp Tongue."
+    }
+  ]
+}

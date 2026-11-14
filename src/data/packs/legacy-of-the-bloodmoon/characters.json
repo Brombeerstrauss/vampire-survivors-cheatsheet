@@ -1,0 +1,149 @@
+{
+  "$schema": "../../schema/characters.schema.json",
+  "characters": [
+    {
+      "id": "malice-bloodmoon",
+      "name": "Malice Bloodmoon",
+      "source": "legacy-of-the-bloodmoon",
+      "startingWeapons": [
+        "scarlet-needle"
+      ],
+      "bonus": "Erhält alle 4 Level +0,1 Regeneration; bei Vergeltung, kritischer Gesundheit, letztem Atemzug und Wiederbelebung löst sie einen großen Blutfluch aus.",
+      "secret": false,
+      "emoji": "🩸",
+      "verified": true
+    },
+    {
+      "id": "calogero-bloodmoon",
+      "name": "Calogero Bloodmoon",
+      "source": "legacy-of-the-bloodmoon",
+      "startingWeapons": [
+        "ashella"
+      ],
+      "bonus": "Letzter Atemzug: +50 % max. Gesundheit; Vergeltung gibt kurz einen Werte-Bonus.",
+      "secret": false,
+      "emoji": "🧛‍♂️",
+      "verified": true
+    },
+    {
+      "id": "ashtart",
+      "name": "Ashtart",
+      "source": "legacy-of-the-bloodmoon",
+      "startingWeapons": [
+        "incineration"
+      ],
+      "bonus": "Bei kritischer Gesundheit +1 Wiederbelebung; ruft zu jeder vollen Minute Überreste besiegter Gegner herbei.",
+      "secret": false,
+      "emoji": "🔥",
+      "verified": true
+    },
+    {
+      "id": "sargon",
+      "name": "Sargon",
+      "source": "legacy-of-the-bloodmoon",
+      "startingWeapons": [
+        "firefall",
+        "fireball",
+        "firewall"
+      ],
+      "bonus": "Erzeugt Raumverzerrungen, die Gegner verwirren; Meister von FireFall, FireWall und FireBall; bei Wiederbelebung eine zusätzliche Verzerrung.",
+      "secret": false,
+      "emoji": "🌀",
+      "verified": true
+    },
+    {
+      "id": "nameless-fool",
+      "name": "Nameless Fool",
+      "source": "legacy-of-the-bloodmoon",
+      "startingWeapons": [
+        "descent-into-misery"
+      ],
+      "bonus": "Letzter Atemzug: verliert die Hälfte der max. Gesundheit und erhält eine zufällige Darkana; Wiederbelebungen können weitere bringen (max. 3).",
+      "secret": false,
+      "emoji": "🃏",
+      "verified": true
+    },
+    {
+      "id": "congregation",
+      "name": "Congregation",
+      "source": "legacy-of-the-bloodmoon",
+      "startingWeapons": [
+        "screams-from-the-void"
+      ],
+      "bonus": "Jede Wiederbelebung über eins gibt einen zusätzlichen passiven Slot; bei kritischer Gesundheit feuert die Hauptwaffe je nach übrigen Wiederbelebungen; bei Wiederbelebung erscheint ein Velvet Dodecahedron.",
+      "secret": false,
+      "emoji": "👥",
+      "verified": true
+    },
+    {
+      "id": "nameless-saint",
+      "name": "Nameless Saint",
+      "source": "legacy-of-the-bloodmoon",
+      "startingWeapons": [],
+      "bonus": "Startet mit heiligen Waffen, je nachdem, was in der Sammlung freigeschaltet ist; letzter Atemzug löst einen Rosary aus.",
+      "secret": false,
+      "emoji": "😇",
+      "verified": true
+    },
+    {
+      "id": "baal-thasar",
+      "name": "Baal'Thasar",
+      "source": "legacy-of-the-bloodmoon",
+      "startingWeapons": [
+        "blacken-firmament"
+      ],
+      "bonus": "Geübt mit Höllen-Waffen; Blut-Waffen lassen Blut fallen; letzter Atemzug gibt je nach gesammeltem Blut kurz mehr Macht und kürzere Abklingzeit.",
+      "secret": false,
+      "emoji": "😈",
+      "verified": true
+    },
+    {
+      "id": "jaman-jato",
+      "name": "Jaman Jato ★",
+      "source": "legacy-of-the-bloodmoon",
+      "startingWeapons": [
+        "108-responsive-prayers"
+      ],
+      "bonus": "Erhält alle 20 Level mehr Projektile (max. +4); jede abgeschlossene Stage gibt einen Prestige-Rang.",
+      "secret": false,
+      "emoji": "🍖",
+      "verified": false,
+      "note": "Ungeprüft: Startwaffe nur auf der Charakterseite genannt."
+    },
+    {
+      "id": "in-kujata",
+      "name": "In' Kujata",
+      "source": "legacy-of-the-bloodmoon",
+      "startingWeapons": [],
+      "bonus": "Stampft alle paar Schritte auf den Boden; wächst mit gesammelter Rüstung; bei kritischer Gesundheit kurz mehr Rüstung.",
+      "secret": false,
+      "emoji": "🐂",
+      "verified": true,
+      "note": "Versteckte Waffe: Eskizzibur."
+    },
+    {
+      "id": "megalo-sargon",
+      "name": "Megalo Sargon",
+      "source": "legacy-of-the-bloodmoon",
+      "startingWeapons": [
+        "firestall"
+      ],
+      "bonus": "„Zweischneidige Geschenke. Dunkle Illusionen. Echos der Vergangenheit.“",
+      "secret": false,
+      "emoji": "🌌",
+      "verified": true
+    },
+    {
+      "id": "baal-thamut",
+      "name": "Baal'Thamut",
+      "source": "legacy-of-the-bloodmoon",
+      "startingWeapons": [
+        "damnation"
+      ],
+      "bonus": "„Es ist Boden und Horizont zugleich und verschlingt sich doch selbst.“",
+      "secret": false,
+      "emoji": "🐋",
+      "verified": true
+    }
+  ]
+}

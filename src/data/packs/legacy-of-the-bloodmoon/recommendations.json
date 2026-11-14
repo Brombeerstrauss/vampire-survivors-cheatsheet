@@ -1,0 +1,175 @@
+{
+  "$schema": "../../schema/recommendations.schema.json",
+  "recommendations": [
+    {
+      "character": "malice-bloodmoon",
+      "source": "legacy-of-the-bloodmoon",
+      "weapons": [
+        {
+          "id": "scarlet-needle",
+          "reason": "Startwaffe; mit Pummarola wird sie zu Cardinal Rain.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "pummarola",
+          "reason": "Nötig für Cardinal Rain.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "calogero-bloodmoon",
+      "source": "legacy-of-the-bloodmoon",
+      "weapons": [
+        {
+          "id": "ashella",
+          "reason": "Startwaffe; mit Duplicator wird sie zu Bloodlust.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "duplicator",
+          "reason": "Nötig für Bloodlust.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "ashtart",
+      "source": "legacy-of-the-bloodmoon",
+      "weapons": [
+        {
+          "id": "incineration",
+          "reason": "Startwaffe; mit Candelabrador wird sie zu Dust to Dust.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "candelabrador",
+          "reason": "Nötig für Dust to Dust.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "sargon",
+      "source": "legacy-of-the-bloodmoon",
+      "weapons": [
+        {
+          "id": "firefall",
+          "reason": "Partner für die Union FireStall.",
+          "priority": 1
+        },
+        {
+          "id": "fireball",
+          "reason": "Partner für die Union FireStall.",
+          "priority": 1
+        },
+        {
+          "id": "firewall",
+          "reason": "Startwaffe; zusammen mit FireFall, FireBall entsteht die Union FireStall.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "nameless-fool",
+      "source": "legacy-of-the-bloodmoon",
+      "weapons": [
+        {
+          "id": "descent-into-misery",
+          "reason": "Startwaffe; zusammen mit Kyra-Stones entsteht die Union Shimmering Sands.",
+          "priority": 1
+        },
+        {
+          "id": "kyra-stones",
+          "reason": "Partner für die Union Shimmering Sands.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "congregation",
+      "source": "legacy-of-the-bloodmoon",
+      "weapons": [
+        {
+          "id": "screams-from-the-void",
+          "reason": "Startwaffe; mit Attractorb wird sie zu Forbidden Siren.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "attractorb",
+          "reason": "Nötig für Forbidden Siren.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "baal-thasar",
+      "source": "legacy-of-the-bloodmoon",
+      "weapons": [
+        {
+          "id": "blacken-firmament",
+          "reason": "Startwaffe; mit Torrona's Box wird sie zu Damnation.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "torrona-s-box",
+          "reason": "Nötig für Damnation.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "jaman-jato",
+      "source": "legacy-of-the-bloodmoon",
+      "weapons": [
+        {
+          "id": "108-responsive-prayers",
+          "reason": "Startwaffe; zusammen mit 108 Bocce entsteht die Union Road to Heaven.",
+          "priority": 1
+        },
+        {
+          "id": "108-bocce",
+          "reason": "Partner für die Union Road to Heaven.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "megalo-sargon",
+      "source": "legacy-of-the-bloodmoon",
+      "weapons": [
+        {
+          "id": "firestall",
+          "reason": "Startwaffe.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "baal-thamut",
+      "source": "legacy-of-the-bloodmoon",
+      "weapons": [
+        {
+          "id": "damnation",
+          "reason": "Startwaffe.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    }
+  ]
+}

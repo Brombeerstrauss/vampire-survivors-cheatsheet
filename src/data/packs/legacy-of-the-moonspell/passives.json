@@ -1,0 +1,15 @@
+{
+  "$schema": "../../schema/passives.schema.json",
+  "passives": [
+    {
+      "id": "pearl-magatama",
+      "name": "Pearl magatama",
+      "source": "legacy-of-the-moonspell",
+      "description": "Geschenk: mehr Regeneration und Wiederbelebungen, dafür weniger Gier; heilt vollständig.",
+      "maxLevel": 6,
+      "noSlot": true,
+      "emoji": "🦪",
+      "verified": true
+    }
+  ]
+}

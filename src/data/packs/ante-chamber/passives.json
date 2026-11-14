@@ -1,0 +1,15 @@
+{
+  "$schema": "../../schema/passives.schema.json",
+  "passives": [
+    {
+      "id": "outer-saboteur",
+      "name": "Outer Saboteur",
+      "source": "ante-chamber",
+      "description": "Gibt dir Goldmünzen und macht dann unpassenden Gebrauch von deinen Ersparnissen; erscheint automatisch mit der ersten Ante-Chamber-Waffe und belegt keinen Slot.",
+      "maxLevel": 9,
+      "noSlot": true,
+      "emoji": "🃏",
+      "verified": true
+    }
+  ]
+}

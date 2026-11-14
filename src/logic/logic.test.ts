@@ -189,6 +189,28 @@ describe('DLC-Filter', () => {
     expect(both.evolutionsFromWeapon('whip').map((e) => e.id)).toEqual(['bloody-tear', 'moon-whip'])
   })
 
+  it('erlaubt Gegenstände wie Mini Crewmates auch bei vollen Slots', () => {
+    const data: GameData = { ...fixture, passives: [...fixture.passives, passive('mini-crewmate', 3, { ignoresSlotLimit: true })] }
+    const catalog = createCatalog(data, new Set(['base']))
+    let r = run({})
+    for (const id of ['spinach', 'armor', 'wings', 'clover', 'crown', 'bracer']) r = addPassive(r, catalog, id)
+    expect(addPassive(r, catalog, 'mini-crewmate').passives).toHaveLength(7)
+  })
+
+  it('entfernt verbrauchte Gegenstände bei der Entwicklung', () => {
+    const data: GameData = {
+      ...fixture,
+      passives: [...fixture.passives, passive('power-up', 1, { noSlot: true })],
+      evolutions: [
+        { id: 'proto', kind: 'evolution', source: 'base', result: 'bloody-tear', weapons: [{ id: 'whip' }], passives: [{ id: 'power-up', consumed: true }], verified: true },
+      ],
+    }
+    const catalog = createCatalog(data, new Set(['base']))
+    const r = run({ weapons: [{ id: 'whip', level: 8 }], passives: [{ id: 'power-up', level: 1 }, { id: 'spinach', level: 2 }] })
+    const next = applyEvolution(r, catalog, data.evolutions[0]!)
+    expect(next.passives.map((p) => p.id)).toEqual(['spinach'])
+  })
+
   it('zählt Gegenstände ohne Slot nicht mit', () => {
     let r = run({})
     for (const id of ['spinach', 'armor', 'wings', 'clover', 'crown', 'bracer']) r = addPassive(r, both, id)

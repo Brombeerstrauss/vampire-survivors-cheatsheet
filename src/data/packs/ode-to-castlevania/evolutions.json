@@ -1,0 +1,1038 @@
+{
+  "$schema": "../../schema/evolutions.schema.json",
+  "evolutions": [
+    {
+      "id": "vampire-killer",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "vampire-killer",
+      "weapons": [
+        {
+          "id": "alchemy-whip"
+        }
+      ],
+      "passives": [
+        {
+          "id": "tirajisu"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "spirit-tornado-tip",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "spirit-tornado-tip",
+      "weapons": [
+        {
+          "id": "wind-whip"
+        }
+      ],
+      "passives": [
+        {
+          "id": "crown"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "cross-crasher-tip",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "cross-crasher-tip",
+      "weapons": [
+        {
+          "id": "platinum-whip"
+        }
+      ],
+      "passives": [
+        {
+          "id": "clover"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "hydrostormer-tip",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "hydrostormer-tip",
+      "weapons": [
+        {
+          "id": "dragon-water-whip"
+        }
+      ],
+      "passives": [
+        {
+          "id": "attractorb"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "crissaegrim-tip",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "crissaegrim-tip",
+      "weapons": [
+        {
+          "id": "sonic-whip"
+        }
+      ],
+      "passives": [
+        {
+          "id": "skull-o-maniac"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "mormegil-tip",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "mormegil-tip",
+      "weapons": [
+        {
+          "id": "jet-black-whip"
+        }
+      ],
+      "passives": [
+        {
+          "id": "stone-mask"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "daybreaker-tip",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "daybreaker-tip",
+      "weapons": [
+        {
+          "id": "vibhuti-whip"
+        }
+      ],
+      "passives": [
+        {
+          "id": "candelabrador"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "aurablaster-tip",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "aurablaster-tip",
+      "weapons": [
+        {
+          "id": "vanitas-whip"
+        }
+      ],
+      "passives": [
+        {
+          "id": "hollow-heart"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "yagyu-shuriken",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "yagyu-shuriken",
+      "weapons": [
+        {
+          "id": "shuriken"
+        }
+      ],
+      "passives": [
+        {
+          "id": "empty-tome"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "bwaka-knife",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "bwaka-knife",
+      "weapons": [
+        {
+          "id": "curved-knife"
+        }
+      ],
+      "passives": [
+        {
+          "id": "bracer"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "long-inus",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "long-inus",
+      "weapons": [
+        {
+          "id": "javelin"
+        }
+      ],
+      "passives": [
+        {
+          "id": "spellbinder"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "stellar-blade",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "stellar-blade",
+      "weapons": [
+        {
+          "id": "discus"
+        }
+      ],
+      "passives": [
+        {
+          "id": "parm-aegis",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "wrecking-ball",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "wrecking-ball",
+      "weapons": [
+        {
+          "id": "iron-ball"
+        }
+      ],
+      "passives": [
+        {
+          "id": "armor"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "jewel-gun",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "jewel-gun",
+      "weapons": [
+        {
+          "id": "silver-revolver"
+        }
+      ],
+      "passives": [
+        {
+          "id": "karoma-s-mana"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "the-rpg",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "the-rpg",
+      "weapons": [
+        {
+          "id": "hand-grenade"
+        }
+      ],
+      "passives": [
+        {
+          "id": "candelabrador",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "meal-ticket",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "meal-ticket",
+      "weapons": [
+        {
+          "id": "wine-glass"
+        }
+      ],
+      "passives": [
+        {
+          "id": "tirajisu",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "salamender",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "salamender",
+      "weapons": [
+        {
+          "id": "raging-fire"
+        }
+      ],
+      "passives": [
+        {
+          "id": "spinach",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "cocytus",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "cocytus",
+      "weapons": [
+        {
+          "id": "ice-fang"
+        }
+      ],
+      "passives": [
+        {
+          "id": "spellbinder",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "pneuma-tempestas",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "pneuma-tempestas",
+      "weapons": [
+        {
+          "id": "gale-force"
+        }
+      ],
+      "passives": [
+        {
+          "id": "bracer",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "gemma-torpor",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "gemma-torpor",
+      "weapons": [
+        {
+          "id": "rock-riot"
+        }
+      ],
+      "passives": [
+        {
+          "id": "stone-mask",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "tenebris-tonitrus",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "tenebris-tonitrus",
+      "weapons": [
+        {
+          "id": "fulgur"
+        }
+      ],
+      "passives": [
+        {
+          "id": "duplicator",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "keremet-morbus",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "keremet-morbus",
+      "weapons": [
+        {
+          "id": "keremet-bubbles"
+        }
+      ],
+      "passives": [
+        {
+          "id": "armor",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "nightmare",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "nightmare",
+      "weapons": [
+        {
+          "id": "hex"
+        }
+      ],
+      "passives": [
+        {
+          "id": "skull-o-maniac",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "sanctuary",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "sanctuary",
+      "weapons": [
+        {
+          "id": "refectio"
+        }
+      ],
+      "passives": [
+        {
+          "id": "clover",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "stamazza",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "stamazza",
+      "weapons": [
+        {
+          "id": "mace"
+        }
+      ],
+      "passives": [
+        {
+          "id": "hollow-heart",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "moon-rod",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "moon-rod",
+      "weapons": [
+        {
+          "id": "star-flail"
+        }
+      ],
+      "passives": [
+        {
+          "id": "pummarola",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "thunderbolt-spear",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "thunderbolt-spear",
+      "weapons": [
+        {
+          "id": "alucard-spear"
+        }
+      ],
+      "passives": [
+        {
+          "id": "wings"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "gungnir-souris",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "gungnir-souris",
+      "weapons": [
+        {
+          "id": "trident"
+        }
+      ],
+      "passives": [
+        {
+          "id": "duplicator",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "dark-iron-shield",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "dark-iron-shield",
+      "weapons": [
+        {
+          "id": "iron-shield"
+        }
+      ],
+      "passives": [
+        {
+          "id": "parm-aegis"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "sacred-beasts-tower-shield",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "sacred-beasts-tower-shield",
+      "weapons": [
+        {
+          "id": "guardian-s-targe"
+        }
+      ],
+      "passives": [
+        {
+          "id": "pummarola"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "rune-sword",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "rune-sword",
+      "weapons": [
+        {
+          "id": "tyrfing"
+        }
+      ],
+      "passives": [
+        {
+          "id": "spinach"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "alucard-swords",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "alucard-swords",
+      "weapons": [
+        {
+          "id": "alucart-sworb"
+        }
+      ],
+      "passives": [],
+      "conditions": [
+        "Kein Gegenstand nötig, nur Alucart Sworb auf Maximalstufe."
+      ],
+      "verified": true
+    },
+    {
+      "id": "vol-confodere",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "vol-confodere",
+      "weapons": [
+        {
+          "id": "confodere"
+        }
+      ],
+      "passives": [],
+      "conditions": [
+        "Kein Gegenstand nötig, nur Confodere auf Maximalstufe."
+      ],
+      "verified": true
+    },
+    {
+      "id": "melio-confodere",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "melio-confodere",
+      "weapons": [
+        {
+          "id": "vol-confodere"
+        }
+      ],
+      "passives": [],
+      "conditions": [
+        "Kein Gegenstand nötig, nur Vol Confodere auf Maximalstufe."
+      ],
+      "verified": true
+    },
+    {
+      "id": "nitesco",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "nitesco",
+      "weapons": [
+        {
+          "id": "globus"
+        }
+      ],
+      "passives": [
+        {
+          "id": "empty-tome",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "acerbatus",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "acerbatus",
+      "weapons": [
+        {
+          "id": "optical-shot"
+        }
+      ],
+      "passives": [
+        {
+          "id": "karoma-s-mana",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "rapidus-fio",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "rapidus-fio",
+      "weapons": [
+        {
+          "id": "sonic-dash"
+        }
+      ],
+      "passives": [
+        {
+          "id": "wings",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "vol-luminatio",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "vol-luminatio",
+      "weapons": [
+        {
+          "id": "luminatio"
+        }
+      ],
+      "passives": [
+        {
+          "id": "crown",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "vol-umbra",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "vol-umbra",
+      "weapons": [
+        {
+          "id": "umbra"
+        }
+      ],
+      "passives": [
+        {
+          "id": "attractorb",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "claimh-solais",
+      "kind": "evolution",
+      "source": "ode-to-castlevania",
+      "result": "claimh-solais",
+      "weapons": [
+        {
+          "id": "pocket-knife"
+        }
+      ],
+      "passives": [
+        {
+          "id": "torrona-s-box",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "trinum-custodem",
+      "kind": "union",
+      "source": "ode-to-castlevania",
+      "result": "trinum-custodem",
+      "weapons": [
+        {
+          "id": "centralis-custos"
+        },
+        {
+          "id": "dextro-custos"
+        },
+        {
+          "id": "sinestro-custos"
+        }
+      ],
+      "passives": [],
+      "verified": true
+    },
+    {
+      "id": "power-of-sire",
+      "kind": "union",
+      "source": "ode-to-castlevania",
+      "result": "power-of-sire",
+      "weapons": [
+        {
+          "id": "dominus-agony"
+        },
+        {
+          "id": "dominus-anger"
+        },
+        {
+          "id": "dominus-hatred"
+        }
+      ],
+      "passives": [],
+      "verified": true
+    },
+    {
+      "id": "million-cut",
+      "kind": "union",
+      "source": "ode-to-castlevania",
+      "result": "million-cut",
+      "weapons": [
+        {
+          "id": "valmanway"
+        },
+        {
+          "id": "thousand-edge"
+        }
+      ],
+      "passives": [],
+      "verified": true
+    },
+    {
+      "id": "ninth-circle",
+      "kind": "union",
+      "source": "ode-to-castlevania",
+      "result": "ninth-circle",
+      "weapons": [
+        {
+          "id": "icebrand"
+        },
+        {
+          "id": "unholy-vespers"
+        }
+      ],
+      "passives": [],
+      "verified": true
+    },
+    {
+      "id": "dies-irae",
+      "kind": "union",
+      "source": "ode-to-castlevania",
+      "result": "dies-irae",
+      "weapons": [
+        {
+          "id": "arrow-of-goth"
+        },
+        {
+          "id": "mannajja"
+        }
+      ],
+      "passives": [],
+      "verified": true
+    },
+    {
+      "id": "kardia-phlegeton",
+      "kind": "union",
+      "source": "ode-to-castlevania",
+      "result": "kardia-phlegeton",
+      "weapons": [
+        {
+          "id": "aura-blast"
+        },
+        {
+          "id": "hellfire"
+        }
+      ],
+      "passives": [],
+      "verified": true
+    },
+    {
+      "id": "lapiste-tepisto",
+      "kind": "union",
+      "source": "ode-to-castlevania",
+      "result": "lapiste-tepisto",
+      "weapons": [
+        {
+          "id": "kaiser-knuckle"
+        },
+        {
+          "id": "tri-bracelet"
+        }
+      ],
+      "passives": [],
+      "verified": true
+    },
+    {
+      "id": "darkness-illusion",
+      "kind": "union",
+      "source": "ode-to-castlevania",
+      "result": "darkness-illusion",
+      "weapons": [
+        {
+          "id": "svarog-statue"
+        },
+        {
+          "id": "valkyrie-turner"
+        }
+      ],
+      "passives": [],
+      "verified": true
+    },
+    {
+      "id": "carnage-heart",
+      "kind": "union",
+      "source": "ode-to-castlevania",
+      "result": "carnage-heart",
+      "weapons": [
+        {
+          "id": "troll-bomb"
+        },
+        {
+          "id": "no-future"
+        }
+      ],
+      "passives": [],
+      "verified": true
+    },
+    {
+      "id": "hydro-pump-climax",
+      "kind": "union",
+      "source": "ode-to-castlevania",
+      "result": "hydro-pump-climax",
+      "weapons": [
+        {
+          "id": "hydro-storm"
+        },
+        {
+          "id": "la-borra"
+        }
+      ],
+      "passives": [],
+      "verified": true
+    },
+    {
+      "id": "arch-angle",
+      "kind": "union",
+      "source": "ode-to-castlevania",
+      "result": "arch-angle",
+      "weapons": [
+        {
+          "id": "grand-cross"
+        },
+        {
+          "id": "heaven-sword"
+        }
+      ],
+      "passives": [],
+      "verified": true
+    },
+    {
+      "id": "spirit-of-light",
+      "kind": "union",
+      "source": "ode-to-castlevania",
+      "result": "spirit-of-light",
+      "weapons": [
+        {
+          "id": "summon-spirit"
+        },
+        {
+          "id": "holy-wand"
+        }
+      ],
+      "passives": [],
+      "verified": true
+    },
+    {
+      "id": "power-of-lire",
+      "kind": "union",
+      "source": "ode-to-castlevania",
+      "result": "power-of-lire",
+      "weapons": [
+        {
+          "id": "soul-steal"
+        },
+        {
+          "id": "vicious-hunger"
+        }
+      ],
+      "passives": [],
+      "verified": true
+    },
+    {
+      "id": "legacy-of-death-soul-river",
+      "kind": "union",
+      "source": "ode-to-castlevania",
+      "result": "legacy-of-death-soul-river",
+      "weapons": [
+        {
+          "id": "dark-rift"
+        },
+        {
+          "id": "death-spiral"
+        }
+      ],
+      "passives": [],
+      "verified": true
+    },
+    {
+      "id": "vjaya-sisters",
+      "kind": "union",
+      "source": "ode-to-castlevania",
+      "result": "vjaya-sisters",
+      "weapons": [
+        {
+          "id": "sword-brothers"
+        },
+        {
+          "id": "thunder-loop"
+        }
+      ],
+      "passives": [],
+      "verified": true
+    },
+    {
+      "id": "venus-crescent",
+      "kind": "union",
+      "source": "ode-to-castlevania",
+      "result": "venus-crescent",
+      "weapons": [
+        {
+          "id": "summon-spirit-tornado"
+        },
+        {
+          "id": "gorgeous-moon"
+        }
+      ],
+      "passives": [],
+      "verified": true
+    },
+    {
+      "id": "dark-frogamorphosis",
+      "kind": "union",
+      "source": "ode-to-castlevania",
+      "result": "dark-frogamorphosis",
+      "weapons": [
+        {
+          "id": "anura"
+        },
+        {
+          "id": "soul-eater"
+        }
+      ],
+      "passives": [],
+      "verified": true
+    },
+    {
+      "id": "clock-tower",
+      "kind": "union",
+      "source": "ode-to-castlevania",
+      "result": "clock-tower",
+      "weapons": [
+        {
+          "id": "endo-gears"
+        },
+        {
+          "id": "peri-pendulum"
+        },
+        {
+          "id": "myo-lift"
+        },
+        {
+          "id": "epi-head"
+        }
+      ],
+      "passives": [],
+      "verified": true
+    },
+    {
+      "id": "alucard-shield",
+      "kind": "gift",
+      "source": "ode-to-castlevania",
+      "result": "alucard-shield",
+      "weapons": [
+        {
+          "id": "alucard-swords"
+        }
+      ],
+      "passives": [],
+      "conditions": [
+        "Beliebige 6 Entwicklungen und 6 passive Gegenstände auf Maximalstufe.",
+        "Kommt aus einer Truhe."
+      ],
+      "verified": true
+    },
+    {
+      "id": "universitas",
+      "kind": "gift",
+      "source": "ode-to-castlevania",
+      "result": "universitas",
+      "weapons": [
+        {
+          "id": "vol-luminatio"
+        },
+        {
+          "id": "vol-umbra"
+        }
+      ],
+      "passives": [],
+      "conditions": [
+        "Vol Luminatio und Vol Umbra auf Maximalstufe; kommt aus einer Truhe."
+      ],
+      "verified": true
+    }
+  ]
+}

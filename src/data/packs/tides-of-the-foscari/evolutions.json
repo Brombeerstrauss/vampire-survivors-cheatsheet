@@ -1,0 +1,99 @@
+{
+  "$schema": "../../schema/evolutions.schema.json",
+  "evolutions": [
+    {
+      "id": "legionnaire",
+      "kind": "evolution",
+      "source": "tides-of-the-foscari",
+      "result": "legionnaire",
+      "weapons": [
+        {
+          "id": "eskizzibur"
+        }
+      ],
+      "passives": [
+        {
+          "id": "armor",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "millionaire",
+      "kind": "evolution",
+      "source": "tides-of-the-foscari",
+      "result": "millionaire",
+      "weapons": [
+        {
+          "id": "flash-arrow"
+        }
+      ],
+      "passives": [
+        {
+          "id": "bracer",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "luminaire",
+      "kind": "evolution",
+      "source": "tides-of-the-foscari",
+      "result": "luminaire",
+      "weapons": [
+        {
+          "id": "prismatic-missile"
+        }
+      ],
+      "passives": [
+        {
+          "id": "crown",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ophion",
+      "kind": "evolution",
+      "source": "tides-of-the-foscari",
+      "result": "ophion",
+      "weapons": [
+        {
+          "id": "shadow-servant"
+        }
+      ],
+      "passives": [
+        {
+          "id": "skull-o-maniac",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "spellstrom",
+      "kind": "union",
+      "source": "tides-of-the-foscari",
+      "result": "spellstrom",
+      "weapons": [
+        {
+          "id": "spellstring"
+        },
+        {
+          "id": "spellstream"
+        },
+        {
+          "id": "spellstrike"
+        }
+      ],
+      "passives": [],
+      "conditions": [
+        "Kein Gegenstand nötig; alle drei Zauberwaffen auf Maximalstufe."
+      ],
+      "verified": true
+    }
+  ]
+}

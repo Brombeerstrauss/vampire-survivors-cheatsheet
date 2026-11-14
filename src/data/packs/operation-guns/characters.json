@@ -1,0 +1,147 @@
+{
+  "$schema": "../../schema/characters.schema.json",
+  "characters": [
+    {
+      "id": "bill-rizer",
+      "name": "Bill Rizer",
+      "source": "operation-guns",
+      "startingWeapons": [
+        "long-gun"
+      ],
+      "bonus": "Erhält bei vielen besiegten Gegnern mehr Projektilgeschwindigkeit (max. 50 %) und Macht; findet spezielle Pickups.",
+      "secret": false,
+      "emoji": "🎖️",
+      "verified": true
+    },
+    {
+      "id": "lance-bean",
+      "name": "Lance Bean",
+      "source": "operation-guns",
+      "startingWeapons": [
+        "short-gun"
+      ],
+      "bonus": "Erhält bei vielen besiegten Gegnern mehr Geschwindigkeit (max. 50 %) und kürzere Abklingzeit (max. −25 %); findet spezielle Pickups.",
+      "secret": false,
+      "emoji": "🪖",
+      "verified": true
+    },
+    {
+      "id": "ariana",
+      "name": "Ariana",
+      "source": "operation-guns",
+      "startingWeapons": [
+        "spread-shot"
+      ],
+      "bonus": "Laufgeschwindigkeit erhöht die Rüstung; findet spezielle Pickups.",
+      "secret": false,
+      "emoji": "🏃‍♀️",
+      "verified": true
+    },
+    {
+      "id": "lucia-zero",
+      "name": "Lucia Zero",
+      "source": "operation-guns",
+      "startingWeapons": [
+        "c-u-laser"
+      ],
+      "bonus": "Erhält nach einer Wiederbelebung einen Bonus auf alle Werte; findet spezielle Pickups.",
+      "secret": false,
+      "emoji": "🔴",
+      "verified": true
+    },
+    {
+      "id": "brad-fang",
+      "name": "Brad Fang",
+      "source": "operation-guns",
+      "startingWeapons": [
+        "firearm"
+      ],
+      "bonus": "Bei wenig Gesundheit kürzere Abklingzeit sowie mehr Lauf- und Projektilgeschwindigkeit; findet spezielle Pickups.",
+      "secret": false,
+      "emoji": "🐺",
+      "verified": true
+    },
+    {
+      "id": "browny",
+      "name": "Browny",
+      "source": "operation-guns",
+      "startingWeapons": [
+        "sonic-bloom"
+      ],
+      "bonus": "Kürzere Abklingzeit vergrößert die Fläche; findet spezielle Pickups.",
+      "secret": false,
+      "emoji": "🤖",
+      "verified": true
+    },
+    {
+      "id": "sheena-etranzi",
+      "name": "Sheena Etranzi",
+      "source": "operation-guns",
+      "startingWeapons": [
+        "blade-crossbow"
+      ],
+      "bonus": "Laufgeschwindigkeit senkt die Abklingzeit; findet spezielle Pickups.",
+      "secret": false,
+      "emoji": "🎯",
+      "verified": true
+    },
+    {
+      "id": "probotector",
+      "name": "Probotector",
+      "source": "operation-guns",
+      "startingWeapons": [
+        "prism-lass"
+      ],
+      "bonus": "Rüstung erhöht die Macht; findet spezielle Pickups.",
+      "secret": false,
+      "emoji": "🦾",
+      "verified": true
+    },
+    {
+      "id": "stanley",
+      "name": "Stanley",
+      "source": "operation-guns",
+      "startingWeapons": [
+        "homing-miss"
+      ],
+      "bonus": "Macht erhöht die Rüstung; findet spezielle Pickups.",
+      "secret": false,
+      "emoji": "🧔",
+      "verified": true
+    },
+    {
+      "id": "newt-plissken",
+      "name": "Newt Plissken",
+      "source": "operation-guns",
+      "startingWeapons": [
+        "diver-mines"
+      ],
+      "bonus": "Projektilgeschwindigkeit erhöht die Macht; findet zusätzliche explosive Objekte und spezielle Pickups.",
+      "secret": false,
+      "emoji": "💣",
+      "verified": true
+    },
+    {
+      "id": "colonel-bahamut",
+      "name": "Colonel Bahamut",
+      "source": "operation-guns",
+      "startingWeapons": [
+        "metal-claw"
+      ],
+      "bonus": "Gier und Fluch erhöhen die Macht; findet spezielle Pickups.",
+      "secret": false,
+      "emoji": "👾",
+      "verified": true
+    },
+    {
+      "id": "simondo-belmont",
+      "name": "Simondo Belmont",
+      "source": "operation-guns",
+      "startingWeapons": [],
+      "bonus": "Braucht angeblich gar keine Waffen; erhält alle 20 Level mehr Projektile (max. +4).",
+      "secret": false,
+      "emoji": "🧑‍🦲",
+      "verified": true
+    }
+  ]
+}

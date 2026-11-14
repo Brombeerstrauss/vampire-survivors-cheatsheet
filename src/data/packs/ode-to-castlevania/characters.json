@@ -1,0 +1,1188 @@
+{
+  "$schema": "../../schema/characters.schema.json",
+  "characters": [
+    {
+      "id": "leon-belmont",
+      "name": "Leon Belmont",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "alchemy-whip"
+      ],
+      "bonus": "Erhält auf Level 5 eine versteckte Svarog Statue; mit Vampire Killer Bonus auf die meisten Werte; findet spezielle Pickups.",
+      "secret": false,
+      "emoji": "🧔",
+      "verified": true
+    },
+    {
+      "id": "sonia-belmont",
+      "name": "Sonia Belmont",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "sonic-whip"
+      ],
+      "bonus": "Überheilung um +8 senkt kurz die Abklingzeit; findet spezielle Pickups.",
+      "secret": false,
+      "emoji": "👱‍♀️",
+      "verified": true
+    },
+    {
+      "id": "trevor-belmont",
+      "name": "Trevor Belmont",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "dragon-water-whip"
+      ],
+      "bonus": "Startet mit der zusätzlichen Arcana X – Beginning; alle 10 Level +1 Anzahl (max. +3); findet spezielle Pickups.",
+      "secret": false,
+      "emoji": "🧔‍♂️",
+      "verified": true
+    },
+    {
+      "id": "christopher-belmont",
+      "name": "Christopher Belmont",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "jet-black-whip"
+      ],
+      "bonus": "Gier kann gelegentlich Macht und Rüstung beeinflussen; findet spezielle Pickups.",
+      "secret": false,
+      "emoji": "🧑",
+      "verified": true
+    },
+    {
+      "id": "simon-belmont",
+      "name": "Simon Belmont",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "wind-whip"
+      ],
+      "bonus": "Wachstum kann gelegentlich Macht und Rüstung beeinflussen; findet spezielle Pickups.",
+      "secret": false,
+      "emoji": "💪",
+      "verified": true
+    },
+    {
+      "id": "juste-belmont",
+      "name": "Juste Belmont",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "vibhuti-whip"
+      ],
+      "bonus": "Bekommt bis Level 7 Belnades' Spellbook als 4. Level-up-Option; levelt alle 6 Level automatisch einen Zauber aus dem Spellbook.",
+      "secret": false,
+      "emoji": "🧑‍🦳",
+      "verified": true
+    },
+    {
+      "id": "richter-belmont",
+      "name": "Richter Belmont",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "platinum-whip"
+      ],
+      "bonus": "Startet mit der zusätzlichen Arcana IX – Divine Bloodline; findet spezielle Pickups.",
+      "secret": false,
+      "emoji": "🧑‍🦰",
+      "verified": true
+    },
+    {
+      "id": "julius-belmont",
+      "name": "Julius Belmont",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "vanitas-whip"
+      ],
+      "bonus": "Startet mit der zusätzlichen Arcana XIX – Heart of Fire; mehr Macht bei wenig Gesundheit; findet spezielle Pickups.",
+      "secret": false,
+      "emoji": "👴",
+      "verified": true
+    },
+    {
+      "id": "grant-danasty",
+      "name": "Grant Danasty",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "curved-knife"
+      ],
+      "bonus": "Löst ausgerüstete Messer bei Vergeltung oder bei Überheilung um +8 aus; findet spezielle Pickups.",
+      "secret": false,
+      "emoji": "🧗",
+      "verified": true
+    },
+    {
+      "id": "john-morris",
+      "name": "John Morris",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "iron-ball"
+      ],
+      "bonus": "Erhält auf Level 10 die zusätzliche Arcana VII – Iron Blue Will; findet spezielle Pickups; alle 5 Level erscheinen Mirrors of Truth.",
+      "secret": false,
+      "emoji": "🤠",
+      "verified": true
+    },
+    {
+      "id": "jonathan-morris",
+      "name": "Jonathan Morris",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "javelin"
+      ],
+      "bonus": "Aufladung abhängig von Geschwindigkeit: löst alle ausgerüsteten Waffen aus dem Coat of Arms aus.",
+      "secret": false,
+      "emoji": "🧑",
+      "verified": true
+    },
+    {
+      "id": "soma-cruz",
+      "name": "Soma Cruz",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "hand-grenade"
+      ],
+      "bonus": "+1 % Macht pro Level; immun gegen Gesundheitsentzug; einmal pro Leben Soul Steal nach tödlichem Schaden.",
+      "secret": false,
+      "emoji": "🧥",
+      "verified": true
+    },
+    {
+      "id": "charlotte-aulin",
+      "name": "Charlotte Aulin",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "raging-fire"
+      ],
+      "bonus": "Aufladung abhängig vom Wachstum: löst alle ausgerüsteten Waffen aus Belnades' Spellbook aus.",
+      "secret": false,
+      "emoji": "🧙‍♀️",
+      "verified": true
+    },
+    {
+      "id": "sypha-belnades",
+      "name": "Sypha Belnades",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "ice-fang"
+      ],
+      "bonus": "Startet mit der zusätzlichen Arcana XIV – Jail of Crystal; findet spezielle Pickups.",
+      "secret": false,
+      "emoji": "🧝‍♀️",
+      "verified": true
+    },
+    {
+      "id": "yoko-belnades",
+      "name": "Yoko Belnades",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "fulgur"
+      ],
+      "bonus": "Startet mit der zusätzlichen Arcana III – Tragic Princess.",
+      "secret": false,
+      "emoji": "👩‍🦳",
+      "verified": true
+    },
+    {
+      "id": "alucard",
+      "name": "Alucard",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "alucart-sworb"
+      ],
+      "bonus": "Aufladung: Soul Steal; Level-up: Dark Inferno; Überheilung +8: Summon Spirit; kritische Gesundheit: Sword Brothers; immun gegen Gesundheitsentzug.",
+      "secret": false,
+      "emoji": "🧛",
+      "verified": true
+    },
+    {
+      "id": "eric-lecarde",
+      "name": "Eric Lecarde",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "alucard-spear"
+      ],
+      "bonus": "Wird bei kritisch niedriger Gesundheit für 20 Sekunden unverwundbar und schadet Gegnern in der Nähe.",
+      "secret": false,
+      "emoji": "🔱",
+      "verified": true
+    },
+    {
+      "id": "hector",
+      "name": "Hector",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "mace"
+      ],
+      "bonus": "Erhält alle 10 Level einen zufälligen Familiar als Begleiter (max. 4).",
+      "secret": false,
+      "emoji": "⚒️",
+      "verified": true
+    },
+    {
+      "id": "maria-renard",
+      "name": "Maria Renard",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "guardian-s-targe"
+      ],
+      "bonus": "Erhält ab Level 2 alle 10 Level einen Begleiter; Überheilung erhöht die Macht leicht; Überheilung um +32 stärkt alle Begleiter kurz.",
+      "secret": false,
+      "emoji": "🕊️",
+      "verified": true
+    },
+    {
+      "id": "shanoa",
+      "name": "Shanoa",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "confodere"
+      ],
+      "bonus": "+1 % Macht pro Level; Aufladung löst alle ausgerüsteten Waffen aus dem Ebony Diabologue aus; findet spezielle Pickups.",
+      "secret": false,
+      "emoji": "👩‍🦱",
+      "verified": true
+    },
+    {
+      "id": "quincy-morris",
+      "name": "Quincy Morris",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "shuriken"
+      ],
+      "bonus": "Aufladung abhängig von Macht: versucht, eine Neutronenbombe sicher zu zünden.",
+      "secret": true,
+      "emoji": "🤠",
+      "verified": true
+    },
+    {
+      "id": "maxim-kischine",
+      "name": "Maxim Kischine",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "discus"
+      ],
+      "bonus": "Überheilung erhöht die Geschwindigkeit leicht; viel mehr Macht, solange unverwundbar.",
+      "secret": true,
+      "emoji": "🥷",
+      "verified": true
+    },
+    {
+      "id": "henry",
+      "name": "Henry",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "silver-revolver"
+      ],
+      "bonus": "Bonus auf Fläche und Glück, abhängig von der Zahl sichtbarer Gegner.",
+      "secret": true,
+      "emoji": "🛡️",
+      "verified": true
+    },
+    {
+      "id": "vlad-tepes-dracula",
+      "name": "Vlad Tepes Dracula",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "wine-glass"
+      ],
+      "bonus": "+1 % Macht pro Level und +1 Wiederbelebung alle 100 Level; Fluch erhöht die Macht; erlittener Schaden höchstens 10; immun gegen Gesundheitsentzug.",
+      "secret": true,
+      "emoji": "🧛‍♂️",
+      "verified": true
+    },
+    {
+      "id": "julia-laforeze",
+      "name": "Julia Laforeze",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "gale-force"
+      ],
+      "bonus": "Startet mit der zusätzlichen Arcana VI – Sarabande of Healing; erhält alle 2 Level einen Heart Refresh.",
+      "secret": true,
+      "emoji": "👩",
+      "verified": true
+    },
+    {
+      "id": "carrie-fernandez",
+      "name": "Carrie Fernandez",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "rock-riot"
+      ],
+      "bonus": "Startet mit der zusätzlichen Arcana XI – Waltz of Pearls.",
+      "secret": true,
+      "emoji": "👧",
+      "verified": true
+    },
+    {
+      "id": "rinaldo-gandolfi",
+      "name": "Rinaldo Gandolfi",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "keremet-bubbles"
+      ],
+      "bonus": "Startet mit der zusätzlichen Arcana I – Gemini.",
+      "secret": true,
+      "emoji": "🧓",
+      "verified": true
+    },
+    {
+      "id": "mina-hakuba",
+      "name": "Mina Hakuba",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "refectio"
+      ],
+      "bonus": "Startet mit der zusätzlichen Arcana II – Twilight Requiem.",
+      "secret": true,
+      "emoji": "👩",
+      "verified": true
+    },
+    {
+      "id": "elizabeth-bartley",
+      "name": "Elizabeth Bartley",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "hex"
+      ],
+      "bonus": "+50 erscheinende Gegner; immun gegen Gesundheitsentzug.",
+      "secret": true,
+      "emoji": "👸",
+      "verified": true
+    },
+    {
+      "id": "reinhardt-schneider",
+      "name": "Reinhardt Schneider",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "tyrfing"
+      ],
+      "bonus": "Startet mit der zusätzlichen Arcana XVI – Slash; insgesamt höherer kritischer Schaden.",
+      "secret": true,
+      "emoji": "🧔",
+      "verified": true
+    },
+    {
+      "id": "isaac",
+      "name": "Isaac",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "trident"
+      ],
+      "bonus": "Erhält alle 10 Level einen zufälligen Familiar als Begleiter (max. 6).",
+      "secret": true,
+      "emoji": "😈",
+      "verified": true
+    },
+    {
+      "id": "sara-trantoul",
+      "name": "Sara Trantoul",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "star-flail"
+      ],
+      "bonus": "+0,02 Regeneration pro Level; einmal pro Leben Firebreathing für alle nach tödlichem Schaden; entwickelt Alchemy Whip bei Wiederbelebung.",
+      "secret": true,
+      "emoji": "👱‍♀️",
+      "verified": true
+    },
+    {
+      "id": "vincent-dorin",
+      "name": "Vincent Dorin",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "iron-shield"
+      ],
+      "bonus": "Überheilung erhöht die Gier leicht; doppelte Gier, solange unverwundbar; startet mit der zusätzlichen Arcana XV – Disco of Gold.",
+      "secret": true,
+      "emoji": "💼",
+      "verified": true
+    },
+    {
+      "id": "albus",
+      "name": "Albus",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "optical-shot"
+      ],
+      "bonus": "Bonus auf Macht und Abklingzeit, abhängig von der Zahl sichtbarer Gegner.",
+      "secret": true,
+      "emoji": "🔫",
+      "verified": true
+    },
+    {
+      "id": "lisa-tepes",
+      "name": "Lisa Tepes",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "luminatio"
+      ],
+      "bonus": "+1 % Wachstum pro Level; startet mit der zusätzlichen Arcana XX – Silent Old Sanctuary.",
+      "secret": true,
+      "emoji": "👩‍⚕️",
+      "verified": true
+    },
+    {
+      "id": "shaft",
+      "name": "Shaft",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "umbra"
+      ],
+      "bonus": "+1 % Fluch pro Level; wird bei kritisch niedriger Gesundheit für 20 Sekunden unverwundbar und schadet Gegnern in der Nähe.",
+      "secret": true,
+      "emoji": "🧙‍♂️",
+      "verified": true
+    },
+    {
+      "id": "saint-germain",
+      "name": "Saint Germain",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "globus"
+      ],
+      "bonus": "−0,2 % Abklingzeit pro Level; startet mit der zusätzlichen Arcana XII – Out of Bounds.",
+      "secret": true,
+      "emoji": "🎩",
+      "verified": true
+    },
+    {
+      "id": "nathan-graves",
+      "name": "Nathan Graves",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "sonic-dash"
+      ],
+      "bonus": "Startet mit der zusätzlichen Arcana IV – Awake; erhält nach 7 und 14 Minuten eine weitere Arcana-Wahl.",
+      "secret": true,
+      "emoji": "🧑",
+      "verified": true
+    },
+    {
+      "id": "cornell",
+      "name": "Cornell",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "dextro-custos"
+      ],
+      "bonus": "Verwandelt sich in eine stärkere Form, wenn Trinum Custodem ausgerüstet ist.",
+      "secret": true,
+      "emoji": "🐺",
+      "verified": true,
+      "note": "Alternativ wählbare Startwaffe: Sinestro Custos."
+    },
+    {
+      "id": "barlowe",
+      "name": "Barlowe",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "dominus-anger"
+      ],
+      "bonus": "Überheilung erhöht Macht und Fluch leicht; bekommt bis Level 11 eventuell Ebony Diabologue als 4. Level-up-Option.",
+      "secret": true,
+      "emoji": "🧔",
+      "verified": true,
+      "note": "Alternativ wählbare Startwaffe: Dominus Hatred."
+    },
+    {
+      "id": "young-maria-renard",
+      "name": "Young Maria Renard",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "familiar-forge"
+      ],
+      "bonus": "Kann keinen Schaden nehmen, verschwindet aber beim Zeitlimit.",
+      "secret": true,
+      "emoji": "👧",
+      "verified": true
+    },
+    {
+      "id": "familiar",
+      "name": "Familiar",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "raging-fire",
+        "fulgur",
+        "ice-fang",
+        "rock-riot"
+      ],
+      "bonus": "Erhält alle 20 Level mehr Projektile (max. +3).",
+      "secret": true,
+      "emoji": "🦇",
+      "verified": true
+    },
+    {
+      "id": "innocent-devil",
+      "name": "Innocent Devil",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "trident",
+        "summon-spirit",
+        "garlic",
+        "fire-wand",
+        "lightning-ring",
+        "magic-wand",
+        "curved-knife",
+        "troll-bomb"
+      ],
+      "bonus": "Erhält alle 20 Level mehr Projektile (max. +3).",
+      "secret": true,
+      "emoji": "😇",
+      "verified": true
+    },
+    {
+      "id": "blue-crescent-moon-cornell",
+      "name": "Blue Crescent Moon Cornell",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "trinum-custodem"
+      ],
+      "bonus": "+1 % Macht pro Level.",
+      "secret": true,
+      "emoji": "🌙",
+      "verified": true
+    },
+    {
+      "id": "ferryman",
+      "name": "Ferryman",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [],
+      "bonus": "„Wasser inklusive.“",
+      "secret": true,
+      "emoji": "🛶",
+      "verified": true,
+      "note": "Versteckte Waffe: Acquazzone."
+    },
+    {
+      "id": "master-librarian",
+      "name": "Master Librarian",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "rapidus-fio"
+      ],
+      "bonus": "„Von Geld zutiefst gerührt.“",
+      "secret": true,
+      "emoji": "📚",
+      "verified": true
+    },
+    {
+      "id": "hammer",
+      "name": "Hammer",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "the-rpg"
+      ],
+      "bonus": "Erhält alle 20 Level mehr Projektile (max. +3); doppelte Anzahl, solange unverwundbar.",
+      "secret": true,
+      "emoji": "🔨",
+      "verified": true
+    },
+    {
+      "id": "wind",
+      "name": "Wind",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "aura-blast"
+      ],
+      "bonus": "Schlägt mit Aura Blast zurück; Überheilung um +8 löst Aura Blast und eine zufällige Coat-of-Arms-Waffe aus.",
+      "secret": true,
+      "emoji": "🍃",
+      "verified": true
+    },
+    {
+      "id": "hugh-baldwin",
+      "name": "Hugh Baldwin",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "valmanway"
+      ],
+      "bonus": "Geübt mit Valmanway; bekommt bis Level 15 eventuell Coat of Arms als 4. Level-up-Option.",
+      "secret": true,
+      "emoji": "🗡️",
+      "verified": true
+    },
+    {
+      "id": "morris-baldwin",
+      "name": "Morris Baldwin",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "kaiser-knuckle"
+      ],
+      "bonus": "Geübt mit allen Coat-of-Arms-Waffen; schlägt mit Kaiser Knuckle, Lapiste Tepisto und jedem Bracelet zurück.",
+      "secret": true,
+      "emoji": "🧔",
+      "verified": true
+    },
+    {
+      "id": "annette",
+      "name": "Annette",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "endo-gears"
+      ],
+      "bonus": "Ruft eine Auswahl von Uhrwerk-Waffen herbei.",
+      "secret": true,
+      "emoji": "👩",
+      "verified": true,
+      "note": "Alternativ wählbare Startwaffe: Peri Pendulum, Myo Lift, Epi Head."
+    },
+    {
+      "id": "tera",
+      "name": "Tera",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "grand-cross"
+      ],
+      "bonus": "Startet mit zeitweise verkürzter Abklingzeit; Überheilung senkt die Abklingzeit leicht; Rosaries sind leichter zu finden.",
+      "secret": true,
+      "emoji": "👵",
+      "verified": true
+    },
+    {
+      "id": "jonathan-charlotte",
+      "name": "Jonathan & Charlotte",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "javelin",
+        "morning-star",
+        "coat-of-arms",
+        "spectral-sword"
+      ],
+      "bonus": "„Jonathan! Charlotte! Jonathan! Charlotte! …“",
+      "secret": true,
+      "emoji": "👫",
+      "verified": false,
+      "note": "Ungeprüft: Startwaffe nur auf der Charakterseite genannt."
+    },
+    {
+      "id": "charlotte-jonathan",
+      "name": "Charlotte & Jonathan",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "raging-fire",
+        "belnades-spellbook"
+      ],
+      "bonus": "„Charlotte! Jonathan! Charlotte! Jonathan! …“",
+      "secret": true,
+      "emoji": "👫",
+      "verified": false,
+      "note": "Ungeprüft: Startwaffe nur auf der Charakterseite genannt."
+    },
+    {
+      "id": "stella-loretta-lecarde",
+      "name": "Stella & Loretta Lecarde",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "pneuma-tempestas"
+      ],
+      "bonus": "Immun gegen Gesundheitsentzug.",
+      "secret": true,
+      "emoji": "👭",
+      "verified": false,
+      "note": "Ungeprüft: Startwaffe nur auf der Charakterseite genannt."
+    },
+    {
+      "id": "loretta-stella-lecarde",
+      "name": "Loretta & Stella Lecarde",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "cocytus"
+      ],
+      "bonus": "Immun gegen Gesundheitsentzug.",
+      "secret": true,
+      "emoji": "👭",
+      "verified": false,
+      "note": "Ungeprüft: Startwaffe nur auf der Charakterseite genannt."
+    },
+    {
+      "id": "stella-lecarde",
+      "name": "Stella Lecarde",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "pneuma-tempestas"
+      ],
+      "bonus": "Immun gegen Gesundheitsentzug.",
+      "secret": true,
+      "emoji": "👩",
+      "verified": true
+    },
+    {
+      "id": "loretta-lecarde",
+      "name": "Loretta Lecarde",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "cocytus"
+      ],
+      "bonus": "Immun gegen Gesundheitsentzug.",
+      "secret": true,
+      "emoji": "👩",
+      "verified": true
+    },
+    {
+      "id": "brauner",
+      "name": "Brauner",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "ebony-diabologue"
+      ],
+      "bonus": "Startet mit der zusätzlichen Arcana XXI – Blood Astronomia; immun gegen Gesundheitsentzug.",
+      "secret": true,
+      "emoji": "🎨",
+      "verified": false,
+      "note": "Ungeprüft: Startwaffe nur auf der Charakterseite genannt."
+    },
+    {
+      "id": "soleil-belmont",
+      "name": "Soleil Belmont",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "jet-black-whip",
+        "vibhuti-whip",
+        "vanitas-whip"
+      ],
+      "bonus": "Kämpft gut mit (und gegen) seinen Vater.",
+      "secret": true,
+      "emoji": "🧑",
+      "verified": true,
+      "note": "Versteckte Waffe: Jet Black Whip; Vibhuti Whip; Vanitas Whip."
+    },
+    {
+      "id": "dario-bossi",
+      "name": "Dario Bossi",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "salamender"
+      ],
+      "bonus": "Erhöht beim Level-up den Grundschaden aller ausgerüsteten Feuerwaffen.",
+      "secret": true,
+      "emoji": "🔥",
+      "verified": true
+    },
+    {
+      "id": "dmitrii-blinov",
+      "name": "Dmitrii Blinov",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "ebony-diabologue"
+      ],
+      "bonus": "Erhält einen versteckten Klon der zuletzt ausgerüsteten Waffe oder Entwicklung.",
+      "secret": true,
+      "emoji": "🪞",
+      "verified": false,
+      "note": "Ungeprüft: Startwaffe nur auf der Charakterseite genannt."
+    },
+    {
+      "id": "celia-fortner",
+      "name": "Celia Fortner",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "luminatio",
+        "umbra"
+      ],
+      "bonus": "Erhält alle 2 Level eine Karma Coin.",
+      "secret": true,
+      "emoji": "🪙",
+      "verified": true
+    },
+    {
+      "id": "graham-jones",
+      "name": "Graham Jones",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "vol-umbra"
+      ],
+      "bonus": "Startet mit der zusätzlichen Arcana XIII – Wicked Season; immun gegen Gesundheitsentzug.",
+      "secret": true,
+      "emoji": "🧑‍💼",
+      "verified": true
+    },
+    {
+      "id": "genya-arikado",
+      "name": "Genya Arikado",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "pocket-knife"
+      ],
+      "bonus": "„Ganz bestimmt nicht Alucard.“",
+      "secret": true,
+      "emoji": "🕴️",
+      "verified": true
+    },
+    {
+      "id": "joachim-armster",
+      "name": "Joachim Armster",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "rune-sword"
+      ],
+      "bonus": "Immun gegen Gesundheitsentzug; kann einen Bonus pro Level wählen.",
+      "secret": true,
+      "emoji": "⚔️",
+      "verified": true
+    },
+    {
+      "id": "walter-bernhard",
+      "name": "Walter Bernhard",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "nitesco"
+      ],
+      "bonus": "Überheilung um +8 löst eine zufällige Ebony-Diabologue-Waffe aus; immun gegen Gesundheitsentzug.",
+      "secret": true,
+      "emoji": "🧛",
+      "verified": true
+    },
+    {
+      "id": "carmilla",
+      "name": "Carmilla",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [],
+      "bonus": "Aufladung abhängig vom Fluch: löst alle ausgerüsteten Dominus-Waffen aus; immun gegen Gesundheitsentzug; fliegt.",
+      "secret": true,
+      "emoji": "🦇",
+      "verified": true,
+      "note": "Versteckte Waffe: Dominus Hatred."
+    },
+    {
+      "id": "cave-troll",
+      "name": "Cave Troll",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "troll-bomb"
+      ],
+      "bonus": "Erhält alle 20 Level mehr Projektile (max. +4).",
+      "secret": true,
+      "emoji": "🧌",
+      "verified": true
+    },
+    {
+      "id": "fleaman",
+      "name": "Fleaman",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [],
+      "bonus": "„Er versteht das Spiel nicht.“",
+      "secret": true,
+      "emoji": "🐒",
+      "verified": true
+    },
+    {
+      "id": "axe-armor",
+      "name": "Axe Armor",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "axe"
+      ],
+      "bonus": "„Sechs Äxte axten Äxte als Äxte.“",
+      "secret": true,
+      "emoji": "🪓",
+      "verified": true
+    },
+    {
+      "id": "frozenshade",
+      "name": "Frozenshade",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "icebrand"
+      ],
+      "bonus": "„Sie mag ihr Wand- und Bodenhähnchen gut gefroren.“",
+      "secret": true,
+      "emoji": "🧊",
+      "verified": true
+    },
+    {
+      "id": "alamaric-sniper",
+      "name": "Alamaric Sniper",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "arrow-of-goth"
+      ],
+      "bonus": "+1 % Glück pro Level; kann fliegen.",
+      "secret": true,
+      "emoji": "🏹",
+      "verified": true
+    },
+    {
+      "id": "stone-skull",
+      "name": "Stone Skull",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [],
+      "bonus": "+1 Rüstung alle 5 Level; kann sich nur schlecht seitwärts bewegen; schlägt zurück.",
+      "secret": true,
+      "emoji": "💀",
+      "verified": false,
+      "note": "Startet zusätzlich mit: No. Ungeprüft: Startwaffe nur auf der Charakterseite genannt."
+    },
+    {
+      "id": "ruler-sword",
+      "name": "Ruler Sword",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "sword-brothers"
+      ],
+      "bonus": "Bekommt zusätzliche Schwerter, je mehr Überheilung sich ansammelt (max. 12 Schwerter).",
+      "secret": true,
+      "emoji": "🗡️",
+      "verified": true
+    },
+    {
+      "id": "persephone",
+      "name": "Persephone",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "summon-spirit-tornado"
+      ],
+      "bonus": "Ihr versteckter Staubsauger zieht Gegenstände, zerstörbare Objekte und Gegner an.",
+      "secret": true,
+      "emoji": "🧹",
+      "verified": true
+    },
+    {
+      "id": "keremet",
+      "name": "Keremet",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "keremet-morbus"
+      ],
+      "bonus": "Startet mit der zusätzlichen Arcana XVII – Lost & Found Painting; Überheilung um +8 löst Keremet Morbus aus.",
+      "secret": true,
+      "emoji": "🦠",
+      "verified": true
+    },
+    {
+      "id": "astarte",
+      "name": "Astarte",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [],
+      "bonus": "Startet mit verstecktem Star Flail; Gegner erscheinen mit 15 % Chance entwaffnet; kann besiegte Gegner zu Begleitern machen.",
+      "secret": true,
+      "emoji": "💃",
+      "verified": false,
+      "note": "Startet zusätzlich mit: No. Versteckte Waffe: Star Flail. Ungeprüft: Startwaffe nur auf der Charakterseite genannt."
+    },
+    {
+      "id": "drolta-tzuentes",
+      "name": "Drolta Tzuentes",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "anura"
+      ],
+      "bonus": "Überheilung um +32 löst eine ausgerüstete Waffe aus Belnades' Spellbook aus.",
+      "secret": true,
+      "emoji": "🧙‍♀️",
+      "verified": true
+    },
+    {
+      "id": "witch-actrise",
+      "name": "Witch Actrise",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "gemma-torpor"
+      ],
+      "bonus": "Geübt mit Gemma Torpor, Runetracer, Magi-Stone und Kyra-Stones; hat einen versteckten Runetracer, der mit dem Level stärker wird.",
+      "secret": true,
+      "emoji": "🧙‍♀️",
+      "verified": true,
+      "note": "Versteckte Waffe: Runetracer."
+    },
+    {
+      "id": "atlantis-shrine-wizard",
+      "name": "Atlantis Shrine Wizard",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "hydro-storm"
+      ],
+      "bonus": "Überheilung um +32 löst eine Coat-of-Arms-Waffe aus und flutet langsam die Umgebung.",
+      "secret": true,
+      "emoji": "🧙",
+      "verified": true,
+      "note": "Versteckte Waffe: Acquazzone."
+    },
+    {
+      "id": "succubus",
+      "name": "Succubus",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "nightmare"
+      ],
+      "bonus": "Startet mit der zusätzlichen Arcana XVIII – Boogaloo of Illusions.",
+      "secret": true,
+      "emoji": "😈",
+      "verified": true
+    },
+    {
+      "id": "fake-trio",
+      "name": "Fake Trio",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "bone",
+        "bracelet",
+        "pocket-knife"
+      ],
+      "bonus": "„Ein Trio Zombies, das sich als Vampirjäger ausgibt.“",
+      "secret": true,
+      "emoji": "🧟",
+      "verified": false,
+      "note": "Ungeprüft: Startwaffe nur auf der Charakterseite genannt."
+    },
+    {
+      "id": "slogra-and-gaibon",
+      "name": "Slogra and Gaibon",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "trident",
+        "fire-wand"
+      ],
+      "bonus": "Geübt mit Trident; wird immer von Gaibon begleitet; gerät in Rage, wenn der Partner stirbt.",
+      "secret": true,
+      "emoji": "🦅",
+      "verified": true
+    },
+    {
+      "id": "zephyr",
+      "name": "Zephyr",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "knife"
+      ],
+      "bonus": "Geübt mit Messern; Orologions geben Abklingzeit- und Laufgeschwindigkeits-Bonus und sind leichter zu finden.",
+      "secret": true,
+      "emoji": "⏱️",
+      "verified": true,
+      "note": "Alternativ wählbare Startwaffe: Curved Knife."
+    },
+    {
+      "id": "jiangshi",
+      "name": "Jiangshi",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "soul-steal"
+      ],
+      "bonus": "Löst bei jedem 13. Hüpfer eine zufällige ausgerüstete Waffe aus; immun gegen Gesundheitsentzug.",
+      "secret": true,
+      "emoji": "🧟",
+      "verified": true
+    },
+    {
+      "id": "blackmore",
+      "name": "Blackmore",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "summon-spirit"
+      ],
+      "bonus": "Kann nach einer bestimmten Zahl besiegter Gegner einen Bonus pro Level wählen (max. 5-mal).",
+      "secret": true,
+      "emoji": "🧔",
+      "verified": true
+    },
+    {
+      "id": "count-olrox",
+      "name": "Count Olrox",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "dark-rift"
+      ],
+      "bonus": "„Auf ihn ist Verlass, er wechselt mitten im Abendessen.“",
+      "secret": true,
+      "emoji": "🧛",
+      "verified": true
+    },
+    {
+      "id": "malphas",
+      "name": "Malphas",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [],
+      "bonus": "Hat versteckte Waffen, die mit dem Level stärker werden; kann fliegen.",
+      "secret": true,
+      "emoji": "🐦‍⬛",
+      "verified": true,
+      "note": "Versteckte Waffe: Thousand Edge; Tenebris Tonitrus."
+    },
+    {
+      "id": "death-character",
+      "name": "Death (character)",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "death-spiral"
+      ],
+      "bonus": "„Mag es gar nicht, gotteslästerlich verhöhnt zu werden.“",
+      "secret": true,
+      "emoji": "💀",
+      "verified": true
+    },
+    {
+      "id": "galamoth",
+      "name": "Galamoth",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "tenebris-tonitrus"
+      ],
+      "bonus": "„Größer ist besser.“",
+      "secret": true,
+      "emoji": "👾",
+      "verified": true
+    },
+    {
+      "id": "megalo-elizabeth-bartley",
+      "name": "Megalo Elizabeth Bartley",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "belnades-spellbook",
+        "ebony-diabologue"
+      ],
+      "bonus": "+50 erscheinende Gegner; immun gegen Gesundheitsentzug.",
+      "secret": true,
+      "emoji": "👸",
+      "verified": false,
+      "note": "Ungeprüft: Startwaffe nur auf der Charakterseite genannt."
+    },
+    {
+      "id": "megalo-olrox",
+      "name": "Megalo Olrox",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "dark-rift"
+      ],
+      "bonus": "„Auf ihn ist Verlass, er wechselt mitten im Abendessen.“",
+      "secret": true,
+      "emoji": "🧛",
+      "verified": true
+    },
+    {
+      "id": "megalo-death",
+      "name": "Megalo Death",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "death-spiral"
+      ],
+      "bonus": "„Mag es gar nicht, gotteslästerlich verhöhnt zu werden.“",
+      "secret": true,
+      "emoji": "💀",
+      "verified": true,
+      "note": "Versteckte Waffe: Death Hand."
+    },
+    {
+      "id": "megalo-dracula",
+      "name": "Megalo Dracula",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "wine-glass"
+      ],
+      "bonus": "+1 % Macht pro Level und +1 Wiederbelebung alle 100 Level; Fluch erhöht die Macht; erlittener Schaden höchstens 10; immun gegen Gesundheitsentzug.",
+      "secret": true,
+      "emoji": "🧛‍♂️",
+      "verified": true,
+      "note": "Versteckte Waffe: Hand of Vlad."
+    },
+    {
+      "id": "chaos",
+      "name": "Chaos",
+      "source": "ode-to-castlevania",
+      "startingWeapons": [
+        "infinite-corridor"
+      ],
+      "bonus": "Startet mit allen Arcanas von I bis XXI.",
+      "secret": true,
+      "emoji": "🌀",
+      "verified": true
+    }
+  ]
+}

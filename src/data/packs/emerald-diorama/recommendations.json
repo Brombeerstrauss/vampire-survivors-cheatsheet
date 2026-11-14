@@ -1,0 +1,215 @@
+{
+  "$schema": "../../schema/recommendations.schema.json",
+  "recommendations": [
+    {
+      "character": "tsunanori-mido",
+      "source": "emerald-diorama",
+      "weapons": [
+        {
+          "id": "fleuret",
+          "reason": "Startwaffe; entwickelt sich zu Dress Sword.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "bonnie-blair",
+      "source": "emerald-diorama",
+      "weapons": [
+        {
+          "id": "punch",
+          "reason": "Startwaffe; entwickelt sich zu Pressure Point.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "formina-franklyn",
+      "source": "emerald-diorama",
+      "weapons": [
+        {
+          "id": "saber-machine-gun",
+          "reason": "Startwaffe; entwickelt sich zu Hecaton Machine Gun.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "diva-no-5",
+      "source": "emerald-diorama",
+      "weapons": [
+        {
+          "id": "super-missile",
+          "reason": "Startwaffe; entwickelt sich zu Hydra Cannon.",
+          "priority": 1
+        },
+        {
+          "id": "twin-dragon",
+          "reason": "Startwaffe; mit Karoma's Mana wird sie zu Gekkabijin.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "karoma-s-mana",
+          "reason": "Nötig für Gekkabijin.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "ameya-aisling",
+      "source": "emerald-diorama",
+      "weapons": [
+        {
+          "id": "spirit-rings",
+          "reason": "Startwaffe; entwickelt sich zu Rings of Calamity.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "siugnas",
+      "source": "emerald-diorama",
+      "weapons": [
+        {
+          "id": "town-sword",
+          "reason": "Startwaffe; entwickelt sich zu Lordstar.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "final-emperor",
+      "source": "emerald-diorama",
+      "weapons": [
+        {
+          "id": "flamberge",
+          "reason": "Startwaffe; entwickelt sich zu Zweihander.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "dolores",
+      "source": "emerald-diorama",
+      "weapons": [
+        {
+          "id": "bullova",
+          "reason": "Startwaffe; mit Skull O'Maniac wird sie zu Falconwind.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "skull-o-maniac",
+          "reason": "Nötig für Falconwind.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "macha-alter-ego",
+      "source": "emerald-diorama",
+      "weapons": [
+        {
+          "id": "khukuri",
+          "reason": "Startwaffe; mit Parm Aegis wird sie zu Jetstream.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "parm-aegis",
+          "reason": "Nötig für Jetstream.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "lita-caryx",
+      "source": "emerald-diorama",
+      "weapons": [
+        {
+          "id": "glaive",
+          "reason": "Startwaffe; entwickelt sich zu Feather Spear.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "kugutsu",
+      "source": "emerald-diorama",
+      "weapons": [
+        {
+          "id": "twin-dragon",
+          "reason": "Startwaffe; mit Karoma's Mana wird sie zu Gekkabijin.",
+          "priority": 1
+        },
+        {
+          "id": "khukuri",
+          "reason": "Startwaffe; mit Parm Aegis wird sie zu Jetstream.",
+          "priority": 1
+        },
+        {
+          "id": "eagle-gun",
+          "reason": "Startwaffe; mit Spinach wird sie zu Pendragon.",
+          "priority": 1
+        },
+        {
+          "id": "punch",
+          "reason": "Startwaffe; entwickelt sich zu Pressure Point.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "karoma-s-mana",
+          "reason": "Nötig für Gekkabijin.",
+          "priority": 1
+        },
+        {
+          "id": "parm-aegis",
+          "reason": "Nötig für Jetstream.",
+          "priority": 1
+        },
+        {
+          "id": "spinach",
+          "reason": "Nötig für Pendragon.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "mr-s",
+      "source": "emerald-diorama",
+      "weapons": [
+        {
+          "id": "intuition",
+          "reason": "Startwaffe.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "malevolent-door-spirit",
+      "source": "emerald-diorama",
+      "weapons": [
+        {
+          "id": "blood-chalice",
+          "reason": "Startwaffe.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    }
+  ]
+}

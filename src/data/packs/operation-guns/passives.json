@@ -1,0 +1,15 @@
+{
+  "$schema": "../../schema/passives.schema.json",
+  "passives": [
+    {
+      "id": "weapon-power-up",
+      "name": "Weapon Power-Up",
+      "source": "operation-guns",
+      "description": "Erhöht eine zufällige ausgerüstete Waffe um eine Stufe und gibt +1 Wiederbelebung; belegt keinen Slot.",
+      "maxLevel": 1,
+      "noSlot": true,
+      "emoji": "⬆️",
+      "verified": true
+    }
+  ]
+}

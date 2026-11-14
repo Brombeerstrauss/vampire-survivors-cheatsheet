@@ -1,0 +1,204 @@
+{
+  "$schema": "../../schema/recommendations.schema.json",
+  "recommendations": [
+    {
+      "character": "miang-moonspell",
+      "source": "legacy-of-the-moonspell",
+      "weapons": [
+        {
+          "id": "silver-wind",
+          "reason": "Startwaffe; mit Pummarola wird sie zu Festive Winds.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "pummarola",
+          "reason": "Nötig für Festive Winds.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "menya-moonspell",
+      "source": "legacy-of-the-moonspell",
+      "weapons": [
+        {
+          "id": "four-seasons",
+          "reason": "Startwaffe; mit Candelabrador wird sie zu Godai Shuffle.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "candelabrador",
+          "reason": "Nötig für Godai Shuffle.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "syuuto-moonspell",
+      "source": "legacy-of-the-moonspell",
+      "weapons": [
+        {
+          "id": "summon-night",
+          "reason": "Startwaffe; mit Duplicator wird sie zu Echo Night.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "duplicator",
+          "reason": "Nötig für Echo Night.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "babi-onna",
+      "source": "legacy-of-the-moonspell",
+      "weapons": [
+        {
+          "id": "mirage-robe",
+          "reason": "Startwaffe; mit Attractorb wird sie zu J'Odore.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "attractorb",
+          "reason": "Nötig für J'Odore.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "megalo-miang-moonspell",
+      "source": "legacy-of-the-moonspell",
+      "weapons": [
+        {
+          "id": "argent-flow",
+          "reason": "Startwaffe.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "megalo-syuuto-moonspell",
+      "source": "legacy-of-the-moonspell",
+      "weapons": [
+        {
+          "id": "night-sword",
+          "reason": "Startwaffe; mit Stone Mask wird sie zu Muramasa.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "stone-mask",
+          "reason": "Nötig für Muramasa.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "mccoy-oni",
+      "source": "legacy-of-the-moonspell",
+      "weapons": [
+        {
+          "id": "108-bocce",
+          "reason": "Startwaffe; zusammen mit 108 Responsive Prayers entsteht die Union Road to Heaven.",
+          "priority": 1
+        },
+        {
+          "id": "108-responsive-prayers",
+          "reason": "Partner für die Union Road to Heaven.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "gav-et-oni",
+      "source": "legacy-of-the-moonspell",
+      "weapons": [
+        {
+          "id": "mille-bolle-blu",
+          "reason": "Startwaffe; mit Spellbinder wird sie zu Boo Roo Boolle.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "spellbinder",
+          "reason": "Nötig für Boo Roo Boolle.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "spiritoso",
+      "source": "legacy-of-the-moonspell",
+      "weapons": [
+        {
+          "id": "lunarmight",
+          "reason": "Startwaffe; zusammen mit LunarSight, LunarBight entsteht die Union LunarFlight.",
+          "priority": 1
+        },
+        {
+          "id": "lunarsight",
+          "reason": "Partner für die Union LunarFlight.",
+          "priority": 1
+        },
+        {
+          "id": "lunarbight",
+          "reason": "Partner für die Union LunarFlight.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "spiritosa",
+      "source": "legacy-of-the-moonspell",
+      "weapons": [
+        {
+          "id": "mille-bolle-blu",
+          "reason": "Startwaffe; mit Spellbinder wird sie zu Boo Roo Boolle.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "spellbinder",
+          "reason": "Nötig für Boo Roo Boolle.",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "gekkojin",
+      "source": "legacy-of-the-moonspell",
+      "weapons": [
+        {
+          "id": "lunarmight",
+          "reason": "Partner für die Union LunarFlight.",
+          "priority": 1
+        },
+        {
+          "id": "lunarsight",
+          "reason": "Partner für die Union LunarFlight.",
+          "priority": 1
+        },
+        {
+          "id": "lunarbight",
+          "reason": "Startwaffe; zusammen mit LunarMight, LunarSight entsteht die Union LunarFlight.",
+          "priority": 1
+        }
+      ],
+      "passives": []
+    }
+  ]
+}

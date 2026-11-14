@@ -1,0 +1,85 @@
+{
+  "$schema": "../../schema/passives.schema.json",
+  "passives": [
+    {
+      "id": "mini-crewmate",
+      "name": "Mini Crewmate",
+      "source": "emergency-meeting",
+      "description": "Ruft gelegentlich Gegner in der Nähe an.",
+      "maxLevel": 3,
+      "ignoresSlotLimit": true,
+      "emoji": "🧑‍🚀",
+      "verified": true
+    },
+    {
+      "id": "mini-engineer",
+      "name": "Mini Engineer",
+      "source": "emergency-meeting",
+      "description": "Elektrisiert gelegentlich Gegner.",
+      "maxLevel": 3,
+      "ignoresSlotLimit": true,
+      "emoji": "🔧",
+      "verified": true
+    },
+    {
+      "id": "mini-ghost",
+      "name": "Mini Ghost",
+      "source": "emergency-meeting",
+      "description": "Lässt Gegner gelegentlich vor Angst erstarren.",
+      "maxLevel": 3,
+      "ignoresSlotLimit": true,
+      "emoji": "👻",
+      "verified": true
+    },
+    {
+      "id": "mini-shapeshifter",
+      "name": "Mini Shapeshifter",
+      "source": "emergency-meeting",
+      "description": "Wirft gelegentlich übrige Körperteile auf Gegner.",
+      "maxLevel": 3,
+      "ignoresSlotLimit": true,
+      "emoji": "🫥",
+      "verified": true
+    },
+    {
+      "id": "mini-guardian",
+      "name": "Mini Guardian",
+      "source": "emergency-meeting",
+      "description": "Fängt gelegentlich einen Treffer für dich ab.",
+      "maxLevel": 3,
+      "ignoresSlotLimit": true,
+      "emoji": "🛡️",
+      "verified": true
+    },
+    {
+      "id": "mini-impostor",
+      "name": "Mini Impostor",
+      "source": "emergency-meeting",
+      "description": "Sticht gelegentlich auf Gegner ein.",
+      "maxLevel": 3,
+      "ignoresSlotLimit": true,
+      "emoji": "🔪",
+      "verified": true
+    },
+    {
+      "id": "mini-scientist",
+      "name": "Mini Scientist",
+      "source": "emergency-meeting",
+      "description": "Wirft gelegentlich Wissenschaft auf Gegner.",
+      "maxLevel": 3,
+      "ignoresSlotLimit": true,
+      "emoji": "🧪",
+      "verified": true
+    },
+    {
+      "id": "mini-horse",
+      "name": "Mini Horse",
+      "source": "emergency-meeting",
+      "description": "Steckt dich gelegentlich mit unerbittlicher Fröhlichkeit an.",
+      "maxLevel": 3,
+      "ignoresSlotLimit": true,
+      "emoji": "🐴",
+      "verified": true
+    }
+  ]
+}
