@@ -1,29 +1,34 @@
 import type { Lang, Pack, PackId } from '../data/types.ts'
 
 export interface Settings {
-  /** Pakete, die du besitzt. Das Basisspiel ist immer dabei. */
+  /** Packs you own. The base game is always included. */
   ownedPacks: PackId[]
-  /** Pakete, die die App beim letzten Speichern kannte (um neue kostenlose Pakete automatisch zu aktivieren). */
+  /** Packs the app knew when it last saved (to enable new free packs automatically). */
   knownPacks: PackId[]
-  /** Geheime Charaktere anzeigen. */
+  /** Show secret characters. */
   showSecrets: boolean
-  /** Originalbilder aus dem Wiki anzeigen (sonst Emojis). */
+  /** Show original images from the wiki (otherwise emojis). */
   showImages: boolean
-  /** Sprache der App. */
+  /** App language. */
   language: Lang
+  /** Did the user pick the language in the settings? Until then the app uses English. */
+  languageChosen: boolean
 }
 
 const isString = (value: unknown): value is string => typeof value === 'string'
 
 /**
- * Liest gespeicherte Einstellungen und ergänzt Standardwerte.
- * Neue Pakete, die beim letzten Mal noch unbekannt waren, sind aktiv, wenn sie kostenlos sind.
+ * Reads stored settings and fills in defaults.
+ * New packs that were unknown last time are enabled if they are free.
+ * The language defaults to English. A stored language only counts if the user picked it;
+ * earlier versions stored the device language automatically.
  */
-export function loadSettings(raw: unknown, packs: Pack[], deviceLanguage: Lang = 'de'): Settings {
+export function loadSettings(raw: unknown, packs: Pack[]): Settings {
   const stored = raw && typeof raw === 'object' ? (raw as Record<string, unknown>) : {}
   const ids = new Set(packs.map((p) => p.id))
   const known = Array.isArray(stored.knownPacks) ? stored.knownPacks.filter(isString) : []
   const owned = new Set(Array.isArray(stored.ownedPacks) ? stored.ownedPacks.filter(isString) : [])
+  const chosen = stored.languageChosen === true
 
   for (const pack of packs) {
     if (pack.kind === 'base') owned.add(pack.id)
@@ -35,6 +40,7 @@ export function loadSettings(raw: unknown, packs: Pack[], deviceLanguage: Lang =
     knownPacks: [...ids],
     showSecrets: typeof stored.showSecrets === 'boolean' ? stored.showSecrets : true,
     showImages: typeof stored.showImages === 'boolean' ? stored.showImages : true,
-    language: stored.language === 'de' || stored.language === 'en' ? stored.language : deviceLanguage,
+    language: chosen && (stored.language === 'de' || stored.language === 'en') ? stored.language : 'en',
+    languageChosen: chosen,
   }
 }

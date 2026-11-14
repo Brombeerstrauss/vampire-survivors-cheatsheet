@@ -65,7 +65,7 @@ STAGE_ONLY = set()
 EVOLUTION_DE = {
     "Rings of Calamity": {"conditions": ["Beliebige 5 passive Gegenstände auf Maximalstufe."]},
 }
-# Glimmer-Techniken sind keine Gegenstände: Sie werden als Bedingung angezeigt.
+# Glimmer techniques are not items: they are shown as conditions.
 GLIMMER_NOTE = "Glimmer-Technik „{tech}“ freischalten (passiert zufällig beim Angreifen)."
 CHARACTER_NOTES = {}
 CHARACTER_WEAPON_OVERRIDES = {}

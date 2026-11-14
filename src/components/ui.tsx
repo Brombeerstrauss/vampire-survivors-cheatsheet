@@ -8,9 +8,9 @@ import { useAppState } from '../state/context.ts'
 const iconBase = `${import.meta.env.BASE_URL}custom-icons/`
 
 /**
- * Bild eines Eintrags. Reihenfolge: eigenes Icon aus `public/custom-icons/`,
- * dann das Originalbild aus dem Wiki (falls in den Einstellungen erlaubt),
- * sonst das Platzhalter-Emoji. Lädt ein Bild nicht, kommt das nächste dran.
+ * Image of an entry. Order: custom icon from `public/custom-icons/`,
+ * then the original image from the wiki (if allowed in the settings),
+ * otherwise the placeholder emoji. If an image fails to load, the next one is used.
  */
 export function EntryIcon({
   entry,
@@ -42,7 +42,7 @@ export function EntryIcon({
           alt=""
           loading="lazy"
           decoding="async"
-          // CORS-Anfrage, damit der Service Worker die Bilder für den Offline-Betrieb speichern kann
+          // CORS request so the service worker can store the images for offline use
           crossOrigin={current.remote ? 'anonymous' : undefined}
           referrerPolicy={current.remote ? 'no-referrer' : undefined}
           className={`size-full object-contain ${smallSource ? '[image-rendering:pixelated]' : ''}`}
@@ -83,8 +83,8 @@ export function UnverifiedBadge({ verified }: { verified: boolean }) {
 }
 
 /**
- * Name eines Eintrags in der gewählten Sprache. Ohne offiziellen deutschen Namen
- * steht auf Deutsch die eigene Übersetzung gedämpft in Klammern dahinter.
+ * Name of an entry in the selected language. Without an official German name,
+ * the German view adds the own translation in muted parentheses.
  */
 export function EntryName({ entry, className = '' }: { entry: Named; className?: string }) {
   const { name } = useI18n()

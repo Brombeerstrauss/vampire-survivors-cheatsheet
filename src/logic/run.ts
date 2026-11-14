@@ -3,14 +3,14 @@ import type { CharacterId, Evolution, PassiveId, WeaponId } from '../data/types.
 import type { Catalog } from './catalog.ts'
 
 /**
- * Eine Waffe oder ein Gegenstand im aktuellen Lauf.
- * Stufen werden bewusst nicht erfasst: Der Tracker merkt sich nur, was du hast.
+ * A weapon or item in the current run.
+ * Levels are deliberately not tracked: the tracker only remembers what you have.
  */
 export interface OwnedItem {
   id: string
 }
 
-/** Der aktuelle Lauf, so wie er im Browser gespeichert wird. */
+/** The current run, as stored in the browser. */
 export interface RunState {
   character: CharacterId | null
   weapons: OwnedItem[]
@@ -22,7 +22,7 @@ export const EMPTY_RUN: RunState = { character: null, weapons: [], passives: [] 
 export const isRunEmpty = (run: RunState) =>
   run.character === null && run.weapons.length === 0 && run.passives.length === 0
 
-/** Neuer Lauf mit einem Charakter und seinen Startwaffen. */
+/** New run with a character and their starting weapons. */
 export function startRun(catalog: Catalog, character: CharacterId): RunState {
   const weapons = (catalog.character(character)?.startingWeapons ?? [])
     .filter((id) => catalog.weapon(id))
@@ -31,7 +31,7 @@ export function startRun(catalog: Catalog, character: CharacterId): RunState {
   return { character, weapons, passives: [] }
 }
 
-/** Belegte passive Slots (Gegenstände mit `noSlot` zählen nicht). */
+/** Used passive slots (items with `noSlot` don't count). */
 export function usedPassiveSlots(run: RunState, catalog: Catalog): number {
   return run.passives.filter((p) => !catalog.passive(p.id)?.noSlot).length
 }
@@ -57,7 +57,7 @@ export function addPassive(run: RunState, catalog: Catalog, id: PassiveId): RunS
   return { ...run, passives: [...run.passives, { id }] }
 }
 
-/** Kann dieser Gegenstand gerade noch aufgenommen werden? */
+/** Can this item still be added right now? */
 export function canAddPassive(run: RunState, catalog: Catalog, id: PassiveId): boolean {
   return addPassive(run, catalog, id) !== run
 }
@@ -71,11 +71,11 @@ export function removePassive(run: RunState, id: PassiveId): RunState {
 }
 
 /**
- * Trägt eine erhaltene Entwicklung in den Lauf ein:
- * - Entwicklung und Morph ersetzen die Ausgangswaffe an ihrem Platz
- * - Union ersetzt alle beteiligten Waffen durch eine (gibt Slots frei)
- * - Geschenk kommt zusätzlich dazu
- * Passive Gegenstände bleiben erhalten, außer sie werden verbraucht (`consumed`).
+ * Records an evolution you received in the run:
+ * - evolution and morph replace the base weapon in its slot
+ * - union replaces all weapons involved with one (frees slots)
+ * - gift is added on top
+ * Passive items stay unless they are used up (`consumed`).
  */
 export function applyEvolution(run: RunState, catalog: Catalog, evolution: Evolution): RunState {
   const result = catalog.weapon(evolution.result)
@@ -100,8 +100,8 @@ export function applyEvolution(run: RunState, catalog: Catalog, evolution: Evolu
 }
 
 /**
- * Prüft gespeicherte Daten und wirft unbekannte oder doppelte Einträge heraus.
- * Ältere Stände mit Stufenangaben werden ohne Stufe übernommen.
+ * Checks stored data and drops unknown or duplicate entries.
+ * Older saves with levels are kept without the levels.
  */
 export function sanitizeRun(raw: unknown, catalog: Catalog): RunState {
   if (!raw || typeof raw !== 'object') return EMPTY_RUN

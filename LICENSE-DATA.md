@@ -1,41 +1,38 @@
-# Lizenz der Spieldaten
+# License of the game data
 
-Die MIT-Lizenz in der Datei `LICENSE` gilt für den Programmcode dieses Projekts.
-Für die Spieldaten gilt sie **nicht**.
+The MIT License in the file `LICENSE` applies to the code of this project. It does **not**
+apply to the game data.
 
-## Was sind die Spieldaten?
+## What is the game data?
 
-- alle Dateien unter `src/data/packs/` und die Datei `src/data/packs.json`
-- die deutschen Texte unter `tools/wiki-import/texts/`
+- all files under `src/data/packs/` and the file `src/data/packs.json`
+- the German texts under `tools/wiki-import/texts/`
 
-## Herkunft und Lizenz
+## Origin and license
 
-Die Spieldaten sind aus dem [Vampire Survivors Wiki](https://vampire.survivors.wiki/)
-abgeleitet (Stand: 14. November 2026) und ins Deutsche übertragen. Das Wiki steht unter
-der Lizenz
-[Creative Commons Namensnennung – Nicht kommerziell – Weitergabe unter gleichen Bedingungen 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/deed.de)
-(CC BY-NC-SA 3.0). Dieselbe Lizenz gilt deshalb für die Spieldaten in diesem Projekt.
+The game data is derived from the [Vampire Survivors Wiki](https://vampire.survivors.wiki/)
+(as of 14 November 2026) and translated into German. The wiki is licensed under
+[Creative Commons Attribution-NonCommercial-ShareAlike 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)
+(CC BY-NC-SA 3.0). The same license therefore applies to the game data in this project.
 
-Das heißt:
+This means:
 
-- **Namensnennung:** Wer die Daten weitergibt, nennt das Vampire Survivors Wiki und seine
-  Mitwirkenden als Quelle.
-- **Nicht kommerziell:** Die Daten dürfen nicht für kommerzielle Zwecke genutzt werden.
-- **Weitergabe unter gleichen Bedingungen:** Veränderte Fassungen stehen wieder unter
-  CC BY-NC-SA 3.0.
+- **Attribution:** If you share the data, credit the Vampire Survivors Wiki and its
+  contributors as the source.
+- **NonCommercial:** The data may not be used for commercial purposes.
+- **ShareAlike:** Modified versions are again licensed under CC BY-NC-SA 3.0.
 
-## Offizielle deutsche Namen
+## Official German names
 
-Die offiziellen deutschen Namen und Texte stammen aus poncles öffentlicher
-Lokalisierungs-Tabelle (verlinkt in
-[github.com/Poncle/vampire-survivors-localisation](https://github.com/Poncle/vampire-survivors-localisation)).
-Sie gehören wie alle Texte aus dem Spiel poncle.
+The official German names and texts come from poncle's public localisation sheet (linked
+from [github.com/Poncle/vampire-survivors-localisation](https://github.com/Poncle/vampire-survivors-localisation)).
+Like all texts from the game, they belong to poncle.
 
-## Inhalte von poncle
+## Content by poncle
 
-Vampire Survivors, die Namen von Charakteren, Waffen und Gegenständen sowie die Texte und
-Grafiken aus dem Spiel gehören poncle. Dieses Projekt ist ein inoffizielles Fan-Projekt und
-steht in keiner Verbindung zu poncle.
+Vampire Survivors, the names of characters, weapons and items, and the texts and artwork from
+the game belong to poncle. This project is an unofficial fan project and is not affiliated
+with poncle.
 
-Grafiken aus dem Spiel sind in diesem Projekt nicht enthalten. Die App lädt sie zur Laufzeit
-vom Wiki; die Dateien unter `src/data/packs/` enthalten nur die Adressen.
+Artwork from the game is not included in this project. The app loads it from the wiki at
+runtime; the files under `src/data/packs/` only contain the URLs.

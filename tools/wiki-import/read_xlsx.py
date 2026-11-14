@@ -1,4 +1,4 @@
-"""Liest die Blätter einer .xlsx-Datei (nur Standardbibliothek) und schreibt sie als JSON-Zeilenlisten."""
+"""Reads the sheets of an .xlsx file (standard library only) and writes them as JSON lists of rows."""
 import json, re, sys, zipfile
 from xml.etree import ElementTree as ET
 NS = {"m": "http://schemas.openxmlformats.org/spreadsheetml/2006/main", "r": "http://schemas.openxmlformats.org/officeDocument/2006/relationships"}
@@ -34,4 +34,4 @@ for s in wb.find("m:sheets", NS):
     sheets[name] = rows
 json.dump(sheets, open(out, "w", encoding="utf-8"), ensure_ascii=False)
 for name, rows in sheets.items():
-    print(f"{name}: {len(rows)} Zeilen")
+    print(f"{name}: {len(rows)} rows")

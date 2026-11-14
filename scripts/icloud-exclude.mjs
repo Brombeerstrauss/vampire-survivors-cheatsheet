@@ -1,7 +1,7 @@
-// Läuft automatisch nach `npm install`.
-// Liegt das Projekt in iCloud Drive, wird node_modules vom Sync ausgenommen
-// (zehntausende kleine Dateien bremsen iCloud sonst stark aus).
-// Auf Windows/Linux oder außerhalb von iCloud passiert nichts.
+// Runs automatically after `npm install`.
+// If the project is in iCloud Drive, node_modules is excluded from syncing
+// (tens of thousands of small files would slow iCloud down a lot).
+// Does nothing on Windows/Linux or outside iCloud.
 import { execFileSync } from 'node:child_process'
 import { existsSync } from 'node:fs'
 
@@ -11,6 +11,6 @@ if (process.platform === 'darwin' && inICloud && existsSync('node_modules')) {
   try {
     execFileSync('xattr', ['-w', 'com.apple.fileprovider.ignore#P', '1', 'node_modules'])
   } catch {
-    console.warn('Hinweis: node_modules konnte nicht vom iCloud-Sync ausgenommen werden.')
+    console.warn('Note: could not exclude node_modules from iCloud syncing.')
   }
 }

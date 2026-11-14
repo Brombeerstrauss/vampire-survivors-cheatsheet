@@ -1,4 +1,4 @@
-// Gemeinsame Klassen und Helfer für die Oberfläche.
+// Shared classes and helpers for the UI.
 
 export const buttonClass = {
   primary:
@@ -9,7 +9,7 @@ export const buttonClass = {
     'inline-flex min-h-11 items-center justify-center gap-2 rounded-xl px-3 text-white/70 hover:bg-white/8 hover:text-white focus-visible:outline-2 focus-visible:outline-gold-300',
 }
 
-/** Normalisiert Text für die Suche: Groß/klein und Akzente egal. */
+/** Normalizes text for search: ignores case and accents. */
 export function matches(text: string, query: string): boolean {
   const norm = (s: string) =>
     s

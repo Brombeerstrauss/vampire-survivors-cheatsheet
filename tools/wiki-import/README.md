@@ -1,26 +1,27 @@
-# Wiki-Import
+# Wiki import
 
-Werkzeug, mit dem die Spieldaten unter `src/data/packs/` aus dem
-[Vampire Survivors Wiki](https://vampire.survivors.wiki/) erzeugt wurden. Für normale
-Änderungen an den Daten brauchst du es nicht: Die JSON-Dateien lassen sich direkt bearbeiten.
+The tool that generated the game data under `src/data/packs/` from the
+[Vampire Survivors Wiki](https://vampire.survivors.wiki/). You don't need it for normal
+changes to the data: the JSON files can be edited directly.
 
-Nützlich ist es, wenn das Wiki aktualisiert wurde oder ein neues DLC dazukommt:
+It is useful when the wiki has been updated or a new DLC comes out:
 
 ```bash
 bash tools/wiki-import/run.sh
 ```
 
-Das Skript lädt die Wiki-Seiten, wertet die Tabellen aus und schreibt alle Pakete neu.
-**Handänderungen an den erzeugten JSON-Dateien gehen dabei verloren**, also vorher committen
-und danach mit `git diff` vergleichen.
+The script downloads the wiki pages, parses the tables and rewrites all packs.
+**Manual changes to the generated JSON files are lost**, so commit first and compare with
+`git diff` afterwards.
 
-- `texts/de_<kürzel>.py`: deutsche Beschreibungen, Platzhalter-Emojis und Sonderregeln je
-  Paket. Neue Wiki-Einträge ohne deutschen Text meldet das Skript als `WARN` und lässt sie weg.
-- `texts/en_texts.py`: englische Fassungen der eigenen Texte (Empfehlungen, Bedingungen, Hinweise).
-- `texts/names_de.py`: eigene deutsche Übersetzungen für Namen ohne offiziellen deutschen Namen.
-- `parse_localisation.py`: liest die offiziellen deutschen Namen aus poncles öffentlicher
-  Lokalisierungs-Tabelle, die das Skript bei jedem Lauf frisch herunterlädt.
-- `build_pack.py`: setzt `verified` nur, wenn Entwicklungsliste, Waffenliste und
-  Gegenstandsliste übereinstimmen; Abweichungen landen im Feld `note`.
+- `texts/de_<code>.py`: German descriptions, placeholder emojis and special rules per pack.
+  New wiki entries without German text are reported as `WARN` and left out.
+- `texts/en_texts.py`: English versions of the texts written for this project
+  (recommendations, conditions, notes).
+- `texts/names_de.py`: own German translations for names without an official German name.
+- `parse_localisation.py`: reads the official German names from poncle's public
+  localisation sheet, which the script downloads fresh on every run.
+- `build_pack.py`: only sets `verified` when the evolution list, weapon list and item list
+  agree; differences go into the `note` field.
 
-Voraussetzung: `python3` (auf macOS vorhanden) und `curl`.
+Requirements: `python3` (included with macOS) and `curl`.

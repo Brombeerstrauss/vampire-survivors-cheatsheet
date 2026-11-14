@@ -1,11 +1,11 @@
-"""Holt die offiziellen deutschen Namen und Texte aus poncles öffentlicher Lokalisierungs-Tabelle.
+"""Reads the official German names and texts from poncle's public localisation sheet.
 
-Aufruf: python3 -I parse_localisation.py <sheets.json> <loc_de.json>
+Usage: python3 -I parse_localisation.py <sheets.json> <loc_de.json>
 
-Ergebnis, nach englischem Namen geordnet:
+Result, keyed by English name:
   {"weapons": {"Whip": {"name": "Peitsche", "description": "..."}},
    "characters": {"Antonio Belpaese": {"name": "Antonio Belpaese", "bonus": "..."}}}
-Passive Gegenstände stehen im Spiel bei den Waffen und landen deshalb ebenfalls unter "weapons".
+In the game, passive items are listed with the weapons, so they end up under "weapons" too.
 """
 import json, re, sys
 
@@ -19,7 +19,7 @@ def table(name):
     return out
 
 def clean(text):
-    text = re.sub(r"<[^>]+>", "", text or "")          # Formatierungs-Tags des Spiels
+    text = re.sub(r"<[^>]+>", "", text or "")          # the game's formatting tags
     return re.sub(r"\s+", " ", text).strip()
 
 result = {"weapons": {}, "characters": {}}
@@ -47,4 +47,4 @@ for parts in chars.values():
         result["characters"][en] = {"name": de, "bonus": clean(parts.get("description", {}).get("de"))}
 
 json.dump(result, open(sys.argv[2], "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-print(f"{len(result['weapons'])} Waffen/Gegenstände, {len(result['characters'])} Charaktere mit deutschen Texten")
+print(f"{len(result['weapons'])} weapons/items, {len(result['characters'])} characters with German texts")

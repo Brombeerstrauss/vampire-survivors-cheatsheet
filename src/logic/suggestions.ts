@@ -6,8 +6,8 @@ import { freePassiveSlots, freeWeaponSlots, type RunState } from './run.ts'
 export type SuggestionSource = 'evolution' | 'pairing' | 'recommendation'
 
 /**
- * Warum etwas vorgeschlagen wird. Die Logik liefert nur Bausteine;
- * die Oberfläche formuliert daraus Sätze in der gewählten Sprache.
+ * Why something is suggested. The logic only provides building blocks;
+ * the UI turns them into sentences in the selected language.
  */
 export type SuggestionReason =
   | { type: 'missingFor'; result: WeaponId }
@@ -19,23 +19,23 @@ export interface Suggestion {
   type: 'weapon' | 'passive'
   id: string
   source: SuggestionSource
-  /** Gründe; mehrere, wenn das Teil mehreren Zwecken dient. */
+  /** Reasons; several if the part serves several purposes. */
   reasons: SuggestionReason[]
-  /** Kleiner = wichtiger. */
+  /** Lower = more important. */
   rank: number
 }
 
 export type SuggestionWarning =
-  /** Ein Gegenstand fehlt für diese Entwicklungen, aber alle passiven Slots sind belegt. */
+  /** An item is missing for these evolutions, but all passive slots are full. */
   | { type: 'passiveSlotsFull'; passive: PassiveId; results: WeaponId[] }
-  /** Eine Union-Waffe fehlt, aber alle Waffen-Slots sind belegt. */
+  /** A union weapon is missing, but all weapon slots are full. */
   | { type: 'weaponSlotsFull'; weapon: WeaponId; results: WeaponId[] }
-  /** Es fehlen mehr Gegenstände, als passive Slots frei sind. */
+  /** More items are missing than there are free passive slots. */
   | { type: 'notEnoughPassiveSlots'; needed: PassiveId[]; free: number }
-  /** Es fehlen mehr Union-Waffen, als Waffen-Slots frei sind. */
+  /** More union weapons are missing than there are free weapon slots. */
   | { type: 'notEnoughWeaponSlots'; needed: WeaponId[]; free: number }
 
-/** Hinweis ohne Alarm: der Gegenstand liegt nur als Fundstück in Stages. */
+/** Hint without alarm: the item is only found as a pickup in stages. */
 export interface SuggestionHint {
   type: 'stageOnly'
   passive: PassiveId
@@ -52,14 +52,14 @@ const RANK: Record<SuggestionSource, number> = { evolution: 0, pairing: 10, reco
 const sameReason = (a: SuggestionReason, b: SuggestionReason) => JSON.stringify(a) === JSON.stringify(b)
 
 /**
- * Was sollte als Nächstes in den Lauf?
+ * What should go into the run next?
  *
- * 1. Fehlende Partner für Entwicklungen der Waffen, die du schon hast
- * 2. Waffen, die sich mit deinen vorhandenen Gegenständen entwickeln
- * 3. Empfehlungen für den gewählten Charakter
+ * 1. Missing partners for evolutions of weapons you already have
+ * 2. Weapons that evolve with items you already have
+ * 3. Recommendations for the selected character
  *
- * Vorschläge, für die kein Slot mehr frei ist, fallen weg; stattdessen gibt es
- * eine Warnung, wenn geplante Entwicklungen dadurch unmöglich werden.
+ * Suggestions without a free slot are dropped; instead there is a
+ * warning when planned evolutions become impossible because of it.
  */
 export function suggestNext(run: RunState, catalog: Catalog): SuggestionResult {
   const ownedWeapons = new Set(run.weapons.map((w) => w.id))
@@ -80,7 +80,7 @@ export function suggestNext(run: RunState, catalog: Catalog): SuggestionResult {
     }
   }
 
-  // 1. Geplante Entwicklungen: alles, was aus vorhandenen Waffen entstehen kann
+  // 1. Planned evolutions: everything that can come from weapons you have
   const planned: EvolutionCheck[] = []
   const seenEvolutions = new Set<string>()
   for (const { id } of run.weapons) {
@@ -108,7 +108,7 @@ export function suggestNext(run: RunState, catalog: Catalog): SuggestionResult {
     }
   }
 
-  // 2. Waffen, die mit vorhandenen Gegenständen eine Entwicklung ergeben
+  // 2. Weapons that make an evolution with items you have
   for (const { id } of run.passives) {
     for (const evo of catalog.evolutionsWithPassive(id)) {
       if (evo.kind !== 'evolution' || evo.weapons.length !== 1) continue
@@ -119,7 +119,7 @@ export function suggestNext(run: RunState, catalog: Catalog): SuggestionResult {
     }
   }
 
-  // 3. Empfehlungen für den Charakter
+  // 3. Recommendations for the character
   if (run.character) {
     for (const rec of catalog.recommendationsFor(run.character)) {
       for (const w of rec.weapons) {
@@ -133,7 +133,7 @@ export function suggestNext(run: RunState, catalog: Catalog): SuggestionResult {
     }
   }
 
-  // Warnungen zu knappen Slots
+  // Warnings about running out of slots
   const warnings: SuggestionWarning[] = []
   const hints: SuggestionHint[] = []
   const slotNeeded = (id: string) => {
@@ -162,7 +162,7 @@ export function suggestNext(run: RunState, catalog: Catalog): SuggestionResult {
     if (catalog.passive(id)?.stageOnly) hints.push({ type: 'stageOnly', passive: id })
   }
 
-  // Waffen, die im Lauf schon zu etwas anderem entwickelt wurden, nicht noch einmal vorschlagen
+  // Don't suggest weapons again that were already evolved into something else in this run
   const alreadyEvolved = (id: string) =>
     catalog.evolutionsFromWeapon(id).some((e) => e.kind !== 'gift' && ownedWeapons.has(e.result))
 

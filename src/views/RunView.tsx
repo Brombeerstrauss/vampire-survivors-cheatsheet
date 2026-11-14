@@ -163,7 +163,7 @@ export function RunView() {
             )
           })}
           {!settings.ownedPacks.some((p) => p !== 'base') && (
-            <a className="block text-xs text-white/45 underline underline-offset-2" href="#/einstellungen">
+            <a className="block text-xs text-white/45 underline underline-offset-2" href="#/settings">
               {t.dlcTip}
             </a>
           )}
@@ -209,7 +209,7 @@ function RemoveButton({ onClick, label }: { onClick: () => void; label: string }
   )
 }
 
-/** Kopfzeile eines belegten Slots: Bild, Name, Entfernen. */
+/** Header of a filled slot: image, name, remove button. */
 function SlotHeader({
   href,
   entry,
@@ -353,7 +353,7 @@ function PassiveSlot({ item, run }: { item: OwnedItem; run: RunState }) {
   )
 }
 
-/** Alle Vorschläge, immer vollständig aufgeklappt. */
+/** All suggestions, always fully expanded. */
 function SuggestionList({ suggestions }: { suggestions: Suggestion[] }) {
   const { catalog, updateRun } = useAppState()
   const i18n = useI18n()

@@ -1,8 +1,8 @@
 import { loadGameData } from './load.ts'
 import packsFile from './packs.json'
 
-// Jeder Ordner unter packs/ wird automatisch mitgeladen. Ein neuer DLC braucht
-// also nur einen Ordner mit JSON-Dateien und einen Eintrag in packs.json.
+// Every folder under packs/ is loaded automatically, so a new DLC only needs
+// a folder with JSON files and an entry in packs.json.
 const files = import.meta.glob('./packs/*/*.json', { eager: true, import: 'default' })
 
 const { data, problems } = loadGameData(packsFile, files)

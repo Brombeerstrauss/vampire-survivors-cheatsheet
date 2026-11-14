@@ -4,9 +4,9 @@ import { registerSW } from 'virtual:pwa-register'
 import './index.css'
 import App from './App.tsx'
 
-// Offline-Betrieb und Updates: Liegt eine neue Version bereit, lädt sich die App einmal
-// selbst neu, statt erst beim nächsten Öffnen die neue Version zu zeigen. Solange die App
-// offen ist, schaut sie stündlich nach Updates.
+// Offline use and updates: when a new version is ready, the app reloads itself once
+// instead of waiting for the next launch to show it. While the app is open, it
+// checks for updates every hour.
 registerSW({
   immediate: true,
   onRegisteredSW(_url, registration) {

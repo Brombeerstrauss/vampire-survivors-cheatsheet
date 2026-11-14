@@ -6,7 +6,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 import { execFileSync } from 'node:child_process'
 import { readFileSync } from 'node:fs'
 
-// Versionsangaben für die Einstellungen: Nummer aus package.json, Code-Stand aus Git, Datum des Baus.
+// Version info for the settings: number from package.json, commit from Git, build date.
 const pkg = JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 'utf8')) as { version: string }
 const commit = (() => {
   try {
@@ -18,8 +18,8 @@ const commit = (() => {
 
 // https://vite.dev/config/
 export default defineConfig({
-  // Relative Pfade, damit die App unter jeder Adresse läuft
-  // (GitHub Pages im Unterordner, Cloudflare Pages, Netlify).
+  // Relative paths, so the app runs at any address
+  // (GitHub Pages in a subfolder, Cloudflare Pages, Netlify).
   base: './',
   define: {
     __APP_VERSION__: JSON.stringify(pkg.version),
@@ -31,14 +31,14 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
-      // Registrierung übernimmt src/main.tsx (lädt nach einem Update einmal neu).
+      // src/main.tsx registers the service worker (and reloads once after an update).
       injectRegister: false,
       includeAssets: ['favicon.ico', 'logo.svg', 'apple-touch-icon-180x180.png', 'custom-icons/**/*'],
       manifest: {
         name: 'Vampire Survivors Cheatsheet',
         short_name: 'VS Cheatsheet',
         description:
-          'Unofficial companion app for Vampire Survivors · Inoffizielle Begleit-App für Vampire Survivors',
+          'Unofficial companion app for Vampire Survivors, in English and German',
         start_url: '.',
         scope: '.',
         display: 'standalone',
@@ -53,12 +53,13 @@ export default defineConfig({
         ],
       },
       workbox: {
-        // Neue Versionen sofort aktivieren; ohne das wartet ein Update, bis alle Fenster der App zu sind.
+        // Activate new versions right away; otherwise an update waits until every app window is closed.
         skipWaiting: true,
         clientsClaim: true,
-        // Alles vorab cachen, damit die App komplett offline läuft.
+        // Precache everything so the app runs fully offline.
         globPatterns: ['**/*.{js,css,html,svg,png,webp,jpg,ico,json,woff2}'],
-        // Originalbilder aus dem Wiki: beim ersten Anzeigen speichern, danach auch offline nutzbar.
+        // Original images from the wiki: stored the first time they are shown, then available offline.
+            // The cache name stays German so existing installs keep their images.
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/vampire\.survivors\.wiki\/images\//,

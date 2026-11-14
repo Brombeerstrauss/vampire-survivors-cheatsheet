@@ -1,26 +1,26 @@
-# Eigene Icons
+# Custom icons
 
-Die App zeigt die Originalbilder aus dem Spiel, lädt sie aber vom Wiki und enthält selbst
-keine Kopien. Hier kannst du eigene Bilder ablegen; sie haben Vorrang vor den Wiki-Bildern.
+The app shows the original images from the game, but loads them from the wiki and contains no
+copies itself. You can put your own images here; they take precedence over the wiki images.
 
-So geht's:
+How to:
 
-1. Bild in diesen Ordner legen, z. B. `whip.png` (quadratisch, 64×64 bis 128×128 Pixel
-   reicht; erlaubt sind `.png`, `.webp`, `.svg`, `.jpg`, `.gif`).
-2. Im passenden JSON-Eintrag unter `src/data/packs/<paket>/` das Feld `icon` setzen:
+1. Put the image in this folder, e.g. `whip.png` (square, 64×64 to 128×128 pixels is enough;
+   `.png`, `.webp`, `.svg`, `.jpg` and `.gif` are allowed).
+2. In the matching JSON entry under `src/data/packs/<pack>/`, set the `icon` field:
 
    ```json
    { "id": "whip", "name": "Whip", "icon": "whip.png" }
    ```
 
-3. App neu bauen bzw. Seite neu laden.
+3. Rebuild the app or reload the page.
 
-Welches Bild erscheint: zuerst `icon` (dieser Ordner), sonst `image` (Wiki), sonst das Emoji
-aus dem Feld `emoji`. Lädt ein Bild nicht, kommt automatisch das nächste dran.
+Which image appears: first `icon` (this folder), then `image` (wiki), then the emoji from the
+`emoji` field. If an image doesn't load, the next one is used automatically.
 
-Unterordner sind erlaubt (`"icon": "weapons/whip.png"`).
+Subfolders are allowed (`"icon": "weapons/whip.png"`).
 
-Bitte nur Bilder verwenden, die du selbst erstellt hast oder nutzen darfst.
+Please only use images you made yourself or are allowed to use.
 
-Hinweis: Das Import-Werkzeug (`tools/wiki-import/run.sh`) schreibt die JSON-Dateien neu und
-entfernt dabei von Hand eingetragene `icon`-Felder.
+Note: the import tool (`tools/wiki-import/run.sh`) rewrites the JSON files and removes any
+`icon` fields added by hand.

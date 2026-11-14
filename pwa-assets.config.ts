@@ -1,6 +1,6 @@
 import { defineConfig, minimal2023Preset } from '@vite-pwa/assets-generator/config'
 
-// Erzeugt die App-Icons aus public/logo.svg: `npm run icons`
+// Generates the app icons from public/logo.svg: `npm run icons`
 const background = '#140b1f'
 
 export default defineConfig({

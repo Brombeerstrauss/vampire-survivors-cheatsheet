@@ -1,6 +1,6 @@
 import type { Lang, LocalizedText } from '../data/types.ts'
 
-/** Was ein Eintrag für die Namensanzeige mitbringt. */
+/** What an entry provides for displaying its name. */
 export interface Named {
   name: string
   nameDe?: string
@@ -8,16 +8,16 @@ export interface Named {
 }
 
 export interface DisplayName {
-  /** Hauptname in der gewählten Sprache. */
+  /** Main name in the selected language. */
   main: string
-  /** Eigene Übersetzung in Klammern, nur auf Deutsch und nur ohne offiziellen deutschen Namen. */
+  /** Own translation in parentheses, only in German and only without an official German name. */
   hint?: string
 }
 
 /**
- * Name eines Eintrags in der gewählten Sprache.
- * Deutsch: offizieller deutscher Name, sonst der englische mit eigener Übersetzung in Klammern.
- * Englisch: immer der englische Name aus dem Spiel.
+ * Name of an entry in the selected language.
+ * German: the official German name, otherwise the English one with own translation in parentheses.
+ * English: always the English name from the game.
  */
 export function displayName(entry: Named, lang: Lang): DisplayName {
   if (lang === 'en') return { main: entry.name }
@@ -25,27 +25,22 @@ export function displayName(entry: Named, lang: Lang): DisplayName {
   return entry.nameDeHint ? { main: entry.name, hint: entry.nameDeHint } : { main: entry.name }
 }
 
-/** Name als ein String, z. B. „Unearthly Bolt (Überirdischer Blitz)“. */
+/** Name as one string, e.g. "Unearthly Bolt (Überirdischer Blitz)". */
 export function fullName(entry: Named, lang: Lang): string {
   const { main, hint } = displayName(entry, lang)
   return hint ? `${main} (${hint})` : main
 }
 
-/** Name für Fließtexte: ohne Klammer, damit Sätze lesbar bleiben. */
+/** Name for running text: no parentheses, so sentences stay readable. */
 export function shortName(entry: Named, lang: Lang): string {
   return displayName(entry, lang).main
 }
 
-/** Alle Namen eines Eintrags, damit die Suche in beiden Sprachen findet. */
+/** All names of an entry, so search works in both languages. */
 export function searchNames(entry: Named): string {
   return [entry.name, entry.nameDe, entry.nameDeHint].filter(Boolean).join(' ')
 }
 
 export function localize(text: LocalizedText | undefined, lang: Lang): string {
   return text ? text[lang] : ''
-}
-
-/** Sprache des Geräts als Vorgabe: Deutsch, wenn das Gerät auf Deutsch steht, sonst Englisch. */
-export function detectLanguage(languages: readonly string[]): Lang {
-  return languages.some((l) => l.toLowerCase().startsWith('de')) ? 'de' : 'en'
 }

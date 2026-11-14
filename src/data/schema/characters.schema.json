@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Charaktere eines Pakets",
+  "title": "Characters of a pack",
   "type": "object",
   "required": ["characters"],
   "additionalProperties": false,
@@ -22,17 +22,17 @@
             "type": "array",
             "items": { "$ref": "common.schema.json#/definitions/id" },
             "uniqueItems": true,
-            "description": "Kennungen der Startwaffen. Meist genau eine, darf leer sein."
+            "description": "IDs of the starting weapons. Usually exactly one; may be empty."
           },
           "bonus": {
             "$ref": "common.schema.json#/definitions/localizedText",
-            "description": "Besonderheit des Charakters in einem Satz."
+            "description": "The character's special trait in one sentence."
           },
           "secret": {
             "type": "boolean",
-            "description": "Geheimer Charakter; lässt sich über den Spoiler-Schalter ausblenden."
+            "description": "Secret character; can be hidden with the spoiler switch."
           },
-          "unlock": { "type": "string", "description": "Wie man den Charakter freischaltet." },
+          "unlock": { "type": "string", "description": "How to unlock the character." },
           "emoji": { "$ref": "common.schema.json#/definitions/emoji" },
           "icon": { "$ref": "common.schema.json#/definitions/icon" },
           "image": { "$ref": "common.schema.json#/definitions/image" },

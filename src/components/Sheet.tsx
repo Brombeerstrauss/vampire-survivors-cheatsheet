@@ -4,7 +4,7 @@ import { searchNames } from '../i18n/names.ts'
 import { buttonClass, matches } from './styles.ts'
 import { EntryIcon, EntryName, Pill, SearchField, SourceBadge } from './ui.tsx'
 
-/** Fenster, das auf dem Handy von unten hereinfährt und auf dem Desktop mittig erscheint. */
+/** Panel that slides up from the bottom on phones and appears centered on desktop. */
 export function Sheet({ title, onClose, children }: { title: string; onClose: () => void; children: ReactNode }) {
   const { t } = useI18n()
   const titleId = useId()
@@ -63,15 +63,15 @@ export interface PickerItem {
   icon?: string
   image?: string
   source: string
-  /** Zusatzinfo unter dem Namen. */
+  /** Extra info below the name. */
   detail?: string
-  /** Hervorgehobene Hinweise, z. B. „Partner für Whip“. */
+  /** Highlighted hints, e.g. "Partner for Whip". */
   tags?: string[]
-  /** Sortierung nach den hervorgehobenen Einträgen; kleiner steht weiter oben. */
+  /** Sort order for highlighted entries; lower comes first. */
   rank?: number
 }
 
-/** Auswahl-Liste mit Suche; hervorgehobene Einträge stehen oben. */
+/** Picker list with search; highlighted entries come first. */
 export function ItemPicker({
   title,
   items,

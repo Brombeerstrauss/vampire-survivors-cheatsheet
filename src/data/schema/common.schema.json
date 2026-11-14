@@ -1,61 +1,61 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Gemeinsame Bausteine",
+  "title": "Shared building blocks",
   "definitions": {
     "id": {
       "type": "string",
       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
-      "description": "Kennung: Kleinbuchstaben, Ziffern und Bindestriche, z. B. magic-wand."
+      "description": "ID: lowercase letters, digits and hyphens, e.g. magic-wand."
     },
     "name": {
       "type": "string",
       "minLength": 1,
-      "description": "Englischer Name wie im Spiel."
+      "description": "English name as in the game."
     },
     "source": {
       "type": "string",
       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
-      "description": "Paket, aus dem der Eintrag stammt: base oder die Kennung eines DLCs (= Ordnername)."
+      "description": "Pack the entry comes from: base or the ID of a DLC (= folder name)."
     },
     "verified": {
       "type": "boolean",
-      "description": "false, solange der Eintrag nicht sicher gegen das Wiki geprüft ist."
+      "description": "false until the entry has been reliably checked against the wiki."
     },
     "emoji": {
       "type": "string",
       "minLength": 1,
       "maxLength": 16,
-      "description": "Platzhalter-Symbol, solange kein eigenes Icon hinterlegt ist."
+      "description": "Placeholder emoji, shown when there is no custom icon or image."
     },
     "icon": {
       "type": "string",
       "pattern": "^[A-Za-z0-9._/-]+\\.(png|webp|svg|jpg|jpeg|gif)$",
-      "description": "Dateiname eines eigenen Icons in public/custom-icons/."
+      "description": "File name of a custom icon in public/custom-icons/."
     },
     "image": {
       "type": "string",
       "pattern": "^https://[^\\s]+$",
-      "description": "Adresse des Originalbilds im Wiki; wird zur Laufzeit geladen."
+      "description": "URL of the original image on the wiki; loaded at runtime."
     },
     "localizedText": {
       "type": "object",
       "required": ["de", "en"],
       "additionalProperties": false,
       "properties": {
-        "de": { "type": "string", "minLength": 1, "description": "Deutscher Text." },
-        "en": { "type": "string", "minLength": 1, "description": "Englischer Text." }
+        "de": { "type": "string", "minLength": 1, "description": "German text." },
+        "en": { "type": "string", "minLength": 1, "description": "English text." }
       },
-      "description": "Text in beiden Sprachen der App."
+      "description": "Text in both app languages."
     },
     "nameDe": {
       "type": "string",
       "minLength": 1,
-      "description": "Offizieller deutscher Name aus dem Spiel, falls er vom englischen abweicht."
+      "description": "Official German name from the game, if it differs from the English one."
     },
     "nameDeHint": {
       "type": "string",
       "minLength": 1,
-      "description": "Eigene deutsche Übersetzung, wenn es keinen offiziellen deutschen Namen gibt; erscheint in Klammern."
+      "description": "Own German translation when there is no official German name; shown in parentheses."
     },
     "text": {
       "type": "string",
@@ -63,12 +63,12 @@
     },
     "level": {
       "enum": ["max", "any"],
-      "description": "max = Maximalstufe nötig, any = Besitz reicht."
+      "description": "max = max level needed, any = owning it is enough."
     },
     "maxLevel": {
       "type": "integer",
       "minimum": 1,
-      "description": "Höchste Stufe."
+      "description": "Maximum level."
     }
   }
 }

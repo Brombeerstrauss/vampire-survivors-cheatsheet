@@ -2,7 +2,7 @@ import re
 DLC = {"lm": "lm", "bm": "bm", "tf": "tf", "em": "em", "og": "og", "oc": "oc", "ed": "ed", "ac": "ac"}
 
 def tables(text):
-    """Liefert (Abschnittspfad, Tabellentext) für jede Tabelle."""
+    """Returns (section path, table text) for each table."""
     out, path, i = [], [], 0
     lines = text.split("\n")
     buf, depth = None, 0
@@ -41,7 +41,7 @@ def rows(table):
     return heads, result
 
 def strip_attr(cell):
-    # "style=... | inhalt" -> "inhalt" (nur wenn vor dem ersten | kein [[ oder {{ steht)
+    # "style=... | content" -> "content" (only if there is no [[ or {{ before the first |)
     m = re.match(r"^([^\[\{|]*=[^\[\{|]*)\|(.*)$", cell, re.S)
     return m.group(2).strip() if m else cell
 

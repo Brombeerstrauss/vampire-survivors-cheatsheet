@@ -260,7 +260,7 @@ function CharacterReasons({
   return (
     <ul className="space-y-1.5">
       {[...rows.values()].map(({ character, reasons, isStarter }) => {
-        // „Startwaffe“ nur nennen, wenn keine Empfehlung das schon erklärt
+        // Only say "starting weapon" if no recommendation already explains it
         const shown = reasons.length > 0 ? reasons : isStarter ? [t.startingWeapon] : []
         return (
           <li key={character.id}>
