@@ -1,5 +1,5 @@
-# Deutsche Texte und Platzhalter-Emojis für das Basisspiel.
-# Schlüssel = englischer Name wie im Wiki.
+# German texts and placeholder emojis for the base game.
+# Key = English name as on the wiki.
 
 CHARACTERS = {
     "Antonio Belpaese": ("🧔", "Erhält alle 10 Level +10 % Macht (max. +50 %)."),
@@ -36,7 +36,7 @@ CHARACTERS = {
     "Gazebo": ("🌿", "Jede Überheilung um 30 gibt einen dauerhaften Bonus auf einen zufälligen Wert."),
     "Chula-Reh": ("🎲", "Würfelt alle 30 Sekunden oder beim Aufsammeln eines Rerollo um sein Glück."),
     "Space Dude": ("👽", "Löst je nach Abklingzeit gelegentlich alle Waffen doppelt aus."),
-    # Geheime Charaktere
+    # Secret characters
     "Exdash Exiviiq": ("👻", "„Wenigstens hat es Glück.“"),
     "Toastie": ("🍞", "„So viel Potenzial.“"),
     "Smith IV": ("🐻‍❄️", "„Der schrullige weiße Bär.“"),
@@ -61,7 +61,7 @@ CHARACTERS = {
     "Space Dette": ("👩‍🚀", "Die Startwaffe wird mit jedem Level stärker; gewinnt mehr Fans, wenn sie viele Gegner besiegt."),
 }
 
-# Startwaffen, wo die Infobox leer oder mehrdeutig ist
+# Starting weapons where the infobox is empty or ambiguous
 CHARACTER_WEAPON_OVERRIDES = {
     "Para Kooleo": ["Penshin Fatcha"],
     "Random": [],
@@ -127,7 +127,7 @@ WEAPONS = {
     "Phas3r": ("📡", "Erzeugt schmale Schadenszonen; wächst stark mit der Anzahl."),
     "Chaos Rune": ("🌌", "Geschwindigkeit und Dauer erhöhen stattdessen die Zahl der Trefferzonen."),
     "Arma Dio": ("🗡️", "Lässt dich einen zusätzlichen passiven Gegenstand wählen."),
-    # Entwicklungen
+    # Evolutions
     "Bloody Tear": ("🩸", "Entwicklung von Whip: kann kritisch treffen und saugt Gesundheit ab."),
     "Holy Wand": ("🌟", "Entwicklung von Magic Wand: feuert ohne Pause."),
     "Thousand Edge": ("🗡️", "Entwicklung von Knife: feuert ohne Pause."),
@@ -166,7 +166,7 @@ WEAPONS = {
     "Vandalier": ("🕊️", "Union aus Peachone und Ebony Wings: zwei Zonen kreisen in beide Richtungen; gibt einen Waffen-Slot frei."),
     "Phieraggi": ("🔫", "Union aus Phiera Der Tuphello und Eight The Sparrow; wird mit Wiederbelebungen stärker."),
     "Fuwalafuwaloo": ("🌬️", "Union aus Vento Sacro und Bloody Tear: kritische Treffer können Explosionen auslösen."),
-    # Geschenke
+    # Gifts
     "Super Candybox II Turbo": ("🍭", "Geschenk von Candybox: lässt dich aus einer Auswahl bereits einmal erreichter Entwicklungen wählen."),
     "Sole Solution": ("☀️", "Geschenk von Victory Sword: wird stärker, je mehr Gegner besiegt werden."),
 }
@@ -197,7 +197,7 @@ PASSIVES = {
     "Metaglio Right": ("🌒", "+5 % Fluch pro Stufe (max. +40 %). Mit Metaglio Left auf Maximalstufe wird Laurel zu Crimson Shroud."),
 }
 
-# Ringe und Metaglios gibt es nur als Fundstück in Stages, nicht über Level-ups.
+# Rings and Metaglios are only found as pickups in stages, never on level-up.
 STAGE_ONLY = {"Silver Ring", "Gold Ring", "Metaglio Left", "Metaglio Right"}
 
 EVOLUTION_DE = {

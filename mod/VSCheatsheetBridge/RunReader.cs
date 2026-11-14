@@ -6,10 +6,10 @@ using System.Text;
 
 namespace VSCheatsheetBridge;
 
-// Liest den Run per Reflection. Das Spiel benennt Felder zwischen Versionen
-// gelegentlich um, deshalb probiert jeder Zugriff mehrere bekannte Namen
-// (Quellen: lukeod/vampiresurvivors-modding und VSEvolutionHelperEx).
-// Passt nichts mehr, zeigt /debug die tatsächlich vorhandenen Namen.
+// Reads the run via reflection. The game occasionally renames fields between versions,
+// so every access tries several known names
+// (sources: lukeod/vampiresurvivors-modding and VSEvolutionHelperEx).
+// If nothing matches anymore, /debug shows the names that actually exist.
 internal static class RunReader
 {
     private const BindingFlags Inst = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
@@ -22,14 +22,14 @@ internal static class RunReader
     private static Type _debugFor;
     private static readonly HashSet<string> Warned = new();
 
-    /// <summary>Der GameManager des Spiels (oder null im Hauptmenü).</summary>
+    /// <summary>The game's GameManager (or null in the main menu).</summary>
     public static object GameManager()
     {
         ResolveTypes();
         return FindGameManager();
     }
 
-    /// <summary>Erstes vorhandenes Feld bzw. erste Eigenschaft mit einem der Namen.</summary>
+    /// <summary>First existing field or property with one of the names.</summary>
     public static object GetMember(object obj, params string[] names) => Get(obj, names);
 
     public static RunSnapshot Read()
@@ -70,8 +70,8 @@ internal static class RunReader
     {
         if (_typesResolved) return;
         _typesResolved = true;
-        // Nur die Spiel-Assembly durchsuchen: GetTypes() auf Unity-Assemblies wirft
-        // unter Il2CppInterop teils TypeLoadException.
+        // Only search the game assembly: GetTypes() on Unity assemblies sometimes throws
+        // TypeLoadException under Il2CppInterop.
         foreach (Assembly a in AppDomain.CurrentDomain.GetAssemblies())
         {
             if (!(a.GetName().Name ?? "").StartsWith("VampireSurvivors")) continue;
@@ -90,11 +90,11 @@ internal static class RunReader
                 catch { }
             }
         }
-        Plugin.Logger.LogInfo($"GameManager: {_gameManagerType?.FullName ?? "nicht gefunden"}, GM: {_gmType?.FullName ?? "nicht gefunden"}");
-        if (_gameManagerType == null) _typesResolved = false; // Assembly evtl. noch nicht geladen
+        Plugin.Logger.LogInfo($"GameManager: {_gameManagerType?.FullName ?? "not found"}, GM: {_gmType?.FullName ?? "not found"}");
+        if (_gameManagerType == null) _typesResolved = false; // assembly may not be loaded yet
     }
 
-    // GM.Core ist der übliche Zugang; sonst ein statisches Feld vom Typ GameManager.
+    // GM.Core is the usual entry point; otherwise a static field of type GameManager.
     private static object FindGameManager()
     {
         if (_gameManagerType == null) return null;
@@ -121,7 +121,7 @@ internal static class RunReader
         return null;
     }
 
-    // Alle Spieler (lokaler und Online-Koop), sonst nur Spieler 1.
+    // All players (local and online co-op), otherwise just player 1.
     private static List<object> FindCharacters(object gm)
     {
         var result = new List<object>();
@@ -167,7 +167,7 @@ internal static class RunReader
         return list;
     }
 
-    // ---- Reflection-Helfer ------------------------------------------------
+    // ---- Reflection helpers -----------------------------------------------
 
     private static object Get(object obj, params string[] names)
     {
@@ -209,7 +209,7 @@ internal static class RunReader
         catch (Exception ex) { WarnOnce(method, ex); return null; }
     }
 
-    // Il2Cpp-Listen und -Arrays sind keine .NET-IEnumerables: Count/Length + Indexer.
+    // Il2Cpp lists and arrays are not .NET IEnumerables: Count/Length + indexer.
     private static IEnumerable<object> Items(object list)
     {
         if (list == null) yield break;
@@ -230,7 +230,7 @@ internal static class RunReader
     private static string EnumName(object v)
     {
         if (v == null) return null;
-        // Nullable<Enum> aus Il2Cpp hat ein Value-Feld; normale Enums liefern ihren Namen.
+        // Nullable<Enum> from Il2Cpp has a Value field; normal enums return their name.
         object inner = v.GetType().Name.StartsWith("Nullable") ? Get(v, "Value", "value") : v;
         return inner?.ToString();
     }
@@ -240,7 +240,7 @@ internal static class RunReader
         if (Warned.Add(key)) Plugin.Logger.LogWarning($"[{key}] {ex.GetType().Name}: {ex.Message}");
     }
 
-    // Namen der vorhandenen Felder, damit sich umbenannte Felder schnell finden lassen.
+    // Names of the existing fields, so renamed fields can be found quickly.
     private static string BuildDebug(object gm, object character, object weapons, object accessories)
     {
         var sb = new StringBuilder("{");

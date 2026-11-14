@@ -2,9 +2,9 @@ import type { GameData } from '../data/types.ts'
 import type { RunState } from './run.ts'
 
 /**
- * Anbindung an das BepInEx-Plugin unter `mod/`: Es meldet den laufenden Lauf über
- * http://127.0.0.1:47321 mit den internen Kennungen des Spiels (z. B. MAGIC_MISSILE).
- * Hier werden diese Meldungen geprüft und in den Lauf der App übersetzt.
+ * Connection to the BepInEx plugin in `mod/`: it reports the current run on
+ * http://127.0.0.1:47321 using the game's internal IDs (e.g. MAGIC_MISSILE).
+ * This module validates those updates and turns them into the app's run.
  */
 export const MOD_PORT = 47321
 export const MOD_URL = `http://127.0.0.1:${MOD_PORT}`
@@ -38,7 +38,7 @@ function parseItems(raw: unknown): ModItem[] {
   })
 }
 
-/** Prüft eine Meldung des Plugins; `null`, wenn sie nicht zum Format Version 1 passt. */
+/** Validates an update from the plugin; `null` if it does not match format version 1. */
 export function parseSnapshot(raw: unknown): ModSnapshot | null {
   if (!isObject(raw) || raw.v !== 1 || !Array.isArray(raw.players)) return null
   const players = raw.players.flatMap((p, i): ModPlayer[] => {
@@ -61,7 +61,7 @@ export interface GameIdIndex {
   passives: ReadonlyMap<string, string>
 }
 
-/** Spielkennung -> Kennung der App, je Art. Nutzt `gameIds` aus den Daten. */
+/** Game ID -> app ID, per kind. Uses `gameIds` from the data. */
 export function buildGameIdIndex(data: Pick<GameData, 'characters' | 'weapons' | 'passives'>): GameIdIndex {
   const index = (entries: { id: string; gameIds?: string[] }[]) => {
     const map = new Map<string, string>()
@@ -71,7 +71,7 @@ export function buildGameIdIndex(data: Pick<GameData, 'characters' | 'weapons' |
   return { characters: index(data.characters), weapons: index(data.weapons), passives: index(data.passives) }
 }
 
-/** Stufen aus dem Spiel, Schlüssel `weapon:<id>` bzw. `passive:<id>`. */
+/** Levels from the game, keyed `weapon:<id>` or `passive:<id>`. */
 export type LiveLevels = Readonly<Record<string, number>>
 
 export const levelKey = (type: 'weapon' | 'passive', id: string) => `${type}:${id}`
@@ -79,13 +79,13 @@ export const levelKey = (type: 'weapon' | 'passive', id: string) => `${type}:${i
 export interface LiveRun {
   run: RunState
   levels: LiveLevels
-  /** Kennungen aus dem Spiel, die die App nicht kennt (z. B. versteckte Waffen). */
+  /** IDs from the game the app does not know (e.g. hidden weapons). */
   unknown: string[]
 }
 
 /**
- * Übersetzt einen Spieler aus dem Spiel in einen Lauf der App. Das Spiel ist hier die
- * Wahrheit: Slot-Grenzen werden nicht nachgeprüft, nur Doppeltes fällt weg.
+ * Turns a player from the game into an app run. The game is the source of truth here:
+ * slot limits are not re-checked, only duplicates are dropped.
  */
 export function liveRunFromPlayer(player: ModPlayer, index: GameIdIndex): LiveRun {
   const levels: Record<string, number> = {}
@@ -117,7 +117,7 @@ export function liveRunFromPlayer(player: ModPlayer, index: GameIdIndex): LiveRu
   }
 }
 
-/** Gleicher Inhalt? Vermeidet unnötige Speicher- und Renderdurchläufe bei jeder Meldung. */
+/** Same content? Avoids needless saving and rendering on every update. */
 export function sameRun(a: RunState, b: RunState): boolean {
   const ids = (items: { id: string }[]) => items.map((i) => i.id).join(',')
   return a.character === b.character && ids(a.weapons) === ids(b.weapons) && ids(a.passives) === ids(b.passives)

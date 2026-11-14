@@ -70,7 +70,7 @@ WEAPONS = {
     "Myo Lift": ("🛗", "Löst auch andere Uhrwerk-Waffen aus; Anzahl und gefundene Orologions erhöhen den Schaden."),
     "Epi Head": ("🗿", "Löst auch andere Uhrwerk-Waffen aus; Anzahl und gefundene Orologions erhöhen den Schaden."),
     "Familiar Forge": ("🔨", "Lässt dich einen Familiar beschwören."),
-    # Entwicklungen
+    # Evolutions
     "Vampire Killer": ("🪢", "Entwicklung von Alchemy Whip: jede 3. Auslösung feuert zusätzliche Projektile; grelles Sonnenlicht verbrennt Bosse."),
     "Spirit Tornado Tip": ("🌪️", "Entwicklung von Wind Whip: jede 7. Auslösung ruft einen Geist, der heftig Erfahrungs-Edelsteine einsammelt."),
     "Cross Crasher Tip": ("✝️", "Entwicklung von Platinum Whip: jede 7. Auslösung feuert zusätzlich besondere Projektile."),
@@ -130,7 +130,7 @@ WEAPONS = {
     "Venus Crescent": ("🌙", "Union aus Summon Spirit Tornado und Gorgeous Moon: Liebe, Schönheit und Licht."),
     "Dark Frogamorphosis": ("🐸", "Union aus Anura und Soul Eater: kann Gegner tatsächlich fressen."),
     "Clock Tower": ("🕰️", "Union aus Endo Gears, Peri Pendulum, Myo Lift und Epi Head."),
-    # Geschenke
+    # Gifts
     "Alucard Shield": ("🛡️", "Geschenk von Alucard Swords: nimmt alle anderen ausgerüsteten Entwicklungen auf und löst sie aus; der schwebende Schild schadet Gegnern; belegt einen Waffen-Slot."),
     "Universitas": ("☄️", "Geschenk von Vol Luminatio und Vol Umbra: lässt in festen Abständen Meteore auf Gegner regnen."),
 }
@@ -243,7 +243,7 @@ EVOLUTION_DE = {
     "Alucard Shield": {"conditions": ["Beliebige 6 Entwicklungen und 6 passive Gegenstände auf Maximalstufe.", "Kommt aus einer Truhe."]},
     "Universitas": {"conditions": ["Vol Luminatio und Vol Umbra auf Maximalstufe; kommt aus einer Truhe."]},
 }
-# Wiki-Seitentitel, die vom Namen im Spiel abweichen
+# Wiki page titles that differ from the name in the game
 NAME_OVERRIDES = {"Death (character)": "Death"}
 CHARACTER_NOTES = {}
 CHARACTER_WEAPON_OVERRIDES = {}

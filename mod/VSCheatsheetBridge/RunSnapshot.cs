@@ -6,19 +6,19 @@ using System.Text;
 
 namespace VSCheatsheetBridge;
 
-// Format für die App (Version 1):
+// Format for the app (version 1):
 // { "v":1, "inRun":true, "time":1731600000000,
 //   "players":[{ "index":0, "character":"ANTONIO",
 //                "weapons":[{"type":"WHIP","level":3}],
 //                "passives":[{"type":"MAXHEALTH","level":1}] }] }
-// Die Namen sind die Enum-Namen des Spiels (WeaponType/ItemType/CharacterType).
+// The names are the game's enum names (WeaponType/ItemType/CharacterType).
 internal sealed class RunSnapshot
 {
     public bool InRun;
     public readonly List<PlayerSnapshot> Players = new();
     public string DebugJson = "{}";
 
-    // Alles außer dem Zeitstempel: ändert sich nur, wenn sich der Run ändert.
+    // Everything except the timestamp: only changes when the run changes.
     public string ContentKey() =>
         (InRun ? "1" : "0") + string.Join(",", Players.Select(p => p.ToJson()));
 

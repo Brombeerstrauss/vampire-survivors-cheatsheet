@@ -8,16 +8,16 @@ import type {
   Weapon,
 } from './types.ts'
 
-/** Inhalt einer JSON-Datei, wie `import.meta.glob` ihn liefert. */
+/** Contents of a JSON file, as `import.meta.glob` returns it. */
 export type RawFiles = Record<string, unknown>
 
-/** Dateiname (ohne `.json`) und zugleich der Schlüssel mit der Liste darin. */
+/** File name (without `.json`), which is also the key of the list inside. */
 export const PACK_FILES = ['characters', 'weapons', 'passives', 'evolutions', 'recommendations'] as const
 export type PackFile = (typeof PACK_FILES)[number]
 
 export interface LoadResult {
   data: GameData
-  /** Probleme beim Einlesen, z. B. Dateien in unbekannten Ordnern. */
+  /** Problems while loading, e.g. files in unknown folders. */
   problems: string[]
 }
 
@@ -32,10 +32,10 @@ function listOf(raw: unknown, key: string): unknown[] {
 }
 
 /**
- * Führt `packs.json` und alle Paket-Dateien zu einem Datensatz zusammen.
+ * Merges `packs.json` and all pack files into one data set.
  *
- * @param packsFile Inhalt von `packs.json`
- * @param files     Paket-Dateien, Schlüssel = Pfad (`.../packs/<paket>/<datei>.json`)
+ * @param packsFile contents of `packs.json`
+ * @param files     pack files, key = path (`.../packs/<pack>/<file>.json`)
  */
 export function loadGameData(packsFile: unknown, files: RawFiles): LoadResult {
   const problems: string[] = []
@@ -51,7 +51,7 @@ export function loadGameData(packsFile: unknown, files: RawFiles): LoadResult {
     recommendations: [],
   }
 
-  // Reihenfolge wie in packs.json (Basisspiel zuerst), nicht alphabetisch nach Ordnername
+  // Order as in packs.json (base game first), not alphabetical by folder name
   const packOrder = new Map(packs.map((pack, index) => [pack.id, index]))
   const orderOf = (path: string) => packOrder.get(PATH_PATTERN.exec(path)?.[1] ?? '') ?? packs.length
   const paths = Object.keys(files).sort((a, b) => orderOf(a) - orderOf(b) || a.localeCompare(b))
@@ -61,17 +61,17 @@ export function loadGameData(packsFile: unknown, files: RawFiles): LoadResult {
     const folder = match?.[1]
     const file = match?.[2] as PackFile | undefined
     if (!folder || !file || !PACK_FILES.includes(file)) {
-      problems.push(`${path}: unbekannte Datei, wird ignoriert`)
+      problems.push(`${path}: unknown file, ignored`)
       continue
     }
     if (!knownPacks.has(folder)) {
-      problems.push(`${path}: Ordner "${folder}" fehlt in packs.json`)
+      problems.push(`${path}: folder "${folder}" is missing from packs.json`)
     }
 
     const entries = listOf(files[path], file) as { source?: string }[]
     for (const entry of entries) {
       if (entry.source !== folder) {
-        problems.push(`${path}: Eintrag mit source "${entry.source}" liegt im Ordner "${folder}"`)
+        problems.push(`${path}: entry with source "${entry.source}" is in folder "${folder}"`)
       }
     }
 

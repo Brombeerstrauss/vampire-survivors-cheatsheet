@@ -11,9 +11,9 @@ using UnityEngine;
 
 namespace VSCheatsheetBridge;
 
-// Liest den laufenden Run (Charakter, Waffen, passive Gegenstände) aus, zeigt im Spiel an,
-// was pro Waffe für die nächste Entwicklung fehlt, und stellt den Run zusätzlich der
-// Cheatsheet-App über http://127.0.0.1:<port> bereit. Am Spiel selbst ändert das Plugin nichts.
+// Reads the current run (character, weapons, passive items), shows in game what each weapon
+// still needs for its next evolution, and also serves the run to the cheatsheet app via
+// http://127.0.0.1:<port>. The plugin does not change anything in the game itself.
 [BepInPlugin(Guid, Name, Version)]
 public class Plugin : BasePlugin
 {
@@ -41,21 +41,21 @@ public class Plugin : BasePlugin
     {
         Logger = Log;
         ConfigEntry<int> port = Config.Bind("Server", "Port", 47321,
-            "Port auf 127.0.0.1, unter dem die App den Run abfragt.");
+            "Port on 127.0.0.1 where the app queries the run.");
         ConfigEntry<int> interval = Config.Bind("Server", "IntervalMs", 500,
-            "Wie oft der Run ausgelesen wird (Millisekunden).");
-        ConfigEntry<string> language = Config.Bind("Overlay", "Language", "de", "Sprache des Overlays: de oder en.");
-        OverlayVisible = Config.Bind("Overlay", "Visible", true, "Overlay beim Start anzeigen.");
-        ToggleKey = Config.Bind("Overlay", "ToggleKey", KeyCode.F8, "Taste zum Ein- und Ausblenden.");
-        ResetKey = Config.Bind("Overlay", "ResetKey", KeyCode.F9, "Taste, um das Overlay an seine Standardposition zurückzusetzen.");
-        OverlayX = Config.Bind("Overlay", "X", 0.005f, "Linker Rand, Anteil der Bildschirmbreite (0 bis 1). Wird beim Ziehen mit der Maus gespeichert.");
-        OverlayY = Config.Bind("Overlay", "Y", 0.11f, "Oberer Rand, Anteil der Bildschirmhöhe (0 bis 1). Wird beim Ziehen mit der Maus gespeichert.");
-        OverlayWidth = Config.Bind("Overlay", "Width", 0.19f, "Breite, Anteil der Bildschirmbreite.");
-        OverlayOpacity = Config.Bind("Overlay", "Opacity", 0.6f, "Deckkraft des Hintergrunds (0 bis 1).");
-        FontScale = Config.Bind("Overlay", "FontScale", 1f, "Schriftgröße (1 = Standard).");
+            "How often the run is read (milliseconds).");
+        ConfigEntry<string> language = Config.Bind("Overlay", "Language", "en", "Overlay language: en or de.");
+        OverlayVisible = Config.Bind("Overlay", "Visible", true, "Show the overlay on startup.");
+        ToggleKey = Config.Bind("Overlay", "ToggleKey", KeyCode.F8, "Key to show and hide the overlay.");
+        ResetKey = Config.Bind("Overlay", "ResetKey", KeyCode.F9, "Key to reset the overlay to its default position.");
+        OverlayX = Config.Bind("Overlay", "X", 0.005f, "Left edge, fraction of the screen width (0 to 1). Saved when dragging with the mouse.");
+        OverlayY = Config.Bind("Overlay", "Y", 0.11f, "Top edge, fraction of the screen height (0 to 1). Saved when dragging with the mouse.");
+        OverlayWidth = Config.Bind("Overlay", "Width", 0.19f, "Width, fraction of the screen width.");
+        OverlayOpacity = Config.Bind("Overlay", "Opacity", 0.6f, "Background opacity (0 to 1).");
+        FontScale = Config.Bind("Overlay", "FontScale", 1f, "Font size (1 = default).");
         ShareCoopPassives = Config.Bind("Overlay", "ShareCoopPassives", true,
-            "Koop: passive Gegenstände der Mitspieler zählen für die eigenen Entwicklungen.");
-        Icons = Config.Bind("Overlay", "Icons", true, "Bilder aus dem Spiel im Overlay anzeigen (aus: nur Text-Kürzel).");
+            "Co-op: other players' passive items count toward your own evolutions.");
+        Icons = Config.Bind("Overlay", "Icons", true, "Show game images in the overlay (off: text abbreviations only).");
         IntervalMs = Math.Max(100, interval.Value);
 
         string dataPath = Path.Combine(Path.GetDirectoryName(typeof(Plugin).Assembly.Location) ?? ".", "cheatsheet-data.json");
@@ -65,7 +65,7 @@ public class Plugin : BasePlugin
         }
         catch (Exception ex)
         {
-            Logger.LogError($"Daten für das Overlay fehlen ({dataPath}): {ex.Message}");
+            Logger.LogError($"Overlay data is missing ({dataPath}): {ex.Message}");
         }
 
         Server = new StateServer(port.Value, Logger);
@@ -73,7 +73,7 @@ public class Plugin : BasePlugin
 
         ClassInjector.RegisterTypeInIl2Cpp<BridgeBehaviour>();
         AddComponent<BridgeBehaviour>();
-        Logger.LogInfo($"{Name} {Version} läuft auf http://127.0.0.1:{port.Value}/state, Overlay mit {ToggleKey.Value}");
+        Logger.LogInfo($"{Name} {Version} running on http://127.0.0.1:{port.Value}/state, toggle overlay with {ToggleKey.Value}");
     }
 
     public override bool Unload()
@@ -83,10 +83,10 @@ public class Plugin : BasePlugin
     }
 }
 
-// Unity ruft Update auf dem Hauptthread auf. Nur hier darf das Spiel gelesen werden; der
-// Server bekommt fertige JSON-Texte. Pro Bild läuft hier fast nichts: Der Lauf wird alle
-// IntervalMs gelesen, das Overlay (UiOverlay) nur bei Änderungen neu aufgebaut, und
-// gezeichnet wird es von Unity selbst. Kein OnGUI (siehe UiOverlay, Absturz in coreclr).
+// Unity calls Update on the main thread. The game may only be read here; the server receives
+// finished JSON strings. Almost nothing runs per frame: the run is read every IntervalMs,
+// the overlay (UiOverlay) is only rebuilt on changes, and Unity draws it itself.
+// No OnGUI (see UiOverlay, crash in coreclr).
 public class BridgeBehaviour : MonoBehaviour
 {
     public BridgeBehaviour(IntPtr ptr) : base(ptr) { }
@@ -147,7 +147,7 @@ public class BridgeBehaviour : MonoBehaviour
             if (snap.InRun != _inRun) _dirty = true;
             _inRun = snap.InRun;
 
-            // Bildnamen erst lesen, wenn die Stage sicher fertig geladen ist.
+            // Only read image names once the stage has surely finished loading.
             if (_inRun && Plugin.Icons.Value && !GameSprites.Ready && now - _runStartedAt > 3000)
                 GameSprites.LoadFrames();
             if (GameSprites.Ready != _iconsReady) { _iconsReady = GameSprites.Ready; _dirty = true; }
@@ -158,7 +158,7 @@ public class BridgeBehaviour : MonoBehaviour
                 _panels = Plugin.Advisor?.Build(snap, Plugin.ShareCoopPassives.Value);
                 _dirty = true;
             }
-            // Fehlten Bilder, weil das Spiel den Atlas erst lädt: einige Male später neu aufbauen.
+            // If images were missing because the game is still loading the atlas: rebuild a few times later.
             if (_retryIconsAt > 0 && now >= _retryIconsAt) { _retryIconsAt = -1; _dirty = true; }
             if (_dirty) Refresh();
         }
@@ -177,7 +177,7 @@ public class BridgeBehaviour : MonoBehaviour
         else if (!_ui.MissingIcons) _iconRetries = 0;
     }
 
-    // Ein-/Ausblenden über die Tastatur, direkt über Windows abgefragt (kein Unity-Input nötig).
+    // Show/hide via the keyboard, polled directly from Windows (no Unity input needed).
     private void PollToggleKey()
     {
         try
@@ -208,8 +208,8 @@ public class BridgeBehaviour : MonoBehaviour
         }
     }
 
-    // Ziehen mit der linken Maustaste, direkt über Windows (Fensterkoordinaten, Ursprung oben
-    // links wie das Panel). Beim Loslassen wird die Position in der Konfiguration gespeichert.
+    // Dragging with the left mouse button, directly via Windows (window coordinates, origin top
+    // left like the panel). On release the position is saved to the config.
     private void PollDrag()
     {
         try

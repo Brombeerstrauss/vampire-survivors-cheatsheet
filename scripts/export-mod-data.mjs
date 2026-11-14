@@ -1,15 +1,15 @@
-// Erzeugt die Daten für das In-Game-Overlay des Mods (mod/VSCheatsheetBridge) aus den
-// Spieldaten der App: Namen auf Deutsch und Englisch, Maximalstufen, Entwicklungen und die
-// Zuordnung der Spielkennungen (gameIds). So gibt es nur eine Datenquelle.
-//   node scripts/export-mod-data.mjs <ziel.json>
-// Der Build des Mods ruft das Skript selbst auf.
+// Builds the data for the mod's in-game overlay (mod/VSCheatsheetBridge) from the app's
+// game data: names in English and German, max levels, evolutions and the game ID mapping
+// (gameIds). That way there is only one data source.
+//   node scripts/export-mod-data.mjs <target.json>
+// The mod's build runs this script by itself.
 import { readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const target = process.argv[2]
-if (!target) throw new Error('Aufruf: node scripts/export-mod-data.mjs <ziel.json>')
+if (!target) throw new Error('Usage: node scripts/export-mod-data.mjs <target.json>')
 
 const read = (path) => JSON.parse(readFileSync(join(root, path), 'utf8'))
 const { packs } = read('src/data/packs.json')
@@ -27,7 +27,7 @@ const gameIdMap = (entries) => {
 }
 const names = {}
 for (const e of [...characters, ...weapons, ...passives]) {
-  // g: erste Spielkennung, damit das Plugin das Bild aus dem Spiel findet
+  // g: first game ID, so the plugin can find the in-game image
   names[e.id] = {
     de: e.nameDe ?? e.name,
     en: e.name,
@@ -51,4 +51,4 @@ const data = {
 }
 
 writeFileSync(target, JSON.stringify(data))
-console.log(`Mod-Daten: ${evolutions.length} Entwicklungen, ${Object.keys(names).length} Namen -> ${target}`)
+console.log(`Mod data: ${evolutions.length} evolutions, ${Object.keys(names).length} names -> ${target}`)

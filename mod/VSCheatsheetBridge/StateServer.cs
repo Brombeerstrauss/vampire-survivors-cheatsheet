@@ -8,11 +8,11 @@ using BepInEx.Logging;
 
 namespace VSCheatsheetBridge;
 
-// Minimaler HTTP-Server nur auf 127.0.0.1 (kein http.sys, keine Admin-Rechte nötig).
-//   GET /state   aktueller Run als JSON
-//   GET /events  Server-Sent Events: neuer Stand, sobald sich der Run ändert
-//   GET /debug   Feldnamen der Spielobjekte (zum Anpassen nach Spiel-Updates)
-// Läuft auf eigenen Threads und fasst das Spiel nie an, nur fertige Texte.
+// Minimal HTTP server on 127.0.0.1 only (no http.sys, no admin rights needed).
+//   GET /state   current run as JSON
+//   GET /events  Server-Sent Events: new state whenever the run changes
+//   GET /debug   field names of the game objects (for adjusting after game updates)
+// Runs on its own threads and never touches the game, only finished strings.
 internal sealed class StateServer
 {
     private readonly int _port;
@@ -43,7 +43,7 @@ internal sealed class StateServer
         }
         catch (Exception ex)
         {
-            _log.LogError($"Server konnte Port {_port} nicht öffnen: {ex.Message}");
+            _log.LogError($"Server could not open port {_port}: {ex.Message}");
         }
     }
 
@@ -105,7 +105,7 @@ internal sealed class StateServer
                 string method = parts[0];
                 string path = parts.Length > 1 ? parts[1].Split('?')[0] : "/";
 
-                // Schutz gegen DNS-Rebinding: nur Anfragen an localhost/127.0.0.1 beantworten.
+                // Protection against DNS rebinding: only answer requests to localhost/127.0.0.1.
                 if (host == null || !(host.StartsWith("127.0.0.1") || host.StartsWith("localhost")))
                 {
                     Write(stream, "403 Forbidden", "text/plain", "forbidden");
@@ -156,7 +156,7 @@ internal sealed class StateServer
                 if (_revision == seen) Monitor.Wait(_lock, 15000);
                 if (_revision != seen) { seen = _revision; json = _json; }
             }
-            // Ohne Änderung ein Kommentar als Lebenszeichen, damit tote Verbindungen auffallen.
+            // Without a change, send a comment as a heartbeat so dead connections are noticed.
             WriteRaw(stream, json != null ? "data: " + json + "\n\n" : ": ping\n\n");
         }
     }

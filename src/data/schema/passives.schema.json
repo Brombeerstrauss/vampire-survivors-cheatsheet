@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Passive Gegenstände eines Pakets",
+  "title": "Passive items of a pack",
   "type": "object",
   "required": ["passives"],
   "additionalProperties": false,
@@ -19,21 +19,21 @@
           "nameDe": { "$ref": "common.schema.json#/definitions/nameDe" },
           "nameDeHint": { "$ref": "common.schema.json#/definitions/nameDeHint" },
           "source": { "$ref": "common.schema.json#/definitions/source" },
-          "description": { "$ref": "common.schema.json#/definitions/localizedText", "description": "Wirkung des Gegenstands." },
+          "description": { "$ref": "common.schema.json#/definitions/localizedText", "description": "What the item does." },
           "maxLevel": { "$ref": "common.schema.json#/definitions/maxLevel" },
           "stageOnly": {
             "type": "boolean",
-            "description": "Nur als Fundstück in der Stage erhältlich, nicht über Level-ups."
+            "description": "Only found as a pickup in stages, never offered on level-up."
           },
           "noSlot": {
             "type": "boolean",
-            "description": "Belegt keinen der 6 passiven Slots (z. B. Geschenke aus DLCs)."
+            "description": "Does not take one of the 6 passive slots (e.g. gifts from DLCs)."
           },
           "ignoresSlotLimit": {
             "type": "boolean",
-            "description": "Belegt zwar einen Slot, kann aber auch bei vollen Slots gewählt werden (z. B. Mini Crewmates)."
+            "description": "Takes a slot but can be picked even when all slots are full (e.g. Mini Crewmates)."
           },
-          "unlock": { "type": "string", "description": "Wie man den Gegenstand freischaltet." },
+          "unlock": { "type": "string", "description": "How to unlock the item." },
           "emoji": { "$ref": "common.schema.json#/definitions/emoji" },
           "icon": { "$ref": "common.schema.json#/definitions/icon" },
           "image": { "$ref": "common.schema.json#/definitions/image" },

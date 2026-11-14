@@ -12,8 +12,8 @@ import type {
 } from '../data/types.ts'
 
 /**
- * Nachschlagewerk über die Daten der freigeschalteten Pakete.
- * Alles, was die Oberfläche anzeigt, kommt von hier.
+ * Lookup over the data of the enabled packs.
+ * Everything the UI shows comes from here.
  */
 export interface Catalog {
   characters: Character[]
@@ -23,17 +23,17 @@ export interface Catalog {
   character(id: CharacterId): Character | undefined
   weapon(id: WeaponId): Weapon | undefined
   passive(id: PassiveId): PassiveItem | undefined
-  /** Entwicklungen, in die diese Waffe eingeht. */
+  /** Evolutions this weapon goes into. */
   evolutionsFromWeapon(id: WeaponId): Evolution[]
-  /** Entwicklungen, die diesen Gegenstand brauchen. */
+  /** Evolutions that need this item. */
   evolutionsWithPassive(id: PassiveId): Evolution[]
-  /** Entwicklungen, die diese Waffe ergeben. */
+  /** Evolutions that result in this weapon. */
   evolutionsToWeapon(id: WeaponId): Evolution[]
-  /** Empfehlungen für einen Charakter, aus allen freigeschalteten Paketen zusammengeführt. */
+  /** Recommendations for a character, merged from all enabled packs. */
   recommendationsFor(id: CharacterId): Recommendation[]
-  /** Charaktere, die mit dieser Waffe starten. */
+  /** Characters who start with this weapon. */
   charactersStartingWith(id: WeaponId): Character[]
-  /** Charaktere, denen diese Waffe empfohlen wird. */
+  /** Characters this weapon is recommended for. */
   charactersRecommending(id: WeaponId | PassiveId): Character[]
 }
 
@@ -50,12 +50,12 @@ function group<T>(items: T[], keys: (item: T) => string[]): Map<string, T[]> {
 }
 
 /**
- * Baut den Katalog für die gewählten Pakete.
+ * Builds the catalog for the selected packs.
  *
- * Einträge aus nicht freigeschalteten Paketen fallen weg. Eine Entwicklung
- * bleibt nur, wenn ihr eigenes Paket und alle beteiligten Waffen, Gegenstände
- * und Charaktere freigeschaltet sind; so verschwinden Entwicklungen über
- * DLC-Grenzen hinweg, sobald ein beteiligtes DLC fehlt.
+ * Entries from packs that are not enabled are left out. An evolution
+ * stays only if its own pack and all weapons, items and characters
+ * involved are enabled, so evolutions across DLC boundaries disappear
+ * as soon as one of the DLCs involved is missing.
  */
 export function createCatalog(data: GameData, ownedPacks: ReadonlySet<PackId>): Catalog {
   const owned = <T extends { source: PackId }>(items: T[]) => items.filter((item) => ownedPacks.has(item.source))

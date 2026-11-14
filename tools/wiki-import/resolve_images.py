@@ -1,6 +1,6 @@
-"""Prüft, welche Bilddateien es im Wiki gibt, und schreibt ihre Adressen nach images.json.
+"""Checks which image files exist on the wiki and writes their URLs to images.json.
 
-Aufruf: python3 -I resolve_images.py <api-url> <wiki-raw-dir>
+Usage: python3 -I resolve_images.py <api-url> <wiki-raw-dir>
 """
 import json, os, sys, time, urllib.parse, urllib.request
 
@@ -33,10 +33,10 @@ for i in range(0, len(names), 50):
         if info:
             urls[asked] = {"url": info["url"].split("?")[0], "width": info["width"], "height": info["height"]}
     time.sleep(0.3)
-# Auch unter normalisiertem Namen auffindbar machen (Leerzeichen/Unterstriche, Großschreibung)
+# Also make them findable by normalized name (spaces/underscores, capitalization)
 for name in list(urls):
     urls.setdefault(norm(name), urls[name])
 json.dump(urls, open(os.path.join(raw, "images.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 missing = [n for n in names if n not in urls and norm(n) not in urls]
-print(f"{len(names)} Bilddateien angefragt, {len(names) - len(missing)} gefunden, {len(missing)} fehlen")
-for n in missing[:30]: print("  fehlt:", n)
+print(f"{len(names)} image files requested, {len(names) - len(missing)} found, {len(missing)} missing")
+for n in missing[:30]: print("  missing:", n)

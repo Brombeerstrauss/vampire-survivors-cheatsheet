@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Waffen eines Pakets (Basiswaffen und entwickelte Waffen)",
+  "title": "Weapons of a pack (base and evolved weapons)",
   "type": "object",
   "required": ["weapons"],
   "additionalProperties": false,
@@ -21,18 +21,18 @@
           "source": { "$ref": "common.schema.json#/definitions/source" },
           "kind": {
             "enum": ["base", "evolved"],
-            "description": "evolved = Ergebnis einer Entwicklung, Union oder eines Geschenks."
+            "description": "evolved = result of an evolution, union or gift."
           },
-          "description": { "$ref": "common.schema.json#/definitions/localizedText", "description": "Was die Waffe tut." },
+          "description": { "$ref": "common.schema.json#/definitions/localizedText", "description": "What the weapon does." },
           "maxLevel": { "$ref": "common.schema.json#/definitions/maxLevel" },
           "exclusiveTo": {
             "type": "array",
             "items": { "$ref": "common.schema.json#/definitions/id" },
             "minItems": 1,
             "uniqueItems": true,
-            "description": "Nur diese Charaktere können die Waffe führen. Weglassen, wenn frei wählbar."
+            "description": "Only these characters can use the weapon. Leave out if anyone can."
           },
-          "unlock": { "type": "string", "description": "Wie man die Waffe freischaltet." },
+          "unlock": { "type": "string", "description": "How to unlock the weapon." },
           "emoji": { "$ref": "common.schema.json#/definitions/emoji" },
           "icon": { "$ref": "common.schema.json#/definitions/icon" },
           "image": { "$ref": "common.schema.json#/definitions/image" },

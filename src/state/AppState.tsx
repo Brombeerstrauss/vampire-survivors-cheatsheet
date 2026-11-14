@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import { gameData } from '../data/index.ts'
 import type { Lang, PackId } from '../data/types.ts'
-import { detectLanguage } from '../i18n/names.ts'
 import { createCatalog, type Catalog } from '../logic/catalog.ts'
 import { buildGameIdIndex, liveRunFromPlayer, sameRun } from '../logic/modBridge.ts'
 import { sanitizeRun, type RunState } from '../logic/run.ts'
@@ -13,16 +12,14 @@ import { readStored, writeStored } from './storage.ts'
 const SETTINGS_KEY = 'vsc.settings.v1'
 const RUN_KEY = 'vsc.run.v1'
 
-/** Alle Pakete, unabhängig vom Filter: für Namen und Stufen von Teilen, die schon im Lauf sind. */
+/** All packs regardless of the filter: for names and levels of parts already in the run. */
 const fullCatalog = createCatalog(gameData, new Set(gameData.packs.map((p) => p.id)))
 
-/** Spielkennung -> Kennung der App, für Meldungen aus dem Mod. */
+/** Game ID -> app ID, for data from the mod. */
 const gameIdIndex = buildGameIdIndex(gameData)
 
 export function AppStateProvider({ children }: { children: ReactNode }) {
-  const [settings, setSettings] = useState(() =>
-    loadSettings(readStored(SETTINGS_KEY), gameData.packs, detectLanguage(navigator.languages ?? [navigator.language])),
-  )
+  const [settings, setSettings] = useState(() => loadSettings(readStored(SETTINGS_KEY), gameData.packs))
   const [run, setRun] = useState(() => sanitizeRun(readStored(RUN_KEY), fullCatalog))
   const [notice, setNotice] = useState<Notice | null>(null)
 
@@ -44,10 +41,10 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
 
   const setShowSecrets = useCallback((show: boolean) => setSettings((s) => ({ ...s, showSecrets: show })), [])
   const setShowImages = useCallback((show: boolean) => setSettings((s) => ({ ...s, showImages: show })), [])
-  const setLanguage = useCallback((language: Lang) => setSettings((s) => ({ ...s, language })), [])
+  const setLanguage = useCallback((language: Lang) => setSettings((s) => ({ ...s, language, languageChosen: true })), [])
   const setModBridge = useCallback((modBridge: boolean) => setSettings((s) => ({ ...s, modBridge })), [])
 
-  // Der aktuelle Lauf als Ref, damit Änderungen und Rückgängig-Meldung zusammen entstehen.
+  // The current run as a ref, so a change and its undo notice are created together.
   const runRef = useRef(run)
   useEffect(() => {
     runRef.current = run
@@ -62,9 +59,9 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
     setNotice(message ? { message, undo: () => setRun(previous) } : null)
   }, [])
 
-  // Live-Daten aus dem Spiel: Während eines Laufs ist das Spiel die Wahrheit und
-  // überschreibt den Lauf der App. Im Menü bleibt der letzte Stand stehen.
-  // Im Koop wird Spieler 1 übernommen; das In-Game-Overlay des Mods zeigt alle Spieler.
+  // Live data from the game: during a run the game is the source of truth and replaces
+  // the app's run. In the menu the last state stays. In co-op the app takes player 1;
+  // the mod's in-game overlay shows every player.
   const { status, snapshot } = useModConnection(settings.modBridge)
   const livePlayer = snapshot?.inRun ? snapshot.players[0] : undefined
   const liveRun = useMemo(() => (livePlayer ? liveRunFromPlayer(livePlayer, gameIdIndex) : null), [livePlayer])

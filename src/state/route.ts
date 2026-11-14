@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 
 /**
- * Minimales Routing über den Hash (`#/lauf`, `#/charaktere/antonio-belpaese`).
- * Funktioniert ohne Server-Konfiguration, auch auf GitHub Pages und offline.
+ * Minimal hash routing (`#/run`, `#/characters/antonio-belpaese`).
+ * Works without any server configuration, on GitHub Pages and offline.
+ * The German paths of earlier versions (`#/lauf`, `#/charaktere`, …) still work.
  */
 export type Route =
   | { view: 'characters'; id?: string }
@@ -13,12 +14,16 @@ export type Route =
 export function parseRoute(hash: string): Route {
   const [first, second] = hash.replace(/^#\/?/, '').split('/').map(decodeURIComponent)
   switch (first) {
+    case 'run':
     case 'lauf':
       return { view: 'run' }
+    case 'weapons':
     case 'waffen':
       return { view: 'library', tab: 'weapons', id: second || undefined }
+    case 'items':
     case 'gegenstaende':
       return { view: 'library', tab: 'passives', id: second || undefined }
+    case 'settings':
     case 'einstellungen':
       return { view: 'settings' }
     default:
@@ -29,15 +34,15 @@ export function parseRoute(hash: string): Route {
 export function routeHref(route: Route): string {
   switch (route.view) {
     case 'run':
-      return '#/lauf'
+      return '#/run'
     case 'settings':
-      return '#/einstellungen'
+      return '#/settings'
     case 'library': {
-      const base = route.tab === 'weapons' ? '#/waffen' : '#/gegenstaende'
+      const base = route.tab === 'weapons' ? '#/weapons' : '#/items'
       return route.id ? `${base}/${encodeURIComponent(route.id)}` : base
     }
     case 'characters':
-      return route.id ? `#/charaktere/${encodeURIComponent(route.id)}` : '#/charaktere'
+      return route.id ? `#/characters/${encodeURIComponent(route.id)}` : '#/characters'
   }
 }
 

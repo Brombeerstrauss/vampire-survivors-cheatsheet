@@ -22,35 +22,35 @@ function schemaErrors(schemaName: string, json: unknown): string[] {
   return (validate.errors ?? []).map((error) => `${error.instancePath || '/'} ${error.message}`)
 }
 
-describe('Spieldaten', () => {
-  it('packs.json entspricht dem Schema', () => {
+describe('Game data', () => {
+  it('packs.json matches its schema', () => {
     expect(schemaErrors('packs', packsFile)).toEqual([])
   })
 
   it.each(Object.keys(files))('%s entspricht dem Schema', (path) => {
     const name = PACK_FILES.find((file) => path.endsWith(`/${file}.json`))
-    expect(name, 'unbekannter Dateiname').toBeDefined()
+    expect(name, 'unknown file name').toBeDefined()
     expect(schemaErrors(name!, files[path])).toEqual([])
   })
 
-  it('jeder Eintrag liegt im Ordner seines Pakets', () => {
+  it('every entry is in the folder of its pack', () => {
     expect(loadGameData(packsFile, files).problems).toEqual([])
   })
 
-  it('alle Verweise zeigen auf vorhandene Einträge', () => {
+  it('all references point to existing entries', () => {
     expect(checkIntegrity(loadGameData(packsFile, files).data)).toEqual([])
   })
 
-  it('das Basisspiel steht vor den DLCs, in der Reihenfolge von packs.json', () => {
+  it('puts the base game before the DLCs, in the order of packs.json', () => {
     const { data } = loadGameData(packsFile, files)
     const order = [...new Set(data.characters.map((c) => c.source))]
     expect(order).toEqual(data.packs.map((p) => p.id).filter((id) => order.includes(id)))
     expect(data.characters[0]?.source).toBe('base')
   })
 
-  // Ohne Spielkennung kann die App den Eintrag nicht aus dem Mod übernehmen.
-  // Nachtragen: python3 -I tools/wiki-import/game_ids.py https://vampire.survivors.wiki/api.php src/data/packs
-  it('Charaktere, Waffen und Gegenstände haben Spielkennungen (gameIds)', () => {
+  // Without a game ID the app cannot match the entry with data from the mod.
+  // To fill them in: python3 -I tools/wiki-import/game_ids.py https://vampire.survivors.wiki/api.php src/data/packs
+  it('characters, weapons and items have game IDs (gameIds)', () => {
     const { data } = loadGameData(packsFile, files)
     const missing = [...data.characters, ...data.weapons, ...data.passives]
       .filter((entry) => !entry.gameIds?.length)
@@ -59,8 +59,8 @@ describe('Spieldaten', () => {
   })
 })
 
-describe('Schemas lehnen fehlerhafte Einträge ab', () => {
-  it('unbekannte Felder', () => {
+describe('Schemas reject broken entries', () => {
+  it('unknown fields', () => {
     const errors = schemaErrors('weapons', {
       weapons: [
         { id: 'whip', name: 'Whip', source: 'base', kind: 'base', description: '', maxLevel: 8, verified: true, dmg: 10 },
@@ -69,7 +69,7 @@ describe('Schemas lehnen fehlerhafte Einträge ab', () => {
     expect(errors).not.toEqual([])
   })
 
-  it('Texte nur in einer Sprache', () => {
+  it('texts in only one language', () => {
     const errors = schemaErrors('weapons', {
       weapons: [
         { id: 'whip', name: 'Whip', source: 'base', kind: 'base', description: { de: 'Peitsche' }, maxLevel: 8, verified: true },
@@ -78,14 +78,14 @@ describe('Schemas lehnen fehlerhafte Einträge ab', () => {
     expect(errors).not.toEqual([])
   })
 
-  it('fehlendes verified', () => {
+  it('missing verified', () => {
     const errors = schemaErrors('passives', {
       passives: [{ id: 'spinach', name: 'Spinach', source: 'base', description: '', maxLevel: 5 }],
     })
     expect(errors).not.toEqual([])
   })
 
-  it('Kennungen mit Großbuchstaben oder Leerzeichen', () => {
+  it('IDs with capital letters or spaces', () => {
     const errors = schemaErrors('evolutions', {
       evolutions: [
         { id: 'Holy Wand', kind: 'evolution', source: 'base', result: 'holy-wand', weapons: [{ id: 'magic-wand' }], passives: [], verified: true },
@@ -97,7 +97,7 @@ describe('Schemas lehnen fehlerhafte Einträge ab', () => {
 
 describe('checkIntegrity', () => {
   const base: GameData = {
-    packs: [{ id: 'base', name: both('Basisspiel'), kind: 'base', paid: false, verified: true }],
+    packs: [{ id: 'base', name: both('Base game'), kind: 'base', paid: false, verified: true }],
     characters: [],
     weapons: [
       { id: 'whip', name: 'Whip', source: 'base', kind: 'base', description: both(''), maxLevel: 8, verified: true },
@@ -108,16 +108,16 @@ describe('checkIntegrity', () => {
     recommendations: [],
   }
 
-  it('meldet nichts bei stimmigen Daten', () => {
+  it('reports nothing for consistent data', () => {
     expect(checkIntegrity(base)).toEqual([])
   })
 
-  it('meldet doppelte Kennungen', () => {
+  it('reports duplicate IDs', () => {
     const data = { ...base, weapons: [...base.weapons, base.weapons[0]!] }
-    expect(checkIntegrity(data)).toEqual(['Waffe "whip" kommt mehrfach vor'])
+    expect(checkIntegrity(data)).toEqual(['Weapon "whip" appears more than once'])
   })
 
-  it('meldet Verweise auf unbekannte Zutaten und Pakete', () => {
+  it('reports references to unknown ingredients and packs', () => {
     const data: GameData = {
       ...base,
       evolutions: [
@@ -133,25 +133,25 @@ describe('checkIntegrity', () => {
       ],
     }
     expect(checkIntegrity(data)).toEqual([
-      'Entwicklung "bloody-tear": unbekanntes Paket "moonspell"',
-      'Entwicklung "bloody-tear": unbekannte Waffe "whipp"',
-      'Entwicklung "bloody-tear": unbekannter Gegenstand "hollow-hart"',
+      'Evolution "bloody-tear": unknown pack "moonspell"',
+      'Evolution "bloody-tear": unknown weapon "whipp"',
+      'Evolution "bloody-tear": unknown item "hollow-hart"',
     ])
   })
 
-  it('meldet Spielkennungen, die zu zwei Einträgen gehören', () => {
+  it('reports game IDs that belong to two entries', () => {
     const [whip, tear] = base.weapons
     const data = { ...base, weapons: [{ ...whip!, gameIds: ['WHIP'] }, { ...tear!, gameIds: ['VAMPIRICA', 'WHIP'] }] }
-    expect(checkIntegrity(data)).toEqual(['Waffe "bloody-tear": Spielkennung WHIP gehört schon zu "whip"'])
+    expect(checkIntegrity(data)).toEqual(['Weapon "bloody-tear": game ID WHIP already belongs to "whip"'])
   })
 
-  it('meldet Ergebnisse, die keine entwickelte Waffe sind', () => {
+  it('reports results that are not evolved weapons', () => {
     const data: GameData = {
       ...base,
       evolutions: [
         { id: 'x', kind: 'evolution', source: 'base', result: 'whip', weapons: [{ id: 'bloody-tear' }], passives: [], verified: true },
       ],
     }
-    expect(checkIntegrity(data)).toEqual(['Entwicklung "x": Ergebnis "whip" ist nicht als "evolved" markiert'])
+    expect(checkIntegrity(data)).toEqual(['Evolution "x": result "whip" is not marked as "evolved"'])
   })
 })

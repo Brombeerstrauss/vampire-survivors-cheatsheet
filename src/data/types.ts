@@ -1,20 +1,20 @@
 /**
- * Datenmodell der App.
+ * Data model of the app.
  *
- * Alle Spieldaten liegen als JSON unter `src/data/packs/<paket>/`.
- * Die passenden JSON-Schemas stehen in `src/data/schema/` und werden von den
- * Tests gegen die Daten geprüft. Wer hier ein Feld ändert, muss das Schema
- * mit anpassen.
+ * All game data lives as JSON under `src/data/packs/<pack>/`.
+ * The matching JSON schemas are in `src/data/schema/`; the tests check the
+ * data against them. If you change a field here, update the schema
+ * as well.
  *
- * Kennungen (`id`) sind klein geschrieben mit Bindestrichen, z. B. `magic-wand`.
- * `name` ist der englische Name aus dem Spiel. Alle Texte gibt es auf Deutsch
- * und Englisch (`LocalizedText`).
+ * IDs (`id`) are lowercase with hyphens, e.g. `magic-wand`.
+ * `name` is the English name from the game. Every text exists in German
+ * and English (`LocalizedText`).
  */
 
-/** Sprachen der App. */
+/** App languages. */
 export type Lang = 'de' | 'en'
 
-/** Ein Text in beiden Sprachen. */
+/** A text in both languages. */
 export interface LocalizedText {
   de: string
   en: string
@@ -26,123 +26,123 @@ export type WeaponId = string
 export type PassiveId = string
 export type EvolutionId = string
 
-/** Ein Inhaltspaket: das Basisspiel oder ein DLC. Steht in `packs.json`. */
+/** A content pack: the base game or a DLC. Listed in `packs.json`. */
 export interface Pack {
-  /** Entspricht dem Ordnernamen unter `packs/`, das Basisspiel heißt `base`. */
+  /** Matches the folder name under `packs/`; the base game is `base`. */
   id: PackId
   name: LocalizedText
   kind: 'base' | 'dlc'
-  /** Kostenpflichtig? Kostenlose Inhalte sind im DLC-Filter vorausgewählt. */
+  /** Paid? Free content is preselected in the DLC filter. */
   paid: boolean
-  /** Erscheinungsdatum, `JJJJ-MM-TT`. */
+  /** Release date, `YYYY-MM-DD`. */
   released?: string
   verified: boolean
 }
 
-/** Felder, die Charaktere, Waffen und passive Gegenstände gemeinsam haben. */
+/** Fields shared by characters, weapons and passive items. */
 interface Entry {
   id: string
   /**
-   * Interne Kennungen des Spiels aus der Wiki-Infobox (Feld `id`), z. B. `MAGIC_MISSILE`
-   * für Magic Wand. Meist genau eine; daran ordnet die App die Daten aus dem Mod zu.
+   * The game's internal IDs from the wiki infobox (field `id`), e.g. `MAGIC_MISSILE`
+   * for Magic Wand. Usually exactly one; the app uses them to match data from the mod.
    */
   gameIds?: string[]
-  /** Englischer Name wie im Spiel. */
+  /** English name as in the game. */
   name: string
-  /** Offizieller deutscher Name aus dem Spiel, falls er vom englischen abweicht. */
+  /** Official German name from the game, if it differs from the English one. */
   nameDe?: string
   /**
-   * Eigene deutsche Übersetzung, wenn es keinen offiziellen deutschen Namen gibt.
-   * Die App zeigt sie auf Deutsch in Klammern hinter dem englischen Namen.
+   * Own German translation when there is no official German name.
+   * In German, the app shows it in parentheses after the English name.
    */
   nameDeHint?: string
-  /** Paket, aus dem der Eintrag stammt (`base` oder DLC-Kennung). */
+  /** Pack the entry comes from (`base` or a DLC ID). */
   source: PackId
-  /** `false`, solange der Eintrag nicht sicher gegen das Wiki geprüft ist. */
+  /** `false` until the entry has been reliably checked against the wiki. */
   verified: boolean
-  /** Platzhalter-Symbol, solange kein eigenes Icon hinterlegt ist. */
+  /** Placeholder emoji, shown when there is no custom icon or image. */
   emoji?: string
-  /** Dateiname eines eigenen Icons in `public/custom-icons/` (hat Vorrang vor `image`). */
+  /** File name of a custom icon in `public/custom-icons/` (takes precedence over `image`). */
   icon?: string
-  /** Adresse des Originalbilds im Wiki; wird zur Laufzeit geladen, nicht mit der App ausgeliefert. */
+  /** URL of the original image on the wiki; loaded at runtime, not shipped with the app. */
   image?: string
-  /** Wie man den Eintrag freischaltet. */
+  /** How to unlock the entry. */
   unlock?: string
-  /** Freie Anmerkung, z. B. warum etwas noch ungeprüft ist. */
+  /** Free-form note, e.g. why something is still unverified. */
   note?: LocalizedText
 }
 
 export interface Character extends Entry {
-  /** Meist genau eine Waffe; manche Charaktere starten ohne oder mit mehreren. */
+  /** Usually exactly one weapon; some characters start with none or several. */
   startingWeapons: WeaponId[]
-  /** Besonderheit des Charakters in einem Satz, z. B. Bonus pro Level. */
+  /** The character's special trait in one sentence, e.g. a bonus per level. */
   bonus: LocalizedText
-  /** Geheimer Charakter; lässt sich über den Spoiler-Schalter ausblenden. */
+  /** Secret character; can be hidden with the spoiler switch. */
   secret: boolean
 }
 
 export interface Weapon extends Entry {
-  /** `evolved` = Ergebnis einer Entwicklung, Union oder eines Geschenks. */
+  /** `evolved` = result of an evolution, union or gift. */
   kind: 'base' | 'evolved'
   description: LocalizedText
-  /** Höchste Stufe (Basiswaffen meist 8, entwickelte meist 1). */
+  /** Maximum level (base weapons usually 8, evolved ones usually 1). */
   maxLevel: number
-  /** Nur diese Charaktere können die Waffe führen; fehlt das Feld, ist sie frei wählbar. */
+  /** Only these characters can use the weapon; without this field, anyone can. */
   exclusiveTo?: CharacterId[]
 }
 
 export interface PassiveItem extends Entry {
   description: LocalizedText
   maxLevel: number
-  /** Nur als Fundstück in der Stage erhältlich, nicht über Level-ups. */
+  /** Only found as a pickup in stages, never offered on level-up. */
   stageOnly?: boolean
-  /** Belegt keinen der 6 passiven Slots (z. B. Geschenke aus DLCs). */
+  /** Does not take one of the 6 passive slots (e.g. gifts from DLCs). */
   noSlot?: boolean
-  /** Belegt zwar einen Slot, kann aber auch bei vollen Slots gewählt werden (z. B. Mini Crewmates). */
+  /** Takes a slot but can be picked even when all slots are full (e.g. Mini Crewmates). */
   ignoresSlotLimit?: boolean
 }
 
-/** Stufe, die eine Zutat haben muss: Maximalstufe oder egal. */
+/** Level an ingredient needs: max level or any. */
 export type RequiredLevel = 'max' | 'any'
 
 export interface WeaponRequirement {
   id: WeaponId
-  /** Standard: `max`. */
+  /** Default: `max`. */
   level?: RequiredLevel
 }
 
 export interface PassiveRequirement {
   id: PassiveId
-  /** Standard: `any` (es reicht, den Gegenstand zu besitzen). */
+  /** Default: `any` (owning the item is enough). */
   level?: RequiredLevel
-  /** Der Gegenstand wird bei der Entwicklung verbraucht (z. B. Weapon Power-Up). */
+  /** The item is used up by the evolution (e.g. Weapon Power-Up). */
   consumed?: boolean
 }
 
 /**
- * Wie eine Entwicklung abläuft:
- * - `evolution`: die Waffe wird durch das Ergebnis ersetzt (aus einer Truhe)
- * - `union`: mehrere Waffen verschmelzen zu einer (gibt Waffen-Slots frei)
- * - `gift`: die Ausgangswaffe bleibt, das Ergebnis kommt zusätzlich dazu
- * - `morph`: nur für bestimmte Charaktere; passiert automatisch, sobald
- *   Relikt und Level erreicht sind, ohne Truhe
+ * How an evolution works:
+ * - `evolution`: the weapon is replaced by the result (from a chest)
+ * - `union`: several weapons merge into one (frees weapon slots)
+ * - `gift`: the base weapon stays and the result is added
+ * - `morph`: only for certain characters; happens automatically once the
+ *   relic and level are reached, without a chest
  */
 export type EvolutionKind = 'evolution' | 'union' | 'gift' | 'morph'
 
 export interface Evolution {
   id: EvolutionId
   kind: EvolutionKind
-  /** Paket, das diese Entwicklung einführt. Beteiligte Zutaten dürfen aus anderen Paketen stammen. */
+  /** Pack that introduces this evolution. Its ingredients may come from other packs. */
   source: PackId
-  /** Die entwickelte Waffe (Eintrag mit `kind: "evolved"`). */
+  /** The evolved weapon (an entry with `kind: "evolved"`). */
   result: WeaponId
-  /** Benötigte Waffen: eine bei Entwicklungen, mehrere bei Unions. */
+  /** Required weapons: one for evolutions, several for unions. */
   weapons: WeaponRequirement[]
-  /** Benötigte passive Gegenstände; darf leer sein. */
+  /** Required passive items; may be empty. */
   passives: PassiveRequirement[]
-  /** Nur mit diesen Charakteren möglich (z. B. bei Morphs). Fehlt das Feld, gilt sie für alle. */
+  /** Only possible with these characters (e.g. morphs). Without this field, it applies to everyone. */
   characters?: CharacterId[]
-  /** Weitere Bedingungen als Text, z. B. ein Relikt oder ein Mindestlevel. */
+  /** Further conditions as text, e.g. a relic or a minimum level. */
   conditions?: LocalizedText[]
   verified: boolean
   note?: LocalizedText
@@ -150,24 +150,24 @@ export interface Evolution {
 
 export interface RecommendedItem<Id extends string = string> {
   id: Id
-  /** Kurze Begründung, z. B. Synergie mit dem Bonus des Charakters. */
+  /** Short reason, e.g. synergy with the character's bonus. */
   reason: LocalizedText
-  /** 1 = Kern des Builds, 2 = gute Ergänzung, 3 = optional. */
+  /** 1 = core of the build, 2 = good addition, 3 = optional. */
   priority: 1 | 2 | 3
 }
 
-/** Kuratierte Empfehlung für einen Charakter. Mehrere Pakete dürfen denselben Charakter ergänzen. */
+/** Curated recommendation for a character. Several packs may add to the same character. */
 export interface Recommendation {
   character: CharacterId
-  /** Paket, aus dem diese Empfehlung stammt. */
+  /** Pack this recommendation comes from. */
   source: PackId
-  /** Spielstil in ein bis zwei Sätzen. */
+  /** Play style in one or two sentences. */
   summary?: LocalizedText
   weapons: RecommendedItem<WeaponId>[]
   passives: RecommendedItem<PassiveId>[]
 }
 
-/** Alle Pakete zusammengeführt, so wie die App sie verwendet. */
+/** All packs merged, as the app uses them. */
 export interface GameData {
   packs: Pack[]
   characters: Character[]
@@ -177,6 +177,6 @@ export interface GameData {
   recommendations: Recommendation[]
 }
 
-/** Slot-Grenzen im Spiel. */
+/** Slot limits in the game. */
 export const MAX_WEAPON_SLOTS = 6
 export const MAX_PASSIVE_SLOTS = 6

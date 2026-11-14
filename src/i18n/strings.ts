@@ -1,5 +1,5 @@
-// Alle Texte der Oberfläche auf Deutsch und Englisch.
-// `en` hat denselben Typ wie `de`: Fehlt ein Text in einer Sprache, meldet TypeScript einen Fehler.
+// All UI texts in German and English.
+// `en` has the same type as `de`: if a text is missing in one language, TypeScript reports an error.
 
 const listDe = (names: string[]) =>
   names.length <= 1 ? names.join('') : `${names.slice(0, -1).join(', ')} und ${names[names.length - 1]}`
@@ -20,7 +20,7 @@ export const de = {
   undo: 'Rückgängig',
   dismissNotice: 'Meldung schließen',
 
-  // Allgemein
+  // General
   close: 'Schließen',
   done: 'Fertig',
   search: 'Suchen …',
@@ -37,7 +37,7 @@ export const de = {
   priority: { 1: 'Kern', 2: 'Gut', 3: 'Optional' } as Record<1 | 2 | 3, string>,
   kind: { evolution: 'Entwicklung', union: 'Union', gift: 'Geschenk', morph: 'Morph' },
 
-  // Charaktere
+  // Characters
   searchCharacter: 'Charakter oder Waffe suchen',
   characterCount: (shown: number, total: number, secretsHidden: boolean) =>
     `${shown} von ${total} Charakteren${secretsHidden ? ' (geheime ausgeblendet)' : ''}`,
@@ -54,7 +54,7 @@ export const de = {
   startsEvolved: 'Startet bereits als entwickelte Waffe.',
   noEvolution: 'Diese Waffe hat keine Entwicklung.',
 
-  // Lauf
+  // Run
   newRun: 'Neuer Lauf',
   newRunIntro:
     'Wähle deinen Charakter. Danach trägst du hier ein, welche Waffen und Gegenstände du im Lauf schon hast, und siehst, was für die Entwicklungen noch fehlt.',
@@ -99,7 +99,7 @@ export const de = {
   evolvedWeaponPrefix: 'Entwickelte Waffe · ',
   stageOnlyPrefix: 'Nur als Fundstück · ',
 
-  // Gründe, Warnungen, Hinweise
+  // Reasons, warnings, hints
   reasonMissingFor: (result: string) => `Fehlt für ${result}`,
   reasonUnionPartner: (result: string) => `Union-Partner für ${result}`,
   reasonPairing: (passive: string, result: string) => `Entwickelt sich mit ${passive} zu ${result}`,
@@ -115,7 +115,7 @@ export const de = {
     `Für alle geplanten Unions fehlen ${needed} Waffen, aber nur ${free} ${free === 1 ? 'Slot ist' : 'Slots sind'} frei.`,
   hintStageOnly: (name: string) => `${name} gibt es nicht beim Level-up, nur als Fundstück in bestimmten Stages.`,
 
-  // Entwicklungen
+  // Evolutions
   onlyFor: 'Nur für',
   owned: 'vorhanden',
   missingLabel: 'fehlt',
@@ -131,7 +131,7 @@ export const de = {
       gift ? `kann eine Truhe ${result} zusätzlich bringen` : `bringt die nächste Truhe mit Entwicklung ${result}`
     }.`,
 
-  // Bibliothek
+  // Library
   library: 'Bibliothek',
   items: 'Gegenstände',
   searchWeapon: 'Waffe suchen',
@@ -156,7 +156,7 @@ export const de = {
   notNeededForEvolution: 'Wird für keine Entwicklung gebraucht (mit deinen freigeschalteten Inhalten).',
   recommendedFor: 'Empfohlen für',
 
-  // Einstellungen
+  // Settings
   settings: 'Einstellungen',
   yourContent: 'Deine Inhalte',
   alwaysIncluded: 'Immer dabei.',

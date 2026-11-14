@@ -1,8 +1,8 @@
 import type { GameData } from './types.ts'
 
 /**
- * Prüft, ob die Daten in sich stimmig sind: eindeutige Kennungen und keine
- * Verweise ins Leere. Gibt eine Liste lesbarer Probleme zurück (leer = alles gut).
+ * Checks that the data is consistent: unique IDs and no references
+ * to missing entries. Returns a list of readable problems (empty = all good).
  */
 export function checkIntegrity(data: GameData): string[] {
   const problems: string[] = []
@@ -10,96 +10,96 @@ export function checkIntegrity(data: GameData): string[] {
   const idsOf = (label: string, entries: { id: string }[]): Set<string> => {
     const seen = new Set<string>()
     for (const { id } of entries) {
-      if (seen.has(id)) problems.push(`${label} "${id}" kommt mehrfach vor`)
+      if (seen.has(id)) problems.push(`${label} "${id}" appears more than once`)
       seen.add(id)
     }
     return seen
   }
 
-  const packs = idsOf('Paket', data.packs)
-  const characters = idsOf('Charakter', data.characters)
-  const weapons = idsOf('Waffe', data.weapons)
-  const passives = idsOf('Gegenstand', data.passives)
-  idsOf('Entwicklung', data.evolutions)
+  const packs = idsOf('Pack', data.packs)
+  const characters = idsOf('Character', data.characters)
+  const weapons = idsOf('Weapon', data.weapons)
+  const passives = idsOf('Item', data.passives)
+  idsOf('Evolution', data.evolutions)
 
-  // Eine Spielkennung muss eindeutig auf einen Eintrag zeigen, sonst ordnet der Mod falsch zu.
+  // A game ID must point to exactly one entry, otherwise data from the mod is matched wrongly.
   const gameIdsOf = (label: string, entries: { id: string; gameIds?: string[] }[]) => {
     const owner = new Map<string, string>()
     for (const { id, gameIds } of entries) {
       for (const gameId of gameIds ?? []) {
         const other = owner.get(gameId)
-        if (other && other !== id) problems.push(`${label} "${id}": Spielkennung ${gameId} gehört schon zu "${other}"`)
+        if (other && other !== id) problems.push(`${label} "${id}": game ID ${gameId} already belongs to "${other}"`)
         owner.set(gameId, id)
       }
     }
   }
-  gameIdsOf('Charakter', data.characters)
-  gameIdsOf('Waffe', data.weapons)
-  gameIdsOf('Gegenstand', data.passives)
+  gameIdsOf('Character', data.characters)
+  gameIdsOf('Weapon', data.weapons)
+  gameIdsOf('Item', data.passives)
 
   const weaponById = new Map(data.weapons.map((weapon) => [weapon.id, weapon]))
 
   const checkSource = (where: string, source: string) => {
-    if (!packs.has(source)) problems.push(`${where}: unbekanntes Paket "${source}"`)
+    if (!packs.has(source)) problems.push(`${where}: unknown pack "${source}"`)
   }
 
   for (const character of data.characters) {
-    const where = `Charakter "${character.id}"`
+    const where = `Character "${character.id}"`
     checkSource(where, character.source)
     for (const weapon of character.startingWeapons) {
-      if (!weapons.has(weapon)) problems.push(`${where}: unbekannte Startwaffe "${weapon}"`)
+      if (!weapons.has(weapon)) problems.push(`${where}: unknown starting weapon "${weapon}"`)
     }
   }
 
   for (const weapon of data.weapons) {
-    const where = `Waffe "${weapon.id}"`
+    const where = `Weapon "${weapon.id}"`
     checkSource(where, weapon.source)
     for (const character of weapon.exclusiveTo ?? []) {
-      if (!characters.has(character)) problems.push(`${where}: unbekannter Charakter "${character}"`)
+      if (!characters.has(character)) problems.push(`${where}: unknown character "${character}"`)
     }
   }
 
   for (const passive of data.passives) {
-    checkSource(`Gegenstand "${passive.id}"`, passive.source)
+    checkSource(`Item "${passive.id}"`, passive.source)
   }
 
   for (const evolution of data.evolutions) {
-    const where = `Entwicklung "${evolution.id}"`
+    const where = `Evolution "${evolution.id}"`
     checkSource(where, evolution.source)
 
     const result = weaponById.get(evolution.result)
     if (!result) {
-      problems.push(`${where}: unbekanntes Ergebnis "${evolution.result}"`)
+      problems.push(`${where}: unknown result "${evolution.result}"`)
     } else if (result.kind !== 'evolved') {
-      problems.push(`${where}: Ergebnis "${evolution.result}" ist nicht als "evolved" markiert`)
+      problems.push(`${where}: result "${evolution.result}" is not marked as "evolved"`)
     }
 
     for (const { id } of evolution.weapons) {
-      if (!weapons.has(id)) problems.push(`${where}: unbekannte Waffe "${id}"`)
-      if (id === evolution.result) problems.push(`${where}: Waffe "${id}" ist zugleich das Ergebnis`)
+      if (!weapons.has(id)) problems.push(`${where}: unknown weapon "${id}"`)
+      if (id === evolution.result) problems.push(`${where}: weapon "${id}" is also the result`)
     }
     for (const { id } of evolution.passives) {
-      if (!passives.has(id)) problems.push(`${where}: unbekannter Gegenstand "${id}"`)
+      if (!passives.has(id)) problems.push(`${where}: unknown item "${id}"`)
     }
     for (const id of evolution.characters ?? []) {
-      if (!characters.has(id)) problems.push(`${where}: unbekannter Charakter "${id}"`)
+      if (!characters.has(id)) problems.push(`${where}: unknown character "${id}"`)
     }
     if (evolution.kind === 'union' && evolution.weapons.length < 2) {
-      problems.push(`${where}: eine Union braucht mindestens zwei Waffen`)
+      problems.push(`${where}: a union needs at least two weapons`)
     }
   }
 
   for (const recommendation of data.recommendations) {
-    const where = `Empfehlung für "${recommendation.character}" (${recommendation.source})`
+    const where = `Recommendation for "${recommendation.character}" (${recommendation.source})`
     checkSource(where, recommendation.source)
     if (!characters.has(recommendation.character)) {
-      problems.push(`${where}: unbekannter Charakter`)
+      problems.push(`${where}: unknown character`)
     }
     for (const { id } of recommendation.weapons) {
-      if (!weapons.has(id)) problems.push(`${where}: unbekannte Waffe "${id}"`)
+      if (!weapons.has(id)) problems.push(`${where}: unknown weapon "${id}"`)
     }
     for (const { id } of recommendation.passives) {
-      if (!passives.has(id)) problems.push(`${where}: unbekannter Gegenstand "${id}"`)
+      if (!passives.has(id)) problems.push(`${where}: unknown item "${id}"`)
     }
   }
 

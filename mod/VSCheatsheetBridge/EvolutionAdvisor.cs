@@ -6,8 +6,8 @@ using System.Text.Json;
 
 namespace VSCheatsheetBridge;
 
-// Daten aus der Cheatsheet-App (scripts/export-mod-data.mjs): Spielkennung -> App-Kennung,
-// Namen, Maximalstufen und Entwicklungen.
+// Data from the cheatsheet app (scripts/export-mod-data.mjs): game ID -> app ID,
+// names, max levels and evolutions.
 internal sealed class CheatsheetData
 {
     public Dictionary<string, string> Characters { get; set; } = new();
@@ -28,7 +28,7 @@ internal sealed class NameEntry
     public string De { get; set; }
     public string En { get; set; }
     public int Max { get; set; }
-    /// <summary>Spielkennung, für das Bild.</summary>
+    /// <summary>Game ID, used for the image.</summary>
     public string G { get; set; }
 }
 
@@ -47,11 +47,11 @@ internal sealed class Ingredient
     public bool Max { get; set; }
 }
 
-// ---- Was das Overlay zeigt ---------------------------------------------------------------
+// ---- What the overlay shows -------------------------------------------------------------
 
 internal enum RowStatus { Missing, NeedsMax, Ready, Evolved, NoEvolution }
 
-/// <summary>Ein Bild im Overlay: Waffe oder Gegenstand mit Stufe.</summary>
+/// <summary>An image in the overlay: weapon or item with its level.</summary>
 internal sealed class Icon
 {
     public string Id;
@@ -59,11 +59,11 @@ internal sealed class Icon
     public string Name;
     public int Level;
     public int Max;
-    /// <summary>Im Lauf vorhanden (sonst blass).</summary>
+    /// <summary>Owned in the run (otherwise faded).</summary>
     public bool Owned = true;
-    /// <summary>Stammt von einem Mitspieler (Koop), z. B. "P2".</summary>
+    /// <summary>Comes from another player (co-op), e.g. "P2".</summary>
     public string From;
-    /// <summary>Muss für die Entwicklung noch auf Maximalstufe.</summary>
+    /// <summary>Still needs max level for the evolution.</summary>
     public bool NeedsMax;
 }
 
@@ -71,7 +71,7 @@ internal sealed class WeaponRow
 {
     public Icon Weapon;
     public RowStatus Status;
-    /// <summary>Weitere Zutaten der nächsten Entwicklung (ohne die Waffe selbst).</summary>
+    /// <summary>Other ingredients of the next evolution (excluding the weapon itself).</summary>
     public List<Icon> Parts = new();
     public Icon Result;
     public string StatusText;
@@ -84,11 +84,11 @@ internal sealed class PlayerPanel
     public List<Icon> Passives = new();
 }
 
-// Was fehlt pro Waffe für die nächste Entwicklung? Gleiche Regeln wie die App
-// (src/logic/evolution.ts), aber mit den echten Stufen aus dem Spiel.
+// What does each weapon still need for its next evolution? Same rules as the app
+// (src/logic/evolution.ts), but with the real levels from the game.
 //
-// Koop: Passive Gegenstände der Mitspieler zählen für die eigenen Entwicklungen mit
-// (z. B. Spinat eines Mitspielers für den Feuerstab), wenn `sharePassives` an ist.
+// Co-op: other players' passive items count toward your own evolutions
+// (e.g. another player's Spinach for the Fire Wand) when `sharePassives` is on.
 internal sealed class EvolutionAdvisor
 {
     private readonly CheatsheetData _data;
@@ -109,7 +109,7 @@ internal sealed class EvolutionAdvisor
 
     private string T(string de, string en) => _german ? de : en;
 
-    /// <summary>Text in der Sprache des Overlays.</summary>
+    /// <summary>Text in the overlay language.</summary>
     public string Text(string de, string en) => T(de, en);
 
     private sealed class PlayerItems
@@ -229,7 +229,7 @@ internal sealed class EvolutionAdvisor
 
         foreach (Ingredient p in e.Passives)
         {
-            // Eigener Gegenstand zuerst, sonst der eines Mitspielers (höchste Stufe).
+            // Own item first, otherwise another player's (highest level).
             PlayerItems holder = me.Passives.Contains(p.Id) ? me : null;
             if (holder == null && team != null)
                 holder = team.Where(t => t != me && t.Passives.Contains(p.Id))

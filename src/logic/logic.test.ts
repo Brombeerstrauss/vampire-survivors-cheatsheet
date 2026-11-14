@@ -37,8 +37,8 @@ const passive = (id: string, maxLevel = 5, extra: Partial<PassiveItem> = {}): Pa
 
 const fixture: GameData = {
   packs: [
-    { id: 'base', name: lt('Basisspiel'), kind: 'base', paid: false, verified: true },
-    { id: 'moon', name: lt('Mond-DLC'), kind: 'dlc', paid: true, verified: true },
+    { id: 'base', name: lt('Base game'), kind: 'base', paid: false, verified: true },
+    { id: 'moon', name: lt('Moon DLC'), kind: 'dlc', paid: true, verified: true },
   ],
   characters: [
     { id: 'antonio', name: 'Antonio', source: 'base', startingWeapons: ['whip'], bonus: lt(''), secret: false, verified: true },
@@ -84,17 +84,17 @@ const fixture: GameData = {
       verified: true,
     },
     { id: 'anima', kind: 'morph', source: 'base', result: 'anima', weapons: [{ id: 'bone', level: 'any' }], passives: [], characters: ['mortaccio'], verified: true },
-    // Entwicklung über DLC-Grenzen: Basis-Waffe + DLC-Gegenstand
+    // Evolution across DLC boundaries: base weapon + DLC item
     { id: 'moon-whip', kind: 'evolution', source: 'moon', result: 'moon-whip', weapons: [{ id: 'whip' }], passives: [{ id: 'moon-pearl' }], verified: true },
   ],
   recommendations: [
     {
       character: 'antonio',
       source: 'base',
-      weapons: [{ id: 'axe', reason: lt('Viel Schaden'), priority: 2 }],
+      weapons: [{ id: 'axe', reason: lt('High damage'), priority: 2 }],
       passives: [
-        { id: 'spinach', reason: lt('Mehr Macht'), priority: 1 },
-        { id: 'hollow-heart', reason: lt('Mehr Leben'), priority: 1 },
+        { id: 'spinach', reason: lt('More might'), priority: 1 },
+        { id: 'hollow-heart', reason: lt('More health'), priority: 1 },
       ],
     },
   ],
@@ -106,24 +106,24 @@ const baseOnly = createCatalog(fixture, new Set(['base']))
 const evo = (id: string) => fixture.evolutions.find((e) => e.id === id)!
 const run = (partial: Partial<RunState>): RunState => ({ ...EMPTY_RUN, ...partial })
 
-describe('Entwicklung: Waffe + Gegenstand', () => {
-  it('meldet den fehlenden Gegenstand', () => {
+describe('Evolution: weapon + item', () => {
+  it('reports the missing item', () => {
     const check = checkEvolution(evo('bloody-tear'), run({ weapons: [{ id: 'whip' }] }), baseOnly)
     expect(check.ready).toBe(false)
     expect(check.missing.map((m) => m.id)).toEqual(['hollow-heart'])
   })
 
-  it('nennt die Maximalstufe der Waffe als Hinweis', () => {
+  it('mentions the weapon max level as a hint', () => {
     const r = run({ weapons: [{ id: 'whip' }], passives: [{ id: 'hollow-heart' }] })
     expect(checkEvolution(evo('bloody-tear'), r, baseOnly).needsMax.map((n) => n.id)).toEqual(['whip'])
   })
 
-  it('ist bereit, sobald Waffe und Gegenstand im Lauf sind', () => {
+  it('is ready once weapon and item are in the run', () => {
     const r = run({ weapons: [{ id: 'whip' }], passives: [{ id: 'hollow-heart' }] })
     expect(checkEvolution(evo('bloody-tear'), r, baseOnly).ready).toBe(true)
   })
 
-  it('ersetzt die Waffe an ihrem Platz und behält den Gegenstand', () => {
+  it('replaces the weapon in its slot and keeps the item', () => {
     const r = run({
       weapons: [{ id: 'knife' }, { id: 'whip' }, { id: 'axe' }],
       passives: [{ id: 'hollow-heart' }],
@@ -134,8 +134,8 @@ describe('Entwicklung: Waffe + Gegenstand', () => {
   })
 })
 
-describe('Entwicklung mit mehreren Gegenständen', () => {
-  it('braucht beide Ringe und nennt für alle drei Teile die Maximalstufe', () => {
+describe('Evolution with several items', () => {
+  it('needs both rings and mentions max level for all three parts', () => {
     const oneRing = run({ weapons: [{ id: 'clock-lancet' }], passives: [{ id: 'silver-ring' }] })
     const check = checkEvolution(evo('infinite-corridor'), oneRing, baseOnly)
     expect(check.ready).toBe(false)
@@ -149,12 +149,12 @@ describe('Entwicklung mit mehreren Gegenständen', () => {
 })
 
 describe('Unions', () => {
-  it('meldet die fehlende zweite Waffe', () => {
+  it('reports the missing second weapon', () => {
     const check = checkEvolution(evo('vandalier'), run({ weapons: [{ id: 'peachone' }] }), baseOnly)
     expect(check.missing).toMatchObject([{ type: 'weapon', id: 'ebony-wings' }])
   })
 
-  it('verschmilzt beide Waffen zu einer und gibt einen Slot frei', () => {
+  it('merges both weapons into one and frees a slot', () => {
     const r = run({ weapons: [{ id: 'peachone' }, { id: 'knife' }, { id: 'ebony-wings' }] })
     expect(checkEvolution(evo('vandalier'), r, baseOnly).ready).toBe(true)
     const next = applyEvolution(r, baseOnly, evo('vandalier'))
@@ -163,13 +163,13 @@ describe('Unions', () => {
 })
 
 describe('Morphs', () => {
-  it('gelten nur für den passenden Charakter', () => {
+  it('only apply to the matching character', () => {
     const bone = [{ id: 'bone' }]
     expect(evolutionsForOwnedWeapon('bone', run({ character: 'mortaccio', weapons: bone }), baseOnly)).toHaveLength(1)
     expect(evolutionsForOwnedWeapon('bone', run({ character: 'antonio', weapons: bone }), baseOnly)).toHaveLength(0)
   })
 
-  it('brauchen keine Maximalstufe der Waffe', () => {
+  it('do not need the weapon at max level', () => {
     const r = run({ character: 'mortaccio', weapons: [{ id: 'bone' }] })
     const check = checkEvolution(evo('anima'), r, baseOnly)
     expect(check.ready).toBe(true)
@@ -177,18 +177,18 @@ describe('Morphs', () => {
   })
 })
 
-describe('DLC-Filter', () => {
-  it('blendet Inhalte nicht freigeschalteter DLCs aus', () => {
+describe('DLC filter', () => {
+  it('hides content of DLCs that are not enabled', () => {
     expect(baseOnly.passive('moon-pearl')).toBeUndefined()
     expect(both.passive('moon-pearl')).toBeDefined()
   })
 
-  it('zeigt Entwicklungen über DLC-Grenzen nur, wenn alle beteiligten Pakete freigeschaltet sind', () => {
+  it('shows evolutions across DLC boundaries only when all packs involved are enabled', () => {
     expect(baseOnly.evolutionsFromWeapon('whip').map((e) => e.id)).toEqual(['bloody-tear'])
     expect(both.evolutionsFromWeapon('whip').map((e) => e.id)).toEqual(['bloody-tear', 'moon-whip'])
   })
 
-  it('erlaubt Gegenstände wie Mini Crewmates auch bei vollen Slots', () => {
+  it('allows items like Mini Crewmates even when slots are full', () => {
     const data: GameData = { ...fixture, passives: [...fixture.passives, passive('mini-crewmate', 3, { ignoresSlotLimit: true })] }
     const catalog = createCatalog(data, new Set(['base']))
     let r = run({})
@@ -196,7 +196,7 @@ describe('DLC-Filter', () => {
     expect(addPassive(r, catalog, 'mini-crewmate').passives).toHaveLength(7)
   })
 
-  it('entfernt verbrauchte Gegenstände bei der Entwicklung', () => {
+  it('removes items that the evolution uses up', () => {
     const data: GameData = {
       ...fixture,
       passives: [...fixture.passives, passive('power-up', 1, { noSlot: true })],
@@ -210,7 +210,7 @@ describe('DLC-Filter', () => {
     expect(next.passives.map((p) => p.id)).toEqual(['spinach'])
   })
 
-  it('zählt Gegenstände ohne Slot nicht mit', () => {
+  it('does not count items without a slot', () => {
     let r = run({})
     for (const id of ['spinach', 'armor', 'wings', 'clover', 'crown', 'bracer']) r = addPassive(r, both, id)
     expect(r.passives).toHaveLength(6)
@@ -219,12 +219,12 @@ describe('DLC-Filter', () => {
   })
 })
 
-describe('Lauf', () => {
-  it('startet mit den Startwaffen des Charakters', () => {
+describe('Run', () => {
+  it('starts with the character\'s starting weapons', () => {
     expect(startRun(baseOnly, 'antonio')).toEqual({ character: 'antonio', weapons: [{ id: 'whip' }], passives: [] })
   })
 
-  it('erlaubt höchstens 6 Waffen', () => {
+  it('allows at most 6 weapons', () => {
     let r = run({})
     for (const id of ['whip', 'peachone', 'ebony-wings', 'clock-lancet', 'bone', 'knife', 'axe']) r = addWeapon(r, baseOnly, id)
     expect(r.weapons.map((w) => w.id)).not.toContain('axe')
@@ -232,39 +232,39 @@ describe('Lauf', () => {
   })
 
 
-  it('räumt gespeicherte Daten auf', () => {
+  it('cleans up stored data', () => {
     const raw = { character: 'nobody', weapons: [{ id: 'whip', level: 99 }, { id: 'whip' }, { id: 'laser' }] as unknown, passives: 'kaputt' }
     expect(sanitizeRun(raw, baseOnly)).toEqual({ character: null, weapons: [{ id: 'whip' }], passives: [] })
   })
 })
 
-describe('Vorschläge', () => {
-  it('nennt fehlende Entwicklungs-Partner vor den Empfehlungen', () => {
+describe('Suggestions', () => {
+  it('lists missing evolution partners before recommendations', () => {
     const { suggestions } = suggestNext(run({ character: 'antonio', weapons: [{ id: 'whip' }] }), baseOnly)
     expect(suggestions[0]).toMatchObject({ type: 'passive', id: 'hollow-heart', source: 'evolution' })
     expect(suggestions[0]!.reasons).toContainEqual({ type: 'missingFor', result: 'bloody-tear' })
-    expect(suggestions[0]!.reasons).toContainEqual({ type: 'recommended', text: lt('Mehr Leben') })
+    expect(suggestions[0]!.reasons).toContainEqual({ type: 'recommended', text: lt('More health') })
     expect(suggestions.map((s) => s.id)).toEqual(['hollow-heart', 'spinach', 'axe'])
   })
 
-  it('schlägt Waffen vor, die zu vorhandenen Gegenständen passen', () => {
+  it('suggests weapons that pair with items you have', () => {
     const { suggestions } = suggestNext(run({ passives: [{ id: 'hollow-heart' }] }), baseOnly)
     expect(suggestions).toContainEqual(expect.objectContaining({ type: 'weapon', id: 'whip', source: 'pairing' }))
   })
 
-  it('nennt den Union-Partner', () => {
+  it('names the union partner', () => {
     const { suggestions } = suggestNext(run({ weapons: [{ id: 'peachone' }] }), baseOnly)
     expect(suggestions[0]).toMatchObject({ type: 'weapon', id: 'ebony-wings', reasons: [{ type: 'unionPartner', result: 'vandalier' }] })
   })
 
-  it('warnt, wenn alle passiven Slots belegt sind und ein Partner fehlt', () => {
+  it('warns when all passive slots are full and a partner is missing', () => {
     const passives = ['spinach', 'armor', 'wings', 'clover', 'crown', 'bracer'].map((id) => ({ id }))
     const result = suggestNext(run({ weapons: [{ id: 'whip' }], passives }), baseOnly)
     expect(result.warnings).toEqual([{ type: 'passiveSlotsFull', passive: 'hollow-heart', results: ['bloody-tear'] }])
     expect(result.suggestions.filter((s) => s.type === 'passive')).toEqual([])
   })
 
-  it('warnt, wenn freie Slots nicht für alle geplanten Entwicklungen reichen', () => {
+  it('warns when free slots are not enough for all planned evolutions', () => {
     const passives = ['spinach', 'armor', 'wings', 'clover', 'crown'].map((id) => ({ id }))
     const result = suggestNext(run({ weapons: [{ id: 'whip' }, { id: 'clock-lancet' }], passives }), baseOnly)
     expect(result.warnings).toHaveLength(1)
@@ -272,34 +272,34 @@ describe('Vorschläge', () => {
     expect(result.hints).toEqual([{ type: 'stageOnly', passive: 'silver-ring' }, { type: 'stageOnly', passive: 'gold-ring' }])
   })
 
-  it('schlägt keine Waffe vor, die im Lauf schon entwickelt wurde', () => {
+  it('does not suggest a weapon already evolved in this run', () => {
     const r = run({ character: 'antonio', weapons: [{ id: 'bloody-tear' }], passives: [{ id: 'hollow-heart' }] })
     expect(suggestNext(r, baseOnly).suggestions.map((s) => s.id)).not.toContain('whip')
   })
 
-  it('schlägt nichts vor, was schon im Lauf ist', () => {
+  it('suggests nothing that is already in the run', () => {
     const r = run({ character: 'antonio', weapons: [{ id: 'whip' }, { id: 'axe' }], passives: [{ id: 'hollow-heart' }, { id: 'spinach' }] })
     expect(suggestNext(r, baseOnly).suggestions).toEqual([])
   })
 })
 
-describe('Echte Daten', () => {
+describe('Real data', () => {
   const catalog = createCatalog(gameData, new Set(gameData.packs.map((p) => p.id)))
 
-  it('Whip + Hollow Heart ergibt Bloody Tear', () => {
+  it('Whip + Hollow Heart gives Bloody Tear', () => {
     const r = run({ weapons: [{ id: 'whip' }], passives: [{ id: 'hollow-heart' }] })
     const [check] = evolutionsForOwnedWeapon('whip', r, catalog)
     expect(check?.evolution.result).toBe('bloody-tear')
     expect(check?.ready).toBe(true)
   })
 
-  it('Peachone + Ebony Wings ergibt die Union Vandalier', () => {
+  it('Peachone + Ebony Wings gives the union Vandalier', () => {
     const union = catalog.evolutionsFromWeapon('peachone').find((e) => e.kind === 'union')
     expect(union?.result).toBe('vandalier')
     expect(union?.weapons.map((w) => w.id).sort()).toEqual(['ebony-wings', 'peachone'])
   })
 
-  it('jeder Charakter startet mit vorhandenen Waffen', () => {
+  it('every character starts with existing weapons', () => {
     for (const character of catalog.characters) {
       for (const id of character.startingWeapons) expect(catalog.weapon(id), `${character.id} → ${id}`).toBeDefined()
     }

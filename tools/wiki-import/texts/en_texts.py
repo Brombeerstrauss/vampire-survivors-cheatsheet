@@ -1,14 +1,14 @@
-# Englische Fassungen der selbst geschriebenen Texte.
-# Beschreibungen und Charakter-Boni kommen auf Englisch direkt aus dem Wiki
-# (Originaltext des Spiels); hier stehen nur Ergänzungen und Ersatztexte.
+# English versions of the texts written for this project.
+# Descriptions and character bonuses come from the wiki in English
+# (the game's original text); this file only has additions and replacements.
 
-# Charaktere, deren englische Wiki-Beschreibung fehlt oder leer ist
+# Characters whose English wiki description is missing or empty
 BONUS_EN = {
     "Boon Marrabbio": "Starts with +20 Max Health, +30% Move Speed, +20% Might, -110% Speed, -80% Greed and +10% Curse.",
     "Leda": "Starts with +5 Armor, +100% Might, +10% Area and -10% Cooldown, but -20% Move Speed and -80% Greed.",
 }
 
-# Gegenstände, deren Spieltext nichts über die Wirkung sagt
+# Items whose game text says nothing about what they do
 DESCRIPTION_EN = {
     "Silver Ring": "+5% Duration and Area per level (max +40%). With Gold Ring at max level, Clock Lancet evolves into Infinite Corridor.",
     "Gold Ring": "+5% Curse per level (max +40%). With Silver Ring at max level, Clock Lancet evolves into Infinite Corridor.",
@@ -26,7 +26,7 @@ CHARACTER_NOTES_EN = {
     "Perkeo": "Can carry up to 100 passive items; the app's slot warnings don't apply to Perkeo.",
 }
 
-# Bedingungen und Hinweise zu Entwicklungen, nach Ergebnis
+# Conditions and notes for evolutions, by result
 EVOLUTION_EN = {
     "Miracle of Multiplication": {
         "conditions": ["Evolve Penshin Fatcha at least six times (each evolution picks a tuna form)."],
@@ -60,7 +60,7 @@ MORPH_RELIC_EN = "Have the relic {relic}."
 MORPH_LEVEL_EN = "Character reaches level 80."
 GLIMMER_EN = "Unlock the Glimmer tech “{tech}” (happens randomly while attacking)."
 
-# Englische Fassung der handgeschriebenen Empfehlungen (Basisspiel)
+# English version of the hand-written recommendations (base game)
 RECOMMENDATIONS_EN = {
     "Antonio Belpaese": ("A sturdy melee fighter whose Might bonus grows with his level. Weapons with high base damage and all-round protection work well.", {
         "Whip": "Starting weapon; with Hollow Heart it becomes Bloody Tear and heals you.",

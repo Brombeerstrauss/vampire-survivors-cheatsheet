@@ -50,7 +50,7 @@ function Shell() {
             paddingRight: 'max(1rem, env(safe-area-inset-right))',
           }}
         >
-          <a href="#/charaktere" className="flex items-center gap-2 font-bold text-gold-300">
+          <a href="#/characters" className="flex items-center gap-2 font-bold text-gold-300">
             <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="" className="size-7 rounded-lg" />
             <span className="sm:hidden">VS Cheatsheet</span>
             <span className="hidden sm:inline">Vampire Survivors Cheatsheet</span>

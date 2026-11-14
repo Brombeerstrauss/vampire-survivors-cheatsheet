@@ -3,8 +3,8 @@ import type { EvolutionCheck } from '../logic/evolution.ts'
 import type { SuggestionHint, SuggestionReason, SuggestionWarning } from '../logic/suggestions.ts'
 import type { I18n } from './index.ts'
 
-// Formuliert die Bausteine aus der Logik als Sätze in der gewählten Sprache.
-// Namen in Sätzen stehen ohne Klammer-Übersetzung, damit sie lesbar bleiben.
+// Turns the building blocks from the logic into sentences in the selected language.
+// Names in sentences have no translation in parentheses, so they stay readable.
 
 const weaponName = (i18n: I18n, catalog: Catalog, id: string) => {
   const w = catalog.weapon(id)
@@ -51,7 +51,7 @@ export function describeHint(hint: SuggestionHint, i18n: I18n, catalog: Catalog)
   return i18n.t.hintStageOnly(passiveName(i18n, catalog, hint.passive))
 }
 
-/** Was passiert, wenn alle Teile einer Entwicklung im Lauf sind. */
+/** What happens once all parts of an evolution are in the run. */
 export function readyText(check: EvolutionCheck, i18n: I18n, catalog: Catalog): string {
   const { evolution, needsMax } = check
   if (evolution.kind === 'morph') return i18n.t.readyMorph
@@ -63,7 +63,7 @@ export function readyText(check: EvolutionCheck, i18n: I18n, catalog: Catalog): 
   return names.length === 0 ? i18n.t.readyNow(result, gift) : i18n.t.readyAfterMax(names, result, gift)
 }
 
-/** Was für eine Entwicklung noch fehlt. */
+/** What is still missing for an evolution. */
 export function progressText(check: EvolutionCheck, i18n: I18n, catalog: Catalog): string {
   return check.missing
     .map((r) => i18n.t.missing(r.type === 'weapon' ? weaponName(i18n, catalog, r.id) : passiveName(i18n, catalog, r.id)))

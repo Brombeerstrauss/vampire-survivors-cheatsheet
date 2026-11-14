@@ -1,16 +1,16 @@
-"""Erzeugt die JSON-Dateien eines Pakets aus den ausgelesenen Wiki-Daten, auf Deutsch und Englisch.
+"""Builds the JSON files of a pack from the parsed wiki data, in German and English.
 
-Aufruf: python3 -I build_pack.py <texte-ordner> <wiki-raw-dir> <wiki-code> <pack-id> <texte-modul> <ziel-ordner>
+Usage: python3 -I build_pack.py <texts-dir> <wiki-raw-dir> <wiki-code> <pack-id> <texts-module> <target-dir>
 
-Quellen:
-- Englisch: Namen und Beschreibungen aus dem Vampire Survivors Wiki (Originaltext des Spiels).
-- Deutsch: offizielle Namen und Texte aus poncles Lokalisierungs-Tabelle (loc_de.json), wo vorhanden;
-  sonst eigene Texte aus texts/de_<paket>.py, in denen englische Namen durch offizielle deutsche ersetzt werden.
-- Namen ohne offiziellen deutschen Namen bekommen ggf. eine eigene Übersetzung (nameDeHint),
-  die die App in Klammern zeigt.
+Sources:
+- English: names and descriptions from the Vampire Survivors Wiki (the game's original text).
+- German: official names and texts from poncle's localisation sheet (loc_de.json) where available;
+  otherwise own texts from texts/de_<pack>.py, with English names replaced by the official German ones.
+- Names without an official German name may get an own translation (nameDeHint),
+  which the app shows in parentheses.
 
-`verified` wird nur gesetzt, wenn die Angaben auf mehreren Wiki-Seiten übereinstimmen
-(Entwicklungsseite, Waffenliste, Gegenstandsliste, Charakterseite).
+`verified` is only set when the details match across several wiki pages
+(evolution page, weapon list, item list, character page).
 """
 import importlib, json, os, re, sys, unicodedata
 
@@ -27,7 +27,7 @@ def load(name, default=None):
     path = os.path.join(raw, name)
     if not os.path.exists(path):
         if default is not None: return default
-        raise SystemExit(f"Fehlt: {path}")
+        raise SystemExit(f"Missing: {path}")
     return json.load(open(path, encoding="utf-8"))
 
 W_ALL = load("weapons_parsed.json")
@@ -53,7 +53,7 @@ PSEUDO = {"passives", "Treasure Chest", "evolutions"}
 
 def norm(s): return re.sub(r"\s+", " ", s or "").strip()
 
-# ---------- Deutsch: offizielle Namen und Ersetzung in eigenen Texten ----------
+# ---------- German: official names and replacing them in own texts ----------
 def fix(text): return N.OFFICIAL_FIXES.get(text, text)
 
 OFFICIAL_DE = {}
@@ -61,14 +61,14 @@ for en, v in LOC["weapons"].items(): OFFICIAL_DE[en] = fix(v["name"])
 for en, v in LOC["characters"].items(): OFFICIAL_DE[en] = fix(v["name"])
 
 def de_name(en):
-    """Name für deutsche Fließtexte: offizieller deutscher Name, sonst der englische."""
+    """Name for German running text: the official German name, otherwise the English one."""
     return OFFICIAL_DE.get(en, en)
 
 _replace = sorted((en for en, de in OFFICIAL_DE.items() if de and de != en), key=len, reverse=True)
 _pattern = re.compile(r"(?<![\w'])(" + "|".join(re.escape(n) for n in _replace) + r")(?![\w'])") if _replace else None
 
 def localize_de(text):
-    """Ersetzt englische Namen in eigenen deutschen Texten durch die offiziellen deutschen."""
+    """Replaces English names in own German texts with the official German ones."""
     if not text or not _pattern: return text
     return _pattern.sub(lambda m: OFFICIAL_DE[m.group(1)], text)
 
@@ -76,7 +76,7 @@ def lt(de, en):
     return {"de": de, "en": en}
 
 def names_for(en_name):
-    """Felder nameDe (offiziell) bzw. nameDeHint (eigene Übersetzung, in Klammern)."""
+    """Fields nameDe (official) or nameDeHint (own translation, in parentheses)."""
     official = OFFICIAL_DE.get(en_name)
     if official:
         return {"nameDe": official} if official != en_name else {}
@@ -84,19 +84,19 @@ def names_for(en_name):
     return {"nameDeHint": hint} if hint and hint != en_name else {}
 
 def official_text(table, en_name, field, en_text):
-    """Offizieller deutscher Text, wenn er wirklich übersetzt ist."""
+    """Official German text, if it is actually translated."""
     entry = LOC[table].get(en_name)
     text = entry.get(field) if entry else None
     if text and norm(text) != norm(en_text): return fix(text)
     return None
 
 def image_for(file_name, label):
-    """Adresse des Originalbilds im Wiki, falls die Datei existiert."""
+    """URL of the original image on the wiki, if the file exists."""
     if not file_name:
-        warn(f"Kein Bild in der Wiki-Tabelle: {label}"); return None
+        warn(f"No image in the wiki table: {label}"); return None
     key = file_name.replace("_", " ").strip()
     info = IMAGES.get(file_name) or IMAGES.get(key[:1].upper() + key[1:])
-    if not info: warn(f"Bild fehlt im Wiki: {label} ({file_name})")
+    if not info: warn(f"Image missing on the wiki: {label} ({file_name})")
     return info["url"] if info else None
 
 def unverified(problems):
@@ -105,16 +105,16 @@ def unverified(problems):
     return de, en
 
 def join_notes(parts):
-    """parts: Liste von (de, en); ergibt LocalizedText oder None."""
+    """parts: list of (de, en); returns LocalizedText or None."""
     parts = [p for p in parts if p and (p[0] or p[1])]
     if not parts: return None
     return lt(" ".join(p[0] for p in parts), " ".join(p[1] for p in parts))
 
-# ---------- Entwicklungen ----------
+# ---------- Evolutions ----------
 evolutions = []
 for e in [e for e in E_ALL if e["pack"] == code]:
     if not e.get("result"):
-        warn(f"Entwicklung ohne Ergebnis übersprungen: {e}"); continue
+        warn(f"Skipped evolution without a result: {e}"); continue
     weapons_in = [w["name"] for w in e["weapons"]]
     results = [r["name"] for r in e["result"]]
     if e["kind"] == "evolution" and weapons_in and weapons_in[0] == "Penshin Fatcha":
@@ -136,16 +136,16 @@ for e in [e for e in E_ALL if e["pack"] == code]:
             elif GLIMMER_NOTE:
                 conditions.append(lt(GLIMMER_NOTE.format(tech=p["name"]), EN.GLIMMER_EN.format(tech=p["name"])))
             else:
-                warn(f"{result}: unbekannte Zutat {p['name']}")
+                warn(f"{result}: unknown ingredient {p['name']}")
     extra_de = T.EVOLUTION_DE.get(result, {})
     extra_en = EN.EVOLUTION_EN.get(result, {})
     if extra_de.get("conditions"):
         de_list, en_list = extra_de["conditions"], extra_en.get("conditions", [])
-        if len(de_list) != len(en_list): raise SystemExit(f"Englische Bedingungen fehlen oder passen nicht: {result}")
+        if len(de_list) != len(en_list): raise SystemExit(f"English conditions missing or not matching: {result}")
         override = [lt(localize_de(d), en) for d, en in zip(de_list, en_list)]
         conditions = override + [c for c in conditions if c["de"] not in de_list]
 
-    # Gegenprüfung mit Waffen- und Gegenstandsliste: Liste von (deutsch, englisch)
+    # Cross-check with the weapon and item lists: list of (German, English)
     problems = []
     res = W_BY.get(result)
     if not res:
@@ -195,7 +195,7 @@ for e in [e for e in E_ALL if e["pack"] == code]:
     if note: entry["note"] = note
     evolutions.append(entry)
 
-# ---------- Waffen ----------
+# ---------- Weapons ----------
 weapons, seen_w = [], set()
 for w in W_ALL:
     if w["pack"] != code or w["section"] in ("Counterpart Weapons", "Special Weapons"): continue
@@ -203,7 +203,7 @@ for w in W_ALL:
     if name in seen_w: continue
     seen_w.add(name)
     if name not in T.WEAPONS:
-        warn(f"Waffe ohne deutschen Text übersprungen: {name}"); continue
+        warn(f"Skipped weapon without German text: {name}"); continue
     emoji, desc_de = T.WEAPONS[name]
     desc_en = EN.DESCRIPTION_EN.get(name) or w["description"]
     desc_de = official_text("weapons", name, "description", w["description"]) or localize_de(desc_de)
@@ -220,12 +220,12 @@ for w in W_ALL:
     entry["verified"] = not problems
     if problems:
         entry["note"] = join_notes([unverified(problems)])
-        warn(f"Waffe {name}: " + "; ".join(p[0] for p in problems))
+        warn(f"Weapon {name}: " + "; ".join(p[0] for p in problems))
     weapons.append(entry)
 missing_w = set(T.WEAPONS) - seen_w
-if missing_w: warn(f"Deutsche Texte ohne Wiki-Waffe: {sorted(missing_w)}")
+if missing_w: warn(f"German texts without a wiki weapon: {sorted(missing_w)}")
 
-# ---------- Passive Gegenstände ----------
+# ---------- Passive items ----------
 passives = []
 for p in P_ALL:
     if p["name"] not in T.PASSIVES: continue
@@ -246,14 +246,14 @@ for p in P_ALL:
     entry["verified"] = not problems
     if problems:
         entry["note"] = join_notes([unverified(problems)])
-        warn(f"Gegenstand {name}: " + "; ".join(p[0] for p in problems))
+        warn(f"Item {name}: " + "; ".join(p[0] for p in problems))
     passives.append(entry)
 missing_p = set(T.PASSIVES) - {p["name"] for p in P_ALL}
-if missing_p: warn(f"Gegenstände ohne Wiki-Eintrag: {missing_p}")
+if missing_p: warn(f"Items without a wiki entry: {missing_p}")
 
-# ---------- Charaktere ----------
+# ---------- Characters ----------
 def base_start(c):
-    """Basisspiel: Infobox-Feld `weapon`, gegengeprüft mit der Waffenliste."""
+    """Base game: infobox field `weapon`, cross-checked with the weapon list."""
     if c["name"] in T.CHARACTER_WEAPON_OVERRIDES:
         return T.CHARACTER_WEAPON_OVERRIDES[c["name"]], [], []
     start = [s.strip() for s in re.split(r";|<br\s*/?>", c["weapon"] or "") if s.strip() and s.strip() not in ("N/A", "None")]
@@ -265,7 +265,7 @@ def base_start(c):
     return start, problems, []
 
 def dlc_start(c):
-    """DLCs: Infobox-Waffen, bestätigt durch „Starting weapon of …“ in der Waffenliste."""
+    """DLCs: infobox weapons, confirmed by "Starting weapon of …" in the weapon list."""
     if c["name"] in T.CHARACTER_WEAPON_OVERRIDES:
         return T.CHARACTER_WEAPON_OVERRIDES[c["name"]], [], []
     ib = [w for w in c.get("infoboxWeapons", [])]
@@ -297,13 +297,13 @@ characters = []
 for c in [c for c in C_ALL if c["pack"] == code]:
     wiki_name = c["name"]
     if wiki_name not in T.CHARACTERS:
-        warn(f"Charakter ohne deutschen Text übersprungen: {wiki_name}"); continue
+        warn(f"Skipped character without German text: {wiki_name}"); continue
     emoji, bonus_de = T.CHARACTERS[wiki_name]
     start, problems, auto_notes = (base_start if code == "base" else dlc_start)(c)
     secret = c["group"] in ("Secret", "Hidden") or (c.get("secret") or "").lower() == "yes"
-    shown = getattr(T, "NAME_OVERRIDES", {}).get(wiki_name, wiki_name)  # Name im Spiel, falls der Seitentitel abweicht
+    shown = getattr(T, "NAME_OVERRIDES", {}).get(wiki_name, wiki_name)  # name in the game, if the page title differs
     bonus_en = EN.BONUS_EN.get(wiki_name) or c.get("description") or ""
-    if not bonus_en: warn(f"Charakter {wiki_name}: keine englische Beschreibung")
+    if not bonus_en: warn(f"Character {wiki_name}: no English description")
     bonus_de = official_text("characters", shown, "bonus", bonus_en) or localize_de(bonus_de)
     entry = {"id": slug(shown), "name": shown, **names_for(shown), "source": pack_id,
              "startingWeapons": [slug(s) for s in start], "bonus": lt(bonus_de, bonus_en),
@@ -317,17 +317,17 @@ for c in [c for c in C_ALL if c["pack"] == code]:
     note_parts += auto_notes
     if problems:
         note_parts.append(unverified(problems))
-        warn(f"Charakter {wiki_name}: " + "; ".join(p[0] for p in problems))
+        warn(f"Character {wiki_name}: " + "; ".join(p[0] for p in problems))
     note = join_notes(note_parts)
     if note: entry["note"] = note
     characters.append(entry)
 missing_c = set(T.CHARACTERS) - {c["name"] for c in C_ALL if c["pack"] == code}
-if missing_c: warn(f"Deutsche Texte ohne Wiki-Charakter: {sorted(missing_c)}")
+if missing_c: warn(f"German texts without a wiki character: {sorted(missing_c)}")
 
-# ---------- Empfehlungen ----------
+# ---------- Recommendations ----------
 ALL_EVOS = [e for e in E_ALL if e.get("result")]
 def auto_recommendation(c_entry):
-    """Grundempfehlung: Startwaffe plus die Partner für ihre Entwicklungen."""
+    """Basic recommendation: the starting weapon plus the partners for its evolutions."""
     weapons_r, passives_r = [], []
     names = {slug(n): n for n in W_BY}
     for wid in c_entry["startingWeapons"]:
@@ -362,7 +362,7 @@ for cname, (summary, rw, rp) in T.RECOMMENDATIONS.items():
     manual.add(slug(cname))
     summary_en, reasons_en = EN.RECOMMENDATIONS_EN[cname]
     def item(n, why, prio):
-        if n not in reasons_en: raise SystemExit(f"Englische Begründung fehlt: {cname} / {n}")
+        if n not in reasons_en: raise SystemExit(f"English reason missing: {cname} / {n}")
         return {"id": slug(n), "reason": lt(localize_de(why), reasons_en[n]), "priority": prio}
     recs.append({"character": slug(cname), "source": pack_id, "summary": lt(localize_de(summary), summary_en),
                  "weapons": [item(*x) for x in rw], "passives": [item(*x) for x in rp]})
@@ -384,8 +384,8 @@ dump("evolutions", "evolutions", evolutions)
 dump("recommendations", "recommendations", recs)
 
 official = sum(1 for x in characters + weapons + passives if "nameDe" in x or x["name"] in OFFICIAL_DE)
-print(f"[{pack_id}] {len(characters)} Charaktere, {len(weapons)} Waffen, {len(passives)} Gegenstände, "
-      f"{len(evolutions)} Entwicklungen, {len(recs)} Empfehlungen; offizielle deutsche Namen: {official}")
+print(f"[{pack_id}] {len(characters)} characters, {len(weapons)} weapons, {len(passives)} items, "
+      f"{len(evolutions)} evolutions, {len(recs)} recommendations; official German names: {official}")
 unv = [x["id"] for x in characters + weapons + passives + evolutions if not x["verified"]]
 print("  verified:false ->", unv)
 print("\n".join("  WARN " + w for w in warnings))

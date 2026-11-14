@@ -6,77 +6,85 @@ import { EMPTY_RUN } from '../logic/run.ts'
 import type { SuggestionReason, SuggestionWarning } from '../logic/suggestions.ts'
 import { describeReason, describeWarning, readyText } from './describe.ts'
 import { makeI18n } from './index.ts'
-import { detectLanguage, displayName, fullName, searchNames } from './names.ts'
+import { loadSettings } from '../state/settings.ts'
+import { displayName, fullName, searchNames } from './names.ts'
 import { de, en } from './strings.ts'
 
-describe('Namen', () => {
+describe('Names', () => {
   const whip = { name: 'Whip', nameDe: 'Peitsche' }
   const bolt = { name: 'Unearthly Bolt', nameDeHint: 'Überirdischer Blitz' }
   const pako = { name: 'Pako Battiliar' }
 
-  it('nimmt auf Deutsch den offiziellen deutschen Namen', () => {
+  it('uses the official German name in German', () => {
     expect(displayName(whip, 'de')).toEqual({ main: 'Peitsche' })
   })
 
-  it('zeigt ohne offiziellen Namen den englischen mit Übersetzung in Klammern', () => {
+  it('shows the English name with a translation in parentheses when there is no official name', () => {
     expect(displayName(bolt, 'de')).toEqual({ main: 'Unearthly Bolt', hint: 'Überirdischer Blitz' })
     expect(fullName(bolt, 'de')).toBe('Unearthly Bolt (Überirdischer Blitz)')
   })
 
-  it('lässt Eigennamen ohne Klammer', () => {
+  it('leaves proper names without parentheses', () => {
     expect(fullName(pako, 'de')).toBe('Pako Battiliar')
   })
 
-  it('zeigt auf Englisch immer den englischen Namen', () => {
+  it('always shows the English name in English', () => {
     expect(fullName(whip, 'en')).toBe('Whip')
     expect(fullName(bolt, 'en')).toBe('Unearthly Bolt')
   })
 
-  it('findet einen Eintrag über alle Namen', () => {
+  it('finds an entry by any of its names', () => {
     expect(searchNames(whip)).toContain('Peitsche')
     expect(searchNames(whip)).toContain('Whip')
     expect(searchNames(bolt)).toContain('Überirdischer')
   })
 })
 
-describe('Sprache des Geräts', () => {
-  it('wählt Deutsch bei deutschem Gerät, sonst Englisch', () => {
-    expect(detectLanguage(['de-DE', 'en-US'])).toBe('de')
-    expect(detectLanguage(['en-US', 'de-DE'])).toBe('de')
-    expect(detectLanguage(['fr-FR'])).toBe('en')
-    expect(detectLanguage([])).toBe('en')
+describe('Default language', () => {
+  const language = (raw: unknown) => loadSettings(raw, gameData.packs).language
+
+  it('starts in English', () => {
+    expect(language(undefined)).toBe('en')
+  })
+
+  it('ignores a German language that earlier versions took from the device', () => {
+    expect(language({ language: 'de' })).toBe('en')
+  })
+
+  it('keeps a language the user picked', () => {
+    expect(language({ language: 'de', languageChosen: true })).toBe('de')
   })
 })
 
-describe('Wörterbuch', () => {
-  it('hat in beiden Sprachen dieselben Einträge', () => {
+describe('Dictionary', () => {
+  it('has the same keys in both languages', () => {
     expect(Object.keys(en).sort()).toEqual(Object.keys(de).sort())
   })
 
-  it('verbindet Listen sprachgerecht', () => {
+  it('joins lists the way each language does', () => {
     expect(de.list(['A', 'B', 'C'])).toBe('A, B und C')
     expect(en.list(['A', 'B'])).toBe('A and B')
   })
 })
 
-describe('Sätze aus der Logik', () => {
+describe('Sentences from the logic', () => {
   const catalog = createCatalog(gameData, new Set(gameData.packs.map((p) => p.id)))
   const deI18n = makeI18n('de')
   const enI18n = makeI18n('en')
 
-  it('nutzt offizielle deutsche Namen in Begründungen', () => {
+  it('uses official German names in reasons', () => {
     const reason: SuggestionReason = { type: 'missingFor', result: 'bloody-tear' }
     expect(describeReason(reason, deI18n, catalog)).toBe('Fehlt für Blutige Träne')
     expect(describeReason(reason, enI18n, catalog)).toBe('Missing for Bloody Tear')
   })
 
-  it('formuliert Warnungen in beiden Sprachen', () => {
+  it('phrases warnings in both languages', () => {
     const warning: SuggestionWarning = { type: 'passiveSlotsFull', passive: 'hollow-heart', results: ['bloody-tear'] }
     expect(describeWarning(warning, deI18n, catalog)).toBe('Blutige Träne: Hohlherz fehlt, aber alle passiven Slots sind belegt.')
     expect(describeWarning(warning, enI18n, catalog)).toBe('Bloody Tear: Hollow Heart is missing, but all passive slots are full.')
   })
 
-  it('nennt im Bereit-Text, was auf Maximalstufe muss', () => {
+  it('says in the ready text what needs max level', () => {
     const evo = catalog.evolutionsFromWeapon('whip').find((e) => e.result === 'bloody-tear')!
     const run = { ...EMPTY_RUN, weapons: [{ id: 'whip' }], passives: [{ id: 'hollow-heart' }] }
     const check = checkEvolution(evo, run, catalog)
@@ -89,8 +97,8 @@ describe('Sätze aus der Logik', () => {
   })
 })
 
-describe('Daten in beiden Sprachen', () => {
-  it('jeder Text hat eine deutsche und eine englische Fassung', () => {
+describe('Data in both languages', () => {
+  it('every text has a German and an English version', () => {
     const texts = [
       ...gameData.weapons.map((w) => w.description),
       ...gameData.passives.map((p) => p.description),
@@ -102,7 +110,7 @@ describe('Daten in beiden Sprachen', () => {
     expect(incomplete).toEqual([])
   })
 
-  it('hat für Teile des Basisspiels offizielle deutsche Namen', () => {
+  it('has official German names for base game parts', () => {
     const whip = gameData.weapons.find((w) => w.id === 'whip')
     expect(whip?.nameDe).toBe('Peitsche')
   })

@@ -112,7 +112,7 @@ function CharacterDetail({ character }: { character: Character }) {
 
   return (
     <article className="space-y-6">
-      <a href="#/charaktere" className={`${buttonClass.ghost} -ml-3 md:hidden`}>
+      <a href="#/characters" className={`${buttonClass.ghost} -ml-3 md:hidden`}>
         {t.allCharacters}
       </a>
 
@@ -202,7 +202,7 @@ function StartingWeapon({ weaponId, characterId }: { weaponId: string; character
   )
 }
 
-/** Fasst Empfehlungen aus mehreren Paketen zusammen (wichtigste Priorität gewinnt). */
+/** Merges recommendations from several packs (the highest priority wins). */
 function mergeRecommended(items: RecommendedItem[]): RecommendedItem[] {
   const byId = new Map<string, RecommendedItem>()
   for (const item of items) {

@@ -1,4 +1,4 @@
-# Holt Seiten-Wikitext gebündelt (50 Titel pro Anfrage) und speichert ihn als JSON.
+# Fetches page wikitext in batches (50 titles per request) and saves it as JSON.
 import json, sys, time, urllib.parse, urllib.request
 api, titles_file, out_file = sys.argv[1], sys.argv[2], sys.argv[3]
 titles = [t.strip() for t in open(titles_file, encoding="utf-8") if t.strip()]

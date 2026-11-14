@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { gameData } from '../data/index.ts'
 import { buildGameIdIndex, levelKey, liveRunFromPlayer, parseSnapshot, sameRun } from './modBridge.ts'
 
-// Echte Meldung des Plugins aus einem Testlauf mit Imelda (Spielversion 1.16).
+// A real update from the plugin, captured in a test run with Imelda (game version 1.16).
 const SAMPLE = {
   v: 1,
   plugin: '0.1.0',
@@ -26,14 +26,14 @@ const SAMPLE = {
 const index = buildGameIdIndex(gameData)
 
 describe('parseSnapshot', () => {
-  it('liest eine echte Meldung des Plugins', () => {
+  it('reads a real update from the plugin', () => {
     const snap = parseSnapshot(SAMPLE)
     expect(snap?.inRun).toBe(true)
     expect(snap?.players).toHaveLength(1)
     expect(snap?.players[0]?.weapons[0]).toEqual({ type: 'MAGIC_MISSILE', level: 2 })
   })
 
-  it('lehnt fremde Formate ab und überspringt kaputte Einträge', () => {
+  it('rejects other formats and skips broken entries', () => {
     expect(parseSnapshot(null)).toBeNull()
     expect(parseSnapshot({ v: 2, players: [] })).toBeNull()
     const snap = parseSnapshot({ v: 1, inRun: true, players: [{ weapons: [{ type: 'WHIP' }, { level: 3 }, 'x'] }, 7] })
@@ -42,7 +42,7 @@ describe('parseSnapshot', () => {
 })
 
 describe('liveRunFromPlayer', () => {
-  it('übersetzt Spielkennungen in die Kennungen der App', () => {
+  it('maps game IDs to app IDs', () => {
     const live = liveRunFromPlayer(parseSnapshot(SAMPLE)!.players[0]!, index)
     expect(live.run).toEqual({
       character: 'imelda-belpaese',
@@ -54,7 +54,7 @@ describe('liveRunFromPlayer', () => {
     expect(live.unknown).toEqual([])
   })
 
-  it('sammelt unbekannte Kennungen, statt sie einzutragen', () => {
+  it('collects unknown IDs instead of adding them', () => {
     const live = liveRunFromPlayer(
       { index: 0, character: 'NOBODY', weapons: [{ type: 'HIDDEN_THING', level: 1 }, { type: 'WHIP', level: 3 }], passives: [] },
       index,
@@ -64,7 +64,7 @@ describe('liveRunFromPlayer', () => {
     expect(live.unknown).toEqual(['NOBODY', 'HIDDEN_THING'])
   })
 
-  it('trägt Waffen mit mehreren Spielkennungen nur einmal ein', () => {
+  it('adds weapons with several game IDs only once', () => {
     const tonne = gameData.weapons.find((w) => (w.gameIds?.length ?? 0) > 1)!
     const live = liveRunFromPlayer(
       { index: 0, character: null, weapons: tonne.gameIds!.map((type) => ({ type, level: 1 })), passives: [] },
@@ -75,7 +75,7 @@ describe('liveRunFromPlayer', () => {
 })
 
 describe('sameRun', () => {
-  it('vergleicht nur den Inhalt', () => {
+  it('compares content only', () => {
     const a = { character: 'x', weapons: [{ id: 'whip' }], passives: [] }
     expect(sameRun(a, { ...a, weapons: [{ id: 'whip' }] })).toBe(true)
     expect(sameRun(a, { ...a, weapons: [{ id: 'axe' }] })).toBe(false)

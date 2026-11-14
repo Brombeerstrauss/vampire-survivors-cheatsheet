@@ -1,28 +1,28 @@
-# Ergänzt Charaktere, Waffen und passive Gegenstände um "gameIds": die internen Kennungen des
-# Spiels (z. B. MAGIC_MISSILE für Magic Wand; manche Waffen haben mehrere). Sie steht im Wiki in der Infobox jeder Seite
-# (Feld "id") und ist genau das, was das BepInEx-Plugin unter mod/ meldet.
+# Adds "gameIds" to characters, weapons and passive items: the game's internal IDs
+# (e.g. MAGIC_MISSILE for Magic Wand; some weapons have several). They are in the infobox of
+# each wiki page (field "id") and are exactly what the BepInEx plugin in mod/ reports.
 #
-# Läuft nach build_pack.py in run.sh, kann aber auch allein laufen, ohne die Pakete neu zu
-# erzeugen (dann bleiben Handänderungen erhalten):
+# Runs after build_pack.py in run.sh, but also works on its own without rebuilding the packs
+# (manual edits are kept):
 #   python3 -I tools/wiki-import/game_ids.py https://vampire.survivors.wiki/api.php src/data/packs
 import json, os, re, sys, time, urllib.parse, urllib.request
 
 api, packs_dir = sys.argv[1], sys.argv[2]
 UA = "Mozilla/5.0 (compatible; wiki-reader/1.0)"
 
-# Welche Infobox zu welcher Datei gehört, und welche Seitentitel-Zusätze das Wiki bei
-# gleichnamigen Seiten verwendet (z. B. "Death (character)").
+# Which infobox belongs to which file, and which title suffixes the wiki uses for pages
+# with the same name (e.g. "Death (character)").
 KINDS = {
     "characters": ("Infobox Character", ["", " (character)", " (Character)"]),
     "weapons": ("Infobox Weapon", ["", " (weapon)", " (Weapon)"]),
     "passives": ("Infobox Passive item", ["", " (passive item)", " (item)", " (Passive item)"]),
 }
-# Einträge, deren Wiki-Seite anders heißt als der Name in der App.
+# Entries whose wiki page has a different name than in the app.
 TITLE_OVERRIDES = {}
 
 
 def fetch(titles):
-    """Wikitext für viele Titel, 50 pro Anfrage, Weiterleitungen aufgelöst. Schlüssel = angefragter Titel."""
+    """Wikitext for many titles, 50 per request, redirects resolved. Key = requested title."""
     result = {}
     titles = list(dict.fromkeys(titles))
     for i in range(0, len(titles), 50):
@@ -45,8 +45,8 @@ def fetch(titles):
 
 
 def infobox_fields(text, infobox):
-    """Felder einer Infobox. Zählt geschweifte Klammern, weil Felder teils auf einer Zeile
-    stehen und Werte selbst Vorlagen enthalten."""
+    """Fields of an infobox. Counts braces, because some fields share a line and values
+    contain templates themselves."""
     m = re.search(r"\{\{\s*" + re.escape(infobox) + r"\s*[|\n]", text or "", re.I)
     if not m:
         return {}
@@ -76,7 +76,7 @@ def infobox_fields(text, infobox):
 
 
 def infobox_ids(text, infobox):
-    """Spielkennungen aus dem Feld id; manche Seiten nennen mehrere (mit <br/> getrennt)."""
+    """Game IDs from the id field; some pages list several (separated by <br/>)."""
     raw = re.sub(r"<[^>]*>", " ", infobox_fields(text, infobox).get("id", ""))
     return [t for t in re.split(r"[\s,;/]+", raw) if re.fullmatch(r"[A-Z][A-Z0-9_]*", t)]
 
@@ -92,7 +92,7 @@ def load_packs():
 
 
 def with_game_ids(entry, gids):
-    """gameIds direkt hinter id einsortieren, damit die Dateien lesbar bleiben."""
+    """Put gameIds right after id so the files stay readable."""
     out = {}
     for k, v in entry.items():
         if k in ("gameId", "gameIds"):
@@ -107,7 +107,7 @@ files = load_packs()
 entries = [(kind, e) for kind, doc in files.values() for e in doc[kind]]
 found, missing = {}, []
 
-# Runde 1: Seitentitel = Name; Runde 2 ff.: mit den Zusätzen aus KINDS.
+# Round 1: page title = name; later rounds: with the suffixes from KINDS.
 for round_ in range(max(len(s) for _, s in KINDS.values())):
     todo = [(k, e) for k, e in entries if (k, e["id"]) not in found and round_ < len(KINDS[k][1])]
     if not todo:
@@ -128,15 +128,15 @@ for path, (kind, doc) in files.items():
         json.dump(doc, f, ensure_ascii=False, indent=2)
         f.write("\n")
 
-# Dieselbe Spielkennung bei zwei Einträgen derselben Art wäre ein Zuordnungsfehler.
+# The same game ID on two entries of the same kind would be a mapping error.
 seen = {}
 for (kind, eid), gids in found.items():
     for gid in gids:
         seen.setdefault((kind, gid), []).append(eid)
 dupes = {k: v for k, v in seen.items() if len(v) > 1}
 
-print(f"gameIds: {len(found)} gefunden, {len(missing)} fehlen")
+print(f"gameIds: {len(found)} found, {len(missing)} missing")
 for m in missing:
-    print("  WARN ohne gameIds:", m)
+    print("  WARN without gameIds:", m)
 for (kind, gid), ids in dupes.items():
-    print(f"  WARN {kind}: {gid} doppelt bei {ids}")
+    print(f"  WARN {kind}: {gid} used by {ids}")

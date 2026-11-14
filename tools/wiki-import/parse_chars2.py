@@ -1,4 +1,4 @@
-# Erweitert chars_parsed.json um alle Waffenfelder und Startwaffen-Hinweise der Waffenliste.
+# Extends chars_parsed.json with all weapon fields and the starting weapon hints from the weapon list.
 import json, re, sys
 pages = json.load(open(sys.argv[1], encoding="utf-8"))
 chars = json.load(open(sys.argv[2], encoding="utf-8"))
@@ -28,7 +28,7 @@ for c in chars:
     c["secretField"] = ib.get("secret", "")
     img = re.search(r"\[\[File:([^|\]]+)", ib.get("image1") or ib.get("image") or "")
     c["imageFile"] = img.group(1).strip() if img else f"Select-{c['name']}.png"
-# Startwaffen laut Waffenliste
+# Starting weapons according to the weapon list
 mentions = {}
 for w in weapons:
     for kind, rx in (("start", r"(?<!optional )(?<!One of the )[Ss]tarting weapons? of ([^\n*]+)"), ("also", r"One of the starting weapons of ([^\n*]+)"), ("optional", r"(?:One of )?(?:the )?optional starting weapons? of ([^\n*]+)|[Pp]ossible starting weapon of ([^\n*]+)")):

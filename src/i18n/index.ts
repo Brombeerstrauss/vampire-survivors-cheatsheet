@@ -6,15 +6,15 @@ import { de, en, type Strings } from './strings.ts'
 
 export interface I18n {
   lang: Lang
-  /** Texte der Oberfläche. */
+  /** UI texts. */
   t: Strings
-  /** Name mit eventueller Übersetzung in Klammern, getrennt für die Darstellung. */
+  /** Name and optional translation in parentheses, kept apart for display. */
   name(entry: Named): DisplayName
-  /** Name als ein String inklusive Klammer. */
+  /** Name as one string, including the parentheses. */
   fullName(entry: Named): string
-  /** Name für Fließtexte, ohne Klammer. */
+  /** Name for running text, without parentheses. */
   shortName(entry: Named): string
-  /** Text aus den Daten in der gewählten Sprache. */
+  /** Text from the data in the selected language. */
   text(value: LocalizedText | undefined): string
 }
 

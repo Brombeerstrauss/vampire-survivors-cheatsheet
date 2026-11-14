@@ -6,18 +6,18 @@ using UnityEngine.UI;
 
 namespace VSCheatsheetBridge;
 
-// Das Overlay aus normalen Unity-UI-Elementen (Canvas, Image, TextMeshPro).
+// The overlay built from regular Unity UI elements (Canvas, Image, TextMeshPro).
 //
-// Warum nicht OnGUI: IMGUI ruft jedes Bild Plugin-Code auf. Unter BepInEx be.788 mit Unity 6
-// stürzte das Spiel dabei nach wenigen Sekunden reproduzierbar in coreclr.dll ab (beim
-// Stack-Durchlauf der .NET-Speicherbereinigung durch die Il2Cpp-Übergänge). Hier baut das
-// Plugin die Elemente nur neu, wenn sich der Lauf ändert; gezeichnet wird von Unity selbst,
-// ohne Plugin-Code pro Bild. So machen es auch andere stabile Mods für dieses Spiel.
+// Why not OnGUI: IMGUI calls plugin code every frame. Under BepInEx be.788 with Unity 6 the
+// game reproducibly crashed in coreclr.dll after a few seconds (during the .NET garbage
+// collector's stack walk through the Il2Cpp transitions). Here the plugin only rebuilds the
+// elements when the run changes; Unity draws them itself, without plugin code per frame.
+// Other stable mods for this game do it the same way.
 //
-// Aufbau pro Waffe:
-//   [Bild] Name                         5/8
-//          [Zutat] [Zutat] -> [Ergebnis]
-//          fehlt: Leerer Foliant
+// Layout per weapon:
+//   [image] Name                        5/8
+//           [ingredient] [ingredient] -> [result]
+//           missing: Empty Tome
 internal sealed class UiOverlay
 {
     private static readonly Color Gold = new(1f, 0.84f, 0.37f);
@@ -31,12 +31,12 @@ internal sealed class UiOverlay
     private Image _background;
     private TMP_FontAsset _font;
 
-    /// <summary>Lage des Panels in Bildschirmpixeln, Ursprung oben links (für das Ziehen).</summary>
+    /// <summary>Panel position in screen pixels, origin top left (for dragging).</summary>
     public Rect ScreenRect { get; private set; }
 
     public bool Visible => _root != null && _root.activeSelf;
 
-    /// <summary>Verschiebt das Panel ohne Neuaufbau (linke obere Ecke in Pixeln, von oben links).</summary>
+    /// <summary>Moves the panel without rebuilding (top left corner in pixels, from top left).</summary>
     public void MoveTo(float x, float y)
     {
         if (_panel == null) return;
@@ -44,7 +44,7 @@ internal sealed class UiOverlay
         ScreenRect = new Rect(x, y, ScreenRect.width, ScreenRect.height);
     }
 
-    /// <summary>Beim letzten Aufbau fehlten Bilder (Atlas noch nicht geladen).</summary>
+    /// <summary>Images were missing in the last build (atlas not loaded yet).</summary>
     public bool MissingIcons { get; private set; }
 
     public void Hide()
@@ -52,7 +52,7 @@ internal sealed class UiOverlay
         if (_root != null) _root.SetActive(false);
     }
 
-    /// <summary>Baut das Overlay für den aktuellen Lauf neu auf. Nur bei Änderungen aufrufen.</summary>
+    /// <summary>Rebuilds the overlay for the current run. Only call on changes.</summary>
     public void Show(List<PlayerPanel> panels)
     {
         if (panels == null || panels.Count == 0) { Hide(); return; }
@@ -68,7 +68,7 @@ internal sealed class UiOverlay
         if (_font == null) _font = FindFont();
         if (_font == null)
         {
-            RunReader.WarnOnce("font", new System.InvalidOperationException("keine TextMeshPro-Schrift im Spiel gefunden, Overlay folgt beim nächsten Versuch"));
+            RunReader.WarnOnce("font", new System.InvalidOperationException("no TextMeshPro font found in the game, overlay will follow on the next attempt"));
             return false;
         }
         if (_root != null) return true;
@@ -78,7 +78,7 @@ internal sealed class UiOverlay
         var canvas = _root.AddComponent<Canvas>();
         canvas.renderMode = RenderMode.ScreenSpaceOverlay;
         canvas.overrideSorting = true;
-        canvas.sortingOrder = short.MaxValue; // über HUD und den dunklen Seitenrändern des Spiels
+        canvas.sortingOrder = short.MaxValue; // above the HUD and the game's dark side borders
 
         var panelGo = new GameObject("Panel");
         panelGo.transform.SetParent(_root.transform, false);
@@ -89,7 +89,7 @@ internal sealed class UiOverlay
         return true;
     }
 
-    // Schrift aus einem Text, den das Spiel gerade anzeigt.
+    // Font from a text the game is currently showing.
     private static TMP_FontAsset FindFont()
     {
         var found = Object.FindObjectsOfType(Il2CppType.Of<TextMeshProUGUI>());
@@ -108,7 +108,7 @@ internal sealed class UiOverlay
             Object.Destroy(_panel.GetChild(i).gameObject);
     }
 
-    // ---- Elemente ------------------------------------------------------------------------
+    // ---- Elements ------------------------------------------------------------------------
 
     private RectTransform Place(string name, float x, float y, float w, float h)
     {
@@ -131,8 +131,8 @@ internal sealed class UiOverlay
         t.color = color;
         t.alignment = align;
         t.enableWordWrapping = wrap;
-        // Overflow statt Ellipsis: Ellipsis blendet Text aus, der in der Höhe nicht passt, und die
-        // Pixelschrift des Spiels ist höher als die Schriftgröße. Lange Namen begrenzt die Breite.
+        // Overflow instead of Ellipsis: Ellipsis hides text that does not fit vertically, and the
+        // game's pixel font is taller than the font size. The width limits long names.
         t.overflowMode = TextOverflowModes.Overflow;
         t.raycastTarget = false;
         t.richText = false;
@@ -148,7 +148,7 @@ internal sealed class UiOverlay
         img.raycastTarget = false;
     }
 
-    // showTarget: Stufe als "aktuell/benötigt" (für die Zeile "Für Entwicklung").
+    // showTarget: level as "current/required" (for the "Needed to evolve" line).
     private void IconAt(float x, float y, float size, Icon icon, float alpha, float badge, bool showTarget = false)
     {
         Sprite sprite = Plugin.Icons.Value ? GameSprites.Get(icon.GameId) : null;
@@ -163,7 +163,7 @@ internal sealed class UiOverlay
         else
         {
             if (Plugin.Icons.Value && icon.GameId != null) MissingIcons = true;
-            // Kein Bild: Kürzel in einem Kästchen.
+            // No image: abbreviation in a box.
             Box(x, y, size, size, new Color(1f, 1f, 1f, 0.12f * alpha));
             Text(x, y, size, size, Initials(icon.Name), badge, new Color(1f, 1f, 1f, alpha), TextAlignmentOptions.Center, bold: true);
         }
@@ -183,7 +183,7 @@ internal sealed class UiOverlay
             Text(x - 2f, y - 3f, size, size * 0.5f, icon.From, badge, Blue, TextAlignmentOptions.TopLeft, bold: true);
     }
 
-    // ---- Aufbau --------------------------------------------------------------------------
+    // ---- Layout --------------------------------------------------------------------------
 
     private void Build(List<PlayerPanel> panels)
     {
@@ -208,8 +208,8 @@ internal sealed class UiOverlay
 
             foreach (WeaponRow row in panel.Rows)
             {
-                // Rot: Zutaten fehlen; Gelb: alles da, aber Bedingung offen (z. B. Max-Stufe);
-                // Grün: bereit; Weiß: entwickelt oder ohne Entwicklung.
+                // Red: ingredients missing; yellow: everything there, but a condition is open (e.g. max level);
+                // green: ready; white: evolved or no evolution.
                 Color nameColor = row.Status switch { RowStatus.Missing => Red, RowStatus.NeedsMax => Gold, RowStatus.Ready => Green, _ => Color.white };
                 float levelWidth = f * 2.8f;
                 float textY = y + (icon - lineH) / 2f;
@@ -247,7 +247,7 @@ internal sealed class UiOverlay
 
                 if (row.Status == RowStatus.NeedsMax)
                 {
-                    // Nur, was für die Entwicklung noch fehlt: Bild mit "aktuell/benötigt".
+                    // Only what is still missing for the evolution: image with "current/required".
                     var needed = new List<Icon>();
                     if (row.Weapon.NeedsMax) needed.Add(row.Weapon);
                     foreach (Icon ing in row.Parts) if (ing.NeedsMax) needed.Add(ing);
@@ -280,7 +280,7 @@ internal sealed class UiOverlay
                 y += part;
             }
 
-            // Eine Zeile "fehlt:" mit allen fehlenden Zutaten dieses Spielers.
+            // A "missing:" line with all of this player's missing ingredients.
             var missingIcons = new List<Icon>();
             var seen = new HashSet<string>();
             foreach (WeaponRow row in panel.Rows)

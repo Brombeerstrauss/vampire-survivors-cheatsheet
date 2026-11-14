@@ -5,28 +5,28 @@ import type { RunState } from './run.ts'
 export interface RequirementCheck {
   type: 'weapon' | 'passive'
   id: string
-  /** Muss die Zutat auf Maximalstufe sein? Nur als Hinweis, der Tracker erfasst keine Stufen. */
+  /** Does the ingredient need max level? Only a hint; the tracker does not record levels. */
   required: RequiredLevel
-  /** Ist die Zutat im Lauf? */
+  /** Is the ingredient in the run? */
   owned: boolean
 }
 
 export interface EvolutionCheck {
   evolution: Evolution
   requirements: RequirementCheck[]
-  /** Passt der gewählte Charakter (nur bei charaktergebundenen Entwicklungen relevant)? */
+  /** Does the selected character fit (only relevant for character-bound evolutions)? */
   characterOk: boolean
-  /** Das Ergebnis ist schon im Lauf. */
+  /** The result is already in the run. */
   done: boolean
-  /** Alle Zutaten sind da; es fehlt höchstens noch die Maximalstufe (siehe `needsMax`). */
+  /** All ingredients are there; at most the max level is still missing (see `needsMax`). */
   ready: boolean
-  /** Zutaten, die noch nicht im Lauf sind. */
+  /** Ingredients that are not in the run yet. */
   missing: RequirementCheck[]
-  /** Zutaten, die für die Entwicklung auf Maximalstufe sein müssen. */
+  /** Ingredients that must be at max level for the evolution. */
   needsMax: RequirementCheck[]
 }
 
-/** Wie weit ist eine Entwicklung im aktuellen Lauf? */
+/** How far along is an evolution in the current run? */
 export function checkEvolution(evolution: Evolution, run: RunState, catalog: Catalog): EvolutionCheck {
   const ownedWeapons = new Set(run.weapons.map((w) => w.id))
   const ownedPassives = new Set(run.passives.map((p) => p.id))
@@ -56,8 +56,8 @@ export function checkEvolution(evolution: Evolution, run: RunState, catalog: Cat
 }
 
 /**
- * Alle Entwicklungen einer Waffe im Lauf, die bereiten zuerst.
- * Charaktergebundene Entwicklungen anderer Charaktere werden ausgelassen.
+ * All evolutions of a weapon in the run, ready ones first.
+ * Evolutions bound to other characters are left out.
  */
 export function evolutionsForOwnedWeapon(weaponId: string, run: RunState, catalog: Catalog): EvolutionCheck[] {
   return catalog

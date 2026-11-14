@@ -30,7 +30,7 @@ function Chip({
   entry: { name: string; nameDe?: string; nameDeHint?: string; emoji?: string; icon?: string; image?: string } | undefined
   check?: RequirementCheck
   highlight?: boolean
-  /** Zusatz hinter dem Namen, z. B. „Max“ oder „wird verbraucht“. */
+  /** Extra label after the name, e.g. "Max" or "used up". */
   extra?: string[]
 }) {
   const tone =
@@ -53,12 +53,12 @@ function Chip({
 }
 
 /**
- * Eine Entwicklung als Zeile: Zutaten + Ergebnis.
- * Mit `check` wird markiert, welche Zutaten im aktuellen Lauf schon da sind.
+ * An evolution as one row: ingredients + result.
+ * With `check`, ingredients that are already in the current run are marked.
  *
- * Dass die Waffe auf Maximalstufe sein muss, gilt für fast jede Entwicklung
- * und steht deshalb nicht an jeder Waffe. Markiert werden nur Gegenstände,
- * die ausnahmsweise ebenfalls auf Maximalstufe sein müssen.
+ * Almost every evolution needs the weapon at max level, so this is not
+ * shown on every weapon. Only items that, as an exception, also need max
+ * level are marked.
  */
 export function EvolutionLine({
   evolution,

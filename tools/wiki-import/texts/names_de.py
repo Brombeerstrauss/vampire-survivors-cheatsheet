@@ -1,17 +1,17 @@
-# Deutsche Namen für die App.
+# German names for the app.
 #
-# OFFICIAL_FIXES: offensichtliche Tippfehler in poncles Lokalisierungs-Tabelle.
-# HINTS: eigene Übersetzungen für Namen ohne offiziellen deutschen Namen. Die App
-# zeigt sie in Klammern hinter dem englischen Namen, z. B. „Unearthly Bolt
-# (Überirdischer Blitz)“. Eigennamen, Wortspiele und Namen, die im Deutschen
-# gleich lauten, stehen hier bewusst nicht drin; sie erscheinen ohne Klammer.
+# OFFICIAL_FIXES: obvious typos in poncle's localisation sheet.
+# HINTS: own translations for names without an official German name. The app
+# shows them in parentheses after the English name, e.g. "Unearthly Bolt
+# (Überirdischer Blitz)". Proper names, puns and names that are the same in
+# German are deliberately left out; they appear without parentheses.
 
 OFFICIAL_FIXES = {
     "Prächitger Mond": "Prächtiger Mond",
 }
 
 HINTS = {
-    # Basisspiel
+    # Base game
     "Greatest Jubilee": "Größtes Jubiläum",
     "Flames of Misspell": "Flammen des Verschreibens",
     "Unearthly Bolt": "Überirdischer Blitz",
@@ -115,7 +115,7 @@ HINTS = {
     "Big Fuzzy Fist": "Große flauschige Faust",
     "Weapon Power-Up": "Waffen-Power-up",
     "Colonel Bahamut": "Oberst Bahamut",
-    # Ode to Castlevania: Waffen
+    # Ode to Castlevania: weapons
     "Alchemy Whip": "Alchemiepeitsche",
     "Wind Whip": "Windpeitsche",
     "Platinum Whip": "Platinpeitsche",
@@ -208,7 +208,7 @@ HINTS = {
     "Dark Frogamorphosis": "Dunkle Froschamorphose",
     "Clock Tower": "Uhrturm",
     "Alucard Shield": "Alucards Schild",
-    # Ode to Castlevania: Charaktere
+    # Ode to Castlevania: characters
     "Young Maria Renard": "Junge Maria Renard",
     "Familiar": "Vertrauter",
     "Innocent Devil": "Unschuldiger Teufel",

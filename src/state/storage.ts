@@ -1,5 +1,5 @@
-// Zugriff auf localStorage, der nie wirft: In privaten Fenstern oder bei
-// blockierten Website-Daten läuft die App einfach ohne Speicherung weiter.
+// localStorage access that never throws: in private windows or with blocked
+// site data, the app simply keeps running without saving.
 
 export function readStored(key: string): unknown {
   try {
@@ -14,6 +14,6 @@ export function writeStored(key: string, value: unknown): void {
   try {
     localStorage.setItem(key, JSON.stringify(value))
   } catch {
-    // Speicher voll oder gesperrt: nicht schlimm, der Zustand bleibt bis zum Neuladen erhalten.
+    // Storage full or blocked: no harm, the state stays until the page reloads.
   }
 }
