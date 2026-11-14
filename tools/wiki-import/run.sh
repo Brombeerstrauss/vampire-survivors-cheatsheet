@@ -32,6 +32,13 @@ python3 -I "$HERE/parse_chars2.py" "$RAW/characters_pages.json" "$RAW/chars_pars
 echo "Prüfe Bilder im Wiki …"
 python3 -I "$HERE/resolve_images.py" "$API" "$RAW"
 
+echo "Lade poncles öffentliche Lokalisierungs-Tabelle (offizielle deutsche Namen) …"
+# Verlinkt in github.com/Poncle/vampire-survivors-localisation
+SHEET="https://docs.google.com/spreadsheets/d/1niekzGKaM08M9oYP0wLqHYg5WU7h1iy3nLJL1XGDdJM/export?format=xlsx"
+curl -fsSL -A "$UA" -o "$RAW/localisation.xlsx" "$SHEET"
+python3 -I "$HERE/read_xlsx.py" "$RAW/localisation.xlsx" "$RAW/sheets.json" > /dev/null
+python3 -I "$HERE/parse_localisation.py" "$RAW/sheets.json" "$RAW/loc_de.json"
+
 echo "Erzeuge Pakete …"
 for pair in base:base lm:legacy-of-the-moonspell bm:legacy-of-the-bloodmoon tf:tides-of-the-foscari \
             em:emergency-meeting og:operation-guns oc:ode-to-castlevania ed:emerald-diorama ac:ante-chamber; do

@@ -16,6 +16,10 @@ und danach mit `git diff` vergleichen.
 
 - `texts/de_<kürzel>.py`: deutsche Beschreibungen, Platzhalter-Emojis und Sonderregeln je
   Paket. Neue Wiki-Einträge ohne deutschen Text meldet das Skript als `WARN` und lässt sie weg.
+- `texts/en_texts.py`: englische Fassungen der eigenen Texte (Empfehlungen, Bedingungen, Hinweise).
+- `texts/names_de.py`: eigene deutsche Übersetzungen für Namen ohne offiziellen deutschen Namen.
+- `parse_localisation.py`: liest die offiziellen deutschen Namen aus poncles öffentlicher
+  Lokalisierungs-Tabelle, die das Skript bei jedem Lauf frisch herunterlädt.
 - `build_pack.py`: setzt `verified` nur, wenn Entwicklungsliste, Waffenliste und
   Gegenstandsliste übereinstimmen; Abweichungen landen im Feld `note`.
 
