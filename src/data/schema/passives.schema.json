@@ -22,6 +22,10 @@
             "type": "boolean",
             "description": "Nur als Fundstück in der Stage erhältlich, nicht über Level-ups."
           },
+          "noSlot": {
+            "type": "boolean",
+            "description": "Belegt keinen der 6 passiven Slots (z. B. Geschenke aus DLCs)."
+          },
           "unlock": { "type": "string", "description": "Wie man den Gegenstand freischaltet." },
           "emoji": { "$ref": "common.schema.json#/definitions/emoji" },
           "icon": { "$ref": "common.schema.json#/definitions/icon" },

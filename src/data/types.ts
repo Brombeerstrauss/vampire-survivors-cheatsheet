@@ -72,6 +72,8 @@ export interface PassiveItem extends Entry {
   maxLevel: number
   /** Nur als Fundstück in der Stage erhältlich, nicht über Level-ups. */
   stageOnly?: boolean
+  /** Belegt keinen der 6 passiven Slots (z. B. Geschenke aus DLCs). */
+  noSlot?: boolean
 }
 
 /** Stufe, die eine Zutat haben muss: Maximalstufe oder egal. */
