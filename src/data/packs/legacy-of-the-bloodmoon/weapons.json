@@ -4,9 +4,13 @@
     {
       "id": "scarlet-needle",
       "name": "Scarlet Needle",
+      "nameDeHint": "Scharlachnadel",
       "source": "legacy-of-the-bloodmoon",
       "kind": "base",
-      "description": "Schadensnadeln heften den nächsten Gegner an Ort und Stelle.",
+      "description": {
+        "de": "Schadensnadeln heften den nächsten Gegner an Ort und Stelle.",
+        "en": "Damaging needles pin the nearest enemy in place."
+      },
       "maxLevel": 8,
       "emoji": "📍",
       "image": "https://vampire.survivors.wiki/images/Sprite-Scarlet_Needle.png",
@@ -17,7 +21,10 @@
       "name": "Ashella",
       "source": "legacy-of-the-bloodmoon",
       "kind": "base",
-      "description": "Kann kritisch treffen.",
+      "description": {
+        "de": "Kann kritisch treffen.",
+        "en": "Can deal critical hits."
+      },
       "maxLevel": 8,
       "emoji": "🪶",
       "image": "https://vampire.survivors.wiki/images/Sprite-Ashella.png",
@@ -26,9 +33,13 @@
     {
       "id": "incineration",
       "name": "Incineration",
+      "nameDeHint": "Einäscherung",
       "source": "legacy-of-the-bloodmoon",
       "kind": "base",
-      "description": "Löscht Gegner in Blickrichtung aus.",
+      "description": {
+        "de": "Löscht Gegner in Blickrichtung aus.",
+        "en": "Erases enemies in the faced direction."
+      },
       "maxLevel": 8,
       "emoji": "🔥",
       "image": "https://vampire.survivors.wiki/images/Sprite-Incineration.png",
@@ -37,9 +48,13 @@
     {
       "id": "screams-from-the-void",
       "name": "Screams from the Void",
+      "nameDeHint": "Schreie aus der Leere",
       "source": "legacy-of-the-bloodmoon",
       "kind": "base",
-      "description": "Stößt Schreie mit starkem Rückstoß aus; schlägt zurück.",
+      "description": {
+        "de": "Stößt Schreie mit starkem Rückstoß aus; schlägt zurück.",
+        "en": "Unleash screams with high knockback. Retaliates."
+      },
       "maxLevel": 8,
       "emoji": "😱",
       "image": "https://vampire.survivors.wiki/images/Sprite-Screams_from_the_Void.png",
@@ -48,9 +63,13 @@
     {
       "id": "blacken-firmament",
       "name": "Blacken Firmament",
+      "nameDeHint": "Verdunkeltes Firmament",
       "source": "legacy-of-the-bloodmoon",
       "kind": "base",
-      "description": "Löscht einen zufälligen Gegner aus und hinterlässt manchmal einen schädlichen Riss in der Wirklichkeit.",
+      "description": {
+        "de": "Löscht einen zufälligen Gegner aus und hinterlässt manchmal einen schädlichen Riss in der Wirklichkeit.",
+        "en": "Erasing a random enemy, occasionally leaving a damaging tear in reality."
+      },
       "maxLevel": 8,
       "emoji": "🌑",
       "image": "https://vampire.survivors.wiki/images/Sprite-Blacken_Firmament.png",
@@ -59,9 +78,13 @@
     {
       "id": "108-responsive-prayers",
       "name": "108 Responsive Prayers",
+      "nameDeHint": "108 erhörte Gebete",
       "source": "legacy-of-the-bloodmoon",
       "kind": "base",
-      "description": "Eigentlich nur 16; der Schaden hängt vom Unterschied zwischen Fluch und Glück ab.",
+      "description": {
+        "de": "Eigentlich nur 16; der Schaden hängt vom Unterschied zwischen Fluch und Glück ab.",
+        "en": "Actually it's just 16. Damage affected by the difference between Curse and Luck."
+      },
       "maxLevel": 8,
       "emoji": "📿",
       "image": "https://vampire.survivors.wiki/images/Sprite-108_Responsive_Prayers.png",
@@ -70,9 +93,13 @@
     {
       "id": "firefall",
       "name": "FireFall",
+      "nameDeHint": "Feuerfall",
       "source": "legacy-of-the-bloodmoon",
       "kind": "base",
-      "description": "Trifft den entferntesten Gegner; der Schaden wird zusätzlich mit der Macht multipliziert.",
+      "description": {
+        "de": "Trifft den entferntesten Gegner; der Schaden wird zusätzlich mit der Macht multipliziert.",
+        "en": "Strikes at the furthest enemy. Damage further multiplied by Might."
+      },
       "maxLevel": 6,
       "emoji": "☄️",
       "image": "https://vampire.survivors.wiki/images/Sprite-FireFall.png",
@@ -81,9 +108,13 @@
     {
       "id": "fireball",
       "name": "FireBall",
+      "nameDeHint": "Feuerball",
       "source": "legacy-of-the-bloodmoon",
       "kind": "base",
-      "description": "Erzeugt eine wachsende Schadenszone; der Schaden wird mit der Fläche multipliziert.",
+      "description": {
+        "de": "Erzeugt eine wachsende Schadenszone; der Schaden wird mit der Fläche multipliziert.",
+        "en": "Generates at expanding damaging zone. Damage multiplied by Area."
+      },
       "maxLevel": 6,
       "emoji": "🔥",
       "image": "https://vampire.survivors.wiki/images/Sprite-FireBall.png",
@@ -92,9 +123,13 @@
     {
       "id": "firewall",
       "name": "FireWall",
+      "nameDeHint": "Feuerwand",
       "source": "legacy-of-the-bloodmoon",
       "kind": "base",
-      "description": "Erzeugt eine gerichtete Schadenszone; wächst stark mit der Anzahl.",
+      "description": {
+        "de": "Erzeugt eine gerichtete Schadenszone; wächst stark mit der Anzahl.",
+        "en": "Generates a directional damaging zone. Greatly affected by Amount."
+      },
       "maxLevel": 6,
       "emoji": "🧱",
       "image": "https://vampire.survivors.wiki/images/Sprite-FireWall.png",
@@ -103,9 +138,13 @@
     {
       "id": "descent-into-misery",
       "name": "Descent Into Misery",
+      "nameDeHint": "Abstieg ins Elend",
       "source": "legacy-of-the-bloodmoon",
       "kind": "base",
-      "description": "Verfluchter Gegenstand: die Anzahl erhöht den Schaden; kritische Treffer oder Richtungswechsel lösen Zusatzangriffe aus.",
+      "description": {
+        "de": "Verfluchter Gegenstand: die Anzahl erhöht den Schaden; kritische Treffer oder Richtungswechsel lösen Zusatzangriffe aus.",
+        "en": "Cursed item. Amount affects damage. Critical hits or changing movement direction ensure extra attacks."
+      },
       "maxLevel": 9,
       "emoji": "⬇️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Descent_Into_Misery.png",
@@ -114,9 +153,13 @@
     {
       "id": "cardinal-rain",
       "name": "Cardinal Rain",
+      "nameDeHint": "Kardinalsregen",
       "source": "legacy-of-the-bloodmoon",
       "kind": "evolved",
-      "description": "Entwicklung von Scarlet Needle: endloser Regen, der in jede Richtung treffen kann.",
+      "description": {
+        "de": "Entwicklung von Scarlet Needle: endloser Regen, der in jede Richtung treffen kann.",
+        "en": "Evolved Scarlet Needle. Endless rain can hit in any direction."
+      },
       "maxLevel": 1,
       "emoji": "🌧️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Cardinal_Rain.png",
@@ -125,9 +168,13 @@
     {
       "id": "bloodlust",
       "name": "Bloodlust",
+      "nameDeHint": "Blutdurst",
       "source": "legacy-of-the-bloodmoon",
       "kind": "evolved",
-      "description": "Entwicklung von Ashella: kritischer Schaden hängt von der Anzahl ab.",
+      "description": {
+        "de": "Entwicklung von Ashella: kritischer Schaden hängt von der Anzahl ab.",
+        "en": "Evolved Ashella. Critical damage affected by Amount."
+      },
       "maxLevel": 1,
       "emoji": "🩸",
       "image": "https://vampire.survivors.wiki/images/Sprite-Bloodlust.png",
@@ -136,9 +183,13 @@
     {
       "id": "dust-to-dust",
       "name": "Dust to Dust",
+      "nameDeHint": "Staub zu Staub",
       "source": "legacy-of-the-bloodmoon",
       "kind": "evolved",
-      "description": "Entwicklung von Incineration: höllische Asche weht zurück und löscht Gegner aus.",
+      "description": {
+        "de": "Entwicklung von Incineration: höllische Asche weht zurück und löscht Gegner aus.",
+        "en": "Evolved Incineration. Infernal ashes blow back, erasing enemies."
+      },
       "maxLevel": 1,
       "emoji": "⚱️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Dust_to_Dust.png",
@@ -147,9 +198,13 @@
     {
       "id": "forbidden-siren",
       "name": "Forbidden Siren",
+      "nameDeHint": "Verbotene Sirene",
       "source": "legacy-of-the-bloodmoon",
       "kind": "evolved",
-      "description": "Entwicklung von Screams from the Void: zieht Gegner an und entwaffnet sie.",
+      "description": {
+        "de": "Entwicklung von Screams from the Void: zieht Gegner an und entwaffnet sie.",
+        "en": "Evolved Screams from the Void. Pulls and defangs enemies."
+      },
       "maxLevel": 1,
       "emoji": "🧜",
       "image": "https://vampire.survivors.wiki/images/Sprite-Forbidden_Siren.png",
@@ -158,9 +213,13 @@
     {
       "id": "damnation",
       "name": "Damnation",
+      "nameDeHint": "Verdammnis",
       "source": "legacy-of-the-bloodmoon",
       "kind": "evolved",
-      "description": "Entwicklung von Blacken Firmament: zieht Gegner ins Verderben.",
+      "description": {
+        "de": "Entwicklung von Blacken Firmament: zieht Gegner ins Verderben.",
+        "en": "Evolved Blacken Firmament. Draws enemies to ruin."
+      },
       "maxLevel": 1,
       "emoji": "⛓️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Damnation.png",
@@ -169,9 +228,13 @@
     {
       "id": "road-to-heaven",
       "name": "Road to Heaven",
+      "nameDeHint": "Weg in den Himmel",
       "source": "legacy-of-the-bloodmoon",
       "kind": "evolved",
-      "description": "Union aus 108 Bocce und 108 Responsive Prayers: 108-mal auslösen, um die Erleuchtung zu erahnen.",
+      "description": {
+        "de": "Union aus 108 Bocce und 108 Responsive Prayers: 108-mal auslösen, um die Erleuchtung zu erahnen.",
+        "en": "Union of 108 Bocce and 108 Responsive Prayers. Activate 108 times to glimpse enlightenment."
+      },
       "maxLevel": 1,
       "emoji": "🛕",
       "image": "https://vampire.survivors.wiki/images/Sprite-Road_to_Heaven.png",
@@ -182,7 +245,10 @@
       "name": "FireStall",
       "source": "legacy-of-the-bloodmoon",
       "kind": "evolved",
-      "description": "Union aus FireFall, FireBall und FireWall: wird nach jeder Singularität stärker.",
+      "description": {
+        "de": "Union aus FireFall, FireBall und FireWall: wird nach jeder Singularität stärker.",
+        "en": "Union of FireFall, FireBall, and Firewall. Grows stronger after every singularity."
+      },
       "maxLevel": 1,
       "emoji": "🌋",
       "image": "https://vampire.survivors.wiki/images/Sprite-FireStall.png",
@@ -191,9 +257,13 @@
     {
       "id": "shimmering-sands",
       "name": "Shimmering Sands",
+      "nameDeHint": "Schimmernder Sand",
       "source": "legacy-of-the-bloodmoon",
       "kind": "evolved",
-      "description": "Union aus Kyra-Stones und Descent Into Misery: Treibsand zieht Gegner in die Hölle.",
+      "description": {
+        "de": "Union aus Kyra-Stones und Descent Into Misery: Treibsand zieht Gegner in die Hölle.",
+        "en": "Union of Kyra-Stones and Descent Into Misery. Quicksand drags enemies down to hell."
+      },
       "maxLevel": 1,
       "emoji": "⏳",
       "image": "https://vampire.survivors.wiki/images/Sprite-Shimmering_Sands.png",

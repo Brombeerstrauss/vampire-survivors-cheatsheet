@@ -3,7 +3,9 @@ import { describe, expect, it } from 'vitest'
 import { checkIntegrity } from './integrity.ts'
 import { loadGameData, PACK_FILES } from './load.ts'
 import packsFile from './packs.json'
-import type { GameData } from './types.ts'
+import type { GameData, LocalizedText } from './types.ts'
+
+const both = (text: string): LocalizedText => ({ de: text, en: text })
 
 const schemas = import.meta.glob<object>('./schema/*.schema.json', { eager: true, import: 'default' })
 const files = import.meta.glob('./packs/*/*.json', { eager: true, import: 'default' })
@@ -57,6 +59,15 @@ describe('Schemas lehnen fehlerhafte Einträge ab', () => {
     expect(errors).not.toEqual([])
   })
 
+  it('Texte nur in einer Sprache', () => {
+    const errors = schemaErrors('weapons', {
+      weapons: [
+        { id: 'whip', name: 'Whip', source: 'base', kind: 'base', description: { de: 'Peitsche' }, maxLevel: 8, verified: true },
+      ],
+    })
+    expect(errors).not.toEqual([])
+  })
+
   it('fehlendes verified', () => {
     const errors = schemaErrors('passives', {
       passives: [{ id: 'spinach', name: 'Spinach', source: 'base', description: '', maxLevel: 5 }],
@@ -76,13 +87,13 @@ describe('Schemas lehnen fehlerhafte Einträge ab', () => {
 
 describe('checkIntegrity', () => {
   const base: GameData = {
-    packs: [{ id: 'base', name: 'Basisspiel', kind: 'base', paid: false, verified: true }],
+    packs: [{ id: 'base', name: both('Basisspiel'), kind: 'base', paid: false, verified: true }],
     characters: [],
     weapons: [
-      { id: 'whip', name: 'Whip', source: 'base', kind: 'base', description: '', maxLevel: 8, verified: true },
-      { id: 'bloody-tear', name: 'Bloody Tear', source: 'base', kind: 'evolved', description: '', maxLevel: 1, verified: true },
+      { id: 'whip', name: 'Whip', source: 'base', kind: 'base', description: both(''), maxLevel: 8, verified: true },
+      { id: 'bloody-tear', name: 'Bloody Tear', source: 'base', kind: 'evolved', description: both(''), maxLevel: 1, verified: true },
     ],
-    passives: [{ id: 'hollow-heart', name: 'Hollow Heart', source: 'base', description: '', maxLevel: 5, verified: true }],
+    passives: [{ id: 'hollow-heart', name: 'Hollow Heart', source: 'base', description: both(''), maxLevel: 5, verified: true }],
     evolutions: [],
     recommendations: [],
   }

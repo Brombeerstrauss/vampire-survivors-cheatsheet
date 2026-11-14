@@ -91,7 +91,10 @@
       ],
       "passives": [],
       "conditions": [
-        "Kein Gegenstand nötig; alle drei Zauberwaffen auf Maximalstufe."
+        {
+          "de": "Kein Gegenstand nötig; alle drei Zauberwaffen auf Maximalstufe.",
+          "en": "No item needed; all three spell weapons at max level."
+        }
       ],
       "verified": true
     }

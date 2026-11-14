@@ -8,7 +8,10 @@
       "startingWeapons": [
         "infernolatro"
       ],
-      "bonus": "Findet immer Survarots, startet mit einer Survarot-Auswahl und hat einen Survarot-Stufenmultiplikator von 4.",
+      "bonus": {
+        "de": "Findet immer Survarots, startet mit einer Survarot-Auswahl und hat einen Survarot-Stufenmultiplikator von 4.",
+        "en": "Can always find Survarots. Starts with a Survarot draft. Has a Survarot level Multiplier of 4."
+      },
       "secret": false,
       "emoji": "🃏",
       "image": "https://vampire.survivors.wiki/images/Select-Jimbo.png",
@@ -21,7 +24,10 @@
       "startingWeapons": [
         "fibonacci-spritz"
       ],
-      "bonus": "Überspringen beim Level-up kann eine Survarot-Auswahl auslösen.",
+      "bonus": {
+        "de": "Überspringen beim Level-up kann eine Survarot-Auswahl auslösen.",
+        "en": "Using Skip when levelling up has a chance to trigger a Survarot draft."
+      },
       "secret": false,
       "emoji": "🎭",
       "image": "https://vampire.survivors.wiki/images/Select-Canio.png",
@@ -34,7 +40,10 @@
       "startingWeapons": [
         "gros-michel"
       ],
-      "bonus": "Findet immer Survarots und startet mit einer Survarot-Auswahl; senkt die Gesundheit von Bossen und blockt einige Spezialangriffe.",
+      "bonus": {
+        "de": "Findet immer Survarots und startet mit einer Survarot-Auswahl; senkt die Gesundheit von Bossen und blockt einige Spezialangriffe.",
+        "en": "Can always find Survarots. Starts with a Survarot draft. Reduces boss health and blocks some special attacks."
+      },
       "secret": false,
       "emoji": "🤡",
       "image": "https://vampire.survivors.wiki/images/Select-Chicot.png",
@@ -47,12 +56,18 @@
       "startingWeapons": [
         "celestial-booster"
       ],
-      "bonus": "Findet immer Survarots; kann bis zu 100 passive Gegenstände tragen.",
+      "bonus": {
+        "de": "Findet immer Survarots; kann bis zu 100 passive Gegenstände tragen.",
+        "en": "Can always find Survarots. Can equip up to 100 Passive Weapons."
+      },
       "secret": false,
       "emoji": "🎴",
       "image": "https://vampire.survivors.wiki/images/Select-Perkeo.png",
       "verified": true,
-      "note": "Kann bis zu 100 passive Gegenstände tragen; die Slot-Warnungen der App gelten für Perkeo nicht."
+      "note": {
+        "de": "Kann bis zu 100 passive Gegenstände tragen; die Slot-Warnungen der App gelten für Perkeo nicht.",
+        "en": "Can carry up to 100 passive items; the app's slot warnings don't apply to Perkeo."
+      }
     }
   ]
 }

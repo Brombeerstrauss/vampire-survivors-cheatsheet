@@ -4,9 +4,13 @@
     {
       "id": "alchemy-whip",
       "name": "Alchemy Whip",
+      "nameDeHint": "Alchemiepeitsche",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Wird mit jedem besiegten Boss stärker.",
+      "description": {
+        "de": "Wird mit jedem besiegten Boss stärker.",
+        "en": "Grows stronger every time a boss enemy is defeated."
+      },
       "maxLevel": 8,
       "emoji": "🪢",
       "image": "https://vampire.survivors.wiki/images/Sprite-Alchemy_Whip.png",
@@ -15,9 +19,13 @@
     {
       "id": "wind-whip",
       "name": "Wind Whip",
+      "nameDeHint": "Windpeitsche",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Der Schaden hängt vom Wachstum ab.",
+      "description": {
+        "de": "Der Schaden hängt vom Wachstum ab.",
+        "en": "Damage affected by growth."
+      },
       "maxLevel": 8,
       "emoji": "🌬️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Wind_Whip.png",
@@ -26,9 +34,13 @@
     {
       "id": "platinum-whip",
       "name": "Platinum Whip",
+      "nameDeHint": "Platinpeitsche",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Jede 3. Auslösung feuert Projektile in feste Richtungen.",
+      "description": {
+        "de": "Jede 3. Auslösung feuert Projektile in feste Richtungen.",
+        "en": "Every 3rd activation fires projectiles in fixed directions."
+      },
       "maxLevel": 8,
       "emoji": "⚪",
       "image": "https://vampire.survivors.wiki/images/Sprite-Platinum_Whip.png",
@@ -37,9 +49,13 @@
     {
       "id": "dragon-water-whip",
       "name": "Dragon Water Whip",
+      "nameDeHint": "Drachenwasserpeitsche",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Jede 7. Auslösung feuert einen schlängelnden Drachen.",
+      "description": {
+        "de": "Jede 7. Auslösung feuert einen schlängelnden Drachen.",
+        "en": "Every 7th activation fires a snaking dragon projectile."
+      },
       "maxLevel": 8,
       "emoji": "🐉",
       "image": "https://vampire.survivors.wiki/images/Sprite-Dragon_Water_Whip.png",
@@ -48,9 +64,13 @@
     {
       "id": "sonic-whip",
       "name": "Sonic Whip",
+      "nameDeHint": "Schallpeitsche",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Chance auf Sofort-Tod, abhängig vom Fluch.",
+      "description": {
+        "de": "Chance auf Sofort-Tod, abhängig vom Fluch.",
+        "en": "Chance to instant kill based on curse."
+      },
       "maxLevel": 8,
       "emoji": "💨",
       "image": "https://vampire.survivors.wiki/images/Sprite-Sonic_Whip.png",
@@ -59,9 +79,13 @@
     {
       "id": "jet-black-whip",
       "name": "Jet Black Whip",
+      "nameDeHint": "Pechschwarze Peitsche",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Trifft den nächsten Gegner und erzeugt eine gerade Schadenszone.",
+      "description": {
+        "de": "Trifft den nächsten Gegner und erzeugt eine gerade Schadenszone.",
+        "en": "Strikes at the nearest enemy and generates a linear damaging zone."
+      },
       "maxLevel": 8,
       "emoji": "⚫",
       "image": "https://vampire.survivors.wiki/images/Sprite-Jet_Black_Whip.png",
@@ -70,9 +94,13 @@
     {
       "id": "vibhuti-whip",
       "name": "Vibhuti Whip",
+      "nameDeHint": "Vibhuti-Peitsche",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Trifft den nächsten Gegner und erzeugt eine Gruppe von Explosionen.",
+      "description": {
+        "de": "Trifft den nächsten Gegner und erzeugt eine Gruppe von Explosionen.",
+        "en": "Strikes at the nearest enemy and generates a cluster of explosions."
+      },
       "maxLevel": 8,
       "emoji": "💥",
       "image": "https://vampire.survivors.wiki/images/Sprite-Vibhuti_Whip.png",
@@ -81,9 +109,13 @@
     {
       "id": "vanitas-whip",
       "name": "Vanitas Whip",
+      "nameDeHint": "Vanitas-Peitsche",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Trifft den nächsten Gegner und erzeugt eine querliegende Schadenszone; deren Schaden hängt von der max. Gesundheit ab.",
+      "description": {
+        "de": "Trifft den nächsten Gegner und erzeugt eine querliegende Schadenszone; deren Schaden hängt von der max. Gesundheit ab.",
+        "en": "Strikes at the nearest enemy and generates a perpendicular damaging zone. Zone damage affected by MaxHealth."
+      },
       "maxLevel": 8,
       "emoji": "🖤",
       "image": "https://vampire.survivors.wiki/images/Sprite-Vanitas_Whip.png",
@@ -94,7 +126,10 @@
       "name": "Shuriken",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Feuert Projektile in Blickrichtung.",
+      "description": {
+        "de": "Feuert Projektile in Blickrichtung.",
+        "en": "Fires projectiles in the faced direction."
+      },
       "maxLevel": 8,
       "emoji": "✴️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Shuriken.png",
@@ -103,9 +138,13 @@
     {
       "id": "curved-knife",
       "name": "Curved Knife",
+      "nameDeHint": "Krummmesser",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Wirft ein rotierendes Projektil auf einen zufälligen Gegner.",
+      "description": {
+        "de": "Wirft ein rotierendes Projektil auf einen zufälligen Gegner.",
+        "en": "Fires a spinning projectile at random enemy."
+      },
       "maxLevel": 8,
       "emoji": "🔪",
       "image": "https://vampire.survivors.wiki/images/Sprite-Curved_Knife.png",
@@ -114,9 +153,13 @@
     {
       "id": "javelin",
       "name": "Javelin",
+      "nameDeHint": "Wurfspeer",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Feuert ein durchdringendes Projektil in eine feste Richtung.",
+      "description": {
+        "de": "Feuert ein durchdringendes Projektil in eine feste Richtung.",
+        "en": "Fires a penetrating projectile in a fixed direction."
+      },
       "maxLevel": 8,
       "emoji": "🏹",
       "image": "https://vampire.survivors.wiki/images/Sprite-Javelin.png",
@@ -125,9 +168,13 @@
     {
       "id": "discus",
       "name": "Discus",
+      "nameDeHint": "Diskus",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Feuert ein schützendes Projektil.",
+      "description": {
+        "de": "Feuert ein schützendes Projektil.",
+        "en": "Fires a defensive projectile."
+      },
       "maxLevel": 8,
       "emoji": "🥏",
       "image": "https://vampire.survivors.wiki/images/Sprite-Discus.png",
@@ -136,9 +183,13 @@
     {
       "id": "iron-ball",
       "name": "Iron Ball",
+      "nameDeHint": "Eisenkugel",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Der Schaden hängt von der Rüstung ab.",
+      "description": {
+        "de": "Der Schaden hängt von der Rüstung ab.",
+        "en": "Damage affected by Armor."
+      },
       "maxLevel": 8,
       "emoji": "⚙️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Iron_Ball.png",
@@ -147,9 +198,13 @@
     {
       "id": "silver-revolver",
       "name": "Silver Revolver",
+      "nameDeHint": "Silberrevolver",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Feuert sechsmal ein starkes Projektil.",
+      "description": {
+        "de": "Feuert sechsmal ein starkes Projektil.",
+        "en": "Fires a powerful projectile, six times."
+      },
       "maxLevel": 8,
       "emoji": "🔫",
       "image": "https://vampire.survivors.wiki/images/Sprite-Silver_Revolver.png",
@@ -158,9 +213,13 @@
     {
       "id": "hand-grenade",
       "name": "Hand Grenade",
+      "nameDeHint": "Handgranate",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Feuert ein explodierendes Projektil.",
+      "description": {
+        "de": "Feuert ein explodierendes Projektil.",
+        "en": "Fires an exploding projectile."
+      },
       "maxLevel": 8,
       "emoji": "💣",
       "image": "https://vampire.survivors.wiki/images/Sprite-Hand_Grenade.png",
@@ -169,9 +228,13 @@
     {
       "id": "wine-glass",
       "name": "Wine Glass",
+      "nameDeHint": "Weinglas",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Wirft ein explodierendes Projektil.",
+      "description": {
+        "de": "Wirft ein explodierendes Projektil.",
+        "en": "Throws an exploding projectile."
+      },
       "maxLevel": 8,
       "emoji": "🍷",
       "image": "https://vampire.survivors.wiki/images/Sprite-Wine_Glass.png",
@@ -180,9 +243,13 @@
     {
       "id": "raging-fire",
       "name": "Raging Fire",
+      "nameDeHint": "Wütendes Feuer",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Erzeugt eine explodierende Schadenszone.",
+      "description": {
+        "de": "Erzeugt eine explodierende Schadenszone.",
+        "en": "Generates an exploding damaging zone."
+      },
       "maxLevel": 8,
       "emoji": "🔥",
       "image": "https://vampire.survivors.wiki/images/Sprite-Raging_Fire.png",
@@ -191,9 +258,13 @@
     {
       "id": "ice-fang",
       "name": "Ice Fang",
+      "nameDeHint": "Eiszahn",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Erzeugt Schadenszonen in einer geraden Linie.",
+      "description": {
+        "de": "Erzeugt Schadenszonen in einer geraden Linie.",
+        "en": "Generates damaging zones in a straight line."
+      },
       "maxLevel": 8,
       "emoji": "🧊",
       "image": "https://vampire.survivors.wiki/images/Sprite-Ice_Fang.png",
@@ -202,9 +273,13 @@
     {
       "id": "gale-force",
       "name": "Gale Force",
+      "nameDeHint": "Sturmkraft",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Feuert leicht treffende Projektile nach hinten.",
+      "description": {
+        "de": "Feuert leicht treffende Projektile nach hinten.",
+        "en": "Fires light-hitting projectiles backwards."
+      },
       "maxLevel": 8,
       "emoji": "🌪️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Gale_Force.png",
@@ -213,9 +288,13 @@
     {
       "id": "rock-riot",
       "name": "Rock Riot",
+      "nameDeHint": "Felsaufruhr",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Feuert Projektile von einem festen Ort aus.",
+      "description": {
+        "de": "Feuert Projektile von einem festen Ort aus.",
+        "en": "Fires projectiles from a fixed location."
+      },
       "maxLevel": 8,
       "emoji": "🪨",
       "image": "https://vampire.survivors.wiki/images/Sprite-Rock_Riot.png",
@@ -226,7 +305,10 @@
       "name": "Fulgur",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Schlägt an festen Orten ein.",
+      "description": {
+        "de": "Schlägt an festen Orten ein.",
+        "en": "Strikes at fixed locations."
+      },
       "maxLevel": 8,
       "emoji": "⚡",
       "image": "https://vampire.survivors.wiki/images/Sprite-Fulgur.png",
@@ -235,9 +317,13 @@
     {
       "id": "keremet-bubbles",
       "name": "Keremet Bubbles",
+      "nameDeHint": "Keremet-Blasen",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Feuert langsame Schadenszonen.",
+      "description": {
+        "de": "Feuert langsame Schadenszonen.",
+        "en": "Fires slow moving damaging zones."
+      },
       "maxLevel": 8,
       "emoji": "🫧",
       "image": "https://vampire.survivors.wiki/images/Sprite-Keremet_Bubbles.png",
@@ -246,9 +332,13 @@
     {
       "id": "hex",
       "name": "Hex",
+      "nameDeHint": "Fluch",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Erzeugt eine wandernde Schadenszone; der Schaden hängt vom Fluch ab.",
+      "description": {
+        "de": "Erzeugt eine wandernde Schadenszone; der Schaden hängt vom Fluch ab.",
+        "en": "Generates a moving damaging zone. Damage affected by Curse."
+      },
       "maxLevel": 8,
       "emoji": "🔮",
       "image": "https://vampire.survivors.wiki/images/Sprite-Hex.png",
@@ -259,7 +349,10 @@
       "name": "Refectio",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Erzeugt eine Schadenszone, die auch leicht heilt.",
+      "description": {
+        "de": "Erzeugt eine Schadenszone, die auch leicht heilt.",
+        "en": "Generates a damaging zone that also provides light healing."
+      },
       "maxLevel": 8,
       "emoji": "💚",
       "image": "https://vampire.survivors.wiki/images/Sprite-Refectio.png",
@@ -268,9 +361,13 @@
     {
       "id": "mace",
       "name": "Mace",
+      "nameDeHint": "Streitkolben",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Die Anzahl bestimmt die Zahl der Treffer.",
+      "description": {
+        "de": "Die Anzahl bestimmt die Zahl der Treffer.",
+        "en": "Amount affects number of hits."
+      },
       "maxLevel": 8,
       "emoji": "🔨",
       "image": "https://vampire.survivors.wiki/images/Sprite-Mace.png",
@@ -279,9 +376,13 @@
     {
       "id": "star-flail",
       "name": "Star Flail",
+      "nameDeHint": "Sternflegel",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Feuert verweilende Projektile; der Schaden wird mit der Regeneration multipliziert.",
+      "description": {
+        "de": "Feuert verweilende Projektile; der Schaden wird mit der Regeneration multipliziert.",
+        "en": "Fires lingering projectiles. Damage multiplied by Recovery."
+      },
       "maxLevel": 8,
       "emoji": "⭐",
       "image": "https://vampire.survivors.wiki/images/Sprite-Star_Flail.png",
@@ -290,9 +391,13 @@
     {
       "id": "alucard-spear",
       "name": "Alucard Spear",
+      "nameDeHint": "Alucards Speer",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Führt beim Richtungswechsel nach links oder rechts einen Drehangriff aus.",
+      "description": {
+        "de": "Führt beim Richtungswechsel nach links oder rechts einen Drehangriff aus.",
+        "en": "Executes a spinning attack when changing horizontal direction."
+      },
       "maxLevel": 8,
       "emoji": "🔱",
       "image": "https://vampire.survivors.wiki/images/Sprite-Alucard_Spear.png",
@@ -301,9 +406,13 @@
     {
       "id": "trident",
       "name": "Trident",
+      "nameDeHint": "Dreizack",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Schlägt an festen Orten zu.",
+      "description": {
+        "de": "Schlägt an festen Orten zu.",
+        "en": "Strikes at fixed locations."
+      },
       "maxLevel": 8,
       "emoji": "🔱",
       "image": "https://vampire.survivors.wiki/images/Sprite-Trident.png",
@@ -312,9 +421,13 @@
     {
       "id": "iron-shield",
       "name": "Iron Shield",
+      "nameDeHint": "Eisenschild",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Schlägt mit verweilenden Projektilen zurück.",
+      "description": {
+        "de": "Schlägt mit verweilenden Projektilen zurück.",
+        "en": "Retaliates by shooting lingering projectiles."
+      },
       "maxLevel": 8,
       "emoji": "🛡️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Iron_Shield.png",
@@ -323,9 +436,13 @@
     {
       "id": "guardian-s-targe",
       "name": "Guardian's Targe",
+      "nameDeHint": "Tartsche des Wächters",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Ruft schützende Begleiter; Überheilung löst zusätzliche Angriffe der Begleiter aus.",
+      "description": {
+        "de": "Ruft schützende Begleiter; Überheilung löst zusätzliche Angriffe der Begleiter aus.",
+        "en": "Summons defensive followers. Overhealing triggers additional follower's attacks."
+      },
       "maxLevel": 8,
       "emoji": "🛡️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Guardian%27s_Targe.png",
@@ -336,7 +453,10 @@
       "name": "Tyrfing",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Kehrt wie ein Bumerang zurück; kann kritisch treffen.",
+      "description": {
+        "de": "Kehrt wie ein Bumerang zurück; kann kritisch treffen.",
+        "en": "Has boomerang effect, can deal critical damage."
+      },
       "maxLevel": 8,
       "emoji": "🗡️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Tyrfing.png",
@@ -347,7 +467,10 @@
       "name": "Alucart Sworb",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Trifft angeblich den nächsten Gegner.",
+      "description": {
+        "de": "Trifft angeblich den nächsten Gegner.",
+        "en": "Allegedly strikes at the nearest enemy."
+      },
       "maxLevel": 8,
       "emoji": "🗡️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Alucart_Sworb.png",
@@ -358,7 +481,10 @@
       "name": "Confodere",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Greift Gegner in der Nähe an; Geschwindigkeit erhöht den Schaden.",
+      "description": {
+        "de": "Greift Gegner in der Nähe an; Geschwindigkeit erhöht den Schaden.",
+        "en": "Attack nearby enemies. Speed affects damage."
+      },
       "maxLevel": 6,
       "emoji": "🤺",
       "image": "https://vampire.survivors.wiki/images/Sprite-Confodere.png",
@@ -369,7 +495,10 @@
       "name": "Globus",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Feuert zwei abprallende Projektile; die Anzahl erhöht die Dauer.",
+      "description": {
+        "de": "Feuert zwei abprallende Projektile; die Anzahl erhöht die Dauer.",
+        "en": "Fires two bouncing projectiles. Amount affects Duration."
+      },
       "maxLevel": 8,
       "emoji": "🔵",
       "image": "https://vampire.survivors.wiki/images/Sprite-Globus.png",
@@ -378,9 +507,13 @@
     {
       "id": "optical-shot",
       "name": "Optical Shot",
+      "nameDeHint": "Optischer Schuss",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Feuert zwei durchdringende Projektile.",
+      "description": {
+        "de": "Feuert zwei durchdringende Projektile.",
+        "en": "Fires two penetrating projectiles."
+      },
       "maxLevel": 8,
       "emoji": "👁️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Optical_Shot.png",
@@ -391,7 +524,10 @@
       "name": "Dextro Custos",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Ruft den feurigen Kopf von Cerberus in Blickrichtung.",
+      "description": {
+        "de": "Ruft den feurigen Kopf von Cerberus in Blickrichtung.",
+        "en": "Summons Cerberus' fiery head in faced direction."
+      },
       "maxLevel": 6,
       "emoji": "🐕",
       "image": "https://vampire.survivors.wiki/images/Sprite-Dextro_Custos.png",
@@ -402,7 +538,10 @@
       "name": "Sinestro Custos",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Ruft den eisigen Kopf von Cerberus in Blickrichtung.",
+      "description": {
+        "de": "Ruft den eisigen Kopf von Cerberus in Blickrichtung.",
+        "en": "Summons Cerberus' icy head in faced direction."
+      },
       "maxLevel": 6,
       "emoji": "🐕",
       "image": "https://vampire.survivors.wiki/images/Sprite-Sinestro_Custos.png",
@@ -413,7 +552,10 @@
       "name": "Centralis Custos",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Ruft den rachsüchtigen Kopf von Cerberus; erhöht bei Schaden Rüstung, Regeneration und senkt die Abklingzeit.",
+      "description": {
+        "de": "Ruft den rachsüchtigen Kopf von Cerberus; erhöht bei Schaden Rüstung, Regeneration und senkt die Abklingzeit.",
+        "en": "Summons Cerberus' vengeful head. Boosts Armor, Recovery and Cooldown when damaged."
+      },
       "maxLevel": 6,
       "emoji": "🐕",
       "image": "https://vampire.survivors.wiki/images/Sprite-Centralis_Custos.png",
@@ -422,9 +564,13 @@
     {
       "id": "dominus-anger",
       "name": "Dominus Anger",
+      "nameDeHint": "Dominus Zorn",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Feuert ein durchdringendes Projektil; zehrt an der Gesundheit.",
+      "description": {
+        "de": "Feuert ein durchdringendes Projektil; zehrt an der Gesundheit.",
+        "en": "Fires a penetrating projectile. Drains health."
+      },
       "maxLevel": 6,
       "emoji": "🔴",
       "image": "https://vampire.survivors.wiki/images/Sprite-Dominus_Anger.png",
@@ -433,9 +579,13 @@
     {
       "id": "dominus-hatred",
       "name": "Dominus Hatred",
+      "nameDeHint": "Dominus Hass",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Feuert Projektile von oben; zehrt an der Gesundheit.",
+      "description": {
+        "de": "Feuert Projektile von oben; zehrt an der Gesundheit.",
+        "en": "Fires projectiles from above. Drains health."
+      },
       "maxLevel": 6,
       "emoji": "🟣",
       "image": "https://vampire.survivors.wiki/images/Sprite-Dominus_Hatred.png",
@@ -444,9 +594,13 @@
     {
       "id": "dominus-agony",
       "name": "Dominus Agony",
+      "nameDeHint": "Dominus Qual",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Erhöht Macht, Geschwindigkeit, Dauer und Fläche; zehrt an der Gesundheit.",
+      "description": {
+        "de": "Erhöht Macht, Geschwindigkeit, Dauer und Fläche; zehrt an der Gesundheit.",
+        "en": "Increases Might, Speed, Duration, and Area. Drains Health."
+      },
       "maxLevel": 6,
       "emoji": "⚫",
       "image": "https://vampire.survivors.wiki/images/Sprite-Dominus_Agony.png",
@@ -455,9 +609,13 @@
     {
       "id": "sonic-dash",
       "name": "Sonic Dash",
+      "nameDeHint": "Schallsprint",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "+10 % Laufgeschwindigkeit pro Stufe und Schaden an Gegnern in der Nähe; Fläche und Geschwindigkeit erhöhen den Schaden.",
+      "description": {
+        "de": "+10 % Laufgeschwindigkeit pro Stufe und Schaden an Gegnern in der Nähe; Fläche und Geschwindigkeit erhöhen den Schaden.",
+        "en": "Increases Move Speed by 10% per level and damages nearby enemies. Area and speed increases damage."
+      },
       "maxLevel": 8,
       "emoji": "💨",
       "image": "https://vampire.survivors.wiki/images/Sprite-Sonic_Dash.png",
@@ -468,7 +626,10 @@
       "name": "Luminatio",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Feuert rotierende Projektile aus Licht.",
+      "description": {
+        "de": "Feuert rotierende Projektile aus Licht.",
+        "en": "Fires spinning projectiles made of light."
+      },
       "maxLevel": 6,
       "emoji": "☀️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Luminatio.png",
@@ -479,7 +640,10 @@
       "name": "Umbra",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Feuert rotierende Projektile aus Dunkelheit.",
+      "description": {
+        "de": "Feuert rotierende Projektile aus Dunkelheit.",
+        "en": "Fires spinning projectiles made of darkness."
+      },
       "maxLevel": 6,
       "emoji": "🌑",
       "image": "https://vampire.survivors.wiki/images/Sprite-Umbra.png",
@@ -488,9 +652,13 @@
     {
       "id": "morning-star",
       "name": "Morning Star",
+      "nameDeHint": "Morgenstern",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Lässt dich aus einer Auswahl magischer Peitschen wählen.",
+      "description": {
+        "de": "Lässt dich aus einer Auswahl magischer Peitschen wählen.",
+        "en": "Allows you to choose from a selection of magic whips."
+      },
       "maxLevel": 1,
       "emoji": "🌟",
       "image": "https://vampire.survivors.wiki/images/Sprite-Morning_Star.png",
@@ -499,9 +667,13 @@
     {
       "id": "coat-of-arms",
       "name": "Coat of Arms",
+      "nameDeHint": "Wappen",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Lässt dich aus einer Auswahl von Vampirjäger-Werkzeugen wählen.",
+      "description": {
+        "de": "Lässt dich aus einer Auswahl von Vampirjäger-Werkzeugen wählen.",
+        "en": "Allows you to choose from a selection of vampire-killing tools."
+      },
       "maxLevel": 1,
       "emoji": "🛡️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Coat_of_Arms.png",
@@ -510,9 +682,13 @@
     {
       "id": "belnades-spellbook",
       "name": "Belnades' Spellbook",
+      "nameDeHint": "Belnades' Zauberbuch",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Lässt dich aus einer Auswahl von Zaubern wählen.",
+      "description": {
+        "de": "Lässt dich aus einer Auswahl von Zaubern wählen.",
+        "en": "Allows you to choose from a selection of spells."
+      },
       "maxLevel": 1,
       "emoji": "📘",
       "image": "https://vampire.survivors.wiki/images/Sprite-Belnades%27_Spellbook.png",
@@ -521,9 +697,13 @@
     {
       "id": "spectral-sword",
       "name": "Spectral Sword",
+      "nameDeHint": "Geisterschwert",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Lässt dich aus einer Auswahl magischer Waffen wählen.",
+      "description": {
+        "de": "Lässt dich aus einer Auswahl magischer Waffen wählen.",
+        "en": "Allows you to choose from a selection of magic weapons."
+      },
       "maxLevel": 1,
       "emoji": "🗡️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Spectral_Sword.png",
@@ -532,9 +712,13 @@
     {
       "id": "ebony-diabologue",
       "name": "Ebony Diabologue",
+      "nameDeHint": "Ebenholz-Diabolog",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Lässt dich aus einer Auswahl zwiespältiger Kräfte wählen.",
+      "description": {
+        "de": "Lässt dich aus einer Auswahl zwiespältiger Kräfte wählen.",
+        "en": "Allows you to choose from a selection of ambiguous powers."
+      },
       "maxLevel": 1,
       "emoji": "📕",
       "image": "https://vampire.survivors.wiki/images/Sprite-Ebony_Diabologue.png",
@@ -545,7 +729,10 @@
       "name": "Valmanway",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Feuert schneller, während du dich bewegst.",
+      "description": {
+        "de": "Feuert schneller, während du dich bewegst.",
+        "en": "Fires faster when moving."
+      },
       "maxLevel": 8,
       "emoji": "⚔️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Valmanway.png",
@@ -554,9 +741,13 @@
     {
       "id": "icebrand",
       "name": "Icebrand",
+      "nameDeHint": "Eisbrand",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Feuert verweilende Projektile; kann Gegner einfrieren.",
+      "description": {
+        "de": "Feuert verweilende Projektile; kann Gegner einfrieren.",
+        "en": "Fires lingering projectiles. Might freeze enemies."
+      },
       "maxLevel": 8,
       "emoji": "❄️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Icebrand.png",
@@ -565,9 +756,13 @@
     {
       "id": "arrow-of-goth",
       "name": "Arrow of Goth",
+      "nameDeHint": "Pfeil von Goth",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Kritische Treffer maximieren die Zahl der Projektile.",
+      "description": {
+        "de": "Kritische Treffer maximieren die Zahl der Projektile.",
+        "en": "Critical hits maximise amount of projectiles."
+      },
       "maxLevel": 8,
       "emoji": "🏹",
       "image": "https://vampire.survivors.wiki/images/Sprite-Arrow_of_Goth.png",
@@ -576,9 +771,13 @@
     {
       "id": "aura-blast",
       "name": "Aura Blast",
+      "nameDeHint": "Aurastoß",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Erzeugt seitliche Explosionen.",
+      "description": {
+        "de": "Erzeugt seitliche Explosionen.",
+        "en": "Generates explosions sideways."
+      },
       "maxLevel": 8,
       "emoji": "💥",
       "image": "https://vampire.survivors.wiki/images/Sprite-Aura_Blast.png",
@@ -587,9 +786,13 @@
     {
       "id": "kaiser-knuckle",
       "name": "Kaiser Knuckle",
+      "nameDeHint": "Kaiserfaust",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Teilt eine Serie von Schlägen auf kurze Distanz aus.",
+      "description": {
+        "de": "Teilt eine Serie von Schlägen auf kurze Distanz aus.",
+        "en": "Throws a flurry of close-range punches."
+      },
       "maxLevel": 8,
       "emoji": "🥊",
       "image": "https://vampire.survivors.wiki/images/Sprite-Kaiser_Knuckle.png",
@@ -598,9 +801,13 @@
     {
       "id": "pocket-knife",
       "name": "Pocket Knife",
+      "nameDeHint": "Taschenmesser",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Wirft ein kurzlebiges Messer in Blickrichtung.",
+      "description": {
+        "de": "Wirft ein kurzlebiges Messer in Blickrichtung.",
+        "en": "Throws a short-lived knife in the faced direction."
+      },
       "maxLevel": 8,
       "emoji": "🔪",
       "image": "https://vampire.survivors.wiki/images/Sprite-Pocket_Knife.png",
@@ -609,9 +816,13 @@
     {
       "id": "svarog-statue",
       "name": "Svarog Statue",
+      "nameDeHint": "Svarog-Statue",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Erzeugt beim Laufen Schadenszonen.",
+      "description": {
+        "de": "Erzeugt beim Laufen Schadenszonen.",
+        "en": "Geneartes damaging zones when moving."
+      },
       "maxLevel": 8,
       "emoji": "🗿",
       "image": "https://vampire.survivors.wiki/images/Sprite-Svarog_Statue.png",
@@ -620,9 +831,13 @@
     {
       "id": "troll-bomb",
       "name": "Troll Bomb",
+      "nameDeHint": "Trollbombe",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Diese hier prallt nicht ab.",
+      "description": {
+        "de": "Diese hier prallt nicht ab.",
+        "en": "This one doesn't bounce."
+      },
       "maxLevel": 8,
       "emoji": "💣",
       "image": "https://vampire.survivors.wiki/images/Sprite-Troll_Bomb.png",
@@ -631,9 +846,13 @@
     {
       "id": "hydro-storm",
       "name": "Hydro Storm",
+      "nameDeHint": "Hydrosturm",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Erzeugt Schadenswellen abhängig von Projektilgeschwindigkeit und Dauer.",
+      "description": {
+        "de": "Erzeugt Schadenswellen abhängig von Projektilgeschwindigkeit und Dauer.",
+        "en": "Generates damaging waves based on Projectile Speed and Duration."
+      },
       "maxLevel": 8,
       "emoji": "🌊",
       "image": "https://vampire.survivors.wiki/images/Sprite-Hydro_Storm.png",
@@ -642,9 +861,13 @@
     {
       "id": "grand-cross",
       "name": "Grand Cross",
+      "nameDeHint": "Großes Kreuz",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Ruft heiliges Licht herbei.",
+      "description": {
+        "de": "Ruft heiliges Licht herbei.",
+        "en": "Summons holy light."
+      },
       "maxLevel": 8,
       "emoji": "✝️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Grand_Cross.png",
@@ -653,9 +876,13 @@
     {
       "id": "summon-spirit",
       "name": "Summon Spirit",
+      "nameDeHint": "Geist beschwören",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Feuert ein zielsuchendes Projektil.",
+      "description": {
+        "de": "Feuert ein zielsuchendes Projektil.",
+        "en": "Fires a homing projectile."
+      },
       "maxLevel": 8,
       "emoji": "👻",
       "image": "https://vampire.survivors.wiki/images/Sprite-Summon_Spirit.png",
@@ -664,9 +891,13 @@
     {
       "id": "soul-steal",
       "name": "Soul Steal",
+      "nameDeHint": "Seelenraub",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Schadet allen sichtbaren Gegnern und versucht, sie in Herzen zu verwandeln.",
+      "description": {
+        "de": "Schadet allen sichtbaren Gegnern und versucht, sie in Herzen zu verwandeln.",
+        "en": "Damages all enemies in sight and attempts to turn them into hearts."
+      },
       "maxLevel": 8,
       "emoji": "💔",
       "image": "https://vampire.survivors.wiki/images/Sprite-Soul_Steal.png",
@@ -675,9 +906,13 @@
     {
       "id": "dark-rift",
       "name": "Dark Rift",
+      "nameDeHint": "Dunkler Riss",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Erzeugt senkrechte Schadenszonen.",
+      "description": {
+        "de": "Erzeugt senkrechte Schadenszonen.",
+        "en": "Generates vertical damaging zones."
+      },
       "maxLevel": 8,
       "emoji": "🌌",
       "image": "https://vampire.survivors.wiki/images/Sprite-Dark_Rift.png",
@@ -686,9 +921,13 @@
     {
       "id": "sword-brothers",
       "name": "Sword Brothers",
+      "nameDeHint": "Schwertbrüder",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Gibt kurz Unverwundbarkeit und erzeugt eine Schadenswelle.",
+      "description": {
+        "de": "Gibt kurz Unverwundbarkeit und erzeugt eine Schadenswelle.",
+        "en": "Grants a brief moment of Invulnerability and generates a damaging wave."
+      },
       "maxLevel": 8,
       "emoji": "⚔️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Sword_Brothers.png",
@@ -697,9 +936,13 @@
     {
       "id": "summon-spirit-tornado",
       "name": "Summon Spirit Tornado",
+      "nameDeHint": "Geistertornado beschwören",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Ruft Geister, die gelegentlich Erfahrungs-Edelsteine für dich einsammeln.",
+      "description": {
+        "de": "Ruft Geister, die gelegentlich Erfahrungs-Edelsteine für dich einsammeln.",
+        "en": "Summons spirits that will occasionally pick up XP gems for you."
+      },
       "maxLevel": 8,
       "emoji": "🌪️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Summon_Spirit_Tornado.png",
@@ -710,7 +953,10 @@
       "name": "Anura",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Ruft Frösche, die Gegnern beim Springen schaden.",
+      "description": {
+        "de": "Ruft Frösche, die Gegnern beim Springen schaden.",
+        "en": "Summons frogs that damage enemies as they jump."
+      },
       "maxLevel": 8,
       "emoji": "🐸",
       "image": "https://vampire.survivors.wiki/images/Sprite-Anura.png",
@@ -719,9 +965,13 @@
     {
       "id": "endo-gears",
       "name": "Endo Gears",
+      "nameDeHint": "Endo-Zahnräder",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Löst auch andere Uhrwerk-Waffen aus; Anzahl und gefundene Orologions erhöhen den Schaden.",
+      "description": {
+        "de": "Löst auch andere Uhrwerk-Waffen aus; Anzahl und gefundene Orologions erhöhen den Schaden.",
+        "en": "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions."
+      },
       "maxLevel": 9,
       "emoji": "⚙️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Endo_Gears.png",
@@ -730,9 +980,13 @@
     {
       "id": "peri-pendulum",
       "name": "Peri Pendulum",
+      "nameDeHint": "Peri-Pendel",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Löst auch andere Uhrwerk-Waffen aus; Anzahl und gefundene Orologions erhöhen den Schaden.",
+      "description": {
+        "de": "Löst auch andere Uhrwerk-Waffen aus; Anzahl und gefundene Orologions erhöhen den Schaden.",
+        "en": "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions."
+      },
       "maxLevel": 9,
       "emoji": "🕰️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Peri_Pendulum.png",
@@ -741,9 +995,13 @@
     {
       "id": "myo-lift",
       "name": "Myo Lift",
+      "nameDeHint": "Myo-Aufzug",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Löst auch andere Uhrwerk-Waffen aus; Anzahl und gefundene Orologions erhöhen den Schaden.",
+      "description": {
+        "de": "Löst auch andere Uhrwerk-Waffen aus; Anzahl und gefundene Orologions erhöhen den Schaden.",
+        "en": "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions."
+      },
       "maxLevel": 9,
       "emoji": "🛗",
       "image": "https://vampire.survivors.wiki/images/Sprite-Myo_Lift.png",
@@ -752,9 +1010,13 @@
     {
       "id": "epi-head",
       "name": "Epi Head",
+      "nameDeHint": "Epi-Kopf",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Löst auch andere Uhrwerk-Waffen aus; Anzahl und gefundene Orologions erhöhen den Schaden.",
+      "description": {
+        "de": "Löst auch andere Uhrwerk-Waffen aus; Anzahl und gefundene Orologions erhöhen den Schaden.",
+        "en": "Also triggers other clockwork weapons. Damage increased by Amount and currently found Orologions."
+      },
       "maxLevel": 9,
       "emoji": "🗿",
       "image": "https://vampire.survivors.wiki/images/Sprite-Epi_Head.png",
@@ -763,9 +1025,13 @@
     {
       "id": "familiar-forge",
       "name": "Familiar Forge",
+      "nameDeHint": "Familiar-Schmiede",
       "source": "ode-to-castlevania",
       "kind": "base",
-      "description": "Lässt dich einen Familiar beschwören.",
+      "description": {
+        "de": "Lässt dich einen Familiar beschwören.",
+        "en": "Allows you to summon a familiar."
+      },
       "maxLevel": 1,
       "emoji": "🔨",
       "image": "https://vampire.survivors.wiki/images/Sprite-Familiar_Forge.png",
@@ -774,9 +1040,13 @@
     {
       "id": "vampire-killer",
       "name": "Vampire Killer",
+      "nameDeHint": "Vampirtöter",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Alchemy Whip: jede 3. Auslösung feuert zusätzliche Projektile; grelles Sonnenlicht verbrennt Bosse.",
+      "description": {
+        "de": "Entwicklung von Alchemy Peitsche: jede 3. Auslösung feuert zusätzliche Projektile; grelles Sonnenlicht verbrennt Bosse.",
+        "en": "Evolved Alchemy Whip. Every 3rd activation fires additional projectiles. Intense sunlight incinerates boss enemies."
+      },
       "maxLevel": 1,
       "emoji": "🪢",
       "image": "https://vampire.survivors.wiki/images/Sprite-Vampire_Killer.png",
@@ -785,9 +1055,13 @@
     {
       "id": "spirit-tornado-tip",
       "name": "Spirit Tornado Tip",
+      "nameDeHint": "Geistertornado-Spitze",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Wind Whip: jede 7. Auslösung ruft einen Geist, der heftig Erfahrungs-Edelsteine einsammelt.",
+      "description": {
+        "de": "Entwicklung von Wind Peitsche: jede 7. Auslösung ruft einen Geist, der heftig Erfahrungs-Edelsteine einsammelt.",
+        "en": "Evolved Wind Whip. Every 7th activation summons a spirit that violently collects XP gems for you."
+      },
       "maxLevel": 1,
       "emoji": "🌪️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Spirit_Tornado_Tip.png",
@@ -796,9 +1070,13 @@
     {
       "id": "cross-crasher-tip",
       "name": "Cross Crasher Tip",
+      "nameDeHint": "Kreuzbrecher-Spitze",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Platinum Whip: jede 7. Auslösung feuert zusätzlich besondere Projektile.",
+      "description": {
+        "de": "Entwicklung von Platinum Peitsche: jede 7. Auslösung feuert zusätzlich besondere Projektile.",
+        "en": "Evolved Platinum Whip. Every 7th activation also fires special projectiles."
+      },
       "maxLevel": 1,
       "emoji": "✝️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Cross_Crasher_Tip.png",
@@ -807,9 +1085,13 @@
     {
       "id": "hydrostormer-tip",
       "name": "Hydrostormer Tip",
+      "nameDeHint": "Hydrostürmer-Spitze",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Dragon Water Whip: jede 13. Auslösung erzeugt Schadenswellen abhängig von Projektilgeschwindigkeit und Dauer.",
+      "description": {
+        "de": "Entwicklung von Dragon Water Peitsche: jede 13. Auslösung erzeugt Schadenswellen abhängig von Projektilgeschwindigkeit und Dauer.",
+        "en": "Evolved Dragon Water Whip. Every 13th activation generates damaging waves based on Projectile Speed and Duration."
+      },
       "maxLevel": 1,
       "emoji": "🌊",
       "image": "https://vampire.survivors.wiki/images/Sprite-Hydrostormer_Tip.png",
@@ -818,9 +1100,13 @@
     {
       "id": "crissaegrim-tip",
       "name": "Crissaegrim Tip",
+      "nameDeHint": "Crissaegrim-Spitze",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Sonic Whip: jede 5. Auslösung löst zusätzlich eine Welle von Schadenswellen aus.",
+      "description": {
+        "de": "Entwicklung von Sonic Peitsche: jede 5. Auslösung löst zusätzlich eine Welle von Schadenswellen aus.",
+        "en": "Evolved Sonic Whip. Every 5th activation also triggers a blast of damaging waves."
+      },
       "maxLevel": 1,
       "emoji": "🗡️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Crissaegrim_Tip.png",
@@ -829,9 +1115,13 @@
     {
       "id": "mormegil-tip",
       "name": "Mormegil Tip",
+      "nameDeHint": "Mormegil-Spitze",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Jet Black Whip: jede 8. Auslösung erzeugt zusätzlich Schadenszonen.",
+      "description": {
+        "de": "Entwicklung von Jet Black Peitsche: jede 8. Auslösung erzeugt zusätzlich Schadenszonen.",
+        "en": "Evolved Jet Black Whip. Every 8th activation also triggers damaging zones."
+      },
       "maxLevel": 1,
       "emoji": "⚫",
       "image": "https://vampire.survivors.wiki/images/Sprite-Mormegil_Tip.png",
@@ -840,9 +1130,13 @@
     {
       "id": "daybreaker-tip",
       "name": "Daybreaker Tip",
+      "nameDeHint": "Tagesanbruch-Spitze",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Vibhuti Whip: kritische Treffer maximieren die Zahl der Projektile.",
+      "description": {
+        "de": "Entwicklung von Vibhuti Peitsche: kritische Treffer maximieren die Zahl der Projektile.",
+        "en": "Evolved Vibhuti Whip. Critical hits maximise amount of projectiles."
+      },
       "maxLevel": 1,
       "emoji": "🌅",
       "image": "https://vampire.survivors.wiki/images/Sprite-Daybreaker_Tip.png",
@@ -851,9 +1145,13 @@
     {
       "id": "aurablaster-tip",
       "name": "Aurablaster Tip",
+      "nameDeHint": "Aurastoß-Spitze",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Vanitas Whip: jede 7. Auslösung erzeugt eine Explosion.",
+      "description": {
+        "de": "Entwicklung von Vanitas Peitsche: jede 7. Auslösung erzeugt eine Explosion.",
+        "en": "Evolved Vanitas Whip. Every 7th activation generates an explosion."
+      },
       "maxLevel": 1,
       "emoji": "💥",
       "image": "https://vampire.survivors.wiki/images/Sprite-Aurablaster_Tip.png",
@@ -864,7 +1162,10 @@
       "name": "Yagyu Shuriken",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Shuriken: feuert ohne Pause.",
+      "description": {
+        "de": "Entwicklung von Shuriken: feuert ohne Pause.",
+        "en": "Evolved Shuriken. Fires with no delay."
+      },
       "maxLevel": 1,
       "emoji": "✴️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Yagyu_Shuriken.png",
@@ -873,9 +1174,13 @@
     {
       "id": "bwaka-knife",
       "name": "Bwaka Knife",
+      "nameDeHint": "Bwaka-Messer",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Curved Knife: Projektile prallen endlos ab, bis die Dauer abläuft.",
+      "description": {
+        "de": "Entwicklung von Curved Messer: Projektile prallen endlos ab, bis die Dauer abläuft.",
+        "en": "Evolved Curved Knife. Projectiles bounce forever until Duration expires."
+      },
       "maxLevel": 1,
       "emoji": "🔪",
       "image": "https://vampire.survivors.wiki/images/Sprite-Bwaka_Knife.png",
@@ -886,7 +1191,10 @@
       "name": "Long Inus",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Javelin: Projektile tauchen wieder auf, nachdem sie den Bildschirm verlassen haben.",
+      "description": {
+        "de": "Entwicklung von Javelin: Projektile tauchen wieder auf, nachdem sie den Bildschirm verlassen haben.",
+        "en": "Evolved Javelin. Projectiles reappear after leaving the screen."
+      },
       "maxLevel": 1,
       "emoji": "🏹",
       "image": "https://vampire.survivors.wiki/images/Sprite-Long_Inus.png",
@@ -895,9 +1203,13 @@
     {
       "id": "stellar-blade",
       "name": "Stellar Blade",
+      "nameDeHint": "Sternenklinge",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Discus: läuft an Wänden entlang; trifft kritisch, solange du unverwundbar bist.",
+      "description": {
+        "de": "Entwicklung von Discus: läuft an Wänden entlang; trifft kritisch, solange du unverwundbar bist.",
+        "en": "Evolved Discus. Travels along walls. Deals critical damage if the user is invulnerable."
+      },
       "maxLevel": 1,
       "emoji": "🌟",
       "image": "https://vampire.survivors.wiki/images/Sprite-Stellar_Blade.png",
@@ -906,9 +1218,13 @@
     {
       "id": "wrecking-ball",
       "name": "Wrecking Ball",
+      "nameDeHint": "Abrissbirne",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Iron Ball: feuert ein sehr schweres Projektil.",
+      "description": {
+        "de": "Entwicklung von Iron Ball: feuert ein sehr schweres Projektil.",
+        "en": "Evolved Iron Ball. Fires a very heavy projectile."
+      },
       "maxLevel": 1,
       "emoji": "🏗️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Wrecking_Ball.png",
@@ -917,9 +1233,13 @@
     {
       "id": "jewel-gun",
       "name": "Jewel Gun",
+      "nameDeHint": "Juwelenkanone",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Silver Revolver: kritische Treffer töten sofort und verwandeln Gegner in Juwelen.",
+      "description": {
+        "de": "Entwicklung von Silver Revolver: kritische Treffer töten sofort und verwandeln Gegner in Juwelen.",
+        "en": "Evolved Silver Revolver. Critical hits instantly kill enemies and turn them into Jewels."
+      },
       "maxLevel": 1,
       "emoji": "💎",
       "image": "https://vampire.survivors.wiki/images/Sprite-Jewel_Gun.png",
@@ -928,9 +1248,13 @@
     {
       "id": "the-rpg",
       "name": "The RPG",
+      "nameDeHint": "Die Panzerfaust",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Hand Grenade: Explosionen breiten sich aus.",
+      "description": {
+        "de": "Entwicklung von Hand Grenade: Explosionen breiten sich aus.",
+        "en": "Evolved Hand Grenade. Explosions propagate."
+      },
       "maxLevel": 1,
       "emoji": "🚀",
       "image": "https://vampire.survivors.wiki/images/Sprite-The_RPG.png",
@@ -939,9 +1263,13 @@
     {
       "id": "meal-ticket",
       "name": "Meal Ticket",
+      "nameDeHint": "Essensmarke",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Wine Glass: seelenvolles Essen richtet Schaden abhängig von den Wiederbelebungen an.",
+      "description": {
+        "de": "Entwicklung von Wine Glass: seelenvolles Essen richtet Schaden abhängig von den Wiederbelebungen an.",
+        "en": "Evolved Wine Glass. Soulful food deals Revival-based damage to unrefined palates."
+      },
       "maxLevel": 1,
       "emoji": "🍽️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Meal_Ticket.png",
@@ -952,7 +1280,10 @@
       "name": "Salamender",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Raging Fire: ruft zusätzlich eine Feuerschlange.",
+      "description": {
+        "de": "Entwicklung von Raging Fire: ruft zusätzlich eine Feuerschlange.",
+        "en": "Evolved Raging Fire. Also summons a snake of fire."
+      },
       "maxLevel": 1,
       "emoji": "🦎",
       "image": "https://vampire.survivors.wiki/images/Sprite-Salamender.png",
@@ -961,9 +1292,13 @@
     {
       "id": "cocytus",
       "name": "Cocytus",
+      "nameDeHint": "Kokytos",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Ice Fang: löst zusätzlich einen eisigen Wind aus.",
+      "description": {
+        "de": "Entwicklung von Ice Fang: löst zusätzlich einen eisigen Wind aus.",
+        "en": "Evolved Ice Fang. Also triggers a freezing wind."
+      },
       "maxLevel": 1,
       "emoji": "🌨️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Cocytus.png",
@@ -974,7 +1309,10 @@
       "name": "Pneuma Tempestas",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Gale Force: löst zusätzlich einen kreiselnden Tornado aus.",
+      "description": {
+        "de": "Entwicklung von Gale Force: löst zusätzlich einen kreiselnden Tornado aus.",
+        "en": "Evolved Gale Force. Also triggers a spinning tornado."
+      },
       "maxLevel": 1,
       "emoji": "🌪️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Pneuma_Tempestas.png",
@@ -985,7 +1323,10 @@
       "name": "Gemma Torpor",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Rock Riot: zusätzlich ein Kristallregen, der Gegner in wertvolle Juwelen verwandeln kann.",
+      "description": {
+        "de": "Entwicklung von Rock Riot: zusätzlich ein Kristallregen, der Gegner in wertvolle Juwelen verwandeln kann.",
+        "en": "Evolved Rock Riot. Also triggers a rain of crystals that can turn enemies into valuable jewels."
+      },
       "maxLevel": 1,
       "emoji": "💎",
       "image": "https://vampire.survivors.wiki/images/Sprite-Gemma_Torpor.png",
@@ -996,7 +1337,10 @@
       "name": "Tenebris Tonitrus",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Fulgur: löst zusätzlich Kugelblitze aus.",
+      "description": {
+        "de": "Entwicklung von Fulgur: löst zusätzlich Kugelblitze aus.",
+        "en": "Evolved Fulgur. Also triggers ball lightnings."
+      },
       "maxLevel": 1,
       "emoji": "🌩️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Tenebris_Tonitrus.png",
@@ -1007,7 +1351,10 @@
       "name": "Keremet Morbus",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Keremet Bubbles: zusätzlich ein schleimiger Schwarm, der Gegner jagt.",
+      "description": {
+        "de": "Entwicklung von Keremet Bubbles: zusätzlich ein schleimiger Schwarm, der Gegner jagt.",
+        "en": "Evolved Keremet Bubbles. Also triggers a slimy swarm that chases enemies down."
+      },
       "maxLevel": 1,
       "emoji": "🦠",
       "image": "https://vampire.survivors.wiki/images/Sprite-Keremet_Morbus.png",
@@ -1016,9 +1363,13 @@
     {
       "id": "nightmare",
       "name": "Nightmare",
+      "nameDeHint": "Albtraum",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Hex: zusätzlich eine Zone negativer Energie, die beim Betreten den Fluch verdoppelt.",
+      "description": {
+        "de": "Entwicklung von Hex: zusätzlich eine Zone negativer Energie, die beim Betreten den Fluch verdoppelt.",
+        "en": "Evolved Hex. Also triggers a negative energy zone that doubles Curse when stepped into."
+      },
       "maxLevel": 1,
       "emoji": "😱",
       "image": "https://vampire.survivors.wiki/images/Sprite-Nightmare.png",
@@ -1027,9 +1378,13 @@
     {
       "id": "sanctuary",
       "name": "Sanctuary",
+      "nameDeHint": "Zuflucht",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Refectio: heilt in festen Abständen vollständig und läutert alle sichtbaren Gegner.",
+      "description": {
+        "de": "Entwicklung von Refectio: heilt in festen Abständen vollständig und läutert alle sichtbaren Gegner.",
+        "en": "Evolved Refectio. At fixed intervals, also fully heals characters and purifies all enemies in sight."
+      },
       "maxLevel": 1,
       "emoji": "⛪",
       "image": "https://vampire.survivors.wiki/images/Sprite-Sanctuary.png",
@@ -1040,7 +1395,10 @@
       "name": "Stamazza",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Mace: extrem hoher kritischer Schadensmultiplikator.",
+      "description": {
+        "de": "Entwicklung von Mace: extrem hoher kritischer Schadensmultiplikator.",
+        "en": "Evolved Mace. Has a catastrophically high critical damage multiplier."
+      },
       "maxLevel": 1,
       "emoji": "🔨",
       "image": "https://vampire.survivors.wiki/images/Sprite-Stamazza.png",
@@ -1049,9 +1407,13 @@
     {
       "id": "moon-rod",
       "name": "Moon Rod",
+      "nameDeHint": "Mondstab",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Star Flail: Projektile werden in Blickrichtung geschossen.",
+      "description": {
+        "de": "Entwicklung von Star Flail: Projektile werden in Blickrichtung geschossen.",
+        "en": "Evolved Star Flail. Projectiles are shot in the faced direction."
+      },
       "maxLevel": 1,
       "emoji": "🌙",
       "image": "https://vampire.survivors.wiki/images/Sprite-Moon_Rod.png",
@@ -1060,9 +1422,13 @@
     {
       "id": "thunderbolt-spear",
       "name": "Thunderbolt Spear",
+      "nameDeHint": "Donnerkeilspeer",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Alucard Spear: jede 7. Auslösung löst einen Spezialangriff abhängig von der Geschwindigkeit aus.",
+      "description": {
+        "de": "Entwicklung von Alucard Spear: jede 7. Auslösung löst einen Spezialangriff abhängig von der Geschwindigkeit aus.",
+        "en": "Evolved Alucard Spear. Every 7th activation triggers a special attack based on Speed."
+      },
       "maxLevel": 1,
       "emoji": "⚡",
       "image": "https://vampire.survivors.wiki/images/Sprite-Thunderbolt_Spear.png",
@@ -1073,7 +1439,10 @@
       "name": "Gungnir-Souris",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Trident: kritische Treffer feuern zusätzlich einen Strahl.",
+      "description": {
+        "de": "Entwicklung von Trident: kritische Treffer feuern zusätzlich einen Strahl.",
+        "en": "Evolved Trident. Critical hits also fire a damaging beam."
+      },
       "maxLevel": 1,
       "emoji": "🔱",
       "image": "https://vampire.survivors.wiki/images/Sprite-Gungnir-Souris.png",
@@ -1082,9 +1451,13 @@
     {
       "id": "dark-iron-shield",
       "name": "Dark Iron Shield",
+      "nameDeHint": "Dunkler Eisenschild",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Iron Shield: kritische Treffer schlagen mit rotierenden Schwertern zurück.",
+      "description": {
+        "de": "Entwicklung von Iron Shield: kritische Treffer schlagen mit rotierenden Schwertern zurück.",
+        "en": "Evolved Iron Shield. Critical hits retaliate with spinning swords."
+      },
       "maxLevel": 1,
       "emoji": "🛡️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Dark_Iron_Shield.png",
@@ -1093,9 +1466,13 @@
     {
       "id": "sacred-beasts-tower-shield",
       "name": "Sacred Beasts Tower Shield",
+      "nameDeHint": "Turmschild der heiligen Bestien",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Guardian's Targe: Überheilung gibt zusätzlich eine Zeit der Unverwundbarkeit.",
+      "description": {
+        "de": "Entwicklung von Guardian's Targe: Überheilung gibt zusätzlich eine Zeit der Unverwundbarkeit.",
+        "en": "Evolved Guardian's Targe. Overhealing also triggers a period of invulnerability."
+      },
       "maxLevel": 1,
       "emoji": "🛡️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Sacred_Beasts_Tower_Shield.png",
@@ -1104,9 +1481,13 @@
     {
       "id": "rune-sword",
       "name": "Rune Sword",
+      "nameDeHint": "Runenschwert",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Tyrfing: kritischer Schaden hängt zusätzlich von Fläche, Geschwindigkeit und Dauer ab.",
+      "description": {
+        "de": "Entwicklung von Tyrfing: kritischer Schaden hängt zusätzlich von Fläche, Geschwindigkeit und Dauer ab.",
+        "en": "Evolved Tyrfing. Critical damage also affected by Area, Speed, and Duration."
+      },
       "maxLevel": 1,
       "emoji": "🗡️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Rune_Sword.png",
@@ -1115,9 +1496,13 @@
     {
       "id": "alucard-swords",
       "name": "Alucard Swords",
+      "nameDeHint": "Alucards Schwerter",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Alucart Sworb: Erscheinungen des wahren Schwertträgers suchen Gegner auf.",
+      "description": {
+        "de": "Entwicklung von Alucart Sworb: Erscheinungen des wahren Schwertträgers suchen Gegner auf.",
+        "en": "Evolved Alucart Sworb. Apparitions of the sword's true bearer seek out enemies."
+      },
       "maxLevel": 1,
       "emoji": "⚔️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Alucard_Swords.png",
@@ -1128,7 +1513,10 @@
       "name": "Vol Confodere",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Greift Gegner in der Nähe an; Geschwindigkeit erhöht den Schaden.",
+      "description": {
+        "de": "Greift Gegner in der Nähe an; Geschwindigkeit erhöht den Schaden.",
+        "en": "Attack nearby enemies. Speed affects Damage."
+      },
       "maxLevel": 6,
       "emoji": "🤺",
       "image": "https://vampire.survivors.wiki/images/Sprite-Vol_Confodere.png",
@@ -1139,7 +1527,10 @@
       "name": "Melio Confodere",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Greift Gegner in der Nähe an; Geschwindigkeit verkürzt die Abklingzeit und erhöht den Schaden.",
+      "description": {
+        "de": "Greift Gegner in der Nähe an; Geschwindigkeit verkürzt die Abklingzeit und erhöht den Schaden.",
+        "en": "Attack nearby enemies. Speed affects Cooldown and Damage."
+      },
       "maxLevel": 6,
       "emoji": "🤺",
       "image": "https://vampire.survivors.wiki/images/Sprite-Melio_Confodere.png",
@@ -1150,7 +1541,10 @@
       "name": "Nitesco",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Globus: feuert einen durchdringenden Energiestrahl in Blickrichtung.",
+      "description": {
+        "de": "Entwicklung von Globus: feuert einen durchdringenden Energiestrahl in Blickrichtung.",
+        "en": "Evolved Globus. Fires a piercing energy beam in the faced direction."
+      },
       "maxLevel": 1,
       "emoji": "🔦",
       "image": "https://vampire.survivors.wiki/images/Sprite-Anima_of_Dracula.png",
@@ -1161,7 +1555,10 @@
       "name": "Acerbatus",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Optical Shot: der Schaden hängt von der Zahl besiegter Gegner ab.",
+      "description": {
+        "de": "Entwicklung von Optical Shot: der Schaden hängt von der Zahl besiegter Gegner ab.",
+        "en": "Evolved Optical Shot. Damage is affected by the amount of defeated enemies."
+      },
       "maxLevel": 1,
       "emoji": "👁️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Acerbatus.png",
@@ -1172,7 +1569,10 @@
       "name": "Rapidus Fio",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Sonic Dash: löst zusätzlich einen Schildstoß aus.",
+      "description": {
+        "de": "Entwicklung von Sonic Dash: löst zusätzlich einen Schildstoß aus.",
+        "en": "Evolved Sonic Dash. Also triggers a single shield charge."
+      },
       "maxLevel": 1,
       "emoji": "💨",
       "image": "https://vampire.survivors.wiki/images/Sprite-Rapidus_Fio.png",
@@ -1183,7 +1583,10 @@
       "name": "Vol Luminatio",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Luminatio: Schaden, Geschwindigkeit, Fläche und Dauer hängen vom Wachstum ab.",
+      "description": {
+        "de": "Entwicklung von Luminatio: Schaden, Geschwindigkeit, Fläche und Dauer hängen vom Wachstum ab.",
+        "en": "Evolved Luminatio. Damage, Speed, Area, and Duration affected by Growth."
+      },
       "maxLevel": 3,
       "emoji": "☀️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Vol_Luminatio.png",
@@ -1194,7 +1597,10 @@
       "name": "Vol Umbra",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Umbra: Schaden, Geschwindigkeit, Fläche und Dauer hängen vom Magnet ab.",
+      "description": {
+        "de": "Entwicklung von Umbra: Schaden, Geschwindigkeit, Fläche und Dauer hängen vom Magnet ab.",
+        "en": "Evolved Umbra. Damage, Speed, Area, and Duration affected by Magnet."
+      },
       "maxLevel": 3,
       "emoji": "🌑",
       "image": "https://vampire.survivors.wiki/images/Sprite-Vol_Umbra.png",
@@ -1205,7 +1611,10 @@
       "name": "Claimh Solais",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Entwicklung von Pocket Knife: erhöht für jeden sichtbaren Gegner Macht, Rüstung und kritischen Schaden.",
+      "description": {
+        "de": "Entwicklung von Pocket Messer: erhöht für jeden sichtbaren Gegner Macht, Rüstung und kritischen Schaden.",
+        "en": "Evolved Pocket Knife. Globally increases Might, Armor and Crit Damage for each enemy in sight."
+      },
       "maxLevel": 1,
       "emoji": "🗡️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Claimh_Solais.png",
@@ -1216,7 +1625,10 @@
       "name": "Trinum Custodem",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Union aus Dextro Custos, Sinestro Custos und Centralis Custos.",
+      "description": {
+        "de": "Union aus Dextro Custos, Sinestro Custos und Centralis Custos.",
+        "en": "Union of Dextro Custos, Sinestro Custos, and Centralis Custos."
+      },
       "maxLevel": 1,
       "emoji": "🐕",
       "image": "https://vampire.survivors.wiki/images/Sprite-Trinum_Custodem.png",
@@ -1225,9 +1637,13 @@
     {
       "id": "power-of-sire",
       "name": "Power of Sire",
+      "nameDeHint": "Macht des Herrn",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Union aus Dominus Anger, Dominus Hatred und Dominus Agony: kritischer Schaden an allem Sichtbaren; zehrt an der Gesundheit.",
+      "description": {
+        "de": "Union aus Dominus Anger, Dominus Hatred und Dominus Agony: kritischer Schaden an allem Sichtbaren; zehrt an der Gesundheit.",
+        "en": "Union of Dominus Anger, Dominus Hatred and Dominus Agony. Deals critical damage to anything in sight. Drains health."
+      },
       "maxLevel": 1,
       "emoji": "🩸",
       "image": "https://vampire.survivors.wiki/images/Sprite-Power_of_Sire.png",
@@ -1236,9 +1652,13 @@
     {
       "id": "million-cut",
       "name": "Million Cut",
+      "nameDeHint": "Millionenschnitt",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Union aus Valmanway und Thousand Edge: schlitzt endlos und wird bei ununterbrochener Bewegung größer.",
+      "description": {
+        "de": "Union aus Valmanway und Tausendschneide: schlitzt endlos und wird bei ununterbrochener Bewegung größer.",
+        "en": "Union of Valmanway and Thousand Edge. Slashes endlessly. Grows bigger with continuous movement."
+      },
       "maxLevel": 1,
       "emoji": "⚔️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Million_Cut.png",
@@ -1247,9 +1667,13 @@
     {
       "id": "ninth-circle",
       "name": "Ninth Circle",
+      "nameDeHint": "Neunter Kreis",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Union aus Icebrand und Unholy Vespers: die Hölle ist wirklich zugefroren.",
+      "description": {
+        "de": "Union aus Icebrand und Unheilige Vesper: die Hölle ist wirklich zugefroren.",
+        "en": "Union of Icebrand and Unholy Vespers. Hell truly has frozen over."
+      },
       "maxLevel": 1,
       "emoji": "❄️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Ninth_Circle.png",
@@ -1260,7 +1684,10 @@
       "name": "Dies Irae",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Union aus Arrow of Goth und Mannajja: Alamaric Snipers lassen Pfeile regnen, bei kritischen Treffern noch mehr.",
+      "description": {
+        "de": "Union aus Arrow of Goth und Mannajja: Alamaric Snipers lassen Pfeile regnen, bei kritischen Treffern noch mehr.",
+        "en": "Union of Arrow of Goth and Mannajja. Alamaric Snipers rain down arrows, even more so on critical hit."
+      },
       "maxLevel": 1,
       "emoji": "🏹",
       "image": "https://vampire.survivors.wiki/images/Sprite-Dies_Irae.png",
@@ -1271,7 +1698,10 @@
       "name": "Kardía Phlegeton",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Union aus Aura Blast und Hellfire: ruft einen gewaltigen Vulkanausbruch.",
+      "description": {
+        "de": "Union aus Aura Blast und Höllenfeuer: ruft einen gewaltigen Vulkanausbruch.",
+        "en": "Union of Aura Blast and Hellfire. Calls forth a massive volcanic eruption."
+      },
       "maxLevel": 1,
       "emoji": "🌋",
       "image": "https://vampire.survivors.wiki/images/Sprite-Kard%C3%ADa_Phlegeton.png",
@@ -1282,7 +1712,10 @@
       "name": "Lapiste Tepisto",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Union aus Kaiser Knuckle und Tri-Bracelet: entfesselt ein Sperrfeuer steinerner Fäuste.",
+      "description": {
+        "de": "Union aus Kaiser Knuckle und Tri-Bracelet: entfesselt ein Sperrfeuer steinerner Fäuste.",
+        "en": "Union of Kaiser Knuckle and Tri-Bracelet. Launches a barrage of stony fists."
+      },
       "maxLevel": 1,
       "emoji": "🪨",
       "image": "https://vampire.survivors.wiki/images/Sprite-Lapiste_Tepisto.png",
@@ -1291,9 +1724,13 @@
     {
       "id": "darkness-illusion",
       "name": "Darkness Illusion",
+      "nameDeHint": "Illusion der Dunkelheit",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Union aus Svarog Statue und Valkyrie Turner: karmesinrote Klone tanzen mit dir in den Flammen.",
+      "description": {
+        "de": "Union aus Svarog Statue und Valkyrie Turner: karmesinrote Klone tanzen mit dir in den Flammen.",
+        "en": "Union of Svarog Statue and Valkyrie Turner. Crimson clones dance with you in the flames."
+      },
       "maxLevel": 1,
       "emoji": "🔥",
       "image": "https://vampire.survivors.wiki/images/Sprite-Darkness_Illusion.png",
@@ -1302,9 +1739,13 @@
     {
       "id": "carnage-heart",
       "name": "Carnage Heart",
+      "nameDeHint": "Blutbadherz",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Union aus Troll Bomb und NO FUTURE: diese hier prallt tatsächlich ab.",
+      "description": {
+        "de": "Union aus Troll Bomb und NO FUTURE: diese hier prallt tatsächlich ab.",
+        "en": "Union of Troll Bomb and NO FUTURE. This one does in fact bounce."
+      },
       "maxLevel": 1,
       "emoji": "💣",
       "image": "https://vampire.survivors.wiki/images/Sprite-Carnage_Heart.png",
@@ -1313,9 +1754,13 @@
     {
       "id": "hydro-pump-climax",
       "name": "Hydro Pump Climax",
+      "nameDeHint": "Hydropumpen-Höhepunkt",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Union aus Hydro Storm und La Borra: wenn es regnet, dann schüttet es.",
+      "description": {
+        "de": "Union aus Hydro Storm und La Borra: wenn es regnet, dann schüttet es.",
+        "en": "Union of Hydro Storm and La Borra. It never rains but it pours."
+      },
       "maxLevel": 1,
       "emoji": "🌊",
       "image": "https://vampire.survivors.wiki/images/Sprite-Hydro_Pump_Climax.png",
@@ -1326,7 +1771,10 @@
       "name": "Arch Angle",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Union aus Grand Cross und Heaven Sword: der zentrale Strahl pulsiert, wenn Kreuze ihn kreuzen.",
+      "description": {
+        "de": "Union aus Grand Kreuz und Himmelsschwert: der zentrale Strahl pulsiert, wenn Kreuze ihn kreuzen.",
+        "en": "Union of Grand Cross and Heaven Sword. Central beam pulses when crosses pass through it."
+      },
       "maxLevel": 1,
       "emoji": "✝️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Arch_Angle.png",
@@ -1335,9 +1783,13 @@
     {
       "id": "spirit-of-light",
       "name": "Spirit of Light",
+      "nameDeHint": "Geist des Lichts",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Union aus Summon Spirit und Holy Wand: feuert zielsuchende Geister aus einem Lichtportal.",
+      "description": {
+        "de": "Union aus Summon Spirit und Heiliger Zauberstab: feuert zielsuchende Geister aus einem Lichtportal.",
+        "en": "Union of Summon Spirit and Holy Wand. Fires homing spirits from a portal of light."
+      },
       "maxLevel": 1,
       "emoji": "✨",
       "image": "https://vampire.survivors.wiki/images/Sprite-Spirit_of_Light.png",
@@ -1348,7 +1800,10 @@
       "name": "Power of Lire",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Union aus Soul Steal und Vicious Hunger: verschlingt Gegner mit unstillbarer Gier.",
+      "description": {
+        "de": "Union aus Soul Steal und Vicious Hunger: verschlingt Gegner mit unstillbarer Gier.",
+        "en": "Union of Soul Steal and Vicious Hunger. Devours enemies with insatiable greed."
+      },
       "maxLevel": 1,
       "emoji": "💰",
       "image": "https://vampire.survivors.wiki/images/Sprite-Power_of_Lire.png",
@@ -1357,9 +1812,13 @@
     {
       "id": "legacy-of-death-soul-river",
       "name": "Legacy of Death: Soul River",
+      "nameDeHint": "Vermächtnis des Todes: Seelenfluss",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Union aus Dark Rift und Death Spiral: der Tod steht dir gut.",
+      "description": {
+        "de": "Union aus Dark Rift und Todesspirale: der Tod steht dir gut.",
+        "en": "Union of Dark Rift and Death Spiral. Death becomes you."
+      },
       "maxLevel": 1,
       "emoji": "💀",
       "image": "https://vampire.survivors.wiki/images/Sprite-Legacy_of_Death-_Soul_River.png",
@@ -1368,9 +1827,13 @@
     {
       "id": "vjaya-sisters",
       "name": "Vjaya Sisters",
+      "nameDeHint": "Vjaya-Schwestern",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Union aus Sword Brothers und Thunder Loop: Blitze lösen Schwertexplosionen mit kurzer Unverwundbarkeit aus.",
+      "description": {
+        "de": "Union aus Sword Brothers und Donnerschlinge: Blitze lösen Schwertexplosionen mit kurzer Unverwundbarkeit aus.",
+        "en": "Union of Sword Brothers and Thunder Loop. Lightning triggers sword explosions with brief Invulnerability."
+      },
       "maxLevel": 1,
       "emoji": "⚡",
       "image": "https://vampire.survivors.wiki/images/Sprite-Vjaya_Sisters.png",
@@ -1379,9 +1842,13 @@
     {
       "id": "venus-crescent",
       "name": "Venus Crescent",
+      "nameDeHint": "Venus-Sichel",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Union aus Summon Spirit Tornado und Gorgeous Moon: Liebe, Schönheit und Licht.",
+      "description": {
+        "de": "Union aus Summon Spirit Tornado und Prächtiger Mond: Liebe, Schönheit und Licht.",
+        "en": "Union of Summon Spirit Tornado and Gorgeous Moon. Love, Beauty and Light."
+      },
       "maxLevel": 1,
       "emoji": "🌙",
       "image": "https://vampire.survivors.wiki/images/Sprite-Venus_Crescent.png",
@@ -1390,9 +1857,13 @@
     {
       "id": "dark-frogamorphosis",
       "name": "Dark Frogamorphosis",
+      "nameDeHint": "Dunkle Froschamorphose",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Union aus Anura und Soul Eater: kann Gegner tatsächlich fressen.",
+      "description": {
+        "de": "Union aus Anura und Seelenfresser: kann Gegner tatsächlich fressen.",
+        "en": "Union of Anura and Soul Eater. May actually eat enemies."
+      },
       "maxLevel": 1,
       "emoji": "🐸",
       "image": "https://vampire.survivors.wiki/images/Sprite-Dark_Frogamorphosis.png",
@@ -1401,9 +1872,13 @@
     {
       "id": "clock-tower",
       "name": "Clock Tower",
+      "nameDeHint": "Uhrturm",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Union aus Endo Gears, Peri Pendulum, Myo Lift und Epi Head.",
+      "description": {
+        "de": "Union aus Endo Gears, Peri Pendulum, Myo Lift und Epi Head.",
+        "en": "Union of Endo Gears, Peri Pendulum, Myo Lift, and Epi Heads."
+      },
       "maxLevel": 1,
       "emoji": "🕰️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Clock_Tower.png",
@@ -1412,9 +1887,13 @@
     {
       "id": "alucard-shield",
       "name": "Alucard Shield",
+      "nameDeHint": "Alucards Schild",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Geschenk von Alucard Swords: nimmt alle anderen ausgerüsteten Entwicklungen auf und löst sie aus; der schwebende Schild schadet Gegnern; belegt einen Waffen-Slot.",
+      "description": {
+        "de": "Geschenk von Alucard Swords: nimmt alle anderen ausgerüsteten Entwicklungen auf und löst sie aus; der schwebende Schild schadet Gegnern; belegt einen Waffen-Slot.",
+        "en": "Gift of Alucard Sword. Absorbs and triggers all other equipped evolutions. Hovering shield damages enemies."
+      },
       "maxLevel": 1,
       "emoji": "🛡️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Alucard_Shield.png",
@@ -1425,7 +1904,10 @@
       "name": "Universitas",
       "source": "ode-to-castlevania",
       "kind": "evolved",
-      "description": "Geschenk von Vol Luminatio und Vol Umbra: lässt in festen Abständen Meteore auf Gegner regnen.",
+      "description": {
+        "de": "Geschenk von Vol Luminatio und Vol Umbra: lässt in festen Abständen Meteore auf Gegner regnen.",
+        "en": "Gift of Vol Luminatio and Vol Umbra. Meteors rain down on enemies at fixed intervals."
+      },
       "maxLevel": 1,
       "emoji": "☄️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Universitas.png",

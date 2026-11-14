@@ -7,14 +7,20 @@
       "weapons": [
         {
           "id": "scarlet-needle",
-          "reason": "Startwaffe; mit Pummarola wird sie zu Cardinal Rain.",
+          "reason": {
+            "de": "Startwaffe; mit Pummarola wird sie zu Cardinal Rain.",
+            "en": "Starting weapon; with Pummarola it becomes Cardinal Rain."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "pummarola",
-          "reason": "Nötig für Cardinal Rain.",
+          "reason": {
+            "de": "Nötig für Cardinal Rain.",
+            "en": "Needed for Cardinal Rain."
+          },
           "priority": 1
         }
       ]
@@ -25,14 +31,20 @@
       "weapons": [
         {
           "id": "ashella",
-          "reason": "Startwaffe; mit Duplicator wird sie zu Bloodlust.",
+          "reason": {
+            "de": "Startwaffe; mit Verdoppler wird sie zu Bloodlust.",
+            "en": "Starting weapon; with Duplicator it becomes Bloodlust."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "duplicator",
-          "reason": "Nötig für Bloodlust.",
+          "reason": {
+            "de": "Nötig für Bloodlust.",
+            "en": "Needed for Bloodlust."
+          },
           "priority": 1
         }
       ]
@@ -43,14 +55,20 @@
       "weapons": [
         {
           "id": "incineration",
-          "reason": "Startwaffe; mit Candelabrador wird sie zu Dust to Dust.",
+          "reason": {
+            "de": "Startwaffe; mit Kandelabrador wird sie zu Dust to Dust.",
+            "en": "Starting weapon; with Candelabrador it becomes Dust to Dust."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "candelabrador",
-          "reason": "Nötig für Dust to Dust.",
+          "reason": {
+            "de": "Nötig für Dust to Dust.",
+            "en": "Needed for Dust to Dust."
+          },
           "priority": 1
         }
       ]
@@ -61,17 +79,26 @@
       "weapons": [
         {
           "id": "firefall",
-          "reason": "Partner für die Union FireStall.",
+          "reason": {
+            "de": "Partner für die Union FireStall.",
+            "en": "Partner for the union FireStall."
+          },
           "priority": 1
         },
         {
           "id": "fireball",
-          "reason": "Partner für die Union FireStall.",
+          "reason": {
+            "de": "Partner für die Union FireStall.",
+            "en": "Partner for the union FireStall."
+          },
           "priority": 1
         },
         {
           "id": "firewall",
-          "reason": "Startwaffe; zusammen mit FireFall, FireBall entsteht die Union FireStall.",
+          "reason": {
+            "de": "Startwaffe; zusammen mit FireFall, FireBall entsteht die Union FireStall.",
+            "en": "Starting weapon; together with FireFall, FireBall it forms the union FireStall."
+          },
           "priority": 1
         }
       ],
@@ -83,12 +110,18 @@
       "weapons": [
         {
           "id": "descent-into-misery",
-          "reason": "Startwaffe; zusammen mit Kyra-Stones entsteht die Union Shimmering Sands.",
+          "reason": {
+            "de": "Startwaffe; zusammen mit Kyra-Stones entsteht die Union Shimmering Sands.",
+            "en": "Starting weapon; together with Kyra-Stones it forms the union Shimmering Sands."
+          },
           "priority": 1
         },
         {
           "id": "kyra-stones",
-          "reason": "Partner für die Union Shimmering Sands.",
+          "reason": {
+            "de": "Partner für die Union Shimmering Sands.",
+            "en": "Partner for the union Shimmering Sands."
+          },
           "priority": 1
         }
       ],
@@ -100,14 +133,20 @@
       "weapons": [
         {
           "id": "screams-from-the-void",
-          "reason": "Startwaffe; mit Attractorb wird sie zu Forbidden Siren.",
+          "reason": {
+            "de": "Startwaffe; mit Anziehungskugel wird sie zu Forbidden Siren.",
+            "en": "Starting weapon; with Attractorb it becomes Forbidden Siren."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "attractorb",
-          "reason": "Nötig für Forbidden Siren.",
+          "reason": {
+            "de": "Nötig für Forbidden Siren.",
+            "en": "Needed for Forbidden Siren."
+          },
           "priority": 1
         }
       ]
@@ -118,14 +157,20 @@
       "weapons": [
         {
           "id": "blacken-firmament",
-          "reason": "Startwaffe; mit Torrona's Box wird sie zu Damnation.",
+          "reason": {
+            "de": "Startwaffe; mit Torrona's Box wird sie zu Damnation.",
+            "en": "Starting weapon; with Torrona's Box it becomes Damnation."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "torrona-s-box",
-          "reason": "Nötig für Damnation.",
+          "reason": {
+            "de": "Nötig für Damnation.",
+            "en": "Needed for Damnation."
+          },
           "priority": 1
         }
       ]
@@ -136,12 +181,18 @@
       "weapons": [
         {
           "id": "108-responsive-prayers",
-          "reason": "Startwaffe; zusammen mit 108 Bocce entsteht die Union Road to Heaven.",
+          "reason": {
+            "de": "Startwaffe; zusammen mit 108 Bocce entsteht die Union Road to Heaven.",
+            "en": "Starting weapon; together with 108 Bocce it forms the union Road to Heaven."
+          },
           "priority": 1
         },
         {
           "id": "108-bocce",
-          "reason": "Partner für die Union Road to Heaven.",
+          "reason": {
+            "de": "Partner für die Union Road to Heaven.",
+            "en": "Partner for the union Road to Heaven."
+          },
           "priority": 1
         }
       ],
@@ -153,7 +204,10 @@
       "weapons": [
         {
           "id": "firestall",
-          "reason": "Startwaffe.",
+          "reason": {
+            "de": "Startwaffe.",
+            "en": "Starting weapon."
+          },
           "priority": 1
         }
       ],
@@ -165,7 +219,10 @@
       "weapons": [
         {
           "id": "damnation",
-          "reason": "Startwaffe.",
+          "reason": {
+            "de": "Startwaffe.",
+            "en": "Starting weapon."
+          },
           "priority": 1
         }
       ],

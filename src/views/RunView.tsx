@@ -1,11 +1,12 @@
 import { useState, type ReactNode } from 'react'
 import { EvolutionLine } from '../components/EvolutionLine.tsx'
-import { readyText } from '../components/evolutionText.ts'
 import { ItemPicker, type PickerItem } from '../components/Sheet.tsx'
-import { Card, EmptyHint, EntryIcon, Pill, Section, SourceBadge } from '../components/ui.tsx'
+import { Card, EmptyHint, EntryIcon, EntryName, Pill, Section, SourceBadge } from '../components/ui.tsx'
 import { buttonClass } from '../components/styles.ts'
 import { MAX_PASSIVE_SLOTS, MAX_WEAPON_SLOTS } from '../data/types.ts'
-import type { Catalog } from '../logic/catalog.ts'
+import { describeHint, describeReason, describeWarning, progressText, readyText } from '../i18n/describe.ts'
+import { useI18n } from '../i18n/index.ts'
+import type { Named } from '../i18n/names.ts'
 import { evolutionsForOwnedWeapon, type EvolutionCheck } from '../logic/evolution.ts'
 import {
   addPassive,
@@ -31,6 +32,8 @@ type Picker = 'weapon' | 'passive' | 'character' | null
 
 export function RunView() {
   const { catalog, fullCatalog, run, updateRun, settings } = useAppState()
+  const i18n = useI18n()
+  const { t } = i18n
   const [picker, setPicker] = useState<Picker>(null)
   const character = run.character ? fullCatalog.character(run.character) : undefined
   const { suggestions, warnings, hints } = suggestNext(run, catalog)
@@ -44,7 +47,7 @@ export function RunView() {
   const reset = () =>
     updateRun(
       (_, cat) => (run.character ? startRun(cat, run.character) : EMPTY_RUN),
-      run.character ? 'Lauf zurückgesetzt, Startwaffe bleibt.' : 'Lauf zurückgesetzt.',
+      run.character ? t.runResetKeepStart : t.runReset,
     )
 
   if (isRunEmpty(run)) {
@@ -53,18 +56,15 @@ export function RunView() {
         <p className="text-5xl" aria-hidden="true">
           🕯️
         </p>
-        <h1 className="text-2xl font-bold">Neuer Lauf</h1>
-        <p className="text-white/70">
-          Wähle deinen Charakter. Danach trägst du hier ein, welche Waffen und Gegenstände du im Lauf schon hast, und
-          siehst, was für die Entwicklungen noch fehlt.
-        </p>
+        <h1 className="text-2xl font-bold">{t.newRun}</h1>
+        <p className="text-white/70">{t.newRunIntro}</p>
         <button type="button" className={buttonClass.primary} onClick={() => setPicker('character')}>
-          Charakter wählen
+          {t.chooseCharacter}
         </button>
         <p className="text-sm text-white/50">
-          Oder ohne Charakter starten:{' '}
+          {t.orStartWithout}{' '}
           <button type="button" className="underline underline-offset-2" onClick={() => setPicker('weapon')}>
-            Waffe hinzufügen
+            {t.addWeapon}
           </button>
         </p>
         {picker && <Pickers picker={picker} onClose={() => setPicker(null)} tagsFor={tagsFor} />}
@@ -80,50 +80,47 @@ export function RunView() {
             <a href={characterHref(character.id)} className="flex min-w-0 flex-1 items-center gap-3">
               <EntryIcon entry={character} />
               <span className="min-w-0">
-                <span className="block text-xs text-white/50">Aktueller Lauf</span>
-                <span className="block truncate font-semibold">{character.name}</span>
+                <span className="block text-xs text-white/50">{t.currentRun}</span>
+                <EntryName entry={character} className="block truncate font-semibold" />
               </span>
             </a>
           ) : (
-            <span className="flex-1 text-white/60">Kein Charakter gewählt</span>
+            <span className="flex-1 text-white/60">{t.noCharacterChosen}</span>
           )}
           <button
             type="button"
             className={`${buttonClass.secondary} shrink-0 px-3`}
             onClick={() => setPicker('character')}
-            aria-label={character ? 'Charakter wechseln' : 'Charakter wählen'}
+            aria-label={character ? t.changeCharacter : t.chooseCharacter}
           >
-            👤<span className="hidden sm:inline">{character ? 'Wechseln' : 'Wählen'}</span>
+            👤<span className="hidden sm:inline">{character ? t.change : t.choose}</span>
           </button>
           <button
             type="button"
             className={`${buttonClass.secondary} shrink-0 px-3`}
             onClick={reset}
-            aria-label="Lauf zurücksetzen"
+            aria-label={t.resetRun}
           >
-            ↺<span className="hidden sm:inline">Zurücksetzen</span>
+            ↺<span className="hidden sm:inline">{t.reset}</span>
           </button>
         </Card>
 
-        <Section
-          title="Waffen"
-          aside={<SlotCounter used={run.weapons.length} max={MAX_WEAPON_SLOTS} />}
-        >
+        <Section title={t.weapons} aside={<SlotCounter used={run.weapons.length} max={MAX_WEAPON_SLOTS} />}>
           <div className="space-y-3">
             {run.weapons.map((item) => (
               <WeaponSlot key={item.id} item={item} run={run} />
             ))}
             <AddButton
-              label="Waffe hinzufügen"
+              label={t.addWeapon}
               full={freeWeaponSlots(run) === 0}
-              fullLabel="Alle Waffen-Slots belegt"
+              fullLabel={t.weaponSlotsFull}
               onClick={() => setPicker('weapon')}
             />
           </div>
         </Section>
 
         <Section
-          title="Passive Gegenstände"
+          title={t.passiveItems}
           aside={<SlotCounter used={usedPassiveSlots(run, fullCatalog)} max={MAX_PASSIVE_SLOTS} />}
         >
           <div className="space-y-3">
@@ -131,9 +128,9 @@ export function RunView() {
               <PassiveSlot key={item.id} item={item} run={run} />
             ))}
             <AddButton
-              label="Gegenstand hinzufügen"
+              label={t.addItem}
               full={!catalog.passives.some((p) => canAddPassive(run, fullCatalog, p.id))}
-              fullLabel="Alle passiven Slots belegt"
+              fullLabel={t.passiveSlotsFull}
               onClick={() => setPicker('passive')}
             />
           </div>
@@ -141,31 +138,34 @@ export function RunView() {
       </div>
 
       <aside className="space-y-4 lg:sticky lg:top-4">
-        <Section title="Als Nächstes">
-          {warnings.map((w) => (
-            <p key={w} className="rounded-xl border border-amber-400/30 bg-amber-500/10 p-3 text-sm text-amber-100">
-              ⚠️ {w}
-            </p>
-          ))}
+        <Section title={t.nextUp}>
+          {warnings.map((w) => {
+            const message = describeWarning(w, i18n, catalog)
+            return (
+              <p key={message} className="rounded-xl border border-amber-400/30 bg-amber-500/10 p-3 text-sm text-amber-100">
+                ⚠️ {message}
+              </p>
+            )
+          })}
           {suggestions.length === 0 ? (
             <EmptyHint>
-              {freeWeaponSlots(run) === 0 && freePassiveSlots(run, fullCatalog) === 0
-                ? 'Alle Slots sind belegt.'
-                : 'Gerade gibt es keine Vorschläge. Füge Waffen hinzu oder wähle einen Charakter mit Empfehlungen.'}
+              {freeWeaponSlots(run) === 0 && freePassiveSlots(run, fullCatalog) === 0 ? t.allSlotsFull : t.noSuggestions}
             </EmptyHint>
           ) : (
             <SuggestionList suggestions={suggestions} />
           )}
-          {hints.map((h) => (
-            <p key={h} className="rounded-xl bg-sky-500/10 p-3 text-sm text-sky-100 ring-1 ring-sky-400/20">
-              ℹ️ {h}
-            </p>
-          ))}
+          {hints.map((h) => {
+            const message = describeHint(h, i18n, catalog)
+            return (
+              <p key={message} className="rounded-xl bg-sky-500/10 p-3 text-sm text-sky-100 ring-1 ring-sky-400/20">
+                ℹ️ {message}
+              </p>
+            )
+          })}
           {!settings.ownedPacks.some((p) => p !== 'base') && (
-            <p className="text-xs text-white/45">
-              Tipp: In den <a className="underline" href="#/einstellungen">Einstellungen</a> kannst du deine DLCs
-              auswählen.
-            </p>
+            <a className="block text-xs text-white/45 underline underline-offset-2" href="#/einstellungen">
+              {t.dlcTip}
+            </a>
           )}
         </Section>
       </aside>
@@ -196,13 +196,12 @@ function AddButton({ label, full, fullLabel, onClick }: { label: string; full: b
   )
 }
 
-
 function RemoveButton({ onClick, label }: { onClick: () => void; label: string }) {
   return (
     <button
       type="button"
       onClick={onClick}
-      aria-label={`${label} entfernen`}
+      aria-label={label}
       className="flex size-11 shrink-0 items-center justify-center rounded-xl text-white/40 hover:bg-white/8 hover:text-red-200"
     >
       ✕
@@ -218,26 +217,28 @@ function SlotHeader({
   onRemove,
 }: {
   href: string
-  entry: { name: string; emoji?: string; icon?: string; image?: string }
+  entry: Named & { emoji?: string; icon?: string; image?: string }
   badges: ReactNode
   onRemove: () => void
 }) {
+  const { t, shortName } = useI18n()
   return (
     <div className="flex items-center gap-2">
       <a href={href} className="flex min-w-0 flex-1 items-center gap-3">
         <EntryIcon entry={entry} />
         <span className="flex min-w-0 flex-wrap items-center gap-1.5">
-          <span className="font-semibold">{entry.name}</span>
+          <EntryName entry={entry} className="font-semibold" />
           {badges}
         </span>
       </a>
-      <RemoveButton label={entry.name} onClick={onRemove} />
+      <RemoveButton label={t.remove(shortName(entry))} onClick={onRemove} />
     </div>
   )
 }
 
 function WeaponSlot({ item, run }: { item: OwnedItem; run: RunState }) {
   const { catalog, fullCatalog, updateRun } = useAppState()
+  const { t, shortName } = useI18n()
   const weapon = fullCatalog.weapon(item.id)
   if (!weapon) return null
   const checks = evolutionsForOwnedWeapon(item.id, run, catalog).filter((c) => !c.done)
@@ -249,17 +250,17 @@ function WeaponSlot({ item, run }: { item: OwnedItem; run: RunState }) {
         entry={weapon}
         badges={
           <>
-            {weapon.kind === 'evolved' && <Pill tone="gold">entwickelt</Pill>}
+            {weapon.kind === 'evolved' && <Pill tone="gold">{t.evolved}</Pill>}
             <SourceBadge source={weapon.source} />
           </>
         }
-        onRemove={() => updateRun((r) => removeWeapon(r, item.id), `${weapon.name} entfernt.`)}
+        onRemove={() => updateRun((r) => removeWeapon(r, item.id), t.removed(shortName(weapon)))}
       />
       {checks.length === 0 ? (
         <p className="text-sm text-white/50">
           {catalog.evolutionsFromWeapon(item.id).some((e) => run.weapons.some((w) => w.id === e.result))
-            ? 'Bereits entwickelt.'
-            : 'Keine Entwicklung.'}
+            ? t.alreadyEvolved
+            : t.noEvolutionShort}
         </p>
       ) : (
         <div className="space-y-3 border-t border-white/8 pt-3">
@@ -272,33 +273,26 @@ function WeaponSlot({ item, run }: { item: OwnedItem; run: RunState }) {
   )
 }
 
-function progressText(check: EvolutionCheck, catalog: Catalog): string {
-  const name = (type: 'weapon' | 'passive', id: string) =>
-    (type === 'weapon' ? catalog.weapon(id)?.name : catalog.passive(id)?.name) ?? id
-  return check.missing.map((r) => `${name(r.type, r.id)} fehlt`).join(' · ')
-}
-
 function EvolutionStatus({ check }: { check: EvolutionCheck }) {
   const { catalog, updateRun } = useAppState()
+  const i18n = useI18n()
   const result = catalog.weapon(check.evolution.result)
   if (!result) return null
+  const resultName = i18n.shortName(result)
 
   if (check.ready) {
     return (
       <div className="space-y-2 rounded-xl border border-emerald-400/30 bg-emerald-500/10 p-3">
         <EvolutionLine evolution={check.evolution} catalog={catalog} check={check} />
-        <p className="text-sm text-emerald-100">✨ {readyText(check, result.name, catalog)}</p>
+        <p className="text-sm text-emerald-100">✨ {readyText(check, i18n, catalog)}</p>
         <button
           type="button"
           className={`${buttonClass.secondary} w-full sm:w-auto`}
           onClick={() =>
-            updateRun(
-              (r, cat) => applyEvolution(r, cat, check.evolution),
-              `${result.name} eingetragen.`,
-            )
+            updateRun((r, cat) => applyEvolution(r, cat, check.evolution), i18n.t.evolutionAdded(resultName))
           }
         >
-          ✓ {result.name} erhalten
+          {i18n.t.gotEvolution(resultName)}
         </button>
       </div>
     )
@@ -307,13 +301,14 @@ function EvolutionStatus({ check }: { check: EvolutionCheck }) {
   return (
     <div className="space-y-1.5">
       <EvolutionLine evolution={check.evolution} catalog={catalog} check={check} />
-      <p className="text-sm text-white/60">{progressText(check, catalog)}</p>
+      <p className="text-sm text-white/60">{progressText(check, i18n, catalog)}</p>
     </div>
   )
 }
 
 function PassiveSlot({ item, run }: { item: OwnedItem; run: RunState }) {
   const { catalog, fullCatalog, updateRun } = useAppState()
+  const { t, shortName } = useI18n()
   const passive = fullCatalog.passive(item.id)
   if (!passive) return null
   const owned = new Set(run.weapons.map((w) => w.id))
@@ -329,83 +324,79 @@ function PassiveSlot({ item, run }: { item: OwnedItem; run: RunState }) {
         entry={passive}
         badges={
           <>
-            {passive.noSlot && <Pill>ohne Slot</Pill>}
+            {passive.noSlot && <Pill>{t.noSlot}</Pill>}
             <SourceBadge source={passive.source} />
           </>
         }
-        onRemove={() => updateRun((r) => removePassive(r, item.id), `${passive.name} entfernt.`)}
+        onRemove={() => updateRun((r) => removePassive(r, item.id), t.removed(shortName(passive)))}
       />
       {usedFor.length > 0 ? (
         <p className="text-sm text-white/60">
-          Gebraucht für{' '}
-          {usedFor.map((e, i) => (
-            <span key={e.id}>
-              {i > 0 && ', '}
-              <a href={weaponHref(e.result)} className="text-gold-300 hover:underline">
-                {catalog.weapon(e.result)?.name ?? e.result}
-              </a>
-            </span>
-          ))}
-          {neededMax && ' (auf Maximalstufe)'}
+          {t.neededFor}{' '}
+          {usedFor.map((e, i) => {
+            const result = catalog.weapon(e.result)
+            return (
+              <span key={e.id}>
+                {i > 0 && ', '}
+                <a href={weaponHref(e.result)} className="text-gold-300 hover:underline">
+                  {result ? shortName(result) : e.result}
+                </a>
+              </span>
+            )
+          })}
+          {neededMax && t.atMaxLevel}
         </p>
       ) : (
-        <p className="text-sm text-white/40">Für keine deiner Waffen nötig.</p>
+        <p className="text-sm text-white/40">{t.notNeeded}</p>
       )}
     </Card>
   )
 }
 
-const SOURCE_LABEL = { evolution: 'Für Entwicklung', pairing: 'Passt zu deinen Gegenständen', recommendation: 'Empfohlen' } as const
-
+/** Alle Vorschläge, immer vollständig aufgeklappt. */
 function SuggestionList({ suggestions }: { suggestions: Suggestion[] }) {
   const { catalog, updateRun } = useAppState()
-  const [showAll, setShowAll] = useState(false)
-  const visible = showAll ? suggestions : suggestions.slice(0, 8)
+  const i18n = useI18n()
+  const { t } = i18n
 
   return (
-    <div className="space-y-2">
-      <ul className="space-y-1.5">
-        {visible.map((s) => {
-          const entry = s.type === 'weapon' ? catalog.weapon(s.id) : catalog.passive(s.id)
-          if (!entry) return null
-          const add = () =>
-            updateRun(
-              (r, cat) => (s.type === 'weapon' ? addWeapon(r, cat, s.id) : addPassive(r, cat, s.id)),
-              `${entry.name} hinzugefügt.`,
-            )
-          return (
-            <li key={`${s.type}:${s.id}`} className="flex items-start gap-2 rounded-xl bg-night-800/70 p-2 ring-1 ring-white/8">
-              <a href={s.type === 'weapon' ? weaponHref(s.id) : passiveHref(s.id)} className="flex min-w-0 flex-1 items-start gap-2.5">
-                <EntryIcon entry={entry} size="sm" />
-                <span className="min-w-0">
-                  <span className="flex flex-wrap items-center gap-1.5">
-                    <span className="font-medium">{entry.name}</span>
-                    <Pill tone={s.source === 'evolution' ? 'gold' : 'neutral'}>
-                      {s.type === 'weapon' ? 'Waffe' : 'Gegenstand'}
-                    </Pill>
-                  </span>
-                  <span className="block text-xs text-white/45">{SOURCE_LABEL[s.source]}</span>
-                  <span className="block text-sm text-white/70">{s.reasons.join(' · ')}</span>
-                </span>
-              </a>
-              <button
-                type="button"
-                onClick={add}
-                aria-label={`${entry.name} zum Lauf hinzufügen`}
-                className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-gold-500/15 text-xl text-gold-300 hover:bg-gold-500/25"
-              >
-                ＋
-              </button>
-            </li>
+    <ul className="space-y-1.5">
+      {suggestions.map((s) => {
+        const entry = s.type === 'weapon' ? catalog.weapon(s.id) : catalog.passive(s.id)
+        if (!entry) return null
+        const name = i18n.shortName(entry)
+        const add = () =>
+          updateRun(
+            (r, cat) => (s.type === 'weapon' ? addWeapon(r, cat, s.id) : addPassive(r, cat, s.id)),
+            t.added(name),
           )
-        })}
-      </ul>
-      {suggestions.length > 8 && (
-        <button type="button" className={`${buttonClass.ghost} w-full`} onClick={() => setShowAll(!showAll)}>
-          {showAll ? 'Weniger anzeigen' : `Alle ${suggestions.length} Vorschläge anzeigen`}
-        </button>
-      )}
-    </div>
+        return (
+          <li key={`${s.type}:${s.id}`} className="flex items-start gap-2 rounded-xl bg-night-800/70 p-2 ring-1 ring-white/8">
+            <a href={s.type === 'weapon' ? weaponHref(s.id) : passiveHref(s.id)} className="flex min-w-0 flex-1 items-start gap-2.5">
+              <EntryIcon entry={entry} size="sm" />
+              <span className="min-w-0">
+                <span className="flex flex-wrap items-center gap-1.5">
+                  <EntryName entry={entry} className="font-medium" />
+                  <Pill tone={s.source === 'evolution' ? 'gold' : 'neutral'}>{s.type === 'weapon' ? t.weapon : t.item}</Pill>
+                </span>
+                <span className="block text-xs text-white/45">{t.suggestionSource[s.source]}</span>
+                <span className="block text-sm text-white/70">
+                  {s.reasons.map((r) => describeReason(r, i18n, catalog)).join(' · ')}
+                </span>
+              </span>
+            </a>
+            <button
+              type="button"
+              onClick={add}
+              aria-label={t.addToRun(name)}
+              className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-gold-500/15 text-xl text-gold-300 hover:bg-gold-500/25"
+            >
+              ＋
+            </button>
+          </li>
+        )
+      })}
+    </ul>
   )
 }
 
@@ -419,23 +410,32 @@ function Pickers({
   tagsFor: (type: 'weapon' | 'passive') => Map<string, Suggestion>
 }) {
   const { catalog, run, updateRun, settings } = useAppState()
+  const i18n = useI18n()
+  const { t, text, shortName } = i18n
 
   if (picker === 'character') {
     const items: PickerItem[] = catalog.characters
       .filter((c) => settings.showSecrets || !c.secret)
       .map((c) => ({
         ...c,
-        detail: c.startingWeapons.map((id) => catalog.weapon(id)?.name ?? id).join(' + ') || 'Keine Startwaffe',
+        detail:
+          c.startingWeapons
+            .map((id) => {
+              const weapon = catalog.weapon(id)
+              return weapon ? shortName(weapon) : id
+            })
+            .join(' + ') || t.noStartingWeapon,
       }))
     return (
       <ItemPicker
-        title="Charakter wählen"
+        title={t.chooseCharacter}
         items={items}
-        emptyText="Kein Charakter gefunden."
+        emptyText={t.noCharacterFound}
         onClose={onClose}
         onPick={(id) => {
-          const name = catalog.character(id)?.name ?? id
-          updateRun((_, cat) => startRun(cat, id), isRunEmpty(run) ? undefined : `Neuer Lauf mit ${name}.`)
+          const chosen = catalog.character(id)
+          const name = chosen ? shortName(chosen) : id
+          updateRun((_, cat) => startRun(cat, id), isRunEmpty(run) ? undefined : t.newRunWith(name))
           onClose()
         }}
       />
@@ -445,7 +445,7 @@ function Pickers({
   const owned = new Set((picker === 'weapon' ? run.weapons : run.passives).map((i) => i.id))
   const tags = tagsFor(picker)
   const tagText = (s: Suggestion | undefined) =>
-    s ? [s.source === 'recommendation' ? 'Empfohlen' : s.reasons[0]!] : undefined
+    s ? [s.source === 'recommendation' ? t.recommended : describeReason(s.reasons[0]!, i18n, catalog)] : undefined
 
   const items: PickerItem[] =
     picker === 'weapon'
@@ -453,7 +453,7 @@ function Pickers({
           .filter((w) => !owned.has(w.id))
           .map((w) => ({
             ...w,
-            detail: w.kind === 'evolved' ? `Entwickelte Waffe · ${w.description}` : w.description,
+            detail: (w.kind === 'evolved' ? t.evolvedWeaponPrefix : '') + text(w.description),
             tags: tagText(tags.get(w.id)),
             rank: (tags.get(w.id)?.rank ?? 50) + (w.kind === 'evolved' ? 100 : 0),
           }))
@@ -461,16 +461,16 @@ function Pickers({
           .filter((p) => !owned.has(p.id) && canAddPassive(run, catalog, p.id))
           .map((p) => ({
             ...p,
-            detail: p.stageOnly ? `Nur als Fundstück · ${p.description}` : p.description,
+            detail: (p.stageOnly ? t.stageOnlyPrefix : '') + text(p.description),
             tags: tagText(tags.get(p.id)),
             rank: tags.get(p.id)?.rank ?? 50,
           }))
 
   return (
     <ItemPicker
-      title={picker === 'weapon' ? 'Waffe hinzufügen' : 'Gegenstand hinzufügen'}
+      title={picker === 'weapon' ? t.addWeapon : t.addItem}
       items={items}
-      emptyText="Nichts gefunden."
+      emptyText={t.nothingFound}
       onClose={onClose}
       onPick={(id) => {
         updateRun((r, cat) => (picker === 'weapon' ? addWeapon(r, cat, id) : addPassive(r, cat, id)))

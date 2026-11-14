@@ -1,4 +1,4 @@
-import type { Pack, PackId } from '../data/types.ts'
+import type { Lang, Pack, PackId } from '../data/types.ts'
 
 export interface Settings {
   /** Pakete, die du besitzt. Das Basisspiel ist immer dabei. */
@@ -9,6 +9,8 @@ export interface Settings {
   showSecrets: boolean
   /** Originalbilder aus dem Wiki anzeigen (sonst Emojis). */
   showImages: boolean
+  /** Sprache der App. */
+  language: Lang
 }
 
 const isString = (value: unknown): value is string => typeof value === 'string'
@@ -17,7 +19,7 @@ const isString = (value: unknown): value is string => typeof value === 'string'
  * Liest gespeicherte Einstellungen und ergänzt Standardwerte.
  * Neue Pakete, die beim letzten Mal noch unbekannt waren, sind aktiv, wenn sie kostenlos sind.
  */
-export function loadSettings(raw: unknown, packs: Pack[]): Settings {
+export function loadSettings(raw: unknown, packs: Pack[], deviceLanguage: Lang = 'de'): Settings {
   const stored = raw && typeof raw === 'object' ? (raw as Record<string, unknown>) : {}
   const ids = new Set(packs.map((p) => p.id))
   const known = Array.isArray(stored.knownPacks) ? stored.knownPacks.filter(isString) : []
@@ -33,5 +35,6 @@ export function loadSettings(raw: unknown, packs: Pack[]): Settings {
     knownPacks: [...ids],
     showSecrets: typeof stored.showSecrets === 'boolean' ? stored.showSecrets : true,
     showImages: typeof stored.showImages === 'boolean' ? stored.showImages : true,
+    language: stored.language === 'de' || stored.language === 'en' ? stored.language : deviceLanguage,
   }
 }

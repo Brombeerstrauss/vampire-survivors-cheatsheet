@@ -1,27 +1,55 @@
+import type { LocalizedText, PassiveId, WeaponId } from '../data/types.ts'
 import type { Catalog } from './catalog.ts'
 import { checkEvolution, type EvolutionCheck } from './evolution.ts'
 import { freePassiveSlots, freeWeaponSlots, type RunState } from './run.ts'
 
 export type SuggestionSource = 'evolution' | 'pairing' | 'recommendation'
 
+/**
+ * Warum etwas vorgeschlagen wird. Die Logik liefert nur Bausteine;
+ * die Oberfläche formuliert daraus Sätze in der gewählten Sprache.
+ */
+export type SuggestionReason =
+  | { type: 'missingFor'; result: WeaponId }
+  | { type: 'unionPartner'; result: WeaponId }
+  | { type: 'pairing'; passive: PassiveId; result: WeaponId }
+  | { type: 'recommended'; text: LocalizedText }
+
 export interface Suggestion {
   type: 'weapon' | 'passive'
   id: string
   source: SuggestionSource
-  /** Kurze Begründungen; mehrere, wenn das Teil mehreren Zwecken dient. */
-  reasons: string[]
+  /** Gründe; mehrere, wenn das Teil mehreren Zwecken dient. */
+  reasons: SuggestionReason[]
   /** Kleiner = wichtiger. */
   rank: number
 }
 
+export type SuggestionWarning =
+  /** Ein Gegenstand fehlt für diese Entwicklungen, aber alle passiven Slots sind belegt. */
+  | { type: 'passiveSlotsFull'; passive: PassiveId; results: WeaponId[] }
+  /** Eine Union-Waffe fehlt, aber alle Waffen-Slots sind belegt. */
+  | { type: 'weaponSlotsFull'; weapon: WeaponId; results: WeaponId[] }
+  /** Es fehlen mehr Gegenstände, als passive Slots frei sind. */
+  | { type: 'notEnoughPassiveSlots'; needed: PassiveId[]; free: number }
+  /** Es fehlen mehr Union-Waffen, als Waffen-Slots frei sind. */
+  | { type: 'notEnoughWeaponSlots'; needed: WeaponId[]; free: number }
+
+/** Hinweis ohne Alarm: der Gegenstand liegt nur als Fundstück in Stages. */
+export interface SuggestionHint {
+  type: 'stageOnly'
+  passive: PassiveId
+}
+
 export interface SuggestionResult {
   suggestions: Suggestion[]
-  warnings: string[]
-  /** Hinweise ohne Alarm, z. B. dass ein Gegenstand nur in der Stage liegt. */
-  hints: string[]
+  warnings: SuggestionWarning[]
+  hints: SuggestionHint[]
 }
 
 const RANK: Record<SuggestionSource, number> = { evolution: 0, pairing: 10, recommendation: 20 }
+
+const sameReason = (a: SuggestionReason, b: SuggestionReason) => JSON.stringify(a) === JSON.stringify(b)
 
 /**
  * Was sollte als Nächstes in den Lauf?
@@ -40,20 +68,17 @@ export function suggestNext(run: RunState, catalog: Catalog): SuggestionResult {
   const freePassives = freePassiveSlots(run, catalog)
 
   const collected = new Map<string, Suggestion>()
-  const add = (type: Suggestion['type'], id: string, source: SuggestionSource, reason: string, rank: number) => {
+  const add = (type: Suggestion['type'], id: string, source: SuggestionSource, reason: SuggestionReason, rank: number) => {
     const key = `${type}:${id}`
     const existing = collected.get(key)
     if (existing) {
-      if (!existing.reasons.includes(reason)) existing.reasons.push(reason)
+      if (!existing.reasons.some((r) => sameReason(r, reason))) existing.reasons.push(reason)
       existing.rank = Math.min(existing.rank, rank)
       if (RANK[source] < RANK[existing.source]) existing.source = source
     } else {
       collected.set(key, { type, id, source, reasons: [reason], rank })
     }
   }
-
-  const weaponName = (id: string) => catalog.weapon(id)?.name ?? id
-  const passiveName = (id: string) => catalog.passive(id)?.name ?? id
 
   // 1. Geplante Entwicklungen: alles, was aus vorhandenen Waffen entstehen kann
   const planned: EvolutionCheck[] = []
@@ -68,17 +93,18 @@ export function suggestNext(run: RunState, catalog: Catalog): SuggestionResult {
     }
   }
 
-  const neededPassives = new Map<string, string[]>()
-  const neededWeapons = new Map<string, string[]>()
+  const neededPassives = new Map<string, WeaponId[]>()
+  const neededWeapons = new Map<string, WeaponId[]>()
   for (const check of planned) {
-    const result = weaponName(check.evolution.result)
+    const result = check.evolution.result
     for (const req of check.missing) {
       const target = req.type === 'passive' ? neededPassives : neededWeapons
       const list = target.get(req.id) ?? []
       list.push(result)
       target.set(req.id, list)
-      const verb = check.evolution.kind === 'union' ? 'Union-Partner für' : 'Fehlt für'
-      add(req.type, req.id, 'evolution', `${verb} ${result}`, RANK.evolution)
+      const reason: SuggestionReason =
+        check.evolution.kind === 'union' ? { type: 'unionPartner', result } : { type: 'missingFor', result }
+      add(req.type, req.id, 'evolution', reason, RANK.evolution)
     }
   }
 
@@ -89,7 +115,7 @@ export function suggestNext(run: RunState, catalog: Catalog): SuggestionResult {
       const weapon = evo.weapons[0]!.id
       if (ownedWeapons.has(weapon) || ownedWeapons.has(evo.result)) continue
       if (!checkEvolution(evo, run, catalog).characterOk) continue
-      add('weapon', weapon, 'pairing', `Entwickelt sich mit ${passiveName(id)} zu ${weaponName(evo.result)}`, RANK.pairing)
+      add('weapon', weapon, 'pairing', { type: 'pairing', passive: id, result: evo.result }, RANK.pairing)
     }
   }
 
@@ -97,17 +123,19 @@ export function suggestNext(run: RunState, catalog: Catalog): SuggestionResult {
   if (run.character) {
     for (const rec of catalog.recommendationsFor(run.character)) {
       for (const w of rec.weapons) {
-        if (!ownedWeapons.has(w.id)) add('weapon', w.id, 'recommendation', w.reason, RANK.recommendation + w.priority)
+        if (!ownedWeapons.has(w.id))
+          add('weapon', w.id, 'recommendation', { type: 'recommended', text: w.reason }, RANK.recommendation + w.priority)
       }
       for (const p of rec.passives) {
-        if (!ownedPassives.has(p.id)) add('passive', p.id, 'recommendation', p.reason, RANK.recommendation + p.priority)
+        if (!ownedPassives.has(p.id))
+          add('passive', p.id, 'recommendation', { type: 'recommended', text: p.reason }, RANK.recommendation + p.priority)
       }
     }
   }
 
   // Warnungen zu knappen Slots
-  const warnings: string[] = []
-  const hints: string[] = []
+  const warnings: SuggestionWarning[] = []
+  const hints: SuggestionHint[] = []
   const slotNeeded = (id: string) => {
     const passive = catalog.passive(id)
     return !passive?.noSlot && !passive?.ignoresSlotLimit
@@ -117,35 +145,21 @@ export function suggestNext(run: RunState, catalog: Catalog): SuggestionResult {
   if (passiveSlotsNeeded.length > freePassives) {
     if (freePassives === 0) {
       for (const [id, results] of neededPassives) {
-        if (!slotNeeded(id)) continue
-        warnings.push(
-          `${results.join(', ')}: ${passiveName(id)} fehlt, aber alle passiven Slots sind belegt.`,
-        )
+        if (slotNeeded(id)) warnings.push({ type: 'passiveSlotsFull', passive: id, results })
       }
     } else {
-      warnings.push(
-        `Für alle geplanten Entwicklungen fehlen ${passiveSlotsNeeded.length} passive Gegenstände, ` +
-          `aber nur ${freePassives} ${freePassives === 1 ? 'Slot ist' : 'Slots sind'} frei. ` +
-          `Benötigt: ${passiveSlotsNeeded.map(passiveName).join(', ')}.`,
-      )
+      warnings.push({ type: 'notEnoughPassiveSlots', needed: passiveSlotsNeeded, free: freePassives })
     }
   }
   if (neededWeapons.size > freeWeapons) {
     if (freeWeapons === 0) {
-      for (const [id, results] of neededWeapons) {
-        warnings.push(`${results.join(', ')}: ${weaponName(id)} fehlt, aber alle Waffen-Slots sind belegt.`)
-      }
+      for (const [id, results] of neededWeapons) warnings.push({ type: 'weaponSlotsFull', weapon: id, results })
     } else {
-      warnings.push(
-        `Für alle geplanten Unions fehlen ${neededWeapons.size} Waffen, ` +
-          `aber nur ${freeWeapons} ${freeWeapons === 1 ? 'Slot ist' : 'Slots sind'} frei.`,
-      )
+      warnings.push({ type: 'notEnoughWeaponSlots', needed: [...neededWeapons.keys()], free: freeWeapons })
     }
   }
   for (const id of neededPassives.keys()) {
-    if (catalog.passive(id)?.stageOnly) {
-      hints.push(`${passiveName(id)} gibt es nicht beim Level-up, nur als Fundstück in bestimmten Stages.`)
-    }
+    if (catalog.passive(id)?.stageOnly) hints.push({ type: 'stageOnly', passive: id })
   }
 
   // Waffen, die im Lauf schon zu etwas anderem entwickelt wurden, nicht noch einmal vorschlagen

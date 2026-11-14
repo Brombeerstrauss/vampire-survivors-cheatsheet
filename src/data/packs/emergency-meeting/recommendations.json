@@ -7,14 +7,20 @@
       "weapons": [
         {
           "id": "report",
-          "reason": "Startwaffe; mit Mini Crewmate wird sie zu Emergency Meeting.",
+          "reason": {
+            "de": "Startwaffe; mit Mini Crewmate wird sie zu Emergency Meeting.",
+            "en": "Starting weapon; with Mini Crewmate it becomes Emergency Meeting."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "mini-crewmate",
-          "reason": "Nötig für Emergency Meeting.",
+          "reason": {
+            "de": "Nötig für Emergency Meeting.",
+            "en": "Needed for Emergency Meeting."
+          },
           "priority": 1
         }
       ]
@@ -25,14 +31,20 @@
       "weapons": [
         {
           "id": "lucky-swipe",
-          "reason": "Startwaffe; mit Mini Engineer wird sie zu Crossed Wires.",
+          "reason": {
+            "de": "Startwaffe; mit Mini Engineer wird sie zu Crossed Wires.",
+            "en": "Starting weapon; with Mini Engineer it becomes Crossed Wires."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "mini-engineer",
-          "reason": "Nötig für Crossed Wires.",
+          "reason": {
+            "de": "Nötig für Crossed Wires.",
+            "en": "Needed for Crossed Wires."
+          },
           "priority": 1
         }
       ]
@@ -43,14 +55,20 @@
       "weapons": [
         {
           "id": "lifesign-scan",
-          "reason": "Startwaffe; mit Mini Ghost wird sie zu Paranormal Scan.",
+          "reason": {
+            "de": "Startwaffe; mit Mini Ghost wird sie zu Paranormal Scan.",
+            "en": "Starting weapon; with Mini Ghost it becomes Paranormal Scan."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "mini-ghost",
-          "reason": "Nötig für Paranormal Scan.",
+          "reason": {
+            "de": "Nötig für Paranormal Scan.",
+            "en": "Needed for Paranormal Scan."
+          },
           "priority": 1
         }
       ]
@@ -61,14 +79,20 @@
       "weapons": [
         {
           "id": "just-vent",
-          "reason": "Startwaffe; mit Mini Shapeshifter wird sie zu Unjust Ejection.",
+          "reason": {
+            "de": "Startwaffe; mit Mini Shapeshifter wird sie zu Unjust Ejection.",
+            "en": "Starting weapon; with Mini Shapeshifter it becomes Unjust Ejection."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "mini-shapeshifter",
-          "reason": "Nötig für Unjust Ejection.",
+          "reason": {
+            "de": "Nötig für Unjust Ejection.",
+            "en": "Needed for Unjust Ejection."
+          },
           "priority": 1
         }
       ]
@@ -79,14 +103,20 @@
       "weapons": [
         {
           "id": "clear-debris",
-          "reason": "Startwaffe; mit Mini Guardian wird sie zu Clear Asteroids.",
+          "reason": {
+            "de": "Startwaffe; mit Mini Guardian wird sie zu Clear Asteroids.",
+            "en": "Starting weapon; with Mini Guardian it becomes Clear Asteroids."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "mini-guardian",
-          "reason": "Nötig für Clear Asteroids.",
+          "reason": {
+            "de": "Nötig für Clear Asteroids.",
+            "en": "Needed for Clear Asteroids."
+          },
           "priority": 1
         }
       ]
@@ -97,14 +127,20 @@
       "weapons": [
         {
           "id": "sharp-tongue",
-          "reason": "Startwaffe; mit Mini Impostor wird sie zu Impostongue.",
+          "reason": {
+            "de": "Startwaffe; mit Mini Impostor wird sie zu Impostongue.",
+            "en": "Starting weapon; with Mini Impostor it becomes Impostongue."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "mini-impostor",
-          "reason": "Nötig für Impostongue.",
+          "reason": {
+            "de": "Nötig für Impostongue.",
+            "en": "Needed for Impostongue."
+          },
           "priority": 1
         }
       ]
@@ -115,14 +151,20 @@
       "weapons": [
         {
           "id": "science-rocks",
-          "reason": "Startwaffe; mit Mini Scientist wird sie zu Rocket Science.",
+          "reason": {
+            "de": "Startwaffe; mit Mini Scientist wird sie zu Rocket Science.",
+            "en": "Starting weapon; with Mini Scientist it becomes Rocket Science."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "mini-scientist",
-          "reason": "Nötig für Rocket Science.",
+          "reason": {
+            "de": "Nötig für Rocket Science.",
+            "en": "Needed for Rocket Science."
+          },
           "priority": 1
         }
       ]
@@ -133,7 +175,10 @@
       "weapons": [
         {
           "id": "hats",
-          "reason": "Startwaffe.",
+          "reason": {
+            "de": "Startwaffe.",
+            "en": "Starting weapon."
+          },
           "priority": 1
         }
       ],

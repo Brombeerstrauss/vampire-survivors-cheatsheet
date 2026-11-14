@@ -1,9 +1,12 @@
 import { useEffect, useId, useRef, useState, type ReactNode } from 'react'
+import { useI18n } from '../i18n/index.ts'
+import { searchNames } from '../i18n/names.ts'
 import { buttonClass, matches } from './styles.ts'
-import { EntryIcon, Pill, SearchField, SourceBadge } from './ui.tsx'
+import { EntryIcon, EntryName, Pill, SearchField, SourceBadge } from './ui.tsx'
 
 /** Fenster, das auf dem Handy von unten hereinfährt und auf dem Desktop mittig erscheint. */
 export function Sheet({ title, onClose, children }: { title: string; onClose: () => void; children: ReactNode }) {
+  const { t } = useI18n()
   const titleId = useId()
   const panel = useRef<HTMLDivElement>(null)
 
@@ -25,7 +28,7 @@ export function Sheet({ title, onClose, children }: { title: string; onClose: ()
     <div className="fixed inset-0 z-50 flex items-end justify-center sm:items-center" role="presentation">
       <button
         type="button"
-        aria-label="Schließen"
+        aria-label={t.close}
         className="absolute inset-0 bg-black/60 backdrop-blur-[2px]"
         onClick={onClose}
       />
@@ -42,7 +45,7 @@ export function Sheet({ title, onClose, children }: { title: string; onClose: ()
             {title}
           </h2>
           <button type="button" className={buttonClass.ghost} onClick={onClose}>
-            Fertig
+            {t.done}
           </button>
         </div>
         <div className="overflow-y-auto overscroll-contain p-4">{children}</div>
@@ -54,6 +57,8 @@ export function Sheet({ title, onClose, children }: { title: string; onClose: ()
 export interface PickerItem {
   id: string
   name: string
+  nameDe?: string
+  nameDeHint?: string
   emoji?: string
   icon?: string
   image?: string
@@ -80,20 +85,21 @@ export function ItemPicker({
   onClose: () => void
   emptyText: string
 }) {
+  const { t, fullName } = useI18n()
   const [query, setQuery] = useState('')
   const visible = items
-    .filter((item) => matches(item.name, query))
+    .filter((item) => matches(searchNames(item), query))
     .sort(
       (a, b) =>
         Math.sign(b.tags?.length ?? 0) - Math.sign(a.tags?.length ?? 0) ||
         (a.rank ?? 0) - (b.rank ?? 0) ||
-        a.name.localeCompare(b.name),
+        fullName(a).localeCompare(fullName(b)),
     )
 
   return (
     <Sheet title={title} onClose={onClose}>
       <div className="space-y-3">
-        <SearchField value={query} onChange={setQuery} placeholder="Suchen …" />
+        <SearchField value={query} onChange={setQuery} placeholder={t.search} />
         {visible.length === 0 ? (
           <p className="py-6 text-center text-sm text-white/55">{emptyText}</p>
         ) : (
@@ -108,7 +114,7 @@ export function ItemPicker({
                   <EntryIcon entry={item} />
                   <span className="min-w-0 flex-1">
                     <span className="flex flex-wrap items-center gap-1.5">
-                      <span className="font-medium">{item.name}</span>
+                      <EntryName entry={item} className="font-medium" />
                       <SourceBadge source={item.source} />
                     </span>
                     {item.detail && <span className="block truncate text-xs text-white/55">{item.detail}</span>}

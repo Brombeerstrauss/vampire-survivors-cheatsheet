@@ -37,6 +37,26 @@
       "pattern": "^https://[^\\s]+$",
       "description": "Adresse des Originalbilds im Wiki; wird zur Laufzeit geladen."
     },
+    "localizedText": {
+      "type": "object",
+      "required": ["de", "en"],
+      "additionalProperties": false,
+      "properties": {
+        "de": { "type": "string", "minLength": 1, "description": "Deutscher Text." },
+        "en": { "type": "string", "minLength": 1, "description": "Englischer Text." }
+      },
+      "description": "Text in beiden Sprachen der App."
+    },
+    "nameDe": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Offizieller deutscher Name aus dem Spiel, falls er vom englischen abweicht."
+    },
+    "nameDeHint": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Eigene deutsche Übersetzung, wenn es keinen offiziellen deutschen Namen gibt; erscheint in Klammern."
+    },
     "text": {
       "type": "string",
       "minLength": 1

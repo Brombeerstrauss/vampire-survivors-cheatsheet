@@ -13,7 +13,10 @@
       ],
       "passives": [],
       "conditions": [
-        "Glimmer-Technik „Crystalline Carve“ freischalten (passiert zufällig beim Angreifen)."
+        {
+          "de": "Glimmer-Technik „Crystalline Carve“ freischalten (passiert zufällig beim Angreifen).",
+          "en": "Unlock the Glimmer tech “Crystalline Carve” (happens randomly while attacking)."
+        }
       ],
       "verified": true
     },
@@ -29,7 +32,10 @@
       ],
       "passives": [],
       "conditions": [
-        "Glimmer-Technik „Shocking Rush“ freischalten (passiert zufällig beim Angreifen)."
+        {
+          "de": "Glimmer-Technik „Shocking Rush“ freischalten (passiert zufällig beim Angreifen).",
+          "en": "Unlock the Glimmer tech “Shocking Rush” (happens randomly while attacking)."
+        }
       ],
       "verified": true
     },
@@ -49,7 +55,10 @@
         }
       ],
       "conditions": [
-        "Glimmer-Technik „Dual Whirlwind“ freischalten (passiert zufällig beim Angreifen)."
+        {
+          "de": "Glimmer-Technik „Dual Whirlwind“ freischalten (passiert zufällig beim Angreifen).",
+          "en": "Unlock the Glimmer tech “Dual Whirlwind” (happens randomly while attacking)."
+        }
       ],
       "verified": true
     },
@@ -65,7 +74,10 @@
       ],
       "passives": [],
       "conditions": [
-        "Glimmer-Technik „Ballistic Missiles“ freischalten (passiert zufällig beim Angreifen)."
+        {
+          "de": "Glimmer-Technik „Ballistic Missiles“ freischalten (passiert zufällig beim Angreifen).",
+          "en": "Unlock the Glimmer tech “Ballistic Missiles” (happens randomly while attacking)."
+        }
       ],
       "verified": true
     },
@@ -81,7 +93,10 @@
       ],
       "passives": [],
       "conditions": [
-        "Glimmer-Technik „Artificial Hailstorm“ freischalten (passiert zufällig beim Angreifen)."
+        {
+          "de": "Glimmer-Technik „Artificial Hailstorm“ freischalten (passiert zufällig beim Angreifen).",
+          "en": "Unlock the Glimmer tech “Artificial Hailstorm” (happens randomly while attacking)."
+        }
       ],
       "verified": true
     },
@@ -101,7 +116,10 @@
         }
       ],
       "conditions": [
-        "Glimmer-Technik „Gravedigger“ freischalten (passiert zufällig beim Angreifen)."
+        {
+          "de": "Glimmer-Technik „Gravedigger“ freischalten (passiert zufällig beim Angreifen).",
+          "en": "Unlock the Glimmer tech “Gravedigger” (happens randomly while attacking)."
+        }
       ],
       "verified": true
     },
@@ -117,7 +135,10 @@
       ],
       "passives": [],
       "conditions": [
-        "Glimmer-Technik „Raksha“ freischalten (passiert zufällig beim Angreifen)."
+        {
+          "de": "Glimmer-Technik „Raksha“ freischalten (passiert zufällig beim Angreifen).",
+          "en": "Unlock the Glimmer tech “Raksha” (happens randomly while attacking)."
+        }
       ],
       "verified": true
     },
@@ -133,7 +154,10 @@
       ],
       "passives": [],
       "conditions": [
-        "Glimmer-Technik „Shenlong Firefist“ freischalten (passiert zufällig beim Angreifen)."
+        {
+          "de": "Glimmer-Technik „Shenlong Firefist“ freischalten (passiert zufällig beim Angreifen).",
+          "en": "Unlock the Glimmer tech “Shenlong Firefist” (happens randomly while attacking)."
+        }
       ],
       "verified": true
     },
@@ -153,7 +177,10 @@
         }
       ],
       "conditions": [
-        "Glimmer-Technik „Thunder Kick“ freischalten (passiert zufällig beim Angreifen)."
+        {
+          "de": "Glimmer-Technik „Thunder Kick“ freischalten (passiert zufällig beim Angreifen).",
+          "en": "Unlock the Glimmer tech “Thunder Kick” (happens randomly while attacking)."
+        }
       ],
       "verified": true
     },
@@ -169,7 +196,10 @@
       ],
       "passives": [],
       "conditions": [
-        "Beliebige 5 passive Gegenstände auf Maximalstufe."
+        {
+          "de": "Beliebige 5 passive Gegenstände auf Maximalstufe.",
+          "en": "Any 5 passive items at max level."
+        }
       ],
       "verified": true
     },
@@ -185,7 +215,10 @@
       ],
       "passives": [],
       "conditions": [
-        "Glimmer-Technik „Shockwave“ freischalten (passiert zufällig beim Angreifen)."
+        {
+          "de": "Glimmer-Technik „Shockwave“ freischalten (passiert zufällig beim Angreifen).",
+          "en": "Unlock the Glimmer tech “Shockwave” (happens randomly while attacking)."
+        }
       ],
       "verified": true
     },
@@ -201,7 +234,10 @@
       ],
       "passives": [],
       "conditions": [
-        "Glimmer-Technik „Bombarding Fire“ freischalten (passiert zufällig beim Angreifen)."
+        {
+          "de": "Glimmer-Technik „Bombarding Fire“ freischalten (passiert zufällig beim Angreifen).",
+          "en": "Unlock the Glimmer tech “Bombarding Fire” (happens randomly while attacking)."
+        }
       ],
       "verified": true
     },
@@ -221,7 +257,10 @@
         }
       ],
       "conditions": [
-        "Glimmer-Technik „Falconfire“ freischalten (passiert zufällig beim Angreifen)."
+        {
+          "de": "Glimmer-Technik „Falconfire“ freischalten (passiert zufällig beim Angreifen).",
+          "en": "Unlock the Glimmer tech “Falconfire” (happens randomly while attacking)."
+        }
       ],
       "verified": true
     },
@@ -237,7 +276,10 @@
       ],
       "passives": [],
       "conditions": [
-        "Glimmer-Technik „Swallow Slice“ freischalten (passiert zufällig beim Angreifen)."
+        {
+          "de": "Glimmer-Technik „Swallow Slice“ freischalten (passiert zufällig beim Angreifen).",
+          "en": "Unlock the Glimmer tech “Swallow Slice” (happens randomly while attacking)."
+        }
       ],
       "verified": true
     },
@@ -253,7 +295,10 @@
       ],
       "passives": [],
       "conditions": [
-        "Glimmer-Technik „Airwave“ freischalten (passiert zufällig beim Angreifen)."
+        {
+          "de": "Glimmer-Technik „Airwave“ freischalten (passiert zufällig beim Angreifen).",
+          "en": "Unlock the Glimmer tech “Airwave” (happens randomly while attacking)."
+        }
       ],
       "verified": true
     },
@@ -273,7 +318,10 @@
         }
       ],
       "conditions": [
-        "Glimmer-Technik „Blood Rage“ freischalten (passiert zufällig beim Angreifen)."
+        {
+          "de": "Glimmer-Technik „Blood Rage“ freischalten (passiert zufällig beim Angreifen).",
+          "en": "Unlock the Glimmer tech “Blood Rage” (happens randomly while attacking)."
+        }
       ],
       "verified": true
     },
@@ -293,7 +341,10 @@
         }
       ],
       "conditions": [
-        "Glimmer-Technik „Moonfall Slash“ freischalten (passiert zufällig beim Angreifen)."
+        {
+          "de": "Glimmer-Technik „Moonfall Slash“ freischalten (passiert zufällig beim Angreifen).",
+          "en": "Unlock the Glimmer tech “Moonfall Slash” (happens randomly while attacking)."
+        }
       ],
       "verified": true
     },
@@ -313,10 +364,16 @@
         }
       ],
       "conditions": [
-        "Glimmer-Technik „Hell's Fury“ freischalten (passiert zufällig beim Angreifen)."
+        {
+          "de": "Glimmer-Technik „Hell's Fury“ freischalten (passiert zufällig beim Angreifen).",
+          "en": "Unlock the Glimmer tech “Hell's Fury” (happens randomly while attacking)."
+        }
       ],
       "verified": false,
-      "note": "Ungeprüft: Waffenliste verlangt Skull O'Maniac auf Maximalstufe, die Entwicklungsseite nicht."
+      "note": {
+        "de": "Ungeprüft: Waffenliste verlangt Skull O'Maniac auf Maximalstufe, die Entwicklungsseite nicht.",
+        "en": "Unverified: weapon list requires Skull O'Maniac at max level, the evolution page doesn't."
+      }
     },
     {
       "id": "feather-spear",
@@ -330,7 +387,10 @@
       ],
       "passives": [],
       "conditions": [
-        "Glimmer-Technik „Divine Lancer“ freischalten (passiert zufällig beim Angreifen)."
+        {
+          "de": "Glimmer-Technik „Divine Lancer“ freischalten (passiert zufällig beim Angreifen).",
+          "en": "Unlock the Glimmer tech “Divine Lancer” (happens randomly while attacking)."
+        }
       ],
       "verified": true
     },
@@ -346,7 +406,10 @@
       ],
       "passives": [],
       "conditions": [
-        "Glimmer-Technik „Stardust“ freischalten (passiert zufällig beim Angreifen)."
+        {
+          "de": "Glimmer-Technik „Stardust“ freischalten (passiert zufällig beim Angreifen).",
+          "en": "Unlock the Glimmer tech “Stardust” (happens randomly while attacking)."
+        }
       ],
       "verified": true
     },
@@ -362,7 +425,10 @@
       ],
       "passives": [],
       "conditions": [
-        "Glimmer-Technik „Bull Crush“ freischalten (passiert zufällig beim Angreifen)."
+        {
+          "de": "Glimmer-Technik „Bull Crush“ freischalten (passiert zufällig beim Angreifen).",
+          "en": "Unlock the Glimmer tech “Bull Crush” (happens randomly while attacking)."
+        }
       ],
       "verified": true
     },
@@ -378,7 +444,10 @@
       ],
       "passives": [],
       "conditions": [
-        "Glimmer-Technik „Absetzen“ freischalten (passiert zufällig beim Angreifen)."
+        {
+          "de": "Glimmer-Technik „Absetzen“ freischalten (passiert zufällig beim Angreifen).",
+          "en": "Unlock the Glimmer tech “Absetzen” (happens randomly while attacking)."
+        }
       ],
       "verified": true
     },

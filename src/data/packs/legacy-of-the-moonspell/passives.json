@@ -4,8 +4,12 @@
     {
       "id": "pearl-magatama",
       "name": "Pearl magatama",
+      "nameDeHint": "Perlen-Magatama",
       "source": "legacy-of-the-moonspell",
-      "description": "Geschenk: mehr Regeneration und Wiederbelebungen, dafür weniger Gier; heilt vollständig.",
+      "description": {
+        "de": "Geschenk: mehr Regeneration und Wiederbelebungen, dafür weniger Gier; heilt vollständig.",
+        "en": "Gift. Will provide bonus Recovery and Revivals in exchange for Greed. Fully heals."
+      },
       "maxLevel": 6,
       "noSlot": true,
       "emoji": "🦪",

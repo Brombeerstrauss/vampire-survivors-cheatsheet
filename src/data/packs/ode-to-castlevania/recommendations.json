@@ -7,14 +7,20 @@
       "weapons": [
         {
           "id": "alchemy-whip",
-          "reason": "Startwaffe; mit Tirajisú wird sie zu Vampire Killer.",
+          "reason": {
+            "de": "Startwaffe; mit Tirajisú wird sie zu Vampire Killer.",
+            "en": "Starting weapon; with Tirajisú it becomes Vampire Killer."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "tirajisu",
-          "reason": "Nötig für Vampire Killer.",
+          "reason": {
+            "de": "Nötig für Vampire Killer.",
+            "en": "Needed for Vampire Killer."
+          },
           "priority": 1
         }
       ]
@@ -25,14 +31,20 @@
       "weapons": [
         {
           "id": "sonic-whip",
-          "reason": "Startwaffe; mit Skull O'Maniac wird sie zu Crissaegrim Tip.",
+          "reason": {
+            "de": "Startwaffe; mit Schädel O'Maniac wird sie zu Crissaegrim Tip.",
+            "en": "Starting weapon; with Skull O'Maniac it becomes Crissaegrim Tip."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "skull-o-maniac",
-          "reason": "Nötig für Crissaegrim Tip.",
+          "reason": {
+            "de": "Nötig für Crissaegrim Tip.",
+            "en": "Needed for Crissaegrim Tip."
+          },
           "priority": 1
         }
       ]
@@ -43,14 +55,20 @@
       "weapons": [
         {
           "id": "dragon-water-whip",
-          "reason": "Startwaffe; mit Attractorb wird sie zu Hydrostormer Tip.",
+          "reason": {
+            "de": "Startwaffe; mit Anziehungskugel wird sie zu Hydrostormer Tip.",
+            "en": "Starting weapon; with Attractorb it becomes Hydrostormer Tip."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "attractorb",
-          "reason": "Nötig für Hydrostormer Tip.",
+          "reason": {
+            "de": "Nötig für Hydrostormer Tip.",
+            "en": "Needed for Hydrostormer Tip."
+          },
           "priority": 1
         }
       ]
@@ -61,14 +79,20 @@
       "weapons": [
         {
           "id": "jet-black-whip",
-          "reason": "Startwaffe; mit Stone Mask wird sie zu Mormegil Tip.",
+          "reason": {
+            "de": "Startwaffe; mit Steinmaske wird sie zu Mormegil Tip.",
+            "en": "Starting weapon; with Stone Mask it becomes Mormegil Tip."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "stone-mask",
-          "reason": "Nötig für Mormegil Tip.",
+          "reason": {
+            "de": "Nötig für Mormegil Tip.",
+            "en": "Needed for Mormegil Tip."
+          },
           "priority": 1
         }
       ]
@@ -79,14 +103,20 @@
       "weapons": [
         {
           "id": "wind-whip",
-          "reason": "Startwaffe; mit Crown wird sie zu Spirit Tornado Tip.",
+          "reason": {
+            "de": "Startwaffe; mit Krone wird sie zu Spirit Tornado Tip.",
+            "en": "Starting weapon; with Crown it becomes Spirit Tornado Tip."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "crown",
-          "reason": "Nötig für Spirit Tornado Tip.",
+          "reason": {
+            "de": "Nötig für Spirit Tornado Tip.",
+            "en": "Needed for Spirit Tornado Tip."
+          },
           "priority": 1
         }
       ]
@@ -97,14 +127,20 @@
       "weapons": [
         {
           "id": "vibhuti-whip",
-          "reason": "Startwaffe; mit Candelabrador wird sie zu Daybreaker Tip.",
+          "reason": {
+            "de": "Startwaffe; mit Kandelabrador wird sie zu Daybreaker Tip.",
+            "en": "Starting weapon; with Candelabrador it becomes Daybreaker Tip."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "candelabrador",
-          "reason": "Nötig für Daybreaker Tip.",
+          "reason": {
+            "de": "Nötig für Daybreaker Tip.",
+            "en": "Needed for Daybreaker Tip."
+          },
           "priority": 1
         }
       ]
@@ -115,14 +151,20 @@
       "weapons": [
         {
           "id": "platinum-whip",
-          "reason": "Startwaffe; mit Clover wird sie zu Cross Crasher Tip.",
+          "reason": {
+            "de": "Startwaffe; mit Kleeblatt wird sie zu Cross Crasher Tip.",
+            "en": "Starting weapon; with Clover it becomes Cross Crasher Tip."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "clover",
-          "reason": "Nötig für Cross Crasher Tip.",
+          "reason": {
+            "de": "Nötig für Cross Crasher Tip.",
+            "en": "Needed for Cross Crasher Tip."
+          },
           "priority": 1
         }
       ]
@@ -133,14 +175,20 @@
       "weapons": [
         {
           "id": "vanitas-whip",
-          "reason": "Startwaffe; mit Hollow Heart wird sie zu Aurablaster Tip.",
+          "reason": {
+            "de": "Startwaffe; mit Hohlherz wird sie zu Aurablaster Tip.",
+            "en": "Starting weapon; with Hollow Heart it becomes Aurablaster Tip."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "hollow-heart",
-          "reason": "Nötig für Aurablaster Tip.",
+          "reason": {
+            "de": "Nötig für Aurablaster Tip.",
+            "en": "Needed for Aurablaster Tip."
+          },
           "priority": 1
         }
       ]
@@ -151,14 +199,20 @@
       "weapons": [
         {
           "id": "curved-knife",
-          "reason": "Startwaffe; mit Bracer wird sie zu Bwaka Knife.",
+          "reason": {
+            "de": "Startwaffe; mit Armschiene wird sie zu Bwaka Knife.",
+            "en": "Starting weapon; with Bracer it becomes Bwaka Knife."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "bracer",
-          "reason": "Nötig für Bwaka Knife.",
+          "reason": {
+            "de": "Nötig für Bwaka Knife.",
+            "en": "Needed for Bwaka Knife."
+          },
           "priority": 1
         }
       ]
@@ -169,14 +223,20 @@
       "weapons": [
         {
           "id": "iron-ball",
-          "reason": "Startwaffe; mit Armor wird sie zu Wrecking Ball.",
+          "reason": {
+            "de": "Startwaffe; mit Rüstung wird sie zu Wrecking Ball.",
+            "en": "Starting weapon; with Armor it becomes Wrecking Ball."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "armor",
-          "reason": "Nötig für Wrecking Ball.",
+          "reason": {
+            "de": "Nötig für Wrecking Ball.",
+            "en": "Needed for Wrecking Ball."
+          },
           "priority": 1
         }
       ]
@@ -187,14 +247,20 @@
       "weapons": [
         {
           "id": "javelin",
-          "reason": "Startwaffe; mit Spellbinder wird sie zu Long Inus.",
+          "reason": {
+            "de": "Startwaffe; mit Zauberbinder wird sie zu Long Inus.",
+            "en": "Starting weapon; with Spellbinder it becomes Long Inus."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "spellbinder",
-          "reason": "Nötig für Long Inus.",
+          "reason": {
+            "de": "Nötig für Long Inus.",
+            "en": "Needed for Long Inus."
+          },
           "priority": 1
         }
       ]
@@ -205,14 +271,20 @@
       "weapons": [
         {
           "id": "hand-grenade",
-          "reason": "Startwaffe; mit Candelabrador wird sie zu The RPG.",
+          "reason": {
+            "de": "Startwaffe; mit Kandelabrador wird sie zu The RPG.",
+            "en": "Starting weapon; with Candelabrador it becomes The RPG."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "candelabrador",
-          "reason": "Nötig für The RPG.",
+          "reason": {
+            "de": "Nötig für The RPG.",
+            "en": "Needed for The RPG."
+          },
           "priority": 1
         }
       ]
@@ -223,14 +295,20 @@
       "weapons": [
         {
           "id": "raging-fire",
-          "reason": "Startwaffe; mit Spinach wird sie zu Salamender.",
+          "reason": {
+            "de": "Startwaffe; mit Spinat wird sie zu Salamender.",
+            "en": "Starting weapon; with Spinach it becomes Salamender."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "spinach",
-          "reason": "Nötig für Salamender.",
+          "reason": {
+            "de": "Nötig für Salamender.",
+            "en": "Needed for Salamender."
+          },
           "priority": 1
         }
       ]
@@ -241,14 +319,20 @@
       "weapons": [
         {
           "id": "ice-fang",
-          "reason": "Startwaffe; mit Spellbinder wird sie zu Cocytus.",
+          "reason": {
+            "de": "Startwaffe; mit Zauberbinder wird sie zu Cocytus.",
+            "en": "Starting weapon; with Spellbinder it becomes Cocytus."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "spellbinder",
-          "reason": "Nötig für Cocytus.",
+          "reason": {
+            "de": "Nötig für Cocytus.",
+            "en": "Needed for Cocytus."
+          },
           "priority": 1
         }
       ]
@@ -259,14 +343,20 @@
       "weapons": [
         {
           "id": "fulgur",
-          "reason": "Startwaffe; mit Duplicator wird sie zu Tenebris Tonitrus.",
+          "reason": {
+            "de": "Startwaffe; mit Verdoppler wird sie zu Tenebris Tonitrus.",
+            "en": "Starting weapon; with Duplicator it becomes Tenebris Tonitrus."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "duplicator",
-          "reason": "Nötig für Tenebris Tonitrus.",
+          "reason": {
+            "de": "Nötig für Tenebris Tonitrus.",
+            "en": "Needed for Tenebris Tonitrus."
+          },
           "priority": 1
         }
       ]
@@ -277,7 +367,10 @@
       "weapons": [
         {
           "id": "alucart-sworb",
-          "reason": "Startwaffe; entwickelt sich zu Alucard Swords.",
+          "reason": {
+            "de": "Startwaffe; entwickelt sich zu Alucard Swords.",
+            "en": "Starting weapon; evolves into Alucard Swords."
+          },
           "priority": 1
         }
       ],
@@ -289,14 +382,20 @@
       "weapons": [
         {
           "id": "alucard-spear",
-          "reason": "Startwaffe; mit Wings wird sie zu Thunderbolt Spear.",
+          "reason": {
+            "de": "Startwaffe; mit Flügel wird sie zu Thunderbolt Spear.",
+            "en": "Starting weapon; with Wings it becomes Thunderbolt Spear."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "wings",
-          "reason": "Nötig für Thunderbolt Spear.",
+          "reason": {
+            "de": "Nötig für Thunderbolt Spear.",
+            "en": "Needed for Thunderbolt Spear."
+          },
           "priority": 1
         }
       ]
@@ -307,14 +406,20 @@
       "weapons": [
         {
           "id": "mace",
-          "reason": "Startwaffe; mit Hollow Heart wird sie zu Stamazza.",
+          "reason": {
+            "de": "Startwaffe; mit Hohlherz wird sie zu Stamazza.",
+            "en": "Starting weapon; with Hollow Heart it becomes Stamazza."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "hollow-heart",
-          "reason": "Nötig für Stamazza.",
+          "reason": {
+            "de": "Nötig für Stamazza.",
+            "en": "Needed for Stamazza."
+          },
           "priority": 1
         }
       ]
@@ -325,14 +430,20 @@
       "weapons": [
         {
           "id": "guardian-s-targe",
-          "reason": "Startwaffe; mit Pummarola wird sie zu Sacred Beasts Tower Shield.",
+          "reason": {
+            "de": "Startwaffe; mit Pummarola wird sie zu Sacred Beasts Tower Shield.",
+            "en": "Starting weapon; with Pummarola it becomes Sacred Beasts Tower Shield."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "pummarola",
-          "reason": "Nötig für Sacred Beasts Tower Shield.",
+          "reason": {
+            "de": "Nötig für Sacred Beasts Tower Shield.",
+            "en": "Needed for Sacred Beasts Tower Shield."
+          },
           "priority": 1
         }
       ]
@@ -343,7 +454,10 @@
       "weapons": [
         {
           "id": "confodere",
-          "reason": "Startwaffe; entwickelt sich zu Vol Confodere.",
+          "reason": {
+            "de": "Startwaffe; entwickelt sich zu Vol Confodere.",
+            "en": "Starting weapon; evolves into Vol Confodere."
+          },
           "priority": 1
         }
       ],
@@ -355,14 +469,20 @@
       "weapons": [
         {
           "id": "shuriken",
-          "reason": "Startwaffe; mit Empty Tome wird sie zu Yagyu Shuriken.",
+          "reason": {
+            "de": "Startwaffe; mit Leerer Foliant wird sie zu Yagyu Shuriken.",
+            "en": "Starting weapon; with Empty Tome it becomes Yagyu Shuriken."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "empty-tome",
-          "reason": "Nötig für Yagyu Shuriken.",
+          "reason": {
+            "de": "Nötig für Yagyu Shuriken.",
+            "en": "Needed for Yagyu Shuriken."
+          },
           "priority": 1
         }
       ]
@@ -373,14 +493,20 @@
       "weapons": [
         {
           "id": "discus",
-          "reason": "Startwaffe; mit Parm Aegis wird sie zu Stellar Blade.",
+          "reason": {
+            "de": "Startwaffe; mit Parm Aegis wird sie zu Stellar Blade.",
+            "en": "Starting weapon; with Parm Aegis it becomes Stellar Blade."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "parm-aegis",
-          "reason": "Nötig für Stellar Blade.",
+          "reason": {
+            "de": "Nötig für Stellar Blade.",
+            "en": "Needed for Stellar Blade."
+          },
           "priority": 1
         }
       ]
@@ -391,14 +517,20 @@
       "weapons": [
         {
           "id": "silver-revolver",
-          "reason": "Startwaffe; mit Karoma's Mana wird sie zu Jewel Gun.",
+          "reason": {
+            "de": "Startwaffe; mit Karoma's Mana wird sie zu Jewel Gun.",
+            "en": "Starting weapon; with Karoma's Mana it becomes Jewel Gun."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "karoma-s-mana",
-          "reason": "Nötig für Jewel Gun.",
+          "reason": {
+            "de": "Nötig für Jewel Gun.",
+            "en": "Needed for Jewel Gun."
+          },
           "priority": 1
         }
       ]
@@ -409,14 +541,20 @@
       "weapons": [
         {
           "id": "wine-glass",
-          "reason": "Startwaffe; mit Tirajisú wird sie zu Meal Ticket.",
+          "reason": {
+            "de": "Startwaffe; mit Tirajisú wird sie zu Meal Ticket.",
+            "en": "Starting weapon; with Tirajisú it becomes Meal Ticket."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "tirajisu",
-          "reason": "Nötig für Meal Ticket.",
+          "reason": {
+            "de": "Nötig für Meal Ticket.",
+            "en": "Needed for Meal Ticket."
+          },
           "priority": 1
         }
       ]
@@ -427,14 +565,20 @@
       "weapons": [
         {
           "id": "gale-force",
-          "reason": "Startwaffe; mit Bracer wird sie zu Pneuma Tempestas.",
+          "reason": {
+            "de": "Startwaffe; mit Armschiene wird sie zu Pneuma Tempestas.",
+            "en": "Starting weapon; with Bracer it becomes Pneuma Tempestas."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "bracer",
-          "reason": "Nötig für Pneuma Tempestas.",
+          "reason": {
+            "de": "Nötig für Pneuma Tempestas.",
+            "en": "Needed for Pneuma Tempestas."
+          },
           "priority": 1
         }
       ]
@@ -445,14 +589,20 @@
       "weapons": [
         {
           "id": "rock-riot",
-          "reason": "Startwaffe; mit Stone Mask wird sie zu Gemma Torpor.",
+          "reason": {
+            "de": "Startwaffe; mit Steinmaske wird sie zu Gemma Torpor.",
+            "en": "Starting weapon; with Stone Mask it becomes Gemma Torpor."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "stone-mask",
-          "reason": "Nötig für Gemma Torpor.",
+          "reason": {
+            "de": "Nötig für Gemma Torpor.",
+            "en": "Needed for Gemma Torpor."
+          },
           "priority": 1
         }
       ]
@@ -463,14 +613,20 @@
       "weapons": [
         {
           "id": "keremet-bubbles",
-          "reason": "Startwaffe; mit Armor wird sie zu Keremet Morbus.",
+          "reason": {
+            "de": "Startwaffe; mit Rüstung wird sie zu Keremet Morbus.",
+            "en": "Starting weapon; with Armor it becomes Keremet Morbus."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "armor",
-          "reason": "Nötig für Keremet Morbus.",
+          "reason": {
+            "de": "Nötig für Keremet Morbus.",
+            "en": "Needed for Keremet Morbus."
+          },
           "priority": 1
         }
       ]
@@ -481,14 +637,20 @@
       "weapons": [
         {
           "id": "refectio",
-          "reason": "Startwaffe; mit Clover wird sie zu Sanctuary.",
+          "reason": {
+            "de": "Startwaffe; mit Kleeblatt wird sie zu Sanctuary.",
+            "en": "Starting weapon; with Clover it becomes Sanctuary."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "clover",
-          "reason": "Nötig für Sanctuary.",
+          "reason": {
+            "de": "Nötig für Sanctuary.",
+            "en": "Needed for Sanctuary."
+          },
           "priority": 1
         }
       ]
@@ -499,14 +661,20 @@
       "weapons": [
         {
           "id": "hex",
-          "reason": "Startwaffe; mit Skull O'Maniac wird sie zu Nightmare.",
+          "reason": {
+            "de": "Startwaffe; mit Schädel O'Maniac wird sie zu Nightmare.",
+            "en": "Starting weapon; with Skull O'Maniac it becomes Nightmare."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "skull-o-maniac",
-          "reason": "Nötig für Nightmare.",
+          "reason": {
+            "de": "Nötig für Nightmare.",
+            "en": "Needed for Nightmare."
+          },
           "priority": 1
         }
       ]
@@ -517,14 +685,20 @@
       "weapons": [
         {
           "id": "tyrfing",
-          "reason": "Startwaffe; mit Spinach wird sie zu Rune Sword.",
+          "reason": {
+            "de": "Startwaffe; mit Spinat wird sie zu Rune Sword.",
+            "en": "Starting weapon; with Spinach it becomes Rune Sword."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "spinach",
-          "reason": "Nötig für Rune Sword.",
+          "reason": {
+            "de": "Nötig für Rune Sword.",
+            "en": "Needed for Rune Sword."
+          },
           "priority": 1
         }
       ]
@@ -535,14 +709,20 @@
       "weapons": [
         {
           "id": "trident",
-          "reason": "Startwaffe; mit Duplicator wird sie zu Gungnir-Souris.",
+          "reason": {
+            "de": "Startwaffe; mit Verdoppler wird sie zu Gungnir-Souris.",
+            "en": "Starting weapon; with Duplicator it becomes Gungnir-Souris."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "duplicator",
-          "reason": "Nötig für Gungnir-Souris.",
+          "reason": {
+            "de": "Nötig für Gungnir-Souris.",
+            "en": "Needed for Gungnir-Souris."
+          },
           "priority": 1
         }
       ]
@@ -553,14 +733,20 @@
       "weapons": [
         {
           "id": "star-flail",
-          "reason": "Startwaffe; mit Pummarola wird sie zu Moon Rod.",
+          "reason": {
+            "de": "Startwaffe; mit Pummarola wird sie zu Moon Rod.",
+            "en": "Starting weapon; with Pummarola it becomes Moon Rod."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "pummarola",
-          "reason": "Nötig für Moon Rod.",
+          "reason": {
+            "de": "Nötig für Moon Rod.",
+            "en": "Needed for Moon Rod."
+          },
           "priority": 1
         }
       ]
@@ -571,14 +757,20 @@
       "weapons": [
         {
           "id": "iron-shield",
-          "reason": "Startwaffe; mit Parm Aegis wird sie zu Dark Iron Shield.",
+          "reason": {
+            "de": "Startwaffe; mit Parm Aegis wird sie zu Dark Iron Shield.",
+            "en": "Starting weapon; with Parm Aegis it becomes Dark Iron Shield."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "parm-aegis",
-          "reason": "Nötig für Dark Iron Shield.",
+          "reason": {
+            "de": "Nötig für Dark Iron Shield.",
+            "en": "Needed for Dark Iron Shield."
+          },
           "priority": 1
         }
       ]
@@ -589,14 +781,20 @@
       "weapons": [
         {
           "id": "optical-shot",
-          "reason": "Startwaffe; mit Karoma's Mana wird sie zu Acerbatus.",
+          "reason": {
+            "de": "Startwaffe; mit Karoma's Mana wird sie zu Acerbatus.",
+            "en": "Starting weapon; with Karoma's Mana it becomes Acerbatus."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "karoma-s-mana",
-          "reason": "Nötig für Acerbatus.",
+          "reason": {
+            "de": "Nötig für Acerbatus.",
+            "en": "Needed for Acerbatus."
+          },
           "priority": 1
         }
       ]
@@ -607,14 +805,20 @@
       "weapons": [
         {
           "id": "luminatio",
-          "reason": "Startwaffe; mit Crown wird sie zu Vol Luminatio.",
+          "reason": {
+            "de": "Startwaffe; mit Krone wird sie zu Vol Luminatio.",
+            "en": "Starting weapon; with Crown it becomes Vol Luminatio."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "crown",
-          "reason": "Nötig für Vol Luminatio.",
+          "reason": {
+            "de": "Nötig für Vol Luminatio.",
+            "en": "Needed for Vol Luminatio."
+          },
           "priority": 1
         }
       ]
@@ -625,14 +829,20 @@
       "weapons": [
         {
           "id": "umbra",
-          "reason": "Startwaffe; mit Attractorb wird sie zu Vol Umbra.",
+          "reason": {
+            "de": "Startwaffe; mit Anziehungskugel wird sie zu Vol Umbra.",
+            "en": "Starting weapon; with Attractorb it becomes Vol Umbra."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "attractorb",
-          "reason": "Nötig für Vol Umbra.",
+          "reason": {
+            "de": "Nötig für Vol Umbra.",
+            "en": "Needed for Vol Umbra."
+          },
           "priority": 1
         }
       ]
@@ -643,14 +853,20 @@
       "weapons": [
         {
           "id": "globus",
-          "reason": "Startwaffe; mit Empty Tome wird sie zu Nitesco.",
+          "reason": {
+            "de": "Startwaffe; mit Leerer Foliant wird sie zu Nitesco.",
+            "en": "Starting weapon; with Empty Tome it becomes Nitesco."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "empty-tome",
-          "reason": "Nötig für Nitesco.",
+          "reason": {
+            "de": "Nötig für Nitesco.",
+            "en": "Needed for Nitesco."
+          },
           "priority": 1
         }
       ]
@@ -661,14 +877,20 @@
       "weapons": [
         {
           "id": "sonic-dash",
-          "reason": "Startwaffe; mit Wings wird sie zu Rapidus Fio.",
+          "reason": {
+            "de": "Startwaffe; mit Flügel wird sie zu Rapidus Fio.",
+            "en": "Starting weapon; with Wings it becomes Rapidus Fio."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "wings",
-          "reason": "Nötig für Rapidus Fio.",
+          "reason": {
+            "de": "Nötig für Rapidus Fio.",
+            "en": "Needed for Rapidus Fio."
+          },
           "priority": 1
         }
       ]
@@ -679,17 +901,26 @@
       "weapons": [
         {
           "id": "dextro-custos",
-          "reason": "Startwaffe; zusammen mit Centralis Custos, Sinestro Custos entsteht die Union Trinum Custodem.",
+          "reason": {
+            "de": "Startwaffe; zusammen mit Centralis Custos, Sinestro Custos entsteht die Union Trinum Custodem.",
+            "en": "Starting weapon; together with Centralis Custos, Sinestro Custos it forms the union Trinum Custodem."
+          },
           "priority": 1
         },
         {
           "id": "centralis-custos",
-          "reason": "Partner für die Union Trinum Custodem.",
+          "reason": {
+            "de": "Partner für die Union Trinum Custodem.",
+            "en": "Partner for the union Trinum Custodem."
+          },
           "priority": 1
         },
         {
           "id": "sinestro-custos",
-          "reason": "Partner für die Union Trinum Custodem.",
+          "reason": {
+            "de": "Partner für die Union Trinum Custodem.",
+            "en": "Partner for the union Trinum Custodem."
+          },
           "priority": 1
         }
       ],
@@ -701,17 +932,26 @@
       "weapons": [
         {
           "id": "dominus-anger",
-          "reason": "Startwaffe; zusammen mit Dominus Agony, Dominus Hatred entsteht die Union Power of Sire.",
+          "reason": {
+            "de": "Startwaffe; zusammen mit Dominus Agony, Dominus Hatred entsteht die Union Power of Sire.",
+            "en": "Starting weapon; together with Dominus Agony, Dominus Hatred it forms the union Power of Sire."
+          },
           "priority": 1
         },
         {
           "id": "dominus-agony",
-          "reason": "Partner für die Union Power of Sire.",
+          "reason": {
+            "de": "Partner für die Union Power of Sire.",
+            "en": "Partner for the union Power of Sire."
+          },
           "priority": 1
         },
         {
           "id": "dominus-hatred",
-          "reason": "Partner für die Union Power of Sire.",
+          "reason": {
+            "de": "Partner für die Union Power of Sire.",
+            "en": "Partner for the union Power of Sire."
+          },
           "priority": 1
         }
       ],
@@ -723,7 +963,10 @@
       "weapons": [
         {
           "id": "familiar-forge",
-          "reason": "Startwaffe.",
+          "reason": {
+            "de": "Startwaffe.",
+            "en": "Starting weapon."
+          },
           "priority": 1
         }
       ],
@@ -735,44 +978,68 @@
       "weapons": [
         {
           "id": "raging-fire",
-          "reason": "Startwaffe; mit Spinach wird sie zu Salamender.",
+          "reason": {
+            "de": "Startwaffe; mit Spinat wird sie zu Salamender.",
+            "en": "Starting weapon; with Spinach it becomes Salamender."
+          },
           "priority": 1
         },
         {
           "id": "fulgur",
-          "reason": "Startwaffe; mit Duplicator wird sie zu Tenebris Tonitrus.",
+          "reason": {
+            "de": "Startwaffe; mit Verdoppler wird sie zu Tenebris Tonitrus.",
+            "en": "Starting weapon; with Duplicator it becomes Tenebris Tonitrus."
+          },
           "priority": 1
         },
         {
           "id": "ice-fang",
-          "reason": "Startwaffe; mit Spellbinder wird sie zu Cocytus.",
+          "reason": {
+            "de": "Startwaffe; mit Zauberbinder wird sie zu Cocytus.",
+            "en": "Starting weapon; with Spellbinder it becomes Cocytus."
+          },
           "priority": 1
         },
         {
           "id": "rock-riot",
-          "reason": "Startwaffe; mit Stone Mask wird sie zu Gemma Torpor.",
+          "reason": {
+            "de": "Startwaffe; mit Steinmaske wird sie zu Gemma Torpor.",
+            "en": "Starting weapon; with Stone Mask it becomes Gemma Torpor."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "spinach",
-          "reason": "Nötig für Salamender.",
+          "reason": {
+            "de": "Nötig für Salamender.",
+            "en": "Needed for Salamender."
+          },
           "priority": 1
         },
         {
           "id": "duplicator",
-          "reason": "Nötig für Tenebris Tonitrus.",
+          "reason": {
+            "de": "Nötig für Tenebris Tonitrus.",
+            "en": "Needed for Tenebris Tonitrus."
+          },
           "priority": 1
         },
         {
           "id": "spellbinder",
-          "reason": "Nötig für Cocytus.",
+          "reason": {
+            "de": "Nötig für Cocytus.",
+            "en": "Needed for Cocytus."
+          },
           "priority": 1
         },
         {
           "id": "stone-mask",
-          "reason": "Nötig für Gemma Torpor.",
+          "reason": {
+            "de": "Nötig für Gemma Torpor.",
+            "en": "Needed for Gemma Torpor."
+          },
           "priority": 1
         }
       ]
@@ -783,79 +1050,124 @@
       "weapons": [
         {
           "id": "trident",
-          "reason": "Startwaffe; mit Duplicator wird sie zu Gungnir-Souris.",
+          "reason": {
+            "de": "Startwaffe; mit Verdoppler wird sie zu Gungnir-Souris.",
+            "en": "Starting weapon; with Duplicator it becomes Gungnir-Souris."
+          },
           "priority": 1
         },
         {
           "id": "summon-spirit",
-          "reason": "Startwaffe; zusammen mit Holy Wand entsteht die Union Spirit of Light.",
+          "reason": {
+            "de": "Startwaffe; zusammen mit Heiliger Zauberstab entsteht die Union Spirit of Light.",
+            "en": "Starting weapon; together with Holy Wand it forms the union Spirit of Light."
+          },
           "priority": 1
         },
         {
           "id": "holy-wand",
-          "reason": "Partner für die Union Spirit of Light.",
+          "reason": {
+            "de": "Partner für die Union Spirit of Light.",
+            "en": "Partner for the union Spirit of Light."
+          },
           "priority": 1
         },
         {
           "id": "garlic",
-          "reason": "Startwaffe; mit Pummarola wird sie zu Soul Eater.",
+          "reason": {
+            "de": "Startwaffe; mit Pummarola wird sie zu Seelenfresser.",
+            "en": "Starting weapon; with Pummarola it becomes Soul Eater."
+          },
           "priority": 1
         },
         {
           "id": "fire-wand",
-          "reason": "Startwaffe; mit Spinach wird sie zu Hellfire.",
+          "reason": {
+            "de": "Startwaffe; mit Spinat wird sie zu Höllenfeuer.",
+            "en": "Starting weapon; with Spinach it becomes Hellfire."
+          },
           "priority": 1
         },
         {
           "id": "lightning-ring",
-          "reason": "Startwaffe; mit Duplicator wird sie zu Thunder Loop.",
+          "reason": {
+            "de": "Startwaffe; mit Verdoppler wird sie zu Donnerschlinge.",
+            "en": "Starting weapon; with Duplicator it becomes Thunder Loop."
+          },
           "priority": 1
         },
         {
           "id": "magic-wand",
-          "reason": "Startwaffe; mit Empty Tome wird sie zu Holy Wand.",
+          "reason": {
+            "de": "Startwaffe; mit Leerer Foliant wird sie zu Heiliger Zauberstab.",
+            "en": "Starting weapon; with Empty Tome it becomes Holy Wand."
+          },
           "priority": 1
         },
         {
           "id": "curved-knife",
-          "reason": "Startwaffe; mit Bracer wird sie zu Bwaka Knife.",
+          "reason": {
+            "de": "Startwaffe; mit Armschiene wird sie zu Bwaka Knife.",
+            "en": "Starting weapon; with Bracer it becomes Bwaka Knife."
+          },
           "priority": 1
         },
         {
           "id": "troll-bomb",
-          "reason": "Startwaffe; zusammen mit NO FUTURE entsteht die Union Carnage Heart.",
+          "reason": {
+            "de": "Startwaffe; zusammen mit NO FUTURE entsteht die Union Carnage Heart.",
+            "en": "Starting weapon; together with NO FUTURE it forms the union Carnage Heart."
+          },
           "priority": 1
         },
         {
           "id": "no-future",
-          "reason": "Partner für die Union Carnage Heart.",
+          "reason": {
+            "de": "Partner für die Union Carnage Heart.",
+            "en": "Partner for the union Carnage Heart."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "duplicator",
-          "reason": "Nötig für Thunder Loop.",
+          "reason": {
+            "de": "Nötig für Donnerschlinge.",
+            "en": "Needed for Thunder Loop."
+          },
           "priority": 1
         },
         {
           "id": "pummarola",
-          "reason": "Nötig für Soul Eater.",
+          "reason": {
+            "de": "Nötig für Seelenfresser.",
+            "en": "Needed for Soul Eater."
+          },
           "priority": 1
         },
         {
           "id": "spinach",
-          "reason": "Nötig für Hellfire.",
+          "reason": {
+            "de": "Nötig für Höllenfeuer.",
+            "en": "Needed for Hellfire."
+          },
           "priority": 1
         },
         {
           "id": "empty-tome",
-          "reason": "Nötig für Holy Wand.",
+          "reason": {
+            "de": "Nötig für Heiliger Zauberstab.",
+            "en": "Needed for Holy Wand."
+          },
           "priority": 1
         },
         {
           "id": "bracer",
-          "reason": "Nötig für Bwaka Knife.",
+          "reason": {
+            "de": "Nötig für Bwaka Knife.",
+            "en": "Needed for Bwaka Knife."
+          },
           "priority": 1
         }
       ]
@@ -866,7 +1178,10 @@
       "weapons": [
         {
           "id": "trinum-custodem",
-          "reason": "Startwaffe.",
+          "reason": {
+            "de": "Startwaffe.",
+            "en": "Starting weapon."
+          },
           "priority": 1
         }
       ],
@@ -878,7 +1193,10 @@
       "weapons": [
         {
           "id": "rapidus-fio",
-          "reason": "Startwaffe.",
+          "reason": {
+            "de": "Startwaffe.",
+            "en": "Starting weapon."
+          },
           "priority": 1
         }
       ],
@@ -890,7 +1208,10 @@
       "weapons": [
         {
           "id": "the-rpg",
-          "reason": "Startwaffe.",
+          "reason": {
+            "de": "Startwaffe.",
+            "en": "Starting weapon."
+          },
           "priority": 1
         }
       ],
@@ -902,12 +1223,18 @@
       "weapons": [
         {
           "id": "aura-blast",
-          "reason": "Startwaffe; zusammen mit Hellfire entsteht die Union Kardía Phlegeton.",
+          "reason": {
+            "de": "Startwaffe; zusammen mit Höllenfeuer entsteht die Union Kardía Phlegeton.",
+            "en": "Starting weapon; together with Hellfire it forms the union Kardía Phlegeton."
+          },
           "priority": 1
         },
         {
           "id": "hellfire",
-          "reason": "Partner für die Union Kardía Phlegeton.",
+          "reason": {
+            "de": "Partner für die Union Kardía Phlegeton.",
+            "en": "Partner for the union Kardía Phlegeton."
+          },
           "priority": 1
         }
       ],
@@ -919,12 +1246,18 @@
       "weapons": [
         {
           "id": "valmanway",
-          "reason": "Startwaffe; zusammen mit Thousand Edge entsteht die Union Million Cut.",
+          "reason": {
+            "de": "Startwaffe; zusammen mit Tausendschneide entsteht die Union Million Cut.",
+            "en": "Starting weapon; together with Thousand Edge it forms the union Million Cut."
+          },
           "priority": 1
         },
         {
           "id": "thousand-edge",
-          "reason": "Partner für die Union Million Cut.",
+          "reason": {
+            "de": "Partner für die Union Million Cut.",
+            "en": "Partner for the union Million Cut."
+          },
           "priority": 1
         }
       ],
@@ -936,12 +1269,18 @@
       "weapons": [
         {
           "id": "kaiser-knuckle",
-          "reason": "Startwaffe; zusammen mit Tri-Bracelet entsteht die Union Lapiste Tepisto.",
+          "reason": {
+            "de": "Startwaffe; zusammen mit Tri-Bracelet entsteht die Union Lapiste Tepisto.",
+            "en": "Starting weapon; together with Tri-Bracelet it forms the union Lapiste Tepisto."
+          },
           "priority": 1
         },
         {
           "id": "tri-bracelet",
-          "reason": "Partner für die Union Lapiste Tepisto.",
+          "reason": {
+            "de": "Partner für die Union Lapiste Tepisto.",
+            "en": "Partner for the union Lapiste Tepisto."
+          },
           "priority": 1
         }
       ],
@@ -953,22 +1292,34 @@
       "weapons": [
         {
           "id": "endo-gears",
-          "reason": "Startwaffe; zusammen mit Peri Pendulum, Myo Lift, Epi Head entsteht die Union Clock Tower.",
+          "reason": {
+            "de": "Startwaffe; zusammen mit Peri Pendulum, Myo Lift, Epi Head entsteht die Union Clock Tower.",
+            "en": "Starting weapon; together with Peri Pendulum, Myo Lift, Epi Head it forms the union Clock Tower."
+          },
           "priority": 1
         },
         {
           "id": "peri-pendulum",
-          "reason": "Partner für die Union Clock Tower.",
+          "reason": {
+            "de": "Partner für die Union Clock Tower.",
+            "en": "Partner for the union Clock Tower."
+          },
           "priority": 1
         },
         {
           "id": "myo-lift",
-          "reason": "Partner für die Union Clock Tower.",
+          "reason": {
+            "de": "Partner für die Union Clock Tower.",
+            "en": "Partner for the union Clock Tower."
+          },
           "priority": 1
         },
         {
           "id": "epi-head",
-          "reason": "Partner für die Union Clock Tower.",
+          "reason": {
+            "de": "Partner für die Union Clock Tower.",
+            "en": "Partner for the union Clock Tower."
+          },
           "priority": 1
         }
       ],
@@ -980,12 +1331,18 @@
       "weapons": [
         {
           "id": "grand-cross",
-          "reason": "Startwaffe; zusammen mit Heaven Sword entsteht die Union Arch Angle.",
+          "reason": {
+            "de": "Startwaffe; zusammen mit Himmelsschwert entsteht die Union Arch Angle.",
+            "en": "Starting weapon; together with Heaven Sword it forms the union Arch Angle."
+          },
           "priority": 1
         },
         {
           "id": "heaven-sword",
-          "reason": "Partner für die Union Arch Angle.",
+          "reason": {
+            "de": "Partner für die Union Arch Angle.",
+            "en": "Partner for the union Arch Angle."
+          },
           "priority": 1
         }
       ],
@@ -997,29 +1354,44 @@
       "weapons": [
         {
           "id": "javelin",
-          "reason": "Startwaffe; mit Spellbinder wird sie zu Long Inus.",
+          "reason": {
+            "de": "Startwaffe; mit Zauberbinder wird sie zu Long Inus.",
+            "en": "Starting weapon; with Spellbinder it becomes Long Inus."
+          },
           "priority": 1
         },
         {
           "id": "morning-star",
-          "reason": "Startwaffe.",
+          "reason": {
+            "de": "Startwaffe.",
+            "en": "Starting weapon."
+          },
           "priority": 1
         },
         {
           "id": "coat-of-arms",
-          "reason": "Startwaffe.",
+          "reason": {
+            "de": "Startwaffe.",
+            "en": "Starting weapon."
+          },
           "priority": 1
         },
         {
           "id": "spectral-sword",
-          "reason": "Startwaffe.",
+          "reason": {
+            "de": "Startwaffe.",
+            "en": "Starting weapon."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "spellbinder",
-          "reason": "Nötig für Long Inus.",
+          "reason": {
+            "de": "Nötig für Long Inus.",
+            "en": "Needed for Long Inus."
+          },
           "priority": 1
         }
       ]
@@ -1030,19 +1402,28 @@
       "weapons": [
         {
           "id": "raging-fire",
-          "reason": "Startwaffe; mit Spinach wird sie zu Salamender.",
+          "reason": {
+            "de": "Startwaffe; mit Spinat wird sie zu Salamender.",
+            "en": "Starting weapon; with Spinach it becomes Salamender."
+          },
           "priority": 1
         },
         {
           "id": "belnades-spellbook",
-          "reason": "Startwaffe.",
+          "reason": {
+            "de": "Startwaffe.",
+            "en": "Starting weapon."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "spinach",
-          "reason": "Nötig für Salamender.",
+          "reason": {
+            "de": "Nötig für Salamender.",
+            "en": "Needed for Salamender."
+          },
           "priority": 1
         }
       ]
@@ -1053,7 +1434,10 @@
       "weapons": [
         {
           "id": "pneuma-tempestas",
-          "reason": "Startwaffe.",
+          "reason": {
+            "de": "Startwaffe.",
+            "en": "Starting weapon."
+          },
           "priority": 1
         }
       ],
@@ -1065,7 +1449,10 @@
       "weapons": [
         {
           "id": "cocytus",
-          "reason": "Startwaffe.",
+          "reason": {
+            "de": "Startwaffe.",
+            "en": "Starting weapon."
+          },
           "priority": 1
         }
       ],
@@ -1077,7 +1464,10 @@
       "weapons": [
         {
           "id": "pneuma-tempestas",
-          "reason": "Startwaffe.",
+          "reason": {
+            "de": "Startwaffe.",
+            "en": "Starting weapon."
+          },
           "priority": 1
         }
       ],
@@ -1089,7 +1479,10 @@
       "weapons": [
         {
           "id": "cocytus",
-          "reason": "Startwaffe.",
+          "reason": {
+            "de": "Startwaffe.",
+            "en": "Starting weapon."
+          },
           "priority": 1
         }
       ],
@@ -1101,7 +1494,10 @@
       "weapons": [
         {
           "id": "ebony-diabologue",
-          "reason": "Startwaffe.",
+          "reason": {
+            "de": "Startwaffe.",
+            "en": "Starting weapon."
+          },
           "priority": 1
         }
       ],
@@ -1113,34 +1509,52 @@
       "weapons": [
         {
           "id": "jet-black-whip",
-          "reason": "Startwaffe; mit Stone Mask wird sie zu Mormegil Tip.",
+          "reason": {
+            "de": "Startwaffe; mit Steinmaske wird sie zu Mormegil Tip.",
+            "en": "Starting weapon; with Stone Mask it becomes Mormegil Tip."
+          },
           "priority": 1
         },
         {
           "id": "vibhuti-whip",
-          "reason": "Startwaffe; mit Candelabrador wird sie zu Daybreaker Tip.",
+          "reason": {
+            "de": "Startwaffe; mit Kandelabrador wird sie zu Daybreaker Tip.",
+            "en": "Starting weapon; with Candelabrador it becomes Daybreaker Tip."
+          },
           "priority": 1
         },
         {
           "id": "vanitas-whip",
-          "reason": "Startwaffe; mit Hollow Heart wird sie zu Aurablaster Tip.",
+          "reason": {
+            "de": "Startwaffe; mit Hohlherz wird sie zu Aurablaster Tip.",
+            "en": "Starting weapon; with Hollow Heart it becomes Aurablaster Tip."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "stone-mask",
-          "reason": "Nötig für Mormegil Tip.",
+          "reason": {
+            "de": "Nötig für Mormegil Tip.",
+            "en": "Needed for Mormegil Tip."
+          },
           "priority": 1
         },
         {
           "id": "candelabrador",
-          "reason": "Nötig für Daybreaker Tip.",
+          "reason": {
+            "de": "Nötig für Daybreaker Tip.",
+            "en": "Needed for Daybreaker Tip."
+          },
           "priority": 1
         },
         {
           "id": "hollow-heart",
-          "reason": "Nötig für Aurablaster Tip.",
+          "reason": {
+            "de": "Nötig für Aurablaster Tip.",
+            "en": "Needed for Aurablaster Tip."
+          },
           "priority": 1
         }
       ]
@@ -1151,7 +1565,10 @@
       "weapons": [
         {
           "id": "salamender",
-          "reason": "Startwaffe.",
+          "reason": {
+            "de": "Startwaffe.",
+            "en": "Starting weapon."
+          },
           "priority": 1
         }
       ],
@@ -1163,7 +1580,10 @@
       "weapons": [
         {
           "id": "ebony-diabologue",
-          "reason": "Startwaffe.",
+          "reason": {
+            "de": "Startwaffe.",
+            "en": "Starting weapon."
+          },
           "priority": 1
         }
       ],
@@ -1175,24 +1595,36 @@
       "weapons": [
         {
           "id": "luminatio",
-          "reason": "Startwaffe; mit Crown wird sie zu Vol Luminatio.",
+          "reason": {
+            "de": "Startwaffe; mit Krone wird sie zu Vol Luminatio.",
+            "en": "Starting weapon; with Crown it becomes Vol Luminatio."
+          },
           "priority": 1
         },
         {
           "id": "umbra",
-          "reason": "Startwaffe; mit Attractorb wird sie zu Vol Umbra.",
+          "reason": {
+            "de": "Startwaffe; mit Anziehungskugel wird sie zu Vol Umbra.",
+            "en": "Starting weapon; with Attractorb it becomes Vol Umbra."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "crown",
-          "reason": "Nötig für Vol Luminatio.",
+          "reason": {
+            "de": "Nötig für Vol Luminatio.",
+            "en": "Needed for Vol Luminatio."
+          },
           "priority": 1
         },
         {
           "id": "attractorb",
-          "reason": "Nötig für Vol Umbra.",
+          "reason": {
+            "de": "Nötig für Vol Umbra.",
+            "en": "Needed for Vol Umbra."
+          },
           "priority": 1
         }
       ]
@@ -1203,12 +1635,18 @@
       "weapons": [
         {
           "id": "vol-umbra",
-          "reason": "Startwaffe; entwickelt sich zu Universitas.",
+          "reason": {
+            "de": "Startwaffe; entwickelt sich zu Universitas.",
+            "en": "Starting weapon; evolves into Universitas."
+          },
           "priority": 1
         },
         {
           "id": "vol-luminatio",
-          "reason": "Partner für die Union Universitas.",
+          "reason": {
+            "de": "Partner für die Union Universitas.",
+            "en": "Partner for the union Universitas."
+          },
           "priority": 1
         }
       ],
@@ -1220,14 +1658,20 @@
       "weapons": [
         {
           "id": "pocket-knife",
-          "reason": "Startwaffe; mit Torrona's Box wird sie zu Claimh Solais.",
+          "reason": {
+            "de": "Startwaffe; mit Torrona's Box wird sie zu Claimh Solais.",
+            "en": "Starting weapon; with Torrona's Box it becomes Claimh Solais."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "torrona-s-box",
-          "reason": "Nötig für Claimh Solais.",
+          "reason": {
+            "de": "Nötig für Claimh Solais.",
+            "en": "Needed for Claimh Solais."
+          },
           "priority": 1
         }
       ]
@@ -1238,7 +1682,10 @@
       "weapons": [
         {
           "id": "rune-sword",
-          "reason": "Startwaffe.",
+          "reason": {
+            "de": "Startwaffe.",
+            "en": "Starting weapon."
+          },
           "priority": 1
         }
       ],
@@ -1250,7 +1697,10 @@
       "weapons": [
         {
           "id": "nitesco",
-          "reason": "Startwaffe.",
+          "reason": {
+            "de": "Startwaffe.",
+            "en": "Starting weapon."
+          },
           "priority": 1
         }
       ],
@@ -1262,12 +1712,18 @@
       "weapons": [
         {
           "id": "troll-bomb",
-          "reason": "Startwaffe; zusammen mit NO FUTURE entsteht die Union Carnage Heart.",
+          "reason": {
+            "de": "Startwaffe; zusammen mit NO FUTURE entsteht die Union Carnage Heart.",
+            "en": "Starting weapon; together with NO FUTURE it forms the union Carnage Heart."
+          },
           "priority": 1
         },
         {
           "id": "no-future",
-          "reason": "Partner für die Union Carnage Heart.",
+          "reason": {
+            "de": "Partner für die Union Carnage Heart.",
+            "en": "Partner for the union Carnage Heart."
+          },
           "priority": 1
         }
       ],
@@ -1279,14 +1735,20 @@
       "weapons": [
         {
           "id": "axe",
-          "reason": "Startwaffe; mit Candelabrador wird sie zu Death Spiral.",
+          "reason": {
+            "de": "Startwaffe; mit Kandelabrador wird sie zu Todesspirale.",
+            "en": "Starting weapon; with Candelabrador it becomes Death Spiral."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "candelabrador",
-          "reason": "Nötig für Death Spiral.",
+          "reason": {
+            "de": "Nötig für Todesspirale.",
+            "en": "Needed for Death Spiral."
+          },
           "priority": 1
         }
       ]
@@ -1297,12 +1759,18 @@
       "weapons": [
         {
           "id": "icebrand",
-          "reason": "Startwaffe; zusammen mit Unholy Vespers entsteht die Union Ninth Circle.",
+          "reason": {
+            "de": "Startwaffe; zusammen mit Unheilige Vesper entsteht die Union Ninth Circle.",
+            "en": "Starting weapon; together with Unholy Vespers it forms the union Ninth Circle."
+          },
           "priority": 1
         },
         {
           "id": "unholy-vespers",
-          "reason": "Partner für die Union Ninth Circle.",
+          "reason": {
+            "de": "Partner für die Union Ninth Circle.",
+            "en": "Partner for the union Ninth Circle."
+          },
           "priority": 1
         }
       ],
@@ -1314,12 +1782,18 @@
       "weapons": [
         {
           "id": "arrow-of-goth",
-          "reason": "Startwaffe; zusammen mit Mannajja entsteht die Union Dies Irae.",
+          "reason": {
+            "de": "Startwaffe; zusammen mit Mannajja entsteht die Union Dies Irae.",
+            "en": "Starting weapon; together with Mannajja it forms the union Dies Irae."
+          },
           "priority": 1
         },
         {
           "id": "mannajja",
-          "reason": "Partner für die Union Dies Irae.",
+          "reason": {
+            "de": "Partner für die Union Dies Irae.",
+            "en": "Partner for the union Dies Irae."
+          },
           "priority": 1
         }
       ],
@@ -1331,12 +1805,18 @@
       "weapons": [
         {
           "id": "sword-brothers",
-          "reason": "Startwaffe; zusammen mit Thunder Loop entsteht die Union Vjaya Sisters.",
+          "reason": {
+            "de": "Startwaffe; zusammen mit Donnerschlinge entsteht die Union Vjaya Sisters.",
+            "en": "Starting weapon; together with Thunder Loop it forms the union Vjaya Sisters."
+          },
           "priority": 1
         },
         {
           "id": "thunder-loop",
-          "reason": "Partner für die Union Vjaya Sisters.",
+          "reason": {
+            "de": "Partner für die Union Vjaya Sisters.",
+            "en": "Partner for the union Vjaya Sisters."
+          },
           "priority": 1
         }
       ],
@@ -1348,12 +1828,18 @@
       "weapons": [
         {
           "id": "summon-spirit-tornado",
-          "reason": "Startwaffe; zusammen mit Gorgeous Moon entsteht die Union Venus Crescent.",
+          "reason": {
+            "de": "Startwaffe; zusammen mit Prächtiger Mond entsteht die Union Venus Crescent.",
+            "en": "Starting weapon; together with Gorgeous Moon it forms the union Venus Crescent."
+          },
           "priority": 1
         },
         {
           "id": "gorgeous-moon",
-          "reason": "Partner für die Union Venus Crescent.",
+          "reason": {
+            "de": "Partner für die Union Venus Crescent.",
+            "en": "Partner for the union Venus Crescent."
+          },
           "priority": 1
         }
       ],
@@ -1365,7 +1851,10 @@
       "weapons": [
         {
           "id": "keremet-morbus",
-          "reason": "Startwaffe.",
+          "reason": {
+            "de": "Startwaffe.",
+            "en": "Starting weapon."
+          },
           "priority": 1
         }
       ],
@@ -1377,12 +1866,18 @@
       "weapons": [
         {
           "id": "anura",
-          "reason": "Startwaffe; zusammen mit Soul Eater entsteht die Union Dark Frogamorphosis.",
+          "reason": {
+            "de": "Startwaffe; zusammen mit Seelenfresser entsteht die Union Dark Frogamorphosis.",
+            "en": "Starting weapon; together with Soul Eater it forms the union Dark Frogamorphosis."
+          },
           "priority": 1
         },
         {
           "id": "soul-eater",
-          "reason": "Partner für die Union Dark Frogamorphosis.",
+          "reason": {
+            "de": "Partner für die Union Dark Frogamorphosis.",
+            "en": "Partner for the union Dark Frogamorphosis."
+          },
           "priority": 1
         }
       ],
@@ -1394,7 +1889,10 @@
       "weapons": [
         {
           "id": "gemma-torpor",
-          "reason": "Startwaffe.",
+          "reason": {
+            "de": "Startwaffe.",
+            "en": "Starting weapon."
+          },
           "priority": 1
         }
       ],
@@ -1406,12 +1904,18 @@
       "weapons": [
         {
           "id": "hydro-storm",
-          "reason": "Startwaffe; zusammen mit La Borra entsteht die Union Hydro Pump Climax.",
+          "reason": {
+            "de": "Startwaffe; zusammen mit La Borra entsteht die Union Hydro Pump Climax.",
+            "en": "Starting weapon; together with La Borra it forms the union Hydro Pump Climax."
+          },
           "priority": 1
         },
         {
           "id": "la-borra",
-          "reason": "Partner für die Union Hydro Pump Climax.",
+          "reason": {
+            "de": "Partner für die Union Hydro Pump Climax.",
+            "en": "Partner for the union Hydro Pump Climax."
+          },
           "priority": 1
         }
       ],
@@ -1423,7 +1927,10 @@
       "weapons": [
         {
           "id": "nightmare",
-          "reason": "Startwaffe.",
+          "reason": {
+            "de": "Startwaffe.",
+            "en": "Starting weapon."
+          },
           "priority": 1
         }
       ],
@@ -1435,24 +1942,36 @@
       "weapons": [
         {
           "id": "bone",
-          "reason": "Startwaffe.",
+          "reason": {
+            "de": "Startwaffe.",
+            "en": "Starting weapon."
+          },
           "priority": 1
         },
         {
           "id": "bracelet",
-          "reason": "Startwaffe; entwickelt sich zu Bi-Bracelet.",
+          "reason": {
+            "de": "Startwaffe; entwickelt sich zu Bi-Bracelet.",
+            "en": "Starting weapon; evolves into Bi-Bracelet."
+          },
           "priority": 1
         },
         {
           "id": "pocket-knife",
-          "reason": "Startwaffe; mit Torrona's Box wird sie zu Claimh Solais.",
+          "reason": {
+            "de": "Startwaffe; mit Torrona's Box wird sie zu Claimh Solais.",
+            "en": "Starting weapon; with Torrona's Box it becomes Claimh Solais."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "torrona-s-box",
-          "reason": "Nötig für Claimh Solais.",
+          "reason": {
+            "de": "Nötig für Claimh Solais.",
+            "en": "Needed for Claimh Solais."
+          },
           "priority": 1
         }
       ]
@@ -1463,24 +1982,36 @@
       "weapons": [
         {
           "id": "trident",
-          "reason": "Startwaffe; mit Duplicator wird sie zu Gungnir-Souris.",
+          "reason": {
+            "de": "Startwaffe; mit Verdoppler wird sie zu Gungnir-Souris.",
+            "en": "Starting weapon; with Duplicator it becomes Gungnir-Souris."
+          },
           "priority": 1
         },
         {
           "id": "fire-wand",
-          "reason": "Startwaffe; mit Spinach wird sie zu Hellfire.",
+          "reason": {
+            "de": "Startwaffe; mit Spinat wird sie zu Höllenfeuer.",
+            "en": "Starting weapon; with Spinach it becomes Hellfire."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "duplicator",
-          "reason": "Nötig für Gungnir-Souris.",
+          "reason": {
+            "de": "Nötig für Gungnir-Souris.",
+            "en": "Needed for Gungnir-Souris."
+          },
           "priority": 1
         },
         {
           "id": "spinach",
-          "reason": "Nötig für Hellfire.",
+          "reason": {
+            "de": "Nötig für Höllenfeuer.",
+            "en": "Needed for Hellfire."
+          },
           "priority": 1
         }
       ]
@@ -1491,14 +2022,20 @@
       "weapons": [
         {
           "id": "knife",
-          "reason": "Startwaffe; mit Bracer wird sie zu Thousand Edge.",
+          "reason": {
+            "de": "Startwaffe; mit Armschiene wird sie zu Tausendschneide.",
+            "en": "Starting weapon; with Bracer it becomes Thousand Edge."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "bracer",
-          "reason": "Nötig für Thousand Edge.",
+          "reason": {
+            "de": "Nötig für Tausendschneide.",
+            "en": "Needed for Thousand Edge."
+          },
           "priority": 1
         }
       ]
@@ -1509,12 +2046,18 @@
       "weapons": [
         {
           "id": "soul-steal",
-          "reason": "Startwaffe; zusammen mit Vicious Hunger entsteht die Union Power of Lire.",
+          "reason": {
+            "de": "Startwaffe; zusammen mit Vicious Hunger entsteht die Union Power of Lire.",
+            "en": "Starting weapon; together with Vicious Hunger it forms the union Power of Lire."
+          },
           "priority": 1
         },
         {
           "id": "vicious-hunger",
-          "reason": "Partner für die Union Power of Lire.",
+          "reason": {
+            "de": "Partner für die Union Power of Lire.",
+            "en": "Partner for the union Power of Lire."
+          },
           "priority": 1
         }
       ],
@@ -1526,12 +2069,18 @@
       "weapons": [
         {
           "id": "summon-spirit",
-          "reason": "Startwaffe; zusammen mit Holy Wand entsteht die Union Spirit of Light.",
+          "reason": {
+            "de": "Startwaffe; zusammen mit Heiliger Zauberstab entsteht die Union Spirit of Light.",
+            "en": "Starting weapon; together with Holy Wand it forms the union Spirit of Light."
+          },
           "priority": 1
         },
         {
           "id": "holy-wand",
-          "reason": "Partner für die Union Spirit of Light.",
+          "reason": {
+            "de": "Partner für die Union Spirit of Light.",
+            "en": "Partner for the union Spirit of Light."
+          },
           "priority": 1
         }
       ],
@@ -1543,12 +2092,18 @@
       "weapons": [
         {
           "id": "dark-rift",
-          "reason": "Startwaffe; zusammen mit Death Spiral entsteht die Union Legacy of Death: Soul River.",
+          "reason": {
+            "de": "Startwaffe; zusammen mit Todesspirale entsteht die Union Legacy of Death: Soul River.",
+            "en": "Starting weapon; together with Death Spiral it forms the union Legacy of Death: Soul River."
+          },
           "priority": 1
         },
         {
           "id": "death-spiral",
-          "reason": "Partner für die Union Legacy of Death: Soul River.",
+          "reason": {
+            "de": "Partner für die Union Legacy of Death: Soul River.",
+            "en": "Partner for the union Legacy of Death: Soul River."
+          },
           "priority": 1
         }
       ],
@@ -1560,12 +2115,18 @@
       "weapons": [
         {
           "id": "death-spiral",
-          "reason": "Startwaffe; zusammen mit Dark Rift entsteht die Union Legacy of Death: Soul River.",
+          "reason": {
+            "de": "Startwaffe; zusammen mit Dark Rift entsteht die Union Legacy of Death: Soul River.",
+            "en": "Starting weapon; together with Dark Rift it forms the union Legacy of Death: Soul River."
+          },
           "priority": 1
         },
         {
           "id": "dark-rift",
-          "reason": "Partner für die Union Legacy of Death: Soul River.",
+          "reason": {
+            "de": "Partner für die Union Legacy of Death: Soul River.",
+            "en": "Partner for the union Legacy of Death: Soul River."
+          },
           "priority": 1
         }
       ],
@@ -1577,7 +2138,10 @@
       "weapons": [
         {
           "id": "tenebris-tonitrus",
-          "reason": "Startwaffe.",
+          "reason": {
+            "de": "Startwaffe.",
+            "en": "Starting weapon."
+          },
           "priority": 1
         }
       ],
@@ -1589,12 +2153,18 @@
       "weapons": [
         {
           "id": "belnades-spellbook",
-          "reason": "Startwaffe.",
+          "reason": {
+            "de": "Startwaffe.",
+            "en": "Starting weapon."
+          },
           "priority": 1
         },
         {
           "id": "ebony-diabologue",
-          "reason": "Startwaffe.",
+          "reason": {
+            "de": "Startwaffe.",
+            "en": "Starting weapon."
+          },
           "priority": 1
         }
       ],
@@ -1606,12 +2176,18 @@
       "weapons": [
         {
           "id": "dark-rift",
-          "reason": "Startwaffe; zusammen mit Death Spiral entsteht die Union Legacy of Death: Soul River.",
+          "reason": {
+            "de": "Startwaffe; zusammen mit Todesspirale entsteht die Union Legacy of Death: Soul River.",
+            "en": "Starting weapon; together with Death Spiral it forms the union Legacy of Death: Soul River."
+          },
           "priority": 1
         },
         {
           "id": "death-spiral",
-          "reason": "Partner für die Union Legacy of Death: Soul River.",
+          "reason": {
+            "de": "Partner für die Union Legacy of Death: Soul River.",
+            "en": "Partner for the union Legacy of Death: Soul River."
+          },
           "priority": 1
         }
       ],
@@ -1623,12 +2199,18 @@
       "weapons": [
         {
           "id": "death-spiral",
-          "reason": "Startwaffe; zusammen mit Dark Rift entsteht die Union Legacy of Death: Soul River.",
+          "reason": {
+            "de": "Startwaffe; zusammen mit Dark Rift entsteht die Union Legacy of Death: Soul River.",
+            "en": "Starting weapon; together with Dark Rift it forms the union Legacy of Death: Soul River."
+          },
           "priority": 1
         },
         {
           "id": "dark-rift",
-          "reason": "Partner für die Union Legacy of Death: Soul River.",
+          "reason": {
+            "de": "Partner für die Union Legacy of Death: Soul River.",
+            "en": "Partner for the union Legacy of Death: Soul River."
+          },
           "priority": 1
         }
       ],
@@ -1640,14 +2222,20 @@
       "weapons": [
         {
           "id": "wine-glass",
-          "reason": "Startwaffe; mit Tirajisú wird sie zu Meal Ticket.",
+          "reason": {
+            "de": "Startwaffe; mit Tirajisú wird sie zu Meal Ticket.",
+            "en": "Starting weapon; with Tirajisú it becomes Meal Ticket."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "tirajisu",
-          "reason": "Nötig für Meal Ticket.",
+          "reason": {
+            "de": "Nötig für Meal Ticket.",
+            "en": "Needed for Meal Ticket."
+          },
           "priority": 1
         }
       ]
@@ -1658,7 +2246,10 @@
       "weapons": [
         {
           "id": "infinite-corridor",
-          "reason": "Startwaffe.",
+          "reason": {
+            "de": "Startwaffe.",
+            "en": "Starting weapon."
+          },
           "priority": 1
         }
       ],

@@ -4,8 +4,12 @@
     {
       "id": "weapon-power-up",
       "name": "Weapon Power-Up",
+      "nameDeHint": "Waffen-Power-up",
       "source": "operation-guns",
-      "description": "Erhöht eine zufällige ausgerüstete Waffe um eine Stufe und gibt +1 Wiederbelebung; belegt keinen Slot.",
+      "description": {
+        "de": "Erhöht eine zufällige ausgerüstete Waffe um eine Stufe und gibt +1 Wiederbelebung; belegt keinen Slot.",
+        "en": "Levels up a random equipped weapon. Gives +1 Revival. Does not occupy a weapon slot"
+      },
       "maxLevel": 1,
       "noSlot": true,
       "emoji": "⬆️",

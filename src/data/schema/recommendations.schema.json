@@ -12,7 +12,7 @@
       "properties": {
         "id": { "$ref": "common.schema.json#/definitions/id" },
         "reason": {
-          "$ref": "common.schema.json#/definitions/text",
+          "$ref": "common.schema.json#/definitions/localizedText",
           "description": "Kurze Begründung, z. B. Synergie mit dem Bonus des Charakters."
         },
         "priority": {
@@ -33,7 +33,7 @@
         "properties": {
           "character": { "$ref": "common.schema.json#/definitions/id" },
           "source": { "$ref": "common.schema.json#/definitions/source" },
-          "summary": { "type": "string", "description": "Spielstil in ein bis zwei Sätzen." },
+          "summary": { "$ref": "common.schema.json#/definitions/localizedText", "description": "Spielstil in ein bis zwei Sätzen." },
           "weapons": { "type": "array", "items": { "$ref": "#/definitions/item" } },
           "passives": { "type": "array", "items": { "$ref": "#/definitions/item" } }
         }

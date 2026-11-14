@@ -4,11 +4,15 @@
     {
       "id": "crewmate-dino",
       "name": "Crewmate Dino",
+      "nameDeHint": "Crewmitglied Dino",
       "source": "emergency-meeting",
       "startingWeapons": [
         "report"
       ],
-      "bonus": "Erhält Werte-Boni, sobald irgendeine Waffe die Maximalstufe erreicht.",
+      "bonus": {
+        "de": "Erhält Werte-Boni, sobald irgendeine Waffe die Maximalstufe erreicht.",
+        "en": "Gains stat bonuses every time anyone's weapon is brought to max level."
+      },
       "secret": false,
       "emoji": "🧑‍🚀",
       "image": "https://vampire.survivors.wiki/images/Select-Crewmate_Dino.png",
@@ -17,11 +21,15 @@
     {
       "id": "engineer-gino",
       "name": "Engineer Gino",
+      "nameDeHint": "Ingenieur Gino",
       "source": "emergency-meeting",
       "startingWeapons": [
         "lucky-swipe"
       ],
-      "bonus": "Wählt auf Level 2, 12 und 22 einen zusätzlichen passiven Gegenstand.",
+      "bonus": {
+        "de": "Wählt auf Level 2, 12 und 22 einen zusätzlichen passiven Gegenstand.",
+        "en": "Chooses an extra passive weapon at level 2, 12, and 22."
+      },
       "secret": false,
       "emoji": "🔧",
       "image": "https://vampire.survivors.wiki/images/Select-Engineer_Gino.png",
@@ -30,11 +38,15 @@
     {
       "id": "ghost-lino",
       "name": "Ghost Lino",
+      "nameDeHint": "Geist Lino",
       "source": "emergency-meeting",
       "startingWeapons": [
         "lifesign-scan"
       ],
-      "bonus": "Kann weder Schaden nehmen noch austeilen, verschwindet aber beim Zeitlimit; ignoriert Wände.",
+      "bonus": {
+        "de": "Kann weder Schaden nehmen noch austeilen, verschwindet aber beim Zeitlimit; ignoriert Wände.",
+        "en": "Can't be damaged or deal damage, but disappears after reaching the current Time Limit. Ignores walls."
+      },
       "secret": false,
       "emoji": "👻",
       "image": "https://vampire.survivors.wiki/images/Select-Ghost_Lino.png",
@@ -43,11 +55,15 @@
     {
       "id": "shapeshifter-nino",
       "name": "Shapeshifter Nino",
+      "nameDeHint": "Gestaltwandler Nino",
       "source": "emergency-meeting",
       "startingWeapons": [
         "just-vent"
       ],
-      "bonus": "Hinterlässt bei Schaden überzählige Körperteile und kann die Gestalt wechseln.",
+      "bonus": {
+        "de": "Hinterlässt bei Schaden überzählige Körperteile und kann die Gestalt wechseln.",
+        "en": "Leaves behind excess body parts when damaged and may shift forms."
+      },
       "secret": false,
       "emoji": "🫥",
       "image": "https://vampire.survivors.wiki/images/Select-Shapeshifter_Nino.png",
@@ -56,11 +72,15 @@
     {
       "id": "guardian-pina",
       "name": "Guardian Pina",
+      "nameDeHint": "Wächterin Pina",
       "source": "emergency-meeting",
       "startingWeapons": [
         "clear-debris"
       ],
-      "bonus": "Kann +1 Wiederbelebung erhalten, wenn jemand wiederbelebt wird; erhöht Rüstung und Regeneration in der Nähe; ignoriert Wände.",
+      "bonus": {
+        "de": "Kann +1 Wiederbelebung erhalten, wenn jemand wiederbelebt wird; erhöht Rüstung und Regeneration in der Nähe; ignoriert Wände.",
+        "en": "May gain +1 Revival when anyone revives. Increases Armor and Recovery of nearby characters. Ignores walls."
+      },
       "secret": false,
       "emoji": "🛡️",
       "image": "https://vampire.survivors.wiki/images/Select-Guardian_Pina.png",
@@ -69,11 +89,15 @@
     {
       "id": "impostor-rina",
       "name": "Impostor Rina",
+      "nameDeHint": "Hochstaplerin Rina",
       "source": "emergency-meeting",
       "startingWeapons": [
         "sharp-tongue"
       ],
-      "bonus": "Wird nach vielen besiegten Gegnern oder einem besiegten Verbündeten stärker und kurz unverwundbar.",
+      "bonus": {
+        "de": "Wird nach vielen besiegten Gegnern oder einem besiegten Verbündeten stärker und kurz unverwundbar.",
+        "en": "Becomes stronger and briefly invincible after defeating a large amount of enemies, or an ally."
+      },
       "secret": false,
       "emoji": "🔪",
       "image": "https://vampire.survivors.wiki/images/Select-Impostor_Rina.png",
@@ -82,11 +106,15 @@
     {
       "id": "scientist-mina",
       "name": "Scientist Mina",
+      "nameDeHint": "Wissenschaftlerin Mina",
       "source": "emergency-meeting",
       "startingWeapons": [
         "science-rocks"
       ],
-      "bonus": "Alle 10 Level −10 % Glück (max. −90 %); kann alle 10 Level einen Bonus pro Level wählen (max. 5-mal).",
+      "bonus": {
+        "de": "Alle 10 Level −10 % Glück (max. −90 %); kann alle 10 Level einen Bonus pro Level wählen (max. 5-mal).",
+        "en": "Gets -10% Luck every 10 levels (max -90%). Can choose a per-level bonus every 10 levels (max 5 times)."
+      },
       "secret": false,
       "emoji": "🧪",
       "image": "https://vampire.survivors.wiki/images/Select-Scientist_Mina.png",
@@ -95,11 +123,15 @@
     {
       "id": "horse",
       "name": "Horse",
+      "nameDeHint": "Pferd",
       "source": "emergency-meeting",
       "startingWeapons": [
         "hats"
       ],
-      "bonus": "Erhält alle 20 Level mehr Projektile (max. +4).",
+      "bonus": {
+        "de": "Erhält alle 20 Level mehr Projektile (max. +4).",
+        "en": "Gets more projectiles every 20 levels (max +4)."
+      },
       "secret": false,
       "emoji": "🐴",
       "image": "https://vampire.survivors.wiki/images/Select-Horse.png",
@@ -108,14 +140,21 @@
     {
       "id": "megalo-impostor-rina",
       "name": "Megalo Impostor Rina",
+      "nameDeHint": "Megalo-Hochstaplerin Rina",
       "source": "emergency-meeting",
       "startingWeapons": [],
-      "bonus": "„Ich bin nicht der Impostor.“",
+      "bonus": {
+        "de": "„Ich bin nicht der Impostor.“",
+        "en": "I'm not the Impostor."
+      },
       "secret": false,
       "emoji": "🟥",
       "image": "https://vampire.survivors.wiki/images/Select-Megalo_Impostor_Rina.png",
       "verified": true,
-      "note": "Versteckte Waffe: Sharp Tongue."
+      "note": {
+        "de": "Versteckte Waffe: Sharp Tongue.",
+        "en": "Hidden weapon: Sharp Tongue."
+      }
     }
   ]
 }

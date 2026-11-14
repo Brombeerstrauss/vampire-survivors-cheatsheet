@@ -24,6 +24,13 @@ Das heißt:
 - **Weitergabe unter gleichen Bedingungen:** Veränderte Fassungen stehen wieder unter
   CC BY-NC-SA 3.0.
 
+## Offizielle deutsche Namen
+
+Die offiziellen deutschen Namen und Texte stammen aus poncles öffentlicher
+Lokalisierungs-Tabelle (verlinkt in
+[github.com/Poncle/vampire-survivors-localisation](https://github.com/Poncle/vampire-survivors-localisation)).
+Sie gehören wie alle Texte aus dem Spiel poncle.
+
 ## Inhalte von poncle
 
 Vampire Survivors, die Namen von Charakteren, Waffen und Gegenständen sowie die Texte und

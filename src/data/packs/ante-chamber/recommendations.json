@@ -7,14 +7,20 @@
       "weapons": [
         {
           "id": "infernolatro",
-          "reason": "Startwaffe; mit Outer Saboteur wird sie zu NaneInferno.",
+          "reason": {
+            "de": "Startwaffe; mit Outer Saboteur wird sie zu NaneInferno.",
+            "en": "Starting weapon; with Outer Saboteur it becomes NaneInferno."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "outer-saboteur",
-          "reason": "Nötig für NaneInferno.",
+          "reason": {
+            "de": "Nötig für NaneInferno.",
+            "en": "Needed for NaneInferno."
+          },
           "priority": 1
         }
       ]
@@ -25,14 +31,20 @@
       "weapons": [
         {
           "id": "fibonacci-spritz",
-          "reason": "Startwaffe; mit Outer Saboteur wird sie zu Royal Flush.",
+          "reason": {
+            "de": "Startwaffe; mit Outer Saboteur wird sie zu Royal Flush.",
+            "en": "Starting weapon; with Outer Saboteur it becomes Royal Flush."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "outer-saboteur",
-          "reason": "Nötig für Royal Flush.",
+          "reason": {
+            "de": "Nötig für Royal Flush.",
+            "en": "Needed for Royal Flush."
+          },
           "priority": 1
         }
       ]
@@ -43,14 +55,20 @@
       "weapons": [
         {
           "id": "gros-michel",
-          "reason": "Startwaffe; mit Outer Saboteur wird sie zu Cavendish.",
+          "reason": {
+            "de": "Startwaffe; mit Outer Saboteur wird sie zu Cavendish.",
+            "en": "Starting weapon; with Outer Saboteur it becomes Cavendish."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "outer-saboteur",
-          "reason": "Nötig für Cavendish.",
+          "reason": {
+            "de": "Nötig für Cavendish.",
+            "en": "Needed for Cavendish."
+          },
           "priority": 1
         }
       ]
@@ -61,14 +79,20 @@
       "weapons": [
         {
           "id": "celestial-booster",
-          "reason": "Startwaffe; mit Outer Saboteur wird sie zu Negative Space.",
+          "reason": {
+            "de": "Startwaffe; mit Outer Saboteur wird sie zu Negative Space.",
+            "en": "Starting weapon; with Outer Saboteur it becomes Negative Space."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "outer-saboteur",
-          "reason": "Nötig für Negative Space.",
+          "reason": {
+            "de": "Nötig für Negative Space.",
+            "en": "Needed for Negative Space."
+          },
           "priority": 1
         }
       ]

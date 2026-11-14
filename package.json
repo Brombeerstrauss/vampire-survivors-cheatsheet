@@ -1,9 +1,9 @@
 {
   "name": "vampire-survivors-cheatsheet",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
-  "description": "Inoffizielle Begleit-App (PWA) für Vampire Survivors: Evolutionen, Lauf-Tracker, Empfehlungen",
+  "description": "Inoffizielle Begleit-App (PWA) für Vampire Survivors, auf Deutsch und Englisch: Entwicklungen, Lauf-Tracker, Empfehlungen",
   "license": "MIT",
   "engines": {
     "node": ">=22.12"

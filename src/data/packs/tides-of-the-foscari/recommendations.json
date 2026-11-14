@@ -7,17 +7,26 @@
       "weapons": [
         {
           "id": "spellstring",
-          "reason": "Startwaffe; zusammen mit SpellStream, SpellStrike entsteht die Union SpellStrom.",
+          "reason": {
+            "de": "Startwaffe; zusammen mit SpellStream, SpellStrike entsteht die Union SpellStrom.",
+            "en": "Starting weapon; together with SpellStream, SpellStrike it forms the union SpellStrom."
+          },
           "priority": 1
         },
         {
           "id": "spellstream",
-          "reason": "Partner für die Union SpellStrom.",
+          "reason": {
+            "de": "Partner für die Union SpellStrom.",
+            "en": "Partner for the union SpellStrom."
+          },
           "priority": 1
         },
         {
           "id": "spellstrike",
-          "reason": "Partner für die Union SpellStrom.",
+          "reason": {
+            "de": "Partner für die Union SpellStrom.",
+            "en": "Partner for the union SpellStrom."
+          },
           "priority": 1
         }
       ],
@@ -29,14 +38,20 @@
       "weapons": [
         {
           "id": "eskizzibur",
-          "reason": "Startwaffe; mit Armor wird sie zu Legionnaire.",
+          "reason": {
+            "de": "Startwaffe; mit Rüstung wird sie zu Legionnaire.",
+            "en": "Starting weapon; with Armor it becomes Legionnaire."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "armor",
-          "reason": "Nötig für Legionnaire.",
+          "reason": {
+            "de": "Nötig für Legionnaire.",
+            "en": "Needed for Legionnaire."
+          },
           "priority": 1
         }
       ]
@@ -47,14 +62,20 @@
       "weapons": [
         {
           "id": "flash-arrow",
-          "reason": "Startwaffe; mit Bracer wird sie zu Millionaire.",
+          "reason": {
+            "de": "Startwaffe; mit Armschiene wird sie zu Millionaire.",
+            "en": "Starting weapon; with Bracer it becomes Millionaire."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "bracer",
-          "reason": "Nötig für Millionaire.",
+          "reason": {
+            "de": "Nötig für Millionaire.",
+            "en": "Needed for Millionaire."
+          },
           "priority": 1
         }
       ]
@@ -65,14 +86,20 @@
       "weapons": [
         {
           "id": "prismatic-missile",
-          "reason": "Startwaffe; mit Crown wird sie zu Luminaire.",
+          "reason": {
+            "de": "Startwaffe; mit Krone wird sie zu Luminaire.",
+            "en": "Starting weapon; with Crown it becomes Luminaire."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "crown",
-          "reason": "Nötig für Luminaire.",
+          "reason": {
+            "de": "Nötig für Luminaire.",
+            "en": "Needed for Luminaire."
+          },
           "priority": 1
         }
       ]
@@ -83,14 +110,20 @@
       "weapons": [
         {
           "id": "shadow-servant",
-          "reason": "Startwaffe; mit Skull O'Maniac wird sie zu Ophion.",
+          "reason": {
+            "de": "Startwaffe; mit Schädel O'Maniac wird sie zu Ophion.",
+            "en": "Starting weapon; with Skull O'Maniac it becomes Ophion."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "skull-o-maniac",
-          "reason": "Nötig für Ophion.",
+          "reason": {
+            "de": "Nötig für Ophion.",
+            "en": "Needed for Ophion."
+          },
           "priority": 1
         }
       ]
@@ -101,14 +134,20 @@
       "weapons": [
         {
           "id": "shadow-servant",
-          "reason": "Startwaffe; mit Skull O'Maniac wird sie zu Ophion.",
+          "reason": {
+            "de": "Startwaffe; mit Schädel O'Maniac wird sie zu Ophion.",
+            "en": "Starting weapon; with Skull O'Maniac it becomes Ophion."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "skull-o-maniac",
-          "reason": "Nötig für Ophion.",
+          "reason": {
+            "de": "Nötig für Ophion.",
+            "en": "Needed for Ophion."
+          },
           "priority": 1
         }
       ]
@@ -119,12 +158,18 @@
       "weapons": [
         {
           "id": "vicious-hunger",
-          "reason": "Startwaffe; zusammen mit Soul Steal entsteht die Union Power of Lire.",
+          "reason": {
+            "de": "Startwaffe; zusammen mit Soul Steal entsteht die Union Power of Lire.",
+            "en": "Starting weapon; together with Soul Steal it forms the union Power of Lire."
+          },
           "priority": 1
         },
         {
           "id": "soul-steal",
-          "reason": "Partner für die Union Power of Lire.",
+          "reason": {
+            "de": "Partner für die Union Power of Lire.",
+            "en": "Partner for the union Power of Lire."
+          },
           "priority": 1
         }
       ],
@@ -136,7 +181,10 @@
       "weapons": [
         {
           "id": "party-popper",
-          "reason": "Startwaffe.",
+          "reason": {
+            "de": "Startwaffe.",
+            "en": "Starting weapon."
+          },
           "priority": 1
         }
       ],

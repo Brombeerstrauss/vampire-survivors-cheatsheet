@@ -4,9 +4,13 @@
     {
       "id": "spellstring",
       "name": "SpellString",
+      "nameDeHint": "Zauberfaden",
       "source": "tides-of-the-foscari",
       "kind": "base",
-      "description": "Trifft Gegner in der Nähe; der Schaden wird mit der Geschwindigkeit multipliziert.",
+      "description": {
+        "de": "Trifft Gegner in der Nähe; der Schaden wird mit der Geschwindigkeit multipliziert.",
+        "en": "Strikes at nearby enemies. Damage multiplied by Speed."
+      },
       "maxLevel": 6,
       "emoji": "🪡",
       "image": "https://vampire.survivors.wiki/images/Sprite-SpellString.png",
@@ -15,9 +19,13 @@
     {
       "id": "spellstream",
       "name": "SpellStream",
+      "nameDeHint": "Zauberstrom",
       "source": "tides-of-the-foscari",
       "kind": "base",
-      "description": "Erzeugt eine wachsende Schadenszone; der Schaden wird mit der Fläche multipliziert.",
+      "description": {
+        "de": "Erzeugt eine wachsende Schadenszone; der Schaden wird mit der Fläche multipliziert.",
+        "en": "Generates an expanding damaging zone. Damage multiplied by Area."
+      },
       "maxLevel": 6,
       "emoji": "🌊",
       "image": "https://vampire.survivors.wiki/images/Sprite-SpellStream.png",
@@ -26,9 +34,13 @@
     {
       "id": "spellstrike",
       "name": "SpellStrike",
+      "nameDeHint": "Zauberschlag",
       "source": "tides-of-the-foscari",
       "kind": "base",
-      "description": "Trifft den nächsten Gegner; der Schaden wird zusätzlich mit der Macht multipliziert.",
+      "description": {
+        "de": "Trifft den nächsten Gegner; der Schaden wird zusätzlich mit der Macht multipliziert.",
+        "en": "Strikes at the nearest enemy. Damage further multiplied by Might."
+      },
       "maxLevel": 6,
       "emoji": "⚡",
       "image": "https://vampire.survivors.wiki/images/Sprite-SpellStrike.png",
@@ -39,7 +51,10 @@
       "name": "Eskizzibur",
       "source": "tides-of-the-foscari",
       "kind": "base",
-      "description": "Greift Gegner in der Nähe an; schlägt zurück.",
+      "description": {
+        "de": "Greift Gegner in der Nähe an; schlägt zurück.",
+        "en": "Attacks nearby enemies. Retaliates."
+      },
       "maxLevel": 8,
       "emoji": "🗡️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Eskizzibur.png",
@@ -48,9 +63,13 @@
     {
       "id": "flash-arrow",
       "name": "Flash Arrow",
+      "nameDeHint": "Blitzpfeil",
       "source": "tides-of-the-foscari",
       "kind": "base",
-      "description": "Kann kritisch treffen; die Anzahl erhöht stattdessen den Schaden.",
+      "description": {
+        "de": "Kann kritisch treffen; die Anzahl erhöht stattdessen den Schaden.",
+        "en": "Can deal critical damage. Amount affects damage instead."
+      },
       "maxLevel": 8,
       "emoji": "🏹",
       "image": "https://vampire.survivors.wiki/images/Sprite-Flash_Arrow.png",
@@ -59,9 +78,13 @@
     {
       "id": "prismatic-missile",
       "name": "Prismatic Missile",
+      "nameDeHint": "Prismatisches Geschoss",
       "source": "tides-of-the-foscari",
       "kind": "base",
-      "description": "Erzeugt Explosionen um den Charakter; wird von der zuerst gewählten Arcana II, XIV oder XIX beeinflusst.",
+      "description": {
+        "de": "Erzeugt Explosionen um den Charakter; wird von der zuerst gewählten Arcana II, XIV oder XIX beeinflusst.",
+        "en": "Generates explosions around the character. Affected by the first chosen Arcana between II, XIV, or XIX."
+      },
       "maxLevel": 8,
       "emoji": "🔷",
       "image": "https://vampire.survivors.wiki/images/Sprite-Prismatic_Missile.png",
@@ -70,9 +93,13 @@
     {
       "id": "shadow-servant",
       "name": "Shadow Servant",
+      "nameDeHint": "Schattendiener",
       "source": "tides-of-the-foscari",
       "kind": "base",
-      "description": "Kann Gegner verlangsamen.",
+      "description": {
+        "de": "Kann Gegner verlangsamen.",
+        "en": "Has a chance to slow enemies down."
+      },
       "maxLevel": 8,
       "emoji": "👤",
       "image": "https://vampire.survivors.wiki/images/Sprite-Shadow_Servant.png",
@@ -81,9 +108,13 @@
     {
       "id": "party-popper",
       "name": "Party Popper",
+      "nameDeHint": "Partyknaller",
       "source": "tides-of-the-foscari",
       "kind": "base",
-      "description": "Wirft abprallende Projektile.",
+      "description": {
+        "de": "Wirft abprallende Projektile.",
+        "en": "Throws bouncing projectiles."
+      },
       "maxLevel": 8,
       "emoji": "🎉",
       "image": "https://vampire.survivors.wiki/images/Sprite-Party_Popper.png",
@@ -92,9 +123,13 @@
     {
       "id": "legionnaire",
       "name": "Legionnaire",
+      "nameDeHint": "Legionär",
       "source": "tides-of-the-foscari",
       "kind": "evolved",
-      "description": "Entwicklung von Eskizzibur: erzeugt zusätzliche Projektile mit Vergeltungsschaden.",
+      "description": {
+        "de": "Entwicklung von Eskizzibur: erzeugt zusätzliche Projektile mit Vergeltungsschaden.",
+        "en": "Evolved Eskizzibur. Generates additional projectiles that deal retaliatory damage."
+      },
       "maxLevel": 1,
       "emoji": "🛡️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Legionnaire.png",
@@ -103,9 +138,13 @@
     {
       "id": "millionaire",
       "name": "Millionaire",
+      "nameDeHint": "Millionär",
       "source": "tides-of-the-foscari",
       "kind": "evolved",
-      "description": "Entwicklung von Flash Arrow: feuert zusätzliche Projektile je nach Anzahl und beim Aufsammeln von Goldmünzen.",
+      "description": {
+        "de": "Entwicklung von Flash Arrow: feuert zusätzliche Projektile je nach Anzahl und beim Aufsammeln von Goldmünzen.",
+        "en": "Evolved Flash Arrow. Fires additional projectiles based on Amount and when picking up gold coins."
+      },
       "maxLevel": 1,
       "emoji": "💰",
       "image": "https://vampire.survivors.wiki/images/Sprite-Millionaire.png",
@@ -114,9 +153,13 @@
     {
       "id": "luminaire",
       "name": "Luminaire",
+      "nameDeHint": "Leuchte",
       "source": "tides-of-the-foscari",
       "kind": "evolved",
-      "description": "Entwicklung von Prismatic Missile: erhöht den Wert von Edelsteinen und Münzen am Boden.",
+      "description": {
+        "de": "Entwicklung von Prismatic Missile: erhöht den Wert von Edelsteinen und Münzen am Boden.",
+        "en": "Evolved Prismatic Missile. Increases the value of gems and coins on the ground."
+      },
       "maxLevel": 1,
       "emoji": "💡",
       "image": "https://vampire.survivors.wiki/images/Sprite-Luminaire.png",
@@ -127,7 +170,10 @@
       "name": "Ophion",
       "source": "tides-of-the-foscari",
       "kind": "evolved",
-      "description": "Entwicklung von Shadow Servant: kann Gegner sofort töten.",
+      "description": {
+        "de": "Entwicklung von Shadow Servant: kann Gegner sofort töten.",
+        "en": "Evolved Shadow Servant. Has a chance to instantly kill enemies."
+      },
       "maxLevel": 1,
       "emoji": "🐍",
       "image": "https://vampire.survivors.wiki/images/Sprite-Ophion.png",
@@ -138,7 +184,10 @@
       "name": "SpellStrom",
       "source": "tides-of-the-foscari",
       "kind": "evolved",
-      "description": "Union aus SpellString, SpellStream und SpellStrike: wird nach jeder Singularität stärker.",
+      "description": {
+        "de": "Union aus SpellString, SpellStream und SpellStrike: wird nach jeder Singularität stärker.",
+        "en": "Union of SpellString, SpellStream, and SpellStrike. Grows stronger after every singularity."
+      },
       "maxLevel": 1,
       "emoji": "🌪️",
       "image": "https://vampire.survivors.wiki/images/Sprite-SpellStrom.png",

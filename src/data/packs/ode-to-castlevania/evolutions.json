@@ -554,7 +554,10 @@
       ],
       "passives": [],
       "conditions": [
-        "Kein Gegenstand nötig, nur Alucart Sworb auf Maximalstufe."
+        {
+          "de": "Kein Gegenstand nötig, nur Alucart Sworb auf Maximalstufe.",
+          "en": "No item needed, only Alucart Sworb at max level."
+        }
       ],
       "verified": true
     },
@@ -570,7 +573,10 @@
       ],
       "passives": [],
       "conditions": [
-        "Kein Gegenstand nötig, nur Confodere auf Maximalstufe."
+        {
+          "de": "Kein Gegenstand nötig, nur Confodere auf Maximalstufe.",
+          "en": "No item needed, only Confodere at max level."
+        }
       ],
       "verified": true
     },
@@ -586,7 +592,10 @@
       ],
       "passives": [],
       "conditions": [
-        "Kein Gegenstand nötig, nur Vol Confodere auf Maximalstufe."
+        {
+          "de": "Kein Gegenstand nötig, nur Vol Confodere auf Maximalstufe.",
+          "en": "No item needed, only Vol Confodere at max level."
+        }
       ],
       "verified": true
     },
@@ -1010,8 +1019,14 @@
       ],
       "passives": [],
       "conditions": [
-        "Beliebige 6 Entwicklungen und 6 passive Gegenstände auf Maximalstufe.",
-        "Kommt aus einer Truhe."
+        {
+          "de": "Beliebige 6 Entwicklungen und 6 passive Gegenstände auf Maximalstufe.",
+          "en": "Any 6 evolutions and 6 passive items at max level."
+        },
+        {
+          "de": "Kommt aus einer Truhe.",
+          "en": "Comes from a treasure chest."
+        }
       ],
       "verified": true
     },
@@ -1030,7 +1045,10 @@
       ],
       "passives": [],
       "conditions": [
-        "Vol Luminatio und Vol Umbra auf Maximalstufe; kommt aus einer Truhe."
+        {
+          "de": "Vol Luminatio und Vol Umbra auf Maximalstufe; kommt aus einer Truhe.",
+          "en": "Vol Luminatio and Vol Umbra at max level; comes from a treasure chest."
+        }
       ],
       "verified": true
     }

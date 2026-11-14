@@ -7,8 +7,18 @@
  * mit anpassen.
  *
  * Kennungen (`id`) sind klein geschrieben mit Bindestrichen, z. B. `magic-wand`.
- * Namen bleiben englisch wie im Spiel, Beschreibungen sind deutsch.
+ * `name` ist der englische Name aus dem Spiel. Alle Texte gibt es auf Deutsch
+ * und Englisch (`LocalizedText`).
  */
+
+/** Sprachen der App. */
+export type Lang = 'de' | 'en'
+
+/** Ein Text in beiden Sprachen. */
+export interface LocalizedText {
+  de: string
+  en: string
+}
 
 export type PackId = string
 export type CharacterId = string
@@ -20,7 +30,7 @@ export type EvolutionId = string
 export interface Pack {
   /** Entspricht dem Ordnernamen unter `packs/`, das Basisspiel heißt `base`. */
   id: PackId
-  name: string
+  name: LocalizedText
   kind: 'base' | 'dlc'
   /** Kostenpflichtig? Kostenlose Inhalte sind im DLC-Filter vorausgewählt. */
   paid: boolean
@@ -34,6 +44,13 @@ interface Entry {
   id: string
   /** Englischer Name wie im Spiel. */
   name: string
+  /** Offizieller deutscher Name aus dem Spiel, falls er vom englischen abweicht. */
+  nameDe?: string
+  /**
+   * Eigene deutsche Übersetzung, wenn es keinen offiziellen deutschen Namen gibt.
+   * Die App zeigt sie auf Deutsch in Klammern hinter dem englischen Namen.
+   */
+  nameDeHint?: string
   /** Paket, aus dem der Eintrag stammt (`base` oder DLC-Kennung). */
   source: PackId
   /** `false`, solange der Eintrag nicht sicher gegen das Wiki geprüft ist. */
@@ -47,14 +64,14 @@ interface Entry {
   /** Wie man den Eintrag freischaltet. */
   unlock?: string
   /** Freie Anmerkung, z. B. warum etwas noch ungeprüft ist. */
-  note?: string
+  note?: LocalizedText
 }
 
 export interface Character extends Entry {
   /** Meist genau eine Waffe; manche Charaktere starten ohne oder mit mehreren. */
   startingWeapons: WeaponId[]
   /** Besonderheit des Charakters in einem Satz, z. B. Bonus pro Level. */
-  bonus: string
+  bonus: LocalizedText
   /** Geheimer Charakter; lässt sich über den Spoiler-Schalter ausblenden. */
   secret: boolean
 }
@@ -62,7 +79,7 @@ export interface Character extends Entry {
 export interface Weapon extends Entry {
   /** `evolved` = Ergebnis einer Entwicklung, Union oder eines Geschenks. */
   kind: 'base' | 'evolved'
-  description: string
+  description: LocalizedText
   /** Höchste Stufe (Basiswaffen meist 8, entwickelte meist 1). */
   maxLevel: number
   /** Nur diese Charaktere können die Waffe führen; fehlt das Feld, ist sie frei wählbar. */
@@ -70,7 +87,7 @@ export interface Weapon extends Entry {
 }
 
 export interface PassiveItem extends Entry {
-  description: string
+  description: LocalizedText
   maxLevel: number
   /** Nur als Fundstück in der Stage erhältlich, nicht über Level-ups. */
   stageOnly?: boolean
@@ -121,15 +138,15 @@ export interface Evolution {
   /** Nur mit diesen Charakteren möglich (z. B. bei Morphs). Fehlt das Feld, gilt sie für alle. */
   characters?: CharacterId[]
   /** Weitere Bedingungen als Text, z. B. ein Relikt oder ein Mindestlevel. */
-  conditions?: string[]
+  conditions?: LocalizedText[]
   verified: boolean
-  note?: string
+  note?: LocalizedText
 }
 
 export interface RecommendedItem<Id extends string = string> {
   id: Id
   /** Kurze Begründung, z. B. Synergie mit dem Bonus des Charakters. */
-  reason: string
+  reason: LocalizedText
   /** 1 = Kern des Builds, 2 = gute Ergänzung, 3 = optional. */
   priority: 1 | 2 | 3
 }
@@ -140,7 +157,7 @@ export interface Recommendation {
   /** Paket, aus dem diese Empfehlung stammt. */
   source: PackId
   /** Spielstil in ein bis zwei Sätzen. */
-  summary?: string
+  summary?: LocalizedText
   weapons: RecommendedItem<WeaponId>[]
   passives: RecommendedItem<PassiveId>[]
 }

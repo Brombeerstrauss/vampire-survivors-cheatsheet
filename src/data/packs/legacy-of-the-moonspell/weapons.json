@@ -4,9 +4,13 @@
     {
       "id": "silver-wind",
       "name": "Silver Wind",
+      "nameDeHint": "Silberwind",
       "source": "legacy-of-the-moonspell",
       "kind": "base",
-      "description": "Besiegte Gegner können Herzen fallen lassen.",
+      "description": {
+        "de": "Besiegte Gegner können Herzen fallen lassen.",
+        "en": "Defeated enemies might drop hearts."
+      },
       "maxLevel": 8,
       "emoji": "🌬️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Silver_Wind.png",
@@ -15,9 +19,13 @@
     {
       "id": "four-seasons",
       "name": "Four Seasons",
+      "nameDeHint": "Vier Jahreszeiten",
       "source": "legacy-of-the-moonspell",
       "kind": "base",
-      "description": "Erzeugt 4 Explosionen; Anzahl und Dauer erhöhen stattdessen den Schaden.",
+      "description": {
+        "de": "Erzeugt 4 Explosionen; Anzahl und Dauer erhöhen stattdessen den Schaden.",
+        "en": "Generates 4 explosions. Amount and Duration affect damage instead."
+      },
       "maxLevel": 8,
       "emoji": "🍂",
       "image": "https://vampire.survivors.wiki/images/Sprite-Four_Seasons.png",
@@ -26,9 +34,13 @@
     {
       "id": "summon-night",
       "name": "Summon Night",
+      "nameDeHint": "Nacht beschwören",
       "source": "legacy-of-the-moonspell",
       "kind": "base",
-      "description": "Erzeugt Schadenszonen über dem Charakter.",
+      "description": {
+        "de": "Erzeugt Schadenszonen über dem Charakter.",
+        "en": "Generates damaging zones above the character."
+      },
       "maxLevel": 8,
       "emoji": "🌌",
       "image": "https://vampire.survivors.wiki/images/Sprite-Summon_Night.png",
@@ -37,9 +49,13 @@
     {
       "id": "mirage-robe",
       "name": "Mirage Robe",
+      "nameDeHint": "Trugbildrobe",
       "source": "legacy-of-the-moonspell",
       "kind": "base",
-      "description": "Erzeugt einfrierende, stehende Projektile, die explodieren können.",
+      "description": {
+        "de": "Erzeugt einfrierende, stehende Projektile, die explodieren können.",
+        "en": "Generates freezing static projectiles with a chance to explode."
+      },
       "maxLevel": 8,
       "emoji": "🧥",
       "image": "https://vampire.survivors.wiki/images/Sprite-Mirage_Robe.png",
@@ -48,9 +64,13 @@
     {
       "id": "night-sword",
       "name": "Night Sword",
+      "nameDeHint": "Nachtschwert",
       "source": "legacy-of-the-moonspell",
       "kind": "base",
-      "description": "Schlägt mit Bonusschaden zurück, der von der Gier abhängt; kann Herzen stehlen.",
+      "description": {
+        "de": "Schlägt mit Bonusschaden zurück, der von der Gier abhängt; kann Herzen stehlen.",
+        "en": "Retaliates with a bonus damage affected by Greed. Might steal hearts."
+      },
       "maxLevel": 8,
       "emoji": "🗡️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Night_Sword.png",
@@ -61,7 +81,10 @@
       "name": "Mille Bolle Blu",
       "source": "legacy-of-the-moonspell",
       "kind": "base",
-      "description": "Feuert Projektile, die eine Weile bleiben.",
+      "description": {
+        "de": "Feuert Projektile, die eine Weile bleiben.",
+        "en": "Fires lingering projectiles."
+      },
       "maxLevel": 8,
       "emoji": "🫧",
       "image": "https://vampire.survivors.wiki/images/Sprite-Mille_Bolle_Blu.png",
@@ -72,7 +95,10 @@
       "name": "108 Bocce",
       "source": "legacy-of-the-moonspell",
       "kind": "base",
-      "description": "Eigentlich nur 8; der Schaden hängt vom Unterschied zwischen Fluch und Glück ab.",
+      "description": {
+        "de": "Eigentlich nur 8; der Schaden hängt vom Unterschied zwischen Fluch und Glück ab.",
+        "en": "Actually it's just 8. Damage affected by the difference between Curse and Luck."
+      },
       "maxLevel": 8,
       "emoji": "🎱",
       "image": "https://vampire.survivors.wiki/images/Sprite-108_Bocce.png",
@@ -81,9 +107,13 @@
     {
       "id": "lunarmight",
       "name": "LunarMight",
+      "nameDeHint": "Mondmacht",
       "source": "legacy-of-the-moonspell",
       "kind": "base",
-      "description": "Erzeugt eine Schadenszone, die die Macht leicht erhöht.",
+      "description": {
+        "de": "Erzeugt eine Schadenszone, die die Macht leicht erhöht.",
+        "en": "Generate a damaging zone that slightly increases Might."
+      },
       "maxLevel": 6,
       "emoji": "🌑",
       "image": "https://vampire.survivors.wiki/images/Sprite-LunarMight.png",
@@ -92,9 +122,13 @@
     {
       "id": "lunarsight",
       "name": "LunarSight",
+      "nameDeHint": "Mondsicht",
       "source": "legacy-of-the-moonspell",
       "kind": "base",
-      "description": "Erzeugt Schadenszonen, die dem Charakter gelegentlich folgen.",
+      "description": {
+        "de": "Erzeugt Schadenszonen, die dem Charakter gelegentlich folgen.",
+        "en": "Generates damaging zones that occasionally follow the character."
+      },
       "maxLevel": 6,
       "emoji": "🌒",
       "image": "https://vampire.survivors.wiki/images/Sprite-LunarSight.png",
@@ -103,9 +137,13 @@
     {
       "id": "lunarbight",
       "name": "LunarBight",
+      "nameDeHint": "Mondbiss",
       "source": "legacy-of-the-moonspell",
       "kind": "base",
-      "description": "Kann getroffene Gegner verlangsamen.",
+      "description": {
+        "de": "Kann getroffene Gegner verlangsamen.",
+        "en": "Has a chance to slow down enemies hit."
+      },
       "maxLevel": 6,
       "emoji": "🌘",
       "image": "https://vampire.survivors.wiki/images/Sprite-LunarBight.png",
@@ -114,9 +152,13 @@
     {
       "id": "festive-winds",
       "name": "Festive Winds",
+      "nameDeHint": "Festliche Winde",
       "source": "legacy-of-the-moonspell",
       "kind": "evolved",
-      "description": "Entwicklung von Silver Wind: schwächt die Abwehr der Gegner.",
+      "description": {
+        "de": "Entwicklung von Silver Wind: schwächt die Abwehr der Gegner.",
+        "en": "Evolved Silver Wind. Weakens enemies defenses."
+      },
       "maxLevel": 1,
       "emoji": "🎐",
       "image": "https://vampire.survivors.wiki/images/Sprite-Festive_Winds.png",
@@ -125,9 +167,13 @@
     {
       "id": "argent-flow",
       "name": "Argent Flow",
+      "nameDeHint": "Silberstrom",
       "source": "legacy-of-the-moonspell",
       "kind": "evolved",
-      "description": "Entwicklung von Festive Winds: zerfetzt die Abwehr der Gegner.",
+      "description": {
+        "de": "Entwicklung von Festive Winds: zerfetzt die Abwehr der Gegner.",
+        "en": "Evolved Festive Winds. Shreds enemies defenses."
+      },
       "maxLevel": 1,
       "emoji": "🌊",
       "image": "https://vampire.survivors.wiki/images/Sprite-Argent_Flow.png",
@@ -138,7 +184,10 @@
       "name": "Godai Shuffle",
       "source": "legacy-of-the-moonspell",
       "kind": "evolved",
-      "description": "Entwicklung von Four Seasons: erzeugt eine zusätzliche Explosion.",
+      "description": {
+        "de": "Entwicklung von Four Seasons: erzeugt eine zusätzliche Explosion.",
+        "en": "Evolved Four Seasons. Generates an additional explosion."
+      },
       "maxLevel": 1,
       "emoji": "🎴",
       "image": "https://vampire.survivors.wiki/images/Sprite-Godai_Shuffle.png",
@@ -147,9 +196,13 @@
     {
       "id": "echo-night",
       "name": "Echo Night",
+      "nameDeHint": "Echonacht",
       "source": "legacy-of-the-moonspell",
       "kind": "evolved",
-      "description": "Entwicklung von Summon Night: erzeugt auch Schadenszonen unter dem Charakter.",
+      "description": {
+        "de": "Entwicklung von Summon Night: erzeugt auch Schadenszonen unter dem Charakter.",
+        "en": "Evolved Summon Night. Also generates damaging zones below the character."
+      },
       "maxLevel": 1,
       "emoji": "🌃",
       "image": "https://vampire.survivors.wiki/images/Sprite-Echo_Night.png",
@@ -160,7 +213,10 @@
       "name": "J'Odore",
       "source": "legacy-of-the-moonspell",
       "kind": "evolved",
-      "description": "Entwicklung von Mirage Robe: Projektile bewegen sich und verwirren Gegner.",
+      "description": {
+        "de": "Entwicklung von Mirage Robe: Projektile bewegen sich und verwirren Gegner.",
+        "en": "Evolved Mirage Robe. Projectiles move and confuse enemies."
+      },
       "maxLevel": 1,
       "emoji": "🌫️",
       "image": "https://vampire.survivors.wiki/images/Sprite-J%27Odore.png",
@@ -171,7 +227,10 @@
       "name": "Muramasa",
       "source": "legacy-of-the-moonspell",
       "kind": "evolved",
-      "description": "Entwicklung von Night Sword: ermöglicht kritische Treffer und einen Kombo-Abschluss; saugt Gesundheit ab.",
+      "description": {
+        "de": "Entwicklung von Night Sword: ermöglicht kritische Treffer und einen Kombo-Abschluss; saugt Gesundheit ab.",
+        "en": "Evolved Night Sword. Enables critical hits and combo finisher. Drains Health."
+      },
       "maxLevel": 1,
       "emoji": "⚔️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Muramasa.png",
@@ -182,7 +241,10 @@
       "name": "Boo Roo Boolle",
       "source": "legacy-of-the-moonspell",
       "kind": "evolved",
-      "description": "Entwicklung von Mille Bolle Blu: Projektile können dasselbe Ziel mehrfach treffen.",
+      "description": {
+        "de": "Entwicklung von Mille Bolle Blu: Projektile können dasselbe Ziel mehrfach treffen.",
+        "en": "Evolved Mille Bolle Blu. Projectiles can hit the same target more than once."
+      },
       "maxLevel": 1,
       "emoji": "🫧",
       "image": "https://vampire.survivors.wiki/images/Sprite-Boo_Roo_Boolle.png",
@@ -191,9 +253,13 @@
     {
       "id": "lunarflight",
       "name": "LunarFlight",
+      "nameDeHint": "Mondflug",
       "source": "legacy-of-the-moonspell",
       "kind": "evolved",
-      "description": "Union aus LunarMight, LunarSight und LunarBight: werde eins mit den Mondzeichen.",
+      "description": {
+        "de": "Union aus LunarMight, LunarSight und LunarBight: werde eins mit den Mondzeichen.",
+        "en": "Union of LunarMight, LunarSight, and LunarBight. Become one with the lunar glyphs."
+      },
       "maxLevel": 1,
       "emoji": "🌙",
       "image": "https://vampire.survivors.wiki/images/Sprite-LunarFlight.png",

@@ -3,12 +3,29 @@ import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
+import { execFileSync } from 'node:child_process'
+import { readFileSync } from 'node:fs'
+
+// Versionsangaben für die Einstellungen: Nummer aus package.json, Code-Stand aus Git, Datum des Baus.
+const pkg = JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 'utf8')) as { version: string }
+const commit = (() => {
+  try {
+    return execFileSync('git', ['rev-parse', '--short', 'HEAD']).toString().trim()
+  } catch {
+    return ''
+  }
+})()
 
 // https://vite.dev/config/
 export default defineConfig({
   // Relative Pfade, damit die App unter jeder Adresse läuft
   // (GitHub Pages im Unterordner, Cloudflare Pages, Netlify).
   base: './',
+  define: {
+    __APP_VERSION__: JSON.stringify(pkg.version),
+    __APP_COMMIT__: JSON.stringify(commit),
+    __BUILD_DATE__: JSON.stringify(new Date().toISOString().slice(0, 10)),
+  },
   plugins: [
     react(),
     tailwindcss(),
@@ -19,8 +36,7 @@ export default defineConfig({
         name: 'Vampire Survivors Cheatsheet',
         short_name: 'VS Cheatsheet',
         description:
-          'Inoffizielle Begleit-App für Vampire Survivors: Entwicklungen, Lauf-Tracker und Empfehlungen.',
-        lang: 'de',
+          'Unofficial companion app for Vampire Survivors · Inoffizielle Begleit-App für Vampire Survivors',
         start_url: '.',
         scope: '.',
         display: 'standalone',

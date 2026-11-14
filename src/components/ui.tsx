@@ -1,6 +1,8 @@
 import { useState, type ReactNode } from 'react'
 import { gameData } from '../data/index.ts'
 import type { PackId } from '../data/types.ts'
+import { useI18n } from '../i18n/index.ts'
+import type { Named } from '../i18n/names.ts'
 import { useAppState } from '../state/context.ts'
 
 const iconBase = `${import.meta.env.BASE_URL}custom-icons/`
@@ -57,22 +59,40 @@ export function EntryIcon({
 const packNames = new Map(gameData.packs.map((p) => [p.id, p.name]))
 
 export function SourceBadge({ source }: { source: PackId }) {
+  const { text } = useI18n()
   if (source === 'base') return null
+  const name = packNames.get(source)
   return (
     <span className="inline-flex items-center rounded-md bg-violet-500/15 px-1.5 py-0.5 text-[11px] font-medium text-violet-200 ring-1 ring-violet-400/20">
-      {packNames.get(source) ?? source}
+      {name ? text(name) : source}
     </span>
   )
 }
 
 export function UnverifiedBadge({ verified }: { verified: boolean }) {
+  const { t } = useI18n()
   if (verified) return null
   return (
     <span
-      title="Dieser Eintrag ist noch nicht gegen das Wiki geprüft."
+      title={t.unverifiedTitle}
       className="inline-flex items-center rounded-md bg-amber-500/15 px-1.5 py-0.5 text-[11px] font-medium text-amber-200 ring-1 ring-amber-400/25"
     >
-      ungeprüft
+      {t.unverified}
+    </span>
+  )
+}
+
+/**
+ * Name eines Eintrags in der gewählten Sprache. Ohne offiziellen deutschen Namen
+ * steht auf Deutsch die eigene Übersetzung gedämpft in Klammern dahinter.
+ */
+export function EntryName({ entry, className = '' }: { entry: Named; className?: string }) {
+  const { name } = useI18n()
+  const { main, hint } = name(entry)
+  return (
+    <span className={className}>
+      {main}
+      {hint && <span className="font-normal text-white/50"> ({hint})</span>}
     </span>
   )
 }

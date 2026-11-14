@@ -7,14 +7,20 @@
       "weapons": [
         {
           "id": "silver-wind",
-          "reason": "Startwaffe; mit Pummarola wird sie zu Festive Winds.",
+          "reason": {
+            "de": "Startwaffe; mit Pummarola wird sie zu Festive Winds.",
+            "en": "Starting weapon; with Pummarola it becomes Festive Winds."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "pummarola",
-          "reason": "Nötig für Festive Winds.",
+          "reason": {
+            "de": "Nötig für Festive Winds.",
+            "en": "Needed for Festive Winds."
+          },
           "priority": 1
         }
       ]
@@ -25,14 +31,20 @@
       "weapons": [
         {
           "id": "four-seasons",
-          "reason": "Startwaffe; mit Candelabrador wird sie zu Godai Shuffle.",
+          "reason": {
+            "de": "Startwaffe; mit Kandelabrador wird sie zu Godai Shuffle.",
+            "en": "Starting weapon; with Candelabrador it becomes Godai Shuffle."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "candelabrador",
-          "reason": "Nötig für Godai Shuffle.",
+          "reason": {
+            "de": "Nötig für Godai Shuffle.",
+            "en": "Needed for Godai Shuffle."
+          },
           "priority": 1
         }
       ]
@@ -43,14 +55,20 @@
       "weapons": [
         {
           "id": "summon-night",
-          "reason": "Startwaffe; mit Duplicator wird sie zu Echo Night.",
+          "reason": {
+            "de": "Startwaffe; mit Verdoppler wird sie zu Echo Night.",
+            "en": "Starting weapon; with Duplicator it becomes Echo Night."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "duplicator",
-          "reason": "Nötig für Echo Night.",
+          "reason": {
+            "de": "Nötig für Echo Night.",
+            "en": "Needed for Echo Night."
+          },
           "priority": 1
         }
       ]
@@ -61,14 +79,20 @@
       "weapons": [
         {
           "id": "mirage-robe",
-          "reason": "Startwaffe; mit Attractorb wird sie zu J'Odore.",
+          "reason": {
+            "de": "Startwaffe; mit Anziehungskugel wird sie zu J'Odore.",
+            "en": "Starting weapon; with Attractorb it becomes J'Odore."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "attractorb",
-          "reason": "Nötig für J'Odore.",
+          "reason": {
+            "de": "Nötig für J'Odore.",
+            "en": "Needed for J'Odore."
+          },
           "priority": 1
         }
       ]
@@ -79,7 +103,10 @@
       "weapons": [
         {
           "id": "argent-flow",
-          "reason": "Startwaffe.",
+          "reason": {
+            "de": "Startwaffe.",
+            "en": "Starting weapon."
+          },
           "priority": 1
         }
       ],
@@ -91,14 +118,20 @@
       "weapons": [
         {
           "id": "night-sword",
-          "reason": "Startwaffe; mit Stone Mask wird sie zu Muramasa.",
+          "reason": {
+            "de": "Startwaffe; mit Steinmaske wird sie zu Muramasa.",
+            "en": "Starting weapon; with Stone Mask it becomes Muramasa."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "stone-mask",
-          "reason": "Nötig für Muramasa.",
+          "reason": {
+            "de": "Nötig für Muramasa.",
+            "en": "Needed for Muramasa."
+          },
           "priority": 1
         }
       ]
@@ -109,12 +142,18 @@
       "weapons": [
         {
           "id": "108-bocce",
-          "reason": "Startwaffe; zusammen mit 108 Responsive Prayers entsteht die Union Road to Heaven.",
+          "reason": {
+            "de": "Startwaffe; zusammen mit 108 Responsive Prayers entsteht die Union Road to Heaven.",
+            "en": "Starting weapon; together with 108 Responsive Prayers it forms the union Road to Heaven."
+          },
           "priority": 1
         },
         {
           "id": "108-responsive-prayers",
-          "reason": "Partner für die Union Road to Heaven.",
+          "reason": {
+            "de": "Partner für die Union Road to Heaven.",
+            "en": "Partner for the union Road to Heaven."
+          },
           "priority": 1
         }
       ],
@@ -126,14 +165,20 @@
       "weapons": [
         {
           "id": "mille-bolle-blu",
-          "reason": "Startwaffe; mit Spellbinder wird sie zu Boo Roo Boolle.",
+          "reason": {
+            "de": "Startwaffe; mit Zauberbinder wird sie zu Boo Roo Boolle.",
+            "en": "Starting weapon; with Spellbinder it becomes Boo Roo Boolle."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "spellbinder",
-          "reason": "Nötig für Boo Roo Boolle.",
+          "reason": {
+            "de": "Nötig für Boo Roo Boolle.",
+            "en": "Needed for Boo Roo Boolle."
+          },
           "priority": 1
         }
       ]
@@ -144,17 +189,26 @@
       "weapons": [
         {
           "id": "lunarmight",
-          "reason": "Startwaffe; zusammen mit LunarSight, LunarBight entsteht die Union LunarFlight.",
+          "reason": {
+            "de": "Startwaffe; zusammen mit LunarSight, LunarBight entsteht die Union LunarFlight.",
+            "en": "Starting weapon; together with LunarSight, LunarBight it forms the union LunarFlight."
+          },
           "priority": 1
         },
         {
           "id": "lunarsight",
-          "reason": "Partner für die Union LunarFlight.",
+          "reason": {
+            "de": "Partner für die Union LunarFlight.",
+            "en": "Partner for the union LunarFlight."
+          },
           "priority": 1
         },
         {
           "id": "lunarbight",
-          "reason": "Partner für die Union LunarFlight.",
+          "reason": {
+            "de": "Partner für die Union LunarFlight.",
+            "en": "Partner for the union LunarFlight."
+          },
           "priority": 1
         }
       ],
@@ -166,14 +220,20 @@
       "weapons": [
         {
           "id": "mille-bolle-blu",
-          "reason": "Startwaffe; mit Spellbinder wird sie zu Boo Roo Boolle.",
+          "reason": {
+            "de": "Startwaffe; mit Zauberbinder wird sie zu Boo Roo Boolle.",
+            "en": "Starting weapon; with Spellbinder it becomes Boo Roo Boolle."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "spellbinder",
-          "reason": "Nötig für Boo Roo Boolle.",
+          "reason": {
+            "de": "Nötig für Boo Roo Boolle.",
+            "en": "Needed for Boo Roo Boolle."
+          },
           "priority": 1
         }
       ]
@@ -184,17 +244,26 @@
       "weapons": [
         {
           "id": "lunarmight",
-          "reason": "Partner für die Union LunarFlight.",
+          "reason": {
+            "de": "Partner für die Union LunarFlight.",
+            "en": "Partner for the union LunarFlight."
+          },
           "priority": 1
         },
         {
           "id": "lunarsight",
-          "reason": "Partner für die Union LunarFlight.",
+          "reason": {
+            "de": "Partner für die Union LunarFlight.",
+            "en": "Partner for the union LunarFlight."
+          },
           "priority": 1
         },
         {
           "id": "lunarbight",
-          "reason": "Startwaffe; zusammen mit LunarMight, LunarSight entsteht die Union LunarFlight.",
+          "reason": {
+            "de": "Startwaffe; zusammen mit LunarMight, LunarSight entsteht die Union LunarFlight.",
+            "en": "Starting weapon; together with LunarMight, LunarSight it forms the union LunarFlight."
+          },
           "priority": 1
         }
       ],

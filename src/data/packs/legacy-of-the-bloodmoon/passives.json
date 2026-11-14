@@ -4,8 +4,12 @@
     {
       "id": "velvet-dodecahedron",
       "name": "Velvet Dodecahedron",
+      "nameDeHint": "Samt-Dodekaeder",
       "source": "legacy-of-the-bloodmoon",
-      "description": "Geschenk: mehr Wachstum und Gier, dafür weniger max. Gesundheit; löst Fähigkeiten für letzten Atemzug, Wiederbelebung und kritische Gesundheit aus.",
+      "description": {
+        "de": "Geschenk: mehr Wachstum und Gier, dafür weniger max. Gesundheit; löst Fähigkeiten für letzten Atemzug, Wiederbelebung und kritische Gesundheit aus.",
+        "en": "Gift. Will provide bonus Growth and Greed in exchange for MaxHealth. Triggers LastBreath, OnRevival, and HPCritical skills."
+      },
       "maxLevel": 6,
       "noSlot": true,
       "emoji": "🎲",

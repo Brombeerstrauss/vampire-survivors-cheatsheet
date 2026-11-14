@@ -4,9 +4,13 @@
     {
       "id": "long-gun",
       "name": "Long Gun",
+      "nameDeHint": "Langes Gewehr",
       "source": "operation-guns",
       "kind": "base",
-      "description": "Feuert ununterbrochen in Blickrichtung.",
+      "description": {
+        "de": "Feuert ununterbrochen in Blickrichtung.",
+        "en": "Fires constantly in the faced direction."
+      },
       "maxLevel": 8,
       "emoji": "🔫",
       "image": "https://vampire.survivors.wiki/images/Sprite-Long_Gun.png",
@@ -15,9 +19,13 @@
     {
       "id": "short-gun",
       "name": "Short Gun",
+      "nameDeHint": "Kurzes Gewehr",
       "source": "operation-guns",
       "kind": "base",
-      "description": "Feuert waagerechte Salven kurzlebiger Projektile.",
+      "description": {
+        "de": "Feuert waagerechte Salven kurzlebiger Projektile.",
+        "en": "Fires bursts of decaying projectiles horizontally."
+      },
       "maxLevel": 8,
       "emoji": "🔫",
       "image": "https://vampire.survivors.wiki/images/Sprite-Short_Gun.png",
@@ -26,9 +34,13 @@
     {
       "id": "spread-shot",
       "name": "Spread Shot",
+      "nameDeHint": "Streuschuss",
       "source": "operation-guns",
       "kind": "base",
-      "description": "Feuert breit gestreut in Blickrichtung.",
+      "description": {
+        "de": "Feuert breit gestreut in Blickrichtung.",
+        "en": "Fires in a wide spread in the faced direction."
+      },
       "maxLevel": 8,
       "emoji": "🎆",
       "image": "https://vampire.survivors.wiki/images/Sprite-Spread_Shot.png",
@@ -39,7 +51,10 @@
       "name": "C-U-Laser",
       "source": "operation-guns",
       "kind": "base",
-      "description": "Feuert ein durchdringendes Projektil in Blickrichtung.",
+      "description": {
+        "de": "Feuert ein durchdringendes Projektil in Blickrichtung.",
+        "en": "Fires a piercing projectile in the faced direction."
+      },
       "maxLevel": 8,
       "emoji": "🔦",
       "image": "https://vampire.survivors.wiki/images/Sprite-C-U-Laser.png",
@@ -48,9 +63,13 @@
     {
       "id": "firearm",
       "name": "Firearm",
+      "nameDeHint": "Feuerwaffe",
       "source": "operation-guns",
       "kind": "base",
-      "description": "Feuert rotierende Projektile auf den nächsten Gegner.",
+      "description": {
+        "de": "Feuert rotierende Projektile auf den nächsten Gegner.",
+        "en": "Fires spinning projectiles at the nearest enemy."
+      },
       "maxLevel": 8,
       "emoji": "🔥",
       "image": "https://vampire.survivors.wiki/images/Sprite-Firearm.png",
@@ -59,9 +78,13 @@
     {
       "id": "sonic-bloom",
       "name": "Sonic Bloom",
+      "nameDeHint": "Schallblüte",
       "source": "operation-guns",
       "kind": "base",
-      "description": "Feuert wachsende Projektile in Blickrichtung.",
+      "description": {
+        "de": "Feuert wachsende Projektile in Blickrichtung.",
+        "en": "Fires growing projectiles in the faced direction."
+      },
       "maxLevel": 8,
       "emoji": "🌸",
       "image": "https://vampire.survivors.wiki/images/Sprite-Sonic_Bloom.png",
@@ -70,9 +93,13 @@
     {
       "id": "homing-miss",
       "name": "Homing Miss",
+      "nameDeHint": "Zielsuchrakete",
       "source": "operation-guns",
       "kind": "base",
-      "description": "Feuert explodierende, zielsuchende Projektile.",
+      "description": {
+        "de": "Feuert explodierende, zielsuchende Projektile.",
+        "en": "Fires exploding projectiles that home in on enemies."
+      },
       "maxLevel": 8,
       "emoji": "🚀",
       "image": "https://vampire.survivors.wiki/images/Sprite-Homing_Miss.png",
@@ -81,9 +108,13 @@
     {
       "id": "diver-mines",
       "name": "Diver Mines",
+      "nameDeHint": "Taucherminen",
       "source": "operation-guns",
       "kind": "base",
-      "description": "Feuert explosive Projektile, die an Wänden entlanglaufen.",
+      "description": {
+        "de": "Feuert explosive Projektile, die an Wänden entlanglaufen.",
+        "en": "Fires explosive projectiles that travel along walls."
+      },
       "maxLevel": 8,
       "emoji": "💣",
       "image": "https://vampire.survivors.wiki/images/Sprite-Diver_Mines.png",
@@ -92,9 +123,13 @@
     {
       "id": "blade-crossbow",
       "name": "Blade Crossbow",
+      "nameDeHint": "Klingenarmbrust",
       "source": "operation-guns",
       "kind": "base",
-      "description": "Feuert zielsuchende Projektile, die sich beim Treffer auf der Stelle drehen.",
+      "description": {
+        "de": "Feuert zielsuchende Projektile, die sich beim Treffer auf der Stelle drehen.",
+        "en": "Fires homing projectiles that spin in place when they hit."
+      },
       "maxLevel": 8,
       "emoji": "🏹",
       "image": "https://vampire.survivors.wiki/images/Sprite-Blade_Crossbow.png",
@@ -105,7 +140,10 @@
       "name": "Prism Lass",
       "source": "operation-guns",
       "kind": "base",
-      "description": "Kann Gegner mit kleiner Chance einfrieren.",
+      "description": {
+        "de": "Kann Gegner mit kleiner Chance einfrieren.",
+        "en": "Has a small chance to freeze enemies."
+      },
       "maxLevel": 8,
       "emoji": "💎",
       "image": "https://vampire.survivors.wiki/images/Sprite-Prism_Lass.png",
@@ -114,9 +152,13 @@
     {
       "id": "metal-claw",
       "name": "Metal Claw",
+      "nameDeHint": "Metallklaue",
       "source": "operation-guns",
       "kind": "base",
-      "description": "Die Abklingzeit hängt von der fehlenden Gesundheit ab.",
+      "description": {
+        "de": "Die Abklingzeit hängt von der fehlenden Gesundheit ab.",
+        "en": "Cooldown is affected by missing health."
+      },
       "maxLevel": 8,
       "emoji": "🦀",
       "image": "https://vampire.survivors.wiki/images/Sprite-Metal_Claw.png",
@@ -125,9 +167,13 @@
     {
       "id": "prototype-a",
       "name": "Prototype A",
+      "nameDeHint": "Prototyp A",
       "source": "operation-guns",
       "kind": "evolved",
-      "description": "Entwicklung von Long Gun: ruft 2 Drohnen zur Feuerunterstützung.",
+      "description": {
+        "de": "Entwicklung von Long Gun: ruft 2 Drohnen zur Feuerunterstützung.",
+        "en": "Evolved Long Gun. Calls forth 2 drones for support fire."
+      },
       "maxLevel": 1,
       "emoji": "🛸",
       "image": "https://vampire.survivors.wiki/images/Sprite-Prototype_A.png",
@@ -136,9 +182,13 @@
     {
       "id": "prototype-b",
       "name": "Prototype B",
+      "nameDeHint": "Prototyp B",
       "source": "operation-guns",
       "kind": "evolved",
-      "description": "Entwicklung von Short Gun: ruft 2 Drohnen zur Feuerunterstützung.",
+      "description": {
+        "de": "Entwicklung von Short Gun: ruft 2 Drohnen zur Feuerunterstützung.",
+        "en": "Evolved Short Gun. Calls forth 2 drones for support fire."
+      },
       "maxLevel": 1,
       "emoji": "🛸",
       "image": "https://vampire.survivors.wiki/images/Sprite-Prototype_B.png",
@@ -147,9 +197,13 @@
     {
       "id": "prototype-c",
       "name": "Prototype C",
+      "nameDeHint": "Prototyp C",
       "source": "operation-guns",
       "kind": "evolved",
-      "description": "Entwicklung von Spread Shot: ruft 2 Drohnen zur Feuerunterstützung.",
+      "description": {
+        "de": "Entwicklung von Spread Shot: ruft 2 Drohnen zur Feuerunterstützung.",
+        "en": "Evolved Spread Shot. Calls forth 2 drones for support fire."
+      },
       "maxLevel": 1,
       "emoji": "🛸",
       "image": "https://vampire.survivors.wiki/images/Sprite-Prototype_C.png",
@@ -158,9 +212,13 @@
     {
       "id": "pronto-beam",
       "name": "Pronto Beam",
+      "nameDeHint": "Pronto-Strahl",
       "source": "operation-guns",
       "kind": "evolved",
-      "description": "Entwicklung von C-U-Laser: Laser teilen sich beim Treffer in mehrere Strahlen.",
+      "description": {
+        "de": "Entwicklung von C-U-Laser: Laser teilen sich beim Treffer in mehrere Strahlen.",
+        "en": "Evolved C-U-Laser. Lasers split into multiple beams when they hit."
+      },
       "maxLevel": 1,
       "emoji": "🔆",
       "image": "https://vampire.survivors.wiki/images/Sprite-Pronto_Beam.png",
@@ -171,7 +229,10 @@
       "name": "Fire-L3GS",
       "source": "operation-guns",
       "kind": "evolved",
-      "description": "Entwicklung von Firearm: feuert erneut, wenn eine Lichtquelle oder ein zerstörbares Objekt zerstört wird.",
+      "description": {
+        "de": "Entwicklung von Firearm: feuert erneut, wenn eine Lichtquelle oder ein zerstörbares Objekt zerstört wird.",
+        "en": "Evolved Firearm. Fires again when destroying a light source or destructible item."
+      },
       "maxLevel": 1,
       "emoji": "🔥",
       "image": "https://vampire.survivors.wiki/images/Sprite-Fire-L3GS.png",
@@ -180,9 +241,13 @@
     {
       "id": "wave-beam",
       "name": "Wave Beam",
+      "nameDeHint": "Wellenstrahl",
       "source": "operation-guns",
       "kind": "evolved",
-      "description": "Entwicklung von Sonic Bloom: lädt im Stehen einen stärkeren, automatisch zielenden Schuss auf.",
+      "description": {
+        "de": "Entwicklung von Sonic Bloom: lädt im Stehen einen stärkeren, automatisch zielenden Schuss auf.",
+        "en": "Evolved Sonic Bloom. Charges up a more powerful auto-aimed blast when standing still."
+      },
       "maxLevel": 1,
       "emoji": "〰️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Wave_Beam.png",
@@ -191,9 +256,13 @@
     {
       "id": "multistage-missiles",
       "name": "Multistage Missiles",
+      "nameDeHint": "Mehrstufenraketen",
       "source": "operation-guns",
       "kind": "evolved",
-      "description": "Entwicklung von Homing Miss: Projektile teilen sich beim Treffer in kleinere.",
+      "description": {
+        "de": "Entwicklung von Homing Miss: Projektile teilen sich beim Treffer in kleinere.",
+        "en": "Evolved Homing Miss. Projectiles split into smaller ones when they hit."
+      },
       "maxLevel": 1,
       "emoji": "🚀",
       "image": "https://vampire.survivors.wiki/images/Sprite-Multistage_Missiles.png",
@@ -204,7 +273,10 @@
       "name": "Atmo-Torpedo",
       "source": "operation-guns",
       "kind": "evolved",
-      "description": "Entwicklung von Diver Mines: erzeugt Schadenszonen, die Gegner anziehen.",
+      "description": {
+        "de": "Entwicklung von Diver Mines: erzeugt Schadenszonen, die Gegner anziehen.",
+        "en": "Evolved Diver Mines. Creates damaging zones that attract enemies."
+      },
       "maxLevel": 1,
       "emoji": "🌀",
       "image": "https://vampire.survivors.wiki/images/Sprite-Atmo-Torpedo.png",
@@ -215,7 +287,10 @@
       "name": "BFC2000-AD",
       "source": "operation-guns",
       "kind": "evolved",
-      "description": "Entwicklung von Blade Crossbow: ruft göttliches Eingreifen, je öfter, desto mehr Glück.",
+      "description": {
+        "de": "Entwicklung von Blade Crossbow: ruft göttliches Eingreifen, je öfter, desto mehr Glück.",
+        "en": "Evolved Blade Crossbow. Calls forth divine intervention with a Luck-based frequency."
+      },
       "maxLevel": 1,
       "emoji": "✝️",
       "image": "https://vampire.survivors.wiki/images/Sprite-BFC2000-AD.png",
@@ -224,9 +299,13 @@
     {
       "id": "time-warp",
       "name": "Time Warp",
+      "nameDeHint": "Zeitsprung",
       "source": "operation-guns",
       "kind": "evolved",
-      "description": "Entwicklung von Prism Lass: kann Gegner einfrieren, verlangsamen oder entwaffnen.",
+      "description": {
+        "de": "Entwicklung von Prism Lass: kann Gegner einfrieren, verlangsamen oder entwaffnen.",
+        "en": "Evolved Prism Lass. May freeze, slow down, or DeFang enemies."
+      },
       "maxLevel": 1,
       "emoji": "⏳",
       "image": "https://vampire.survivors.wiki/images/Sprite-Time_Warp.png",
@@ -235,9 +314,13 @@
     {
       "id": "big-fuzzy-fist",
       "name": "Big Fuzzy Fist",
+      "nameDeHint": "Große flauschige Faust",
       "source": "operation-guns",
       "kind": "evolved",
-      "description": "Entwicklung von Metal Claw: verprügelt die stärksten sichtbaren Gegner.",
+      "description": {
+        "de": "Entwicklung von Metal Claw: verprügelt die stärksten sichtbaren Gegner.",
+        "en": "Evolved Metal Claw. Pummels the most powerful enemies in sight."
+      },
       "maxLevel": 1,
       "emoji": "👊",
       "image": "https://vampire.survivors.wiki/images/Sprite-Big_Fuzzy_Fist.png",

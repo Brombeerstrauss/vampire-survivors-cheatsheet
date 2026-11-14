@@ -4,8 +4,11 @@ Inoffizielle Begleit-App für **Vampire Survivors** als Web-App (PWA). Sie läuf
 am PC und auf dem iPhone, lässt sich dort auf den Home-Bildschirm legen und funktioniert
 danach auch offline.
 
-Die Oberfläche ist deutsch, Namen von Charakteren, Waffen und Gegenständen bleiben englisch
-wie im Spiel.
+Die App gibt es auf **Deutsch und Englisch**. Sie startet in der Sprache des Geräts; in den
+Einstellungen lässt sich umschalten.
+
+*Unofficial companion app for Vampire Survivors, in English and German. Open it, add it to
+your home screen, and it works offline.*
 
 **App öffnen:** https://brombeerstrauss.github.io/vampire-survivors-cheatsheet/
 
@@ -29,6 +32,9 @@ wie im Spiel.
 - **DLC-Filter**: In den Einstellungen wählst du, welche DLCs du besitzt. Entwicklungen über
   DLC-Grenzen hinweg erscheinen nur, wenn alle beteiligten Inhalte aktiv sind.
 - **Zurücksetzen** des Laufs mit einem Tippen, mit Rückgängig-Knopf.
+- **Zwei Sprachen**: Auf Englisch stehen die Namen und Beschreibungen aus dem Spiel. Auf
+  Deutsch die offiziellen deutschen Namen, soweit es sie gibt (siehe „Deutsche Namen“).
+- **Version** der App mit Datum und Code-Stand steht in den Einstellungen.
 
 Lauf und Einstellungen werden im Browser gespeichert (`localStorage`), es gibt keinen Server.
 
@@ -139,6 +145,10 @@ Wichtige Regeln:
   Zutat ändern. Die App nennt das nur als Hinweis, Stufen werden im Lauf nicht erfasst.
 - `image` ist die Adresse des Originalbilds im Wiki, `emoji` der Platzhalter, falls das Bild
   nicht lädt oder Bilder abgeschaltet sind.
+- Texte stehen in beiden Sprachen, z. B. `"description": { "de": "…", "en": "…" }`. Das gilt
+  für Beschreibungen, Boni, Bedingungen, Hinweise und Empfehlungen.
+- `name` ist der englische Name aus dem Spiel. `nameDe` ist der offizielle deutsche Name,
+  `nameDeHint` eine eigene Übersetzung für Namen ohne offiziellen deutschen Namen.
 - Empfehlungen werden aus allen aktiven Paketen zusammengeführt. Ein DLC kann also
   Empfehlungen für einen Charakter aus dem Basisspiel ergänzen.
 
@@ -147,6 +157,21 @@ Verweise auf vorhandene Einträge zeigen.
 
 **Neues DLC hinzufügen:** einen Ordner unter `src/data/packs/` mit den fünf Dateien anlegen
 und das Paket in `packs.json` eintragen. Code muss dafür nicht geändert werden.
+
+### Deutsche Namen
+
+Die offiziellen deutschen Namen und Texte stammen aus poncles
+[öffentlicher Lokalisierungs-Tabelle](https://github.com/Poncle/vampire-survivors-localisation).
+Sie ist von 2022 und deckt nur einen Teil des Basisspiels ab (98 von 613 Namen); für die
+DLCs enthält sie nichts. Deshalb gilt auf Deutsch:
+
+- Gibt es einen offiziellen deutschen Namen, steht er da: „Peitsche“, „Blutige Träne“,
+  „Hohlherz“.
+- Sonst steht der englische Name aus dem Spiel. Lässt er sich sinnvoll übersetzen, folgt
+  eine eigene Übersetzung in Klammern: „Unearthly Bolt (Überirdischer Blitz)“.
+- Eigennamen wie „Pako Battiliar“ bleiben ohne Klammer.
+
+Die eigenen Übersetzungen stehen in `tools/wiki-import/texts/names_de.py`.
 
 ### Bilder
 
@@ -165,6 +190,7 @@ passenden Eintrag als `"icon"` eintragen. Details stehen in `public/custom-icons
 | `src/data/` | Spieldaten, Schemas, Typen, Lader und Datenprüfung |
 | `src/logic/` | Evolutions-Logik, Lauf, Vorschläge (ohne Oberfläche, mit Tests) |
 | `src/state/` | Gespeicherter Zustand, Einstellungen, Navigation |
+| `src/i18n/` | Texte der Oberfläche auf Deutsch und Englisch, Namensanzeige |
 | `src/components/` | Wiederverwendbare Bausteine der Oberfläche |
 | `src/views/` | Die vier Ansichten: Charaktere, Lauf, Waffen, Einstellungen |
 
@@ -195,7 +221,9 @@ Weitere Hinweise:
 - Die Empfehlungen für die 34 regulären Charaktere des Basisspiels sind von Hand
   geschrieben. Für DLC-Charaktere gibt es eine Grundempfehlung (Startwaffe und die Partner
   für ihre Entwicklung), die sich in `recommendations.json` ausbauen lässt.
-- Die deutschen Beschreibungen sind eigene Übersetzungen der Texte aus dem Wiki.
+- Englische Namen und Beschreibungen sind die Originaltexte aus dem Spiel (laut Wiki).
+  Deutsche Beschreibungen sind offizielle Texte, wo poncles Tabelle sie hat, sonst eigene
+  Übersetzungen.
 - Spezialwaffen (z. B. Gegenstücke der Arcana Gemini) und Arcanas sind nicht enthalten.
 
 ## Quellen und Lizenz

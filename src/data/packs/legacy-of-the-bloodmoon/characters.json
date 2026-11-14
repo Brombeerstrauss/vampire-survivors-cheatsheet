@@ -8,7 +8,10 @@
       "startingWeapons": [
         "scarlet-needle"
       ],
-      "bonus": "Erhält alle 4 Level +0,1 Regeneration; bei Vergeltung, kritischer Gesundheit, letztem Atemzug und Wiederbelebung löst sie einen großen Blutfluch aus.",
+      "bonus": {
+        "de": "Erhält alle 4 Level +0,1 Regeneration; bei Vergeltung, kritischer Gesundheit, letztem Atemzug und Wiederbelebung löst sie einen großen Blutfluch aus.",
+        "en": "Gains 0.1 Recovery every 4 levels. Retaliation, HP-Critical, LastBreath, and OnRevival: triggers a wide area blood hex"
+      },
       "secret": false,
       "emoji": "🩸",
       "image": "https://vampire.survivors.wiki/images/Select-Malice_Bloodmoon.png",
@@ -21,7 +24,10 @@
       "startingWeapons": [
         "ashella"
       ],
-      "bonus": "Letzter Atemzug: +50 % max. Gesundheit; Vergeltung gibt kurz einen Werte-Bonus.",
+      "bonus": {
+        "de": "Letzter Atemzug: +50 % max. Gesundheit; Vergeltung gibt kurz einen Werte-Bonus.",
+        "en": "LastBreath: increases MaxHealth by 50%. Retaliation: gains a temporary stat bonus."
+      },
       "secret": false,
       "emoji": "🧛‍♂️",
       "image": "https://vampire.survivors.wiki/images/Select-Calogero_Bloodmoon.png",
@@ -34,7 +40,10 @@
       "startingWeapons": [
         "incineration"
       ],
-      "bonus": "Bei kritischer Gesundheit +1 Wiederbelebung; ruft zu jeder vollen Minute Überreste besiegter Gegner herbei.",
+      "bonus": {
+        "de": "Bei kritischer Gesundheit +1 Wiederbelebung; ruft zu jeder vollen Minute Überreste besiegter Gegner herbei.",
+        "en": "HP-Critical: Gets +1 Revival. Summons remnants of defeated enemies every time the clock strikes a minute."
+      },
       "secret": false,
       "emoji": "🔥",
       "image": "https://vampire.survivors.wiki/images/Select-Ashtart.png",
@@ -49,7 +58,10 @@
         "fireball",
         "firewall"
       ],
-      "bonus": "Erzeugt Raumverzerrungen, die Gegner verwirren; Meister von FireFall, FireWall und FireBall; bei Wiederbelebung eine zusätzliche Verzerrung.",
+      "bonus": {
+        "de": "Erzeugt Raumverzerrungen, die Gegner verwirren; Meister von FireFall, FireWall und FireBall; bei Wiederbelebung eine zusätzliche Verzerrung.",
+        "en": "Generates spatial distortions that confuse enemies. Master of FireFall, FireWall, and FireBall. OnRevival: spawns an additional spatial distortion."
+      },
       "secret": false,
       "emoji": "🌀",
       "image": "https://vampire.survivors.wiki/images/Select-Sargon.png",
@@ -58,11 +70,15 @@
     {
       "id": "nameless-fool",
       "name": "Nameless Fool",
+      "nameDeHint": "Namenloser Narr",
       "source": "legacy-of-the-bloodmoon",
       "startingWeapons": [
         "descent-into-misery"
       ],
-      "bonus": "Letzter Atemzug: verliert die Hälfte der max. Gesundheit und erhält eine zufällige Darkana; Wiederbelebungen können weitere bringen (max. 3).",
+      "bonus": {
+        "de": "Letzter Atemzug: verliert die Hälfte der max. Gesundheit und erhält eine zufällige Darkana; Wiederbelebungen können weitere bringen (max. 3).",
+        "en": "LastBreath: Loses half of Max Health and receives a random Darkana (if available). OnRevival: LastBreath ability can award an extra Darkana (max 3)."
+      },
       "secret": false,
       "emoji": "🃏",
       "image": "https://vampire.survivors.wiki/images/Select-Nameless_Fool.png",
@@ -71,11 +87,15 @@
     {
       "id": "congregation",
       "name": "Congregation",
+      "nameDeHint": "Gemeinde",
       "source": "legacy-of-the-bloodmoon",
       "startingWeapons": [
         "screams-from-the-void"
       ],
-      "bonus": "Jede Wiederbelebung über eins gibt einen zusätzlichen passiven Slot; bei kritischer Gesundheit feuert die Hauptwaffe je nach übrigen Wiederbelebungen; bei Wiederbelebung erscheint ein Velvet Dodecahedron.",
+      "bonus": {
+        "de": "Jede Wiederbelebung über eins gibt einen zusätzlichen passiven Slot; bei kritischer Gesundheit feuert die Hauptwaffe je nach übrigen Wiederbelebungen; bei Wiederbelebung erscheint ein Velvet Dodecahedron.",
+        "en": "Gains a passive weapon slot for any Revivals exceeding 1. HpCritical and LastBreath: frantically activate their main weapon depending on Revivals left. OnRevival: spawns a Velvet Dodecahedron."
+      },
       "secret": false,
       "emoji": "👥",
       "image": "https://vampire.survivors.wiki/images/Select-Congregation.png",
@@ -84,9 +104,13 @@
     {
       "id": "nameless-saint",
       "name": "Nameless Saint",
+      "nameDeHint": "Namenloser Heiliger",
       "source": "legacy-of-the-bloodmoon",
       "startingWeapons": [],
-      "bonus": "Startet mit heiligen Waffen, je nachdem, was in der Sammlung freigeschaltet ist; letzter Atemzug löst einen Rosary aus.",
+      "bonus": {
+        "de": "Startet mit heiligen Waffen, je nachdem, was in der Sammlung freigeschaltet ist; letzter Atemzug löst einen Rosary aus.",
+        "en": "Starts and is Adept with an array of holy weapons, depending on their availability in the Collection, Lastbreath: triggers a Rosary."
+      },
       "secret": false,
       "emoji": "😇",
       "image": "https://vampire.survivors.wiki/images/Select-Nameless_Saint.png",
@@ -99,7 +123,10 @@
       "startingWeapons": [
         "blacken-firmament"
       ],
-      "bonus": "Geübt mit Höllen-Waffen; Blut-Waffen lassen Blut fallen; letzter Atemzug gibt je nach gesammeltem Blut kurz mehr Macht und kürzere Abklingzeit.",
+      "bonus": {
+        "de": "Geübt mit Höllen-Waffen; Blut-Waffen lassen Blut fallen; letzter Atemzug gibt je nach gesammeltem Blut kurz mehr Macht und kürzere Abklingzeit.",
+        "en": "Adept with Hell type weapons. Enemies killed by Blood type weapons drop Blood. LastBreath: gains a temporary Might and Cooldown bonus depending on collected Blood."
+      },
       "secret": false,
       "emoji": "😈",
       "image": "https://vampire.survivors.wiki/images/Select-Baal%27Thasar.png",
@@ -112,24 +139,36 @@
       "startingWeapons": [
         "108-responsive-prayers"
       ],
-      "bonus": "Erhält alle 20 Level mehr Projektile (max. +4); jede abgeschlossene Stage gibt einen Prestige-Rang.",
+      "bonus": {
+        "de": "Erhält alle 20 Level mehr Projektile (max. +4); jede abgeschlossene Stage gibt einen Prestige-Rang.",
+        "en": "Gets more projectiles every 20 levels (max+4). Complete a stage to gain a Prestige rank."
+      },
       "secret": false,
       "emoji": "🍖",
       "image": "https://vampire.survivors.wiki/images/Select-Jaman_Jato_%E2%98%85.png",
       "verified": false,
-      "note": "Ungeprüft: Startwaffe nur auf der Charakterseite genannt."
+      "note": {
+        "de": "Ungeprüft: Startwaffe nur auf der Charakterseite genannt.",
+        "en": "Unverified: starting weapon only named on the character page."
+      }
     },
     {
       "id": "in-kujata",
       "name": "In' Kujata",
       "source": "legacy-of-the-bloodmoon",
       "startingWeapons": [],
-      "bonus": "Stampft alle paar Schritte auf den Boden; wächst mit gesammelter Rüstung; bei kritischer Gesundheit kurz mehr Rüstung.",
+      "bonus": {
+        "de": "Stampft alle paar Schritte auf den Boden; wächst mit gesammelter Rüstung; bei kritischer Gesundheit kurz mehr Rüstung.",
+        "en": "Slams the ground every few steps. Grows bigger when accumulating Armor. HP-Critical: gains a temporary Armor bonus."
+      },
       "secret": false,
       "emoji": "🐂",
       "image": "https://vampire.survivors.wiki/images/Select-In%27_Kujata.png",
       "verified": true,
-      "note": "Versteckte Waffe: Eskizzibur."
+      "note": {
+        "de": "Versteckte Waffe: Eskizzibur.",
+        "en": "Hidden weapon: Eskizzibur."
+      }
     },
     {
       "id": "megalo-sargon",
@@ -138,7 +177,10 @@
       "startingWeapons": [
         "firestall"
       ],
-      "bonus": "„Zweischneidige Geschenke. Dunkle Illusionen. Echos der Vergangenheit.“",
+      "bonus": {
+        "de": "„Zweischneidige Geschenke. Dunkle Illusionen. Echos der Vergangenheit.“",
+        "en": "Backhanded gifts. Dark illusions. Echoes of the past."
+      },
       "secret": false,
       "emoji": "🌌",
       "image": "https://vampire.survivors.wiki/images/Select-Megalo_Sargon.png",
@@ -151,7 +193,10 @@
       "startingWeapons": [
         "damnation"
       ],
-      "bonus": "„Es ist Boden und Horizont zugleich und verschlingt sich doch selbst.“",
+      "bonus": {
+        "de": "„Es ist Boden und Horizont zugleich und verschlingt sich doch selbst.“",
+        "en": "It is ground and horizon both, and still it devours itself."
+      },
       "secret": false,
       "emoji": "🐋",
       "image": "https://vampire.survivors.wiki/images/Select-Baal%27Thamut.png",

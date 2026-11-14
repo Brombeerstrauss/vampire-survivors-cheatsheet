@@ -109,7 +109,10 @@
       ],
       "passives": [],
       "conditions": [
-        "Kein Gegenstand nötig; alle drei Feuerwaffen auf Maximalstufe."
+        {
+          "de": "Kein Gegenstand nötig; alle drei Feuerwaffen auf Maximalstufe.",
+          "en": "No item needed; all three fire weapons at max level."
+        }
       ],
       "verified": true
     },
@@ -128,7 +131,10 @@
       ],
       "passives": [],
       "conditions": [
-        "Kein Gegenstand nötig; Kyra-Stones ist selbst eine Entwicklung von Magi-Stone."
+        {
+          "de": "Kein Gegenstand nötig; Kyra-Stones ist selbst eine Entwicklung von Magi-Stone.",
+          "en": "No item needed; Kyra-Stones is itself an evolution of Magi-Stone."
+        }
       ],
       "verified": true
     },
@@ -147,10 +153,16 @@
       ],
       "passives": [],
       "conditions": [
-        "Kein Gegenstand nötig."
+        {
+          "de": "Kein Gegenstand nötig.",
+          "en": "No item needed."
+        }
       ],
       "verified": true,
-      "note": "Braucht 108 Bocce aus Legacy of the Moonspell."
+      "note": {
+        "de": "Braucht 108 Bocce aus Legacy of the Moonspell.",
+        "en": "Needs 108 Bocce from Legacy of the Moonspell."
+      }
     }
   ]
 }

@@ -15,6 +15,8 @@
         "properties": {
           "id": { "$ref": "common.schema.json#/definitions/id" },
           "name": { "$ref": "common.schema.json#/definitions/name" },
+          "nameDe": { "$ref": "common.schema.json#/definitions/nameDe" },
+          "nameDeHint": { "$ref": "common.schema.json#/definitions/nameDeHint" },
           "source": { "$ref": "common.schema.json#/definitions/source" },
           "startingWeapons": {
             "type": "array",
@@ -23,8 +25,8 @@
             "description": "Kennungen der Startwaffen. Meist genau eine, darf leer sein."
           },
           "bonus": {
-            "type": "string",
-            "description": "Besonderheit des Charakters in einem Satz (deutsch)."
+            "$ref": "common.schema.json#/definitions/localizedText",
+            "description": "Besonderheit des Charakters in einem Satz."
           },
           "secret": {
             "type": "boolean",
@@ -35,7 +37,7 @@
           "icon": { "$ref": "common.schema.json#/definitions/icon" },
           "image": { "$ref": "common.schema.json#/definitions/image" },
           "verified": { "$ref": "common.schema.json#/definitions/verified" },
-          "note": { "type": "string" }
+          "note": { "$ref": "common.schema.json#/definitions/localizedText" }
         }
       }
     }

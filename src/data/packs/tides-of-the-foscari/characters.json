@@ -8,12 +8,18 @@
       "startingWeapons": [
         "spellstring"
       ],
-      "bonus": "Erhält SpellStream auf Level 10, SpellStrike auf Level 20 und Academy Badge auf Level 30.",
+      "bonus": {
+        "de": "Erhält SpellStream auf Level 10, SpellStrike auf Level 20 und Academy Badge auf Level 30.",
+        "en": "Receives SpellStream at Level 10 and SpellStrike at Level 20. Receives Academy Badge at Level 30."
+      },
       "secret": false,
       "emoji": "🧙‍♀️",
       "image": "https://vampire.survivors.wiki/images/Select-Eleanor_Uziron.png",
       "verified": true,
-      "note": "SpellStream und SpellStrike kommen erst auf Level 10 und 20 dazu."
+      "note": {
+        "de": "SpellStream und SpellStrike kommen erst auf Level 10 und 20 dazu.",
+        "en": "SpellStream and SpellStrike are added at levels 10 and 20."
+      }
     },
     {
       "id": "maruto-cuts",
@@ -22,7 +28,10 @@
       "startingWeapons": [
         "eskizzibur"
       ],
-      "bonus": "Erhält nach erlittenem Schaden kurz mehr Rüstung; Academy Badge auf Level 30.",
+      "bonus": {
+        "de": "Erhält nach erlittenem Schaden kurz mehr Rüstung; Academy Badge auf Level 30.",
+        "en": "Gains temporary Armor bonus after getting damaged. Receives Academy Badge at Level 30."
+      },
       "secret": false,
       "emoji": "🛡️",
       "image": "https://vampire.survivors.wiki/images/Select-Maruto_Cuts.png",
@@ -35,7 +44,10 @@
       "startingWeapons": [
         "flash-arrow"
       ],
-      "bonus": "Glücksabhängige Aufladung feuert eine Salve Flash Arrows; +1 % Glück pro Level; Academy Badge auf Level 30.",
+      "bonus": {
+        "de": "Glücksabhängige Aufladung feuert eine Salve Flash Arrows; +1 % Glück pro Level; Academy Badge auf Level 30.",
+        "en": "Luck-based Charge ability: fires a volley of Flash Arrows. Gains +1% Luck every level. Receives Academy Badge at Level 30."
+      },
       "secret": false,
       "emoji": "🏹",
       "image": "https://vampire.survivors.wiki/images/Select-Keitha_Muort.png",
@@ -48,7 +60,10 @@
       "startingWeapons": [
         "prismatic-missile"
       ],
-      "bonus": "Löst beim Level-up einen Rosary aus; nach einer Wiederbelebung kurz mehr Macht, Laufgeschwindigkeit und kürzere Abklingzeit.",
+      "bonus": {
+        "de": "Löst beim Level-up einen Rosary aus; nach einer Wiederbelebung kurz mehr Macht, Laufgeschwindigkeit und kürzere Abklingzeit.",
+        "en": "Triggers a Rosary when levelling up. Gets a temporary Might, Cooldown, and Move Speed bonus after reviving."
+      },
       "secret": false,
       "emoji": "✨",
       "image": "https://vampire.survivors.wiki/images/Select-Luminaire_Foscari.png",
@@ -61,7 +76,10 @@
       "startingWeapons": [
         "shadow-servant"
       ],
-      "bonus": "Löst beim Level-up einen Vacuum aus; einmal pro Leben World Eater nach tödlichem Schaden.",
+      "bonus": {
+        "de": "Löst beim Level-up einen Vacuum aus; einmal pro Leben World Eater nach tödlichem Schaden.",
+        "en": "Triggers a Vacuum when levelling up. Once per life, triggers World Eater after receiving fatal damage."
+      },
       "secret": false,
       "emoji": "🧀",
       "image": "https://vampire.survivors.wiki/images/Select-Genevieve_Gruy%C3%A8re.png",
@@ -74,7 +92,10 @@
       "startingWeapons": [
         "shadow-servant"
       ],
-      "bonus": "„Es frisst buchstäblich die Welt.“",
+      "bonus": {
+        "de": "„Es frisst buchstäblich die Welt.“",
+        "en": "It will literally eat the world."
+      },
       "secret": false,
       "emoji": "🌍",
       "image": "https://vampire.survivors.wiki/images/Select-Je-Ne-Viv.png",
@@ -87,7 +108,10 @@
       "startingWeapons": [
         "vicious-hunger"
       ],
-      "bonus": "Erhält Erfahrung beim Aufsammeln von Goldmünzen und Geldbeuteln; startet mit zeitweise verringerter Macht.",
+      "bonus": {
+        "de": "Erhält Erfahrung beim Aufsammeln von Goldmünzen und Geldbeuteln; startet mit zeitweise verringerter Macht.",
+        "en": "Gains XP when picking up Gold Coins and Coin Bags. Starts with temporarily reduced Might."
+      },
       "secret": false,
       "emoji": "🐟",
       "image": "https://vampire.survivors.wiki/images/Select-Sammy.png",
@@ -100,7 +124,10 @@
       "startingWeapons": [
         "party-popper"
       ],
-      "bonus": "Erhält alle 20 Level mehr Projektile (max. +4).",
+      "bonus": {
+        "de": "Erhält alle 20 Level mehr Projektile (max. +4).",
+        "en": "Gets more projectiles every 20 levels (max +4)."
+      },
       "secret": false,
       "emoji": "🧟",
       "image": "https://vampire.survivors.wiki/images/Select-Rottin%27Ghoul.png",

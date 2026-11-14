@@ -4,8 +4,12 @@
     {
       "id": "academy-badge",
       "name": "Academy Badge",
+      "nameDeHint": "Akademieabzeichen",
       "source": "tides-of-the-foscari",
-      "description": "Mehr Anzahl und Wiederbelebungen, dafür weniger Wachstum.",
+      "description": {
+        "de": "Mehr Anzahl und Wiederbelebungen, dafür weniger Wachstum.",
+        "en": "Will provide bonus Amount and Revivals in exchange for Growth."
+      },
       "maxLevel": 6,
       "emoji": "🎓",
       "image": "https://vampire.survivors.wiki/images/Sprite-Academy_Badge.png",

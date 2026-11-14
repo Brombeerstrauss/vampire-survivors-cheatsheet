@@ -69,11 +69,11 @@
           },
           "conditions": {
             "type": "array",
-            "items": { "$ref": "common.schema.json#/definitions/text" },
+            "items": { "$ref": "common.schema.json#/definitions/localizedText" },
             "description": "Weitere Bedingungen als Text, z. B. ein Relikt oder ein Mindestlevel."
           },
           "verified": { "$ref": "common.schema.json#/definitions/verified" },
-          "note": { "type": "string" }
+          "note": { "$ref": "common.schema.json#/definitions/localizedText" }
         }
       }
     }

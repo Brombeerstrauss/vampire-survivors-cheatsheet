@@ -15,7 +15,7 @@
         "additionalProperties": false,
         "properties": {
           "id": { "$ref": "common.schema.json#/definitions/id" },
-          "name": { "$ref": "common.schema.json#/definitions/text" },
+          "name": { "$ref": "common.schema.json#/definitions/localizedText" },
           "kind": { "enum": ["base", "dlc"] },
           "paid": {
             "type": "boolean",

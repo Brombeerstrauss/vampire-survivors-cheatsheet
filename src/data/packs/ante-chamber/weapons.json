@@ -6,7 +6,10 @@
       "name": "Infernolatro",
       "source": "ante-chamber",
       "kind": "base",
-      "description": "Erzeugt eine Flammenzone in Blickrichtung; wird durch besiegte Gegner stärker.",
+      "description": {
+        "de": "Erzeugt eine Flammenzone in Blickrichtung; wird durch besiegte Gegner stärker.",
+        "en": "Creates a zone of flames in the faced direction. Empowered by enemy kills."
+      },
       "maxLevel": 9,
       "emoji": "🔥",
       "image": "https://vampire.survivors.wiki/images/Sprite-Infernolatro.png",
@@ -17,7 +20,10 @@
       "name": "Gros Michel",
       "source": "ante-chamber",
       "kind": "base",
-      "description": "Wirft gebogene Bananen; 1 zu 6 Chance auf kritischen Treffer mit Explosion.",
+      "description": {
+        "de": "Wirft gebogene Bananen; 1 zu 6 Chance auf kritischen Treffer mit Explosion.",
+        "en": "Flings curving bananas. 1 in 6 chance to critically hit and explode."
+      },
       "maxLevel": 9,
       "emoji": "🍌",
       "image": "https://vampire.survivors.wiki/images/Sprite-Gros_Michel.png",
@@ -28,7 +34,10 @@
       "name": "Fibonacci Spritz",
       "source": "ante-chamber",
       "kind": "base",
-      "description": "Versprüht spiralförmig Sprudelwasser; kann eine andere ausgerüstete Waffe mit auslösen.",
+      "description": {
+        "de": "Versprüht spiralförmig Sprudelwasser; kann eine andere ausgerüstete Waffe mit auslösen.",
+        "en": "Creates a spiral spray of fizzy water. Has a chance to fire another equipped weapon."
+      },
       "maxLevel": 9,
       "emoji": "🫧",
       "image": "https://vampire.survivors.wiki/images/Sprite-Fibonacci_Spritz.png",
@@ -37,9 +46,13 @@
     {
       "id": "celestial-booster",
       "name": "Celestial Booster",
+      "nameDeHint": "Himmelsbooster",
       "source": "ante-chamber",
       "kind": "base",
-      "description": "Planeten kreisen um dich; der Schaden steigt mit den in diesem Lauf gesammelten Münzen.",
+      "description": {
+        "de": "Planeten kreisen um dich; der Schaden steigt mit den in diesem Lauf gesammelten Münzen.",
+        "en": "Planets orbit around you. Damage increases by amount of coins collected this run."
+      },
       "maxLevel": 9,
       "emoji": "🪐",
       "image": "https://vampire.survivors.wiki/images/Sprite-Celestial_Booster.png",
@@ -50,7 +63,10 @@
       "name": "NaneInferno",
       "source": "ante-chamber",
       "kind": "evolved",
-      "description": "Entwicklung von Infernolatro: fügt eine zweite Zone hinzu; überlagerte Zonen vervielfachen ihre Wirkung.",
+      "description": {
+        "de": "Entwicklung von Infernolatro: fügt eine zweite Zone hinzu; überlagerte Zonen vervielfachen ihre Wirkung.",
+        "en": "Evolved Infernolatro. Adds a second zone. Zone effects multiply when combined."
+      },
       "maxLevel": 1,
       "emoji": "🔥",
       "image": "https://vampire.survivors.wiki/images/Sprite-NaneInferno.png",
@@ -61,7 +77,10 @@
       "name": "Cavendish",
       "source": "ante-chamber",
       "kind": "evolved",
-      "description": "Entwicklung von Gros Michel: trifft immer kritisch und explodiert immer; andere Waffen treffen öfter kritisch.",
+      "description": {
+        "de": "Entwicklung von Gros Michel: trifft immer kritisch und explodiert immer; andere Waffen treffen öfter kritisch.",
+        "en": "Evolved Gros Michel. Always crits. Always explodes. Other weapons crit more often."
+      },
       "maxLevel": 1,
       "emoji": "🍌",
       "image": "https://vampire.survivors.wiki/images/Sprite-Cavendish.png",
@@ -72,7 +91,10 @@
       "name": "Royal Flush",
       "source": "ante-chamber",
       "kind": "evolved",
-      "description": "Entwicklung von Fibonacci Spritz: 55 % Chance, 1, 2, 3 oder 5 andere Waffen mit auszulösen.",
+      "description": {
+        "de": "Entwicklung von Fibonacci Spritz: 55 % Chance, 1, 2, 3 oder 5 andere Waffen mit auszulösen.",
+        "en": "Evolved Fibonacci Spritz. Has a 55% chance to fire 1, 2, 3 or 5 other weapons."
+      },
       "maxLevel": 1,
       "emoji": "🂡",
       "image": "https://vampire.survivors.wiki/images/Sprite-Royal_Flush.png",
@@ -81,9 +103,13 @@
     {
       "id": "negative-space",
       "name": "Negative Space",
+      "nameDeHint": "Negativer Raum",
       "source": "ante-chamber",
       "kind": "evolved",
-      "description": "Entwicklung von Celestial Booster: enthüllt geheime Planeten, die gelegentlich negativ werden.",
+      "description": {
+        "de": "Entwicklung von Celestial Booster: enthüllt geheime Planeten, die gelegentlich negativ werden.",
+        "en": "Evolved Celestial Booster. Reveals secret planets. Planets occasionally turn negative."
+      },
       "maxLevel": 1,
       "emoji": "🌌",
       "image": "https://vampire.survivors.wiki/images/Sprite-Negative_Space.png",

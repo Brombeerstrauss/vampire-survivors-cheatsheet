@@ -4,9 +4,13 @@
     {
       "id": "whip",
       "name": "Whip",
+      "nameDe": "Peitsche",
       "source": "base",
       "kind": "base",
-      "description": "Schlägt waagerecht zu und durchdringt Gegner.",
+      "description": {
+        "de": "Greift waagerecht an, durchdringt Gegner.",
+        "en": "Attacks horizontally, passes through enemies."
+      },
       "maxLevel": 8,
       "emoji": "🪢",
       "image": "https://vampire.survivors.wiki/images/Sprite-Whip.png",
@@ -15,9 +19,13 @@
     {
       "id": "magic-wand",
       "name": "Magic Wand",
+      "nameDe": "Zauberstab",
       "source": "base",
       "kind": "base",
-      "description": "Schießt auf den nächsten Gegner.",
+      "description": {
+        "de": "Feuert auf den nächstgelegenen Gegner.",
+        "en": "Fires at the nearest enemy."
+      },
       "maxLevel": 8,
       "emoji": "🪄",
       "image": "https://vampire.survivors.wiki/images/Sprite-Magic_Wand.png",
@@ -26,9 +34,13 @@
     {
       "id": "knife",
       "name": "Knife",
+      "nameDe": "Messer",
       "source": "base",
       "kind": "base",
-      "description": "Wirft schnell Messer in Blickrichtung.",
+      "description": {
+        "de": "Schießt schnell in die gegenüberliegende Richtung.",
+        "en": "Fires quickly in the faced direction."
+      },
       "maxLevel": 8,
       "emoji": "🔪",
       "image": "https://vampire.survivors.wiki/images/Sprite-Knife.png",
@@ -37,9 +49,13 @@
     {
       "id": "axe",
       "name": "Axe",
+      "nameDe": "Axt",
       "source": "base",
       "kind": "base",
-      "description": "Hoher Schaden, wächst stark mit der Fläche.",
+      "description": {
+        "de": "Hoher Schaden, hohe Bereichsskalierung.",
+        "en": "High damage, high Area scaling."
+      },
       "maxLevel": 8,
       "emoji": "🪓",
       "image": "https://vampire.survivors.wiki/images/Sprite-Axe.png",
@@ -48,9 +64,13 @@
     {
       "id": "cross",
       "name": "Cross",
+      "nameDe": "Kreuz",
       "source": "base",
       "kind": "base",
-      "description": "Zielt auf den nächsten Gegner und kehrt wie ein Bumerang zurück.",
+      "description": {
+        "de": "Zielt auf den nächsten Gegner und hat einen Bumerangeffekt.",
+        "en": "Aims at nearest enemy, has boomerang effect."
+      },
       "maxLevel": 8,
       "emoji": "✝️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Cross.png",
@@ -59,9 +79,13 @@
     {
       "id": "king-bible",
       "name": "King Bible",
+      "nameDe": "Königsbibel",
       "source": "base",
       "kind": "base",
-      "description": "Kreist um den Charakter.",
+      "description": {
+        "de": "Kreist um den Charakter.",
+        "en": "Orbits around the character."
+      },
       "maxLevel": 8,
       "emoji": "📖",
       "image": "https://vampire.survivors.wiki/images/Sprite-King_Bible.png",
@@ -70,9 +94,13 @@
     {
       "id": "fire-wand",
       "name": "Fire Wand",
+      "nameDe": "Feuerstab",
       "source": "base",
       "kind": "base",
-      "description": "Schießt auf einen zufälligen Gegner und richtet hohen Schaden an.",
+      "description": {
+        "de": "Feuert auf einen zufälligen Gegner, verursacht schweren Schaden.",
+        "en": "Fires at a random enemy, deals heavy damage."
+      },
       "maxLevel": 8,
       "emoji": "🔥",
       "image": "https://vampire.survivors.wiki/images/Sprite-Fire_Wand.png",
@@ -81,9 +109,13 @@
     {
       "id": "garlic",
       "name": "Garlic",
+      "nameDe": "Knoblauch",
       "source": "base",
       "kind": "base",
-      "description": "Schadet Gegnern in der Nähe und senkt ihren Widerstand gegen Rückstoß und Einfrieren.",
+      "description": {
+        "de": "Fügt Gegnern in der Nähe Schaden zu. Verringert den Widerstand gegen Rückschlag und Einfrieren.",
+        "en": "Damages nearby enemies. Reduces resistance to knockback and freeze."
+      },
       "maxLevel": 8,
       "emoji": "🧄",
       "image": "https://vampire.survivors.wiki/images/Sprite-Garlic.png",
@@ -92,9 +124,13 @@
     {
       "id": "santa-water",
       "name": "Santa Water",
+      "nameDe": "Santa Wasser",
       "source": "base",
       "kind": "base",
-      "description": "Erzeugt Schadenszonen am Boden.",
+      "description": {
+        "de": "Erzeugt schädliche Zonen.",
+        "en": "Generates damaging zones."
+      },
       "maxLevel": 8,
       "emoji": "💧",
       "image": "https://vampire.survivors.wiki/images/Sprite-Santa_Water.png",
@@ -103,9 +139,13 @@
     {
       "id": "runetracer",
       "name": "Runetracer",
+      "nameDe": "Runenläufer",
       "source": "base",
       "kind": "base",
-      "description": "Durchdringt Gegner und prallt umher.",
+      "description": {
+        "de": "Durchdring Gegner, hüpft herum.",
+        "en": "Passes through enemies, bounces around."
+      },
       "maxLevel": 8,
       "emoji": "💠",
       "image": "https://vampire.survivors.wiki/images/Sprite-Runetracer.png",
@@ -114,9 +154,13 @@
     {
       "id": "lightning-ring",
       "name": "Lightning Ring",
+      "nameDe": "Blitzring",
       "source": "base",
       "kind": "base",
-      "description": "Trifft zufällige Gegner mit Blitzen.",
+      "description": {
+        "de": "Schlägt auf zufällige Gegner ein.",
+        "en": "Strikes at random enemies."
+      },
       "maxLevel": 8,
       "emoji": "⚡",
       "image": "https://vampire.survivors.wiki/images/Sprite-Lightning_Ring.png",
@@ -125,9 +169,13 @@
     {
       "id": "pentagram",
       "name": "Pentagram",
+      "nameDe": "Pentagramm",
       "source": "base",
       "kind": "base",
-      "description": "Löscht alles auf dem Bildschirm aus.",
+      "description": {
+        "de": "Löscht alles in Sichtweite aus.",
+        "en": "Erases everything in sight."
+      },
       "maxLevel": 8,
       "emoji": "🔯",
       "image": "https://vampire.survivors.wiki/images/Sprite-Pentagram.png",
@@ -138,7 +186,10 @@
       "name": "Peachone",
       "source": "base",
       "kind": "base",
-      "description": "Bombardiert eine kreisende Zone.",
+      "description": {
+        "de": "Bombardiert in einer kreisenden Zone.",
+        "en": "Bombards in a circling zone."
+      },
       "maxLevel": 8,
       "emoji": "🕊️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Peachone.png",
@@ -147,9 +198,13 @@
     {
       "id": "ebony-wings",
       "name": "Ebony Wings",
+      "nameDe": "Ebenholz-Flügel",
       "source": "base",
       "kind": "base",
-      "description": "Bombardiert eine kreisende Zone, gegenläufig zu Peachone.",
+      "description": {
+        "de": "Bombardiert in einer kreisenden Zone.",
+        "en": "Bombards in a circling zone."
+      },
       "maxLevel": 8,
       "emoji": "🦅",
       "image": "https://vampire.survivors.wiki/images/Sprite-Ebony_Wings.png",
@@ -160,7 +215,10 @@
       "name": "Phiera Der Tuphello",
       "source": "base",
       "kind": "base",
-      "description": "Schießt schnell in vier feste Richtungen.",
+      "description": {
+        "de": "Schieße schnell in all vier festgelegten Richtungen.",
+        "en": "Fires quickly in four fixed directions."
+      },
       "maxLevel": 8,
       "emoji": "🔫",
       "image": "https://vampire.survivors.wiki/images/Sprite-Phiera_Der_Tuphello.png",
@@ -169,9 +227,13 @@
     {
       "id": "eight-the-sparrow",
       "name": "Eight The Sparrow",
+      "nameDe": "Acht der Spatz",
       "source": "base",
       "kind": "base",
-      "description": "Schießt schnell in vier feste Richtungen.",
+      "description": {
+        "de": "Schieße schnell in all vier festgelegten Richtungen.",
+        "en": "Fires quickly in four fixed directions."
+      },
       "maxLevel": 8,
       "emoji": "🎯",
       "image": "https://vampire.survivors.wiki/images/Sprite-Eight_The_Sparrow.png",
@@ -182,7 +244,10 @@
       "name": "Gatti Amari",
       "source": "base",
       "kind": "base",
-      "description": "Ruft launische Katzen herbei, die mit Pickups spielen können.",
+      "description": {
+        "de": "Ruft launische Katzen herbei, die mit Pickups spielen können.",
+        "en": "Summons capricious projectiles. Might interact with pickups."
+      },
       "maxLevel": 8,
       "emoji": "🐈",
       "image": "https://vampire.survivors.wiki/images/Sprite-Gatti_Amari.png",
@@ -191,9 +256,13 @@
     {
       "id": "song-of-mana",
       "name": "Song of Mana",
+      "nameDe": "Mana-Lied",
       "source": "base",
       "kind": "base",
-      "description": "Greift senkrecht an und durchdringt Gegner.",
+      "description": {
+        "de": "Attackiert vertical, geht durch Gegner.",
+        "en": "Attacks vertically, passes through enemies."
+      },
       "maxLevel": 8,
       "emoji": "🎶",
       "image": "https://vampire.survivors.wiki/images/Sprite-Song_of_Mana.png",
@@ -204,7 +273,10 @@
       "name": "Shadow Pinion",
       "source": "base",
       "kind": "base",
-      "description": "Erzeugt beim Laufen Schadenszonen und schlägt beim Stehenbleiben zu.",
+      "description": {
+        "de": "Generates damaging zones when moving, strikes when stopping.",
+        "en": "Generating damaging zones when moving, strikes when stopping."
+      },
       "maxLevel": 8,
       "emoji": "🌀",
       "image": "https://vampire.survivors.wiki/images/Sprite-Shadow_Pinion.png",
@@ -213,9 +285,13 @@
     {
       "id": "clock-lancet",
       "name": "Clock Lancet",
+      "nameDe": "Uhr-Lanzette",
       "source": "base",
       "kind": "base",
-      "description": "Kann Gegner in der Zeit einfrieren.",
+      "description": {
+        "de": "Chance, Gegner in der Zeit einzufrieren.",
+        "en": "Chance to freeze enemies in time."
+      },
       "maxLevel": 7,
       "emoji": "⏰",
       "image": "https://vampire.survivors.wiki/images/Sprite-Clock_Lancet.png",
@@ -224,9 +300,13 @@
     {
       "id": "laurel",
       "name": "Laurel",
+      "nameDe": "Lorbeer",
       "source": "base",
       "kind": "base",
-      "description": "Schützt vor Schaden, solange er aktiv ist.",
+      "description": {
+        "de": "Schützt vor Schaden, wenn sie aktiv ist.",
+        "en": "Shields from damage when active."
+      },
       "maxLevel": 7,
       "emoji": "🌿",
       "image": "https://vampire.survivors.wiki/images/Sprite-Laurel.png",
@@ -237,7 +317,10 @@
       "name": "Vento Sacro",
       "source": "base",
       "kind": "base",
-      "description": "Wird bei ununterbrochener Bewegung stärker; kann kritisch treffen.",
+      "description": {
+        "de": "Wird bei ununterbrochener Bewegung stärker; kann kritisch treffen.",
+        "en": "Stronger with continuous movement. Can deal critical damage."
+      },
       "maxLevel": 8,
       "emoji": "🌬️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Vento_Sacro.png",
@@ -246,9 +329,13 @@
     {
       "id": "bone",
       "name": "Bone",
+      "nameDe": "Knochen",
       "source": "base",
       "kind": "base",
-      "description": "Wirft ein abprallendes Projektil.",
+      "description": {
+        "de": "Wirft ein hüpfendes Geschoss.",
+        "en": "Throws a bouncing projectile."
+      },
       "maxLevel": 8,
       "emoji": "🦴",
       "image": "https://vampire.survivors.wiki/images/Sprite-Bone.png",
@@ -257,9 +344,13 @@
     {
       "id": "cherry-bomb",
       "name": "Cherry Bomb",
+      "nameDe": "Kirschbombe",
       "source": "base",
       "kind": "base",
-      "description": "Wirft ein abprallendes Projektil, das manchmal explodiert.",
+      "description": {
+        "de": "Wirft ein hüpfendes Geschoss. Explodiert manchmal.",
+        "en": "Throws a bouncing projectile. Explodes, sometimes."
+      },
       "maxLevel": 8,
       "emoji": "🍒",
       "image": "https://vampire.survivors.wiki/images/Sprite-Cherry_Bomb.png",
@@ -270,7 +361,10 @@
       "name": "Carréllo",
       "source": "base",
       "kind": "base",
-      "description": "Wirft ein abprallendes Projektil; die Anzahl bestimmt, wie oft es abprallt.",
+      "description": {
+        "de": "Wirft ein abprallendes Projektil; die Anzahl bestimmt, wie oft es abprallt.",
+        "en": "Throws a bouncing projectile. Number of bounces affected by Amount."
+      },
       "maxLevel": 8,
       "emoji": "🛒",
       "image": "https://vampire.survivors.wiki/images/Sprite-Carr%C3%A9llo.png",
@@ -281,7 +375,10 @@
       "name": "Celestial Dusting",
       "source": "base",
       "kind": "base",
-      "description": "Wirft ein abprallendes Projektil; die Abklingzeit sinkt, während du dich bewegst.",
+      "description": {
+        "de": "Wirft ein abprallendes Projektil; die Abklingzeit sinkt, während du dich bewegst.",
+        "en": "Throws a bouncing projectile. Cooldown reduces when moving."
+      },
       "maxLevel": 8,
       "emoji": "✨",
       "image": "https://vampire.survivors.wiki/images/Sprite-Celestial_Dusting.png",
@@ -292,7 +389,10 @@
       "name": "La Robba",
       "source": "base",
       "kind": "base",
-      "description": "Erzeugt abprallende Projektile.",
+      "description": {
+        "de": "Erzeugt abprallende Projektile.",
+        "en": "Generates bouncing projectiles."
+      },
       "maxLevel": 8,
       "emoji": "🎁",
       "image": "https://vampire.survivors.wiki/images/Sprite-La_Robba.png",
@@ -301,9 +401,13 @@
     {
       "id": "greatest-jubilee",
       "name": "Greatest Jubilee",
+      "nameDeHint": "Größtes Jubiläum",
       "source": "base",
       "kind": "base",
-      "description": "Kann Lichtquellen herbeirufen.",
+      "description": {
+        "de": "Kann Lichtquellen herbeirufen.",
+        "en": "Has a chance to summon light sources."
+      },
       "maxLevel": 9,
       "emoji": "🎆",
       "image": "https://vampire.survivors.wiki/images/Sprite-Greatest_Jubilee.png",
@@ -314,7 +418,10 @@
       "name": "Bracelet",
       "source": "base",
       "kind": "base",
-      "description": "Feuert drei Projektile auf einen zufälligen Gegner.",
+      "description": {
+        "de": "Feuert drei Projektile auf einen zufälligen Gegner.",
+        "en": "Fires three projectiles at a random enemy."
+      },
       "maxLevel": 6,
       "emoji": "📿",
       "image": "https://vampire.survivors.wiki/images/Sprite-Bracelet.png",
@@ -325,7 +432,10 @@
       "name": "Candybox",
       "source": "base",
       "kind": "base",
-      "description": "Lässt dich eine beliebige freigeschaltete Basiswaffe wählen.",
+      "description": {
+        "de": "Lässt dich eine beliebige freigeschaltete Basiswaffe wählen.",
+        "en": "Allows you to choose any unlocked base weapon."
+      },
       "maxLevel": 1,
       "emoji": "🍬",
       "image": "https://vampire.survivors.wiki/images/Sprite-Candybox.png",
@@ -336,7 +446,10 @@
       "name": "Victory Sword",
       "source": "base",
       "kind": "base",
-      "description": "Greift den nächsten Gegner mit einer Kombo an; schlägt zurück.",
+      "description": {
+        "de": "Greift den nächsten Gegner mit einer Kombo an; schlägt zurück.",
+        "en": "Strikes with a combo attack at the nearest enemy. Retaliates."
+      },
       "maxLevel": 12,
       "emoji": "⚔️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Victory_Sword.png",
@@ -345,9 +458,13 @@
     {
       "id": "flames-of-misspell",
       "name": "Flames of Misspell",
+      "nameDeHint": "Flammen des Verschreibens",
       "source": "base",
       "kind": "base",
-      "description": "Stößt Flammenkegel aus.",
+      "description": {
+        "de": "Stößt Flammenkegel aus.",
+        "en": "Emits cones of flames."
+      },
       "maxLevel": 8,
       "emoji": "☄️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Flames_of_Misspell.png",
@@ -358,7 +475,10 @@
       "name": "Pako Battiliar",
       "source": "base",
       "kind": "base",
-      "description": "Kann zurückschlagen, wenn du Gesundheit verlierst.",
+      "description": {
+        "de": "Kann zurückschlagen, wenn du Gesundheit verlierst.",
+        "en": "May retaliate when losing health."
+      },
       "maxLevel": 8,
       "emoji": "🦇",
       "image": "https://vampire.survivors.wiki/images/Sprite-Pako_Battiliar.png",
@@ -369,7 +489,10 @@
       "name": "Ammo Appalate",
       "source": "base",
       "kind": "base",
-      "description": "Zielt auf einen Gegner in Blickrichtung; legt Munitionsvorrat an, solange kein Gegner in Reichweite ist.",
+      "description": {
+        "de": "Zielt auf einen Gegner in Blickrichtung; legt Munitionsvorrat an, solange kein Gegner in Reichweite ist.",
+        "en": "Aims at an enemy in the faced direction. Stockpiles projectiles when enemies are out of range."
+      },
       "maxLevel": 8,
       "emoji": "💥",
       "image": "https://vampire.survivors.wiki/images/Sprite-Ammo_Appalate.png",
@@ -378,9 +501,13 @@
     {
       "id": "unearthly-bolt",
       "name": "Unearthly Bolt",
+      "nameDeHint": "Überirdischer Blitz",
       "source": "base",
       "kind": "base",
-      "description": "Kritische Treffer erzeugen Schadenszonen; Wiederbelebungen erhöhen den Schaden aufeinanderfolgender kritischer Treffer.",
+      "description": {
+        "de": "Kritische Treffer erzeugen Schadenszonen; Wiederbelebungen erhöhen den Schaden aufeinanderfolgender kritischer Treffer.",
+        "en": "Critical hits generate damaging zones. Revivals affect damage of consecutive critical strikes."
+      },
       "maxLevel": 8,
       "emoji": "🌩️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Unearthly_Bolt.png",
@@ -389,9 +516,13 @@
     {
       "id": "glass-fandango",
       "name": "Glass Fandango",
+      "nameDeHint": "Glas-Fandango",
       "source": "base",
       "kind": "base",
-      "description": "Wird stärker durch Bewegung, durch Orologions und gegen eingefrorene Gegner.",
+      "description": {
+        "de": "Wird stärker durch Bewegung, durch Orologions und gegen eingefrorene Gegner.",
+        "en": "Stronger with movement, Orologions, and against frozen enemies"
+      },
       "maxLevel": 8,
       "emoji": "🔮",
       "image": "https://vampire.survivors.wiki/images/Sprite-Glass_Fandango.png",
@@ -402,7 +533,10 @@
       "name": "Penshin Fatcha",
       "source": "base",
       "kind": "base",
-      "description": "Eine Auswahl an Thunfisch-Waffen, die sich endlos weiterentwickeln können.",
+      "description": {
+        "de": "Eine Auswahl an Thunfisch-Waffen, die sich endlos weiterentwickeln können.",
+        "en": "A selection of aquatic armaments that can evolve endlessly."
+      },
       "maxLevel": 1,
       "emoji": "🐟",
       "image": "https://vampire.survivors.wiki/images/Sprite-Penshin_Fatcha.png",
@@ -413,7 +547,10 @@
       "name": "Tonno Subito",
       "source": "base",
       "kind": "base",
-      "description": "Einfacher Thunfisch; Level-Boni setzen auf Geschwindigkeit.",
+      "description": {
+        "de": "Einfacher Thunfisch; Level-Boni setzen auf Geschwindigkeit.",
+        "en": "Basic tuna. Level up bonuses focus on Speed."
+      },
       "maxLevel": 6,
       "emoji": "🐟",
       "image": "https://vampire.survivors.wiki/images/Sprite-Tonno_Subito.png",
@@ -424,7 +561,10 @@
       "name": "Tonnado",
       "source": "base",
       "kind": "base",
-      "description": "Geschlagener Thunfisch; Level-Boni setzen auf Dauer.",
+      "description": {
+        "de": "Geschlagener Thunfisch; Level-Boni setzen auf Dauer.",
+        "en": "Whipped tuna. Level up bonuses focus on Duration."
+      },
       "maxLevel": 6,
       "emoji": "🌪️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Tonnado.png",
@@ -435,7 +575,10 @@
       "name": "Tonn'omoto",
       "source": "base",
       "kind": "base",
-      "description": "Süßwasser-Thunfisch; Level-Boni setzen auf Abklingzeit.",
+      "description": {
+        "de": "Süßwasser-Thunfisch; Level-Boni setzen auf Abklingzeit.",
+        "en": "Freshwater tuna. Level up bonuses focus on Cooldown."
+      },
       "maxLevel": 6,
       "emoji": "🏞️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Tonn%27omoto.png",
@@ -446,7 +589,10 @@
       "name": "Tonn'oddeeo",
       "source": "base",
       "kind": "base",
-      "description": "Himmlischer Thunfisch; Level-Boni setzen auf Anzahl.",
+      "description": {
+        "de": "Himmlischer Thunfisch; Level-Boni setzen auf Anzahl.",
+        "en": "Heavenly tuna. Level up bonuses focus on Amount."
+      },
       "maxLevel": 6,
       "emoji": "😇",
       "image": "https://vampire.survivors.wiki/images/Sprite-Tonn%27oddeeo.png",
@@ -457,7 +603,10 @@
       "name": "Tonne",
       "source": "base",
       "kind": "base",
-      "description": "Riesen-Thunfisch; Level-Boni setzen auf Fläche, die Anzahl erhöht stattdessen die Trefferfrequenz.",
+      "description": {
+        "de": "Riesen-Thunfisch; Level-Boni setzen auf Fläche, die Anzahl erhöht stattdessen die Trefferfrequenz.",
+        "en": "King-sized tuna. Level up bonuses focus on Area. Amount affects hit box frequency instead."
+      },
       "maxLevel": 6,
       "emoji": "🐋",
       "image": "https://vampire.survivors.wiki/images/Sprite-Tonne.png",
@@ -466,9 +615,13 @@
     {
       "id": "unsurpassed",
       "name": "Unsurpassed",
+      "nameDeHint": "Unübertroffen",
       "source": "base",
       "kind": "base",
-      "description": "Premium-Thunfisch; Level-Boni setzen auf Macht.",
+      "description": {
+        "de": "Premium-Thunfisch; Level-Boni setzen auf Macht.",
+        "en": "Premium tuna. Level up bonuses focus on Might."
+      },
       "maxLevel": 6,
       "emoji": "🍣",
       "image": "https://vampire.survivors.wiki/images/Sprite-Unsurpassed.png",
@@ -477,9 +630,13 @@
     {
       "id": "santa-javelin",
       "name": "Santa Javelin",
+      "nameDeHint": "Heiliger Wurfspeer",
       "source": "base",
       "kind": "base",
-      "description": "Die Dauer erhöht die Anzahl; kann kritisch treffen.",
+      "description": {
+        "de": "Die Dauer erhöht die Anzahl; kann kritisch treffen.",
+        "en": "Duration affects Amount. Can deal critical damage."
+      },
       "maxLevel": 8,
       "emoji": "🔱",
       "image": "https://vampire.survivors.wiki/images/Sprite-Santa_Javelin.png",
@@ -488,9 +645,13 @@
     {
       "id": "gaze-of-gaea",
       "name": "Gaze of Gaea",
+      "nameDeHint": "Blick der Gaia",
       "source": "base",
       "kind": "base",
-      "description": "Kann Gegner entwaffnen (Defang).",
+      "description": {
+        "de": "Kann Gegner entwaffnen (Defang).",
+        "en": "Might Defang enemies."
+      },
       "maxLevel": 8,
       "emoji": "🌍",
       "image": "https://vampire.survivors.wiki/images/Sprite-Gaze_of_Gaea.png",
@@ -499,9 +660,13 @@
     {
       "id": "magi-stone",
       "name": "Magi-Stone",
+      "nameDeHint": "Magierstein",
       "source": "base",
       "kind": "base",
-      "description": "Richtet festen Schaden abhängig von der Waffenstufe an.",
+      "description": {
+        "de": "Richtet festen Schaden abhängig von der Waffenstufe an.",
+        "en": "Deals fixed damage based on Weapon Level."
+      },
       "maxLevel": 8,
       "emoji": "💎",
       "image": "https://vampire.survivors.wiki/images/Sprite-Magi-Stone.png",
@@ -512,7 +677,10 @@
       "name": "Phas3r",
       "source": "base",
       "kind": "base",
-      "description": "Erzeugt schmale Schadenszonen; wächst stark mit der Anzahl.",
+      "description": {
+        "de": "Erzeugt schmale Schadenszonen; wächst stark mit der Anzahl.",
+        "en": "Generates thin damaging zones. High Amount scaling."
+      },
       "maxLevel": 8,
       "emoji": "📡",
       "image": "https://vampire.survivors.wiki/images/Sprite-Phas3r.png",
@@ -521,9 +689,13 @@
     {
       "id": "chaos-rune",
       "name": "Chaos Rune",
+      "nameDeHint": "Chaosrune",
       "source": "base",
       "kind": "base",
-      "description": "Geschwindigkeit und Dauer erhöhen stattdessen die Zahl der Trefferzonen.",
+      "description": {
+        "de": "Geschwindigkeit und Dauer erhöhen stattdessen die Zahl der Trefferzonen.",
+        "en": "Speed and Duration affect the number of hit boxes instead."
+      },
       "maxLevel": 8,
       "emoji": "🌌",
       "image": "https://vampire.survivors.wiki/images/Sprite-Chaos_Rune.png",
@@ -534,7 +706,10 @@
       "name": "Arma Dio",
       "source": "base",
       "kind": "base",
-      "description": "Lässt dich einen zusätzlichen passiven Gegenstand wählen.",
+      "description": {
+        "de": "Lässt dich einen zusätzlichen passiven Gegenstand wählen.",
+        "en": "Allows you to choose an extra passive weapon."
+      },
       "maxLevel": 1,
       "emoji": "🗡️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Arma_Dio.png",
@@ -543,9 +718,13 @@
     {
       "id": "bloody-tear",
       "name": "Bloody Tear",
+      "nameDe": "Blutige Träne",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwicklung von Whip: kann kritisch treffen und saugt Gesundheit ab.",
+      "description": {
+        "de": "Weiterentwickelte Peitsche. Kann kritischen Schaden verursachen und LP absorbieren.",
+        "en": "Evolved Whip. Can deal critical damage and absorb HP."
+      },
       "maxLevel": 1,
       "emoji": "🩸",
       "image": "https://vampire.survivors.wiki/images/Sprite-Bloody_Tear.png",
@@ -554,9 +733,13 @@
     {
       "id": "holy-wand",
       "name": "Holy Wand",
+      "nameDe": "Heiliger Zauberstab",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwicklung von Magic Wand: feuert ohne Pause.",
+      "description": {
+        "de": "Weiterentwickelter Zauberstab. Feuert ohne Verzögerung.",
+        "en": "Evolved Magic Wand. Fires with no delay."
+      },
       "maxLevel": 1,
       "emoji": "🌟",
       "image": "https://vampire.survivors.wiki/images/Sprite-Holy_Wand.png",
@@ -565,9 +748,13 @@
     {
       "id": "thousand-edge",
       "name": "Thousand Edge",
+      "nameDe": "Tausendschneide",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwicklung von Knife: feuert ohne Pause.",
+      "description": {
+        "de": "Weiterentwickeltes Messer. Feuert ohne Verzögerung.",
+        "en": "Evolved Knife. Fires with no delay."
+      },
       "maxLevel": 1,
       "emoji": "🗡️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Thousand_Edge.png",
@@ -576,9 +763,13 @@
     {
       "id": "death-spiral",
       "name": "Death Spiral",
+      "nameDe": "Todesspirale",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwicklung von Axe: durchdringt Gegner.",
+      "description": {
+        "de": "Weiterentwickelte Axt. Durchdringt Gegner.",
+        "en": "Evolved Axe. Passes through enemies."
+      },
       "maxLevel": 1,
       "emoji": "🌀",
       "image": "https://vampire.survivors.wiki/images/Sprite-Death_Spiral.png",
@@ -587,9 +778,13 @@
     {
       "id": "heaven-sword",
       "name": "Heaven Sword",
+      "nameDe": "Himmelsschwert",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwicklung von Cross: kann kritisch treffen.",
+      "description": {
+        "de": "Weiterentwickeltes Kreuz. Kann kritischen Schaden verursachen.",
+        "en": "Evolved Cross. Can deal critical damage."
+      },
       "maxLevel": 1,
       "emoji": "⚔️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Heaven_Sword.png",
@@ -598,9 +793,13 @@
     {
       "id": "unholy-vespers",
       "name": "Unholy Vespers",
+      "nameDe": "Unheilige Vesper",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwicklung von King Bible: endet nie.",
+      "description": {
+        "de": "Weiterentwickelte Königsbibel. Endet nie.",
+        "en": "Evolved King Bible. Never ends."
+      },
       "maxLevel": 1,
       "emoji": "📕",
       "image": "https://vampire.survivors.wiki/images/Sprite-Unholy_Vespers.png",
@@ -609,9 +808,13 @@
     {
       "id": "hellfire",
       "name": "Hellfire",
+      "nameDe": "Höllenfeuer",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwicklung von Fire Wand: durchdringt Gegner.",
+      "description": {
+        "de": "Weiterentwickelter Feuerstab. Geht durch Gegner hindurch.",
+        "en": "Evolved Fire Wand. Passes through enemies."
+      },
       "maxLevel": 1,
       "emoji": "☄️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Hellfire.png",
@@ -620,9 +823,13 @@
     {
       "id": "soul-eater",
       "name": "Soul Eater",
+      "nameDe": "Seelenfresser",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwicklung von Garlic: stiehlt Herzen und wird stärker, wenn du dich heilst.",
+      "description": {
+        "de": "Entwickler Knoblauch. Klaut Herzen. Kraft steigt wenn LP zurückerlangt wird",
+        "en": "Evolved Garlic. Steals hearts. Power increases when recovering HP."
+      },
       "maxLevel": 1,
       "emoji": "👻",
       "image": "https://vampire.survivors.wiki/images/Sprite-Soul_Eater.png",
@@ -633,7 +840,10 @@
       "name": "La Borra",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwicklung von Santa Water: Schadenszonen folgen dir und wachsen, während sie sich bewegen.",
+      "description": {
+        "de": "Entwickltes Santa Wasser. Die Schadenszone folgt dir und wenn sie sich bewegen.",
+        "en": "Evolved Santa Water. Damaging zones follow you and grow when they move."
+      },
       "maxLevel": 1,
       "emoji": "🌊",
       "image": "https://vampire.survivors.wiki/images/Sprite-La_Borra.png",
@@ -644,7 +854,10 @@
       "name": "NO FUTURE",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwicklung von Runetracer: explodiert beim Abprallen und als Vergeltung.",
+      "description": {
+        "de": "Entwicklung von Runenläufer: explodiert beim Abprallen und als Vergeltung.",
+        "en": "Evolved Runetracer. Explodes when bouncing and in retaliation."
+      },
       "maxLevel": 1,
       "emoji": "💥",
       "image": "https://vampire.survivors.wiki/images/Sprite-NO_FUTURE.png",
@@ -653,9 +866,13 @@
     {
       "id": "thunder-loop",
       "name": "Thunder Loop",
+      "nameDe": "Donnerschlinge",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwicklung von Lightning Ring: Blitze schlagen doppelt ein.",
+      "description": {
+        "de": "Entwicklter Blizring. Geschosse schlagen zweimal ein.",
+        "en": "Evolved Lightning Ring. Projectiles strike twice."
+      },
       "maxLevel": 1,
       "emoji": "🌩️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Thunder_Loop.png",
@@ -664,9 +881,13 @@
     {
       "id": "gorgeous-moon",
       "name": "Gorgeous Moon",
+      "nameDe": "Prächtiger Mond",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwicklung von Pentagram: erzeugt zusätzliche Edelsteine und sammelt alle ein.",
+      "description": {
+        "de": "Entwickeltes Pentagramm. Erzeugt extra Edelsteine und sammelt sie alle.",
+        "en": "Evolved Pentagram. Generates extra gems and gathers all of them."
+      },
       "maxLevel": 1,
       "emoji": "🌕",
       "image": "https://vampire.survivors.wiki/images/Sprite-Gorgeous_Moon.png",
@@ -677,7 +898,10 @@
       "name": "Vicious Hunger",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwicklung von Gatti Amari: kann alles in Gold verwandeln.",
+      "description": {
+        "de": "Entwicklung von Gatti Amari: kann alles in Gold verwandeln.",
+        "en": "Evolved Gatti Amari. Might turn anything into gold."
+      },
       "maxLevel": 1,
       "emoji": "😼",
       "image": "https://vampire.survivors.wiki/images/Sprite-Vicious_Hunger.png",
@@ -688,7 +912,10 @@
       "name": "Mannajja",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwicklung von Song of Mana: kann Gegner verlangsamen.",
+      "description": {
+        "de": "Entwickeltes Mana-Lied. Verlangsamt Gegner manchmal.",
+        "en": "Evolved Song of Mana. Might slow enemies down."
+      },
       "maxLevel": 1,
       "emoji": "🎼",
       "image": "https://vampire.survivors.wiki/images/Sprite-Mannajja.png",
@@ -699,7 +926,10 @@
       "name": "Valkyrie Turner",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwicklung von Shadow Pinion: größer, länger, schneller, stärker.",
+      "description": {
+        "de": "Entwicklung von Shadow Pinion: größer, länger, schneller, stärker.",
+        "en": "Evolved Shadow Pinion. Bigger, longer, faster, stronger."
+      },
       "maxLevel": 1,
       "emoji": "🌪️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Valkyrie_Turner.png",
@@ -710,7 +940,10 @@
       "name": "Infinite Corridor",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwicklung von Clock Lancet: halbiert die Gesundheit der Gegner.",
+      "description": {
+        "de": "Evolved Clock Lancet. Halves enemies health.",
+        "en": "Evolved Clock Lancet. Halves enemies' health."
+      },
       "maxLevel": 1,
       "emoji": "⏳",
       "image": "https://vampire.survivors.wiki/images/Sprite-Infinite_Corridor.png",
@@ -721,7 +954,10 @@
       "name": "Crimson Shroud",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwicklung von Laurel: begrenzt erlittenen Schaden auf 10 und schlägt zurück, wenn Ladungen verbraucht werden.",
+      "description": {
+        "de": "Entwicklung von Lorbeer: begrenzt erlittenen Schaden auf 10 und schlägt zurück, wenn Ladungen verbraucht werden.",
+        "en": "Evolved Laurel. Caps incoming damage at 10. Retaliates when losing charges."
+      },
       "maxLevel": 1,
       "emoji": "🛡️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Crimson_Shroud.png",
@@ -732,7 +968,10 @@
       "name": "Bi-Bracelet",
       "source": "base",
       "kind": "evolved",
-      "description": "Zweite Stufe von Bracelet: feuert drei Projektile auf einen zufälligen Gegner.",
+      "description": {
+        "de": "Zweite Stufe von Bracelet: feuert drei Projektile auf einen zufälligen Gegner.",
+        "en": "Fires three projectiles at a random enemy."
+      },
       "maxLevel": 6,
       "emoji": "📿",
       "image": "https://vampire.survivors.wiki/images/Sprite-Bi-Bracelet.png",
@@ -743,7 +982,10 @@
       "name": "Tri-Bracelet",
       "source": "base",
       "kind": "evolved",
-      "description": "Dritte Stufe von Bracelet: feuert drei Projektile auf einen zufälligen Gegner.",
+      "description": {
+        "de": "Dritte Stufe von Bracelet: feuert drei Projektile auf einen zufälligen Gegner.",
+        "en": "Fires three projectiles at a random enemy."
+      },
       "maxLevel": 6,
       "emoji": "📿",
       "image": "https://vampire.survivors.wiki/images/Sprite-Tri-Bracelet.png",
@@ -752,9 +994,13 @@
     {
       "id": "ashes-of-muspell",
       "name": "Ashes of Muspell",
+      "nameDeHint": "Asche von Muspell",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwicklung von Flames of Misspell: wird stärker, je mehr Gegner besiegt werden.",
+      "description": {
+        "de": "Entwicklung von Flames of Misspell: wird stärker, je mehr Gegner besiegt werden.",
+        "en": "Evolved Flames of Misspell. The more enemies are defeated, the stronger it grows."
+      },
       "maxLevel": 1,
       "emoji": "🌋",
       "image": "https://vampire.survivors.wiki/images/Sprite-Ashes_of_Muspell.png",
@@ -763,9 +1009,13 @@
     {
       "id": "anima-of-mortaccio",
       "name": "Anima of Mortaccio",
+      "nameDeHint": "Seele von Mortaccio",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwicklung von Bone: Projektile werden beim Abprallen schneller.",
+      "description": {
+        "de": "Entwicklung von Knochen: Projektile werden beim Abprallen schneller.",
+        "en": "Evolved Bone. Projectiles accelerate when bouncing."
+      },
       "maxLevel": 1,
       "emoji": "☠️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Anima_of_Mortaccio.png",
@@ -776,7 +1026,10 @@
       "name": "Yatta Daikarin",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwicklung von Cherry Bomb: erzeugt zusätzliche Explosionen, die abhängig vom Glück kritisch treffen können.",
+      "description": {
+        "de": "Entwicklung von Kirschbombe: erzeugt zusätzliche Explosionen, die abhängig vom Glück kritisch treffen können.",
+        "en": "Evolved Cherry Bomb. Generates extra explosions that can deal critical Luck based damage."
+      },
       "maxLevel": 1,
       "emoji": "🍒",
       "image": "https://vampire.survivors.wiki/images/Sprite-Yatta_Daikarin.png",
@@ -787,7 +1040,10 @@
       "name": "Carrozza!",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwicklung von Carréllo: Dauer, Geschwindigkeit und Fläche erhöhen stattdessen den Schaden.",
+      "description": {
+        "de": "Entwicklung von Carréllo: Dauer, Geschwindigkeit und Fläche erhöhen stattdessen den Schaden.",
+        "en": "Evolved Carréllo. Duration, Speed, and Area affect damage instead."
+      },
       "maxLevel": 1,
       "emoji": "🛞",
       "image": "https://vampire.survivors.wiki/images/Sprite-Carrozza%21.png",
@@ -796,9 +1052,13 @@
     {
       "id": "profusione-d-amore",
       "name": "Profusione D'Amore",
+      "nameDeHint": "Fülle der Liebe",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwicklung von Celestial Dusting: Projektile lösen in festen Abständen Kettenexplosionen aus.",
+      "description": {
+        "de": "Entwicklung von Celestial Dusting: Projektile lösen in festen Abständen Kettenexplosionen aus.",
+        "en": "Evolved Celestial Dusting. Projectiles generate a chain explosion at fixed intervals."
+      },
       "maxLevel": 1,
       "emoji": "💖",
       "image": "https://vampire.survivors.wiki/images/Sprite-Profusione_D%27Amore.png",
@@ -809,7 +1069,10 @@
       "name": "Mazo Familiar",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwicklung von Pako Battiliar: Schaden und Anzahl hängen von der max. Gesundheit ab.",
+      "description": {
+        "de": "Entwicklung von Pako Battiliar: Schaden und Anzahl hängen von der max. Gesundheit ab.",
+        "en": "Evolved Pako Battiliar. Damage and Amount affected by Max Health."
+      },
       "maxLevel": 1,
       "emoji": "🦇",
       "image": "https://vampire.survivors.wiki/images/Sprite-Mazo_Familiar.png",
@@ -820,7 +1083,10 @@
       "name": "Gunastrophe",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwicklung von Ammo Appalate: feuert ungewöhnliche Projektile auf sichtbare Gegner.",
+      "description": {
+        "de": "Entwicklung von Ammo Appalate: feuert ungewöhnliche Projektile auf sichtbare Gegner.",
+        "en": "Evolved Ammo Appalate. Fires unorthodox projectiles at enemies in sight."
+      },
       "maxLevel": 1,
       "emoji": "🔫",
       "image": "https://vampire.survivors.wiki/images/Sprite-Gunastrophe.png",
@@ -829,9 +1095,13 @@
     {
       "id": "spirit-disturbance",
       "name": "Spirit Disturbance",
+      "nameDeHint": "Geisterstörung",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwicklung von Unearthly Bolt: trifft immer kritisch.",
+      "description": {
+        "de": "Entwicklung von Unearthly Bolt: trifft immer kritisch.",
+        "en": "Evolved Unearthly Bolt. Always deals critical hits."
+      },
       "maxLevel": 1,
       "emoji": "👻",
       "image": "https://vampire.survivors.wiki/images/Sprite-Spirit_Disturbance.png",
@@ -840,9 +1110,13 @@
     {
       "id": "celestial-voulge",
       "name": "Celestial Voulge",
+      "nameDeHint": "Himmlische Glefe",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwicklung von Glass Fandango: kann kritisch treffen und Gegner einfrieren; verwandelt Orologions in Starry Heavens.",
+      "description": {
+        "de": "Entwicklung von Glass Fandango: kann kritisch treffen und Gegner einfrieren; verwandelt Orologions in Starry Heavens.",
+        "en": "Evolved Glass Fandango. Might deal critical damage and freeze enemies. Turns Orologions into Starry Heavens."
+      },
       "maxLevel": 1,
       "emoji": "❄️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Celestial_Voulge.png",
@@ -851,9 +1125,13 @@
     {
       "id": "miracle-of-multiplication",
       "name": "Miracle of Multiplication",
+      "nameDeHint": "Wunder der Vermehrung",
       "source": "base",
       "kind": "evolved",
-      "description": "Ruft alle in diesem Lauf genutzten Thunfisch-Formen herbei und verteilt die Level-Boni gleichmäßig; entwickelt sich nicht weiter.",
+      "description": {
+        "de": "Ruft alle in diesem Lauf genutzten Thunfisch-Formen herbei und verteilt die Level-Boni gleichmäßig; entwickelt sich nicht weiter.",
+        "en": "Summons all tuna forms used this run, splitting all level up bonuses evenly. Cannot evolve."
+      },
       "maxLevel": 1,
       "emoji": "🐟",
       "image": "https://vampire.survivors.wiki/images/Sprite-Miracle_of_Multiplication.png",
@@ -862,9 +1140,13 @@
     {
       "id": "seraphic-cry",
       "name": "Seraphic Cry",
+      "nameDeHint": "Seraphischer Schrei",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwicklung von Santa Javelin: kritischer Schaden hängt vom Glück ab; verwandelt Rosaries in Weird Souls Purifiers.",
+      "description": {
+        "de": "Entwicklung von Santa Javelin: kritischer Schaden hängt vom Glück ab; verwandelt Rosaries in Weird Souls Purifiers.",
+        "en": "Evolved Santa Javelin. Critical damage affected by Luck. Turns Rosaries into Weird Souls Purifiers."
+      },
       "maxLevel": 1,
       "emoji": "👼",
       "image": "https://vampire.survivors.wiki/images/Sprite-Seraphic_Cry.png",
@@ -873,9 +1155,13 @@
     {
       "id": "embrace-of-gaea",
       "name": "Embrace of Gaea",
+      "nameDeHint": "Umarmung der Gaia",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwicklung von Gaze of Gaea: mehr Schaden während der Unverwundbarkeit; schlägt zurück.",
+      "description": {
+        "de": "Entwicklung von Gaze of Gaea: mehr Schaden während der Unverwundbarkeit; schlägt zurück.",
+        "en": "Evolved Gaze of Gaea. Damage is increased while invulnerable. Retaliates."
+      },
       "maxLevel": 1,
       "emoji": "🌏",
       "image": "https://vampire.survivors.wiki/images/Sprite-Embrace_of_Gaea.png",
@@ -886,7 +1172,10 @@
       "name": "Kyra-Stones",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwicklung von Magi-Stone: mehr Schaden ab Spielerlevel 80; die Anzahl steigt mit den sichtbaren Gegnern.",
+      "description": {
+        "de": "Entwicklung von Magi-Stone: mehr Schaden ab Spielerlevel 80; die Anzahl steigt mit den sichtbaren Gegnern.",
+        "en": "Evolved Magi-Stone. Damage increases when Player Level is above 80. Amount increases with visible enemies."
+      },
       "maxLevel": 1,
       "emoji": "💎",
       "image": "https://vampire.survivors.wiki/images/Sprite-Kyra-Stones.png",
@@ -895,9 +1184,13 @@
     {
       "id": "photonstorm",
       "name": "Photonstorm",
+      "nameDeHint": "Photonensturm",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwicklung von Phas3r: vervielfacht die Zahl der Projektile je nach Glück bis zu ×5.",
+      "description": {
+        "de": "Entwicklung von Phas3r: vervielfacht die Zahl der Projektile je nach Glück bis zu ×5.",
+        "en": "Evolved Phas3r. Multiplies numbers of projectiles by up to 5, depending on Luck."
+      },
       "maxLevel": 1,
       "emoji": "🌠",
       "image": "https://vampire.survivors.wiki/images/Sprite-Photonstorm.png",
@@ -906,9 +1199,13 @@
     {
       "id": "wicked-ruler",
       "name": "Wicked Ruler",
+      "nameDeHint": "Böser Herrscher",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwicklung von Chaos Rune: beherrscht wilde magische Kräfte.",
+      "description": {
+        "de": "Entwicklung von Chaos Rune: beherrscht wilde magische Kräfte.",
+        "en": "Evolved Chaos Rune. Exerts control over wild magical forces."
+      },
       "maxLevel": 1,
       "emoji": "👁️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Wicked_Ruler.png",
@@ -919,7 +1216,10 @@
       "name": "Vandalier",
       "source": "base",
       "kind": "evolved",
-      "description": "Union aus Peachone und Ebony Wings: zwei Zonen kreisen in beide Richtungen; gibt einen Waffen-Slot frei.",
+      "description": {
+        "de": "Verbindung von Ebenholz-Flügeln und Peachone.",
+        "en": "Union of Ebony Wings and Peachone."
+      },
       "maxLevel": 8,
       "emoji": "🕊️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Vandalier.png",
@@ -930,7 +1230,10 @@
       "name": "Phieraggi",
       "source": "base",
       "kind": "evolved",
-      "description": "Union aus Phiera Der Tuphello und Eight The Sparrow; wird mit Wiederbelebungen stärker.",
+      "description": {
+        "de": "Verbindung von Phiera Der Tuphello and Acht der Spatz. Nimmt mit jeder Wiedergeburt zu.",
+        "en": "Union of Phiera Der Tuphello and Eight The Sparrow. Scales with Revivals."
+      },
       "maxLevel": 1,
       "emoji": "🔫",
       "image": "https://vampire.survivors.wiki/images/Sprite-Phieraggi.png",
@@ -941,7 +1244,10 @@
       "name": "Fuwalafuwaloo",
       "source": "base",
       "kind": "evolved",
-      "description": "Union aus Vento Sacro und Bloody Tear: kritische Treffer können Explosionen auslösen.",
+      "description": {
+        "de": "Union of Vento Sacro and Bloody Tear. Critical hits might generate explosions.",
+        "en": "Union of Vento Sacro and Bloody Tear. Critical hits might generate explosions"
+      },
       "maxLevel": 1,
       "emoji": "🌬️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Fuwalafuwaloo.png",
@@ -952,7 +1258,10 @@
       "name": "Super Candybox II Turbo",
       "source": "base",
       "kind": "evolved",
-      "description": "Geschenk von Candybox: lässt dich aus einer Auswahl bereits einmal erreichter Entwicklungen wählen.",
+      "description": {
+        "de": "Geschenk von Candybox: lässt dich aus einer Auswahl bereits einmal erreichter Entwicklungen wählen.",
+        "en": "Gift of Candybox. Allows to choose among a selection of advanced weapons."
+      },
       "maxLevel": 1,
       "emoji": "🍭",
       "image": "https://vampire.survivors.wiki/images/Sprite-Super_Candybox_II_Turbo.png",
@@ -963,7 +1272,10 @@
       "name": "Sole Solution",
       "source": "base",
       "kind": "evolved",
-      "description": "Geschenk von Victory Sword: wird stärker, je mehr Gegner besiegt werden.",
+      "description": {
+        "de": "Geschenk von Victory Sword: wird stärker, je mehr Gegner besiegt werden.",
+        "en": "Gift of Victory Sword. The more enemies are defeated, the stronger it grows."
+      },
       "maxLevel": 1,
       "emoji": "☀️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Sole_Solution.png",

@@ -4,8 +4,12 @@
     {
       "id": "outer-saboteur",
       "name": "Outer Saboteur",
+      "nameDeHint": "Äußerer Saboteur",
       "source": "ante-chamber",
-      "description": "Gibt dir Goldmünzen und macht dann unpassenden Gebrauch von deinen Ersparnissen; erscheint automatisch mit der ersten Ante-Chamber-Waffe und belegt keinen Slot.",
+      "description": {
+        "de": "Gibt dir Goldmünzen und macht dann unpassenden Gebrauch von deinen Ersparnissen; erscheint automatisch mit der ersten Ante-Chamber-Waffe und belegt keinen Slot.",
+        "en": "Gives you gold coins, then makes an improper use of your savings."
+      },
       "maxLevel": 9,
       "noSlot": true,
       "emoji": "🃏",

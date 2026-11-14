@@ -15,12 +15,14 @@
         "properties": {
           "id": { "$ref": "common.schema.json#/definitions/id" },
           "name": { "$ref": "common.schema.json#/definitions/name" },
+          "nameDe": { "$ref": "common.schema.json#/definitions/nameDe" },
+          "nameDeHint": { "$ref": "common.schema.json#/definitions/nameDeHint" },
           "source": { "$ref": "common.schema.json#/definitions/source" },
           "kind": {
             "enum": ["base", "evolved"],
             "description": "evolved = Ergebnis einer Entwicklung, Union oder eines Geschenks."
           },
-          "description": { "type": "string", "description": "Was die Waffe tut (deutsch)." },
+          "description": { "$ref": "common.schema.json#/definitions/localizedText", "description": "Was die Waffe tut." },
           "maxLevel": { "$ref": "common.schema.json#/definitions/maxLevel" },
           "exclusiveTo": {
             "type": "array",
@@ -34,7 +36,7 @@
           "icon": { "$ref": "common.schema.json#/definitions/icon" },
           "image": { "$ref": "common.schema.json#/definitions/image" },
           "verified": { "$ref": "common.schema.json#/definitions/verified" },
-          "note": { "type": "string" }
+          "note": { "$ref": "common.schema.json#/definitions/localizedText" }
         }
       }
     }

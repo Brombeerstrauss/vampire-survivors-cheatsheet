@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useState, type ReactNode } from 'react'
 import { EvolutionLine } from '../components/EvolutionLine.tsx'
 import {
   Card,
   EmptyHint,
   EntryIcon,
+  EntryName,
   Pill,
   SearchField,
   Section,
@@ -12,6 +13,8 @@ import {
 } from '../components/ui.tsx'
 import { buttonClass, matches } from '../components/styles.ts'
 import type { Character, PassiveItem, Weapon } from '../data/types.ts'
+import { useI18n } from '../i18n/index.ts'
+import { searchNames } from '../i18n/names.ts'
 import { useAppState } from '../state/context.ts'
 import { characterHref, passiveHref, routeHref, weaponHref } from '../state/route.ts'
 
@@ -19,25 +22,26 @@ type WeaponFilter = 'all' | 'base' | 'evolved'
 
 export function LibraryView({ tab, selectedId }: { tab: 'weapons' | 'passives'; selectedId?: string }) {
   const { catalog } = useAppState()
+  const { t, text } = useI18n()
   const [query, setQuery] = useState('')
   const [filter, setFilter] = useState<WeaponFilter>('all')
 
-  const weapons = catalog.weapons.filter(
-    (w) => (filter === 'all' || w.kind === filter) && (matches(w.name, query) || matches(w.description, query)),
-  )
-  const passives = catalog.passives.filter((p) => matches(p.name, query) || matches(p.description, query))
+  const found = (entry: Weapon | PassiveItem) => matches(searchNames(entry), query) || matches(text(entry.description), query)
+  const weapons = catalog.weapons.filter((w) => (filter === 'all' || w.kind === filter) && found(w))
+  const passives = catalog.passives.filter(found)
   const selectedWeapon = tab === 'weapons' && selectedId ? catalog.weapon(selectedId) : undefined
   const selectedPassive = tab === 'passives' && selectedId ? catalog.passive(selectedId) : undefined
   const hasSelection = Boolean(selectedWeapon || selectedPassive)
+  const list: (Weapon | PassiveItem)[] = tab === 'weapons' ? weapons : passives
 
   return (
     <div className="grid grid-cols-[minmax(0,1fr)] gap-6 md:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] md:items-start">
       <div className={`space-y-3 ${hasSelection ? 'hidden md:block' : ''}`}>
-        <div className="grid grid-cols-2 gap-1 rounded-xl bg-night-800 p-1" role="tablist" aria-label="Bibliothek">
+        <div className="grid grid-cols-2 gap-1 rounded-xl bg-night-800 p-1" role="tablist" aria-label={t.library}>
           {(
             [
-              ['weapons', 'Waffen'],
-              ['passives', 'Gegenstände'],
+              ['weapons', t.weapons],
+              ['passives', t.items],
             ] as const
           ).map(([value, label]) => (
             <a
@@ -53,18 +57,14 @@ export function LibraryView({ tab, selectedId }: { tab: 'weapons' | 'passives'; 
             </a>
           ))}
         </div>
-        <SearchField
-          value={query}
-          onChange={setQuery}
-          placeholder={tab === 'weapons' ? 'Waffe suchen' : 'Gegenstand suchen'}
-        />
+        <SearchField value={query} onChange={setQuery} placeholder={tab === 'weapons' ? t.searchWeapon : t.searchItem} />
         {tab === 'weapons' && (
-          <div className="flex gap-1.5" role="group" aria-label="Waffenart">
+          <div className="flex gap-1.5" role="group" aria-label={t.weaponType}>
             {(
               [
-                ['all', 'Alle'],
-                ['base', 'Basis'],
-                ['evolved', 'Entwickelt'],
+                ['all', t.filterAll],
+                ['base', t.filterBase],
+                ['evolved', t.filterEvolved],
               ] as const
             ).map(([value, label]) => (
               <button
@@ -82,7 +82,7 @@ export function LibraryView({ tab, selectedId }: { tab: 'weapons' | 'passives'; 
           </div>
         )}
         <ul className="space-y-1.5 md:max-h-[calc(100dvh-16rem)] md:overflow-y-auto md:pr-1">
-          {(tab === 'weapons' ? weapons : passives).map((entry) => (
+          {list.map((entry) => (
             <li key={entry.id}>
               <a
                 href={tab === 'weapons' ? weaponHref(entry.id) : passiveHref(entry.id)}
@@ -96,17 +96,17 @@ export function LibraryView({ tab, selectedId }: { tab: 'weapons' | 'passives'; 
                 <EntryIcon entry={entry} />
                 <span className="min-w-0 flex-1">
                   <span className="flex flex-wrap items-center gap-1.5">
-                    <span className="font-medium">{entry.name}</span>
-                    {'kind' in entry && entry.kind === 'evolved' && <Pill tone="gold">entwickelt</Pill>}
+                    <EntryName entry={entry} className="font-medium" />
+                    {'kind' in entry && entry.kind === 'evolved' && <Pill tone="gold">{t.evolved}</Pill>}
                     <SourceBadge source={entry.source} />
                   </span>
-                  <span className="block truncate text-sm text-white/55">{entry.description}</span>
+                  <span className="block truncate text-sm text-white/55">{text(entry.description)}</span>
                 </span>
               </a>
             </li>
           ))}
         </ul>
-        {(tab === 'weapons' ? weapons : passives).length === 0 && <EmptyHint>Nichts gefunden.</EmptyHint>}
+        {list.length === 0 && <EmptyHint>{t.nothingFound}</EmptyHint>}
       </div>
 
       <div className={hasSelection ? '' : 'hidden md:block'}>
@@ -115,26 +115,29 @@ export function LibraryView({ tab, selectedId }: { tab: 'weapons' | 'passives'; 
         ) : selectedPassive ? (
           <PassiveDetail passive={selectedPassive} />
         ) : (
-          <EmptyHint>Wähle links einen Eintrag, um Entwicklung und passende Charaktere zu sehen.</EmptyHint>
+          <EmptyHint>{t.pickEntryHint}</EmptyHint>
         )}
       </div>
     </div>
   )
 }
 
-function DetailHeader({ entry, children }: { entry: Weapon | PassiveItem; children?: React.ReactNode }) {
+function DetailHeader({ entry, children }: { entry: Weapon | PassiveItem; children?: ReactNode }) {
+  const { text } = useI18n()
   return (
     <header className="flex items-start gap-4">
       <EntryIcon entry={entry} size="lg" />
       <div className="min-w-0 space-y-1.5">
-        <h1 className="text-2xl leading-tight font-bold">{entry.name}</h1>
+        <h1 className="text-2xl leading-tight font-bold">
+          <EntryName entry={entry} />
+        </h1>
         <div className="flex flex-wrap gap-1.5">
           {children}
           <SourceBadge source={entry.source} />
           <UnverifiedBadge verified={entry.verified} />
         </div>
-        <p className="text-white/80">{entry.description}</p>
-        {entry.note && <p className="text-sm text-white/50">{entry.note}</p>}
+        <p className="text-white/80">{text(entry.description)}</p>
+        {entry.note && <p className="text-sm text-white/50">{text(entry.note)}</p>}
       </div>
     </header>
   )
@@ -142,6 +145,7 @@ function DetailHeader({ entry, children }: { entry: Weapon | PassiveItem; childr
 
 function WeaponDetail({ weapon }: { weapon: Weapon }) {
   const { catalog, settings } = useAppState()
+  const { t } = useI18n()
   const evolvesInto = catalog.evolutionsFromWeapon(weapon.id)
   const comesFrom = catalog.evolutionsToWeapon(weapon.id)
   const visible = (c: Character) => settings.showSecrets || !c.secret
@@ -151,16 +155,16 @@ function WeaponDetail({ weapon }: { weapon: Weapon }) {
   return (
     <article className="space-y-6">
       <a href={routeHref({ view: 'library', tab: 'weapons' })} className={`${buttonClass.ghost} -ml-3 md:hidden`}>
-        ‹ Alle Waffen
+        {t.allWeapons}
       </a>
       <DetailHeader entry={weapon}>
         <Pill tone={weapon.kind === 'evolved' ? 'gold' : 'neutral'}>
-          {weapon.kind === 'evolved' ? 'Entwickelte Waffe' : 'Basiswaffe'}
+          {weapon.kind === 'evolved' ? t.evolvedWeapon : t.baseWeapon}
         </Pill>
       </DetailHeader>
 
       {comesFrom.length > 0 && (
-        <Section title="So bekommst du sie">
+        <Section title={t.howToGet}>
           <div className="space-y-3">
             {comesFrom.map((evo) => (
               <Card key={evo.id}>
@@ -171,13 +175,9 @@ function WeaponDetail({ weapon }: { weapon: Weapon }) {
         </Section>
       )}
 
-      <Section title="Entwicklung">
+      <Section title={t.evolution}>
         {evolvesInto.length === 0 ? (
-          <EmptyHint>
-            {weapon.kind === 'evolved'
-              ? 'Entwickelt sich nicht weiter.'
-              : 'Diese Waffe hat keine Entwicklung (mit deinen freigeschalteten Inhalten).'}
-          </EmptyHint>
+          <EmptyHint>{weapon.kind === 'evolved' ? t.noFurtherEvolution : t.noEvolutionWithContent}</EmptyHint>
         ) : (
           <div className="space-y-3">
             {evolvesInto.map((evo) => (
@@ -189,13 +189,8 @@ function WeaponDetail({ weapon }: { weapon: Weapon }) {
         )}
       </Section>
 
-      <Section title="Passt gut zu">
-        <CharacterReasons
-          weaponOrPassiveId={weapon.id}
-          starters={starters}
-          recommenders={recommenders}
-          empty="Bisher bei keinem Charakter als Empfehlung hinterlegt."
-        />
+      <Section title={t.goodWith}>
+        <CharacterReasons weaponOrPassiveId={weapon.id} starters={starters} recommenders={recommenders} />
       </Section>
     </article>
   )
@@ -203,22 +198,23 @@ function WeaponDetail({ weapon }: { weapon: Weapon }) {
 
 function PassiveDetail({ passive }: { passive: PassiveItem }) {
   const { catalog, settings } = useAppState()
+  const { t } = useI18n()
   const usedIn = catalog.evolutionsWithPassive(passive.id)
   const recommenders = catalog.charactersRecommending(passive.id).filter((c) => settings.showSecrets || !c.secret)
 
   return (
     <article className="space-y-6">
       <a href={routeHref({ view: 'library', tab: 'passives' })} className={`${buttonClass.ghost} -ml-3 md:hidden`}>
-        ‹ Alle Gegenstände
+        {t.allItems}
       </a>
       <DetailHeader entry={passive}>
-        {passive.stageOnly && <Pill tone="gold">Nur als Fundstück</Pill>}
-        {passive.noSlot && <Pill>Belegt keinen Slot</Pill>}
+        {passive.stageOnly && <Pill tone="gold">{t.stageItemOnly}</Pill>}
+        {passive.noSlot && <Pill>{t.usesNoSlot}</Pill>}
       </DetailHeader>
 
-      <Section title="Gebraucht für">
+      <Section title={t.neededFor}>
         {usedIn.length === 0 ? (
-          <EmptyHint>Wird für keine Entwicklung gebraucht (mit deinen freigeschalteten Inhalten).</EmptyHint>
+          <EmptyHint>{t.notNeededForEvolution}</EmptyHint>
         ) : (
           <div className="space-y-3">
             {usedIn.map((evo) => (
@@ -230,13 +226,8 @@ function PassiveDetail({ passive }: { passive: PassiveItem }) {
         )}
       </Section>
 
-      <Section title="Empfohlen für">
-        <CharacterReasons
-          weaponOrPassiveId={passive.id}
-          starters={[]}
-          recommenders={recommenders}
-          empty="Bisher bei keinem Charakter als Empfehlung hinterlegt."
-        />
+      <Section title={t.recommendedFor}>
+        <CharacterReasons weaponOrPassiveId={passive.id} starters={[]} recommenders={recommenders} />
       </Section>
     </article>
   )
@@ -246,46 +237,46 @@ function CharacterReasons({
   weaponOrPassiveId,
   starters,
   recommenders,
-  empty,
 }: {
   weaponOrPassiveId: string
   starters: Character[]
   recommenders: Character[]
-  empty: string
 }) {
   const { catalog } = useAppState()
-  const rows = new Map<string, { character: Character; reasons: string[] }>()
-  for (const c of starters) rows.set(c.id, { character: c, reasons: ['Startwaffe'] })
+  const { t, text } = useI18n()
+  const rows = new Map<string, { character: Character; reasons: string[]; isStarter: boolean }>()
+  for (const c of starters) rows.set(c.id, { character: c, reasons: [], isStarter: true })
   for (const c of recommenders) {
-    const reasons = catalog
-      .recommendationsFor(c.id)
-      .flatMap((r) => [...r.weapons, ...r.passives])
-      .filter((item) => item.id === weaponOrPassiveId)
-      .map((item) => item.reason)
-    const row = rows.get(c.id) ?? { character: c, reasons: [] }
-    // „Startwaffe“ nicht doppelt nennen, wenn die Empfehlung es schon sagt
-    if (reasons.some((r) => r.startsWith('Startwaffe'))) row.reasons = row.reasons.filter((r) => r !== 'Startwaffe')
-    for (const reason of reasons) if (!row.reasons.includes(reason)) row.reasons.push(reason)
+    const row = rows.get(c.id) ?? { character: c, reasons: [], isStarter: false }
+    for (const item of catalog.recommendationsFor(c.id).flatMap((r) => [...r.weapons, ...r.passives])) {
+      if (item.id !== weaponOrPassiveId) continue
+      const reason = text(item.reason)
+      if (!row.reasons.includes(reason)) row.reasons.push(reason)
+    }
     rows.set(c.id, row)
   }
 
-  if (rows.size === 0) return <EmptyHint>{empty}</EmptyHint>
+  if (rows.size === 0) return <EmptyHint>{t.notRecommendedYet}</EmptyHint>
   return (
     <ul className="space-y-1.5">
-      {[...rows.values()].map(({ character, reasons }) => (
-        <li key={character.id}>
-          <a href={characterHref(character.id)} className="flex items-start gap-3 rounded-xl p-2 hover:bg-white/5">
-            <EntryIcon entry={character} size="sm" />
-            <span className="min-w-0">
-              <span className="flex flex-wrap items-center gap-1.5">
-                <span className="font-medium">{character.name}</span>
-                <SourceBadge source={character.source} />
+      {[...rows.values()].map(({ character, reasons, isStarter }) => {
+        // „Startwaffe“ nur nennen, wenn keine Empfehlung das schon erklärt
+        const shown = reasons.length > 0 ? reasons : isStarter ? [t.startingWeapon] : []
+        return (
+          <li key={character.id}>
+            <a href={characterHref(character.id)} className="flex items-start gap-3 rounded-xl p-2 hover:bg-white/5">
+              <EntryIcon entry={character} size="sm" />
+              <span className="min-w-0">
+                <span className="flex flex-wrap items-center gap-1.5">
+                  <EntryName entry={character} className="font-medium" />
+                  <SourceBadge source={character.source} />
+                </span>
+                <span className="block text-sm text-white/60">{shown.join(' · ')}</span>
               </span>
-              <span className="block text-sm text-white/60">{reasons.join(' · ')}</span>
-            </span>
-          </a>
-        </li>
-      ))}
+            </a>
+          </li>
+        )
+      })}
     </ul>
   )
 }

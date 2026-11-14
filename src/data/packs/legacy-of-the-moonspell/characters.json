@@ -8,7 +8,10 @@
       "startingWeapons": [
         "silver-wind"
       ],
-      "bonus": "Regeneration verstärkt alle Heilquellen; Überheilung erhöht die max. Gesundheit leicht.",
+      "bonus": {
+        "de": "Regeneration verstärkt alle Heilquellen; Überheilung erhöht die max. Gesundheit leicht.",
+        "en": "Recovery also multiplies all healing sources. Over-healing slightly increases Max Health."
+      },
       "secret": false,
       "emoji": "🌙",
       "image": "https://vampire.survivors.wiki/images/Select-Miang_Moonspell.png",
@@ -21,7 +24,10 @@
       "startingWeapons": [
         "four-seasons"
       ],
-      "bonus": "Überheilung +16 löst ihre Startwaffe aus; wird nach vielen besiegten Gegnern kurz stärker und unverwundbar.",
+      "bonus": {
+        "de": "Überheilung +16 löst ihre Startwaffe aus; wird nach vielen besiegten Gegnern kurz stärker und unverwundbar.",
+        "en": "Overheal +16: activates her starting weapon. Becomes stronger and invincible for a fixed interval after defeating a large amount of enemies."
+      },
       "secret": false,
       "emoji": "🌸",
       "image": "https://vampire.survivors.wiki/images/Select-Menya_Moonspell.png",
@@ -34,7 +40,10 @@
       "startingWeapons": [
         "summon-night"
       ],
-      "bonus": "Startet mit verstecktem Night Sword; verwandelt sich in eine stärkere Form, wenn seine Startwaffe sich entwickelt.",
+      "bonus": {
+        "de": "Startet mit verstecktem Night Sword; verwandelt sich in eine stärkere Form, wenn seine Startwaffe sich entwickelt.",
+        "en": "Starts with hidden Night Sword. Morphs into a stronger version when his base weapon evolves."
+      },
       "secret": false,
       "emoji": "🗡️",
       "image": "https://vampire.survivors.wiki/images/Select-Syuuto_Moonspell.png",
@@ -47,7 +56,10 @@
       "startingWeapons": [
         "mirage-robe"
       ],
-      "bonus": "Überheilung +16 gibt kurz mehr Laufgeschwindigkeit; ignoriert Abklingzeiten, Waffen feuern beim Laufen in festen Abständen.",
+      "bonus": {
+        "de": "Überheilung +16 gibt kurz mehr Laufgeschwindigkeit; ignoriert Abklingzeiten, Waffen feuern beim Laufen in festen Abständen.",
+        "en": "Overheal +16: gains a temporary bonus to MoveSpeed. Ignores weapons cooldown. Weapons fire at a fixed interval when moving."
+      },
       "secret": false,
       "emoji": "👘",
       "image": "https://vampire.survivors.wiki/images/Select-Babi-Onna.png",
@@ -60,24 +72,36 @@
       "startingWeapons": [
         "argent-flow"
       ],
-      "bonus": "Max. Gesundheit entspricht der aktuellen Gesundheit; hat ein verstecktes Argent Flow.",
+      "bonus": {
+        "de": "Max. Gesundheit entspricht der aktuellen Gesundheit; hat ein verstecktes Argent Flow.",
+        "en": "Max Health is equal to Current Health. Has a hidden Argent Flow."
+      },
       "secret": false,
       "emoji": "🌕",
       "image": "https://vampire.survivors.wiki/images/Select-Megalo_Miang_Moonspell.png",
       "verified": false,
-      "note": "Ungeprüft: Startwaffe nur auf der Charakterseite genannt."
+      "note": {
+        "de": "Ungeprüft: Startwaffe nur auf der Charakterseite genannt.",
+        "en": "Unverified: starting weapon only named on the character page."
+      }
     },
     {
       "id": "megalo-menya-moonspell",
       "name": "Megalo Menya Moonspell",
       "source": "legacy-of-the-moonspell",
       "startingWeapons": [],
-      "bonus": "Überheilung +16 löst ihre erste Waffe aus; kann keinen Schaden nehmen, verschwindet aber beim Zeitlimit; startet mit verstecktem 108 Bocce.",
+      "bonus": {
+        "de": "Überheilung +16 löst ihre erste Waffe aus; kann keinen Schaden nehmen, verschwindet aber beim Zeitlimit; startet mit verstecktem 108 Bocce.",
+        "en": "Overheal +16: activates her first weapon. Cannot be damaged, but disappears after reaching the current Time Limit. Starts with hidden 108 Bocce."
+      },
       "secret": false,
       "emoji": "🌺",
       "image": "https://vampire.survivors.wiki/images/Select-Megalo_Menya_Moonspell.png",
       "verified": true,
-      "note": "Versteckte Waffe: 108 Bocce."
+      "note": {
+        "de": "Versteckte Waffe: 108 Bocce.",
+        "en": "Hidden weapon: 108 Bocce."
+      }
     },
     {
       "id": "megalo-syuuto-moonspell",
@@ -86,7 +110,10 @@
       "startingWeapons": [
         "night-sword"
       ],
-      "bonus": "Überheilung +16 gibt Blut-Waffen mehr Schaden; erhält pro Level +1 % Macht.",
+      "bonus": {
+        "de": "Überheilung +16 gibt Blut-Waffen mehr Schaden; erhält pro Level +1 % Macht.",
+        "en": "Overheal +16: equipped Blood weapons gain extra damage. Gains +1% Might every level."
+      },
       "secret": false,
       "emoji": "🩸",
       "image": "https://vampire.survivors.wiki/images/Select-Megalo_Syuuto_Moonspell.png",
@@ -99,7 +126,10 @@
       "startingWeapons": [
         "108-bocce"
       ],
-      "bonus": "Überheilung +16 gibt einen Reroll; die Fläche wächst in festen Abständen kurzzeitig.",
+      "bonus": {
+        "de": "Überheilung +16 gibt einen Reroll; die Fläche wächst in festen Abständen kurzzeitig.",
+        "en": "Overheal +16: gains a Reroll. Area temporarily increases at fixed intervals."
+      },
       "secret": false,
       "emoji": "👹",
       "image": "https://vampire.survivors.wiki/images/Select-McCoy-Oni.png",
@@ -112,7 +142,10 @@
       "startingWeapons": [
         "mille-bolle-blu"
       ],
-      "bonus": "Erhält alle 20 Level mehr Projektile (max. +4); jede abgeschlossene Stage gibt einen Prestige-Rang.",
+      "bonus": {
+        "de": "Erhält alle 20 Level mehr Projektile (max. +4); jede abgeschlossene Stage gibt einen Prestige-Rang.",
+        "en": "Gets more projectiles every 20 levels (max +4). Complete a stage to gain a Prestige rank."
+      },
       "secret": false,
       "emoji": "🥒",
       "image": "https://vampire.survivors.wiki/images/Select-Gav%27Et-Oni_%E2%98%85.png",
@@ -125,7 +158,10 @@
       "startingWeapons": [
         "lunarmight"
       ],
-      "bonus": "Überheilung +64 erzeugt eine Wasser- oder Mondwaffe; geübt mit Mille Bolle Blu und Penshin Fatcha.",
+      "bonus": {
+        "de": "Überheilung +64 erzeugt eine Wasser- oder Mondwaffe; geübt mit Mille Bolle Blu und Penshin Fatcha.",
+        "en": "Overheal +64: spawns a water or lunar weapon. Adept with Mille Bolle Blu and Penshin Fatcha weapons."
+      },
       "secret": false,
       "emoji": "💧",
       "image": "https://vampire.survivors.wiki/images/Select-Spiritoso.png",
@@ -138,12 +174,18 @@
       "startingWeapons": [
         "mille-bolle-blu"
       ],
-      "bonus": "Überheilung +16 gibt einen Begleiter (max. 30); alle 8 Level ein verstecktes Mille Bolle Blu (max. 6); geübt mit Mille Bolle Blu und Penshin Fatcha.",
+      "bonus": {
+        "de": "Überheilung +16 gibt einen Begleiter (max. 30); alle 8 Level ein verstecktes Mille Bolle Blu (max. 6); geübt mit Mille Bolle Blu und Penshin Fatcha.",
+        "en": "Overheal +16: Gains a follower (max 30). Gains a hidden Mille Bolle Blu every 8 levels (max 6). Adept with Mille Bolle Blu and Penshin Fatcha weapons."
+      },
       "secret": false,
       "emoji": "💦",
       "image": "https://vampire.survivors.wiki/images/Select-Spiritosa.png",
       "verified": false,
-      "note": "Ungeprüft: Startwaffe nur auf der Charakterseite genannt."
+      "note": {
+        "de": "Ungeprüft: Startwaffe nur auf der Charakterseite genannt.",
+        "en": "Unverified: starting weapon only named on the character page."
+      }
     },
     {
       "id": "gekkojin",
@@ -154,12 +196,18 @@
         "lunarsight",
         "lunarbight"
       ],
-      "bonus": "Heilt statt Schaden zu nehmen, verschwindet aber beim Zeitlimit; startet mit Pearl magatama.",
+      "bonus": {
+        "de": "Heilt statt Schaden zu nehmen, verschwindet aber beim Zeitlimit; startet mit Pearl magatama.",
+        "en": "Recovers HP instead of receiving damage, but disappears after reaching the current Time Limit. Starts with a Pearl Magatama."
+      },
       "secret": false,
       "emoji": "🌗",
       "image": "https://vampire.survivors.wiki/images/Select-Gekkojin.png",
       "verified": true,
-      "note": "Versteckte Waffe: Water Veil."
+      "note": {
+        "de": "Versteckte Waffe: Water Veil.",
+        "en": "Hidden weapon: Water Veil."
+      }
     }
   ]
 }

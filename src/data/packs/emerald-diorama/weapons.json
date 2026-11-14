@@ -4,9 +4,13 @@
     {
       "id": "fleuret",
       "name": "Fleuret",
+      "nameDeHint": "Florett",
       "source": "emerald-diorama",
       "kind": "base",
-      "description": "Geschwindigkeit erhöht den Schaden; kann die Technik „Crystalline Carve“ glimmern.",
+      "description": {
+        "de": "Geschwindigkeit erhöht den Schaden; kann die Technik „Crystalline Carve“ glimmern.",
+        "en": "Speed affects damage. Can glimmer the \"Crystalline Carve\" tech."
+      },
       "maxLevel": 6,
       "emoji": "🤺",
       "image": "https://vampire.survivors.wiki/images/Sprite-Fleuret.png",
@@ -15,9 +19,13 @@
     {
       "id": "town-sword",
       "name": "Town Sword",
+      "nameDeHint": "Stadtschwert",
       "source": "emerald-diorama",
       "kind": "base",
-      "description": "Schlägt in Blickrichtung zu; kann „Swallow Slice“ glimmern.",
+      "description": {
+        "de": "Schlägt in Blickrichtung zu; kann „Swallow Slice“ glimmern.",
+        "en": "Strikes in the faced direction. Can glimmer the \"Swallow Slice\" tech."
+      },
       "maxLevel": 6,
       "emoji": "🗡️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Town_Sword.png",
@@ -26,9 +34,13 @@
     {
       "id": "splashers",
       "name": "Splashers",
+      "nameDeHint": "Spritzer",
       "source": "emerald-diorama",
       "kind": "base",
-      "description": "Dauer erhöht den Schaden; kann „Dual Whirlwind“ glimmern.",
+      "description": {
+        "de": "Dauer erhöht den Schaden; kann „Dual Whirlwind“ glimmern.",
+        "en": "Duration affects damage. Can glimmer the \"Dual Whirlwind\" tech."
+      },
       "maxLevel": 8,
       "emoji": "💦",
       "image": "https://vampire.survivors.wiki/images/Sprite-Splashers.png",
@@ -39,7 +51,10 @@
       "name": "Flamberge",
       "source": "emerald-diorama",
       "kind": "base",
-      "description": "Wirft rotierende Schwerter nach oben; kann „Bull Crush“ glimmern.",
+      "description": {
+        "de": "Wirft rotierende Schwerter nach oben; kann „Bull Crush“ glimmern.",
+        "en": "Throws spinning swords upwards. Can glimmer the \"Bull Crush\" tech."
+      },
       "maxLevel": 6,
       "emoji": "⚔️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Flamberge.png",
@@ -48,9 +63,13 @@
     {
       "id": "punch",
       "name": "Punch",
+      "nameDeHint": "Faustschlag",
       "source": "emerald-diorama",
       "kind": "base",
-      "description": "Greift seitlich an; kann „Raksha“ glimmern.",
+      "description": {
+        "de": "Greift seitlich an; kann „Raksha“ glimmern.",
+        "en": "Attacks sideways. Can glimmer the \"Raksha\" tech."
+      },
       "maxLevel": 6,
       "emoji": "👊",
       "image": "https://vampire.survivors.wiki/images/Sprite-Punch.png",
@@ -59,9 +78,13 @@
     {
       "id": "kick",
       "name": "Kick",
+      "nameDeHint": "Tritt",
       "source": "emerald-diorama",
       "kind": "base",
-      "description": "Mehr Schaden bei voller Gesundheit; kann „Thunder Kick“ glimmern.",
+      "description": {
+        "de": "Mehr Schaden bei voller Gesundheit; kann „Thunder Kick“ glimmern.",
+        "en": "Deal more damage when at full health. Can glimmer the \"Thunder Kick\" tech."
+      },
       "maxLevel": 8,
       "emoji": "🦵",
       "image": "https://vampire.survivors.wiki/images/Sprite-Kick.png",
@@ -70,9 +93,13 @@
     {
       "id": "saber-machine-gun",
       "name": "Saber Machine Gun",
+      "nameDeHint": "Säbel-Maschinengewehr",
       "source": "emerald-diorama",
       "kind": "base",
-      "description": "Feuert in Blickrichtung; kann „Shockwave“ glimmern.",
+      "description": {
+        "de": "Feuert in Blickrichtung; kann „Shockwave“ glimmern.",
+        "en": "Fires in the faced direction. Can glimmer the \"Shockwave\" tech."
+      },
       "maxLevel": 6,
       "emoji": "🔫",
       "image": "https://vampire.survivors.wiki/images/Sprite-Saber_Machine_Gun.png",
@@ -81,9 +108,13 @@
     {
       "id": "super-missile",
       "name": "Super Missile",
+      "nameDeHint": "Superrakete",
       "source": "emerald-diorama",
       "kind": "base",
-      "description": "Feuert explodierende Projektile; kann „Ballistic Missiles“ glimmern.",
+      "description": {
+        "de": "Feuert explodierende Projektile; kann „Ballistic Missiles“ glimmern.",
+        "en": "Fires exploding projectiles. Can glimmer the \"Ballistic Missiles\" tech."
+      },
       "maxLevel": 6,
       "emoji": "🚀",
       "image": "https://vampire.survivors.wiki/images/Sprite-Super_Missile.png",
@@ -92,9 +123,13 @@
     {
       "id": "eagle-gun",
       "name": "Eagle Gun",
+      "nameDeHint": "Adlerkanone",
       "source": "emerald-diorama",
       "kind": "base",
-      "description": "Schießt auf Gegner in der Nähe; kann „Falconfire“ glimmern.",
+      "description": {
+        "de": "Schießt auf Gegner in der Nähe; kann „Falconfire“ glimmern.",
+        "en": "Fires at nearby enemies. Can glimmer the \"Falconfire\" tech."
+      },
       "maxLevel": 8,
       "emoji": "🦅",
       "image": "https://vampire.survivors.wiki/images/Sprite-Eagle_Gun.png",
@@ -105,7 +140,10 @@
       "name": "Khukuri",
       "source": "emerald-diorama",
       "kind": "base",
-      "description": "Schattenklone treffen Gegner in der Nähe; kann „Moonfall Slash“ glimmern.",
+      "description": {
+        "de": "Schattenklone treffen Gegner in der Nähe; kann „Moonfall Slash“ glimmern.",
+        "en": "Shadow clones strike nearby enemies. Can glimmer the \"Moonfall Slash\" tech."
+      },
       "maxLevel": 8,
       "emoji": "🔪",
       "image": "https://vampire.survivors.wiki/images/Sprite-Khukuri.png",
@@ -114,9 +152,13 @@
     {
       "id": "twin-dragon",
       "name": "Twin Dragon",
+      "nameDeHint": "Zwillingsdrache",
       "source": "emerald-diorama",
       "kind": "base",
-      "description": "Greift waagerecht an; kann „Gravedigger“ glimmern.",
+      "description": {
+        "de": "Greift waagerecht an; kann „Gravedigger“ glimmern.",
+        "en": "Attacks horizontally. Can glimmer the \"Gravedigger\" tech."
+      },
       "maxLevel": 8,
       "emoji": "🐉",
       "image": "https://vampire.survivors.wiki/images/Sprite-Twin_Dragon.png",
@@ -127,7 +169,10 @@
       "name": "Bullova",
       "source": "emerald-diorama",
       "kind": "base",
-      "description": "Durchdringt Gegner; kann „Hell's Fury“ glimmern.",
+      "description": {
+        "de": "Durchdringt Gegner; kann „Hell's Fury“ glimmern.",
+        "en": "Passes through enemies. Can glimmer the \"Hell's Fury\" tech."
+      },
       "maxLevel": 8,
       "emoji": "🪓",
       "image": "https://vampire.survivors.wiki/images/Sprite-Bullova.png",
@@ -136,9 +181,13 @@
     {
       "id": "sanguine-star",
       "name": "Sanguine Star",
+      "nameDeHint": "Blutroter Stern",
       "source": "emerald-diorama",
       "kind": "base",
-      "description": "Trifft die nächsten Gegner; kann „Blood Rage“ glimmern (doppelter Schaden, doppelte Fläche).",
+      "description": {
+        "de": "Trifft die nächsten Gegner; kann „Blood Rage“ glimmern (doppelter Schaden, doppelte Fläche).",
+        "en": "Strikes at the nearest enemies. Can glimmer the \"Blood Rage\" tech: damage x2, area x2."
+      },
       "maxLevel": 8,
       "emoji": "🩸",
       "image": "https://vampire.survivors.wiki/images/Sprite-Sanguine_Star.png",
@@ -147,9 +196,13 @@
     {
       "id": "glaive",
       "name": "Glaive",
+      "nameDeHint": "Glefe",
       "source": "emerald-diorama",
       "kind": "base",
-      "description": "Sticht in Blickrichtung; kann „Divine Lancer“ glimmern.",
+      "description": {
+        "de": "Sticht in Blickrichtung; kann „Divine Lancer“ glimmern.",
+        "en": "Stabs in the faced direction. Can glimmer the \"Divine Lancer\" tech."
+      },
       "maxLevel": 6,
       "emoji": "🔱",
       "image": "https://vampire.survivors.wiki/images/Sprite-Glaive.png",
@@ -158,9 +211,13 @@
     {
       "id": "spirit-rings",
       "name": "Spirit Rings",
+      "nameDeHint": "Geisterringe",
       "source": "emerald-diorama",
       "kind": "base",
-      "description": "Löst zusätzliche Techniken aus, wenn Fläche, Geschwindigkeit, Dauer und/oder Wachstum bei 155 % oder mehr liegen.",
+      "description": {
+        "de": "Löst zusätzliche Techniken aus, wenn Fläche, Geschwindigkeit, Dauer und/oder Wachstum bei 155 % oder mehr liegen.",
+        "en": "Triggers additional techs when Area, Speed, Duration, and/or Growth bonuses are at or above 155%."
+      },
       "maxLevel": 8,
       "emoji": "💍",
       "image": "https://vampire.survivors.wiki/images/Sprite-Spirit_Rings.png",
@@ -169,9 +226,13 @@
     {
       "id": "emerald-rapture",
       "name": "Emerald Rapture",
+      "nameDeHint": "Smaragd-Entrückung",
       "source": "emerald-diorama",
       "kind": "base",
-      "description": "Teleportiert zufällige Gegner weg, die dann eventuell keine Erfahrung fallen lassen.",
+      "description": {
+        "de": "Teleportiert zufällige Gegner weg, die dann eventuell keine Erfahrung fallen lassen.",
+        "en": "Picks random enemies to teleport away, but they might not drop XP gems."
+      },
       "maxLevel": 8,
       "emoji": "💚",
       "image": "https://vampire.survivors.wiki/images/Sprite-Emerald_Rapture.png",
@@ -182,7 +243,10 @@
       "name": "Intuition",
       "source": "emerald-diorama",
       "kind": "base",
-      "description": "Lässt dich aus einer Auswahl von Emerald-Diorama-Waffen wählen.",
+      "description": {
+        "de": "Lässt dich aus einer Auswahl von Emerald-Diorama-Waffen wählen.",
+        "en": "Allows you to choose from a selection of weapons from Emerald Diorama."
+      },
       "maxLevel": 1,
       "emoji": "💭",
       "image": "https://vampire.survivors.wiki/images/Sprite-Intuition.png",
@@ -191,9 +255,13 @@
     {
       "id": "dress-sword",
       "name": "Dress Sword",
+      "nameDeHint": "Galadegen",
       "source": "emerald-diorama",
       "kind": "evolved",
-      "description": "Entwicklung von Fleuret: kann „Shocking Rush“ glimmern.",
+      "description": {
+        "de": "Entwicklung von Fleuret: kann „Shocking Rush“ glimmern.",
+        "en": "Evolved Fleuret. Can glimmer the \"Shocking Rush\" tech."
+      },
       "maxLevel": 6,
       "emoji": "🤺",
       "image": "https://vampire.survivors.wiki/images/Sprite-Dress_Sword.png",
@@ -204,7 +272,10 @@
       "name": "Espada Ropera",
       "source": "emerald-diorama",
       "kind": "evolved",
-      "description": "Entwicklung von Dress Sword: erlaubt die Technik „Mega Thrust“.",
+      "description": {
+        "de": "Entwicklung von Dress Sword: erlaubt die Technik „Mega Thrust“.",
+        "en": "Evolved Dress Sword. Allows to glimmer the \"Mega Thrust\" tech."
+      },
       "maxLevel": 1,
       "emoji": "🗡️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Espada_Ropera.png",
@@ -213,9 +284,13 @@
     {
       "id": "lordstar",
       "name": "Lordstar",
+      "nameDeHint": "Herrenstern",
       "source": "emerald-diorama",
       "kind": "evolved",
-      "description": "Entwicklung von Town Sword: kann „Airwave“ glimmern (fünffacher Schaden).",
+      "description": {
+        "de": "Entwicklung von Town Sword: kann „Airwave“ glimmern (fünffacher Schaden).",
+        "en": "Evolved Town Sword. Can glimmer the \"Airwave\" tech: damage x5."
+      },
       "maxLevel": 6,
       "emoji": "⭐",
       "image": "https://vampire.survivors.wiki/images/Sprite-Lordstar.png",
@@ -224,9 +299,13 @@
     {
       "id": "dayblade",
       "name": "Dayblade",
+      "nameDeHint": "Tagesklinge",
       "source": "emerald-diorama",
       "kind": "evolved",
-      "description": "Entwicklung von Lordstar: kann „Life Sprinkler“ glimmern.",
+      "description": {
+        "de": "Entwicklung von Lordstar: kann „Life Sprinkler“ glimmern.",
+        "en": "Evolved Lordstar. Can glimmer the \"Life Sprinkler\" tech."
+      },
       "maxLevel": 1,
       "emoji": "☀️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Dayblade.png",
@@ -235,9 +314,13 @@
     {
       "id": "pursuant-blades",
       "name": "Pursuant Blades",
+      "nameDeHint": "Verfolgerklingen",
       "source": "emerald-diorama",
       "kind": "evolved",
-      "description": "Entwicklung von Splashers: kann „Dual Torrent“ glimmern.",
+      "description": {
+        "de": "Entwicklung von Splashers: kann „Dual Torrent“ glimmern.",
+        "en": "Evolved Splashers. Can glimmer the \"Dual Torrent\" tech."
+      },
       "maxLevel": 8,
       "emoji": "🌊",
       "image": "https://vampire.survivors.wiki/images/Sprite-Pursuant_Blades.png",
@@ -246,9 +329,13 @@
     {
       "id": "zweihander",
       "name": "Zweihander",
+      "nameDeHint": "Zweihänder",
       "source": "emerald-diorama",
       "kind": "evolved",
-      "description": "Entwicklung von Flamberge: kann „Absetzen“ glimmern.",
+      "description": {
+        "de": "Entwicklung von Flamberge: kann „Absetzen“ glimmern.",
+        "en": "Evolved Flamberge. Can glimmer the \"Absetzen\" tech."
+      },
       "maxLevel": 6,
       "emoji": "⚔️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Zweihander.png",
@@ -259,7 +346,10 @@
       "name": "Galatyn",
       "source": "emerald-diorama",
       "kind": "evolved",
-      "description": "Entwicklung von Zweihander: kann „Vandalize“ glimmern.",
+      "description": {
+        "de": "Entwicklung von Zweihander: kann „Vandalize“ glimmern.",
+        "en": "Evolved Zweihander. Can glimmer the \"Vandalize\" tech."
+      },
       "maxLevel": 1,
       "emoji": "🗡️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Galatyn.png",
@@ -268,9 +358,13 @@
     {
       "id": "pressure-point",
       "name": "Pressure Point",
+      "nameDeHint": "Druckpunkt",
       "source": "emerald-diorama",
       "kind": "evolved",
-      "description": "Entwicklung von Punch: kann „Shenlong Firefist“ glimmern.",
+      "description": {
+        "de": "Entwicklung von Punch: kann „Shenlong Firefist“ glimmern.",
+        "en": "Evolved Punch. Can glimmer the \"Shenlong Firefist\" tech."
+      },
       "maxLevel": 6,
       "emoji": "👊",
       "image": "https://vampire.survivors.wiki/images/Sprite-Pressure_Point.png",
@@ -279,9 +373,13 @@
     {
       "id": "gilded-hand",
       "name": "Gilded Hand",
+      "nameDeHint": "Vergoldete Hand",
       "source": "emerald-diorama",
       "kind": "evolved",
-      "description": "Entwicklung von Pressure Point: kann „Guanyin“ glimmern.",
+      "description": {
+        "de": "Entwicklung von Pressure Point: kann „Guanyin“ glimmern.",
+        "en": "Evolved Pressure Point. Can glimmer the \"Guanyin\" tech."
+      },
       "maxLevel": 1,
       "emoji": "✋",
       "image": "https://vampire.survivors.wiki/images/Sprite-Gilded_Hand.png",
@@ -290,9 +388,13 @@
     {
       "id": "triangle-kick",
       "name": "Triangle Kick",
+      "nameDeHint": "Dreieckstritt",
       "source": "emerald-diorama",
       "kind": "evolved",
-      "description": "Entwicklung von Kick: glimmert „Triple Dragon“, dessen Schaden von der gesamten Überheilung abhängt.",
+      "description": {
+        "de": "Entwicklung von Kick: glimmert „Triple Dragon“, dessen Schaden von der gesamten Überheilung abhängt.",
+        "en": "Evolved Kick. Glimmers \"Triple Dragon\": damage affected by overheal total."
+      },
       "maxLevel": 8,
       "emoji": "🔺",
       "image": "https://vampire.survivors.wiki/images/Sprite-Triangle_Kick.png",
@@ -301,9 +403,13 @@
     {
       "id": "hecaton-machine-gun",
       "name": "Hecaton Machine Gun",
+      "nameDeHint": "Hekaton-Maschinengewehr",
       "source": "emerald-diorama",
       "kind": "evolved",
-      "description": "Entwicklung von Saber Machine Gun: kann „Bombarding Fire“ glimmern.",
+      "description": {
+        "de": "Entwicklung von Saber Machine Gun: kann „Bombarding Fire“ glimmern.",
+        "en": "Evolved Saber Machine Gun. Can glimmer the \"Bombarding Fire\" tech."
+      },
       "maxLevel": 6,
       "emoji": "🔫",
       "image": "https://vampire.survivors.wiki/images/Sprite-Hecaton_Machine_Gun.png",
@@ -312,9 +418,13 @@
     {
       "id": "divergence",
       "name": "Divergence",
+      "nameDeHint": "Divergenz",
       "source": "emerald-diorama",
       "kind": "evolved",
-      "description": "Entwicklung von Hecaton Machine Gun: kann „Sunlight Shower“ glimmern.",
+      "description": {
+        "de": "Entwicklung von Hecaton Machine Gun: kann „Sunlight Shower“ glimmern.",
+        "en": "Evolved Hecaton Machine Gun. Can Glimmer the \"Sunlight Shower\" tech."
+      },
       "maxLevel": 1,
       "emoji": "🌦️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Divergence.png",
@@ -323,9 +433,13 @@
     {
       "id": "hydra-cannon",
       "name": "Hydra Cannon",
+      "nameDeHint": "Hydra-Kanone",
       "source": "emerald-diorama",
       "kind": "evolved",
-      "description": "Entwicklung von Super Missile: kann „Artificial Hailstorm“ glimmern.",
+      "description": {
+        "de": "Entwicklung von Super Missile: kann „Artificial Hailstorm“ glimmern.",
+        "en": "Evolved Super Missile. Can glimmer the \"Artificial Hailstorm\" tech."
+      },
       "maxLevel": 6,
       "emoji": "🐍",
       "image": "https://vampire.survivors.wiki/images/Sprite-Hydra_Cannon.png",
@@ -334,9 +448,13 @@
     {
       "id": "hyperion-bazooka",
       "name": "Hyperion Bazooka",
+      "nameDeHint": "Hyperion-Bazooka",
       "source": "emerald-diorama",
       "kind": "evolved",
-      "description": "Entwicklung von Hydra Cannon: kann „Cosmic Rave“ glimmern.",
+      "description": {
+        "de": "Entwicklung von Hydra Cannon: kann „Cosmic Rave“ glimmern.",
+        "en": "Evolved Hydra Cannon. Can glimmer the \"Cosmic Rave\" tech."
+      },
       "maxLevel": 1,
       "emoji": "🚀",
       "image": "https://vampire.survivors.wiki/images/Sprite-Hyperion_Bazooka.png",
@@ -347,7 +465,10 @@
       "name": "Pendragon",
       "source": "emerald-diorama",
       "kind": "evolved",
-      "description": "Entwicklung von Eagle Gun: kann „Bounding Shot“ glimmern.",
+      "description": {
+        "de": "Entwicklung von Eagle Gun: kann „Bounding Shot“ glimmern.",
+        "en": "Evolved Eagle Gun. Can glimmer the \"Bounding Shot\" tech."
+      },
       "maxLevel": 8,
       "emoji": "🐲",
       "image": "https://vampire.survivors.wiki/images/Sprite-Pendragon.png",
@@ -358,7 +479,10 @@
       "name": "Jetstream",
       "source": "emerald-diorama",
       "kind": "evolved",
-      "description": "Entwicklung von Khukuri: kritische Treffer können kurz unverwundbar machen; kann „Kaleidoscope“ glimmern.",
+      "description": {
+        "de": "Entwicklung von Khukuri: kritische Treffer können kurz unverwundbar machen; kann „Kaleidoscope“ glimmern.",
+        "en": "Evolved Khukuri. Critical hits may give temporary invulnerability. Can glimmer the \"Kaleidoscope\" tech."
+      },
       "maxLevel": 8,
       "emoji": "💨",
       "image": "https://vampire.survivors.wiki/images/Sprite-Jetstream.png",
@@ -369,7 +493,10 @@
       "name": "Gekkabijin",
       "source": "emerald-diorama",
       "kind": "evolved",
-      "description": "Entwicklung von Twin Dragon: kann „Scattered Petals“ glimmern.",
+      "description": {
+        "de": "Entwicklung von Twin Dragon: kann „Scattered Petals“ glimmern.",
+        "en": "Evolved Twin Dragon. Can glimmer the \"Scattered Petals\" tech."
+      },
       "maxLevel": 8,
       "emoji": "🌺",
       "image": "https://vampire.survivors.wiki/images/Sprite-Gekkabijin.png",
@@ -378,9 +505,13 @@
     {
       "id": "falconwind",
       "name": "Falconwind",
+      "nameDeHint": "Falkenwind",
       "source": "emerald-diorama",
       "kind": "evolved",
-      "description": "Entwicklung von Bullova: kann „Reverse Delta“ glimmern.",
+      "description": {
+        "de": "Entwicklung von Bullova: kann „Reverse Delta“ glimmern.",
+        "en": "Evolved Bullova. Can glimmer the \"Reverse Delta\" tech."
+      },
       "maxLevel": 8,
       "emoji": "🦅",
       "image": "https://vampire.survivors.wiki/images/Sprite-Falconwind.png",
@@ -389,9 +520,13 @@
     {
       "id": "blood-chalice",
       "name": "Blood Chalice",
+      "nameDeHint": "Blutkelch",
       "source": "emerald-diorama",
       "kind": "evolved",
-      "description": "Entwicklung von Sanguine Star: kann „Scarlet Harbinger“ glimmern (Schaden hängt von der Gier ab, kann Herzen stehlen).",
+      "description": {
+        "de": "Entwicklung von Sanguine Star: kann „Scarlet Harbinger“ glimmern (Schaden hängt von der Gier ab, kann Herzen stehlen).",
+        "en": "Evolved Sanguine Star. Can glimmer the \"Scarlet Harbinger\" tech: damage affected by Greed, might steal hearts."
+      },
       "maxLevel": 8,
       "emoji": "🍷",
       "image": "https://vampire.survivors.wiki/images/Sprite-Blood_Chalice.png",
@@ -400,9 +535,13 @@
     {
       "id": "feather-spear",
       "name": "Feather Spear",
+      "nameDeHint": "Federspeer",
       "source": "emerald-diorama",
       "kind": "evolved",
-      "description": "Entwicklung von Glaive: kann „Stardust“ glimmern.",
+      "description": {
+        "de": "Entwicklung von Glaive: kann „Stardust“ glimmern.",
+        "en": "Evolved Glaive. Can glimmer the \"Stardust\" tech."
+      },
       "maxLevel": 6,
       "emoji": "🪶",
       "image": "https://vampire.survivors.wiki/images/Sprite-Feather_Spear.png",
@@ -413,7 +552,10 @@
       "name": "Lohengrin",
       "source": "emerald-diorama",
       "kind": "evolved",
-      "description": "Entwicklung von Feather Spear: kann „Triumvirate“ glimmern (dreifacher Schaden).",
+      "description": {
+        "de": "Entwicklung von Feather Spear: kann „Triumvirate“ glimmern (dreifacher Schaden).",
+        "en": "Evolved Feather Spear. Can glimmer the \"Triumvirate\" tech: damage x3."
+      },
       "maxLevel": 1,
       "emoji": "🦢",
       "image": "https://vampire.survivors.wiki/images/Sprite-Lohengrin.png",
@@ -422,9 +564,13 @@
     {
       "id": "rings-of-calamity",
       "name": "Rings of Calamity",
+      "nameDeHint": "Ringe des Unheils",
       "source": "emerald-diorama",
       "kind": "evolved",
-      "description": "Entwicklung von Spirit Rings: löst zusätzlich die Technik „Chaos Disaster“ aus.",
+      "description": {
+        "de": "Entwicklung von Spirit Rings: löst zusätzlich die Technik „Chaos Disaster“ aus.",
+        "en": "Evolved Spirit Rings. Also triggers the \"Chaos Disaster\" tech."
+      },
       "maxLevel": 1,
       "emoji": "💫",
       "image": "https://vampire.survivors.wiki/images/Sprite-Rings_of_Calamity.png",
@@ -433,9 +579,13 @@
     {
       "id": "emerald-wave",
       "name": "Emerald Wave",
+      "nameDeHint": "Smaragdwelle",
       "source": "emerald-diorama",
       "kind": "evolved",
-      "description": "Entwicklung von Emerald Rapture: teleportiert alle Gegner auf ihrem Weg, die dann immer ihre besten Erfahrungs-Edelsteine fallen lassen.",
+      "description": {
+        "de": "Entwicklung von Emerald Rapture: teleportiert alle Gegner auf ihrem Weg, die dann immer ihre besten Erfahrungs-Edelsteine fallen lassen.",
+        "en": "Evolved Emerald Rapture. Teleports any enemy on its path and they always drop their best XP gems."
+      },
       "maxLevel": 1,
       "emoji": "🌊",
       "image": "https://vampire.survivors.wiki/images/Sprite-Emerald_Wave.png",

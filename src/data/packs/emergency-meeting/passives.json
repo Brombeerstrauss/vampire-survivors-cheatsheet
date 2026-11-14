@@ -4,8 +4,12 @@
     {
       "id": "mini-crewmate",
       "name": "Mini Crewmate",
+      "nameDeHint": "Mini-Crewmitglied",
       "source": "emergency-meeting",
-      "description": "Ruft gelegentlich Gegner in der Nähe an.",
+      "description": {
+        "de": "Ruft gelegentlich Gegner in der Nähe an.",
+        "en": "Might occasionally shout at nearby enemies."
+      },
       "maxLevel": 3,
       "ignoresSlotLimit": true,
       "emoji": "🧑‍🚀",
@@ -15,8 +19,12 @@
     {
       "id": "mini-engineer",
       "name": "Mini Engineer",
+      "nameDeHint": "Mini-Ingenieur",
       "source": "emergency-meeting",
-      "description": "Elektrisiert gelegentlich Gegner.",
+      "description": {
+        "de": "Elektrisiert gelegentlich Gegner.",
+        "en": "Might occasionally electrocute enemies."
+      },
       "maxLevel": 3,
       "ignoresSlotLimit": true,
       "emoji": "🔧",
@@ -26,8 +34,12 @@
     {
       "id": "mini-ghost",
       "name": "Mini Ghost",
+      "nameDeHint": "Mini-Geist",
       "source": "emergency-meeting",
-      "description": "Lässt Gegner gelegentlich vor Angst erstarren.",
+      "description": {
+        "de": "Lässt Gegner gelegentlich vor Angst erstarren.",
+        "en": "Might occasionally freeze enemies in fear."
+      },
       "maxLevel": 3,
       "ignoresSlotLimit": true,
       "emoji": "👻",
@@ -37,8 +49,12 @@
     {
       "id": "mini-shapeshifter",
       "name": "Mini Shapeshifter",
+      "nameDeHint": "Mini-Gestaltwandler",
       "source": "emergency-meeting",
-      "description": "Wirft gelegentlich übrige Körperteile auf Gegner.",
+      "description": {
+        "de": "Wirft gelegentlich übrige Körperteile auf Gegner.",
+        "en": "Might occasionally fling leftover body parts at enemies"
+      },
       "maxLevel": 3,
       "ignoresSlotLimit": true,
       "emoji": "🫥",
@@ -48,8 +64,12 @@
     {
       "id": "mini-guardian",
       "name": "Mini Guardian",
+      "nameDeHint": "Mini-Wächter",
       "source": "emergency-meeting",
-      "description": "Fängt gelegentlich einen Treffer für dich ab.",
+      "description": {
+        "de": "Fängt gelegentlich einen Treffer für dich ab.",
+        "en": "Might occasionally take a hit for you."
+      },
       "maxLevel": 3,
       "ignoresSlotLimit": true,
       "emoji": "🛡️",
@@ -59,8 +79,12 @@
     {
       "id": "mini-impostor",
       "name": "Mini Impostor",
+      "nameDeHint": "Mini-Hochstapler",
       "source": "emergency-meeting",
-      "description": "Sticht gelegentlich auf Gegner ein.",
+      "description": {
+        "de": "Sticht gelegentlich auf Gegner ein.",
+        "en": "Might occasionally stab enemies."
+      },
       "maxLevel": 3,
       "ignoresSlotLimit": true,
       "emoji": "🔪",
@@ -70,8 +94,12 @@
     {
       "id": "mini-scientist",
       "name": "Mini Scientist",
+      "nameDeHint": "Mini-Wissenschaftler",
       "source": "emergency-meeting",
-      "description": "Wirft gelegentlich Wissenschaft auf Gegner.",
+      "description": {
+        "de": "Wirft gelegentlich Wissenschaft auf Gegner.",
+        "en": "Might occasionally throw science at enemies."
+      },
       "maxLevel": 3,
       "ignoresSlotLimit": true,
       "emoji": "🧪",
@@ -81,8 +109,12 @@
     {
       "id": "mini-horse",
       "name": "Mini Horse",
+      "nameDeHint": "Mini-Pferd",
       "source": "emergency-meeting",
-      "description": "Steckt dich gelegentlich mit unerbittlicher Fröhlichkeit an.",
+      "description": {
+        "de": "Steckt dich gelegentlich mit unerbittlicher Fröhlichkeit an.",
+        "en": "Might occasionally infect you with its relentless happiness."
+      },
       "maxLevel": 3,
       "ignoresSlotLimit": true,
       "emoji": "🐴",

@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import { gameData } from '../data/index.ts'
-import type { PackId } from '../data/types.ts'
+import type { Lang, PackId } from '../data/types.ts'
+import { detectLanguage } from '../i18n/names.ts'
 import { createCatalog, type Catalog } from '../logic/catalog.ts'
 import { sanitizeRun, type RunState } from '../logic/run.ts'
 import { Context, type AppState, type Notice } from './context.ts'
@@ -15,11 +16,16 @@ const fullCatalog = createCatalog(gameData, new Set(gameData.packs.map((p) => p.
 
 
 export function AppStateProvider({ children }: { children: ReactNode }) {
-  const [settings, setSettings] = useState(() => loadSettings(readStored(SETTINGS_KEY), gameData.packs))
+  const [settings, setSettings] = useState(() =>
+    loadSettings(readStored(SETTINGS_KEY), gameData.packs, detectLanguage(navigator.languages ?? [navigator.language])),
+  )
   const [run, setRun] = useState(() => sanitizeRun(readStored(RUN_KEY), fullCatalog))
   const [notice, setNotice] = useState<Notice | null>(null)
 
   useEffect(() => writeStored(SETTINGS_KEY, settings), [settings])
+  useEffect(() => {
+    document.documentElement.lang = settings.language
+  }, [settings.language])
   useEffect(() => writeStored(RUN_KEY, run), [run])
 
   const catalog = useMemo(() => createCatalog(gameData, new Set(settings.ownedPacks)), [settings.ownedPacks])
@@ -34,6 +40,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
 
   const setShowSecrets = useCallback((show: boolean) => setSettings((s) => ({ ...s, showSecrets: show })), [])
   const setShowImages = useCallback((show: boolean) => setSettings((s) => ({ ...s, showImages: show })), [])
+  const setLanguage = useCallback((language: Lang) => setSettings((s) => ({ ...s, language })), [])
 
   // Der aktuelle Lauf als Ref, damit Änderungen und Rückgängig-Meldung zusammen entstehen.
   const runRef = useRef(run)
@@ -62,6 +69,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
       setOwnedPack,
       setShowSecrets,
       setShowImages,
+      setLanguage,
       catalog,
       fullCatalog,
       run,
@@ -69,7 +77,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
       notice,
       dismissNotice: () => setNotice(null),
     }),
-    [settings, setOwnedPack, setShowSecrets, setShowImages, catalog, run, updateRun, notice],
+    [settings, setOwnedPack, setShowSecrets, setShowImages, setLanguage, catalog, run, updateRun, notice],
   )
 
   return <Context.Provider value={value}>{children}</Context.Provider>

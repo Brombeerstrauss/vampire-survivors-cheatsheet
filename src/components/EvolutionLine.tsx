@@ -1,18 +1,19 @@
 import type { Evolution } from '../data/types.ts'
-import { KIND_LABEL } from './evolutionText.ts'
+import { useI18n } from '../i18n/index.ts'
 import type { Catalog } from '../logic/catalog.ts'
 import type { EvolutionCheck, RequirementCheck } from '../logic/evolution.ts'
 import { characterHref, passiveHref, weaponHref } from '../state/route.ts'
-import { EntryIcon, Pill, UnverifiedBadge } from './ui.tsx'
+import { EntryIcon, EntryName, Pill, UnverifiedBadge } from './ui.tsx'
 
 function StateMark({ check }: { check?: RequirementCheck }) {
+  const { t } = useI18n()
   if (!check) return null
   return check.owned ? (
-    <span className="text-emerald-300" aria-label="vorhanden">
+    <span className="text-emerald-300" aria-label={t.owned}>
       ✓
     </span>
   ) : (
-    <span className="text-red-300" aria-label="fehlt">
+    <span className="text-red-300" aria-label={t.missingLabel}>
       ✗
     </span>
   )
@@ -26,7 +27,7 @@ function Chip({
   extra,
 }: {
   href: string
-  entry: { name: string; emoji?: string; icon?: string; image?: string } | undefined
+  entry: { name: string; nameDe?: string; nameDeHint?: string; emoji?: string; icon?: string; image?: string } | undefined
   check?: RequirementCheck
   highlight?: boolean
   /** Zusatz hinter dem Namen, z. B. „Max“ oder „wird verbraucht“. */
@@ -44,7 +45,7 @@ function Chip({
       className={`inline-flex max-w-full items-center gap-1.5 rounded-xl py-1 pr-2.5 pl-1 text-sm ring-1 hover:bg-white/10 ${tone}`}
     >
       {entry && <EntryIcon entry={entry} size="sm" />}
-      <span className="truncate">{entry?.name ?? '?'}</span>
+      {entry ? <EntryName entry={entry} className="truncate" /> : <span>?</span>}
       {extra?.map((text) => <Pill key={text}>{text}</Pill>)}
       <StateMark check={check} />
     </a>
@@ -70,6 +71,7 @@ export function EvolutionLine({
   check?: EvolutionCheck
   showKind?: boolean
 }) {
+  const { t, text, shortName } = useI18n()
   const reqCheck = (type: 'weapon' | 'passive', id: string) =>
     check?.requirements.find((r) => r.type === type && r.id === id)
   const result = catalog.weapon(evolution.result)
@@ -78,7 +80,7 @@ export function EvolutionLine({
     <div className="space-y-2">
       {showKind && (
         <div className="flex flex-wrap items-center gap-1.5">
-          <Pill tone="gold">{KIND_LABEL[evolution.kind]}</Pill>
+          <Pill tone="gold">{t.kind[evolution.kind]}</Pill>
           <UnverifiedBadge verified={evolution.verified} />
         </div>
       )}
@@ -92,8 +94,8 @@ export function EvolutionLine({
         {evolution.passives.map((p) => {
           const extra = [
             p.level === 'max' && (catalog.passive(p.id)?.maxLevel ?? 1) > 1 ? 'Max' : null,
-            p.consumed ? 'wird verbraucht' : null,
-          ].filter((text): text is string => text !== null)
+            p.consumed ? t.consumed : null,
+          ].filter((value): value is string => value !== null)
           return (
             <span key={p.id} className="contents">
               <span className="text-white/40">+</span>
@@ -106,33 +108,36 @@ export function EvolutionLine({
             </span>
           )
         })}
-        <span className="px-0.5 text-gold-300" aria-label="ergibt">
+        <span className="px-0.5 text-gold-300" aria-label={t.resultsIn}>
           →
         </span>
         <Chip href={weaponHref(evolution.result)} entry={result} highlight />
       </div>
       {evolution.characters && (
         <p className="text-xs text-white/60">
-          Nur für{' '}
-          {evolution.characters.map((id, i) => (
-            <span key={id}>
-              {i > 0 && ', '}
-              <a className="underline decoration-white/30 underline-offset-2 hover:text-white" href={characterHref(id)}>
-                {catalog.character(id)?.name ?? id}
-              </a>
-            </span>
-          ))}
+          {t.onlyFor}{' '}
+          {evolution.characters.map((id, i) => {
+            const character = catalog.character(id)
+            return (
+              <span key={id}>
+                {i > 0 && ', '}
+                <a className="underline decoration-white/30 underline-offset-2 hover:text-white" href={characterHref(id)}>
+                  {character ? shortName(character) : id}
+                </a>
+              </span>
+            )
+          })}
           .
         </p>
       )}
       {evolution.conditions && evolution.conditions.length > 0 && (
         <ul className="list-disc space-y-0.5 pl-5 text-xs text-white/60">
           {evolution.conditions.map((c) => (
-            <li key={c}>{c}</li>
+            <li key={c.en}>{text(c)}</li>
           ))}
         </ul>
       )}
-      {evolution.note && <p className="text-xs text-white/45">{evolution.note}</p>}
+      {evolution.note && <p className="text-xs text-white/45">{text(evolution.note)}</p>}
     </div>
   )
 }

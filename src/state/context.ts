@@ -1,5 +1,5 @@
 import { createContext, useContext } from 'react'
-import type { PackId } from '../data/types.ts'
+import type { Lang, PackId } from '../data/types.ts'
 import type { Catalog } from '../logic/catalog.ts'
 import type { RunState } from '../logic/run.ts'
 import type { Settings } from './settings.ts'
@@ -14,6 +14,7 @@ export interface AppState {
   setOwnedPack(id: PackId, owned: boolean): void
   setShowSecrets(show: boolean): void
   setShowImages(show: boolean): void
+  setLanguage(language: Lang): void
   /** Katalog der freigeschalteten Pakete. */
   catalog: Catalog
   /** Katalog aller Pakete. */

@@ -4,6 +4,7 @@ import {
   Card,
   EmptyHint,
   EntryIcon,
+  EntryName,
   Pill,
   SearchField,
   Section,
@@ -12,6 +13,8 @@ import {
 } from '../components/ui.tsx'
 import { buttonClass, matches } from '../components/styles.ts'
 import type { Character, RecommendedItem } from '../data/types.ts'
+import { useI18n } from '../i18n/index.ts'
+import { searchNames } from '../i18n/names.ts'
 import type { Catalog } from '../logic/catalog.ts'
 import { isRunEmpty, startRun } from '../logic/run.ts'
 import { useAppState } from '../state/context.ts'
@@ -19,26 +22,29 @@ import { characterHref, navigate, passiveHref, weaponHref } from '../state/route
 
 export function CharactersView({ selectedId }: { selectedId?: string }) {
   const { catalog, settings } = useAppState()
+  const { t } = useI18n()
   const [query, setQuery] = useState('')
 
   const selected = selectedId ? catalog.character(selectedId) : undefined
   const visible = catalog.characters.filter(
     (c) =>
       (settings.showSecrets || !c.secret || c.id === selectedId) &&
-      (matches(c.name, query) ||
-        c.startingWeapons.some((w) => matches(catalog.weapon(w)?.name ?? '', query))),
+      (matches(searchNames(c), query) ||
+        c.startingWeapons.some((w) => {
+          const weapon = catalog.weapon(w)
+          return weapon ? matches(searchNames(weapon), query) : false
+        })),
   )
 
   return (
     <div className="grid grid-cols-[minmax(0,1fr)] gap-6 md:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] md:items-start">
       <div className={`space-y-3 ${selected ? 'hidden md:block' : ''}`}>
-        <SearchField value={query} onChange={setQuery} placeholder="Charakter oder Waffe suchen" />
+        <SearchField value={query} onChange={setQuery} placeholder={t.searchCharacter} />
         <p className="text-xs text-white/50">
-          {visible.length} von {catalog.characters.length} Charakteren
-          {!settings.showSecrets && ' (geheime ausgeblendet)'}
+          {t.characterCount(visible.length, catalog.characters.length, !settings.showSecrets)}
         </p>
         {visible.length === 0 ? (
-          <EmptyHint>Kein Charakter passt zur Suche.</EmptyHint>
+          <EmptyHint>{t.noCharacterMatches}</EmptyHint>
         ) : (
           <ul className="space-y-1.5 md:max-h-[calc(100dvh-12rem)] md:overflow-y-auto md:pr-1">
             {visible.map((c) => (
@@ -51,18 +57,18 @@ export function CharactersView({ selectedId }: { selectedId?: string }) {
       </div>
 
       <div className={selected ? '' : 'hidden md:block'}>
-        {selected ? (
-          <CharacterDetail character={selected} />
-        ) : (
-          <EmptyHint>Wähle links einen Charakter, um Startwaffe, Entwicklung und Empfehlungen zu sehen.</EmptyHint>
-        )}
+        {selected ? <CharacterDetail character={selected} /> : <EmptyHint>{t.pickCharacterHint}</EmptyHint>}
       </div>
     </div>
   )
 }
 
 function CharacterRow({ character, catalog, active }: { character: Character; catalog: Catalog; active: boolean }) {
-  const weapons = character.startingWeapons.map((id) => catalog.weapon(id)?.name ?? id)
+  const { t, shortName } = useI18n()
+  const weapons = character.startingWeapons.map((id) => {
+    const weapon = catalog.weapon(id)
+    return weapon ? shortName(weapon) : id
+  })
   return (
     <a
       href={characterHref(character.id)}
@@ -74,12 +80,12 @@ function CharacterRow({ character, catalog, active }: { character: Character; ca
       <EntryIcon entry={character} />
       <span className="min-w-0 flex-1">
         <span className="flex flex-wrap items-center gap-1.5">
-          <span className="font-medium">{character.name}</span>
-          {character.secret && <Pill>geheim</Pill>}
+          <EntryName entry={character} className="font-medium" />
+          {character.secret && <Pill>{t.secret}</Pill>}
           <SourceBadge source={character.source} />
         </span>
         <span className="block truncate text-sm text-white/55">
-          {weapons.length > 0 ? weapons.join(' + ') : 'Keine Startwaffe'}
+          {weapons.length > 0 ? weapons.join(' + ') : t.noStartingWeapon}
         </span>
       </span>
       <span className="text-white/30" aria-hidden="true">
@@ -91,47 +97,48 @@ function CharacterRow({ character, catalog, active }: { character: Character; ca
 
 function CharacterDetail({ character }: { character: Character }) {
   const { catalog, run, updateRun } = useAppState()
+  const { t, text, shortName } = useI18n()
   const recommendations = catalog.recommendationsFor(character.id)
   const recWeapons = mergeRecommended(recommendations.flatMap((r) => r.weapons))
   const recPassives = mergeRecommended(recommendations.flatMap((r) => r.passives))
-  const summaries = recommendations.map((r) => r.summary).filter(Boolean)
+  const summaries = recommendations.map((r) => text(r.summary)).filter(Boolean)
+  const name = shortName(character)
 
   const start = () => {
     const replacing = !isRunEmpty(run)
-    updateRun(
-      (_, cat) => startRun(cat, character.id),
-      replacing ? `Neuer Lauf mit ${character.name} gestartet.` : undefined,
-    )
+    updateRun((_, cat) => startRun(cat, character.id), replacing ? t.startedRunWith(name) : undefined)
     navigate({ view: 'run' })
   }
 
   return (
     <article className="space-y-6">
       <a href="#/charaktere" className={`${buttonClass.ghost} -ml-3 md:hidden`}>
-        ‹ Alle Charaktere
+        {t.allCharacters}
       </a>
 
       <header className="flex items-start gap-4">
         <EntryIcon entry={character} size="lg" />
         <div className="min-w-0 space-y-1.5">
-          <h1 className="text-2xl leading-tight font-bold">{character.name}</h1>
+          <h1 className="text-2xl leading-tight font-bold">
+            <EntryName entry={character} />
+          </h1>
           <div className="flex flex-wrap gap-1.5">
-            {character.secret && <Pill>geheim</Pill>}
+            {character.secret && <Pill>{t.secret}</Pill>}
             <SourceBadge source={character.source} />
             <UnverifiedBadge verified={character.verified} />
           </div>
-          <p className="text-white/80">{character.bonus}</p>
-          {character.note && <p className="text-sm text-white/50">{character.note}</p>}
+          <p className="text-white/80">{text(character.bonus)}</p>
+          {character.note && <p className="text-sm text-white/50">{text(character.note)}</p>}
         </div>
       </header>
 
       <button type="button" className={`${buttonClass.primary} w-full sm:w-auto`} onClick={start}>
-        Lauf mit {character.name.split(' ')[0]} starten
+        {t.startRunWith(name.split(' ')[0] ?? name)}
       </button>
 
-      <Section title={character.startingWeapons.length > 1 ? 'Startwaffen' : 'Startwaffe'}>
+      <Section title={character.startingWeapons.length > 1 ? t.startingWeapons : t.startingWeapon}>
         {character.startingWeapons.length === 0 ? (
-          <EmptyHint>{character.name} startet ohne sichtbare Waffe.</EmptyHint>
+          <EmptyHint>{t.startsWithoutWeapon(name)}</EmptyHint>
         ) : (
           <div className="space-y-3">
             {character.startingWeapons.map((id) => (
@@ -141,9 +148,9 @@ function CharacterDetail({ character }: { character: Character }) {
         )}
       </Section>
 
-      <Section title="Empfehlungen">
+      <Section title={t.recommendations}>
         {recWeapons.length === 0 && recPassives.length === 0 ? (
-          <EmptyHint>Für {character.name} sind noch keine Empfehlungen hinterlegt.</EmptyHint>
+          <EmptyHint>{t.noRecommendations(name)}</EmptyHint>
         ) : (
           <div className="space-y-4">
             {summaries.map((s) => (
@@ -152,8 +159,8 @@ function CharacterDetail({ character }: { character: Character }) {
               </p>
             ))}
             <div className="grid gap-4 lg:grid-cols-2">
-              <RecommendedList title="Waffen" items={recWeapons} type="weapon" />
-              <RecommendedList title="Passive Gegenstände" items={recPassives} type="passive" />
+              <RecommendedList title={t.weapons} items={recWeapons} type="weapon" />
+              <RecommendedList title={t.passiveItems} items={recPassives} type="passive" />
             </div>
           </div>
         )}
@@ -164,6 +171,7 @@ function CharacterDetail({ character }: { character: Character }) {
 
 function StartingWeapon({ weaponId, characterId }: { weaponId: string; characterId: string }) {
   const { catalog } = useAppState()
+  const { t, text } = useI18n()
   const weapon = catalog.weapon(weaponId)
   if (!weapon) return null
   const evolutions = catalog
@@ -175,15 +183,13 @@ function StartingWeapon({ weaponId, characterId }: { weaponId: string; character
       <a href={weaponHref(weapon.id)} className="flex items-center gap-3">
         <EntryIcon entry={weapon} />
         <span>
-          <span className="block font-semibold">{weapon.name}</span>
-          <span className="block text-sm text-white/60">{weapon.description}</span>
+          <EntryName entry={weapon} className="block font-semibold" />
+          <span className="block text-sm text-white/60">{text(weapon.description)}</span>
         </span>
       </a>
       {evolutions.length === 0 ? (
         <p className="rounded-xl bg-white/5 px-3 py-2 text-sm text-white/70">
-          {weapon.kind === 'evolved'
-            ? 'Startet bereits als entwickelte Waffe.'
-            : 'Diese Waffe hat keine Entwicklung.'}
+          {weapon.kind === 'evolved' ? t.startsEvolved : t.noEvolution}
         </p>
       ) : (
         <div className="space-y-3 border-t border-white/8 pt-3">
@@ -206,10 +212,9 @@ function mergeRecommended(items: RecommendedItem[]): RecommendedItem[] {
   return [...byId.values()].sort((a, b) => a.priority - b.priority)
 }
 
-const PRIORITY_LABEL = { 1: 'Kern', 2: 'Gut', 3: 'Optional' } as const
-
 function RecommendedList({ title, items, type }: { title: string; items: RecommendedItem[]; type: 'weapon' | 'passive' }) {
   const { catalog } = useAppState()
+  const { t, text } = useI18n()
   if (items.length === 0) return null
   return (
     <div className="space-y-2">
@@ -227,10 +232,10 @@ function RecommendedList({ title, items, type }: { title: string; items: Recomme
                 <EntryIcon entry={entry} size="sm" />
                 <span className="min-w-0 flex-1">
                   <span className="flex flex-wrap items-center gap-1.5">
-                    <span className="font-medium">{entry.name}</span>
-                    <Pill tone={item.priority === 1 ? 'gold' : 'neutral'}>{PRIORITY_LABEL[item.priority]}</Pill>
+                    <EntryName entry={entry} className="font-medium" />
+                    <Pill tone={item.priority === 1 ? 'gold' : 'neutral'}>{t.priority[item.priority]}</Pill>
                   </span>
-                  <span className="block text-sm text-white/60">{item.reason}</span>
+                  <span className="block text-sm text-white/60">{text(item.reason)}</span>
                 </span>
               </a>
             </li>

@@ -8,12 +8,18 @@
       "startingWeapons": [
         "fleuret"
       ],
-      "bonus": "Erhält alle 20 Level einen Kugutsu als Begleiter (max. 4); löst bei kritischer Gesundheit Showstopper aus.",
+      "bonus": {
+        "de": "Erhält alle 20 Level einen Kugutsu als Begleiter (max. 4); löst bei kritischer Gesundheit Showstopper aus.",
+        "en": "Obtains a Kugutsu follower every 20 levels (max 4). Triggers Showstopper at critical health."
+      },
       "secret": false,
       "emoji": "🤺",
       "image": "https://vampire.survivors.wiki/images/Select-Tsunanori_Mido.png",
       "verified": true,
-      "note": "Alternativ wählbare Startwaffe: Splashers."
+      "note": {
+        "de": "Alternativ wählbare Startwaffe: Splashers.",
+        "en": "Alternative starting weapon: Splashers."
+      }
     },
     {
       "id": "bonnie-blair",
@@ -22,12 +28,18 @@
       "startingWeapons": [
         "punch"
       ],
-      "bonus": "Erhält Macht beim Einsatz geglimmerter Techniken; bildet ein Team mit Formina; Showstopper bei kritischer Gesundheit.",
+      "bonus": {
+        "de": "Erhält Macht beim Einsatz geglimmerter Techniken; bildet ein Team mit Formina; Showstopper bei kritischer Gesundheit.",
+        "en": "Gains Might when using glimmered techs. Teams up with Formina. Triggers Showstopper at critical health."
+      },
       "secret": false,
       "emoji": "🥊",
       "image": "https://vampire.survivors.wiki/images/Select-Bonnie_Blair.png",
       "verified": true,
-      "note": "Alternativ wählbare Startwaffe: Kick."
+      "note": {
+        "de": "Alternativ wählbare Startwaffe: Kick.",
+        "en": "Alternative starting weapon: Kick."
+      }
     },
     {
       "id": "formina-franklyn",
@@ -36,12 +48,18 @@
       "startingWeapons": [
         "saber-machine-gun"
       ],
-      "bonus": "Erhält Dauer beim Einsatz geglimmerter Techniken; bildet ein Team mit Bonnie; Showstopper bei kritischer Gesundheit.",
+      "bonus": {
+        "de": "Erhält Dauer beim Einsatz geglimmerter Techniken; bildet ein Team mit Bonnie; Showstopper bei kritischer Gesundheit.",
+        "en": "Gains Duration when using glimmered techs. Teams up with Bonnie. Triggers Showstopper at critical health."
+      },
       "secret": false,
       "emoji": "🔫",
       "image": "https://vampire.survivors.wiki/images/Select-Formina_Franklyn.png",
       "verified": true,
-      "note": "Alternativ wählbare Startwaffe: Eagle Gun."
+      "note": {
+        "de": "Alternativ wählbare Startwaffe: Eagle Gun.",
+        "en": "Alternative starting weapon: Eagle Gun."
+      }
     },
     {
       "id": "diva-no-5",
@@ -51,7 +69,10 @@
         "super-missile",
         "twin-dragon"
       ],
-      "bonus": "Verschiedene Skins haben verschiedene Werte; Showstopper bei kritischer Gesundheit.",
+      "bonus": {
+        "de": "Verschiedene Skins haben verschiedene Werte; Showstopper bei kritischer Gesundheit.",
+        "en": "Different skins have different stats. Triggers Showstopper at critical health."
+      },
       "secret": false,
       "emoji": "🤖",
       "image": "https://vampire.survivors.wiki/images/Select-Diva_No._5.png",
@@ -64,12 +85,18 @@
       "startingWeapons": [
         "spirit-rings"
       ],
-      "bonus": "Erhält Werte-Boni beim Einsammeln ihrer herbeigerufenen Katzen; Showstopper bei kritischer Gesundheit.",
+      "bonus": {
+        "de": "Erhält Werte-Boni beim Einsammeln ihrer herbeigerufenen Katzen; Showstopper bei kritischer Gesundheit.",
+        "en": "Gains stat bonuses when collecting her summoned cats. Triggers Showstopper at critical health."
+      },
       "secret": false,
       "emoji": "🐈‍⬛",
       "image": "https://vampire.survivors.wiki/images/Select-Ameya_Aisling.png",
       "verified": true,
-      "note": "Alternativ wählbare Startwaffe: Intuition."
+      "note": {
+        "de": "Alternativ wählbare Startwaffe: Intuition.",
+        "en": "Alternative starting weapon: Intuition."
+      }
     },
     {
       "id": "siugnas",
@@ -78,21 +105,31 @@
       "startingWeapons": [
         "town-sword"
       ],
-      "bonus": "Besiegte Gegner werden zu Begleitern; mehr max. Gesundheit erlaubt mehr Begleiter; Showstopper bei kritischer Gesundheit.",
+      "bonus": {
+        "de": "Besiegte Gegner werden zu Begleitern; mehr max. Gesundheit erlaubt mehr Begleiter; Showstopper bei kritischer Gesundheit.",
+        "en": "Defeated enemies become followers. Increasing MaxHealth increases maximum followers. Triggers Showstopper at critical health."
+      },
       "secret": false,
       "emoji": "💀",
       "image": "https://vampire.survivors.wiki/images/Select-Siugnas.png",
       "verified": true,
-      "note": "Alternativ wählbare Startwaffe: Sanguine Star."
+      "note": {
+        "de": "Alternativ wählbare Startwaffe: Sanguine Star.",
+        "en": "Alternative starting weapon: Sanguine Star."
+      }
     },
     {
       "id": "final-emperor",
       "name": "Final Emperor",
+      "nameDeHint": "Letzter Kaiser",
       "source": "emerald-diorama",
       "startingWeapons": [
         "flamberge"
       ],
-      "bonus": "Löst geglimmerte Techniken öfter aus als üblich; Showstopper bei kritischer Gesundheit.",
+      "bonus": {
+        "de": "Löst geglimmerte Techniken öfter aus als üblich; Showstopper bei kritischer Gesundheit.",
+        "en": "Triggers glimmered techs more often than normal. Triggers Showstopper at critical health."
+      },
       "secret": false,
       "emoji": "👑",
       "image": "https://vampire.survivors.wiki/images/Select-Final_Emperor.png",
@@ -105,7 +142,10 @@
       "startingWeapons": [
         "bullova"
       ],
-      "bonus": "Showstopper bei kritischer Gesundheit und bei Wiederbelebung; jeder Showstopper senkt die Abklingzeit (max. −20 %).",
+      "bonus": {
+        "de": "Showstopper bei kritischer Gesundheit und bei Wiederbelebung; jeder Showstopper senkt die Abklingzeit (max. −20 %).",
+        "en": "Triggers Showstopper at critical health and on revival. Gains a bonus to Cooldown every time Showstopper is triggered (Max -20%)."
+      },
       "secret": false,
       "emoji": "🌹",
       "image": "https://vampire.survivors.wiki/images/Select-Dolores.png",
@@ -118,12 +158,18 @@
       "startingWeapons": [
         "khukuri"
       ],
-      "bonus": "Startet mit verstecktem Rings of Calamity; +50 erscheinende Gegner; Showstopper bei kritischer Gesundheit.",
+      "bonus": {
+        "de": "Startet mit verstecktem Rings of Calamity; +50 erscheinende Gegner; Showstopper bei kritischer Gesundheit.",
+        "en": "Starts with a hidden Rings of Calamity. Increases enemy spawn quantity by 50. Triggers Showstopper at critical health."
+      },
       "secret": false,
       "emoji": "🗡️",
       "image": "https://vampire.survivors.wiki/images/Select-Macha_Alter_Ego.png",
       "verified": true,
-      "note": "Versteckte Waffe: Rings of Calamity."
+      "note": {
+        "de": "Versteckte Waffe: Rings of Calamity.",
+        "en": "Hidden weapon: Rings of Calamity."
+      }
     },
     {
       "id": "lita-caryx",
@@ -132,7 +178,10 @@
       "startingWeapons": [
         "glaive"
       ],
-      "bonus": "Beherrscht von Anfang an die Technik „Heaven's Thunder“; Showstopper bei kritischer Gesundheit.",
+      "bonus": {
+        "de": "Beherrscht von Anfang an die Technik „Heaven's Thunder“; Showstopper bei kritischer Gesundheit.",
+        "en": "Innately knows the \"Heaven's Thunder\" tech. Triggers Showstopper at critical health."
+      },
       "secret": false,
       "emoji": "⚡",
       "image": "https://vampire.survivors.wiki/images/Select-Lita_Caryx.png",
@@ -148,7 +197,10 @@
         "eagle-gun",
         "punch"
       ],
-      "bonus": "Erhält für jede neu geglimmerte Technik 1 Wiederbelebung und 5 % Wachstum; Showstopper bei kritischer Gesundheit.",
+      "bonus": {
+        "de": "Erhält für jede neu geglimmerte Technik 1 Wiederbelebung und 5 % Wachstum; Showstopper bei kritischer Gesundheit.",
+        "en": "Gains 1 Revival and 5% Growth every time they glimmer a new tech. Triggers Showstopper at critical health."
+      },
       "secret": false,
       "emoji": "🎎",
       "image": "https://vampire.survivors.wiki/images/Select-Kugutsu.png",
@@ -161,7 +213,10 @@
       "startingWeapons": [
         "intuition"
       ],
-      "bonus": "Zeigt sein Können mit Techniken; erhält alle 20 Level mehr Projektile (max. +4).",
+      "bonus": {
+        "de": "Zeigt sein Können mit Techniken; erhält alle 20 Level mehr Projektile (max. +4).",
+        "en": "Mr.S will showcase his skills with techs. Gets more projectiles every 20 levels (max +4)."
+      },
       "secret": false,
       "emoji": "🎩",
       "image": "https://vampire.survivors.wiki/images/Select-Mr._S.png",
@@ -172,7 +227,10 @@
       "name": "Lolo, Hiss, Meow, and Purr",
       "source": "emerald-diorama",
       "startingWeapons": [],
-      "bonus": "Showstopper bei kritischer Gesundheit; erhält bei jedem Showstopper einen Begleiter.",
+      "bonus": {
+        "de": "Showstopper bei kritischer Gesundheit; erhält bei jedem Showstopper einen Begleiter.",
+        "en": "Triggers Showstopper at critical health. Gain a follower whenever Showstopper is triggered."
+      },
       "secret": true,
       "emoji": "🐈",
       "image": "https://vampire.survivors.wiki/images/Select-Lolo%2C_Hiss%2C_Meow%2C_and_Purr.png",
@@ -183,7 +241,10 @@
       "name": "Kina",
       "source": "emerald-diorama",
       "startingWeapons": [],
-      "bonus": "Beherrscht von Anfang an „Swallow Slice“ und „Airwave“; erhält Regeneration bei jedem Showstopper durch kritische Gesundheit.",
+      "bonus": {
+        "de": "Beherrscht von Anfang an „Swallow Slice“ und „Airwave“; erhält Regeneration bei jedem Showstopper durch kritische Gesundheit.",
+        "en": "Innately knows the \"Swallow Slice\" and \"Airwave\" techs.; Gains bonus Recovery whenever Showstopper is triggered at critical health."
+      },
       "secret": true,
       "emoji": "🌸",
       "image": "https://vampire.survivors.wiki/images/Select-Kina.png",
@@ -194,7 +255,10 @@
       "name": "Imakoo",
       "source": "emerald-diorama",
       "startingWeapons": [],
-      "bonus": "Beherrscht von Anfang an „Hell's Fury“ und „Blood Rage“; erhält Macht bei jedem Showstopper durch kritische Gesundheit.",
+      "bonus": {
+        "de": "Beherrscht von Anfang an „Hell's Fury“ und „Blood Rage“; erhält Macht bei jedem Showstopper durch kritische Gesundheit.",
+        "en": "Innately knows the \"Hell's Fury\" and \"Blood Rage\" tech. Gains bonus Might whenever Showstopper is triggered at critical health."
+      },
       "secret": true,
       "emoji": "🎻",
       "image": "https://vampire.survivors.wiki/images/Select-Imakoo.png",
@@ -203,11 +267,15 @@
     {
       "id": "malevolent-door-spirit",
       "name": "Malevolent Door Spirit",
+      "nameDeHint": "Bösartiger Türgeist",
       "source": "emerald-diorama",
       "startingWeapons": [
         "blood-chalice"
       ],
-      "bonus": "Beherrscht von Anfang an die Technik „Vermillion Sands“.",
+      "bonus": {
+        "de": "Beherrscht von Anfang an die Technik „Vermillion Sands“.",
+        "en": "Innately knows the \"Vermillion Sands\" tech."
+      },
       "secret": true,
       "emoji": "🚪",
       "image": "https://vampire.survivors.wiki/images/Select-Malevolent_Door_Spirit.png",

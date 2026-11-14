@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { gameData } from '../data/index.ts'
-import type { GameData, PassiveItem, Weapon } from '../data/types.ts'
+import type { GameData, LocalizedText, PassiveItem, Weapon } from '../data/types.ts'
 import { createCatalog } from './catalog.ts'
 import { checkEvolution, evolutionsForOwnedWeapon } from './evolution.ts'
 import {
@@ -14,12 +14,14 @@ import {
 } from './run.ts'
 import { suggestNext } from './suggestions.ts'
 
+const lt = (text: string): LocalizedText => ({ de: text, en: text })
+
 const weapon = (id: string, maxLevel = 8, kind: Weapon['kind'] = 'base', source = 'base'): Weapon => ({
   id,
   name: id,
   source,
   kind,
-  description: '',
+  description: lt(''),
   maxLevel,
   verified: true,
 })
@@ -27,7 +29,7 @@ const passive = (id: string, maxLevel = 5, extra: Partial<PassiveItem> = {}): Pa
   id,
   name: id,
   source: 'base',
-  description: '',
+  description: lt(''),
   maxLevel,
   verified: true,
   ...extra,
@@ -35,12 +37,12 @@ const passive = (id: string, maxLevel = 5, extra: Partial<PassiveItem> = {}): Pa
 
 const fixture: GameData = {
   packs: [
-    { id: 'base', name: 'Basisspiel', kind: 'base', paid: false, verified: true },
-    { id: 'moon', name: 'Mond-DLC', kind: 'dlc', paid: true, verified: true },
+    { id: 'base', name: lt('Basisspiel'), kind: 'base', paid: false, verified: true },
+    { id: 'moon', name: lt('Mond-DLC'), kind: 'dlc', paid: true, verified: true },
   ],
   characters: [
-    { id: 'antonio', name: 'Antonio', source: 'base', startingWeapons: ['whip'], bonus: '', secret: false, verified: true },
-    { id: 'mortaccio', name: 'Mortaccio', source: 'base', startingWeapons: ['bone'], bonus: '', secret: false, verified: true },
+    { id: 'antonio', name: 'Antonio', source: 'base', startingWeapons: ['whip'], bonus: lt(''), secret: false, verified: true },
+    { id: 'mortaccio', name: 'Mortaccio', source: 'base', startingWeapons: ['bone'], bonus: lt(''), secret: false, verified: true },
   ],
   weapons: [
     weapon('whip'),
@@ -89,10 +91,10 @@ const fixture: GameData = {
     {
       character: 'antonio',
       source: 'base',
-      weapons: [{ id: 'axe', reason: 'Viel Schaden', priority: 2 }],
+      weapons: [{ id: 'axe', reason: lt('Viel Schaden'), priority: 2 }],
       passives: [
-        { id: 'spinach', reason: 'Mehr Macht', priority: 1 },
-        { id: 'hollow-heart', reason: 'Mehr Leben', priority: 1 },
+        { id: 'spinach', reason: lt('Mehr Macht'), priority: 1 },
+        { id: 'hollow-heart', reason: lt('Mehr Leben'), priority: 1 },
       ],
     },
   ],
@@ -240,8 +242,8 @@ describe('Vorschläge', () => {
   it('nennt fehlende Entwicklungs-Partner vor den Empfehlungen', () => {
     const { suggestions } = suggestNext(run({ character: 'antonio', weapons: [{ id: 'whip' }] }), baseOnly)
     expect(suggestions[0]).toMatchObject({ type: 'passive', id: 'hollow-heart', source: 'evolution' })
-    expect(suggestions[0]!.reasons).toContain('Fehlt für bloody-tear')
-    expect(suggestions[0]!.reasons).toContain('Mehr Leben')
+    expect(suggestions[0]!.reasons).toContainEqual({ type: 'missingFor', result: 'bloody-tear' })
+    expect(suggestions[0]!.reasons).toContainEqual({ type: 'recommended', text: lt('Mehr Leben') })
     expect(suggestions.map((s) => s.id)).toEqual(['hollow-heart', 'spinach', 'axe'])
   })
 
@@ -252,13 +254,13 @@ describe('Vorschläge', () => {
 
   it('nennt den Union-Partner', () => {
     const { suggestions } = suggestNext(run({ weapons: [{ id: 'peachone' }] }), baseOnly)
-    expect(suggestions[0]).toMatchObject({ type: 'weapon', id: 'ebony-wings', reasons: ['Union-Partner für vandalier'] })
+    expect(suggestions[0]).toMatchObject({ type: 'weapon', id: 'ebony-wings', reasons: [{ type: 'unionPartner', result: 'vandalier' }] })
   })
 
   it('warnt, wenn alle passiven Slots belegt sind und ein Partner fehlt', () => {
     const passives = ['spinach', 'armor', 'wings', 'clover', 'crown', 'bracer'].map((id) => ({ id }))
     const result = suggestNext(run({ weapons: [{ id: 'whip' }], passives }), baseOnly)
-    expect(result.warnings).toEqual(['bloody-tear: hollow-heart fehlt, aber alle passiven Slots sind belegt.'])
+    expect(result.warnings).toEqual([{ type: 'passiveSlotsFull', passive: 'hollow-heart', results: ['bloody-tear'] }])
     expect(result.suggestions.filter((s) => s.type === 'passive')).toEqual([])
   })
 
@@ -266,8 +268,8 @@ describe('Vorschläge', () => {
     const passives = ['spinach', 'armor', 'wings', 'clover', 'crown'].map((id) => ({ id }))
     const result = suggestNext(run({ weapons: [{ id: 'whip' }, { id: 'clock-lancet' }], passives }), baseOnly)
     expect(result.warnings).toHaveLength(1)
-    expect(result.warnings[0]).toContain('fehlen 3 passive Gegenstände')
-    expect(result.hints).toHaveLength(2)
+    expect(result.warnings[0]).toEqual({ type: 'notEnoughPassiveSlots', needed: ['hollow-heart', 'silver-ring', 'gold-ring'], free: 1 })
+    expect(result.hints).toEqual([{ type: 'stageOnly', passive: 'silver-ring' }, { type: 'stageOnly', passive: 'gold-ring' }])
   })
 
   it('schlägt keine Waffe vor, die im Lauf schon entwickelt wurde', () => {

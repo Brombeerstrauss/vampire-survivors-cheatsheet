@@ -1,3 +1,5 @@
+import { useI18n } from './i18n/index.ts'
+import type { Strings } from './i18n/strings.ts'
 import { evolutionsForOwnedWeapon } from './logic/evolution.ts'
 import { AppStateProvider } from './state/AppState.tsx'
 import { useAppState } from './state/context.ts'
@@ -15,16 +17,21 @@ export default function App() {
   )
 }
 
-const NAV: { view: Route['view']; label: string; icon: string; route: Route }[] = [
-  { view: 'characters', label: 'Charaktere', icon: '🧛', route: { view: 'characters' } },
-  { view: 'run', label: 'Lauf', icon: '⚔️', route: { view: 'run' } },
-  { view: 'library', label: 'Waffen', icon: '📜', route: { view: 'library', tab: 'weapons' } },
-  { view: 'settings', label: 'Einstellungen', icon: '⚙️', route: { view: 'settings' } },
+type NavLabel = 'navCharacters' | 'navRun' | 'navLibrary' | 'navSettings'
+
+const NAV: { view: Route['view']; label: NavLabel; icon: string; route: Route }[] = [
+  { view: 'characters', label: 'navCharacters', icon: '🧛', route: { view: 'characters' } },
+  { view: 'run', label: 'navRun', icon: '⚔️', route: { view: 'run' } },
+  { view: 'library', label: 'navLibrary', icon: '📜', route: { view: 'library', tab: 'weapons' } },
+  { view: 'settings', label: 'navSettings', icon: '⚙️', route: { view: 'settings' } },
 ]
+
+const navLabel = (t: Strings, label: NavLabel) => t[label]
 
 function Shell() {
   const route = useRoute()
   const { run, catalog, notice, dismissNotice } = useAppState()
+  const { t } = useI18n()
   const ready = run.weapons.reduce(
     (sum, w) => sum + evolutionsForOwnedWeapon(w.id, run, catalog).filter((c) => c.ready).length,
     0,
@@ -48,7 +55,7 @@ function Shell() {
             <span className="sm:hidden">VS Cheatsheet</span>
             <span className="hidden sm:inline">Vampire Survivors Cheatsheet</span>
           </a>
-          <nav className="ml-auto hidden gap-1 md:flex" aria-label="Hauptnavigation">
+          <nav className="ml-auto hidden gap-1 md:flex" aria-label={t.mainNavigation}>
             {NAV.map((item) => (
               <NavLink key={item.view} item={item} active={route.view === item.view} badge={item.view === 'run' ? ready : 0} />
             ))}
@@ -86,10 +93,10 @@ function Shell() {
                   dismissNotice()
                 }}
               >
-                Rückgängig
+                {t.undo}
               </button>
             )}
-            <button type="button" aria-label="Meldung schließen" className="min-h-10 px-2 text-white/50" onClick={dismissNotice}>
+            <button type="button" aria-label={t.dismissNotice} className="min-h-10 px-2 text-white/50" onClick={dismissNotice}>
               ✕
             </button>
           </div>
@@ -99,7 +106,7 @@ function Shell() {
       <nav
         className="fixed inset-x-0 bottom-0 z-30 border-t border-white/8 bg-night-900/95 backdrop-blur md:hidden"
         style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
-        aria-label="Hauptnavigation"
+        aria-label={t.mainNavigation}
       >
         <div className="grid grid-cols-4">
           {NAV.map((item) => {
@@ -116,7 +123,7 @@ function Shell() {
                 <span className={`text-xl ${active ? '' : 'opacity-70 grayscale'}`} aria-hidden="true">
                   {item.icon}
                 </span>
-                {item.view === 'settings' ? 'Mehr' : item.label}
+                {item.view === 'settings' ? t.navMore : navLabel(t, item.label)}
                 {item.view === 'run' && ready > 0 && <ReadyBadge count={ready} />}
               </a>
             )
@@ -128,10 +135,11 @@ function Shell() {
 }
 
 function ReadyBadge({ count }: { count: number }) {
+  const { t } = useI18n()
   return (
     <span
       className="absolute top-1.5 left-1/2 ml-2 min-w-5 rounded-full bg-emerald-500 px-1.5 text-center text-[11px] leading-5 font-bold text-night-950"
-      aria-label={`${count} Entwicklung bereit`}
+      aria-label={t.readyBadge(count)}
     >
       {count}
     </span>
@@ -139,6 +147,7 @@ function ReadyBadge({ count }: { count: number }) {
 }
 
 function NavLink({ item, active, badge }: { item: (typeof NAV)[number]; active: boolean; badge: number }) {
+  const { t } = useI18n()
   return (
     <a
       href={routeHref(item.route)}
@@ -148,7 +157,7 @@ function NavLink({ item, active, badge }: { item: (typeof NAV)[number]; active: 
       }`}
     >
       <span aria-hidden="true">{item.icon}</span>
-      {item.label}
+      {navLabel(t, item.label)}
       {badge > 0 && (
         <span className="rounded-full bg-emerald-500 px-1.5 text-[11px] leading-5 font-bold text-night-950">{badge}</span>
       )}

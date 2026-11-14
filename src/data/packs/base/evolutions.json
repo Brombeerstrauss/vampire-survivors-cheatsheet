@@ -312,7 +312,10 @@
       ],
       "passives": [],
       "conditions": [
-        "Kein Gegenstand nötig, nur Bracelet auf Maximalstufe."
+        {
+          "de": "Kein Gegenstand nötig, nur Bracelet auf Maximalstufe.",
+          "en": "No item needed, only Bracelet at max level."
+        }
       ],
       "verified": true
     },
@@ -328,7 +331,10 @@
       ],
       "passives": [],
       "conditions": [
-        "Kein Gegenstand nötig, nur Bi-Bracelet auf Maximalstufe."
+        {
+          "de": "Kein Gegenstand nötig, nur Bi-Bracelet auf Maximalstufe.",
+          "en": "No item needed, only Bi-Bracelet at max level."
+        }
       ],
       "verified": true
     },
@@ -434,10 +440,16 @@
       ],
       "passives": [],
       "conditions": [
-        "Penshin Fatcha mindestens sechsmal weiterentwickeln (jede Entwicklung wählt eine Thunfisch-Form)."
+        {
+          "de": "Penshin Fatcha mindestens sechsmal weiterentwickeln (jede Entwicklung wählt eine Thunfisch-Form).",
+          "en": "Evolve Penshin Fatcha at least six times (each evolution picks a tuna form)."
+        }
       ],
       "verified": true,
-      "note": "Vereinfacht: Penshin Fatcha entwickelt sich ohne Gegenstand in eine der Thunfisch-Formen; ab der sechsten Entwicklung kann Miracle of Multiplication erscheinen. Bei Para Kooleo kann sich die Startwaffe nicht entwickeln."
+      "note": {
+        "de": "Vereinfacht: Penshin Fatcha entwickelt sich ohne Gegenstand in eine der Thunfisch-Formen; ab der sechsten Entwicklung kann Miracle of Multiplication erscheinen. Bei Para Kooleo kann sich die Startwaffe nicht entwickeln.",
+        "en": "Simplified: Penshin Fatcha evolves into one of the tuna forms without an item; from the sixth evolution on, Miracle of Multiplication can appear. Para Kooleo's starting weapon cannot evolve."
+      }
     },
     {
       "id": "seraphic-cry",
@@ -542,7 +554,10 @@
       ],
       "passives": [],
       "conditions": [
-        "Kein Gegenstand nötig."
+        {
+          "de": "Kein Gegenstand nötig.",
+          "en": "No item needed."
+        }
       ],
       "verified": true
     },
@@ -581,7 +596,10 @@
       ],
       "passives": [],
       "conditions": [
-        "Kein Gegenstand nötig; Bloody Tear ist selbst eine Entwicklung von Whip."
+        {
+          "de": "Kein Gegenstand nötig; Blutige Träne ist selbst eine Entwicklung von Peitsche.",
+          "en": "No item needed; Bloody Tear is itself an evolution of Whip."
+        }
       ],
       "verified": true
     },
@@ -615,9 +633,18 @@
       ],
       "passives": [],
       "conditions": [
-        "Alle Waffen und passiven Gegenstände auf Maximalstufe.",
-        "Candybox im Lauf erhalten (sie bleibt dabei erhalten).",
-        "Erscheint dann mit kleiner, glücksabhängiger Chance in einer Truhe."
+        {
+          "de": "Alle Waffen und passiven Gegenstände auf Maximalstufe.",
+          "en": "All weapons and passive items at max level."
+        },
+        {
+          "de": "Candybox im Lauf erhalten (sie bleibt dabei erhalten).",
+          "en": "Obtain Candybox during the run (you keep it)."
+        },
+        {
+          "de": "Erscheint dann mit kleiner, glücksabhängiger Chance in einer Truhe.",
+          "en": "Then appears in a chest with a small, luck-based chance."
+        }
       ],
       "verified": true
     },
@@ -637,8 +664,14 @@
         "mortaccio"
       ],
       "conditions": [
-        "Relikt Chaos Malachite besitzen.",
-        "Charakter erreicht Level 80."
+        {
+          "de": "Relikt Chaos Malachite besitzen.",
+          "en": "Have the relic Chaos Malachite."
+        },
+        {
+          "de": "Charakter erreicht Level 80.",
+          "en": "Character reaches level 80."
+        }
       ],
       "verified": true
     },
@@ -658,8 +691,14 @@
         "yatta-cavallo"
       ],
       "conditions": [
-        "Relikt Chaos Rosalia besitzen.",
-        "Charakter erreicht Level 80."
+        {
+          "de": "Relikt Chaos Rosalia besitzen.",
+          "en": "Have the relic Chaos Rosalia."
+        },
+        {
+          "de": "Charakter erreicht Level 80.",
+          "en": "Character reaches level 80."
+        }
       ],
       "verified": true
     },
@@ -679,8 +718,14 @@
         "bianca-ramba"
       ],
       "conditions": [
-        "Relikt Chaos Lazulia besitzen.",
-        "Charakter erreicht Level 80."
+        {
+          "de": "Relikt Chaos Lazulia besitzen.",
+          "en": "Have the relic Chaos Lazulia."
+        },
+        {
+          "de": "Charakter erreicht Level 80.",
+          "en": "Character reaches level 80."
+        }
       ],
       "verified": true
     },
@@ -700,8 +745,14 @@
         "o-sole-meeo"
       ],
       "conditions": [
-        "Relikt Chaos Altemanna besitzen.",
-        "Charakter erreicht Level 80."
+        {
+          "de": "Relikt Chaos Altemanna besitzen.",
+          "en": "Have the relic Chaos Altemanna."
+        },
+        {
+          "de": "Charakter erreicht Level 80.",
+          "en": "Character reaches level 80."
+        }
       ],
       "verified": true
     }

@@ -8,7 +8,10 @@
       "startingWeapons": [
         "long-gun"
       ],
-      "bonus": "Erhält bei vielen besiegten Gegnern mehr Projektilgeschwindigkeit (max. 50 %) und Macht; findet spezielle Pickups.",
+      "bonus": {
+        "de": "Erhält bei vielen besiegten Gegnern mehr Projektilgeschwindigkeit (max. 50 %) und Macht; findet spezielle Pickups.",
+        "en": "Receives a bonus to Projectile Speed (max 50%) and to Might when defeating many enemies. Can find special pickups."
+      },
       "secret": false,
       "emoji": "🎖️",
       "image": "https://vampire.survivors.wiki/images/Select-Bill_Rizer.png",
@@ -21,7 +24,10 @@
       "startingWeapons": [
         "short-gun"
       ],
-      "bonus": "Erhält bei vielen besiegten Gegnern mehr Geschwindigkeit (max. 50 %) und kürzere Abklingzeit (max. −25 %); findet spezielle Pickups.",
+      "bonus": {
+        "de": "Erhält bei vielen besiegten Gegnern mehr Geschwindigkeit (max. 50 %) und kürzere Abklingzeit (max. −25 %); findet spezielle Pickups.",
+        "en": "Receive a bonus to Speed (max 50%) and to Cooldown (max -25%) when defeating many enemies. Can find special pickups."
+      },
       "secret": false,
       "emoji": "🪖",
       "image": "https://vampire.survivors.wiki/images/Select-Lance_Bean.png",
@@ -34,7 +40,10 @@
       "startingWeapons": [
         "spread-shot"
       ],
-      "bonus": "Laufgeschwindigkeit erhöht die Rüstung; findet spezielle Pickups.",
+      "bonus": {
+        "de": "Laufgeschwindigkeit erhöht die Rüstung; findet spezielle Pickups.",
+        "en": "Move Speed increases Armour. Can find special pickups."
+      },
       "secret": false,
       "emoji": "🏃‍♀️",
       "image": "https://vampire.survivors.wiki/images/Select-Ariana.png",
@@ -47,7 +56,10 @@
       "startingWeapons": [
         "c-u-laser"
       ],
-      "bonus": "Erhält nach einer Wiederbelebung einen Bonus auf alle Werte; findet spezielle Pickups.",
+      "bonus": {
+        "de": "Erhält nach einer Wiederbelebung einen Bonus auf alle Werte; findet spezielle Pickups.",
+        "en": "Gain a bonus to all stats after Reviving. Can find special pickups."
+      },
       "secret": false,
       "emoji": "🔴",
       "image": "https://vampire.survivors.wiki/images/Select-Lucia_Zero.png",
@@ -60,7 +72,10 @@
       "startingWeapons": [
         "firearm"
       ],
-      "bonus": "Bei wenig Gesundheit kürzere Abklingzeit sowie mehr Lauf- und Projektilgeschwindigkeit; findet spezielle Pickups.",
+      "bonus": {
+        "de": "Bei wenig Gesundheit kürzere Abklingzeit sowie mehr Lauf- und Projektilgeschwindigkeit; findet spezielle Pickups.",
+        "en": "When Health is low, Cooldown is decreased and Move Speed and Speed increase. Can find special Pickups."
+      },
       "secret": false,
       "emoji": "🐺",
       "image": "https://vampire.survivors.wiki/images/Select-Brad_Fang.png",
@@ -73,7 +88,10 @@
       "startingWeapons": [
         "sonic-bloom"
       ],
-      "bonus": "Kürzere Abklingzeit vergrößert die Fläche; findet spezielle Pickups.",
+      "bonus": {
+        "de": "Kürzere Abklingzeit vergrößert die Fläche; findet spezielle Pickups.",
+        "en": "Decreasing Cooldown increases Area. Can find special pickups."
+      },
       "secret": false,
       "emoji": "🤖",
       "image": "https://vampire.survivors.wiki/images/Select-Browny.png",
@@ -86,7 +104,10 @@
       "startingWeapons": [
         "blade-crossbow"
       ],
-      "bonus": "Laufgeschwindigkeit senkt die Abklingzeit; findet spezielle Pickups.",
+      "bonus": {
+        "de": "Laufgeschwindigkeit senkt die Abklingzeit; findet spezielle Pickups.",
+        "en": "Move Speed decreases Cooldown. Can find special pickups."
+      },
       "secret": false,
       "emoji": "🎯",
       "image": "https://vampire.survivors.wiki/images/Select-Sheena_Etranzi.png",
@@ -99,7 +120,10 @@
       "startingWeapons": [
         "prism-lass"
       ],
-      "bonus": "Rüstung erhöht die Macht; findet spezielle Pickups.",
+      "bonus": {
+        "de": "Rüstung erhöht die Macht; findet spezielle Pickups.",
+        "en": "Armour increases Might. Can find special pickups."
+      },
       "secret": false,
       "emoji": "🦾",
       "image": "https://vampire.survivors.wiki/images/Select-Probotector.png",
@@ -112,7 +136,10 @@
       "startingWeapons": [
         "homing-miss"
       ],
-      "bonus": "Macht erhöht die Rüstung; findet spezielle Pickups.",
+      "bonus": {
+        "de": "Macht erhöht die Rüstung; findet spezielle Pickups.",
+        "en": "Might increases Armour. Can find special pickups."
+      },
       "secret": false,
       "emoji": "🧔",
       "image": "https://vampire.survivors.wiki/images/Select-Stanley.png",
@@ -125,7 +152,10 @@
       "startingWeapons": [
         "diver-mines"
       ],
-      "bonus": "Projektilgeschwindigkeit erhöht die Macht; findet zusätzliche explosive Objekte und spezielle Pickups.",
+      "bonus": {
+        "de": "Projektilgeschwindigkeit erhöht die Macht; findet zusätzliche explosive Objekte und spezielle Pickups.",
+        "en": "Projectile Speed increases Might. Can find extra explosive props and special pickups."
+      },
       "secret": false,
       "emoji": "💣",
       "image": "https://vampire.survivors.wiki/images/Select-Newt_Plissken.png",
@@ -134,11 +164,15 @@
     {
       "id": "colonel-bahamut",
       "name": "Colonel Bahamut",
+      "nameDeHint": "Oberst Bahamut",
       "source": "operation-guns",
       "startingWeapons": [
         "metal-claw"
       ],
-      "bonus": "Gier und Fluch erhöhen die Macht; findet spezielle Pickups.",
+      "bonus": {
+        "de": "Gier und Fluch erhöhen die Macht; findet spezielle Pickups.",
+        "en": "Greed and Curse increase Might. Can find special pickups."
+      },
       "secret": false,
       "emoji": "👾",
       "image": "https://vampire.survivors.wiki/images/Select-Colonel_Bahamut.png",
@@ -149,7 +183,10 @@
       "name": "Simondo Belmont",
       "source": "operation-guns",
       "startingWeapons": [],
-      "bonus": "Braucht angeblich gar keine Waffen; erhält alle 20 Level mehr Projektile (max. +4).",
+      "bonus": {
+        "de": "Braucht angeblich gar keine Waffen; erhält alle 20 Level mehr Projektile (max. +4).",
+        "en": "Simondo says he doesn't even need guns. Gets more projectiles every 20 levels (max +4)."
+      },
       "secret": false,
       "emoji": "🧑‍🦲",
       "image": "https://vampire.survivors.wiki/images/Select-Simondo_Belmont.png",

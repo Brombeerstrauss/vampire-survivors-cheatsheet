@@ -145,7 +145,10 @@
       ],
       "passives": [],
       "conditions": [
-        "Kein Gegenstand nötig; alle drei Mondwaffen auf Maximalstufe."
+        {
+          "de": "Kein Gegenstand nötig; alle drei Mondwaffen auf Maximalstufe.",
+          "en": "No item needed; all three lunar weapons at max level."
+        }
       ],
       "verified": true
     }

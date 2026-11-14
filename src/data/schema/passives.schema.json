@@ -15,8 +15,10 @@
         "properties": {
           "id": { "$ref": "common.schema.json#/definitions/id" },
           "name": { "$ref": "common.schema.json#/definitions/name" },
+          "nameDe": { "$ref": "common.schema.json#/definitions/nameDe" },
+          "nameDeHint": { "$ref": "common.schema.json#/definitions/nameDeHint" },
           "source": { "$ref": "common.schema.json#/definitions/source" },
-          "description": { "type": "string", "description": "Wirkung des Gegenstands (deutsch)." },
+          "description": { "$ref": "common.schema.json#/definitions/localizedText", "description": "Wirkung des Gegenstands." },
           "maxLevel": { "$ref": "common.schema.json#/definitions/maxLevel" },
           "stageOnly": {
             "type": "boolean",
@@ -35,7 +37,7 @@
           "icon": { "$ref": "common.schema.json#/definitions/icon" },
           "image": { "$ref": "common.schema.json#/definitions/image" },
           "verified": { "$ref": "common.schema.json#/definitions/verified" },
-          "note": { "type": "string" }
+          "note": { "$ref": "common.schema.json#/definitions/localizedText" }
         }
       }
     }

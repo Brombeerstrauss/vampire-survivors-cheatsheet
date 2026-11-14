@@ -7,7 +7,10 @@
       "weapons": [
         {
           "id": "long-gun",
-          "reason": "Startwaffe; mit Weapon Power-Up wird sie zu Prototype A.",
+          "reason": {
+            "de": "Startwaffe; mit Weapon Power-Up wird sie zu Prototype A.",
+            "en": "Starting weapon; with Weapon Power-Up it becomes Prototype A."
+          },
           "priority": 1
         }
       ],
@@ -19,14 +22,20 @@
       "weapons": [
         {
           "id": "short-gun",
-          "reason": "Startwaffe; mit Weapon Power-Up und Bracer wird sie zu Prototype B.",
+          "reason": {
+            "de": "Startwaffe; mit Weapon Power-Up und Armschiene wird sie zu Prototype B.",
+            "en": "Starting weapon; with Weapon Power-Up and Bracer it becomes Prototype B."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "bracer",
-          "reason": "Nötig für Prototype B.",
+          "reason": {
+            "de": "Nötig für Prototype B.",
+            "en": "Needed for Prototype B."
+          },
           "priority": 1
         }
       ]
@@ -37,14 +46,20 @@
       "weapons": [
         {
           "id": "spread-shot",
-          "reason": "Startwaffe; mit Weapon Power-Up und Empty Tome wird sie zu Prototype C.",
+          "reason": {
+            "de": "Startwaffe; mit Weapon Power-Up und Leerer Foliant wird sie zu Prototype C.",
+            "en": "Starting weapon; with Weapon Power-Up and Empty Tome it becomes Prototype C."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "empty-tome",
-          "reason": "Nötig für Prototype C.",
+          "reason": {
+            "de": "Nötig für Prototype C.",
+            "en": "Needed for Prototype C."
+          },
           "priority": 1
         }
       ]
@@ -55,14 +70,20 @@
       "weapons": [
         {
           "id": "c-u-laser",
-          "reason": "Startwaffe; mit Weapon Power-Up und Tirajisú wird sie zu Pronto Beam.",
+          "reason": {
+            "de": "Startwaffe; mit Weapon Power-Up und Tirajisú wird sie zu Pronto Beam.",
+            "en": "Starting weapon; with Weapon Power-Up and Tirajisú it becomes Pronto Beam."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "tirajisu",
-          "reason": "Nötig für Pronto Beam.",
+          "reason": {
+            "de": "Nötig für Pronto Beam.",
+            "en": "Needed for Pronto Beam."
+          },
           "priority": 1
         }
       ]
@@ -73,14 +94,20 @@
       "weapons": [
         {
           "id": "firearm",
-          "reason": "Startwaffe; mit Weapon Power-Up und Candelabrador wird sie zu Fire-L3GS.",
+          "reason": {
+            "de": "Startwaffe; mit Weapon Power-Up und Kandelabrador wird sie zu Fire-L3GS.",
+            "en": "Starting weapon; with Weapon Power-Up and Candelabrador it becomes Fire-L3GS."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "candelabrador",
-          "reason": "Nötig für Fire-L3GS.",
+          "reason": {
+            "de": "Nötig für Fire-L3GS.",
+            "en": "Needed for Fire-L3GS."
+          },
           "priority": 1
         }
       ]
@@ -91,14 +118,20 @@
       "weapons": [
         {
           "id": "sonic-bloom",
-          "reason": "Startwaffe; mit Weapon Power-Up und Armor wird sie zu Wave Beam.",
+          "reason": {
+            "de": "Startwaffe; mit Weapon Power-Up und Rüstung wird sie zu Wave Beam.",
+            "en": "Starting weapon; with Weapon Power-Up and Armor it becomes Wave Beam."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "armor",
-          "reason": "Nötig für Wave Beam.",
+          "reason": {
+            "de": "Nötig für Wave Beam.",
+            "en": "Needed for Wave Beam."
+          },
           "priority": 1
         }
       ]
@@ -109,14 +142,20 @@
       "weapons": [
         {
           "id": "blade-crossbow",
-          "reason": "Startwaffe; mit Weapon Power-Up und Clover wird sie zu BFC2000-AD.",
+          "reason": {
+            "de": "Startwaffe; mit Weapon Power-Up und Kleeblatt wird sie zu BFC2000-AD.",
+            "en": "Starting weapon; with Weapon Power-Up and Clover it becomes BFC2000-AD."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "clover",
-          "reason": "Nötig für BFC2000-AD.",
+          "reason": {
+            "de": "Nötig für BFC2000-AD.",
+            "en": "Needed for BFC2000-AD."
+          },
           "priority": 1
         }
       ]
@@ -127,14 +166,20 @@
       "weapons": [
         {
           "id": "prism-lass",
-          "reason": "Startwaffe; mit Weapon Power-Up und Wings wird sie zu Time Warp.",
+          "reason": {
+            "de": "Startwaffe; mit Weapon Power-Up und Flügel wird sie zu Time Warp.",
+            "en": "Starting weapon; with Weapon Power-Up and Wings it becomes Time Warp."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "wings",
-          "reason": "Nötig für Time Warp.",
+          "reason": {
+            "de": "Nötig für Time Warp.",
+            "en": "Needed for Time Warp."
+          },
           "priority": 1
         }
       ]
@@ -145,14 +190,20 @@
       "weapons": [
         {
           "id": "homing-miss",
-          "reason": "Startwaffe; mit Weapon Power-Up und Duplicator wird sie zu Multistage Missiles.",
+          "reason": {
+            "de": "Startwaffe; mit Weapon Power-Up und Verdoppler wird sie zu Multistage Missiles.",
+            "en": "Starting weapon; with Weapon Power-Up and Duplicator it becomes Multistage Missiles."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "duplicator",
-          "reason": "Nötig für Multistage Missiles.",
+          "reason": {
+            "de": "Nötig für Multistage Missiles.",
+            "en": "Needed for Multistage Missiles."
+          },
           "priority": 1
         }
       ]
@@ -163,14 +214,20 @@
       "weapons": [
         {
           "id": "diver-mines",
-          "reason": "Startwaffe; mit Weapon Power-Up und Attractorb wird sie zu Atmo-Torpedo.",
+          "reason": {
+            "de": "Startwaffe; mit Weapon Power-Up und Anziehungskugel wird sie zu Atmo-Torpedo.",
+            "en": "Starting weapon; with Weapon Power-Up and Attractorb it becomes Atmo-Torpedo."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "attractorb",
-          "reason": "Nötig für Atmo-Torpedo.",
+          "reason": {
+            "de": "Nötig für Atmo-Torpedo.",
+            "en": "Needed for Atmo-Torpedo."
+          },
           "priority": 1
         }
       ]
@@ -181,14 +238,20 @@
       "weapons": [
         {
           "id": "metal-claw",
-          "reason": "Startwaffe; mit Weapon Power-Up und Hollow Heart wird sie zu Big Fuzzy Fist.",
+          "reason": {
+            "de": "Startwaffe; mit Weapon Power-Up und Hohlherz wird sie zu Big Fuzzy Fist.",
+            "en": "Starting weapon; with Weapon Power-Up and Hollow Heart it becomes Big Fuzzy Fist."
+          },
           "priority": 1
         }
       ],
       "passives": [
         {
           "id": "hollow-heart",
-          "reason": "Nötig für Big Fuzzy Fist.",
+          "reason": {
+            "de": "Nötig für Big Fuzzy Fist.",
+            "en": "Needed for Big Fuzzy Fist."
+          },
           "priority": 1
         }
       ]

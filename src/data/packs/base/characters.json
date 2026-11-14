@@ -8,7 +8,10 @@
       "startingWeapons": [
         "whip"
       ],
-      "bonus": "Erhält alle 10 Level +10 % Macht (max. +50 %).",
+      "bonus": {
+        "de": "Erhält alle 10 Levels 10% mehr Schaden (max. +50%).",
+        "en": "Gains 10% more Damage every 10 levels (max +50%)."
+      },
       "secret": false,
       "emoji": "🧔",
       "image": "https://vampire.survivors.wiki/images/Select-Antonio_Belpaese.png",
@@ -21,7 +24,10 @@
       "startingWeapons": [
         "magic-wand"
       ],
-      "bonus": "Erhält alle 5 Level +10 % Erfahrung (max. +30 %).",
+      "bonus": {
+        "de": "Erhält alle 5 Levels 10% mehr Erfahrung (max. +30%).",
+        "en": "Gains 10% more Experience every 5 levels (max +30%)."
+      },
       "secret": false,
       "emoji": "👩‍🦰",
       "image": "https://vampire.survivors.wiki/images/Select-Imelda_Belpaese.png",
@@ -34,7 +40,10 @@
       "startingWeapons": [
         "runetracer"
       ],
-      "bonus": "Projektile werden alle 5 Level 10 % schneller (max. +30 %).",
+      "bonus": {
+        "de": "Geschosse werden alle 5 Levels um 10% schneller (max. +30%).",
+        "en": "Projectiles get 10% faster every 5 levels (max +30%)."
+      },
       "secret": false,
       "emoji": "👩",
       "image": "https://vampire.survivors.wiki/images/Select-Pasqualina_Belpaese.png",
@@ -47,7 +56,10 @@
       "startingWeapons": [
         "knife"
       ],
-      "bonus": "Dauerhaft +1 Projektil für alle Waffen.",
+      "bonus": {
+        "de": "Permanent +1 Geschoss (alle Waffen).",
+        "en": "Permanent +1 projectile (all weapons)."
+      },
       "secret": false,
       "emoji": "🧑",
       "image": "https://vampire.survivors.wiki/images/Select-Gennaro_Belpaese.png",
@@ -60,7 +72,10 @@
       "startingWeapons": [
         "fire-wand"
       ],
-      "bonus": "Die Abklingzeit der Waffen sinkt alle 10 Level um 5 % (max. −15 %).",
+      "bonus": {
+        "de": "Die Abklingzeit der Waffe wird alle 10 Levels um 5% verringert (max. -15%).",
+        "en": "Weapon cooldown is reduced by 5% every 10 levels (max -15%)."
+      },
       "secret": false,
       "emoji": "🧙",
       "image": "https://vampire.survivors.wiki/images/Select-Arca_Ladonna.png",
@@ -73,7 +88,10 @@
       "startingWeapons": [
         "lightning-ring"
       ],
-      "bonus": "Dauerhaft +30 % Fläche; startet mit einem zeitweisen Abklingzeit-Bonus.",
+      "bonus": {
+        "de": "Permanente +30% Bereich. Beginnt mit temporärem Abklingzeitbonus.",
+        "en": "Permanent +30% Area. Starts with temporary cooldown bonus."
+      },
       "secret": false,
       "emoji": "🧙‍♂️",
       "image": "https://vampire.survivors.wiki/images/Select-Porta_Ladonna.png",
@@ -86,7 +104,10 @@
       "startingWeapons": [
         "axe"
       ],
-      "bonus": "Erhält alle 10 Level +5 % Macht, Laufgeschwindigkeit und Fluch (max. +20 %).",
+      "bonus": {
+        "de": "Erhält +5% Macht, Eile und Fluch jede 10 Level (max +20%).",
+        "en": "Gains +5% Might, Move Speed, and Curse every 10 levels (max +20%)."
+      },
       "secret": false,
       "emoji": "🧝‍♀️",
       "image": "https://vampire.survivors.wiki/images/Select-Lama_Ladonna.png",
@@ -99,7 +120,10 @@
       "startingWeapons": [
         "garlic"
       ],
-      "bonus": "Dauerhaft +25 % Aufsammelradius und −30 max. Gesundheit.",
+      "bonus": {
+        "de": "Dauerhaft +25% Aufnahmeradius und -30 maximale Gesundheit.",
+        "en": "Permanent +25% Pickup range and -30 Max Health."
+      },
       "secret": false,
       "emoji": "👴",
       "image": "https://vampire.survivors.wiki/images/Select-Poe_Ratcho.png",
@@ -112,7 +136,10 @@
       "startingWeapons": [
         "santa-water"
       ],
-      "bonus": "Dauerhaft +0,5 Regeneration pro Sekunde und +50 max. Gesundheit; startet mit einem zeitweisen Flächen-Bonus.",
+      "bonus": {
+        "de": "Dauerhaft +0,5 Regeneration pro Sekunde und +50 max. Gesundheit; startet mit einem zeitweisen Flächen-Bonus.",
+        "en": "Permanent +0.5 HP/s and +50 Max Health. Starts with temporary Area bonus."
+      },
       "secret": false,
       "emoji": "🙏",
       "image": "https://vampire.survivors.wiki/images/Select-Suor_Clerici.png",
@@ -125,7 +152,10 @@
       "startingWeapons": [
         "king-bible"
       ],
-      "bonus": "Dauerhaft +40 % Dauer und Geschwindigkeit, aber −40 % Laufgeschwindigkeit.",
+      "bonus": {
+        "de": "Permanent +40% Dauer und Geschwindigkeit, -30% Bewegungsgeschwindigkeit.",
+        "en": "Permanent +40% Duration and Speed, -40% Move Speed."
+      },
       "secret": false,
       "emoji": "🧔‍♂️",
       "image": "https://vampire.survivors.wiki/images/Select-Dommario.png",
@@ -138,7 +168,10 @@
       "startingWeapons": [
         "cross"
       ],
-      "bonus": "Startet mit 1 Wiederbelebung und erhält auf Level 33 eine weitere.",
+      "bonus": {
+        "de": "Beginnt mit 1 Wiedergeburt. Erhält noch 1 Revival in Level 33.",
+        "en": "Starts with 1 Revival. Gains 1 more Revival at level 33."
+      },
       "secret": false,
       "emoji": "🧑‍🦱",
       "image": "https://vampire.survivors.wiki/images/Select-Krochi_Freetto.png",
@@ -151,7 +184,10 @@
       "startingWeapons": [
         "pentagram"
       ],
-      "bonus": "Startet mit einem zusätzlichen Level.",
+      "bonus": {
+        "de": "Beginnt mit 1 extra Level.",
+        "en": "Starts with 1 extra level."
+      },
       "secret": false,
       "emoji": "👱‍♀️",
       "image": "https://vampire.survivors.wiki/images/Select-Christine_Davain.png",
@@ -165,7 +201,10 @@
         "phiera-der-tuphello",
         "eight-the-sparrow"
       ],
-      "bonus": "Erhält pro Level +1 % Macht.",
+      "bonus": {
+        "de": "Erhält +1% Macht jedes Level.",
+        "en": "Gains +1% Might every level."
+      },
       "secret": false,
       "emoji": "🤠",
       "image": "https://vampire.survivors.wiki/images/Select-Pugnala_Provola.png",
@@ -178,7 +217,10 @@
       "startingWeapons": [
         "gatti-amari"
       ],
-      "bonus": "Erhält pro Level +1 % Projektilgeschwindigkeit.",
+      "bonus": {
+        "de": "Erhält pro Level +1 % Projektilgeschwindigkeit.",
+        "en": "Gains +1% Projectile Speed every level."
+      },
       "secret": false,
       "emoji": "👧",
       "image": "https://vampire.survivors.wiki/images/Select-Giovanna_Grana.png",
@@ -191,7 +233,10 @@
       "startingWeapons": [
         "song-of-mana"
       ],
-      "bonus": "Erhält pro Level +1 % Dauer.",
+      "bonus": {
+        "de": "Erhält +1% Dauer jedes Level.",
+        "en": "Gains +1% Duration every level."
+      },
       "secret": false,
       "emoji": "💃",
       "image": "https://vampire.survivors.wiki/images/Select-Poppea_Pecorina.png",
@@ -204,7 +249,10 @@
       "startingWeapons": [
         "shadow-pinion"
       ],
-      "bonus": "Erhält pro Level +1 % Fläche.",
+      "bonus": {
+        "de": "Erhält pro Level +1 % Fläche.",
+        "en": "Gains +1% Area every level."
+      },
       "secret": false,
       "emoji": "🥷",
       "image": "https://vampire.survivors.wiki/images/Select-Concetta_Caciotta.png",
@@ -217,7 +265,10 @@
       "startingWeapons": [
         "bone"
       ],
-      "bonus": "Erhält alle 20 Level mehr Projektile (max. +3).",
+      "bonus": {
+        "de": "Erhält alle 20 Levels mehr Geschosse (max+3).",
+        "en": "Gets more projectiles every 20 levels (max +3)."
+      },
       "secret": false,
       "emoji": "🩻",
       "image": "https://vampire.survivors.wiki/images/Select-Mortaccio.png",
@@ -230,7 +281,10 @@
       "startingWeapons": [
         "cherry-bomb"
       ],
-      "bonus": "Erhält alle 20 Level mehr Projektile (max. +3).",
+      "bonus": {
+        "de": "Erhält alle 20 Level mehr Projektile (max. +3).",
+        "en": "Gets more projectiles every 20 levels (max +3)."
+      },
       "secret": false,
       "emoji": "🐴",
       "image": "https://vampire.survivors.wiki/images/Select-Yatta_Cavallo.png",
@@ -243,7 +297,10 @@
       "startingWeapons": [
         "carrello"
       ],
-      "bonus": "Erhält alle 20 Level mehr Projektile (max. +3).",
+      "bonus": {
+        "de": "Erhält alle 20 Level mehr Projektile (max. +3).",
+        "en": "Gets more projectiles every 20 levels (max +3)."
+      },
       "secret": false,
       "emoji": "🐄",
       "image": "https://vampire.survivors.wiki/images/Select-Bianca_Ramba.png",
@@ -256,7 +313,10 @@
       "startingWeapons": [
         "celestial-dusting"
       ],
-      "bonus": "Erhält alle 20 Level mehr Projektile (max. +3).",
+      "bonus": {
+        "de": "Erhält alle 20 Levels mehr Geschosse (max+3).",
+        "en": "Gets more projectiles every 20 levels (max +3)."
+      },
       "secret": false,
       "emoji": "🌞",
       "image": "https://vampire.survivors.wiki/images/Select-O%27Sole_Meeo.png",
@@ -269,7 +329,10 @@
       "startingWeapons": [
         "la-robba"
       ],
-      "bonus": "Erhält alle 20 Level mehr Projektile (max. +3); startet mit einem zeitweisen Anzahl-Bonus.",
+      "bonus": {
+        "de": "Erhält alle 20 Level mehr Projektile (max. +3); startet mit einem zeitweisen Anzahl-Bonus.",
+        "en": "Gets more projectiles every 20 levels (max+3). Starts with temporary Amount bonus."
+      },
       "secret": false,
       "emoji": "🎩",
       "image": "https://vampire.survivors.wiki/images/Select-Sir_Ambrojoe.png",
@@ -282,7 +345,10 @@
       "startingWeapons": [
         "clock-lancet"
       ],
-      "bonus": "Startet mit einem zusätzlichen Level; erhält alle 5 Level +10 % Wachstum (max. +50 %).",
+      "bonus": {
+        "de": "Startet mit einem zusätzlichen Level; erhält alle 5 Level +10 % Wachstum (max. +50 %).",
+        "en": "Starts with 1 extra level. Gains 10% Growth every 5 levels (max +50%)."
+      },
       "secret": false,
       "emoji": "🦎",
       "image": "https://vampire.survivors.wiki/images/Select-Iguana_Gallo_Valletto.png",
@@ -295,7 +361,10 @@
       "startingWeapons": [
         "laurel"
       ],
-      "bonus": "Startet mit einem zusätzlichen Level; erhält alle 5 Level +1 Rüstung (max. +5).",
+      "bonus": {
+        "de": "Startet mit einem zusätzlichen Level; erhält alle 5 Level +1 Rüstung (max. +5).",
+        "en": "Starts with 1 extra level. Gains +1 Armor every 5 levels (max +5)."
+      },
       "secret": false,
       "emoji": "🛋️",
       "image": "https://vampire.survivors.wiki/images/Select-Divano_Thelma.png",
@@ -308,7 +377,10 @@
       "startingWeapons": [
         "vento-sacro"
       ],
-      "bonus": "Erhält pro Level +0,5 % Macht, Geschwindigkeit, Dauer und Fläche.",
+      "bonus": {
+        "de": "Gains +0.5% Might, projectile Speed, Duration, and Area every level.",
+        "en": "Gains +0.5% Might, Speed, Duration, and Area every level."
+      },
       "secret": false,
       "emoji": "👵",
       "image": "https://vampire.survivors.wiki/images/Select-Zi%27Assunta_Belpaese.png",
@@ -317,11 +389,15 @@
     {
       "id": "queen-sigma",
       "name": "Queen Sigma",
+      "nameDeHint": "Königin Sigma",
       "source": "base",
       "startingWeapons": [
         "victory-sword"
       ],
-      "bonus": "Besitzt alles: startet mit hohen Boni auf fast alle Werte.",
+      "bonus": {
+        "de": "Besitzt alles: startet mit hohen Boni auf fast alle Werte.",
+        "en": "She owns everything."
+      },
       "secret": false,
       "emoji": "👸",
       "image": "https://vampire.survivors.wiki/images/Select-Queen_Sigma.png",
@@ -334,7 +410,10 @@
       "startingWeapons": [
         "pako-battiliar"
       ],
-      "bonus": "Heilt bei kritisch niedriger Gesundheit 30 % und erhält dabei +32 max. Gesundheit (max. +665).",
+      "bonus": {
+        "de": "Heilt bei kritisch niedriger Gesundheit 30 % und erhält dabei +32 max. Gesundheit (max. +665).",
+        "en": "Recovers 30% Max Health and gains +32 Max Health (Max +665) when Health reaches a critically low level."
+      },
       "secret": false,
       "emoji": "🦇",
       "image": "https://vampire.survivors.wiki/images/Select-Bat_Robbert.png",
@@ -347,7 +426,10 @@
       "startingWeapons": [
         "ammo-appalate"
       ],
-      "bonus": "Findet zusätzliche explosive Objekte, die Truhen fallen lassen können; zerstört Lichtquellen durch Berührung.",
+      "bonus": {
+        "de": "Findet zusätzliche explosive Objekte, die Truhen fallen lassen können; zerstört Lichtquellen durch Berührung.",
+        "en": "Can find extra explosive props that might drop Treasure Chests. Can destroy light sources by touching them."
+      },
       "secret": false,
       "emoji": "💣",
       "image": "https://vampire.survivors.wiki/images/Select-Zi%27Appunta_Belpaese.png",
@@ -356,11 +438,15 @@
     {
       "id": "big-troubler",
       "name": "Big Troubler",
+      "nameDeHint": "Großer Unruhestifter",
       "source": "base",
       "startingWeapons": [
         "unearthly-bolt"
       ],
-      "bonus": "Löst seine Hauptwaffe beim Aufsammeln von Goldmünzen aus und nutzt Münzen als Schadensschild; vierfache Chance auf FOIL-Survarots.",
+      "bonus": {
+        "de": "Löst seine Hauptwaffe beim Aufsammeln von Goldmünzen aus und nutzt Münzen als Schadensschild; vierfache Chance auf FOIL-Survarots.",
+        "en": "Activates his main weapon when picking up Gold Coins. Uses Gold Coins as damage barrier. Has a 4X chance of drafting FOIL Survarots."
+      },
       "secret": false,
       "emoji": "🪙",
       "image": "https://vampire.survivors.wiki/images/Select-Big_Troubler.png",
@@ -373,7 +459,10 @@
       "startingWeapons": [
         "glass-fandango"
       ],
-      "bonus": "Startet mit +2 Rüstung und +20 % Laufgeschwindigkeit; friert unter 20 % Gesundheit alle Gegner für 10 Sekunden ein.",
+      "bonus": {
+        "de": "Startet mit +2 Rüstung und +20 % Laufgeschwindigkeit; friert unter 20 % Gesundheit alle Gegner für 10 Sekunden ein.",
+        "en": "Freezes all enemies for 10 seconds when health reaches a critically low level."
+      },
       "secret": false,
       "emoji": "🌙",
       "image": "https://vampire.survivors.wiki/images/Select-She-Moon_Eeta.png",
@@ -386,7 +475,10 @@
       "startingWeapons": [
         "penshin-fatcha"
       ],
-      "bonus": "Die Startwaffe kann sich nicht entwickeln, dafür ist ihr Limit Break verstärkt.",
+      "bonus": {
+        "de": "Die Startwaffe kann sich nicht entwickeln, dafür ist ihr Limit Break verstärkt.",
+        "en": "Starting weapon can't evolve but its Limit Break is enhanced."
+      },
       "secret": false,
       "emoji": "🐟",
       "image": "https://vampire.survivors.wiki/images/Select-Para_Kooleo.png",
@@ -399,7 +491,10 @@
       "startingWeapons": [
         "santa-javelin"
       ],
-      "bonus": "Startet mit einem zeitweisen Abklingzeit-Bonus; löst bei kritisch niedriger Gesundheit einen Rosary aus.",
+      "bonus": {
+        "de": "Startet mit einem zeitweisen Abklingzeit-Bonus; löst bei kritisch niedriger Gesundheit einen Rosary aus.",
+        "en": "Starts with temporary cooldown bonus. Triggers a Rosary when health reaches a critically low level. Likes to keep secrets."
+      },
       "secret": false,
       "emoji": "🎅",
       "image": "https://vampire.survivors.wiki/images/Select-Santa_Ladonna.png",
@@ -412,7 +507,10 @@
       "startingWeapons": [
         "gaze-of-gaea"
       ],
-      "bonus": "Jede Überheilung um 30 gibt einen dauerhaften Bonus auf einen zufälligen Wert.",
+      "bonus": {
+        "de": "Jede Überheilung um 30 gibt einen dauerhaften Bonus auf einen zufälligen Wert.",
+        "en": "Overhealing by +30 gives a cumulative bonus to a random stat."
+      },
       "secret": false,
       "emoji": "🌿",
       "image": "https://vampire.survivors.wiki/images/Select-Gazebo.png",
@@ -425,7 +523,10 @@
       "startingWeapons": [
         "magi-stone"
       ],
-      "bonus": "Würfelt alle 30 Sekunden oder beim Aufsammeln eines Rerollo um sein Glück.",
+      "bonus": {
+        "de": "Würfelt alle 30 Sekunden oder beim Aufsammeln eines Rerollo um sein Glück.",
+        "en": "Chances his luck every 30 seconds or when picking up a Rerollo."
+      },
       "secret": false,
       "emoji": "🎲",
       "image": "https://vampire.survivors.wiki/images/Select-Chula-Reh.png",
@@ -434,11 +535,15 @@
     {
       "id": "space-dude",
       "name": "Space Dude",
+      "nameDeHint": "Weltraum-Typ",
       "source": "base",
       "startingWeapons": [
         "phas3r"
       ],
-      "bonus": "Löst je nach Abklingzeit gelegentlich alle Waffen doppelt aus.",
+      "bonus": {
+        "de": "Löst je nach Abklingzeit gelegentlich alle Waffen doppelt aus.",
+        "en": "May occasionally activate all weapons twice depending on Cooldown."
+      },
       "secret": false,
       "emoji": "👽",
       "image": "https://vampire.survivors.wiki/images/Select-Space_Dude.png",
@@ -451,7 +556,10 @@
       "startingWeapons": [
         "ebony-wings"
       ],
-      "bonus": "„Wenigstens hat es Glück.“",
+      "bonus": {
+        "de": "„Wenigstens hat es Glück.“",
+        "en": "At least they're lucky."
+      },
       "secret": true,
       "emoji": "👻",
       "image": "https://vampire.survivors.wiki/images/Select-Exdash_Exiviiq.png",
@@ -464,7 +572,10 @@
       "startingWeapons": [
         "peachone"
       ],
-      "bonus": "„So viel Potenzial.“",
+      "bonus": {
+        "de": "„So viel Potenzial.“",
+        "en": "So much potential."
+      },
       "secret": true,
       "emoji": "🍞",
       "image": "https://vampire.survivors.wiki/images/Select-Toastie.png",
@@ -477,7 +588,10 @@
       "startingWeapons": [
         "vandalier"
       ],
-      "bonus": "„Der schrullige weiße Bär.“",
+      "bonus": {
+        "de": "„Der schrullige weiße Bär.“",
+        "en": "The quirky white bear."
+      },
       "secret": true,
       "emoji": "🐻‍❄️",
       "image": "https://vampire.survivors.wiki/images/Select-Smith_IV.png",
@@ -488,12 +602,18 @@
       "name": "Random",
       "source": "base",
       "startingWeapons": [],
-      "bonus": "Startet mit einer zufälligen Basiswaffe.",
+      "bonus": {
+        "de": "Startet mit einer zufälligen Basiswaffe.",
+        "en": "Random."
+      },
       "secret": true,
       "emoji": "❓",
       "image": "https://vampire.survivors.wiki/images/Select-Random.png",
       "verified": true,
-      "note": "Startet mit einer zufälligen Basiswaffe."
+      "note": {
+        "de": "Startet mit einer zufälligen Basiswaffe.",
+        "en": "Starts with a random base weapon."
+      }
     },
     {
       "id": "boon-marrabbio",
@@ -502,7 +622,10 @@
       "startingWeapons": [
         "thousand-edge"
       ],
-      "bonus": "Startet mit +20 max. Gesundheit, +30 % Laufgeschwindigkeit, +20 % Macht, −110 % Geschwindigkeit, −80 % Gier und +10 % Fluch.",
+      "bonus": {
+        "de": "Startet mit +20 max. Gesundheit, +30 % Laufgeschwindigkeit, +20 % Macht, −110 % Geschwindigkeit, −80 % Gier und +10 % Fluch.",
+        "en": "Starts with +20 Max Health, +30% Move Speed, +20% Might, -110% Speed, -80% Greed and +10% Curse."
+      },
       "secret": true,
       "emoji": "🐰",
       "image": "https://vampire.survivors.wiki/images/Select-Boon_Marrabbio.png",
@@ -515,7 +638,10 @@
       "startingWeapons": [
         "flames-of-misspell"
       ],
-      "bonus": "Startet mit der zusätzlichen Arcana XIX – Heart of Fire; wird mit jedem Level stärker, verliert aber zunehmend die Kontrolle.",
+      "bonus": {
+        "de": "Startet mit der zusätzlichen Arcana XIX – Heart of Fire; wird mit jedem Level stärker, verliert aber zunehmend die Kontrolle.",
+        "en": "Starts with extra Arcana XIX - Heart of Fire. Grows stronger with every level, but also loses control."
+      },
       "secret": true,
       "emoji": "😈",
       "image": "https://vampire.survivors.wiki/images/Select-Avatar_Infernas.png",
@@ -528,7 +654,10 @@
       "startingWeapons": [
         "bloody-tear"
       ],
-      "bonus": "Macht, Projektilgeschwindigkeit, Dauer, Fläche und Abklingzeit ändern sich jede Minute.",
+      "bonus": {
+        "de": "Might, projectile Speed, Duration, Area, and Cooldown change every minute.",
+        "en": "Might, Projectile Speed, Duration, Area, and Cooldown change every minute."
+      },
       "secret": true,
       "emoji": "🌸",
       "image": "https://vampire.survivors.wiki/images/Select-Minnah_Mannarah.png",
@@ -541,7 +670,10 @@
       "startingWeapons": [
         "holy-wand"
       ],
-      "bonus": "Startet mit +5 Rüstung, +100 % Macht, +10 % Fläche und −10 % Abklingzeit, aber −20 % Laufgeschwindigkeit und −80 % Gier.",
+      "bonus": {
+        "de": "Startet mit +5 Rüstung, +100 % Macht, +10 % Fläche und −10 % Abklingzeit, aber −20 % Laufgeschwindigkeit und −80 % Gier.",
+        "en": "Starts with +5 Armor, +100% Might, +10% Area and -10% Cooldown, but -20% Move Speed and -80% Greed."
+      },
       "secret": true,
       "emoji": "🗿",
       "image": "https://vampire.survivors.wiki/images/Select-Leda.png",
@@ -552,12 +684,18 @@
       "name": "Cosmo Pavone",
       "source": "base",
       "startingWeapons": [],
-      "bonus": "Erhält pro Level +1 Regeneration und +1 % Glück, alle 100 Level +1 Wiederbelebung; hat versteckte Waffen.",
+      "bonus": {
+        "de": "Erhält pro Level +1 Regeneration und +1 % Glück, alle 100 Level +1 Wiederbelebung; hat versteckte Waffen.",
+        "en": "Gains +1 Recovery and +1% Luck every level. Gains +1 Revival every 100 levels. Has hidden weapons."
+      },
       "secret": true,
       "emoji": "🦚",
       "image": "https://vampire.survivors.wiki/images/Select-Cosmo_Pavone.png",
       "verified": true,
-      "note": "Hat keine sichtbare Startwaffe, nur versteckte Waffen."
+      "note": {
+        "de": "Hat keine sichtbare Startwaffe, nur versteckte Waffen.",
+        "en": "Has no visible starting weapon, only hidden weapons."
+      }
     },
     {
       "id": "peppino",
@@ -566,7 +704,10 @@
       "startingWeapons": [
         "soul-eater"
       ],
-      "bonus": "Startet mit zeitweise verringerter Fläche.",
+      "bonus": {
+        "de": "Startet mit zeitweise verringerter Fläche.",
+        "en": "Starts with temporarily reduced area."
+      },
       "secret": true,
       "emoji": "🌳",
       "image": "https://vampire.survivors.wiki/images/Select-Peppino.png",
@@ -575,11 +716,15 @@
     {
       "id": "big-trouser",
       "name": "Big Trouser",
+      "nameDeHint": "Große Hose",
       "source": "base",
       "startingWeapons": [
         "candybox"
       ],
-      "bonus": "Erhält pro Level +1 % Gier; der Goldrausch hält länger an.",
+      "bonus": {
+        "de": "Erhält pro Level +1 % Gier; der Goldrausch hält länger an.",
+        "en": "Gains +1% Greed every level. Gold Fever lasts longer."
+      },
       "secret": true,
       "emoji": "👖",
       "image": "https://vampire.survivors.wiki/images/Select-Big_Trouser.png",
@@ -592,12 +737,18 @@
       "startingWeapons": [
         "axe"
       ],
-      "bonus": "Startet zu 50 % mit Death Spiral statt Axe.",
+      "bonus": {
+        "de": "Startet zu 50 % mit Todesspirale statt Axt.",
+        "en": "'M(▯▯)"
+      },
       "secret": true,
       "emoji": "👾",
       "image": "https://vampire.survivors.wiki/images/Select-missingN%E2%96%AF.png",
       "verified": true,
-      "note": "Startet zu 50 % mit Death Spiral statt Axe."
+      "note": {
+        "de": "Startet zu 50 % mit Todesspirale statt Axt.",
+        "en": "Starts with Death Spiral instead of Axe 50% of the time."
+      }
     },
     {
       "id": "gains-boros",
@@ -606,7 +757,10 @@
       "startingWeapons": [
         "heaven-sword"
       ],
-      "bonus": "Erhält pro Level +2 % Wachstum.",
+      "bonus": {
+        "de": "Erhält pro Level +2 % Wachstum.",
+        "en": "Gains +2% Growth every level."
+      },
       "secret": true,
       "emoji": "🐉",
       "image": "https://vampire.survivors.wiki/images/Select-Gains_Boros.png",
@@ -619,7 +773,10 @@
       "startingWeapons": [
         "bracelet"
       ],
-      "bonus": "Erhält pro Level +1 % Fluch; kann Entwicklungen in jeder Truhe finden.",
+      "bonus": {
+        "de": "Gains +1% Curse every level. Can find evolutions in any Treasure.",
+        "en": "Gains +1% Curse every level. Can find evolutions in any Treasure Chest."
+      },
       "secret": true,
       "emoji": "🌀",
       "image": "https://vampire.survivors.wiki/images/Select-Gyorunton.png",
@@ -628,11 +785,15 @@
     {
       "id": "mask-of-the-red-death",
       "name": "Mask of the Red Death",
+      "nameDeHint": "Maske des Roten Todes",
       "source": "base",
       "startingWeapons": [
         "death-spiral"
       ],
-      "bonus": "„Eine gotteslästerliche Verhöhnung.“",
+      "bonus": {
+        "de": "„Eine gotteslästerliche Verhöhnung.“",
+        "en": "A blasphemous mockery."
+      },
       "secret": true,
       "emoji": "🎭",
       "image": "https://vampire.survivors.wiki/images/Select-Mask_of_the_Red_Death.png",
@@ -641,11 +802,15 @@
     {
       "id": "bats-bats-bats",
       "name": "Bats Bats Bats",
+      "nameDeHint": "Fledermäuse Fledermäuse Fledermäuse",
       "source": "base",
       "startingWeapons": [
         "mazo-familiar"
       ],
-      "bonus": "Die Startwaffe wird mit jedem Level stärker; Wiederbelebungen erhöhen auch die Anzahl; erhält nach einer Wiederbelebung einen Begleiter.",
+      "bonus": {
+        "de": "Die Startwaffe wird mit jedem Level stärker; Wiederbelebungen erhöhen auch die Anzahl; erhält nach einer Wiederbelebung einen Begleiter.",
+        "en": "Starting weapon grows stronger when levelling up. Revivals also affect Amount. Receives a follower after reviving."
+      },
       "secret": true,
       "emoji": "🦇",
       "image": "https://vampire.survivors.wiki/images/Select-Bats_Bats_Bats.png",
@@ -658,7 +823,10 @@
       "startingWeapons": [
         "fuwalafuwaloo"
       ],
-      "bonus": "Erhöht die Zahl erscheinender Gegner um 100.",
+      "bonus": {
+        "de": "Erhöht die Zahl erscheinender Gegner um 100.",
+        "en": "Increases enemies spawn quantity by 100."
+      },
       "secret": true,
       "emoji": "🌹",
       "image": "https://vampire.survivors.wiki/images/Select-Rose_De_Infernas.png",
@@ -669,24 +837,36 @@
       "name": "Torino",
       "source": "base",
       "startingWeapons": [],
-      "bonus": "Verwandelt sich auf Level 16 in JoyaTauro und auf Level 36 in AccumulaTori; schlägt zurück.",
+      "bonus": {
+        "de": "Verwandelt sich auf Level 16 in JoyaTauro und auf Level 36 in AccumulaTori; schlägt zurück.",
+        "en": "Evolves into JoyaTauro at lv16, and into AccumulaTori at lv36. Retaliates."
+      },
       "secret": true,
       "emoji": "🐂",
       "image": "https://vampire.survivors.wiki/images/Select-Torino.png",
       "verified": true,
-      "note": "Hat keine Startwaffe."
+      "note": {
+        "de": "Hat keine Startwaffe.",
+        "en": "Has no starting weapon."
+      }
     },
     {
       "id": "scorej-oni",
       "name": "Scorej-Oni",
       "source": "base",
       "startingWeapons": [],
-      "bonus": "Erhält alle 8 Level einen versteckten Lightning Ring (max. 6), der auch bei erlittenem Schaden auslöst.",
+      "bonus": {
+        "de": "Erhält alle 8 Level einen versteckten Blitzring (max. 6), der auch bei erlittenem Schaden auslöst.",
+        "en": "Gains a hidden Lightning Ring every 8 levels (max 6) that also fires when losing health."
+      },
       "secret": true,
       "emoji": "👹",
       "image": "https://vampire.survivors.wiki/images/Select-Scorej-Oni.png",
       "verified": true,
-      "note": "Hat keine Startwaffe, erhält aber versteckte Lightning Rings."
+      "note": {
+        "de": "Hat keine Startwaffe, erhält aber versteckte Lightning Rings.",
+        "en": "Has no starting weapon but gains hidden Lightning Rings."
+      }
     },
     {
       "id": "gyoruntin",
@@ -695,7 +875,10 @@
       "startingWeapons": [
         "no-future"
       ],
-      "bonus": "Die Startwaffe wird mit jedem Level stärker; +1 % Fluch pro Level; ignoriert Wände.",
+      "bonus": {
+        "de": "Die Startwaffe wird mit jedem Level stärker; +1 % Fluch pro Level; ignoriert Wände.",
+        "en": "Starting weapon grows stronger when levelling up. Gains +1% Curse every Level. Ignores Walls."
+      },
       "secret": true,
       "emoji": "🌪️",
       "image": "https://vampire.survivors.wiki/images/Select-Gyoruntin.png",
@@ -708,7 +891,10 @@
       "startingWeapons": [
         "kyra-stones"
       ],
-      "bonus": "Findet immer Survarots; Survarot-Multiplikator entspricht log10 der Golden Eggs (max. ×10).",
+      "bonus": {
+        "de": "Findet immer Survarots; Survarot-Multiplikator entspricht log10 der Golden Eggs (max. ×10).",
+        "en": "Can always find Survarots. Gets a Survarot Multiplier equal to Log10 Golden Eggs (max x10)."
+      },
       "secret": true,
       "emoji": "🕵️",
       "image": "https://vampire.survivors.wiki/images/Select-Secretino_Dagsson.png",
@@ -721,7 +907,10 @@
       "startingWeapons": [
         "photonstorm"
       ],
-      "bonus": "Die Startwaffe wird mit jedem Level stärker; gewinnt mehr Fans, wenn sie viele Gegner besiegt.",
+      "bonus": {
+        "de": "Die Startwaffe wird mit jedem Level stärker; gewinnt mehr Fans, wenn sie viele Gegner besiegt.",
+        "en": "Starting weapon grows stronger when levelling up. Gets more fans from defeating a large amount of enemies."
+      },
       "secret": true,
       "emoji": "👩‍🚀",
       "image": "https://vampire.survivors.wiki/images/Select-Space_Dette.png",
