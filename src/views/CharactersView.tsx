@@ -30,7 +30,7 @@ export function CharactersView({ selectedId }: { selectedId?: string }) {
   )
 
   return (
-    <div className="grid gap-6 md:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] md:items-start">
+    <div className="grid grid-cols-[minmax(0,1fr)] gap-6 md:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] md:items-start">
       <div className={`space-y-3 ${selected ? 'hidden md:block' : ''}`}>
         <SearchField value={query} onChange={setQuery} placeholder="Charakter oder Waffe suchen" />
         <p className="text-xs text-white/50">

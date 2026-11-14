@@ -7,39 +7,37 @@ import { EntryIcon, Pill, UnverifiedBadge } from './ui.tsx'
 
 function StateMark({ check }: { check?: RequirementCheck }) {
   if (!check) return null
-  if (check.state === 'ok') return <span className="text-emerald-300" aria-label="vorhanden">✓</span>
-  if (check.state === 'level')
-    return (
-      <span className="text-amber-200 tabular-nums" aria-label={`Stufe ${check.level} von ${check.maxLevel}`}>
-        {check.level}/{check.maxLevel}
-      </span>
-    )
-  return <span className="text-red-300" aria-label="fehlt">✗</span>
+  return check.owned ? (
+    <span className="text-emerald-300" aria-label="vorhanden">
+      ✓
+    </span>
+  ) : (
+    <span className="text-red-300" aria-label="fehlt">
+      ✗
+    </span>
+  )
 }
 
 function Chip({
   href,
   entry,
-  requirement,
   check,
   highlight,
   extra,
 }: {
   href: string
-  entry: { name: string; emoji?: string; icon?: string } | undefined
-  requirement?: 'max' | 'any'
+  entry: { name: string; emoji?: string; icon?: string; image?: string } | undefined
   check?: RequirementCheck
   highlight?: boolean
-  extra?: string
+  /** Zusatz hinter dem Namen, z. B. „Max“ oder „wird verbraucht“. */
+  extra?: string[]
 }) {
   const tone =
-    check?.state === 'missing'
+    check && !check.owned
       ? 'ring-red-400/30 bg-red-500/5'
-      : check?.state === 'level'
-        ? 'ring-amber-300/30 bg-amber-400/5'
-        : highlight
-          ? 'ring-gold-500/50 bg-gold-500/10'
-          : 'ring-white/10 bg-white/5'
+      : highlight
+        ? 'ring-gold-500/50 bg-gold-500/10'
+        : 'ring-white/10 bg-white/5'
   return (
     <a
       href={href}
@@ -47,8 +45,7 @@ function Chip({
     >
       {entry && <EntryIcon entry={entry} size="sm" />}
       <span className="truncate">{entry?.name ?? '?'}</span>
-      {requirement === 'max' && <Pill>Max</Pill>}
-      {extra && <Pill>{extra}</Pill>}
+      {extra?.map((text) => <Pill key={text}>{text}</Pill>)}
       <StateMark check={check} />
     </a>
   )
@@ -56,7 +53,11 @@ function Chip({
 
 /**
  * Eine Entwicklung als Zeile: Zutaten + Ergebnis.
- * Mit `check` werden die Zutaten nach Stand im aktuellen Lauf eingefärbt.
+ * Mit `check` wird markiert, welche Zutaten im aktuellen Lauf schon da sind.
+ *
+ * Dass die Waffe auf Maximalstufe sein muss, gilt für fast jede Entwicklung
+ * und steht deshalb nicht an jeder Waffe. Markiert werden nur Gegenstände,
+ * die ausnahmsweise ebenfalls auf Maximalstufe sein müssen.
  */
 export function EvolutionLine({
   evolution,
@@ -85,26 +86,26 @@ export function EvolutionLine({
         {evolution.weapons.map((w, i) => (
           <span key={w.id} className="contents">
             {i > 0 && <span className="text-white/40">+</span>}
-            <Chip
-              href={weaponHref(w.id)}
-              entry={catalog.weapon(w.id)}
-              requirement={(w.level ?? 'max') === 'max' && (catalog.weapon(w.id)?.maxLevel ?? 1) > 1 ? 'max' : undefined}
-              check={reqCheck('weapon', w.id)}
-            />
+            <Chip href={weaponHref(w.id)} entry={catalog.weapon(w.id)} check={reqCheck('weapon', w.id)} />
           </span>
         ))}
-        {evolution.passives.map((p) => (
-          <span key={p.id} className="contents">
-            <span className="text-white/40">+</span>
-            <Chip
-              href={passiveHref(p.id)}
-              entry={catalog.passive(p.id)}
-              requirement={p.level === 'max' ? 'max' : undefined}
-              check={reqCheck('passive', p.id)}
-              extra={p.consumed ? 'wird verbraucht' : undefined}
-            />
-          </span>
-        ))}
+        {evolution.passives.map((p) => {
+          const extra = [
+            p.level === 'max' && (catalog.passive(p.id)?.maxLevel ?? 1) > 1 ? 'Max' : null,
+            p.consumed ? 'wird verbraucht' : null,
+          ].filter((text): text is string => text !== null)
+          return (
+            <span key={p.id} className="contents">
+              <span className="text-white/40">+</span>
+              <Chip
+                href={passiveHref(p.id)}
+                entry={catalog.passive(p.id)}
+                check={reqCheck('passive', p.id)}
+                extra={extra}
+              />
+            </span>
+          )
+        })}
         <span className="px-0.5 text-gold-300" aria-label="ergibt">
           →
         </span>

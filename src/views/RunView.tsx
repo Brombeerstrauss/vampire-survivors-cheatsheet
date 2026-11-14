@@ -18,8 +18,6 @@ import {
   isRunEmpty,
   removePassive,
   removeWeapon,
-  setPassiveLevel,
-  setWeaponLevel,
   startRun,
   usedPassiveSlots,
   type OwnedItem,
@@ -75,7 +73,7 @@ export function RunView() {
   }
 
   return (
-    <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,22rem)] lg:items-start">
+    <div className="grid grid-cols-[minmax(0,1fr)] gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,22rem)] lg:items-start">
       <div className="space-y-6">
         <Card className="flex items-center gap-3">
           {character ? (
@@ -198,43 +196,6 @@ function AddButton({ label, full, fullLabel, onClick }: { label: string; full: b
   )
 }
 
-function LevelStepper({
-  level,
-  maxLevel,
-  onChange,
-  label,
-}: {
-  level: number
-  maxLevel: number
-  onChange: (level: number) => void
-  label: string
-}) {
-  if (maxLevel <= 1) return <Pill>Einstufig</Pill>
-  const atMax = level >= maxLevel
-  const step = 'flex size-11 items-center justify-center rounded-xl bg-white/8 text-lg hover:bg-white/12 disabled:opacity-30'
-  return (
-    <div className="flex items-center gap-1.5" role="group" aria-label={`Stufe von ${label}`}>
-      <button type="button" className={step} onClick={() => onChange(level - 1)} disabled={level <= 1} aria-label="Stufe senken">
-        −
-      </button>
-      <span className={`min-w-14 text-center text-sm tabular-nums ${atMax ? 'font-semibold text-gold-300' : ''}`}>
-        {atMax ? 'Max' : `${level}/${maxLevel}`}
-      </span>
-      <button type="button" className={step} onClick={() => onChange(level + 1)} disabled={atMax} aria-label="Stufe erhöhen">
-        +
-      </button>
-      {!atMax && (
-        <button
-          type="button"
-          className="flex h-11 items-center rounded-xl bg-gold-500/15 px-2.5 text-xs font-semibold text-gold-300 hover:bg-gold-500/25"
-          onClick={() => onChange(maxLevel)}
-        >
-          Max
-        </button>
-      )}
-    </div>
-  )
-}
 
 function RemoveButton({ onClick, label }: { onClick: () => void; label: string }) {
   return (
@@ -249,39 +210,28 @@ function RemoveButton({ onClick, label }: { onClick: () => void; label: string }
   )
 }
 
-/** Kopfzeile eines belegten Slots: Name, Entfernen, darunter (Handy) bzw. daneben (breiter) die Stufe. */
+/** Kopfzeile eines belegten Slots: Bild, Name, Entfernen. */
 function SlotHeader({
   href,
   entry,
   badges,
-  level,
-  maxLevel,
-  onLevel,
   onRemove,
 }: {
   href: string
-  entry: { name: string; emoji?: string; icon?: string }
+  entry: { name: string; emoji?: string; icon?: string; image?: string }
   badges: ReactNode
-  level: number
-  maxLevel: number
-  onLevel: (level: number) => void
   onRemove: () => void
 }) {
   return (
-    <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2 sm:grid-cols-[minmax(0,1fr)_auto_auto]">
-      <a href={href} className="flex min-w-0 items-center gap-3">
+    <div className="flex items-center gap-2">
+      <a href={href} className="flex min-w-0 flex-1 items-center gap-3">
         <EntryIcon entry={entry} />
         <span className="flex min-w-0 flex-wrap items-center gap-1.5">
           <span className="font-semibold">{entry.name}</span>
           {badges}
         </span>
       </a>
-      <div className="col-span-2 row-start-2 sm:col-span-1 sm:col-start-2 sm:row-start-1">
-        <LevelStepper label={entry.name} level={level} maxLevel={maxLevel} onChange={onLevel} />
-      </div>
-      <div className="col-start-2 row-start-1 sm:col-start-3">
-        <RemoveButton label={entry.name} onClick={onRemove} />
-      </div>
+      <RemoveButton label={entry.name} onClick={onRemove} />
     </div>
   )
 }
@@ -303,9 +253,6 @@ function WeaponSlot({ item, run }: { item: OwnedItem; run: RunState }) {
             <SourceBadge source={weapon.source} />
           </>
         }
-        level={item.level}
-        maxLevel={weapon.maxLevel}
-        onLevel={(level) => updateRun((r, cat) => setWeaponLevel(r, cat, item.id, level))}
         onRemove={() => updateRun((r) => removeWeapon(r, item.id), `${weapon.name} entfernt.`)}
       />
       {checks.length === 0 ? (
@@ -328,11 +275,7 @@ function WeaponSlot({ item, run }: { item: OwnedItem; run: RunState }) {
 function progressText(check: EvolutionCheck, catalog: Catalog): string {
   const name = (type: 'weapon' | 'passive', id: string) =>
     (type === 'weapon' ? catalog.weapon(id)?.name : catalog.passive(id)?.name) ?? id
-  const parts = [
-    ...check.missing.map((r) => `${name(r.type, r.id)} fehlt`),
-    ...check.leveling.map((r) => `${name(r.type, r.id)} auf Stufe ${r.maxLevel} bringen (jetzt ${r.level})`),
-  ]
-  return parts.join(' · ')
+  return check.missing.map((r) => `${name(r.type, r.id)} fehlt`).join(' · ')
 }
 
 function EvolutionStatus({ check }: { check: EvolutionCheck }) {
@@ -344,7 +287,7 @@ function EvolutionStatus({ check }: { check: EvolutionCheck }) {
     return (
       <div className="space-y-2 rounded-xl border border-emerald-400/30 bg-emerald-500/10 p-3">
         <EvolutionLine evolution={check.evolution} catalog={catalog} check={check} />
-        <p className="text-sm text-emerald-100">✨ {readyText(check.evolution, result.name)}</p>
+        <p className="text-sm text-emerald-100">✨ {readyText(check, result.name, catalog)}</p>
         <button
           type="button"
           className={`${buttonClass.secondary} w-full sm:w-auto`}
@@ -390,9 +333,6 @@ function PassiveSlot({ item, run }: { item: OwnedItem; run: RunState }) {
             <SourceBadge source={passive.source} />
           </>
         }
-        level={item.level}
-        maxLevel={passive.maxLevel}
-        onLevel={(level) => updateRun((r, cat) => setPassiveLevel(r, cat, item.id, level))}
         onRemove={() => updateRun((r) => removePassive(r, item.id), `${passive.name} entfernt.`)}
       />
       {usedFor.length > 0 ? (
@@ -406,7 +346,7 @@ function PassiveSlot({ item, run }: { item: OwnedItem; run: RunState }) {
               </a>
             </span>
           ))}
-          {neededMax && item.level < passive.maxLevel && ' (auf Maximalstufe)'}
+          {neededMax && ' (auf Maximalstufe)'}
         </p>
       ) : (
         <p className="text-sm text-white/40">Für keine deiner Waffen nötig.</p>

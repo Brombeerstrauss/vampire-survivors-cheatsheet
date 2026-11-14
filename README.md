@@ -11,11 +11,14 @@ wie im Spiel.
 
 - **Charaktere**: alle Charaktere aus Basisspiel und DLCs mit Suche, Startwaffe, Entwicklung
   und Empfehlungen. Geheime Charaktere lassen sich ausblenden.
-- **Lauf-Tracker**: Waffen und passive Gegenstände des aktuellen Laufs eintragen (je 6 Slots,
-  mit Stufe). Die App zeigt pro Waffe, was für die Entwicklung fehlt, ob sie bereit ist
-  (Waffe auf Maximalstufe und Gegenstand vorhanden, dann bringt die nächste Truhe die
-  Entwicklung), und berücksichtigt Unions, Geschenke, Morphs und Entwicklungen mit mehreren
-  Gegenständen.
+- **Lauf-Tracker**: Waffen und passive Gegenstände des aktuellen Laufs eintragen (je 6
+  Slots). Die App zeigt pro Waffe, was für die Entwicklung noch fehlt. Sind alle Teile da,
+  sagt sie, was noch auf Maximalstufe gebracht werden muss, bevor die nächste Truhe die
+  Entwicklung bringt. Stufen trägst du nicht ein. Unions, Geschenke, Morphs und
+  Entwicklungen mit mehreren Gegenständen sind berücksichtigt.
+- **Originalbilder**: Charaktere, Waffen und Gegenstände erscheinen mit den Grafiken aus dem
+  Spiel. Die App lädt sie direkt vom Wiki und enthält selbst keine Kopien; in den
+  Einstellungen lässt sich das abschalten, dann erscheinen Emojis.
 - **Vorschläge**: fehlende Entwicklungs-Partner zuerst, dann Waffen, die zu deinen
   Gegenständen passen, dann Empfehlungen für den Charakter. Warnt, wenn die Slots für die
   geplanten Entwicklungen nicht mehr reichen.
@@ -131,7 +134,9 @@ Wichtige Regeln:
   Einträge mit dem Hinweis „ungeprüft“.
 - Eine Entwicklung braucht die Waffe standardmäßig auf Maximalstufe; bei Gegenständen reicht
   standardmäßig der Besitz. Mit `"level": "max"` oder `"level": "any"` lässt sich das pro
-  Zutat ändern.
+  Zutat ändern. Die App nennt das nur als Hinweis, Stufen werden im Lauf nicht erfasst.
+- `image` ist die Adresse des Originalbilds im Wiki, `emoji` der Platzhalter, falls das Bild
+  nicht lädt oder Bilder abgeschaltet sind.
 - Empfehlungen werden aus allen aktiven Paketen zusammengeführt. Ein DLC kann also
   Empfehlungen für einen Charakter aus dem Basisspiel ergänzen.
 
@@ -141,11 +146,15 @@ Verweise auf vorhandene Einträge zeigen.
 **Neues DLC hinzufügen:** einen Ordner unter `src/data/packs/` mit den fünf Dateien anlegen
 und das Paket in `packs.json` eintragen. Code muss dafür nicht geändert werden.
 
-### Eigene Icons
+### Bilder
 
-Die App enthält keine Grafiken aus dem Spiel, sondern zeigt Emojis als Platzhalter. Eigene
-Bilder legst du unter `public/custom-icons/` ab und trägst den Dateinamen im passenden
-Eintrag als `"icon"` ein. Details stehen in `public/custom-icons/README.md`.
+Die Grafiken aus dem Spiel gehören poncle. Die App liefert sie nicht mit, sondern lädt sie
+zur Laufzeit vom Wiki (Feld `image`). Einmal angezeigte Bilder speichert der Service Worker
+auf dem Gerät, sodass sie auch offline erscheinen; Bilder, die du noch nie gesehen hast,
+fehlen offline und werden durch das Emoji ersetzt.
+
+Eigene Bilder haben Vorrang: unter `public/custom-icons/` ablegen und den Dateinamen im
+passenden Eintrag als `"icon"` eintragen. Details stehen in `public/custom-icons/README.md`.
 
 ## Projektaufbau
 
@@ -193,6 +202,10 @@ Die Spieldaten stammen aus dem offiziellen
 [Vampire Survivors Wiki](https://vampire.survivors.wiki/) und stehen wie dieses unter
 [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/). Sie dürfen also nur
 nicht-kommerziell und unter derselben Lizenz weitergegeben werden.
+
+Die Bilder von Charakteren, Waffen und Gegenständen sind Grafiken aus dem Spiel und gehören
+poncle. Eine Erlaubnis von poncle für ihre Nutzung in Fan-Projekten liegt nicht vor; die App
+bindet sie deshalb nur vom Wiki ein, statt Kopien zu verbreiten.
 
 Inoffizielles Fan-Projekt, nicht verbunden mit poncle. Vampire Survivors ist eine Marke von
 poncle.

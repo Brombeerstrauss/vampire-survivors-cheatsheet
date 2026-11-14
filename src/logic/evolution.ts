@@ -2,17 +2,13 @@ import type { Evolution, RequiredLevel } from '../data/types.ts'
 import type { Catalog } from './catalog.ts'
 import type { RunState } from './run.ts'
 
-/** Stand einer einzelnen Zutat: vorhanden, Stufe zu niedrig oder fehlt. */
-export type RequirementState = 'ok' | 'level' | 'missing'
-
 export interface RequirementCheck {
   type: 'weapon' | 'passive'
   id: string
+  /** Muss die Zutat auf Maximalstufe sein? Nur als Hinweis, der Tracker erfasst keine Stufen. */
   required: RequiredLevel
-  state: RequirementState
-  /** Aktuelle Stufe im Lauf, falls vorhanden. */
-  level?: number
-  maxLevel: number
+  /** Ist die Zutat im Lauf? */
+  owned: boolean
 }
 
 export interface EvolutionCheck {
@@ -22,48 +18,45 @@ export interface EvolutionCheck {
   characterOk: boolean
   /** Das Ergebnis ist schon im Lauf. */
   done: boolean
-  /** Alle Bedingungen erfüllt; die Entwicklung kommt aus der nächsten passenden Truhe (bzw. bei Morphs automatisch). */
+  /** Alle Zutaten sind da; es fehlt höchstens noch die Maximalstufe (siehe `needsMax`). */
   ready: boolean
-  /** Zutaten, die noch gar nicht im Lauf sind. */
+  /** Zutaten, die noch nicht im Lauf sind. */
   missing: RequirementCheck[]
-  /** Zutaten, die vorhanden, aber noch nicht auf der nötigen Stufe sind. */
-  leveling: RequirementCheck[]
-}
-
-function checkRequirement(
-  type: 'weapon' | 'passive',
-  id: string,
-  required: RequiredLevel,
-  owned: { id: string; level: number }[],
-  maxLevel: number,
-): RequirementCheck {
-  const item = owned.find((o) => o.id === id)
-  if (!item) return { type, id, required, state: 'missing', maxLevel }
-  const state = required === 'max' && item.level < maxLevel ? 'level' : 'ok'
-  return { type, id, required, state, level: item.level, maxLevel }
+  /** Zutaten, die für die Entwicklung auf Maximalstufe sein müssen. */
+  needsMax: RequirementCheck[]
 }
 
 /** Wie weit ist eine Entwicklung im aktuellen Lauf? */
 export function checkEvolution(evolution: Evolution, run: RunState, catalog: Catalog): EvolutionCheck {
+  const ownedWeapons = new Set(run.weapons.map((w) => w.id))
+  const ownedPassives = new Set(run.passives.map((p) => p.id))
   const requirements: RequirementCheck[] = [
-    ...evolution.weapons.map((w) =>
-      checkRequirement('weapon', w.id, w.level ?? 'max', run.weapons, catalog.weapon(w.id)?.maxLevel ?? 1),
-    ),
-    ...evolution.passives.map((p) =>
-      checkRequirement('passive', p.id, p.level ?? 'any', run.passives, catalog.passive(p.id)?.maxLevel ?? 1),
-    ),
+    ...evolution.weapons.map((w) => ({
+      type: 'weapon' as const,
+      id: w.id,
+      required: (w.level ?? 'max') as RequiredLevel,
+      owned: ownedWeapons.has(w.id),
+    })),
+    ...evolution.passives.map((p) => ({
+      type: 'passive' as const,
+      id: p.id,
+      required: (p.level ?? 'any') as RequiredLevel,
+      owned: ownedPassives.has(p.id),
+    })),
   ]
+  const maxLevelOf = (r: RequirementCheck) =>
+    (r.type === 'weapon' ? catalog.weapon(r.id)?.maxLevel : catalog.passive(r.id)?.maxLevel) ?? 1
   const characterOk =
     !evolution.characters || (run.character !== null && evolution.characters.includes(run.character))
-  const done = run.weapons.some((w) => w.id === evolution.result)
-  const missing = requirements.filter((r) => r.state === 'missing')
-  const leveling = requirements.filter((r) => r.state === 'level')
-  const ready = characterOk && !done && missing.length === 0 && leveling.length === 0
-  return { evolution, requirements, characterOk, done, ready, missing, leveling }
+  const done = ownedWeapons.has(evolution.result)
+  const missing = requirements.filter((r) => !r.owned)
+  const needsMax = requirements.filter((r) => r.required === 'max' && maxLevelOf(r) > 1)
+  const ready = characterOk && !done && missing.length === 0
+  return { evolution, requirements, characterOk, done, ready, missing, needsMax }
 }
 
 /**
- * Alle Entwicklungen einer Waffe im Lauf, sortiert nach Fortschritt.
+ * Alle Entwicklungen einer Waffe im Lauf, die bereiten zuerst.
  * Charaktergebundene Entwicklungen anderer Charaktere werden ausgelassen.
  */
 export function evolutionsForOwnedWeapon(weaponId: string, run: RunState, catalog: Catalog): EvolutionCheck[] {
@@ -77,5 +70,5 @@ export function evolutionsForOwnedWeapon(weaponId: string, run: RunState, catalo
 function score(check: EvolutionCheck): number {
   if (check.done) return 100
   if (check.ready) return 0
-  return 1 + check.missing.length * 2 + check.leveling.length
+  return 1 + check.missing.length
 }

@@ -31,7 +31,7 @@ export function LibraryView({ tab, selectedId }: { tab: 'weapons' | 'passives'; 
   const hasSelection = Boolean(selectedWeapon || selectedPassive)
 
   return (
-    <div className="grid gap-6 md:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] md:items-start">
+    <div className="grid grid-cols-[minmax(0,1fr)] gap-6 md:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] md:items-start">
       <div className={`space-y-3 ${hasSelection ? 'hidden md:block' : ''}`}>
         <div className="grid grid-cols-2 gap-1 rounded-xl bg-night-800 p-1" role="tablist" aria-label="Bibliothek">
           {(
@@ -130,7 +130,6 @@ function DetailHeader({ entry, children }: { entry: Weapon | PassiveItem; childr
         <h1 className="text-2xl leading-tight font-bold">{entry.name}</h1>
         <div className="flex flex-wrap gap-1.5">
           {children}
-          <Pill>Max. Stufe {entry.maxLevel}</Pill>
           <SourceBadge source={entry.source} />
           <UnverifiedBadge verified={entry.verified} />
         </div>

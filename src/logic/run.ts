@@ -2,10 +2,12 @@ import { MAX_PASSIVE_SLOTS, MAX_WEAPON_SLOTS } from '../data/types.ts'
 import type { CharacterId, Evolution, PassiveId, WeaponId } from '../data/types.ts'
 import type { Catalog } from './catalog.ts'
 
-/** Eine Waffe oder ein Gegenstand im aktuellen Lauf, mit Stufe. */
+/**
+ * Eine Waffe oder ein Gegenstand im aktuellen Lauf.
+ * Stufen werden bewusst nicht erfasst: Der Tracker merkt sich nur, was du hast.
+ */
 export interface OwnedItem {
   id: string
-  level: number
 }
 
 /** Der aktuelle Lauf, so wie er im Browser gespeichert wird. */
@@ -20,14 +22,12 @@ export const EMPTY_RUN: RunState = { character: null, weapons: [], passives: [] 
 export const isRunEmpty = (run: RunState) =>
   run.character === null && run.weapons.length === 0 && run.passives.length === 0
 
-const clampLevel = (level: number, maxLevel: number) => Math.min(Math.max(1, Math.round(level)), maxLevel)
-
-/** Neuer Lauf mit einem Charakter und seinen Startwaffen auf Stufe 1. */
+/** Neuer Lauf mit einem Charakter und seinen Startwaffen. */
 export function startRun(catalog: Catalog, character: CharacterId): RunState {
   const weapons = (catalog.character(character)?.startingWeapons ?? [])
     .filter((id) => catalog.weapon(id))
     .slice(0, MAX_WEAPON_SLOTS)
-    .map((id) => ({ id, level: 1 }))
+    .map((id) => ({ id }))
   return { character, weapons, passives: [] }
 }
 
@@ -47,14 +47,14 @@ export function freePassiveSlots(run: RunState, catalog: Catalog): number {
 export function addWeapon(run: RunState, catalog: Catalog, id: WeaponId): RunState {
   if (!catalog.weapon(id) || run.weapons.some((w) => w.id === id)) return run
   if (freeWeaponSlots(run) === 0) return run
-  return { ...run, weapons: [...run.weapons, { id, level: 1 }] }
+  return { ...run, weapons: [...run.weapons, { id }] }
 }
 
 export function addPassive(run: RunState, catalog: Catalog, id: PassiveId): RunState {
   const passive = catalog.passive(id)
   if (!passive || run.passives.some((p) => p.id === id)) return run
   if (!passive.noSlot && !passive.ignoresSlotLimit && freePassiveSlots(run, catalog) === 0) return run
-  return { ...run, passives: [...run.passives, { id, level: 1 }] }
+  return { ...run, passives: [...run.passives, { id }] }
 }
 
 /** Kann dieser Gegenstand gerade noch aufgenommen werden? */
@@ -70,16 +70,6 @@ export function removePassive(run: RunState, id: PassiveId): RunState {
   return { ...run, passives: run.passives.filter((p) => p.id !== id) }
 }
 
-export function setWeaponLevel(run: RunState, catalog: Catalog, id: WeaponId, level: number): RunState {
-  const max = catalog.weapon(id)?.maxLevel ?? 1
-  return { ...run, weapons: run.weapons.map((w) => (w.id === id ? { ...w, level: clampLevel(level, max) } : w)) }
-}
-
-export function setPassiveLevel(run: RunState, catalog: Catalog, id: PassiveId, level: number): RunState {
-  const max = catalog.passive(id)?.maxLevel ?? 1
-  return { ...run, passives: run.passives.map((p) => (p.id === id ? { ...p, level: clampLevel(level, max) } : p)) }
-}
-
 /**
  * Trägt eine erhaltene Entwicklung in den Lauf ein:
  * - Entwicklung und Morph ersetzen die Ausgangswaffe an ihrem Platz
@@ -90,7 +80,7 @@ export function setPassiveLevel(run: RunState, catalog: Catalog, id: PassiveId, 
 export function applyEvolution(run: RunState, catalog: Catalog, evolution: Evolution): RunState {
   const result = catalog.weapon(evolution.result)
   if (!result || run.weapons.some((w) => w.id === result.id)) return run
-  const evolved: OwnedItem = { id: result.id, level: result.maxLevel > 1 ? 1 : result.maxLevel }
+  const evolved: OwnedItem = { id: result.id }
   const inputs = new Set(evolution.weapons.map((w) => w.id))
   const consumed = new Set(evolution.passives.filter((p) => p.consumed).map((p) => p.id))
   const passives = consumed.size > 0 ? run.passives.filter((p) => !consumed.has(p.id)) : run.passives
@@ -109,21 +99,22 @@ export function applyEvolution(run: RunState, catalog: Catalog, evolution: Evolu
   return { ...run, weapons, passives }
 }
 
-/** Prüft gespeicherte Daten und wirft unbekannte oder doppelte Einträge heraus. */
+/**
+ * Prüft gespeicherte Daten und wirft unbekannte oder doppelte Einträge heraus.
+ * Ältere Stände mit Stufenangaben werden ohne Stufe übernommen.
+ */
 export function sanitizeRun(raw: unknown, catalog: Catalog): RunState {
   if (!raw || typeof raw !== 'object') return EMPTY_RUN
   const value = raw as Partial<Record<keyof RunState, unknown>>
-  const items = (list: unknown, max: number, lookup: (id: string) => { maxLevel: number } | undefined) => {
+  const items = (list: unknown, max: number, exists: (id: string) => unknown) => {
     if (!Array.isArray(list)) return []
     const seen = new Set<string>()
     const result: OwnedItem[] = []
     for (const item of list) {
-      if (!item || typeof item !== 'object') continue
-      const { id, level } = item as Partial<OwnedItem>
-      const entry = typeof id === 'string' ? lookup(id) : undefined
-      if (!entry || seen.has(id!)) continue
-      seen.add(id!)
-      result.push({ id: id!, level: clampLevel(typeof level === 'number' ? level : 1, entry.maxLevel) })
+      const id = item && typeof item === 'object' ? (item as { id?: unknown }).id : undefined
+      if (typeof id !== 'string' || !exists(id) || seen.has(id)) continue
+      seen.add(id)
+      result.push({ id })
     }
     return result.slice(0, max)
   }
