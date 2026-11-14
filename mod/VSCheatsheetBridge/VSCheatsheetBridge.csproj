@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!--
+    BepInEx-6-Plugin (IL2CPP) für Vampire Survivors.
+    Die Referenzen kommen aus der eigenen Spielinstallation: BepInEx erzeugt
+    die Interop-DLLs beim ersten Spielstart in BepInEx/interop.
+    Spielordner per Umgebungsvariable VS_GAME_DIR oder -p:GameDir=... setzen.
+  -->
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <AssemblyName>VSCheatsheetBridge</AssemblyName>
+    <RootNamespace>VSCheatsheetBridge</RootNamespace>
+    <Version>0.2.0</Version>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GameDir Condition="'$(GameDir)' == ''">$(VS_GAME_DIR)</GameDir>
+    <GameDir Condition="'$(GameDir)' == ''">C:\Program Files (x86)\Steam\steamapps\common\Vampire Survivors</GameDir>
+    <BepInExCore>$(GameDir)\BepInEx\core</BepInExCore>
+    <BepInExInterop>$(GameDir)\BepInEx\interop</BepInExInterop>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="BepInEx.Core"><HintPath>$(BepInExCore)\BepInEx.Core.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="BepInEx.Unity.IL2CPP"><HintPath>$(BepInExCore)\BepInEx.Unity.IL2CPP.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Il2CppInterop.Runtime"><HintPath>$(BepInExCore)\Il2CppInterop.Runtime.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="0Harmony"><HintPath>$(BepInExCore)\0Harmony.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Il2Cppmscorlib"><HintPath>$(BepInExInterop)\Il2Cppmscorlib.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(BepInExInterop)\UnityEngine.CoreModule.dll</HintPath><Private>false</Private></Reference>
+    <!-- Spiel-Code: nur für die Bilder (SpriteManager, Waffendaten); alles andere per Reflection. -->
+    <Reference Include="VampireSurvivors.Runtime"><HintPath>$(BepInExInterop)\VampireSurvivors.Runtime.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.UIModule"><HintPath>$(BepInExInterop)\UnityEngine.UIModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.UI"><HintPath>$(BepInExInterop)\UnityEngine.UI.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Unity.TextMeshPro"><HintPath>$(BepInExInterop)\Unity.TextMeshPro.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Il2CppSystem"><HintPath>$(BepInExInterop)\Il2CppSystem.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+
+  <!-- Namen und Entwicklungen für das Overlay kommen aus den Daten der App (eine Quelle). Braucht Node.js. -->
+  <Target Name="ExportCheatsheetData" AfterTargets="Build">
+    <Exec Command="node &quot;$(MSBuildThisFileDirectory)..\..\scripts\export-mod-data.mjs&quot; &quot;$(OutDir)cheatsheet-data.json&quot;" />
+  </Target>
+
+  <!--
+    Nach dem Build direkt in den Plugin-Ordner des Spiels kopieren (nur wenn BepInEx dort installiert ist).
+    Läuft das Spiel, ist die DLL gesperrt: dann nur eine Warnung, Spiel beenden und erneut bauen.
+  -->
+  <Target Name="CopyToGame" AfterTargets="ExportCheatsheetData" Condition="Exists('$(GameDir)\BepInEx\plugins')">
+    <Copy SourceFiles="$(TargetPath);$(OutDir)cheatsheet-data.json" DestinationFolder="$(GameDir)\BepInEx\plugins\VSCheatsheetBridge" Retries="0" ContinueOnError="WarnAndContinue" />
+  </Target>
+</Project>
