@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "type": "module",
   "description": "Inoffizielle Begleit-App (PWA) für Vampire Survivors: Evolutionen, Lauf-Tracker, Empfehlungen",
+  "license": "MIT",
   "engines": {
     "node": ">=22.12"
   },

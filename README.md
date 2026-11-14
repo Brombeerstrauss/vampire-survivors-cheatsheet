@@ -198,10 +198,16 @@ Weitere Hinweise:
 
 ## Quellen und Lizenz
 
-Die Spieldaten stammen aus dem offiziellen
-[Vampire Survivors Wiki](https://vampire.survivors.wiki/) und stehen wie dieses unter
-[CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/). Sie dürfen also nur
-nicht-kommerziell und unter derselben Lizenz weitergegeben werden.
+Das Projekt hat zwei Lizenzen:
+
+- **Programmcode:** [MIT-Lizenz](LICENSE). Jeder darf ihn nutzen, ändern und weitergeben.
+- **Spieldaten** (`src/data/packs/` und die deutschen Texte unter `tools/wiki-import/texts/`):
+  [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/deed.de), weil sie aus
+  dem offiziellen [Vampire Survivors Wiki](https://vampire.survivors.wiki/) stammen. Sie
+  dürfen nur nicht-kommerziell, mit Quellenangabe und unter derselben Lizenz weitergegeben
+  werden. Einzelheiten stehen in [LICENSE-DATA.md](LICENSE-DATA.md).
+
+Der Programmcode wurde mit Claude Code geschrieben, einem KI-Werkzeug von Anthropic.
 
 Die Bilder von Charakteren, Waffen und Gegenständen sind Grafiken aus dem Spiel und gehören
 poncle. Eine Erlaubnis von poncle für ihre Nutzung in Fan-Projekten liegt nicht vor; die App
