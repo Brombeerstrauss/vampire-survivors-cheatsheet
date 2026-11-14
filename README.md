@@ -55,22 +55,6 @@ The app then runs at http://localhost:5173. Other commands:
 | `npm run lint` | Check the code for common mistakes |
 | `npm run icons` | Regenerate the app icons from `public/logo.svg` |
 
-## Deploy
-
-The app is a static site: the contents of `dist` can go to any static host. It uses relative
-paths and hash URLs (`#/run`), so no extra configuration is needed.
-
-This repository deploys itself to **GitHub Pages** with the workflow in
-`.github/workflows/deploy.yml`. To do the same in your own fork:
-
-1. Fork the repository (it has to be public, otherwise Pages needs a paid plan).
-2. In the repository, go to *Settings → Pages → Build and deployment → Source* and choose
-   "GitHub Actions".
-3. Every push to `main` runs the tests, builds the app and publishes it at
-   `https://<username>.github.io/<repository>/`.
-
-Other free static hosts work too, for example Netlify Drop (drag the `dist` folder onto
-https://app.netlify.com/drop) or Cloudflare Pages (upload `dist` as assets).
 
 ## Install on the iPhone
 
