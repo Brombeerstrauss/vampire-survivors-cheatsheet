@@ -110,8 +110,9 @@ unter `.github/workflows/deploy.yml`.
 4. Namen bestätigen und **„Hinzufügen“** tippen.
 
 Die App startet dann vom Home-Bildschirm im Vollbild, ohne Safari-Leisten. Nach dem ersten
-Öffnen funktioniert sie auch ohne Internet. Neue Versionen lädt sie automatisch, sobald du
-sie mit Internetverbindung öffnest; eventuell musst du sie einmal schließen und neu öffnen.
+Öffnen funktioniert sie auch ohne Internet. Neue Versionen holt sie sich automatisch, sobald
+du sie mit Internetverbindung öffnest: Sie lädt sich dann einmal kurz neu. Welche Version
+läuft, steht unten in den Einstellungen.
 
 Lauf und Einstellungen liegen pro Gerät: Am iPhone und am PC hast du jeweils einen eigenen
 Lauf.
