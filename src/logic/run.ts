@@ -17,6 +17,9 @@ export interface RunState {
 
 export const EMPTY_RUN: RunState = { character: null, weapons: [], passives: [] }
 
+export const isRunEmpty = (run: RunState) =>
+  run.character === null && run.weapons.length === 0 && run.passives.length === 0
+
 const clampLevel = (level: number, maxLevel: number) => Math.min(Math.max(1, Math.round(level)), maxLevel)
 
 /** Neuer Lauf mit einem Charakter und seinen Startwaffen auf Stufe 1. */

@@ -256,6 +256,11 @@ describe('Vorschläge', () => {
     expect(result.hints).toHaveLength(2)
   })
 
+  it('schlägt keine Waffe vor, die im Lauf schon entwickelt wurde', () => {
+    const r = run({ character: 'antonio', weapons: [{ id: 'bloody-tear', level: 1 }], passives: [{ id: 'hollow-heart', level: 1 }] })
+    expect(suggestNext(r, baseOnly).suggestions.map((s) => s.id)).not.toContain('whip')
+  })
+
   it('schlägt nichts vor, was schon im Lauf ist', () => {
     const r = run({ character: 'antonio', weapons: [{ id: 'whip', level: 8 }, { id: 'axe', level: 1 }], passives: [{ id: 'hollow-heart', level: 1 }, { id: 'spinach', level: 1 }] })
     expect(suggestNext(r, baseOnly).suggestions).toEqual([])

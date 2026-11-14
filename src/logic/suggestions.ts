@@ -145,8 +145,12 @@ export function suggestNext(run: RunState, catalog: Catalog): SuggestionResult {
     }
   }
 
+  // Waffen, die im Lauf schon zu etwas anderem entwickelt wurden, nicht noch einmal vorschlagen
+  const alreadyEvolved = (id: string) =>
+    catalog.evolutionsFromWeapon(id).some((e) => e.kind !== 'gift' && ownedWeapons.has(e.result))
+
   const suggestions = [...collected.values()]
-    .filter((s) => !(s.type === 'weapon' && ownedWeapons.has(s.id)))
+    .filter((s) => !(s.type === 'weapon' && (ownedWeapons.has(s.id) || alreadyEvolved(s.id))))
     .filter((s) => !(s.type === 'passive' && ownedPassives.has(s.id)))
     .filter((s) => (s.type === 'weapon' ? freeWeapons > 0 : freePassives > 0 || !slotNeeded(s.id)))
     .sort((a, b) => a.rank - b.rank || b.reasons.length - a.reasons.length)

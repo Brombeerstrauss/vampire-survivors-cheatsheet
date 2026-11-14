@@ -1,12 +1,14 @@
 {
   "$schema": "./schema/packs.schema.json",
   "packs": [
-    {
-      "id": "base",
-      "name": "Basisspiel",
-      "kind": "base",
-      "paid": false,
-      "verified": true
-    }
+    { "id": "base", "name": "Basisspiel", "kind": "base", "paid": false, "verified": true },
+    { "id": "legacy-of-the-moonspell", "name": "Legacy of the Moonspell", "kind": "dlc", "paid": true, "released": "2022-12-15", "verified": true },
+    { "id": "tides-of-the-foscari", "name": "Tides of the Foscari", "kind": "dlc", "paid": true, "released": "2023-04-13", "verified": true },
+    { "id": "emergency-meeting", "name": "Emergency Meeting", "kind": "dlc", "paid": true, "released": "2023-12-18", "verified": true },
+    { "id": "operation-guns", "name": "Operation Guns", "kind": "dlc", "paid": true, "released": "2024-05-09", "verified": true },
+    { "id": "ode-to-castlevania", "name": "Ode to Castlevania", "kind": "dlc", "paid": true, "released": "2024-10-31", "verified": true },
+    { "id": "emerald-diorama", "name": "Emerald Diorama", "kind": "dlc", "paid": false, "released": "2025-04-10", "verified": true },
+    { "id": "ante-chamber", "name": "Ante Chamber", "kind": "dlc", "paid": false, "released": "2025-10-28", "verified": true },
+    { "id": "legacy-of-the-bloodmoon", "name": "Legacy of the Bloodmoon", "kind": "dlc", "paid": true, "released": "2026-08-28", "verified": true }
   ]
 }
