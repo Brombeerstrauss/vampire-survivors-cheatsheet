@@ -20,3 +20,6 @@ npm-debug.log*
 
 # Claude Code (lokale Werkzeug-Einstellungen)
 .claude
+
+# Python
+__pycache__
