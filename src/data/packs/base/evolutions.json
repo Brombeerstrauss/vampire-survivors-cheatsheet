@@ -1,0 +1,15 @@
+{
+  "$schema": "../../schema/evolutions.schema.json",
+  "evolutions": [
+    {
+      "id": "bloody-tear",
+      "kind": "evolution",
+      "source": "base",
+      "result": "bloody-tear",
+      "weapons": [{ "id": "whip" }],
+      "passives": [{ "id": "hollow-heart" }],
+      "verified": false,
+      "note": "Beispieleintrag für das Datenmodell, noch nicht gegen das Wiki geprüft."
+    }
+  ]
+}

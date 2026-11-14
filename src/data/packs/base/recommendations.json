@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schema/recommendations.schema.json",
+  "recommendations": [
+    {
+      "character": "antonio-belpaese",
+      "source": "base",
+      "summary": "Beispiel: Antonio wird mit jedem zehnten Level stärker, also lohnen sich Waffen mit hohem Grundschaden.",
+      "weapons": [
+        { "id": "whip", "reason": "Startwaffe; entwickelt sich mit Hollow Heart zu Bloody Tear.", "priority": 1 }
+      ],
+      "passives": [
+        { "id": "hollow-heart", "reason": "Nötig für Bloody Tear und macht den Nahkämpfer robuster.", "priority": 1 }
+      ]
+    }
+  ]
+}

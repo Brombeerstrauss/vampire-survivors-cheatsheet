@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schema/characters.schema.json",
+  "characters": [
+    {
+      "id": "antonio-belpaese",
+      "name": "Antonio Belpaese",
+      "source": "base",
+      "startingWeapons": ["whip"],
+      "bonus": "Erhält alle 10 Level +10 % Macht (bis +50 %).",
+      "secret": false,
+      "emoji": "🧛",
+      "verified": false,
+      "note": "Beispieleintrag für das Datenmodell, noch nicht gegen das Wiki geprüft."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "../../schema/weapons.schema.json",
+  "weapons": [
+    {
+      "id": "whip",
+      "name": "Whip",
+      "source": "base",
+      "kind": "base",
+      "description": "Schlägt waagerecht zu und trifft alle Gegner in der Bahn.",
+      "maxLevel": 8,
+      "emoji": "🪢",
+      "verified": false,
+      "note": "Beispieleintrag für das Datenmodell, noch nicht gegen das Wiki geprüft."
+    },
+    {
+      "id": "bloody-tear",
+      "name": "Bloody Tear",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Entwickelte Whip: kann kritisch treffen und heilt bei Treffern.",
+      "maxLevel": 1,
+      "emoji": "🩸",
+      "verified": false,
+      "note": "Beispieleintrag für das Datenmodell, noch nicht gegen das Wiki geprüft."
+    }
+  ]
+}

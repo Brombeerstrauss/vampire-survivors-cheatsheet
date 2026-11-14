@@ -1,0 +1,12 @@
+{
+  "$schema": "./schema/packs.schema.json",
+  "packs": [
+    {
+      "id": "base",
+      "name": "Basisspiel",
+      "kind": "base",
+      "paid": false,
+      "verified": true
+    }
+  ]
+}

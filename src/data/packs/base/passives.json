@@ -1,0 +1,15 @@
+{
+  "$schema": "../../schema/passives.schema.json",
+  "passives": [
+    {
+      "id": "hollow-heart",
+      "name": "Hollow Heart",
+      "source": "base",
+      "description": "Erhöht die maximale Gesundheit um 20 % pro Stufe.",
+      "maxLevel": 5,
+      "emoji": "🖤",
+      "verified": false,
+      "note": "Beispieleintrag für das Datenmodell, noch nicht gegen das Wiki geprüft."
+    }
+  ]
+}

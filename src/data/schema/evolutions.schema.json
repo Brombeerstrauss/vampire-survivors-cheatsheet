@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Entwicklungen, Unions und Geschenke eines Pakets",
+  "type": "object",
+  "required": ["evolutions"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "evolutions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "kind", "source", "result", "weapons", "passives", "verified"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "$ref": "common.schema.json#/definitions/id" },
+          "kind": {
+            "enum": ["evolution", "union", "gift"],
+            "description": "evolution = Waffe wird ersetzt, union = mehrere Waffen verschmelzen, gift = Ausgangswaffe bleibt und das Ergebnis kommt dazu."
+          },
+          "source": { "$ref": "common.schema.json#/definitions/source" },
+          "result": {
+            "$ref": "common.schema.json#/definitions/id",
+            "description": "Kennung der entwickelten Waffe (Eintrag mit kind: evolved)."
+          },
+          "weapons": {
+            "type": "array",
+            "minItems": 1,
+            "description": "Benötigte Waffen: eine bei Entwicklungen, mehrere bei Unions.",
+            "items": {
+              "type": "object",
+              "required": ["id"],
+              "additionalProperties": false,
+              "properties": {
+                "id": { "$ref": "common.schema.json#/definitions/id" },
+                "level": {
+                  "$ref": "common.schema.json#/definitions/level",
+                  "description": "Standard: max."
+                }
+              }
+            }
+          },
+          "passives": {
+            "type": "array",
+            "description": "Benötigte passive Gegenstände; darf leer sein.",
+            "items": {
+              "type": "object",
+              "required": ["id"],
+              "additionalProperties": false,
+              "properties": {
+                "id": { "$ref": "common.schema.json#/definitions/id" },
+                "level": {
+                  "$ref": "common.schema.json#/definitions/level",
+                  "description": "Standard: any (Besitz reicht)."
+                }
+              }
+            }
+          },
+          "conditions": {
+            "type": "array",
+            "items": { "$ref": "common.schema.json#/definitions/text" },
+            "description": "Weitere Bedingungen als Text, z. B. bestimmter Charakter oder Zeitpunkt."
+          },
+          "verified": { "$ref": "common.schema.json#/definitions/verified" },
+          "note": { "type": "string" }
+        }
+      }
+    }
+  }
+}

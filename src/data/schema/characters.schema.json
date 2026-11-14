@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Charaktere eines Pakets",
+  "type": "object",
+  "required": ["characters"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "characters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "source", "startingWeapons", "bonus", "secret", "verified"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "$ref": "common.schema.json#/definitions/id" },
+          "name": { "$ref": "common.schema.json#/definitions/name" },
+          "source": { "$ref": "common.schema.json#/definitions/source" },
+          "startingWeapons": {
+            "type": "array",
+            "items": { "$ref": "common.schema.json#/definitions/id" },
+            "uniqueItems": true,
+            "description": "Kennungen der Startwaffen. Meist genau eine, darf leer sein."
+          },
+          "bonus": {
+            "type": "string",
+            "description": "Besonderheit des Charakters in einem Satz (deutsch)."
+          },
+          "secret": {
+            "type": "boolean",
+            "description": "Geheimer Charakter; lässt sich über den Spoiler-Schalter ausblenden."
+          },
+          "unlock": { "type": "string", "description": "Wie man den Charakter freischaltet." },
+          "emoji": { "$ref": "common.schema.json#/definitions/emoji" },
+          "icon": { "$ref": "common.schema.json#/definitions/icon" },
+          "verified": { "$ref": "common.schema.json#/definitions/verified" },
+          "note": { "type": "string" }
+        }
+      }
+    }
+  }
+}

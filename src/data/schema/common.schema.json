@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Gemeinsame Bausteine",
+  "definitions": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Kennung: Kleinbuchstaben, Ziffern und Bindestriche, z. B. magic-wand."
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Englischer Name wie im Spiel."
+    },
+    "source": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Paket, aus dem der Eintrag stammt: base oder die Kennung eines DLCs (= Ordnername)."
+    },
+    "verified": {
+      "type": "boolean",
+      "description": "false, solange der Eintrag nicht sicher gegen das Wiki geprüft ist."
+    },
+    "emoji": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 16,
+      "description": "Platzhalter-Symbol, solange kein eigenes Icon hinterlegt ist."
+    },
+    "icon": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9._/-]+\\.(png|webp|svg|jpg|jpeg|gif)$",
+      "description": "Dateiname eines eigenen Icons in public/custom-icons/."
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "level": {
+      "enum": ["max", "any"],
+      "description": "max = Maximalstufe nötig, any = Besitz reicht."
+    },
+    "maxLevel": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Höchste Stufe."
+    }
+  }
+}

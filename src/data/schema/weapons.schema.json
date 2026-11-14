@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Waffen eines Pakets (Basiswaffen und entwickelte Waffen)",
+  "type": "object",
+  "required": ["weapons"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "weapons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "source", "kind", "description", "maxLevel", "verified"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "$ref": "common.schema.json#/definitions/id" },
+          "name": { "$ref": "common.schema.json#/definitions/name" },
+          "source": { "$ref": "common.schema.json#/definitions/source" },
+          "kind": {
+            "enum": ["base", "evolved"],
+            "description": "evolved = Ergebnis einer Entwicklung, Union oder eines Geschenks."
+          },
+          "description": { "type": "string", "description": "Was die Waffe tut (deutsch)." },
+          "maxLevel": { "$ref": "common.schema.json#/definitions/maxLevel" },
+          "exclusiveTo": {
+            "type": "array",
+            "items": { "$ref": "common.schema.json#/definitions/id" },
+            "minItems": 1,
+            "uniqueItems": true,
+            "description": "Nur diese Charaktere können die Waffe führen. Weglassen, wenn frei wählbar."
+          },
+          "unlock": { "type": "string", "description": "Wie man die Waffe freischaltet." },
+          "emoji": { "$ref": "common.schema.json#/definitions/emoji" },
+          "icon": { "$ref": "common.schema.json#/definitions/icon" },
+          "verified": { "$ref": "common.schema.json#/definitions/verified" },
+          "note": { "type": "string" }
+        }
+      }
+    }
+  }
+}
