@@ -1,0 +1,22 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-night-950: #0d0714;
+  --color-night-900: #140b1f;
+  --color-night-800: #1e1230;
+  --color-night-700: #2b1a45;
+  --color-blood-500: #c0283a;
+  --color-gold-300: #ffe9a3;
+  --color-gold-500: #e0a021;
+}
+
+html {
+  background-color: var(--color-night-900);
+  color-scheme: dark;
+}
+
+body {
+  min-height: 100dvh;
+  color: #f3eefa;
+  -webkit-tap-highlight-color: transparent;
+}
