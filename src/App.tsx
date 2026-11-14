@@ -45,7 +45,8 @@ function Shell() {
         >
           <a href="#/charaktere" className="flex items-center gap-2 font-bold text-gold-300">
             <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="" className="size-7 rounded-lg" />
-            VS Companion
+            <span className="sm:hidden">VS Cheatsheet</span>
+            <span className="hidden sm:inline">Vampire Survivors Cheatsheet</span>
           </a>
           <nav className="ml-auto hidden gap-1 md:flex" aria-label="Hauptnavigation">
             {NAV.map((item) => (

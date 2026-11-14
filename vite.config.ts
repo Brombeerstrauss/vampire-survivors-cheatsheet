@@ -16,8 +16,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'logo.svg', 'apple-touch-icon-180x180.png', 'custom-icons/**/*'],
       manifest: {
-        name: 'VS Companion – Begleiter für Vampire Survivors',
-        short_name: 'VS Companion',
+        name: 'Vampire Survivors Cheatsheet',
+        short_name: 'VS Cheatsheet',
         description:
           'Inoffizielle Begleit-App für Vampire Survivors: Entwicklungen, Lauf-Tracker und Empfehlungen.',
         lang: 'de',

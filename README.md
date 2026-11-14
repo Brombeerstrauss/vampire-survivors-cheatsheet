@@ -1,4 +1,4 @@
-# VS Companion
+# Vampire Survivors Cheatsheet
 
 Inoffizielle Begleit-App für **Vampire Survivors** als Web-App (PWA). Sie läuft im Browser
 am PC und auf dem iPhone, lässt sich dort auf den Home-Bildschirm legen und funktioniert
@@ -7,7 +7,7 @@ danach auch offline.
 Die Oberfläche ist deutsch, Namen von Charakteren, Waffen und Gegenständen bleiben englisch
 wie im Spiel.
 
-**App öffnen:** https://brombeerstrauss.github.io/vs-companion/
+**App öffnen:** https://brombeerstrauss.github.io/vampire-survivors-cheatsheet/
 
 ## Funktionen
 
