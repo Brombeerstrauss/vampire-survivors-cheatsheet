@@ -1,30 +1,51 @@
 import { useState, type ReactNode } from 'react'
 import { gameData } from '../data/index.ts'
 import type { PackId } from '../data/types.ts'
+import { useAppState } from '../state/context.ts'
 
 const iconBase = `${import.meta.env.BASE_URL}custom-icons/`
 
-/** Eigenes Icon aus `public/custom-icons/`, sonst das Platzhalter-Emoji. */
+/**
+ * Bild eines Eintrags. Reihenfolge: eigenes Icon aus `public/custom-icons/`,
+ * dann das Originalbild aus dem Wiki (falls in den Einstellungen erlaubt),
+ * sonst das Platzhalter-Emoji. Lädt ein Bild nicht, kommt das nächste dran.
+ */
 export function EntryIcon({
   entry,
   size = 'md',
 }: {
-  entry: { name: string; emoji?: string; icon?: string }
+  entry: { name: string; emoji?: string; icon?: string; image?: string }
   size?: 'sm' | 'md' | 'lg'
 }) {
-  const [broken, setBroken] = useState(false)
-  const box = { sm: 'size-8 text-lg', md: 'size-11 text-2xl', lg: 'size-16 text-4xl' }[size]
+  const { settings } = useAppState()
+  const [failed, setFailed] = useState<string[]>([])
+  const [smallSource, setSmallSource] = useState(false)
+  const box = { sm: 'size-8 text-lg', md: 'size-11 text-2xl', lg: 'size-20 text-5xl' }[size]
+
+  const sources = [
+    entry.icon ? { src: iconBase + entry.icon, remote: false } : null,
+    settings.showImages && entry.image ? { src: entry.image, remote: true } : null,
+  ].filter((s): s is { src: string; remote: boolean } => s !== null && !failed.includes(s.src))
+  const current = sources[0]
+
   return (
     <span
       className={`${box} inline-flex shrink-0 items-center justify-center overflow-hidden rounded-xl bg-night-700/80 ring-1 ring-white/10`}
       aria-hidden="true"
     >
-      {entry.icon && !broken ? (
+      {current ? (
         <img
-          src={iconBase + entry.icon}
+          key={current.src}
+          src={current.src}
           alt=""
-          className="size-full object-contain [image-rendering:pixelated]"
-          onError={() => setBroken(true)}
+          loading="lazy"
+          decoding="async"
+          // CORS-Anfrage, damit der Service Worker die Bilder für den Offline-Betrieb speichern kann
+          crossOrigin={current.remote ? 'anonymous' : undefined}
+          referrerPolicy={current.remote ? 'no-referrer' : undefined}
+          className={`size-full object-contain ${smallSource ? '[image-rendering:pixelated]' : ''}`}
+          onLoad={(e) => setSmallSource(e.currentTarget.naturalWidth <= 64)}
+          onError={() => setFailed((f) => [...f, current.src])}
         />
       ) : (
         <span className="leading-none">{entry.emoji ?? '❔'}</span>

@@ -9,6 +9,7 @@
       "description": "Schadet Gegnern und stößt sie weg.",
       "maxLevel": 8,
       "emoji": "📢",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Report%21.png",
       "verified": true
     },
     {
@@ -19,6 +20,7 @@
       "description": "Die Zahl der Angriffe hängt von der Anzahl und von niedrigem Glück ab.",
       "maxLevel": 8,
       "emoji": "💳",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Lucky_Swipe.png",
       "verified": true
     },
     {
@@ -29,6 +31,7 @@
       "description": "Heilt abhängig von Anzahl und Regeneration.",
       "maxLevel": 8,
       "emoji": "📈",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Lifesign_Scan.png",
       "verified": true
     },
     {
@@ -39,6 +42,7 @@
       "description": "Vernichtet Gegner oder schadet ihnen schwer; die Anzahl bestimmt, wie oft er auslöst.",
       "maxLevel": 8,
       "emoji": "🕳️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Just_Vent.png",
       "verified": true
     },
     {
@@ -49,6 +53,7 @@
       "description": "Erzeugt mitwandernde Zonen, aus denen Projektile kommen.",
       "maxLevel": 8,
       "emoji": "☄️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Clear_Debris.png",
       "verified": true
     },
     {
@@ -59,6 +64,7 @@
       "description": "Trifft Gegner vor dir; der Schaden wird mit der Regeneration multipliziert.",
       "maxLevel": 8,
       "emoji": "👅",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Sharp_Tongue.png",
       "verified": true
     },
     {
@@ -69,6 +75,7 @@
       "description": "Erzeugt Zonen, die bei Berührung explodieren; die Anzahl bestimmt die Zahl der Explosionsgruppen.",
       "maxLevel": 8,
       "emoji": "🪨",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Science_Rocks.png",
       "verified": true
     },
     {
@@ -79,6 +86,7 @@
       "description": "Wirft niedliche, abprallende Projektile mit zufälligen Eigenschaften.",
       "maxLevel": 8,
       "emoji": "🎩",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Hats.png",
       "verified": true
     },
     {
@@ -89,6 +97,7 @@
       "description": "Entwicklung von Report!: vernichtet gelegentlich alle Gegner einer Art.",
       "maxLevel": 1,
       "emoji": "🚨",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Emergency_Meeting.png",
       "verified": true
     },
     {
@@ -99,6 +108,7 @@
       "description": "Entwicklung von Lucky Swipe: greift in bis zu vier Richtungen an.",
       "maxLevel": 1,
       "emoji": "🔌",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Crossed_Wires.png",
       "verified": true
     },
     {
@@ -109,6 +119,7 @@
       "description": "Entwicklung von Lifesign Scan: gibt regelmäßig einen dauerhaften zufälligen Werte-Bonus.",
       "maxLevel": 1,
       "emoji": "🔮",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Paranormal_Scan.png",
       "verified": true
     },
     {
@@ -119,6 +130,7 @@
       "description": "Entwicklung von Just Vent: saugt Gegner ein.",
       "maxLevel": 1,
       "emoji": "🌀",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Unjust_Ejection.png",
       "verified": true
     },
     {
@@ -129,6 +141,7 @@
       "description": "Entwicklung von Clear Debris: die Anzahl erzeugt Explosionsgruppen.",
       "maxLevel": 1,
       "emoji": "🌠",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Clear_Asteroids.png",
       "verified": true
     },
     {
@@ -139,6 +152,7 @@
       "description": "Entwicklung von Sharp Tongue: hoher Schaden am stärksten Gegner und allem auf dem Weg.",
       "maxLevel": 1,
       "emoji": "🗡️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Impostongue.png",
       "verified": true
     },
     {
@@ -149,6 +163,7 @@
       "description": "Entwicklung von Science Rocks: löst unter den richtigen Bedingungen einen Abschluss-Angriff aus.",
       "maxLevel": 1,
       "emoji": "🚀",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Rocket_Science.png",
       "verified": true
     }
   ]

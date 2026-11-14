@@ -8,6 +8,7 @@
       "description": "Erhöht den verursachten Schaden um 10 % pro Stufe.",
       "maxLevel": 5,
       "emoji": "🥬",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Spinach.png",
       "verified": true
     },
     {
@@ -17,6 +18,7 @@
       "description": "Verringert erlittenen Schaden um 1 und erhöht den Vergeltungsschaden um 10 % pro Stufe.",
       "maxLevel": 5,
       "emoji": "🛡️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Armor.png",
       "verified": true
     },
     {
@@ -26,6 +28,7 @@
       "description": "Erhöht die max. Gesundheit um 20 % pro Stufe.",
       "maxLevel": 5,
       "emoji": "🖤",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Hollow_Heart.png",
       "verified": true
     },
     {
@@ -35,6 +38,7 @@
       "description": "Regeneriert 0,2 Gesundheit pro Sekunde pro Stufe.",
       "maxLevel": 5,
       "emoji": "🍅",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Pummarola.png",
       "verified": true
     },
     {
@@ -44,6 +48,7 @@
       "description": "Verringert die Abklingzeit der Waffen um 8 % pro Stufe.",
       "maxLevel": 5,
       "emoji": "📓",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Empty_Tome.png",
       "verified": true
     },
     {
@@ -53,6 +58,7 @@
       "description": "Vergrößert die Fläche der Angriffe um 10 % pro Stufe.",
       "maxLevel": 5,
       "emoji": "🕯️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Candelabrador.png",
       "verified": true
     },
     {
@@ -62,6 +68,7 @@
       "description": "Erhöht die Projektilgeschwindigkeit um 10 % pro Stufe.",
       "maxLevel": 5,
       "emoji": "🦾",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Bracer.png",
       "verified": true
     },
     {
@@ -71,6 +78,7 @@
       "description": "Verlängert die Dauer von Waffeneffekten um 10 % pro Stufe.",
       "maxLevel": 5,
       "emoji": "🔮",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Spellbinder.png",
       "verified": true
     },
     {
@@ -80,6 +88,7 @@
       "description": "Waffen feuern ein zusätzliches Projektil pro Stufe.",
       "maxLevel": 2,
       "emoji": "➕",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Duplicator.png",
       "verified": true
     },
     {
@@ -89,6 +98,7 @@
       "description": "Erhöht die Laufgeschwindigkeit um 10 % pro Stufe.",
       "maxLevel": 5,
       "emoji": "🪽",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Wings.png",
       "verified": true
     },
     {
@@ -98,6 +108,7 @@
       "description": "Sammelt Gegenstände aus größerer Entfernung ein.",
       "maxLevel": 5,
       "emoji": "🧲",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Attractorb.png",
       "verified": true
     },
     {
@@ -107,6 +118,7 @@
       "description": "Erhöht das Glück um 10 % pro Stufe.",
       "maxLevel": 5,
       "emoji": "🍀",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Clover.png",
       "verified": true
     },
     {
@@ -116,6 +128,7 @@
       "description": "Erhöht die gewonnene Erfahrung um 8 % pro Stufe.",
       "maxLevel": 5,
       "emoji": "👑",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Crown.png",
       "verified": true
     },
     {
@@ -125,6 +138,7 @@
       "description": "Erhöht die gesammelten Münzen um 10 % pro Stufe.",
       "maxLevel": 5,
       "emoji": "🗿",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Stone_Mask.png",
       "verified": true
     },
     {
@@ -134,6 +148,7 @@
       "description": "Fluch: Gegner werden pro Stufe 10 % schneller, zäher, zahlreicher und häufiger.",
       "maxLevel": 5,
       "emoji": "💀",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Skull_O%27Maniac.png",
       "verified": true
     },
     {
@@ -143,6 +158,7 @@
       "description": "Gewährt pro Stufe eine Wiederbelebung mit 50 % Gesundheit.",
       "maxLevel": 2,
       "emoji": "🍰",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Tirajis%C3%BA.png",
       "verified": true
     },
     {
@@ -152,6 +168,7 @@
       "description": "Verfluchter Gegenstand: +4 % Macht, Projektilgeschwindigkeit, Dauer und Fläche (bis +25 %), auf Stufe 9 aber +100 % Fluch.",
       "maxLevel": 9,
       "emoji": "📦",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Torrona%27s_Box.png",
       "verified": true
     },
     {
@@ -161,6 +178,7 @@
       "description": "Verlängert die Unverwundbarkeit nach einem Treffer um 50 ms pro Stufe.",
       "maxLevel": 5,
       "emoji": "🔰",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Parm_Aegis.png",
       "verified": true
     },
     {
@@ -170,6 +188,7 @@
       "description": "Erhöht die Zahl der Gegner um 10 und verlängert Goldrausch und Gold Finger um 10 % pro Stufe.",
       "maxLevel": 5,
       "emoji": "🏺",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Karoma%27s_Mana.png",
       "verified": true
     },
     {
@@ -180,6 +199,7 @@
       "maxLevel": 9,
       "stageOnly": true,
       "emoji": "⚪",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Silver_Ring.png",
       "verified": true
     },
     {
@@ -190,6 +210,7 @@
       "maxLevel": 9,
       "stageOnly": true,
       "emoji": "🟡",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Gold_Ring.png",
       "verified": true
     },
     {
@@ -200,6 +221,7 @@
       "maxLevel": 9,
       "stageOnly": true,
       "emoji": "🌘",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Metaglio_Left.png",
       "verified": true
     },
     {
@@ -210,6 +232,7 @@
       "maxLevel": 9,
       "stageOnly": true,
       "emoji": "🌒",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Metaglio_Right.png",
       "verified": true
     }
   ]

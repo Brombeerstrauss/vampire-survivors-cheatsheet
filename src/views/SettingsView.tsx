@@ -44,7 +44,7 @@ function Toggle({
 }
 
 export function SettingsView() {
-  const { settings, setOwnedPack, setShowSecrets } = useAppState()
+  const { settings, setOwnedPack, setShowSecrets, setShowImages } = useAppState()
   const owned = new Set(settings.ownedPacks)
   const all = [...gameData.characters, ...gameData.weapons, ...gameData.passives, ...gameData.evolutions]
   const unverified = all.filter((e) => !e.verified).length
@@ -86,8 +86,14 @@ export function SettingsView() {
         </p>
       </Section>
 
-      <Section title="Spoiler">
-        <Card className="py-1">
+      <Section title="Anzeige">
+        <Card className="divide-y divide-white/8 py-1">
+          <Toggle
+            label="Originalbilder anzeigen"
+            description="Lädt die Grafiken aus dem Spiel vom Vampire Survivors Wiki. Aus: Emojis als Platzhalter."
+            checked={settings.showImages}
+            onChange={setShowImages}
+          />
           <Toggle
             label="Geheime Charaktere anzeigen"
             description="Blendet geheime Charaktere in Listen und Empfehlungen ein."
@@ -117,8 +123,9 @@ export function SettingsView() {
             war, tragen das Zeichen „ungeprüft“ ({unverified} Stück).
           </p>
           <p>
-            Bilder aus dem Spiel sind nicht enthalten. Eigene Icons kannst du im Ordner{' '}
-            <code className="rounded bg-white/10 px-1">public/custom-icons/</code> ablegen.
+            Die Bilder aus dem Spiel gehören poncle. Die App enthält keine Kopien davon, sondern lädt sie direkt vom
+            Wiki; einmal angezeigte Bilder bleiben für den Offline-Betrieb auf deinem Gerät gespeichert. Eigene Icons
+            im Ordner <code className="rounded bg-white/10 px-1">public/custom-icons/</code> haben Vorrang.
           </p>
           <p>
             Inoffizielles Fan-Projekt, nicht verbunden mit poncle. Vampire Survivors ist eine Marke von poncle.

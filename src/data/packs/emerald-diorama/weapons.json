@@ -9,6 +9,7 @@
       "description": "Geschwindigkeit erhöht den Schaden; kann die Technik „Crystalline Carve“ glimmern.",
       "maxLevel": 6,
       "emoji": "🤺",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Fleuret.png",
       "verified": true
     },
     {
@@ -19,6 +20,7 @@
       "description": "Schlägt in Blickrichtung zu; kann „Swallow Slice“ glimmern.",
       "maxLevel": 6,
       "emoji": "🗡️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Town_Sword.png",
       "verified": true
     },
     {
@@ -29,6 +31,7 @@
       "description": "Dauer erhöht den Schaden; kann „Dual Whirlwind“ glimmern.",
       "maxLevel": 8,
       "emoji": "💦",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Splashers.png",
       "verified": true
     },
     {
@@ -39,6 +42,7 @@
       "description": "Wirft rotierende Schwerter nach oben; kann „Bull Crush“ glimmern.",
       "maxLevel": 6,
       "emoji": "⚔️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Flamberge.png",
       "verified": true
     },
     {
@@ -49,6 +53,7 @@
       "description": "Greift seitlich an; kann „Raksha“ glimmern.",
       "maxLevel": 6,
       "emoji": "👊",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Punch.png",
       "verified": true
     },
     {
@@ -59,6 +64,7 @@
       "description": "Mehr Schaden bei voller Gesundheit; kann „Thunder Kick“ glimmern.",
       "maxLevel": 8,
       "emoji": "🦵",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Kick.png",
       "verified": true
     },
     {
@@ -69,6 +75,7 @@
       "description": "Feuert in Blickrichtung; kann „Shockwave“ glimmern.",
       "maxLevel": 6,
       "emoji": "🔫",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Saber_Machine_Gun.png",
       "verified": true
     },
     {
@@ -79,6 +86,7 @@
       "description": "Feuert explodierende Projektile; kann „Ballistic Missiles“ glimmern.",
       "maxLevel": 6,
       "emoji": "🚀",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Super_Missile.png",
       "verified": true
     },
     {
@@ -89,6 +97,7 @@
       "description": "Schießt auf Gegner in der Nähe; kann „Falconfire“ glimmern.",
       "maxLevel": 8,
       "emoji": "🦅",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Eagle_Gun.png",
       "verified": true
     },
     {
@@ -99,6 +108,7 @@
       "description": "Schattenklone treffen Gegner in der Nähe; kann „Moonfall Slash“ glimmern.",
       "maxLevel": 8,
       "emoji": "🔪",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Khukuri.png",
       "verified": true
     },
     {
@@ -109,6 +119,7 @@
       "description": "Greift waagerecht an; kann „Gravedigger“ glimmern.",
       "maxLevel": 8,
       "emoji": "🐉",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Twin_Dragon.png",
       "verified": true
     },
     {
@@ -119,6 +130,7 @@
       "description": "Durchdringt Gegner; kann „Hell's Fury“ glimmern.",
       "maxLevel": 8,
       "emoji": "🪓",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Bullova.png",
       "verified": true
     },
     {
@@ -129,6 +141,7 @@
       "description": "Trifft die nächsten Gegner; kann „Blood Rage“ glimmern (doppelter Schaden, doppelte Fläche).",
       "maxLevel": 8,
       "emoji": "🩸",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Sanguine_Star.png",
       "verified": true
     },
     {
@@ -139,6 +152,7 @@
       "description": "Sticht in Blickrichtung; kann „Divine Lancer“ glimmern.",
       "maxLevel": 6,
       "emoji": "🔱",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Glaive.png",
       "verified": true
     },
     {
@@ -149,6 +163,7 @@
       "description": "Löst zusätzliche Techniken aus, wenn Fläche, Geschwindigkeit, Dauer und/oder Wachstum bei 155 % oder mehr liegen.",
       "maxLevel": 8,
       "emoji": "💍",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Spirit_Rings.png",
       "verified": true
     },
     {
@@ -159,6 +174,7 @@
       "description": "Teleportiert zufällige Gegner weg, die dann eventuell keine Erfahrung fallen lassen.",
       "maxLevel": 8,
       "emoji": "💚",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Emerald_Rapture.png",
       "verified": true
     },
     {
@@ -169,6 +185,7 @@
       "description": "Lässt dich aus einer Auswahl von Emerald-Diorama-Waffen wählen.",
       "maxLevel": 1,
       "emoji": "💭",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Intuition.png",
       "verified": true
     },
     {
@@ -179,6 +196,7 @@
       "description": "Entwicklung von Fleuret: kann „Shocking Rush“ glimmern.",
       "maxLevel": 6,
       "emoji": "🤺",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Dress_Sword.png",
       "verified": true
     },
     {
@@ -189,6 +207,7 @@
       "description": "Entwicklung von Dress Sword: erlaubt die Technik „Mega Thrust“.",
       "maxLevel": 1,
       "emoji": "🗡️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Espada_Ropera.png",
       "verified": true
     },
     {
@@ -199,6 +218,7 @@
       "description": "Entwicklung von Town Sword: kann „Airwave“ glimmern (fünffacher Schaden).",
       "maxLevel": 6,
       "emoji": "⭐",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Lordstar.png",
       "verified": true
     },
     {
@@ -209,6 +229,7 @@
       "description": "Entwicklung von Lordstar: kann „Life Sprinkler“ glimmern.",
       "maxLevel": 1,
       "emoji": "☀️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Dayblade.png",
       "verified": true
     },
     {
@@ -219,6 +240,7 @@
       "description": "Entwicklung von Splashers: kann „Dual Torrent“ glimmern.",
       "maxLevel": 8,
       "emoji": "🌊",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Pursuant_Blades.png",
       "verified": true
     },
     {
@@ -229,6 +251,7 @@
       "description": "Entwicklung von Flamberge: kann „Absetzen“ glimmern.",
       "maxLevel": 6,
       "emoji": "⚔️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Zweihander.png",
       "verified": true
     },
     {
@@ -239,6 +262,7 @@
       "description": "Entwicklung von Zweihander: kann „Vandalize“ glimmern.",
       "maxLevel": 1,
       "emoji": "🗡️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Galatyn.png",
       "verified": true
     },
     {
@@ -249,6 +273,7 @@
       "description": "Entwicklung von Punch: kann „Shenlong Firefist“ glimmern.",
       "maxLevel": 6,
       "emoji": "👊",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Pressure_Point.png",
       "verified": true
     },
     {
@@ -259,6 +284,7 @@
       "description": "Entwicklung von Pressure Point: kann „Guanyin“ glimmern.",
       "maxLevel": 1,
       "emoji": "✋",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Gilded_Hand.png",
       "verified": true
     },
     {
@@ -269,6 +295,7 @@
       "description": "Entwicklung von Kick: glimmert „Triple Dragon“, dessen Schaden von der gesamten Überheilung abhängt.",
       "maxLevel": 8,
       "emoji": "🔺",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Triangle_Kick.png",
       "verified": true
     },
     {
@@ -279,6 +306,7 @@
       "description": "Entwicklung von Saber Machine Gun: kann „Bombarding Fire“ glimmern.",
       "maxLevel": 6,
       "emoji": "🔫",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Hecaton_Machine_Gun.png",
       "verified": true
     },
     {
@@ -289,6 +317,7 @@
       "description": "Entwicklung von Hecaton Machine Gun: kann „Sunlight Shower“ glimmern.",
       "maxLevel": 1,
       "emoji": "🌦️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Divergence.png",
       "verified": true
     },
     {
@@ -299,6 +328,7 @@
       "description": "Entwicklung von Super Missile: kann „Artificial Hailstorm“ glimmern.",
       "maxLevel": 6,
       "emoji": "🐍",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Hydra_Cannon.png",
       "verified": true
     },
     {
@@ -309,6 +339,7 @@
       "description": "Entwicklung von Hydra Cannon: kann „Cosmic Rave“ glimmern.",
       "maxLevel": 1,
       "emoji": "🚀",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Hyperion_Bazooka.png",
       "verified": true
     },
     {
@@ -319,6 +350,7 @@
       "description": "Entwicklung von Eagle Gun: kann „Bounding Shot“ glimmern.",
       "maxLevel": 8,
       "emoji": "🐲",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Pendragon.png",
       "verified": true
     },
     {
@@ -329,6 +361,7 @@
       "description": "Entwicklung von Khukuri: kritische Treffer können kurz unverwundbar machen; kann „Kaleidoscope“ glimmern.",
       "maxLevel": 8,
       "emoji": "💨",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Jetstream.png",
       "verified": true
     },
     {
@@ -339,6 +372,7 @@
       "description": "Entwicklung von Twin Dragon: kann „Scattered Petals“ glimmern.",
       "maxLevel": 8,
       "emoji": "🌺",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Gekkabijin.png",
       "verified": true
     },
     {
@@ -349,6 +383,7 @@
       "description": "Entwicklung von Bullova: kann „Reverse Delta“ glimmern.",
       "maxLevel": 8,
       "emoji": "🦅",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Falconwind.png",
       "verified": true
     },
     {
@@ -359,6 +394,7 @@
       "description": "Entwicklung von Sanguine Star: kann „Scarlet Harbinger“ glimmern (Schaden hängt von der Gier ab, kann Herzen stehlen).",
       "maxLevel": 8,
       "emoji": "🍷",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Blood_Chalice.png",
       "verified": true
     },
     {
@@ -369,6 +405,7 @@
       "description": "Entwicklung von Glaive: kann „Stardust“ glimmern.",
       "maxLevel": 6,
       "emoji": "🪶",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Feather_Spear.png",
       "verified": true
     },
     {
@@ -379,6 +416,7 @@
       "description": "Entwicklung von Feather Spear: kann „Triumvirate“ glimmern (dreifacher Schaden).",
       "maxLevel": 1,
       "emoji": "🦢",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Lohengrin.png",
       "verified": true
     },
     {
@@ -389,6 +427,7 @@
       "description": "Entwicklung von Spirit Rings: löst zusätzlich die Technik „Chaos Disaster“ aus.",
       "maxLevel": 1,
       "emoji": "💫",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Rings_of_Calamity.png",
       "verified": true
     },
     {
@@ -399,6 +438,7 @@
       "description": "Entwicklung von Emerald Rapture: teleportiert alle Gegner auf ihrem Weg, die dann immer ihre besten Erfahrungs-Edelsteine fallen lassen.",
       "maxLevel": 1,
       "emoji": "🌊",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Emerald_Wave.png",
       "verified": true
     }
   ]

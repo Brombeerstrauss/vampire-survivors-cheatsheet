@@ -9,6 +9,7 @@
       "description": "Schadensnadeln heften den nächsten Gegner an Ort und Stelle.",
       "maxLevel": 8,
       "emoji": "📍",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Scarlet_Needle.png",
       "verified": true
     },
     {
@@ -19,6 +20,7 @@
       "description": "Kann kritisch treffen.",
       "maxLevel": 8,
       "emoji": "🪶",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Ashella.png",
       "verified": true
     },
     {
@@ -29,6 +31,7 @@
       "description": "Löscht Gegner in Blickrichtung aus.",
       "maxLevel": 8,
       "emoji": "🔥",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Incineration.png",
       "verified": true
     },
     {
@@ -39,6 +42,7 @@
       "description": "Stößt Schreie mit starkem Rückstoß aus; schlägt zurück.",
       "maxLevel": 8,
       "emoji": "😱",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Screams_from_the_Void.png",
       "verified": true
     },
     {
@@ -49,6 +53,7 @@
       "description": "Löscht einen zufälligen Gegner aus und hinterlässt manchmal einen schädlichen Riss in der Wirklichkeit.",
       "maxLevel": 8,
       "emoji": "🌑",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Blacken_Firmament.png",
       "verified": true
     },
     {
@@ -59,6 +64,7 @@
       "description": "Eigentlich nur 16; der Schaden hängt vom Unterschied zwischen Fluch und Glück ab.",
       "maxLevel": 8,
       "emoji": "📿",
+      "image": "https://vampire.survivors.wiki/images/Sprite-108_Responsive_Prayers.png",
       "verified": true
     },
     {
@@ -69,6 +75,7 @@
       "description": "Trifft den entferntesten Gegner; der Schaden wird zusätzlich mit der Macht multipliziert.",
       "maxLevel": 6,
       "emoji": "☄️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-FireFall.png",
       "verified": true
     },
     {
@@ -79,6 +86,7 @@
       "description": "Erzeugt eine wachsende Schadenszone; der Schaden wird mit der Fläche multipliziert.",
       "maxLevel": 6,
       "emoji": "🔥",
+      "image": "https://vampire.survivors.wiki/images/Sprite-FireBall.png",
       "verified": true
     },
     {
@@ -89,6 +97,7 @@
       "description": "Erzeugt eine gerichtete Schadenszone; wächst stark mit der Anzahl.",
       "maxLevel": 6,
       "emoji": "🧱",
+      "image": "https://vampire.survivors.wiki/images/Sprite-FireWall.png",
       "verified": true
     },
     {
@@ -99,6 +108,7 @@
       "description": "Verfluchter Gegenstand: die Anzahl erhöht den Schaden; kritische Treffer oder Richtungswechsel lösen Zusatzangriffe aus.",
       "maxLevel": 9,
       "emoji": "⬇️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Descent_Into_Misery.png",
       "verified": true
     },
     {
@@ -109,6 +119,7 @@
       "description": "Entwicklung von Scarlet Needle: endloser Regen, der in jede Richtung treffen kann.",
       "maxLevel": 1,
       "emoji": "🌧️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Cardinal_Rain.png",
       "verified": true
     },
     {
@@ -119,6 +130,7 @@
       "description": "Entwicklung von Ashella: kritischer Schaden hängt von der Anzahl ab.",
       "maxLevel": 1,
       "emoji": "🩸",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Bloodlust.png",
       "verified": true
     },
     {
@@ -129,6 +141,7 @@
       "description": "Entwicklung von Incineration: höllische Asche weht zurück und löscht Gegner aus.",
       "maxLevel": 1,
       "emoji": "⚱️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Dust_to_Dust.png",
       "verified": true
     },
     {
@@ -139,6 +152,7 @@
       "description": "Entwicklung von Screams from the Void: zieht Gegner an und entwaffnet sie.",
       "maxLevel": 1,
       "emoji": "🧜",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Forbidden_Siren.png",
       "verified": true
     },
     {
@@ -149,6 +163,7 @@
       "description": "Entwicklung von Blacken Firmament: zieht Gegner ins Verderben.",
       "maxLevel": 1,
       "emoji": "⛓️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Damnation.png",
       "verified": true
     },
     {
@@ -159,6 +174,7 @@
       "description": "Union aus 108 Bocce und 108 Responsive Prayers: 108-mal auslösen, um die Erleuchtung zu erahnen.",
       "maxLevel": 1,
       "emoji": "🛕",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Road_to_Heaven.png",
       "verified": true
     },
     {
@@ -169,6 +185,7 @@
       "description": "Union aus FireFall, FireBall und FireWall: wird nach jeder Singularität stärker.",
       "maxLevel": 1,
       "emoji": "🌋",
+      "image": "https://vampire.survivors.wiki/images/Sprite-FireStall.png",
       "verified": true
     },
     {
@@ -179,6 +196,7 @@
       "description": "Union aus Kyra-Stones und Descent Into Misery: Treibsand zieht Gegner in die Hölle.",
       "maxLevel": 1,
       "emoji": "⏳",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Shimmering_Sands.png",
       "verified": true
     }
   ]

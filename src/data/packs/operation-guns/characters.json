@@ -11,6 +11,7 @@
       "bonus": "Erhält bei vielen besiegten Gegnern mehr Projektilgeschwindigkeit (max. 50 %) und Macht; findet spezielle Pickups.",
       "secret": false,
       "emoji": "🎖️",
+      "image": "https://vampire.survivors.wiki/images/Select-Bill_Rizer.png",
       "verified": true
     },
     {
@@ -23,6 +24,7 @@
       "bonus": "Erhält bei vielen besiegten Gegnern mehr Geschwindigkeit (max. 50 %) und kürzere Abklingzeit (max. −25 %); findet spezielle Pickups.",
       "secret": false,
       "emoji": "🪖",
+      "image": "https://vampire.survivors.wiki/images/Select-Lance_Bean.png",
       "verified": true
     },
     {
@@ -35,6 +37,7 @@
       "bonus": "Laufgeschwindigkeit erhöht die Rüstung; findet spezielle Pickups.",
       "secret": false,
       "emoji": "🏃‍♀️",
+      "image": "https://vampire.survivors.wiki/images/Select-Ariana.png",
       "verified": true
     },
     {
@@ -47,6 +50,7 @@
       "bonus": "Erhält nach einer Wiederbelebung einen Bonus auf alle Werte; findet spezielle Pickups.",
       "secret": false,
       "emoji": "🔴",
+      "image": "https://vampire.survivors.wiki/images/Select-Lucia_Zero.png",
       "verified": true
     },
     {
@@ -59,6 +63,7 @@
       "bonus": "Bei wenig Gesundheit kürzere Abklingzeit sowie mehr Lauf- und Projektilgeschwindigkeit; findet spezielle Pickups.",
       "secret": false,
       "emoji": "🐺",
+      "image": "https://vampire.survivors.wiki/images/Select-Brad_Fang.png",
       "verified": true
     },
     {
@@ -71,6 +76,7 @@
       "bonus": "Kürzere Abklingzeit vergrößert die Fläche; findet spezielle Pickups.",
       "secret": false,
       "emoji": "🤖",
+      "image": "https://vampire.survivors.wiki/images/Select-Browny.png",
       "verified": true
     },
     {
@@ -83,6 +89,7 @@
       "bonus": "Laufgeschwindigkeit senkt die Abklingzeit; findet spezielle Pickups.",
       "secret": false,
       "emoji": "🎯",
+      "image": "https://vampire.survivors.wiki/images/Select-Sheena_Etranzi.png",
       "verified": true
     },
     {
@@ -95,6 +102,7 @@
       "bonus": "Rüstung erhöht die Macht; findet spezielle Pickups.",
       "secret": false,
       "emoji": "🦾",
+      "image": "https://vampire.survivors.wiki/images/Select-Probotector.png",
       "verified": true
     },
     {
@@ -107,6 +115,7 @@
       "bonus": "Macht erhöht die Rüstung; findet spezielle Pickups.",
       "secret": false,
       "emoji": "🧔",
+      "image": "https://vampire.survivors.wiki/images/Select-Stanley.png",
       "verified": true
     },
     {
@@ -119,6 +128,7 @@
       "bonus": "Projektilgeschwindigkeit erhöht die Macht; findet zusätzliche explosive Objekte und spezielle Pickups.",
       "secret": false,
       "emoji": "💣",
+      "image": "https://vampire.survivors.wiki/images/Select-Newt_Plissken.png",
       "verified": true
     },
     {
@@ -131,6 +141,7 @@
       "bonus": "Gier und Fluch erhöhen die Macht; findet spezielle Pickups.",
       "secret": false,
       "emoji": "👾",
+      "image": "https://vampire.survivors.wiki/images/Select-Colonel_Bahamut.png",
       "verified": true
     },
     {
@@ -141,6 +152,7 @@
       "bonus": "Braucht angeblich gar keine Waffen; erhält alle 20 Level mehr Projektile (max. +4).",
       "secret": false,
       "emoji": "🧑‍🦲",
+      "image": "https://vampire.survivors.wiki/images/Select-Simondo_Belmont.png",
       "verified": true
     }
   ]

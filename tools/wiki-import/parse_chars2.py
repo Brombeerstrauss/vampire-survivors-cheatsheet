@@ -26,6 +26,8 @@ for c in chars:
     desc = ib.get("description") or ib.get("description1") or ""
     c["description"] = clean(desc) if not desc.startswith("|") else ""
     c["secretField"] = ib.get("secret", "")
+    img = re.search(r"\[\[File:([^|\]]+)", ib.get("image1") or ib.get("image") or "")
+    c["imageFile"] = img.group(1).strip() if img else f"Select-{c['name']}.png"
 # Startwaffen laut Waffenliste
 mentions = {}
 for w in weapons:

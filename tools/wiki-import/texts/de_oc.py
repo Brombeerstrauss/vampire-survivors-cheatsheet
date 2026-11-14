@@ -243,6 +243,8 @@ EVOLUTION_DE = {
     "Alucard Shield": {"conditions": ["Beliebige 6 Entwicklungen und 6 passive Gegenstände auf Maximalstufe.", "Kommt aus einer Truhe."]},
     "Universitas": {"conditions": ["Vol Luminatio und Vol Umbra auf Maximalstufe; kommt aus einer Truhe."]},
 }
+# Wiki-Seitentitel, die vom Namen im Spiel abweichen
+NAME_OVERRIDES = {"Death (character)": "Death"}
 CHARACTER_NOTES = {}
 CHARACTER_WEAPON_OVERRIDES = {}
 RECOMMENDATIONS = {}

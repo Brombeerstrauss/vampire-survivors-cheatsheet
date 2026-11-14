@@ -11,6 +11,7 @@
       "bonus": "Regeneration verstärkt alle Heilquellen; Überheilung erhöht die max. Gesundheit leicht.",
       "secret": false,
       "emoji": "🌙",
+      "image": "https://vampire.survivors.wiki/images/Select-Miang_Moonspell.png",
       "verified": true
     },
     {
@@ -23,6 +24,7 @@
       "bonus": "Überheilung +16 löst ihre Startwaffe aus; wird nach vielen besiegten Gegnern kurz stärker und unverwundbar.",
       "secret": false,
       "emoji": "🌸",
+      "image": "https://vampire.survivors.wiki/images/Select-Menya_Moonspell.png",
       "verified": true
     },
     {
@@ -35,6 +37,7 @@
       "bonus": "Startet mit verstecktem Night Sword; verwandelt sich in eine stärkere Form, wenn seine Startwaffe sich entwickelt.",
       "secret": false,
       "emoji": "🗡️",
+      "image": "https://vampire.survivors.wiki/images/Select-Syuuto_Moonspell.png",
       "verified": true
     },
     {
@@ -47,6 +50,7 @@
       "bonus": "Überheilung +16 gibt kurz mehr Laufgeschwindigkeit; ignoriert Abklingzeiten, Waffen feuern beim Laufen in festen Abständen.",
       "secret": false,
       "emoji": "👘",
+      "image": "https://vampire.survivors.wiki/images/Select-Babi-Onna.png",
       "verified": true
     },
     {
@@ -59,6 +63,7 @@
       "bonus": "Max. Gesundheit entspricht der aktuellen Gesundheit; hat ein verstecktes Argent Flow.",
       "secret": false,
       "emoji": "🌕",
+      "image": "https://vampire.survivors.wiki/images/Select-Megalo_Miang_Moonspell.png",
       "verified": false,
       "note": "Ungeprüft: Startwaffe nur auf der Charakterseite genannt."
     },
@@ -70,6 +75,7 @@
       "bonus": "Überheilung +16 löst ihre erste Waffe aus; kann keinen Schaden nehmen, verschwindet aber beim Zeitlimit; startet mit verstecktem 108 Bocce.",
       "secret": false,
       "emoji": "🌺",
+      "image": "https://vampire.survivors.wiki/images/Select-Megalo_Menya_Moonspell.png",
       "verified": true,
       "note": "Versteckte Waffe: 108 Bocce."
     },
@@ -83,6 +89,7 @@
       "bonus": "Überheilung +16 gibt Blut-Waffen mehr Schaden; erhält pro Level +1 % Macht.",
       "secret": false,
       "emoji": "🩸",
+      "image": "https://vampire.survivors.wiki/images/Select-Megalo_Syuuto_Moonspell.png",
       "verified": true
     },
     {
@@ -95,6 +102,7 @@
       "bonus": "Überheilung +16 gibt einen Reroll; die Fläche wächst in festen Abständen kurzzeitig.",
       "secret": false,
       "emoji": "👹",
+      "image": "https://vampire.survivors.wiki/images/Select-McCoy-Oni.png",
       "verified": true
     },
     {
@@ -107,6 +115,7 @@
       "bonus": "Erhält alle 20 Level mehr Projektile (max. +4); jede abgeschlossene Stage gibt einen Prestige-Rang.",
       "secret": false,
       "emoji": "🥒",
+      "image": "https://vampire.survivors.wiki/images/Select-Gav%27Et-Oni_%E2%98%85.png",
       "verified": true
     },
     {
@@ -119,6 +128,7 @@
       "bonus": "Überheilung +64 erzeugt eine Wasser- oder Mondwaffe; geübt mit Mille Bolle Blu und Penshin Fatcha.",
       "secret": false,
       "emoji": "💧",
+      "image": "https://vampire.survivors.wiki/images/Select-Spiritoso.png",
       "verified": true
     },
     {
@@ -131,6 +141,7 @@
       "bonus": "Überheilung +16 gibt einen Begleiter (max. 30); alle 8 Level ein verstecktes Mille Bolle Blu (max. 6); geübt mit Mille Bolle Blu und Penshin Fatcha.",
       "secret": false,
       "emoji": "💦",
+      "image": "https://vampire.survivors.wiki/images/Select-Spiritosa.png",
       "verified": false,
       "note": "Ungeprüft: Startwaffe nur auf der Charakterseite genannt."
     },
@@ -146,6 +157,7 @@
       "bonus": "Heilt statt Schaden zu nehmen, verschwindet aber beim Zeitlimit; startet mit Pearl magatama.",
       "secret": false,
       "emoji": "🌗",
+      "image": "https://vampire.survivors.wiki/images/Select-Gekkojin.png",
       "verified": true,
       "note": "Versteckte Waffe: Water Veil."
     }

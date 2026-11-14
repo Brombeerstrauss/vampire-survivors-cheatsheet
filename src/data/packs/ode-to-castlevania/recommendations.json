@@ -1555,7 +1555,7 @@
       "passives": []
     },
     {
-      "character": "death-character",
+      "character": "death",
       "source": "ode-to-castlevania",
       "weapons": [
         {

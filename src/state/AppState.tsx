@@ -33,6 +33,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
   }, [])
 
   const setShowSecrets = useCallback((show: boolean) => setSettings((s) => ({ ...s, showSecrets: show })), [])
+  const setShowImages = useCallback((show: boolean) => setSettings((s) => ({ ...s, showImages: show })), [])
 
   // Der aktuelle Lauf als Ref, damit Änderungen und Rückgängig-Meldung zusammen entstehen.
   const runRef = useRef(run)
@@ -60,6 +61,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
       settings,
       setOwnedPack,
       setShowSecrets,
+      setShowImages,
       catalog,
       fullCatalog,
       run,
@@ -67,7 +69,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
       notice,
       dismissNotice: () => setNotice(null),
     }),
-    [settings, setOwnedPack, setShowSecrets, catalog, run, updateRun, notice],
+    [settings, setOwnedPack, setShowSecrets, setShowImages, catalog, run, updateRun, notice],
   )
 
   return <Context.Provider value={value}>{children}</Context.Provider>

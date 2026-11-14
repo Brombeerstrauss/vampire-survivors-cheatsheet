@@ -7,6 +7,8 @@ export interface Settings {
   knownPacks: PackId[]
   /** Geheime Charaktere anzeigen. */
   showSecrets: boolean
+  /** Originalbilder aus dem Wiki anzeigen (sonst Emojis). */
+  showImages: boolean
 }
 
 const isString = (value: unknown): value is string => typeof value === 'string'
@@ -30,5 +32,6 @@ export function loadSettings(raw: unknown, packs: Pack[]): Settings {
     ownedPacks: [...owned].filter((id) => ids.has(id)),
     knownPacks: [...ids],
     showSecrets: typeof stored.showSecrets === 'boolean' ? stored.showSecrets : true,
+    showImages: typeof stored.showImages === 'boolean' ? stored.showImages : true,
   }
 }

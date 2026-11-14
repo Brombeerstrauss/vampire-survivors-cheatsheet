@@ -11,6 +11,7 @@
       "bonus": "Erhält alle 10 Level +10 % Macht (max. +50 %).",
       "secret": false,
       "emoji": "🧔",
+      "image": "https://vampire.survivors.wiki/images/Select-Antonio_Belpaese.png",
       "verified": true
     },
     {
@@ -23,6 +24,7 @@
       "bonus": "Erhält alle 5 Level +10 % Erfahrung (max. +30 %).",
       "secret": false,
       "emoji": "👩‍🦰",
+      "image": "https://vampire.survivors.wiki/images/Select-Imelda_Belpaese.png",
       "verified": true
     },
     {
@@ -35,6 +37,7 @@
       "bonus": "Projektile werden alle 5 Level 10 % schneller (max. +30 %).",
       "secret": false,
       "emoji": "👩",
+      "image": "https://vampire.survivors.wiki/images/Select-Pasqualina_Belpaese.png",
       "verified": true
     },
     {
@@ -47,6 +50,7 @@
       "bonus": "Dauerhaft +1 Projektil für alle Waffen.",
       "secret": false,
       "emoji": "🧑",
+      "image": "https://vampire.survivors.wiki/images/Select-Gennaro_Belpaese.png",
       "verified": true
     },
     {
@@ -59,6 +63,7 @@
       "bonus": "Die Abklingzeit der Waffen sinkt alle 10 Level um 5 % (max. −15 %).",
       "secret": false,
       "emoji": "🧙",
+      "image": "https://vampire.survivors.wiki/images/Select-Arca_Ladonna.png",
       "verified": true
     },
     {
@@ -71,6 +76,7 @@
       "bonus": "Dauerhaft +30 % Fläche; startet mit einem zeitweisen Abklingzeit-Bonus.",
       "secret": false,
       "emoji": "🧙‍♂️",
+      "image": "https://vampire.survivors.wiki/images/Select-Porta_Ladonna.png",
       "verified": true
     },
     {
@@ -83,6 +89,7 @@
       "bonus": "Erhält alle 10 Level +5 % Macht, Laufgeschwindigkeit und Fluch (max. +20 %).",
       "secret": false,
       "emoji": "🧝‍♀️",
+      "image": "https://vampire.survivors.wiki/images/Select-Lama_Ladonna.png",
       "verified": true
     },
     {
@@ -95,6 +102,7 @@
       "bonus": "Dauerhaft +25 % Aufsammelradius und −30 max. Gesundheit.",
       "secret": false,
       "emoji": "👴",
+      "image": "https://vampire.survivors.wiki/images/Select-Poe_Ratcho.png",
       "verified": true
     },
     {
@@ -107,6 +115,7 @@
       "bonus": "Dauerhaft +0,5 Regeneration pro Sekunde und +50 max. Gesundheit; startet mit einem zeitweisen Flächen-Bonus.",
       "secret": false,
       "emoji": "🙏",
+      "image": "https://vampire.survivors.wiki/images/Select-Suor_Clerici.png",
       "verified": true
     },
     {
@@ -119,6 +128,7 @@
       "bonus": "Dauerhaft +40 % Dauer und Geschwindigkeit, aber −40 % Laufgeschwindigkeit.",
       "secret": false,
       "emoji": "🧔‍♂️",
+      "image": "https://vampire.survivors.wiki/images/Select-Dommario.png",
       "verified": true
     },
     {
@@ -131,6 +141,7 @@
       "bonus": "Startet mit 1 Wiederbelebung und erhält auf Level 33 eine weitere.",
       "secret": false,
       "emoji": "🧑‍🦱",
+      "image": "https://vampire.survivors.wiki/images/Select-Krochi_Freetto.png",
       "verified": true
     },
     {
@@ -143,6 +154,7 @@
       "bonus": "Startet mit einem zusätzlichen Level.",
       "secret": false,
       "emoji": "👱‍♀️",
+      "image": "https://vampire.survivors.wiki/images/Select-Christine_Davain.png",
       "verified": true
     },
     {
@@ -156,6 +168,7 @@
       "bonus": "Erhält pro Level +1 % Macht.",
       "secret": false,
       "emoji": "🤠",
+      "image": "https://vampire.survivors.wiki/images/Select-Pugnala_Provola.png",
       "verified": true
     },
     {
@@ -168,6 +181,7 @@
       "bonus": "Erhält pro Level +1 % Projektilgeschwindigkeit.",
       "secret": false,
       "emoji": "👧",
+      "image": "https://vampire.survivors.wiki/images/Select-Giovanna_Grana.png",
       "verified": true
     },
     {
@@ -180,6 +194,7 @@
       "bonus": "Erhält pro Level +1 % Dauer.",
       "secret": false,
       "emoji": "💃",
+      "image": "https://vampire.survivors.wiki/images/Select-Poppea_Pecorina.png",
       "verified": true
     },
     {
@@ -192,6 +207,7 @@
       "bonus": "Erhält pro Level +1 % Fläche.",
       "secret": false,
       "emoji": "🥷",
+      "image": "https://vampire.survivors.wiki/images/Select-Concetta_Caciotta.png",
       "verified": true
     },
     {
@@ -204,6 +220,7 @@
       "bonus": "Erhält alle 20 Level mehr Projektile (max. +3).",
       "secret": false,
       "emoji": "🩻",
+      "image": "https://vampire.survivors.wiki/images/Select-Mortaccio.png",
       "verified": true
     },
     {
@@ -216,6 +233,7 @@
       "bonus": "Erhält alle 20 Level mehr Projektile (max. +3).",
       "secret": false,
       "emoji": "🐴",
+      "image": "https://vampire.survivors.wiki/images/Select-Yatta_Cavallo.png",
       "verified": true
     },
     {
@@ -228,6 +246,7 @@
       "bonus": "Erhält alle 20 Level mehr Projektile (max. +3).",
       "secret": false,
       "emoji": "🐄",
+      "image": "https://vampire.survivors.wiki/images/Select-Bianca_Ramba.png",
       "verified": true
     },
     {
@@ -240,6 +259,7 @@
       "bonus": "Erhält alle 20 Level mehr Projektile (max. +3).",
       "secret": false,
       "emoji": "🌞",
+      "image": "https://vampire.survivors.wiki/images/Select-O%27Sole_Meeo.png",
       "verified": true
     },
     {
@@ -252,6 +272,7 @@
       "bonus": "Erhält alle 20 Level mehr Projektile (max. +3); startet mit einem zeitweisen Anzahl-Bonus.",
       "secret": false,
       "emoji": "🎩",
+      "image": "https://vampire.survivors.wiki/images/Select-Sir_Ambrojoe.png",
       "verified": true
     },
     {
@@ -264,6 +285,7 @@
       "bonus": "Startet mit einem zusätzlichen Level; erhält alle 5 Level +10 % Wachstum (max. +50 %).",
       "secret": false,
       "emoji": "🦎",
+      "image": "https://vampire.survivors.wiki/images/Select-Iguana_Gallo_Valletto.png",
       "verified": true
     },
     {
@@ -276,6 +298,7 @@
       "bonus": "Startet mit einem zusätzlichen Level; erhält alle 5 Level +1 Rüstung (max. +5).",
       "secret": false,
       "emoji": "🛋️",
+      "image": "https://vampire.survivors.wiki/images/Select-Divano_Thelma.png",
       "verified": true
     },
     {
@@ -288,6 +311,7 @@
       "bonus": "Erhält pro Level +0,5 % Macht, Geschwindigkeit, Dauer und Fläche.",
       "secret": false,
       "emoji": "👵",
+      "image": "https://vampire.survivors.wiki/images/Select-Zi%27Assunta_Belpaese.png",
       "verified": true
     },
     {
@@ -300,6 +324,7 @@
       "bonus": "Besitzt alles: startet mit hohen Boni auf fast alle Werte.",
       "secret": false,
       "emoji": "👸",
+      "image": "https://vampire.survivors.wiki/images/Select-Queen_Sigma.png",
       "verified": true
     },
     {
@@ -312,6 +337,7 @@
       "bonus": "Heilt bei kritisch niedriger Gesundheit 30 % und erhält dabei +32 max. Gesundheit (max. +665).",
       "secret": false,
       "emoji": "🦇",
+      "image": "https://vampire.survivors.wiki/images/Select-Bat_Robbert.png",
       "verified": true
     },
     {
@@ -324,6 +350,7 @@
       "bonus": "Findet zusätzliche explosive Objekte, die Truhen fallen lassen können; zerstört Lichtquellen durch Berührung.",
       "secret": false,
       "emoji": "💣",
+      "image": "https://vampire.survivors.wiki/images/Select-Zi%27Appunta_Belpaese.png",
       "verified": true
     },
     {
@@ -336,6 +363,7 @@
       "bonus": "Löst seine Hauptwaffe beim Aufsammeln von Goldmünzen aus und nutzt Münzen als Schadensschild; vierfache Chance auf FOIL-Survarots.",
       "secret": false,
       "emoji": "🪙",
+      "image": "https://vampire.survivors.wiki/images/Select-Big_Troubler.png",
       "verified": true
     },
     {
@@ -348,6 +376,7 @@
       "bonus": "Startet mit +2 Rüstung und +20 % Laufgeschwindigkeit; friert unter 20 % Gesundheit alle Gegner für 10 Sekunden ein.",
       "secret": false,
       "emoji": "🌙",
+      "image": "https://vampire.survivors.wiki/images/Select-She-Moon_Eeta.png",
       "verified": true
     },
     {
@@ -360,6 +389,7 @@
       "bonus": "Die Startwaffe kann sich nicht entwickeln, dafür ist ihr Limit Break verstärkt.",
       "secret": false,
       "emoji": "🐟",
+      "image": "https://vampire.survivors.wiki/images/Select-Para_Kooleo.png",
       "verified": true
     },
     {
@@ -372,6 +402,7 @@
       "bonus": "Startet mit einem zeitweisen Abklingzeit-Bonus; löst bei kritisch niedriger Gesundheit einen Rosary aus.",
       "secret": false,
       "emoji": "🎅",
+      "image": "https://vampire.survivors.wiki/images/Select-Santa_Ladonna.png",
       "verified": true
     },
     {
@@ -384,6 +415,7 @@
       "bonus": "Jede Überheilung um 30 gibt einen dauerhaften Bonus auf einen zufälligen Wert.",
       "secret": false,
       "emoji": "🌿",
+      "image": "https://vampire.survivors.wiki/images/Select-Gazebo.png",
       "verified": true
     },
     {
@@ -396,6 +428,7 @@
       "bonus": "Würfelt alle 30 Sekunden oder beim Aufsammeln eines Rerollo um sein Glück.",
       "secret": false,
       "emoji": "🎲",
+      "image": "https://vampire.survivors.wiki/images/Select-Chula-Reh.png",
       "verified": true
     },
     {
@@ -408,6 +441,7 @@
       "bonus": "Löst je nach Abklingzeit gelegentlich alle Waffen doppelt aus.",
       "secret": false,
       "emoji": "👽",
+      "image": "https://vampire.survivors.wiki/images/Select-Space_Dude.png",
       "verified": true
     },
     {
@@ -420,6 +454,7 @@
       "bonus": "„Wenigstens hat es Glück.“",
       "secret": true,
       "emoji": "👻",
+      "image": "https://vampire.survivors.wiki/images/Select-Exdash_Exiviiq.png",
       "verified": true
     },
     {
@@ -432,6 +467,7 @@
       "bonus": "„So viel Potenzial.“",
       "secret": true,
       "emoji": "🍞",
+      "image": "https://vampire.survivors.wiki/images/Select-Toastie.png",
       "verified": true
     },
     {
@@ -444,6 +480,7 @@
       "bonus": "„Der schrullige weiße Bär.“",
       "secret": true,
       "emoji": "🐻‍❄️",
+      "image": "https://vampire.survivors.wiki/images/Select-Smith_IV.png",
       "verified": true
     },
     {
@@ -454,6 +491,7 @@
       "bonus": "Startet mit einer zufälligen Basiswaffe.",
       "secret": true,
       "emoji": "❓",
+      "image": "https://vampire.survivors.wiki/images/Select-Random.png",
       "verified": true,
       "note": "Startet mit einer zufälligen Basiswaffe."
     },
@@ -467,6 +505,7 @@
       "bonus": "Startet mit +20 max. Gesundheit, +30 % Laufgeschwindigkeit, +20 % Macht, −110 % Geschwindigkeit, −80 % Gier und +10 % Fluch.",
       "secret": true,
       "emoji": "🐰",
+      "image": "https://vampire.survivors.wiki/images/Select-Boon_Marrabbio.png",
       "verified": true
     },
     {
@@ -479,6 +518,7 @@
       "bonus": "Startet mit der zusätzlichen Arcana XIX – Heart of Fire; wird mit jedem Level stärker, verliert aber zunehmend die Kontrolle.",
       "secret": true,
       "emoji": "😈",
+      "image": "https://vampire.survivors.wiki/images/Select-Avatar_Infernas.png",
       "verified": true
     },
     {
@@ -491,6 +531,7 @@
       "bonus": "Macht, Projektilgeschwindigkeit, Dauer, Fläche und Abklingzeit ändern sich jede Minute.",
       "secret": true,
       "emoji": "🌸",
+      "image": "https://vampire.survivors.wiki/images/Select-Minnah_Mannarah.png",
       "verified": true
     },
     {
@@ -503,6 +544,7 @@
       "bonus": "Startet mit +5 Rüstung, +100 % Macht, +10 % Fläche und −10 % Abklingzeit, aber −20 % Laufgeschwindigkeit und −80 % Gier.",
       "secret": true,
       "emoji": "🗿",
+      "image": "https://vampire.survivors.wiki/images/Select-Leda.png",
       "verified": true
     },
     {
@@ -513,6 +555,7 @@
       "bonus": "Erhält pro Level +1 Regeneration und +1 % Glück, alle 100 Level +1 Wiederbelebung; hat versteckte Waffen.",
       "secret": true,
       "emoji": "🦚",
+      "image": "https://vampire.survivors.wiki/images/Select-Cosmo_Pavone.png",
       "verified": true,
       "note": "Hat keine sichtbare Startwaffe, nur versteckte Waffen."
     },
@@ -526,6 +569,7 @@
       "bonus": "Startet mit zeitweise verringerter Fläche.",
       "secret": true,
       "emoji": "🌳",
+      "image": "https://vampire.survivors.wiki/images/Select-Peppino.png",
       "verified": true
     },
     {
@@ -538,6 +582,7 @@
       "bonus": "Erhält pro Level +1 % Gier; der Goldrausch hält länger an.",
       "secret": true,
       "emoji": "👖",
+      "image": "https://vampire.survivors.wiki/images/Select-Big_Trouser.png",
       "verified": true
     },
     {
@@ -550,6 +595,7 @@
       "bonus": "Startet zu 50 % mit Death Spiral statt Axe.",
       "secret": true,
       "emoji": "👾",
+      "image": "https://vampire.survivors.wiki/images/Select-missingN%E2%96%AF.png",
       "verified": true,
       "note": "Startet zu 50 % mit Death Spiral statt Axe."
     },
@@ -563,6 +609,7 @@
       "bonus": "Erhält pro Level +2 % Wachstum.",
       "secret": true,
       "emoji": "🐉",
+      "image": "https://vampire.survivors.wiki/images/Select-Gains_Boros.png",
       "verified": true
     },
     {
@@ -575,6 +622,7 @@
       "bonus": "Erhält pro Level +1 % Fluch; kann Entwicklungen in jeder Truhe finden.",
       "secret": true,
       "emoji": "🌀",
+      "image": "https://vampire.survivors.wiki/images/Select-Gyorunton.png",
       "verified": true
     },
     {
@@ -587,6 +635,7 @@
       "bonus": "„Eine gotteslästerliche Verhöhnung.“",
       "secret": true,
       "emoji": "🎭",
+      "image": "https://vampire.survivors.wiki/images/Select-Mask_of_the_Red_Death.png",
       "verified": true
     },
     {
@@ -599,6 +648,7 @@
       "bonus": "Die Startwaffe wird mit jedem Level stärker; Wiederbelebungen erhöhen auch die Anzahl; erhält nach einer Wiederbelebung einen Begleiter.",
       "secret": true,
       "emoji": "🦇",
+      "image": "https://vampire.survivors.wiki/images/Select-Bats_Bats_Bats.png",
       "verified": true
     },
     {
@@ -611,6 +661,7 @@
       "bonus": "Erhöht die Zahl erscheinender Gegner um 100.",
       "secret": true,
       "emoji": "🌹",
+      "image": "https://vampire.survivors.wiki/images/Select-Rose_De_Infernas.png",
       "verified": true
     },
     {
@@ -621,6 +672,7 @@
       "bonus": "Verwandelt sich auf Level 16 in JoyaTauro und auf Level 36 in AccumulaTori; schlägt zurück.",
       "secret": true,
       "emoji": "🐂",
+      "image": "https://vampire.survivors.wiki/images/Select-Torino.png",
       "verified": true,
       "note": "Hat keine Startwaffe."
     },
@@ -632,6 +684,7 @@
       "bonus": "Erhält alle 8 Level einen versteckten Lightning Ring (max. 6), der auch bei erlittenem Schaden auslöst.",
       "secret": true,
       "emoji": "👹",
+      "image": "https://vampire.survivors.wiki/images/Select-Scorej-Oni.png",
       "verified": true,
       "note": "Hat keine Startwaffe, erhält aber versteckte Lightning Rings."
     },
@@ -645,6 +698,7 @@
       "bonus": "Die Startwaffe wird mit jedem Level stärker; +1 % Fluch pro Level; ignoriert Wände.",
       "secret": true,
       "emoji": "🌪️",
+      "image": "https://vampire.survivors.wiki/images/Select-Gyoruntin.png",
       "verified": true
     },
     {
@@ -657,6 +711,7 @@
       "bonus": "Findet immer Survarots; Survarot-Multiplikator entspricht log10 der Golden Eggs (max. ×10).",
       "secret": true,
       "emoji": "🕵️",
+      "image": "https://vampire.survivors.wiki/images/Select-Secretino_Dagsson.png",
       "verified": true
     },
     {
@@ -669,6 +724,7 @@
       "bonus": "Die Startwaffe wird mit jedem Level stärker; gewinnt mehr Fans, wenn sie viele Gegner besiegt.",
       "secret": true,
       "emoji": "👩‍🚀",
+      "image": "https://vampire.survivors.wiki/images/Select-Space_Dette.png",
       "verified": true
     }
   ]

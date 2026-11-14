@@ -51,7 +51,12 @@ export function loadGameData(packsFile: unknown, files: RawFiles): LoadResult {
     recommendations: [],
   }
 
-  for (const path of Object.keys(files).sort()) {
+  // Reihenfolge wie in packs.json (Basisspiel zuerst), nicht alphabetisch nach Ordnername
+  const packOrder = new Map(packs.map((pack, index) => [pack.id, index]))
+  const orderOf = (path: string) => packOrder.get(PATH_PATTERN.exec(path)?.[1] ?? '') ?? packs.length
+  const paths = Object.keys(files).sort((a, b) => orderOf(a) - orderOf(b) || a.localeCompare(b))
+
+  for (const path of paths) {
     const match = PATH_PATTERN.exec(path)
     const folder = match?.[1]
     const file = match?.[2] as PackFile | undefined

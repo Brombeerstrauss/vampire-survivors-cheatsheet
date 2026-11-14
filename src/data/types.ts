@@ -40,8 +40,10 @@ interface Entry {
   verified: boolean
   /** Platzhalter-Symbol, solange kein eigenes Icon hinterlegt ist. */
   emoji?: string
-  /** Dateiname eines eigenen Icons in `public/custom-icons/`. */
+  /** Dateiname eines eigenen Icons in `public/custom-icons/` (hat Vorrang vor `image`). */
   icon?: string
+  /** Adresse des Originalbilds im Wiki; wird zur Laufzeit geladen, nicht mit der App ausgeliefert. */
+  image?: string
   /** Wie man den Eintrag freischaltet. */
   unlock?: string
   /** Freie Anmerkung, z. B. warum etwas noch ungeprüft ist. */

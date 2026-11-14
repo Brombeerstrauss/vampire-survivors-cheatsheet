@@ -2,6 +2,11 @@ import json, re, sys
 sys.path.insert(0, sys.argv[1])
 from wikitable import tables, rows, names, plain, badge, strip_attr
 wt = open(sys.argv[2], encoding="utf-8").read()
+
+def icon_file(cell):
+    m = re.search(r"\[\[File:([^|\]]+)", cell or "")
+    return m.group(1).strip() if m else None
+
 out = []
 for path, tbl in tables(wt):
     sec = path[-1] if path else ""
@@ -14,6 +19,7 @@ for path, tbl in tables(wt):
         wname = names(rec.get("Weapon", ""))
         item = {"section": sec, "name": wname[0]["name"] if wname else plain(rec.get("Weapon", "")),
                 "page": wname[0]["page"] if wname else None, "pack": badge(rec.get("Weapon", "")) or "base",
+                "iconFile": icon_file(rec.get("Icon", "")),
                 "description": plain(rec.get("Description", "")), "maxLevel": plain(rec.get("Max Level", "")),
                 "rarity": plain(rec.get("Rarity", "")), "info": plain(rec.get("General Information", "")),
                 "unlock": plain(rec.get("Unlock Requirements", "")),

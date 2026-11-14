@@ -18,6 +18,8 @@ W_ALL = json.load(open(os.path.join(raw, "weapons_parsed.json"), encoding="utf-8
 P_ALL = json.load(open(os.path.join(raw, "passives_parsed.json"), encoding="utf-8"))
 E_ALL = json.load(open(os.path.join(raw, "evolutions_parsed.json"), encoding="utf-8"))
 C_ALL = json.load(open(os.path.join(raw, "chars_parsed.json"), encoding="utf-8"))
+_img_path = os.path.join(raw, "images.json")
+IMAGES = json.load(open(_img_path, encoding="utf-8")) if os.path.exists(_img_path) else {}
 
 warnings = []
 def warn(msg): warnings.append(msg)
@@ -34,6 +36,15 @@ P_BY = {p["name"]: p for p in P_ALL}
 PSEUDO = {"passives", "Treasure Chest", "evolutions"}
 
 def norm(s): return re.sub(r"\s+", " ", s or "").strip()
+
+def image_for(file_name, label):
+    """Adresse des Originalbilds im Wiki, falls die Datei existiert."""
+    if not file_name: 
+        warn(f"Kein Bild in der Wiki-Tabelle: {label}"); return None
+    key = file_name.replace("_", " ").strip()
+    info = IMAGES.get(file_name) or IMAGES.get(key[:1].upper() + key[1:])
+    if not info: warn(f"Bild fehlt im Wiki: {label} ({file_name})")
+    return info["url"] if info else None
 
 # ---------- Entwicklungen ----------
 evolutions = []
@@ -131,7 +142,10 @@ for w in W_ALL:
     if ml is None:
         problems.append("Maximalstufe fehlt im Wiki"); ml = 8
     entry = {"id": slug(name), "name": name, "source": pack_id, "kind": kind, "description": desc,
-             "maxLevel": ml, "emoji": emoji, "verified": not problems}
+             "maxLevel": ml, "emoji": emoji}
+    image = image_for(w.get("iconFile"), f"Waffe {name}")
+    if image: entry["image"] = image
+    entry["verified"] = not problems
     if problems:
         entry["note"] = "Ungeprüft: " + "; ".join(problems) + "."
         warn(f"Waffe {name}: " + "; ".join(problems))
@@ -150,7 +164,10 @@ for p in P_ALL:
     entry = {"id": slug(p["name"]), "name": p["name"], "source": pack_id, "description": desc, "maxLevel": ml}
     if p["name"] in getattr(T, "STAGE_ONLY", set()): entry["stageOnly"] = True
     entry.update(PASSIVE_FLAGS.get(p["name"], {}))
-    entry.update({"emoji": emoji, "verified": not problems})
+    entry["emoji"] = emoji
+    image = image_for(p.get("iconFile"), f"Gegenstand {p['name']}")
+    if image: entry["image"] = image
+    entry["verified"] = not problems
     if problems:
         entry["note"] = "Ungeprüft: " + "; ".join(problems) + "."
         warn(f"Gegenstand {p['name']}: " + "; ".join(problems))
@@ -205,8 +222,12 @@ for c in [c for c in C_ALL if c["pack"] == code]:
     emoji, bonus = T.CHARACTERS[name]
     start, problems, auto_notes = (base_start if code == "base" else dlc_start)(c)
     secret = c["group"] in ("Secret", "Hidden") or (c.get("secret") or "").lower() == "yes"
-    entry = {"id": slug(name), "name": name, "source": pack_id, "startingWeapons": [slug(s) for s in start],
-             "bonus": bonus, "secret": secret, "emoji": emoji, "verified": not problems}
+    shown = getattr(T, "NAME_OVERRIDES", {}).get(name, name)  # Name im Spiel, falls der Seitentitel abweicht
+    entry = {"id": slug(shown), "name": shown, "source": pack_id, "startingWeapons": [slug(s) for s in start],
+             "bonus": bonus, "secret": secret, "emoji": emoji}
+    image = image_for(c.get("imageFile"), f"Charakter {name}")
+    if image: entry["image"] = image
+    entry["verified"] = not problems
     notes = ([T.CHARACTER_NOTES[name]] if name in T.CHARACTER_NOTES else []) + auto_notes
     if problems:
         notes.append("Ungeprüft: " + "; ".join(problems) + ".")

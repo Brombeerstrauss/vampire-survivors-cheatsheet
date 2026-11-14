@@ -56,6 +56,7 @@ export interface PickerItem {
   name: string
   emoji?: string
   icon?: string
+  image?: string
   source: string
   /** Zusatzinfo unter dem Namen. */
   detail?: string

@@ -11,6 +11,7 @@
       "bonus": "Erhält auf Level 5 eine versteckte Svarog Statue; mit Vampire Killer Bonus auf die meisten Werte; findet spezielle Pickups.",
       "secret": false,
       "emoji": "🧔",
+      "image": "https://vampire.survivors.wiki/images/Select-Leon_Belmont.png",
       "verified": true
     },
     {
@@ -23,6 +24,7 @@
       "bonus": "Überheilung um +8 senkt kurz die Abklingzeit; findet spezielle Pickups.",
       "secret": false,
       "emoji": "👱‍♀️",
+      "image": "https://vampire.survivors.wiki/images/Select-Sonia_Belmont.png",
       "verified": true
     },
     {
@@ -35,6 +37,7 @@
       "bonus": "Startet mit der zusätzlichen Arcana X – Beginning; alle 10 Level +1 Anzahl (max. +3); findet spezielle Pickups.",
       "secret": false,
       "emoji": "🧔‍♂️",
+      "image": "https://vampire.survivors.wiki/images/Select-Trevor_Belmont.png",
       "verified": true
     },
     {
@@ -47,6 +50,7 @@
       "bonus": "Gier kann gelegentlich Macht und Rüstung beeinflussen; findet spezielle Pickups.",
       "secret": false,
       "emoji": "🧑",
+      "image": "https://vampire.survivors.wiki/images/Select-Christopher_Belmont.png",
       "verified": true
     },
     {
@@ -59,6 +63,7 @@
       "bonus": "Wachstum kann gelegentlich Macht und Rüstung beeinflussen; findet spezielle Pickups.",
       "secret": false,
       "emoji": "💪",
+      "image": "https://vampire.survivors.wiki/images/Select-Simon_Belmont.png",
       "verified": true
     },
     {
@@ -71,6 +76,7 @@
       "bonus": "Bekommt bis Level 7 Belnades' Spellbook als 4. Level-up-Option; levelt alle 6 Level automatisch einen Zauber aus dem Spellbook.",
       "secret": false,
       "emoji": "🧑‍🦳",
+      "image": "https://vampire.survivors.wiki/images/Select-Juste_Belmont.png",
       "verified": true
     },
     {
@@ -83,6 +89,7 @@
       "bonus": "Startet mit der zusätzlichen Arcana IX – Divine Bloodline; findet spezielle Pickups.",
       "secret": false,
       "emoji": "🧑‍🦰",
+      "image": "https://vampire.survivors.wiki/images/Select-Richter_Belmont.png",
       "verified": true
     },
     {
@@ -95,6 +102,7 @@
       "bonus": "Startet mit der zusätzlichen Arcana XIX – Heart of Fire; mehr Macht bei wenig Gesundheit; findet spezielle Pickups.",
       "secret": false,
       "emoji": "👴",
+      "image": "https://vampire.survivors.wiki/images/Select-Julius_Belmont.png",
       "verified": true
     },
     {
@@ -107,6 +115,7 @@
       "bonus": "Löst ausgerüstete Messer bei Vergeltung oder bei Überheilung um +8 aus; findet spezielle Pickups.",
       "secret": false,
       "emoji": "🧗",
+      "image": "https://vampire.survivors.wiki/images/Select-Grant_Danasty.png",
       "verified": true
     },
     {
@@ -119,6 +128,7 @@
       "bonus": "Erhält auf Level 10 die zusätzliche Arcana VII – Iron Blue Will; findet spezielle Pickups; alle 5 Level erscheinen Mirrors of Truth.",
       "secret": false,
       "emoji": "🤠",
+      "image": "https://vampire.survivors.wiki/images/Select-John_Morris.png",
       "verified": true
     },
     {
@@ -131,6 +141,7 @@
       "bonus": "Aufladung abhängig von Geschwindigkeit: löst alle ausgerüsteten Waffen aus dem Coat of Arms aus.",
       "secret": false,
       "emoji": "🧑",
+      "image": "https://vampire.survivors.wiki/images/Select-Jonathan_Morris.png",
       "verified": true
     },
     {
@@ -143,6 +154,7 @@
       "bonus": "+1 % Macht pro Level; immun gegen Gesundheitsentzug; einmal pro Leben Soul Steal nach tödlichem Schaden.",
       "secret": false,
       "emoji": "🧥",
+      "image": "https://vampire.survivors.wiki/images/Select-Soma_Cruz.png",
       "verified": true
     },
     {
@@ -155,6 +167,7 @@
       "bonus": "Aufladung abhängig vom Wachstum: löst alle ausgerüsteten Waffen aus Belnades' Spellbook aus.",
       "secret": false,
       "emoji": "🧙‍♀️",
+      "image": "https://vampire.survivors.wiki/images/Select-Charlotte_Aulin.png",
       "verified": true
     },
     {
@@ -167,6 +180,7 @@
       "bonus": "Startet mit der zusätzlichen Arcana XIV – Jail of Crystal; findet spezielle Pickups.",
       "secret": false,
       "emoji": "🧝‍♀️",
+      "image": "https://vampire.survivors.wiki/images/Select-Sypha_Belnades.png",
       "verified": true
     },
     {
@@ -179,6 +193,7 @@
       "bonus": "Startet mit der zusätzlichen Arcana III – Tragic Princess.",
       "secret": false,
       "emoji": "👩‍🦳",
+      "image": "https://vampire.survivors.wiki/images/Select-Yoko_Belnades.png",
       "verified": true
     },
     {
@@ -191,6 +206,7 @@
       "bonus": "Aufladung: Soul Steal; Level-up: Dark Inferno; Überheilung +8: Summon Spirit; kritische Gesundheit: Sword Brothers; immun gegen Gesundheitsentzug.",
       "secret": false,
       "emoji": "🧛",
+      "image": "https://vampire.survivors.wiki/images/Select-Alucard.png",
       "verified": true
     },
     {
@@ -203,6 +219,7 @@
       "bonus": "Wird bei kritisch niedriger Gesundheit für 20 Sekunden unverwundbar und schadet Gegnern in der Nähe.",
       "secret": false,
       "emoji": "🔱",
+      "image": "https://vampire.survivors.wiki/images/Select-Eric_Lecarde.png",
       "verified": true
     },
     {
@@ -215,6 +232,7 @@
       "bonus": "Erhält alle 10 Level einen zufälligen Familiar als Begleiter (max. 4).",
       "secret": false,
       "emoji": "⚒️",
+      "image": "https://vampire.survivors.wiki/images/Select-Hector.png",
       "verified": true
     },
     {
@@ -227,6 +245,7 @@
       "bonus": "Erhält ab Level 2 alle 10 Level einen Begleiter; Überheilung erhöht die Macht leicht; Überheilung um +32 stärkt alle Begleiter kurz.",
       "secret": false,
       "emoji": "🕊️",
+      "image": "https://vampire.survivors.wiki/images/Select-Maria_Renard.png",
       "verified": true
     },
     {
@@ -239,6 +258,7 @@
       "bonus": "+1 % Macht pro Level; Aufladung löst alle ausgerüsteten Waffen aus dem Ebony Diabologue aus; findet spezielle Pickups.",
       "secret": false,
       "emoji": "👩‍🦱",
+      "image": "https://vampire.survivors.wiki/images/Select-Shanoa.png",
       "verified": true
     },
     {
@@ -251,6 +271,7 @@
       "bonus": "Aufladung abhängig von Macht: versucht, eine Neutronenbombe sicher zu zünden.",
       "secret": true,
       "emoji": "🤠",
+      "image": "https://vampire.survivors.wiki/images/Select-Quincy_Morris.png",
       "verified": true
     },
     {
@@ -263,6 +284,7 @@
       "bonus": "Überheilung erhöht die Geschwindigkeit leicht; viel mehr Macht, solange unverwundbar.",
       "secret": true,
       "emoji": "🥷",
+      "image": "https://vampire.survivors.wiki/images/Select-Maxim_Kischine.png",
       "verified": true
     },
     {
@@ -275,6 +297,7 @@
       "bonus": "Bonus auf Fläche und Glück, abhängig von der Zahl sichtbarer Gegner.",
       "secret": true,
       "emoji": "🛡️",
+      "image": "https://vampire.survivors.wiki/images/Select-Henry.png",
       "verified": true
     },
     {
@@ -287,6 +310,7 @@
       "bonus": "+1 % Macht pro Level und +1 Wiederbelebung alle 100 Level; Fluch erhöht die Macht; erlittener Schaden höchstens 10; immun gegen Gesundheitsentzug.",
       "secret": true,
       "emoji": "🧛‍♂️",
+      "image": "https://vampire.survivors.wiki/images/Select-Vlad_Tepes_Dracula.png",
       "verified": true
     },
     {
@@ -299,6 +323,7 @@
       "bonus": "Startet mit der zusätzlichen Arcana VI – Sarabande of Healing; erhält alle 2 Level einen Heart Refresh.",
       "secret": true,
       "emoji": "👩",
+      "image": "https://vampire.survivors.wiki/images/Select-Julia_Laforeze.png",
       "verified": true
     },
     {
@@ -311,6 +336,7 @@
       "bonus": "Startet mit der zusätzlichen Arcana XI – Waltz of Pearls.",
       "secret": true,
       "emoji": "👧",
+      "image": "https://vampire.survivors.wiki/images/Select-Carrie_Fernandez.png",
       "verified": true
     },
     {
@@ -323,6 +349,7 @@
       "bonus": "Startet mit der zusätzlichen Arcana I – Gemini.",
       "secret": true,
       "emoji": "🧓",
+      "image": "https://vampire.survivors.wiki/images/Select-Rinaldo_Gandolfi.png",
       "verified": true
     },
     {
@@ -335,6 +362,7 @@
       "bonus": "Startet mit der zusätzlichen Arcana II – Twilight Requiem.",
       "secret": true,
       "emoji": "👩",
+      "image": "https://vampire.survivors.wiki/images/Select-Mina_Hakuba.png",
       "verified": true
     },
     {
@@ -347,6 +375,7 @@
       "bonus": "+50 erscheinende Gegner; immun gegen Gesundheitsentzug.",
       "secret": true,
       "emoji": "👸",
+      "image": "https://vampire.survivors.wiki/images/Select-Elizabeth_Bartley.png",
       "verified": true
     },
     {
@@ -359,6 +388,7 @@
       "bonus": "Startet mit der zusätzlichen Arcana XVI – Slash; insgesamt höherer kritischer Schaden.",
       "secret": true,
       "emoji": "🧔",
+      "image": "https://vampire.survivors.wiki/images/Select-Reinhardt_Schneider.png",
       "verified": true
     },
     {
@@ -371,6 +401,7 @@
       "bonus": "Erhält alle 10 Level einen zufälligen Familiar als Begleiter (max. 6).",
       "secret": true,
       "emoji": "😈",
+      "image": "https://vampire.survivors.wiki/images/Select-Isaac.png",
       "verified": true
     },
     {
@@ -383,6 +414,7 @@
       "bonus": "+0,02 Regeneration pro Level; einmal pro Leben Firebreathing für alle nach tödlichem Schaden; entwickelt Alchemy Whip bei Wiederbelebung.",
       "secret": true,
       "emoji": "👱‍♀️",
+      "image": "https://vampire.survivors.wiki/images/Select-Sara_Trantoul.png",
       "verified": true
     },
     {
@@ -395,6 +427,7 @@
       "bonus": "Überheilung erhöht die Gier leicht; doppelte Gier, solange unverwundbar; startet mit der zusätzlichen Arcana XV – Disco of Gold.",
       "secret": true,
       "emoji": "💼",
+      "image": "https://vampire.survivors.wiki/images/Select-Vincent_Dorin.png",
       "verified": true
     },
     {
@@ -407,6 +440,7 @@
       "bonus": "Bonus auf Macht und Abklingzeit, abhängig von der Zahl sichtbarer Gegner.",
       "secret": true,
       "emoji": "🔫",
+      "image": "https://vampire.survivors.wiki/images/Select-Albus.png",
       "verified": true
     },
     {
@@ -419,6 +453,7 @@
       "bonus": "+1 % Wachstum pro Level; startet mit der zusätzlichen Arcana XX – Silent Old Sanctuary.",
       "secret": true,
       "emoji": "👩‍⚕️",
+      "image": "https://vampire.survivors.wiki/images/Select-Lisa_Tepes.png",
       "verified": true
     },
     {
@@ -431,6 +466,7 @@
       "bonus": "+1 % Fluch pro Level; wird bei kritisch niedriger Gesundheit für 20 Sekunden unverwundbar und schadet Gegnern in der Nähe.",
       "secret": true,
       "emoji": "🧙‍♂️",
+      "image": "https://vampire.survivors.wiki/images/Select-Shaft.png",
       "verified": true
     },
     {
@@ -443,6 +479,7 @@
       "bonus": "−0,2 % Abklingzeit pro Level; startet mit der zusätzlichen Arcana XII – Out of Bounds.",
       "secret": true,
       "emoji": "🎩",
+      "image": "https://vampire.survivors.wiki/images/Select-Saint_Germain.png",
       "verified": true
     },
     {
@@ -455,6 +492,7 @@
       "bonus": "Startet mit der zusätzlichen Arcana IV – Awake; erhält nach 7 und 14 Minuten eine weitere Arcana-Wahl.",
       "secret": true,
       "emoji": "🧑",
+      "image": "https://vampire.survivors.wiki/images/Select-Nathan_Graves.png",
       "verified": true
     },
     {
@@ -467,6 +505,7 @@
       "bonus": "Verwandelt sich in eine stärkere Form, wenn Trinum Custodem ausgerüstet ist.",
       "secret": true,
       "emoji": "🐺",
+      "image": "https://vampire.survivors.wiki/images/Select-Cornell.png",
       "verified": true,
       "note": "Alternativ wählbare Startwaffe: Sinestro Custos."
     },
@@ -480,6 +519,7 @@
       "bonus": "Überheilung erhöht Macht und Fluch leicht; bekommt bis Level 11 eventuell Ebony Diabologue als 4. Level-up-Option.",
       "secret": true,
       "emoji": "🧔",
+      "image": "https://vampire.survivors.wiki/images/Select-Barlowe.png",
       "verified": true,
       "note": "Alternativ wählbare Startwaffe: Dominus Hatred."
     },
@@ -493,6 +533,7 @@
       "bonus": "Kann keinen Schaden nehmen, verschwindet aber beim Zeitlimit.",
       "secret": true,
       "emoji": "👧",
+      "image": "https://vampire.survivors.wiki/images/Select-Young_Maria_Renard.png",
       "verified": true
     },
     {
@@ -508,6 +549,7 @@
       "bonus": "Erhält alle 20 Level mehr Projektile (max. +3).",
       "secret": true,
       "emoji": "🦇",
+      "image": "https://vampire.survivors.wiki/images/Select-Familiar.png",
       "verified": true
     },
     {
@@ -527,6 +569,7 @@
       "bonus": "Erhält alle 20 Level mehr Projektile (max. +3).",
       "secret": true,
       "emoji": "😇",
+      "image": "https://vampire.survivors.wiki/images/Select-Innocent_Devil.png",
       "verified": true
     },
     {
@@ -539,6 +582,7 @@
       "bonus": "+1 % Macht pro Level.",
       "secret": true,
       "emoji": "🌙",
+      "image": "https://vampire.survivors.wiki/images/Select-Blue_Crescent_Moon_Cornell.png",
       "verified": true
     },
     {
@@ -549,6 +593,7 @@
       "bonus": "„Wasser inklusive.“",
       "secret": true,
       "emoji": "🛶",
+      "image": "https://vampire.survivors.wiki/images/Select-Ferryman.png",
       "verified": true,
       "note": "Versteckte Waffe: Acquazzone."
     },
@@ -562,6 +607,7 @@
       "bonus": "„Von Geld zutiefst gerührt.“",
       "secret": true,
       "emoji": "📚",
+      "image": "https://vampire.survivors.wiki/images/Select-Master_Librarian.png",
       "verified": true
     },
     {
@@ -574,6 +620,7 @@
       "bonus": "Erhält alle 20 Level mehr Projektile (max. +3); doppelte Anzahl, solange unverwundbar.",
       "secret": true,
       "emoji": "🔨",
+      "image": "https://vampire.survivors.wiki/images/Select-Hammer.png",
       "verified": true
     },
     {
@@ -586,6 +633,7 @@
       "bonus": "Schlägt mit Aura Blast zurück; Überheilung um +8 löst Aura Blast und eine zufällige Coat-of-Arms-Waffe aus.",
       "secret": true,
       "emoji": "🍃",
+      "image": "https://vampire.survivors.wiki/images/Select-Wind.png",
       "verified": true
     },
     {
@@ -598,6 +646,7 @@
       "bonus": "Geübt mit Valmanway; bekommt bis Level 15 eventuell Coat of Arms als 4. Level-up-Option.",
       "secret": true,
       "emoji": "🗡️",
+      "image": "https://vampire.survivors.wiki/images/Select-Hugh_Baldwin.png",
       "verified": true
     },
     {
@@ -610,6 +659,7 @@
       "bonus": "Geübt mit allen Coat-of-Arms-Waffen; schlägt mit Kaiser Knuckle, Lapiste Tepisto und jedem Bracelet zurück.",
       "secret": true,
       "emoji": "🧔",
+      "image": "https://vampire.survivors.wiki/images/Select-Morris_Baldwin.png",
       "verified": true
     },
     {
@@ -622,6 +672,7 @@
       "bonus": "Ruft eine Auswahl von Uhrwerk-Waffen herbei.",
       "secret": true,
       "emoji": "👩",
+      "image": "https://vampire.survivors.wiki/images/Select-Annette.png",
       "verified": true,
       "note": "Alternativ wählbare Startwaffe: Peri Pendulum, Myo Lift, Epi Head."
     },
@@ -635,6 +686,7 @@
       "bonus": "Startet mit zeitweise verkürzter Abklingzeit; Überheilung senkt die Abklingzeit leicht; Rosaries sind leichter zu finden.",
       "secret": true,
       "emoji": "👵",
+      "image": "https://vampire.survivors.wiki/images/Select-Tera.png",
       "verified": true
     },
     {
@@ -650,6 +702,7 @@
       "bonus": "„Jonathan! Charlotte! Jonathan! Charlotte! …“",
       "secret": true,
       "emoji": "👫",
+      "image": "https://vampire.survivors.wiki/images/Select-Jonathan_%26_Charlotte.png",
       "verified": false,
       "note": "Ungeprüft: Startwaffe nur auf der Charakterseite genannt."
     },
@@ -664,6 +717,7 @@
       "bonus": "„Charlotte! Jonathan! Charlotte! Jonathan! …“",
       "secret": true,
       "emoji": "👫",
+      "image": "https://vampire.survivors.wiki/images/Select-Charlotte_%26_Jonathan.png",
       "verified": false,
       "note": "Ungeprüft: Startwaffe nur auf der Charakterseite genannt."
     },
@@ -677,6 +731,7 @@
       "bonus": "Immun gegen Gesundheitsentzug.",
       "secret": true,
       "emoji": "👭",
+      "image": "https://vampire.survivors.wiki/images/Select-Stella_%26_Loretta_Lecarde.png",
       "verified": false,
       "note": "Ungeprüft: Startwaffe nur auf der Charakterseite genannt."
     },
@@ -690,6 +745,7 @@
       "bonus": "Immun gegen Gesundheitsentzug.",
       "secret": true,
       "emoji": "👭",
+      "image": "https://vampire.survivors.wiki/images/Select-Loretta_%26_Stella_Lecarde.png",
       "verified": false,
       "note": "Ungeprüft: Startwaffe nur auf der Charakterseite genannt."
     },
@@ -703,6 +759,7 @@
       "bonus": "Immun gegen Gesundheitsentzug.",
       "secret": true,
       "emoji": "👩",
+      "image": "https://vampire.survivors.wiki/images/Select-Stella_Lecarde.png",
       "verified": true
     },
     {
@@ -715,6 +772,7 @@
       "bonus": "Immun gegen Gesundheitsentzug.",
       "secret": true,
       "emoji": "👩",
+      "image": "https://vampire.survivors.wiki/images/Select-Loretta_Lecarde.png",
       "verified": true
     },
     {
@@ -727,6 +785,7 @@
       "bonus": "Startet mit der zusätzlichen Arcana XXI – Blood Astronomia; immun gegen Gesundheitsentzug.",
       "secret": true,
       "emoji": "🎨",
+      "image": "https://vampire.survivors.wiki/images/Select-Brauner.png",
       "verified": false,
       "note": "Ungeprüft: Startwaffe nur auf der Charakterseite genannt."
     },
@@ -742,6 +801,7 @@
       "bonus": "Kämpft gut mit (und gegen) seinen Vater.",
       "secret": true,
       "emoji": "🧑",
+      "image": "https://vampire.survivors.wiki/images/Select-Soleil_Belmont.png",
       "verified": true,
       "note": "Versteckte Waffe: Jet Black Whip; Vibhuti Whip; Vanitas Whip."
     },
@@ -755,6 +815,7 @@
       "bonus": "Erhöht beim Level-up den Grundschaden aller ausgerüsteten Feuerwaffen.",
       "secret": true,
       "emoji": "🔥",
+      "image": "https://vampire.survivors.wiki/images/Select-Dario_Bossi.png",
       "verified": true
     },
     {
@@ -767,6 +828,7 @@
       "bonus": "Erhält einen versteckten Klon der zuletzt ausgerüsteten Waffe oder Entwicklung.",
       "secret": true,
       "emoji": "🪞",
+      "image": "https://vampire.survivors.wiki/images/Select-Dmitrii_Blinov.png",
       "verified": false,
       "note": "Ungeprüft: Startwaffe nur auf der Charakterseite genannt."
     },
@@ -781,6 +843,7 @@
       "bonus": "Erhält alle 2 Level eine Karma Coin.",
       "secret": true,
       "emoji": "🪙",
+      "image": "https://vampire.survivors.wiki/images/Select-Celia_Fortner.png",
       "verified": true
     },
     {
@@ -793,6 +856,7 @@
       "bonus": "Startet mit der zusätzlichen Arcana XIII – Wicked Season; immun gegen Gesundheitsentzug.",
       "secret": true,
       "emoji": "🧑‍💼",
+      "image": "https://vampire.survivors.wiki/images/Select-Graham_Jones.png",
       "verified": true
     },
     {
@@ -805,6 +869,7 @@
       "bonus": "„Ganz bestimmt nicht Alucard.“",
       "secret": true,
       "emoji": "🕴️",
+      "image": "https://vampire.survivors.wiki/images/Select-Genya_Arikado.png",
       "verified": true
     },
     {
@@ -817,6 +882,7 @@
       "bonus": "Immun gegen Gesundheitsentzug; kann einen Bonus pro Level wählen.",
       "secret": true,
       "emoji": "⚔️",
+      "image": "https://vampire.survivors.wiki/images/Select-Joachim_Armster.png",
       "verified": true
     },
     {
@@ -829,6 +895,7 @@
       "bonus": "Überheilung um +8 löst eine zufällige Ebony-Diabologue-Waffe aus; immun gegen Gesundheitsentzug.",
       "secret": true,
       "emoji": "🧛",
+      "image": "https://vampire.survivors.wiki/images/Select-Walter_Bernhard.png",
       "verified": true
     },
     {
@@ -839,6 +906,7 @@
       "bonus": "Aufladung abhängig vom Fluch: löst alle ausgerüsteten Dominus-Waffen aus; immun gegen Gesundheitsentzug; fliegt.",
       "secret": true,
       "emoji": "🦇",
+      "image": "https://vampire.survivors.wiki/images/Select-Carmilla.png",
       "verified": true,
       "note": "Versteckte Waffe: Dominus Hatred."
     },
@@ -852,6 +920,7 @@
       "bonus": "Erhält alle 20 Level mehr Projektile (max. +4).",
       "secret": true,
       "emoji": "🧌",
+      "image": "https://vampire.survivors.wiki/images/Select-Cave_Troll.png",
       "verified": true
     },
     {
@@ -862,6 +931,7 @@
       "bonus": "„Er versteht das Spiel nicht.“",
       "secret": true,
       "emoji": "🐒",
+      "image": "https://vampire.survivors.wiki/images/Select-Fleaman.png",
       "verified": true
     },
     {
@@ -874,6 +944,7 @@
       "bonus": "„Sechs Äxte axten Äxte als Äxte.“",
       "secret": true,
       "emoji": "🪓",
+      "image": "https://vampire.survivors.wiki/images/Select-Axe_Armor.png",
       "verified": true
     },
     {
@@ -886,6 +957,7 @@
       "bonus": "„Sie mag ihr Wand- und Bodenhähnchen gut gefroren.“",
       "secret": true,
       "emoji": "🧊",
+      "image": "https://vampire.survivors.wiki/images/Select-Frozenshade.png",
       "verified": true
     },
     {
@@ -898,6 +970,7 @@
       "bonus": "+1 % Glück pro Level; kann fliegen.",
       "secret": true,
       "emoji": "🏹",
+      "image": "https://vampire.survivors.wiki/images/Select-Alamaric_Sniper.png",
       "verified": true
     },
     {
@@ -908,6 +981,7 @@
       "bonus": "+1 Rüstung alle 5 Level; kann sich nur schlecht seitwärts bewegen; schlägt zurück.",
       "secret": true,
       "emoji": "💀",
+      "image": "https://vampire.survivors.wiki/images/Select-Stone_Skull.png",
       "verified": false,
       "note": "Startet zusätzlich mit: No. Ungeprüft: Startwaffe nur auf der Charakterseite genannt."
     },
@@ -921,6 +995,7 @@
       "bonus": "Bekommt zusätzliche Schwerter, je mehr Überheilung sich ansammelt (max. 12 Schwerter).",
       "secret": true,
       "emoji": "🗡️",
+      "image": "https://vampire.survivors.wiki/images/Select-Ruler_Sword.png",
       "verified": true
     },
     {
@@ -933,6 +1008,7 @@
       "bonus": "Ihr versteckter Staubsauger zieht Gegenstände, zerstörbare Objekte und Gegner an.",
       "secret": true,
       "emoji": "🧹",
+      "image": "https://vampire.survivors.wiki/images/Select-Persephone.png",
       "verified": true
     },
     {
@@ -945,6 +1021,7 @@
       "bonus": "Startet mit der zusätzlichen Arcana XVII – Lost & Found Painting; Überheilung um +8 löst Keremet Morbus aus.",
       "secret": true,
       "emoji": "🦠",
+      "image": "https://vampire.survivors.wiki/images/Select-Keremet.png",
       "verified": true
     },
     {
@@ -955,6 +1032,7 @@
       "bonus": "Startet mit verstecktem Star Flail; Gegner erscheinen mit 15 % Chance entwaffnet; kann besiegte Gegner zu Begleitern machen.",
       "secret": true,
       "emoji": "💃",
+      "image": "https://vampire.survivors.wiki/images/Select-Astarte.png",
       "verified": false,
       "note": "Startet zusätzlich mit: No. Versteckte Waffe: Star Flail. Ungeprüft: Startwaffe nur auf der Charakterseite genannt."
     },
@@ -968,6 +1046,7 @@
       "bonus": "Überheilung um +32 löst eine ausgerüstete Waffe aus Belnades' Spellbook aus.",
       "secret": true,
       "emoji": "🧙‍♀️",
+      "image": "https://vampire.survivors.wiki/images/Select-Drolta_Tzuentes.png",
       "verified": true
     },
     {
@@ -980,6 +1059,7 @@
       "bonus": "Geübt mit Gemma Torpor, Runetracer, Magi-Stone und Kyra-Stones; hat einen versteckten Runetracer, der mit dem Level stärker wird.",
       "secret": true,
       "emoji": "🧙‍♀️",
+      "image": "https://vampire.survivors.wiki/images/Select-Witch_Actrise.png",
       "verified": true,
       "note": "Versteckte Waffe: Runetracer."
     },
@@ -993,6 +1073,7 @@
       "bonus": "Überheilung um +32 löst eine Coat-of-Arms-Waffe aus und flutet langsam die Umgebung.",
       "secret": true,
       "emoji": "🧙",
+      "image": "https://vampire.survivors.wiki/images/Select-Atlantis_Shrine_Wizard.png",
       "verified": true,
       "note": "Versteckte Waffe: Acquazzone."
     },
@@ -1006,6 +1087,7 @@
       "bonus": "Startet mit der zusätzlichen Arcana XVIII – Boogaloo of Illusions.",
       "secret": true,
       "emoji": "😈",
+      "image": "https://vampire.survivors.wiki/images/Select-Succubus.png",
       "verified": true
     },
     {
@@ -1020,6 +1102,7 @@
       "bonus": "„Ein Trio Zombies, das sich als Vampirjäger ausgibt.“",
       "secret": true,
       "emoji": "🧟",
+      "image": "https://vampire.survivors.wiki/images/Select-Fake_Trevor.png",
       "verified": false,
       "note": "Ungeprüft: Startwaffe nur auf der Charakterseite genannt."
     },
@@ -1034,6 +1117,7 @@
       "bonus": "Geübt mit Trident; wird immer von Gaibon begleitet; gerät in Rage, wenn der Partner stirbt.",
       "secret": true,
       "emoji": "🦅",
+      "image": "https://vampire.survivors.wiki/images/Select-Slogra_and_Gaibon.png",
       "verified": true
     },
     {
@@ -1046,6 +1130,7 @@
       "bonus": "Geübt mit Messern; Orologions geben Abklingzeit- und Laufgeschwindigkeits-Bonus und sind leichter zu finden.",
       "secret": true,
       "emoji": "⏱️",
+      "image": "https://vampire.survivors.wiki/images/Select-Zephyr.png",
       "verified": true,
       "note": "Alternativ wählbare Startwaffe: Curved Knife."
     },
@@ -1059,6 +1144,7 @@
       "bonus": "Löst bei jedem 13. Hüpfer eine zufällige ausgerüstete Waffe aus; immun gegen Gesundheitsentzug.",
       "secret": true,
       "emoji": "🧟",
+      "image": "https://vampire.survivors.wiki/images/Select-Jiangshi.png",
       "verified": true
     },
     {
@@ -1071,6 +1157,7 @@
       "bonus": "Kann nach einer bestimmten Zahl besiegter Gegner einen Bonus pro Level wählen (max. 5-mal).",
       "secret": true,
       "emoji": "🧔",
+      "image": "https://vampire.survivors.wiki/images/Select-Blackmore.png",
       "verified": true
     },
     {
@@ -1083,6 +1170,7 @@
       "bonus": "„Auf ihn ist Verlass, er wechselt mitten im Abendessen.“",
       "secret": true,
       "emoji": "🧛",
+      "image": "https://vampire.survivors.wiki/images/Select-Count_Olrox.png",
       "verified": true
     },
     {
@@ -1093,12 +1181,13 @@
       "bonus": "Hat versteckte Waffen, die mit dem Level stärker werden; kann fliegen.",
       "secret": true,
       "emoji": "🐦‍⬛",
+      "image": "https://vampire.survivors.wiki/images/Select-Malphas.png",
       "verified": true,
       "note": "Versteckte Waffe: Thousand Edge; Tenebris Tonitrus."
     },
     {
-      "id": "death-character",
-      "name": "Death (character)",
+      "id": "death",
+      "name": "Death",
       "source": "ode-to-castlevania",
       "startingWeapons": [
         "death-spiral"
@@ -1106,6 +1195,7 @@
       "bonus": "„Mag es gar nicht, gotteslästerlich verhöhnt zu werden.“",
       "secret": true,
       "emoji": "💀",
+      "image": "https://vampire.survivors.wiki/images/Select-Death.png",
       "verified": true
     },
     {
@@ -1118,6 +1208,7 @@
       "bonus": "„Größer ist besser.“",
       "secret": true,
       "emoji": "👾",
+      "image": "https://vampire.survivors.wiki/images/Select-Galamoth.png",
       "verified": true
     },
     {
@@ -1131,6 +1222,7 @@
       "bonus": "+50 erscheinende Gegner; immun gegen Gesundheitsentzug.",
       "secret": true,
       "emoji": "👸",
+      "image": "https://vampire.survivors.wiki/images/Select-Megalo_Elizabeth_Bartley.png",
       "verified": false,
       "note": "Ungeprüft: Startwaffe nur auf der Charakterseite genannt."
     },
@@ -1144,6 +1236,7 @@
       "bonus": "„Auf ihn ist Verlass, er wechselt mitten im Abendessen.“",
       "secret": true,
       "emoji": "🧛",
+      "image": "https://vampire.survivors.wiki/images/Select-Megalo_Olrox.png",
       "verified": true
     },
     {
@@ -1156,6 +1249,7 @@
       "bonus": "„Mag es gar nicht, gotteslästerlich verhöhnt zu werden.“",
       "secret": true,
       "emoji": "💀",
+      "image": "https://vampire.survivors.wiki/images/Select-Megalo_Death.png",
       "verified": true,
       "note": "Versteckte Waffe: Death Hand."
     },
@@ -1169,6 +1263,7 @@
       "bonus": "+1 % Macht pro Level und +1 Wiederbelebung alle 100 Level; Fluch erhöht die Macht; erlittener Schaden höchstens 10; immun gegen Gesundheitsentzug.",
       "secret": true,
       "emoji": "🧛‍♂️",
+      "image": "https://vampire.survivors.wiki/images/Select-Megalo_Dracula.png",
       "verified": true,
       "note": "Versteckte Waffe: Hand of Vlad."
     },
@@ -1182,6 +1277,7 @@
       "bonus": "Startet mit allen Arcanas von I bis XXI.",
       "secret": true,
       "emoji": "🌀",
+      "image": "https://vampire.survivors.wiki/images/Select-Chaos.png",
       "verified": true
     }
   ]

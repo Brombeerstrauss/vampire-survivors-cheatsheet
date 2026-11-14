@@ -1,7 +1,7 @@
 # Eigene Icons
 
-Die App bringt aus Urheberrechtsgründen keine Grafiken aus dem Spiel mit und zeigt
-stattdessen Emojis als Platzhalter. Hier kannst du eigene Bilder ablegen.
+Die App zeigt die Originalbilder aus dem Spiel, lädt sie aber vom Wiki und enthält selbst
+keine Kopien. Hier kannst du eigene Bilder ablegen; sie haben Vorrang vor den Wiki-Bildern.
 
 So geht's:
 
@@ -13,9 +13,14 @@ So geht's:
    { "id": "whip", "name": "Whip", "icon": "whip.png" }
    ```
 
-3. App neu bauen bzw. Seite neu laden. Fehlt das Feld `icon` oder die Datei, wird
-   weiter das Emoji aus dem Feld `emoji` gezeigt.
+3. App neu bauen bzw. Seite neu laden.
+
+Welches Bild erscheint: zuerst `icon` (dieser Ordner), sonst `image` (Wiki), sonst das Emoji
+aus dem Feld `emoji`. Lädt ein Bild nicht, kommt automatisch das nächste dran.
 
 Unterordner sind erlaubt (`"icon": "weapons/whip.png"`).
 
 Bitte nur Bilder verwenden, die du selbst erstellt hast oder nutzen darfst.
+
+Hinweis: Das Import-Werkzeug (`tools/wiki-import/run.sh`) schreibt die JSON-Dateien neu und
+entfernt dabei von Hand eingetragene `icon`-Felder.

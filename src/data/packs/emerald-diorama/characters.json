@@ -11,6 +11,7 @@
       "bonus": "Erhält alle 20 Level einen Kugutsu als Begleiter (max. 4); löst bei kritischer Gesundheit Showstopper aus.",
       "secret": false,
       "emoji": "🤺",
+      "image": "https://vampire.survivors.wiki/images/Select-Tsunanori_Mido.png",
       "verified": true,
       "note": "Alternativ wählbare Startwaffe: Splashers."
     },
@@ -24,6 +25,7 @@
       "bonus": "Erhält Macht beim Einsatz geglimmerter Techniken; bildet ein Team mit Formina; Showstopper bei kritischer Gesundheit.",
       "secret": false,
       "emoji": "🥊",
+      "image": "https://vampire.survivors.wiki/images/Select-Bonnie_Blair.png",
       "verified": true,
       "note": "Alternativ wählbare Startwaffe: Kick."
     },
@@ -37,6 +39,7 @@
       "bonus": "Erhält Dauer beim Einsatz geglimmerter Techniken; bildet ein Team mit Bonnie; Showstopper bei kritischer Gesundheit.",
       "secret": false,
       "emoji": "🔫",
+      "image": "https://vampire.survivors.wiki/images/Select-Formina_Franklyn.png",
       "verified": true,
       "note": "Alternativ wählbare Startwaffe: Eagle Gun."
     },
@@ -51,6 +54,7 @@
       "bonus": "Verschiedene Skins haben verschiedene Werte; Showstopper bei kritischer Gesundheit.",
       "secret": false,
       "emoji": "🤖",
+      "image": "https://vampire.survivors.wiki/images/Select-Diva_No._5.png",
       "verified": true
     },
     {
@@ -63,6 +67,7 @@
       "bonus": "Erhält Werte-Boni beim Einsammeln ihrer herbeigerufenen Katzen; Showstopper bei kritischer Gesundheit.",
       "secret": false,
       "emoji": "🐈‍⬛",
+      "image": "https://vampire.survivors.wiki/images/Select-Ameya_Aisling.png",
       "verified": true,
       "note": "Alternativ wählbare Startwaffe: Intuition."
     },
@@ -76,6 +81,7 @@
       "bonus": "Besiegte Gegner werden zu Begleitern; mehr max. Gesundheit erlaubt mehr Begleiter; Showstopper bei kritischer Gesundheit.",
       "secret": false,
       "emoji": "💀",
+      "image": "https://vampire.survivors.wiki/images/Select-Siugnas.png",
       "verified": true,
       "note": "Alternativ wählbare Startwaffe: Sanguine Star."
     },
@@ -89,6 +95,7 @@
       "bonus": "Löst geglimmerte Techniken öfter aus als üblich; Showstopper bei kritischer Gesundheit.",
       "secret": false,
       "emoji": "👑",
+      "image": "https://vampire.survivors.wiki/images/Select-Final_Emperor.png",
       "verified": true
     },
     {
@@ -101,6 +108,7 @@
       "bonus": "Showstopper bei kritischer Gesundheit und bei Wiederbelebung; jeder Showstopper senkt die Abklingzeit (max. −20 %).",
       "secret": false,
       "emoji": "🌹",
+      "image": "https://vampire.survivors.wiki/images/Select-Dolores.png",
       "verified": true
     },
     {
@@ -113,6 +121,7 @@
       "bonus": "Startet mit verstecktem Rings of Calamity; +50 erscheinende Gegner; Showstopper bei kritischer Gesundheit.",
       "secret": false,
       "emoji": "🗡️",
+      "image": "https://vampire.survivors.wiki/images/Select-Macha_Alter_Ego.png",
       "verified": true,
       "note": "Versteckte Waffe: Rings of Calamity."
     },
@@ -126,6 +135,7 @@
       "bonus": "Beherrscht von Anfang an die Technik „Heaven's Thunder“; Showstopper bei kritischer Gesundheit.",
       "secret": false,
       "emoji": "⚡",
+      "image": "https://vampire.survivors.wiki/images/Select-Lita_Caryx.png",
       "verified": true
     },
     {
@@ -141,6 +151,7 @@
       "bonus": "Erhält für jede neu geglimmerte Technik 1 Wiederbelebung und 5 % Wachstum; Showstopper bei kritischer Gesundheit.",
       "secret": false,
       "emoji": "🎎",
+      "image": "https://vampire.survivors.wiki/images/Select-Kugutsu.png",
       "verified": true
     },
     {
@@ -153,6 +164,7 @@
       "bonus": "Zeigt sein Können mit Techniken; erhält alle 20 Level mehr Projektile (max. +4).",
       "secret": false,
       "emoji": "🎩",
+      "image": "https://vampire.survivors.wiki/images/Select-Mr._S.png",
       "verified": true
     },
     {
@@ -163,6 +175,7 @@
       "bonus": "Showstopper bei kritischer Gesundheit; erhält bei jedem Showstopper einen Begleiter.",
       "secret": true,
       "emoji": "🐈",
+      "image": "https://vampire.survivors.wiki/images/Select-Lolo%2C_Hiss%2C_Meow%2C_and_Purr.png",
       "verified": true
     },
     {
@@ -173,6 +186,7 @@
       "bonus": "Beherrscht von Anfang an „Swallow Slice“ und „Airwave“; erhält Regeneration bei jedem Showstopper durch kritische Gesundheit.",
       "secret": true,
       "emoji": "🌸",
+      "image": "https://vampire.survivors.wiki/images/Select-Kina.png",
       "verified": true
     },
     {
@@ -183,6 +197,7 @@
       "bonus": "Beherrscht von Anfang an „Hell's Fury“ und „Blood Rage“; erhält Macht bei jedem Showstopper durch kritische Gesundheit.",
       "secret": true,
       "emoji": "🎻",
+      "image": "https://vampire.survivors.wiki/images/Select-Imakoo.png",
       "verified": true
     },
     {
@@ -195,6 +210,7 @@
       "bonus": "Beherrscht von Anfang an die Technik „Vermillion Sands“.",
       "secret": true,
       "emoji": "🚪",
+      "image": "https://vampire.survivors.wiki/images/Select-Malevolent_Door_Spirit.png",
       "verified": true
     }
   ]

@@ -9,6 +9,7 @@
       "description": "Wird mit jedem besiegten Boss stärker.",
       "maxLevel": 8,
       "emoji": "🪢",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Alchemy_Whip.png",
       "verified": true
     },
     {
@@ -19,6 +20,7 @@
       "description": "Der Schaden hängt vom Wachstum ab.",
       "maxLevel": 8,
       "emoji": "🌬️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Wind_Whip.png",
       "verified": true
     },
     {
@@ -29,6 +31,7 @@
       "description": "Jede 3. Auslösung feuert Projektile in feste Richtungen.",
       "maxLevel": 8,
       "emoji": "⚪",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Platinum_Whip.png",
       "verified": true
     },
     {
@@ -39,6 +42,7 @@
       "description": "Jede 7. Auslösung feuert einen schlängelnden Drachen.",
       "maxLevel": 8,
       "emoji": "🐉",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Dragon_Water_Whip.png",
       "verified": true
     },
     {
@@ -49,6 +53,7 @@
       "description": "Chance auf Sofort-Tod, abhängig vom Fluch.",
       "maxLevel": 8,
       "emoji": "💨",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Sonic_Whip.png",
       "verified": true
     },
     {
@@ -59,6 +64,7 @@
       "description": "Trifft den nächsten Gegner und erzeugt eine gerade Schadenszone.",
       "maxLevel": 8,
       "emoji": "⚫",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Jet_Black_Whip.png",
       "verified": true
     },
     {
@@ -69,6 +75,7 @@
       "description": "Trifft den nächsten Gegner und erzeugt eine Gruppe von Explosionen.",
       "maxLevel": 8,
       "emoji": "💥",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Vibhuti_Whip.png",
       "verified": true
     },
     {
@@ -79,6 +86,7 @@
       "description": "Trifft den nächsten Gegner und erzeugt eine querliegende Schadenszone; deren Schaden hängt von der max. Gesundheit ab.",
       "maxLevel": 8,
       "emoji": "🖤",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Vanitas_Whip.png",
       "verified": true
     },
     {
@@ -89,6 +97,7 @@
       "description": "Feuert Projektile in Blickrichtung.",
       "maxLevel": 8,
       "emoji": "✴️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Shuriken.png",
       "verified": true
     },
     {
@@ -99,6 +108,7 @@
       "description": "Wirft ein rotierendes Projektil auf einen zufälligen Gegner.",
       "maxLevel": 8,
       "emoji": "🔪",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Curved_Knife.png",
       "verified": true
     },
     {
@@ -109,6 +119,7 @@
       "description": "Feuert ein durchdringendes Projektil in eine feste Richtung.",
       "maxLevel": 8,
       "emoji": "🏹",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Javelin.png",
       "verified": true
     },
     {
@@ -119,6 +130,7 @@
       "description": "Feuert ein schützendes Projektil.",
       "maxLevel": 8,
       "emoji": "🥏",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Discus.png",
       "verified": true
     },
     {
@@ -129,6 +141,7 @@
       "description": "Der Schaden hängt von der Rüstung ab.",
       "maxLevel": 8,
       "emoji": "⚙️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Iron_Ball.png",
       "verified": true
     },
     {
@@ -139,6 +152,7 @@
       "description": "Feuert sechsmal ein starkes Projektil.",
       "maxLevel": 8,
       "emoji": "🔫",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Silver_Revolver.png",
       "verified": true
     },
     {
@@ -149,6 +163,7 @@
       "description": "Feuert ein explodierendes Projektil.",
       "maxLevel": 8,
       "emoji": "💣",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Hand_Grenade.png",
       "verified": true
     },
     {
@@ -159,6 +174,7 @@
       "description": "Wirft ein explodierendes Projektil.",
       "maxLevel": 8,
       "emoji": "🍷",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Wine_Glass.png",
       "verified": true
     },
     {
@@ -169,6 +185,7 @@
       "description": "Erzeugt eine explodierende Schadenszone.",
       "maxLevel": 8,
       "emoji": "🔥",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Raging_Fire.png",
       "verified": true
     },
     {
@@ -179,6 +196,7 @@
       "description": "Erzeugt Schadenszonen in einer geraden Linie.",
       "maxLevel": 8,
       "emoji": "🧊",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Ice_Fang.png",
       "verified": true
     },
     {
@@ -189,6 +207,7 @@
       "description": "Feuert leicht treffende Projektile nach hinten.",
       "maxLevel": 8,
       "emoji": "🌪️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Gale_Force.png",
       "verified": true
     },
     {
@@ -199,6 +218,7 @@
       "description": "Feuert Projektile von einem festen Ort aus.",
       "maxLevel": 8,
       "emoji": "🪨",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Rock_Riot.png",
       "verified": true
     },
     {
@@ -209,6 +229,7 @@
       "description": "Schlägt an festen Orten ein.",
       "maxLevel": 8,
       "emoji": "⚡",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Fulgur.png",
       "verified": true
     },
     {
@@ -219,6 +240,7 @@
       "description": "Feuert langsame Schadenszonen.",
       "maxLevel": 8,
       "emoji": "🫧",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Keremet_Bubbles.png",
       "verified": true
     },
     {
@@ -229,6 +251,7 @@
       "description": "Erzeugt eine wandernde Schadenszone; der Schaden hängt vom Fluch ab.",
       "maxLevel": 8,
       "emoji": "🔮",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Hex.png",
       "verified": true
     },
     {
@@ -239,6 +262,7 @@
       "description": "Erzeugt eine Schadenszone, die auch leicht heilt.",
       "maxLevel": 8,
       "emoji": "💚",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Refectio.png",
       "verified": true
     },
     {
@@ -249,6 +273,7 @@
       "description": "Die Anzahl bestimmt die Zahl der Treffer.",
       "maxLevel": 8,
       "emoji": "🔨",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Mace.png",
       "verified": true
     },
     {
@@ -259,6 +284,7 @@
       "description": "Feuert verweilende Projektile; der Schaden wird mit der Regeneration multipliziert.",
       "maxLevel": 8,
       "emoji": "⭐",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Star_Flail.png",
       "verified": true
     },
     {
@@ -269,6 +295,7 @@
       "description": "Führt beim Richtungswechsel nach links oder rechts einen Drehangriff aus.",
       "maxLevel": 8,
       "emoji": "🔱",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Alucard_Spear.png",
       "verified": true
     },
     {
@@ -279,6 +306,7 @@
       "description": "Schlägt an festen Orten zu.",
       "maxLevel": 8,
       "emoji": "🔱",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Trident.png",
       "verified": true
     },
     {
@@ -289,6 +317,7 @@
       "description": "Schlägt mit verweilenden Projektilen zurück.",
       "maxLevel": 8,
       "emoji": "🛡️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Iron_Shield.png",
       "verified": true
     },
     {
@@ -299,6 +328,7 @@
       "description": "Ruft schützende Begleiter; Überheilung löst zusätzliche Angriffe der Begleiter aus.",
       "maxLevel": 8,
       "emoji": "🛡️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Guardian%27s_Targe.png",
       "verified": true
     },
     {
@@ -309,6 +339,7 @@
       "description": "Kehrt wie ein Bumerang zurück; kann kritisch treffen.",
       "maxLevel": 8,
       "emoji": "🗡️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Tyrfing.png",
       "verified": true
     },
     {
@@ -319,6 +350,7 @@
       "description": "Trifft angeblich den nächsten Gegner.",
       "maxLevel": 8,
       "emoji": "🗡️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Alucart_Sworb.png",
       "verified": true
     },
     {
@@ -329,6 +361,7 @@
       "description": "Greift Gegner in der Nähe an; Geschwindigkeit erhöht den Schaden.",
       "maxLevel": 6,
       "emoji": "🤺",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Confodere.png",
       "verified": true
     },
     {
@@ -339,6 +372,7 @@
       "description": "Feuert zwei abprallende Projektile; die Anzahl erhöht die Dauer.",
       "maxLevel": 8,
       "emoji": "🔵",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Globus.png",
       "verified": true
     },
     {
@@ -349,6 +383,7 @@
       "description": "Feuert zwei durchdringende Projektile.",
       "maxLevel": 8,
       "emoji": "👁️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Optical_Shot.png",
       "verified": true
     },
     {
@@ -359,6 +394,7 @@
       "description": "Ruft den feurigen Kopf von Cerberus in Blickrichtung.",
       "maxLevel": 6,
       "emoji": "🐕",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Dextro_Custos.png",
       "verified": true
     },
     {
@@ -369,6 +405,7 @@
       "description": "Ruft den eisigen Kopf von Cerberus in Blickrichtung.",
       "maxLevel": 6,
       "emoji": "🐕",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Sinestro_Custos.png",
       "verified": true
     },
     {
@@ -379,6 +416,7 @@
       "description": "Ruft den rachsüchtigen Kopf von Cerberus; erhöht bei Schaden Rüstung, Regeneration und senkt die Abklingzeit.",
       "maxLevel": 6,
       "emoji": "🐕",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Centralis_Custos.png",
       "verified": true
     },
     {
@@ -389,6 +427,7 @@
       "description": "Feuert ein durchdringendes Projektil; zehrt an der Gesundheit.",
       "maxLevel": 6,
       "emoji": "🔴",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Dominus_Anger.png",
       "verified": true
     },
     {
@@ -399,6 +438,7 @@
       "description": "Feuert Projektile von oben; zehrt an der Gesundheit.",
       "maxLevel": 6,
       "emoji": "🟣",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Dominus_Hatred.png",
       "verified": true
     },
     {
@@ -409,6 +449,7 @@
       "description": "Erhöht Macht, Geschwindigkeit, Dauer und Fläche; zehrt an der Gesundheit.",
       "maxLevel": 6,
       "emoji": "⚫",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Dominus_Agony.png",
       "verified": true
     },
     {
@@ -419,6 +460,7 @@
       "description": "+10 % Laufgeschwindigkeit pro Stufe und Schaden an Gegnern in der Nähe; Fläche und Geschwindigkeit erhöhen den Schaden.",
       "maxLevel": 8,
       "emoji": "💨",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Sonic_Dash.png",
       "verified": true
     },
     {
@@ -429,6 +471,7 @@
       "description": "Feuert rotierende Projektile aus Licht.",
       "maxLevel": 6,
       "emoji": "☀️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Luminatio.png",
       "verified": true
     },
     {
@@ -439,6 +482,7 @@
       "description": "Feuert rotierende Projektile aus Dunkelheit.",
       "maxLevel": 6,
       "emoji": "🌑",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Umbra.png",
       "verified": true
     },
     {
@@ -449,6 +493,7 @@
       "description": "Lässt dich aus einer Auswahl magischer Peitschen wählen.",
       "maxLevel": 1,
       "emoji": "🌟",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Morning_Star.png",
       "verified": true
     },
     {
@@ -459,6 +504,7 @@
       "description": "Lässt dich aus einer Auswahl von Vampirjäger-Werkzeugen wählen.",
       "maxLevel": 1,
       "emoji": "🛡️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Coat_of_Arms.png",
       "verified": true
     },
     {
@@ -469,6 +515,7 @@
       "description": "Lässt dich aus einer Auswahl von Zaubern wählen.",
       "maxLevel": 1,
       "emoji": "📘",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Belnades%27_Spellbook.png",
       "verified": true
     },
     {
@@ -479,6 +526,7 @@
       "description": "Lässt dich aus einer Auswahl magischer Waffen wählen.",
       "maxLevel": 1,
       "emoji": "🗡️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Spectral_Sword.png",
       "verified": true
     },
     {
@@ -489,6 +537,7 @@
       "description": "Lässt dich aus einer Auswahl zwiespältiger Kräfte wählen.",
       "maxLevel": 1,
       "emoji": "📕",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Ebony_Diabologue.png",
       "verified": true
     },
     {
@@ -499,6 +548,7 @@
       "description": "Feuert schneller, während du dich bewegst.",
       "maxLevel": 8,
       "emoji": "⚔️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Valmanway.png",
       "verified": true
     },
     {
@@ -509,6 +559,7 @@
       "description": "Feuert verweilende Projektile; kann Gegner einfrieren.",
       "maxLevel": 8,
       "emoji": "❄️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Icebrand.png",
       "verified": true
     },
     {
@@ -519,6 +570,7 @@
       "description": "Kritische Treffer maximieren die Zahl der Projektile.",
       "maxLevel": 8,
       "emoji": "🏹",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Arrow_of_Goth.png",
       "verified": true
     },
     {
@@ -529,6 +581,7 @@
       "description": "Erzeugt seitliche Explosionen.",
       "maxLevel": 8,
       "emoji": "💥",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Aura_Blast.png",
       "verified": true
     },
     {
@@ -539,6 +592,7 @@
       "description": "Teilt eine Serie von Schlägen auf kurze Distanz aus.",
       "maxLevel": 8,
       "emoji": "🥊",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Kaiser_Knuckle.png",
       "verified": true
     },
     {
@@ -549,6 +603,7 @@
       "description": "Wirft ein kurzlebiges Messer in Blickrichtung.",
       "maxLevel": 8,
       "emoji": "🔪",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Pocket_Knife.png",
       "verified": true
     },
     {
@@ -559,6 +614,7 @@
       "description": "Erzeugt beim Laufen Schadenszonen.",
       "maxLevel": 8,
       "emoji": "🗿",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Svarog_Statue.png",
       "verified": true
     },
     {
@@ -569,6 +625,7 @@
       "description": "Diese hier prallt nicht ab.",
       "maxLevel": 8,
       "emoji": "💣",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Troll_Bomb.png",
       "verified": true
     },
     {
@@ -579,6 +636,7 @@
       "description": "Erzeugt Schadenswellen abhängig von Projektilgeschwindigkeit und Dauer.",
       "maxLevel": 8,
       "emoji": "🌊",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Hydro_Storm.png",
       "verified": true
     },
     {
@@ -589,6 +647,7 @@
       "description": "Ruft heiliges Licht herbei.",
       "maxLevel": 8,
       "emoji": "✝️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Grand_Cross.png",
       "verified": true
     },
     {
@@ -599,6 +658,7 @@
       "description": "Feuert ein zielsuchendes Projektil.",
       "maxLevel": 8,
       "emoji": "👻",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Summon_Spirit.png",
       "verified": true
     },
     {
@@ -609,6 +669,7 @@
       "description": "Schadet allen sichtbaren Gegnern und versucht, sie in Herzen zu verwandeln.",
       "maxLevel": 8,
       "emoji": "💔",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Soul_Steal.png",
       "verified": true
     },
     {
@@ -619,6 +680,7 @@
       "description": "Erzeugt senkrechte Schadenszonen.",
       "maxLevel": 8,
       "emoji": "🌌",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Dark_Rift.png",
       "verified": true
     },
     {
@@ -629,6 +691,7 @@
       "description": "Gibt kurz Unverwundbarkeit und erzeugt eine Schadenswelle.",
       "maxLevel": 8,
       "emoji": "⚔️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Sword_Brothers.png",
       "verified": true
     },
     {
@@ -639,6 +702,7 @@
       "description": "Ruft Geister, die gelegentlich Erfahrungs-Edelsteine für dich einsammeln.",
       "maxLevel": 8,
       "emoji": "🌪️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Summon_Spirit_Tornado.png",
       "verified": true
     },
     {
@@ -649,6 +713,7 @@
       "description": "Ruft Frösche, die Gegnern beim Springen schaden.",
       "maxLevel": 8,
       "emoji": "🐸",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Anura.png",
       "verified": true
     },
     {
@@ -659,6 +724,7 @@
       "description": "Löst auch andere Uhrwerk-Waffen aus; Anzahl und gefundene Orologions erhöhen den Schaden.",
       "maxLevel": 9,
       "emoji": "⚙️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Endo_Gears.png",
       "verified": true
     },
     {
@@ -669,6 +735,7 @@
       "description": "Löst auch andere Uhrwerk-Waffen aus; Anzahl und gefundene Orologions erhöhen den Schaden.",
       "maxLevel": 9,
       "emoji": "🕰️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Peri_Pendulum.png",
       "verified": true
     },
     {
@@ -679,6 +746,7 @@
       "description": "Löst auch andere Uhrwerk-Waffen aus; Anzahl und gefundene Orologions erhöhen den Schaden.",
       "maxLevel": 9,
       "emoji": "🛗",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Myo_Lift.png",
       "verified": true
     },
     {
@@ -689,6 +757,7 @@
       "description": "Löst auch andere Uhrwerk-Waffen aus; Anzahl und gefundene Orologions erhöhen den Schaden.",
       "maxLevel": 9,
       "emoji": "🗿",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Epi_Head.png",
       "verified": true
     },
     {
@@ -699,6 +768,7 @@
       "description": "Lässt dich einen Familiar beschwören.",
       "maxLevel": 1,
       "emoji": "🔨",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Familiar_Forge.png",
       "verified": true
     },
     {
@@ -709,6 +779,7 @@
       "description": "Entwicklung von Alchemy Whip: jede 3. Auslösung feuert zusätzliche Projektile; grelles Sonnenlicht verbrennt Bosse.",
       "maxLevel": 1,
       "emoji": "🪢",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Vampire_Killer.png",
       "verified": true
     },
     {
@@ -719,6 +790,7 @@
       "description": "Entwicklung von Wind Whip: jede 7. Auslösung ruft einen Geist, der heftig Erfahrungs-Edelsteine einsammelt.",
       "maxLevel": 1,
       "emoji": "🌪️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Spirit_Tornado_Tip.png",
       "verified": true
     },
     {
@@ -729,6 +801,7 @@
       "description": "Entwicklung von Platinum Whip: jede 7. Auslösung feuert zusätzlich besondere Projektile.",
       "maxLevel": 1,
       "emoji": "✝️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Cross_Crasher_Tip.png",
       "verified": true
     },
     {
@@ -739,6 +812,7 @@
       "description": "Entwicklung von Dragon Water Whip: jede 13. Auslösung erzeugt Schadenswellen abhängig von Projektilgeschwindigkeit und Dauer.",
       "maxLevel": 1,
       "emoji": "🌊",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Hydrostormer_Tip.png",
       "verified": true
     },
     {
@@ -749,6 +823,7 @@
       "description": "Entwicklung von Sonic Whip: jede 5. Auslösung löst zusätzlich eine Welle von Schadenswellen aus.",
       "maxLevel": 1,
       "emoji": "🗡️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Crissaegrim_Tip.png",
       "verified": true
     },
     {
@@ -759,6 +834,7 @@
       "description": "Entwicklung von Jet Black Whip: jede 8. Auslösung erzeugt zusätzlich Schadenszonen.",
       "maxLevel": 1,
       "emoji": "⚫",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Mormegil_Tip.png",
       "verified": true
     },
     {
@@ -769,6 +845,7 @@
       "description": "Entwicklung von Vibhuti Whip: kritische Treffer maximieren die Zahl der Projektile.",
       "maxLevel": 1,
       "emoji": "🌅",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Daybreaker_Tip.png",
       "verified": true
     },
     {
@@ -779,6 +856,7 @@
       "description": "Entwicklung von Vanitas Whip: jede 7. Auslösung erzeugt eine Explosion.",
       "maxLevel": 1,
       "emoji": "💥",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Aurablaster_Tip.png",
       "verified": true
     },
     {
@@ -789,6 +867,7 @@
       "description": "Entwicklung von Shuriken: feuert ohne Pause.",
       "maxLevel": 1,
       "emoji": "✴️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Yagyu_Shuriken.png",
       "verified": true
     },
     {
@@ -799,6 +878,7 @@
       "description": "Entwicklung von Curved Knife: Projektile prallen endlos ab, bis die Dauer abläuft.",
       "maxLevel": 1,
       "emoji": "🔪",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Bwaka_Knife.png",
       "verified": true
     },
     {
@@ -809,6 +889,7 @@
       "description": "Entwicklung von Javelin: Projektile tauchen wieder auf, nachdem sie den Bildschirm verlassen haben.",
       "maxLevel": 1,
       "emoji": "🏹",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Long_Inus.png",
       "verified": true
     },
     {
@@ -819,6 +900,7 @@
       "description": "Entwicklung von Discus: läuft an Wänden entlang; trifft kritisch, solange du unverwundbar bist.",
       "maxLevel": 1,
       "emoji": "🌟",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Stellar_Blade.png",
       "verified": true
     },
     {
@@ -829,6 +911,7 @@
       "description": "Entwicklung von Iron Ball: feuert ein sehr schweres Projektil.",
       "maxLevel": 1,
       "emoji": "🏗️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Wrecking_Ball.png",
       "verified": true
     },
     {
@@ -839,6 +922,7 @@
       "description": "Entwicklung von Silver Revolver: kritische Treffer töten sofort und verwandeln Gegner in Juwelen.",
       "maxLevel": 1,
       "emoji": "💎",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Jewel_Gun.png",
       "verified": true
     },
     {
@@ -849,6 +933,7 @@
       "description": "Entwicklung von Hand Grenade: Explosionen breiten sich aus.",
       "maxLevel": 1,
       "emoji": "🚀",
+      "image": "https://vampire.survivors.wiki/images/Sprite-The_RPG.png",
       "verified": true
     },
     {
@@ -859,6 +944,7 @@
       "description": "Entwicklung von Wine Glass: seelenvolles Essen richtet Schaden abhängig von den Wiederbelebungen an.",
       "maxLevel": 1,
       "emoji": "🍽️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Meal_Ticket.png",
       "verified": true
     },
     {
@@ -869,6 +955,7 @@
       "description": "Entwicklung von Raging Fire: ruft zusätzlich eine Feuerschlange.",
       "maxLevel": 1,
       "emoji": "🦎",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Salamender.png",
       "verified": true
     },
     {
@@ -879,6 +966,7 @@
       "description": "Entwicklung von Ice Fang: löst zusätzlich einen eisigen Wind aus.",
       "maxLevel": 1,
       "emoji": "🌨️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Cocytus.png",
       "verified": true
     },
     {
@@ -889,6 +977,7 @@
       "description": "Entwicklung von Gale Force: löst zusätzlich einen kreiselnden Tornado aus.",
       "maxLevel": 1,
       "emoji": "🌪️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Pneuma_Tempestas.png",
       "verified": true
     },
     {
@@ -899,6 +988,7 @@
       "description": "Entwicklung von Rock Riot: zusätzlich ein Kristallregen, der Gegner in wertvolle Juwelen verwandeln kann.",
       "maxLevel": 1,
       "emoji": "💎",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Gemma_Torpor.png",
       "verified": true
     },
     {
@@ -909,6 +999,7 @@
       "description": "Entwicklung von Fulgur: löst zusätzlich Kugelblitze aus.",
       "maxLevel": 1,
       "emoji": "🌩️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Tenebris_Tonitrus.png",
       "verified": true
     },
     {
@@ -919,6 +1010,7 @@
       "description": "Entwicklung von Keremet Bubbles: zusätzlich ein schleimiger Schwarm, der Gegner jagt.",
       "maxLevel": 1,
       "emoji": "🦠",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Keremet_Morbus.png",
       "verified": true
     },
     {
@@ -929,6 +1021,7 @@
       "description": "Entwicklung von Hex: zusätzlich eine Zone negativer Energie, die beim Betreten den Fluch verdoppelt.",
       "maxLevel": 1,
       "emoji": "😱",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Nightmare.png",
       "verified": true
     },
     {
@@ -939,6 +1032,7 @@
       "description": "Entwicklung von Refectio: heilt in festen Abständen vollständig und läutert alle sichtbaren Gegner.",
       "maxLevel": 1,
       "emoji": "⛪",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Sanctuary.png",
       "verified": true
     },
     {
@@ -949,6 +1043,7 @@
       "description": "Entwicklung von Mace: extrem hoher kritischer Schadensmultiplikator.",
       "maxLevel": 1,
       "emoji": "🔨",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Stamazza.png",
       "verified": true
     },
     {
@@ -959,6 +1054,7 @@
       "description": "Entwicklung von Star Flail: Projektile werden in Blickrichtung geschossen.",
       "maxLevel": 1,
       "emoji": "🌙",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Moon_Rod.png",
       "verified": true
     },
     {
@@ -969,6 +1065,7 @@
       "description": "Entwicklung von Alucard Spear: jede 7. Auslösung löst einen Spezialangriff abhängig von der Geschwindigkeit aus.",
       "maxLevel": 1,
       "emoji": "⚡",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Thunderbolt_Spear.png",
       "verified": true
     },
     {
@@ -979,6 +1076,7 @@
       "description": "Entwicklung von Trident: kritische Treffer feuern zusätzlich einen Strahl.",
       "maxLevel": 1,
       "emoji": "🔱",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Gungnir-Souris.png",
       "verified": true
     },
     {
@@ -989,6 +1087,7 @@
       "description": "Entwicklung von Iron Shield: kritische Treffer schlagen mit rotierenden Schwertern zurück.",
       "maxLevel": 1,
       "emoji": "🛡️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Dark_Iron_Shield.png",
       "verified": true
     },
     {
@@ -999,6 +1098,7 @@
       "description": "Entwicklung von Guardian's Targe: Überheilung gibt zusätzlich eine Zeit der Unverwundbarkeit.",
       "maxLevel": 1,
       "emoji": "🛡️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Sacred_Beasts_Tower_Shield.png",
       "verified": true
     },
     {
@@ -1009,6 +1109,7 @@
       "description": "Entwicklung von Tyrfing: kritischer Schaden hängt zusätzlich von Fläche, Geschwindigkeit und Dauer ab.",
       "maxLevel": 1,
       "emoji": "🗡️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Rune_Sword.png",
       "verified": true
     },
     {
@@ -1019,6 +1120,7 @@
       "description": "Entwicklung von Alucart Sworb: Erscheinungen des wahren Schwertträgers suchen Gegner auf.",
       "maxLevel": 1,
       "emoji": "⚔️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Alucard_Swords.png",
       "verified": true
     },
     {
@@ -1029,6 +1131,7 @@
       "description": "Greift Gegner in der Nähe an; Geschwindigkeit erhöht den Schaden.",
       "maxLevel": 6,
       "emoji": "🤺",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Vol_Confodere.png",
       "verified": true
     },
     {
@@ -1039,6 +1142,7 @@
       "description": "Greift Gegner in der Nähe an; Geschwindigkeit verkürzt die Abklingzeit und erhöht den Schaden.",
       "maxLevel": 6,
       "emoji": "🤺",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Melio_Confodere.png",
       "verified": true
     },
     {
@@ -1049,6 +1153,7 @@
       "description": "Entwicklung von Globus: feuert einen durchdringenden Energiestrahl in Blickrichtung.",
       "maxLevel": 1,
       "emoji": "🔦",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Anima_of_Dracula.png",
       "verified": true
     },
     {
@@ -1059,6 +1164,7 @@
       "description": "Entwicklung von Optical Shot: der Schaden hängt von der Zahl besiegter Gegner ab.",
       "maxLevel": 1,
       "emoji": "👁️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Acerbatus.png",
       "verified": true
     },
     {
@@ -1069,6 +1175,7 @@
       "description": "Entwicklung von Sonic Dash: löst zusätzlich einen Schildstoß aus.",
       "maxLevel": 1,
       "emoji": "💨",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Rapidus_Fio.png",
       "verified": true
     },
     {
@@ -1079,6 +1186,7 @@
       "description": "Entwicklung von Luminatio: Schaden, Geschwindigkeit, Fläche und Dauer hängen vom Wachstum ab.",
       "maxLevel": 3,
       "emoji": "☀️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Vol_Luminatio.png",
       "verified": true
     },
     {
@@ -1089,6 +1197,7 @@
       "description": "Entwicklung von Umbra: Schaden, Geschwindigkeit, Fläche und Dauer hängen vom Magnet ab.",
       "maxLevel": 3,
       "emoji": "🌑",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Vol_Umbra.png",
       "verified": true
     },
     {
@@ -1099,6 +1208,7 @@
       "description": "Entwicklung von Pocket Knife: erhöht für jeden sichtbaren Gegner Macht, Rüstung und kritischen Schaden.",
       "maxLevel": 1,
       "emoji": "🗡️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Claimh_Solais.png",
       "verified": true
     },
     {
@@ -1109,6 +1219,7 @@
       "description": "Union aus Dextro Custos, Sinestro Custos und Centralis Custos.",
       "maxLevel": 1,
       "emoji": "🐕",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Trinum_Custodem.png",
       "verified": true
     },
     {
@@ -1119,6 +1230,7 @@
       "description": "Union aus Dominus Anger, Dominus Hatred und Dominus Agony: kritischer Schaden an allem Sichtbaren; zehrt an der Gesundheit.",
       "maxLevel": 1,
       "emoji": "🩸",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Power_of_Sire.png",
       "verified": true
     },
     {
@@ -1129,6 +1241,7 @@
       "description": "Union aus Valmanway und Thousand Edge: schlitzt endlos und wird bei ununterbrochener Bewegung größer.",
       "maxLevel": 1,
       "emoji": "⚔️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Million_Cut.png",
       "verified": true
     },
     {
@@ -1139,6 +1252,7 @@
       "description": "Union aus Icebrand und Unholy Vespers: die Hölle ist wirklich zugefroren.",
       "maxLevel": 1,
       "emoji": "❄️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Ninth_Circle.png",
       "verified": true
     },
     {
@@ -1149,6 +1263,7 @@
       "description": "Union aus Arrow of Goth und Mannajja: Alamaric Snipers lassen Pfeile regnen, bei kritischen Treffern noch mehr.",
       "maxLevel": 1,
       "emoji": "🏹",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Dies_Irae.png",
       "verified": true
     },
     {
@@ -1159,6 +1274,7 @@
       "description": "Union aus Aura Blast und Hellfire: ruft einen gewaltigen Vulkanausbruch.",
       "maxLevel": 1,
       "emoji": "🌋",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Kard%C3%ADa_Phlegeton.png",
       "verified": true
     },
     {
@@ -1169,6 +1285,7 @@
       "description": "Union aus Kaiser Knuckle und Tri-Bracelet: entfesselt ein Sperrfeuer steinerner Fäuste.",
       "maxLevel": 1,
       "emoji": "🪨",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Lapiste_Tepisto.png",
       "verified": true
     },
     {
@@ -1179,6 +1296,7 @@
       "description": "Union aus Svarog Statue und Valkyrie Turner: karmesinrote Klone tanzen mit dir in den Flammen.",
       "maxLevel": 1,
       "emoji": "🔥",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Darkness_Illusion.png",
       "verified": true
     },
     {
@@ -1189,6 +1307,7 @@
       "description": "Union aus Troll Bomb und NO FUTURE: diese hier prallt tatsächlich ab.",
       "maxLevel": 1,
       "emoji": "💣",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Carnage_Heart.png",
       "verified": true
     },
     {
@@ -1199,6 +1318,7 @@
       "description": "Union aus Hydro Storm und La Borra: wenn es regnet, dann schüttet es.",
       "maxLevel": 1,
       "emoji": "🌊",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Hydro_Pump_Climax.png",
       "verified": true
     },
     {
@@ -1209,6 +1329,7 @@
       "description": "Union aus Grand Cross und Heaven Sword: der zentrale Strahl pulsiert, wenn Kreuze ihn kreuzen.",
       "maxLevel": 1,
       "emoji": "✝️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Arch_Angle.png",
       "verified": true
     },
     {
@@ -1219,6 +1340,7 @@
       "description": "Union aus Summon Spirit und Holy Wand: feuert zielsuchende Geister aus einem Lichtportal.",
       "maxLevel": 1,
       "emoji": "✨",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Spirit_of_Light.png",
       "verified": true
     },
     {
@@ -1229,6 +1351,7 @@
       "description": "Union aus Soul Steal und Vicious Hunger: verschlingt Gegner mit unstillbarer Gier.",
       "maxLevel": 1,
       "emoji": "💰",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Power_of_Lire.png",
       "verified": true
     },
     {
@@ -1239,6 +1362,7 @@
       "description": "Union aus Dark Rift und Death Spiral: der Tod steht dir gut.",
       "maxLevel": 1,
       "emoji": "💀",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Legacy_of_Death-_Soul_River.png",
       "verified": true
     },
     {
@@ -1249,6 +1373,7 @@
       "description": "Union aus Sword Brothers und Thunder Loop: Blitze lösen Schwertexplosionen mit kurzer Unverwundbarkeit aus.",
       "maxLevel": 1,
       "emoji": "⚡",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Vjaya_Sisters.png",
       "verified": true
     },
     {
@@ -1259,6 +1384,7 @@
       "description": "Union aus Summon Spirit Tornado und Gorgeous Moon: Liebe, Schönheit und Licht.",
       "maxLevel": 1,
       "emoji": "🌙",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Venus_Crescent.png",
       "verified": true
     },
     {
@@ -1269,6 +1395,7 @@
       "description": "Union aus Anura und Soul Eater: kann Gegner tatsächlich fressen.",
       "maxLevel": 1,
       "emoji": "🐸",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Dark_Frogamorphosis.png",
       "verified": true
     },
     {
@@ -1279,6 +1406,7 @@
       "description": "Union aus Endo Gears, Peri Pendulum, Myo Lift und Epi Head.",
       "maxLevel": 1,
       "emoji": "🕰️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Clock_Tower.png",
       "verified": true
     },
     {
@@ -1289,6 +1417,7 @@
       "description": "Geschenk von Alucard Swords: nimmt alle anderen ausgerüsteten Entwicklungen auf und löst sie aus; der schwebende Schild schadet Gegnern; belegt einen Waffen-Slot.",
       "maxLevel": 1,
       "emoji": "🛡️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Alucard_Shield.png",
       "verified": true
     },
     {
@@ -1299,6 +1428,7 @@
       "description": "Geschenk von Vol Luminatio und Vol Umbra: lässt in festen Abständen Meteore auf Gegner regnen.",
       "maxLevel": 1,
       "emoji": "☄️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Universitas.png",
       "verified": true
     }
   ]

@@ -9,6 +9,7 @@
       "maxLevel": 3,
       "ignoresSlotLimit": true,
       "emoji": "🧑‍🚀",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Mini_Crewmate.png",
       "verified": true
     },
     {
@@ -19,6 +20,7 @@
       "maxLevel": 3,
       "ignoresSlotLimit": true,
       "emoji": "🔧",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Mini_Engineer.png",
       "verified": true
     },
     {
@@ -29,6 +31,7 @@
       "maxLevel": 3,
       "ignoresSlotLimit": true,
       "emoji": "👻",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Mini_Ghost.png",
       "verified": true
     },
     {
@@ -39,6 +42,7 @@
       "maxLevel": 3,
       "ignoresSlotLimit": true,
       "emoji": "🫥",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Mini_Shapeshifter.png",
       "verified": true
     },
     {
@@ -49,6 +53,7 @@
       "maxLevel": 3,
       "ignoresSlotLimit": true,
       "emoji": "🛡️",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Mini_Guardian.png",
       "verified": true
     },
     {
@@ -59,6 +64,7 @@
       "maxLevel": 3,
       "ignoresSlotLimit": true,
       "emoji": "🔪",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Mini_Impostor.png",
       "verified": true
     },
     {
@@ -69,6 +75,7 @@
       "maxLevel": 3,
       "ignoresSlotLimit": true,
       "emoji": "🧪",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Mini_Scientist.png",
       "verified": true
     },
     {
@@ -79,6 +86,7 @@
       "maxLevel": 3,
       "ignoresSlotLimit": true,
       "emoji": "🐴",
+      "image": "https://vampire.survivors.wiki/images/Sprite-Mini_Horse.png",
       "verified": true
     }
   ]

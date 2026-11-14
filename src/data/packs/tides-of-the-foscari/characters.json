@@ -11,6 +11,7 @@
       "bonus": "Erhält SpellStream auf Level 10, SpellStrike auf Level 20 und Academy Badge auf Level 30.",
       "secret": false,
       "emoji": "🧙‍♀️",
+      "image": "https://vampire.survivors.wiki/images/Select-Eleanor_Uziron.png",
       "verified": true,
       "note": "SpellStream und SpellStrike kommen erst auf Level 10 und 20 dazu."
     },
@@ -24,6 +25,7 @@
       "bonus": "Erhält nach erlittenem Schaden kurz mehr Rüstung; Academy Badge auf Level 30.",
       "secret": false,
       "emoji": "🛡️",
+      "image": "https://vampire.survivors.wiki/images/Select-Maruto_Cuts.png",
       "verified": true
     },
     {
@@ -36,6 +38,7 @@
       "bonus": "Glücksabhängige Aufladung feuert eine Salve Flash Arrows; +1 % Glück pro Level; Academy Badge auf Level 30.",
       "secret": false,
       "emoji": "🏹",
+      "image": "https://vampire.survivors.wiki/images/Select-Keitha_Muort.png",
       "verified": true
     },
     {
@@ -48,6 +51,7 @@
       "bonus": "Löst beim Level-up einen Rosary aus; nach einer Wiederbelebung kurz mehr Macht, Laufgeschwindigkeit und kürzere Abklingzeit.",
       "secret": false,
       "emoji": "✨",
+      "image": "https://vampire.survivors.wiki/images/Select-Luminaire_Foscari.png",
       "verified": true
     },
     {
@@ -60,6 +64,7 @@
       "bonus": "Löst beim Level-up einen Vacuum aus; einmal pro Leben World Eater nach tödlichem Schaden.",
       "secret": false,
       "emoji": "🧀",
+      "image": "https://vampire.survivors.wiki/images/Select-Genevieve_Gruy%C3%A8re.png",
       "verified": true
     },
     {
@@ -72,6 +77,7 @@
       "bonus": "„Es frisst buchstäblich die Welt.“",
       "secret": false,
       "emoji": "🌍",
+      "image": "https://vampire.survivors.wiki/images/Select-Je-Ne-Viv.png",
       "verified": true
     },
     {
@@ -84,6 +90,7 @@
       "bonus": "Erhält Erfahrung beim Aufsammeln von Goldmünzen und Geldbeuteln; startet mit zeitweise verringerter Macht.",
       "secret": false,
       "emoji": "🐟",
+      "image": "https://vampire.survivors.wiki/images/Select-Sammy.png",
       "verified": true
     },
     {
@@ -96,6 +103,7 @@
       "bonus": "Erhält alle 20 Level mehr Projektile (max. +4).",
       "secret": false,
       "emoji": "🧟",
+      "image": "https://vampire.survivors.wiki/images/Select-Rottin%27Ghoul.png",
       "verified": true
     }
   ]

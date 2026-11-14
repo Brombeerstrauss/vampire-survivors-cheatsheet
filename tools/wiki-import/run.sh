@@ -29,6 +29,9 @@ python3 -I "$HERE/parse_evolutions.py" "$HERE" "$RAW/Evolution.wiki" "$RAW/evolu
 python3 -I "$HERE/parse_chars.py" "$RAW/Characters.wiki" "$RAW/characters_pages.json" "$RAW/chars_parsed.json" > /dev/null
 python3 -I "$HERE/parse_chars2.py" "$RAW/characters_pages.json" "$RAW/chars_parsed.json" "$RAW/weapons_parsed.json" > /dev/null
 
+echo "Prüfe Bilder im Wiki …"
+python3 -I "$HERE/resolve_images.py" "$API" "$RAW"
+
 echo "Erzeuge Pakete …"
 for pair in base:base lm:legacy-of-the-moonspell bm:legacy-of-the-bloodmoon tf:tides-of-the-foscari \
             em:emergency-meeting og:operation-guns oc:ode-to-castlevania ed:emerald-diorama ac:ante-chamber; do

@@ -13,6 +13,7 @@ export interface AppState {
   settings: Settings
   setOwnedPack(id: PackId, owned: boolean): void
   setShowSecrets(show: boolean): void
+  setShowImages(show: boolean): void
   /** Katalog der freigeschalteten Pakete. */
   catalog: Catalog
   /** Katalog aller Pakete. */

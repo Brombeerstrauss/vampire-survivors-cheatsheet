@@ -32,6 +32,7 @@
           "unlock": { "type": "string", "description": "Wie man die Waffe freischaltet." },
           "emoji": { "$ref": "common.schema.json#/definitions/emoji" },
           "icon": { "$ref": "common.schema.json#/definitions/icon" },
+          "image": { "$ref": "common.schema.json#/definitions/image" },
           "verified": { "$ref": "common.schema.json#/definitions/verified" },
           "note": { "type": "string" }
         }

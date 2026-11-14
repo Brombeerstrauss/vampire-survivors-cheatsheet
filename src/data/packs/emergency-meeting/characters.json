@@ -11,6 +11,7 @@
       "bonus": "Erhält Werte-Boni, sobald irgendeine Waffe die Maximalstufe erreicht.",
       "secret": false,
       "emoji": "🧑‍🚀",
+      "image": "https://vampire.survivors.wiki/images/Select-Crewmate_Dino.png",
       "verified": true
     },
     {
@@ -23,6 +24,7 @@
       "bonus": "Wählt auf Level 2, 12 und 22 einen zusätzlichen passiven Gegenstand.",
       "secret": false,
       "emoji": "🔧",
+      "image": "https://vampire.survivors.wiki/images/Select-Engineer_Gino.png",
       "verified": true
     },
     {
@@ -35,6 +37,7 @@
       "bonus": "Kann weder Schaden nehmen noch austeilen, verschwindet aber beim Zeitlimit; ignoriert Wände.",
       "secret": false,
       "emoji": "👻",
+      "image": "https://vampire.survivors.wiki/images/Select-Ghost_Lino.png",
       "verified": true
     },
     {
@@ -47,6 +50,7 @@
       "bonus": "Hinterlässt bei Schaden überzählige Körperteile und kann die Gestalt wechseln.",
       "secret": false,
       "emoji": "🫥",
+      "image": "https://vampire.survivors.wiki/images/Select-Shapeshifter_Nino.png",
       "verified": true
     },
     {
@@ -59,6 +63,7 @@
       "bonus": "Kann +1 Wiederbelebung erhalten, wenn jemand wiederbelebt wird; erhöht Rüstung und Regeneration in der Nähe; ignoriert Wände.",
       "secret": false,
       "emoji": "🛡️",
+      "image": "https://vampire.survivors.wiki/images/Select-Guardian_Pina.png",
       "verified": true
     },
     {
@@ -71,6 +76,7 @@
       "bonus": "Wird nach vielen besiegten Gegnern oder einem besiegten Verbündeten stärker und kurz unverwundbar.",
       "secret": false,
       "emoji": "🔪",
+      "image": "https://vampire.survivors.wiki/images/Select-Impostor_Rina.png",
       "verified": true
     },
     {
@@ -83,6 +89,7 @@
       "bonus": "Alle 10 Level −10 % Glück (max. −90 %); kann alle 10 Level einen Bonus pro Level wählen (max. 5-mal).",
       "secret": false,
       "emoji": "🧪",
+      "image": "https://vampire.survivors.wiki/images/Select-Scientist_Mina.png",
       "verified": true
     },
     {
@@ -95,6 +102,7 @@
       "bonus": "Erhält alle 20 Level mehr Projektile (max. +4).",
       "secret": false,
       "emoji": "🐴",
+      "image": "https://vampire.survivors.wiki/images/Select-Horse.png",
       "verified": true
     },
     {
@@ -105,6 +113,7 @@
       "bonus": "„Ich bin nicht der Impostor.“",
       "secret": false,
       "emoji": "🟥",
+      "image": "https://vampire.survivors.wiki/images/Select-Megalo_Impostor_Rina.png",
       "verified": true,
       "note": "Versteckte Waffe: Sharp Tongue."
     }

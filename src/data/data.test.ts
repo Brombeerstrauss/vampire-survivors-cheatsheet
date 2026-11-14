@@ -38,6 +38,13 @@ describe('Spieldaten', () => {
   it('alle Verweise zeigen auf vorhandene Einträge', () => {
     expect(checkIntegrity(loadGameData(packsFile, files).data)).toEqual([])
   })
+
+  it('das Basisspiel steht vor den DLCs, in der Reihenfolge von packs.json', () => {
+    const { data } = loadGameData(packsFile, files)
+    const order = [...new Set(data.characters.map((c) => c.source))]
+    expect(order).toEqual(data.packs.map((p) => p.id).filter((id) => order.includes(id)))
+    expect(data.characters[0]?.source).toBe('base')
+  })
 })
 
 describe('Schemas lehnen fehlerhafte Einträge ab', () => {

@@ -11,6 +11,7 @@
       "bonus": "Erhält alle 4 Level +0,1 Regeneration; bei Vergeltung, kritischer Gesundheit, letztem Atemzug und Wiederbelebung löst sie einen großen Blutfluch aus.",
       "secret": false,
       "emoji": "🩸",
+      "image": "https://vampire.survivors.wiki/images/Select-Malice_Bloodmoon.png",
       "verified": true
     },
     {
@@ -23,6 +24,7 @@
       "bonus": "Letzter Atemzug: +50 % max. Gesundheit; Vergeltung gibt kurz einen Werte-Bonus.",
       "secret": false,
       "emoji": "🧛‍♂️",
+      "image": "https://vampire.survivors.wiki/images/Select-Calogero_Bloodmoon.png",
       "verified": true
     },
     {
@@ -35,6 +37,7 @@
       "bonus": "Bei kritischer Gesundheit +1 Wiederbelebung; ruft zu jeder vollen Minute Überreste besiegter Gegner herbei.",
       "secret": false,
       "emoji": "🔥",
+      "image": "https://vampire.survivors.wiki/images/Select-Ashtart.png",
       "verified": true
     },
     {
@@ -49,6 +52,7 @@
       "bonus": "Erzeugt Raumverzerrungen, die Gegner verwirren; Meister von FireFall, FireWall und FireBall; bei Wiederbelebung eine zusätzliche Verzerrung.",
       "secret": false,
       "emoji": "🌀",
+      "image": "https://vampire.survivors.wiki/images/Select-Sargon.png",
       "verified": true
     },
     {
@@ -61,6 +65,7 @@
       "bonus": "Letzter Atemzug: verliert die Hälfte der max. Gesundheit und erhält eine zufällige Darkana; Wiederbelebungen können weitere bringen (max. 3).",
       "secret": false,
       "emoji": "🃏",
+      "image": "https://vampire.survivors.wiki/images/Select-Nameless_Fool.png",
       "verified": true
     },
     {
@@ -73,6 +78,7 @@
       "bonus": "Jede Wiederbelebung über eins gibt einen zusätzlichen passiven Slot; bei kritischer Gesundheit feuert die Hauptwaffe je nach übrigen Wiederbelebungen; bei Wiederbelebung erscheint ein Velvet Dodecahedron.",
       "secret": false,
       "emoji": "👥",
+      "image": "https://vampire.survivors.wiki/images/Select-Congregation.png",
       "verified": true
     },
     {
@@ -83,6 +89,7 @@
       "bonus": "Startet mit heiligen Waffen, je nachdem, was in der Sammlung freigeschaltet ist; letzter Atemzug löst einen Rosary aus.",
       "secret": false,
       "emoji": "😇",
+      "image": "https://vampire.survivors.wiki/images/Select-Nameless_Saint.png",
       "verified": true
     },
     {
@@ -95,6 +102,7 @@
       "bonus": "Geübt mit Höllen-Waffen; Blut-Waffen lassen Blut fallen; letzter Atemzug gibt je nach gesammeltem Blut kurz mehr Macht und kürzere Abklingzeit.",
       "secret": false,
       "emoji": "😈",
+      "image": "https://vampire.survivors.wiki/images/Select-Baal%27Thasar.png",
       "verified": true
     },
     {
@@ -107,6 +115,7 @@
       "bonus": "Erhält alle 20 Level mehr Projektile (max. +4); jede abgeschlossene Stage gibt einen Prestige-Rang.",
       "secret": false,
       "emoji": "🍖",
+      "image": "https://vampire.survivors.wiki/images/Select-Jaman_Jato_%E2%98%85.png",
       "verified": false,
       "note": "Ungeprüft: Startwaffe nur auf der Charakterseite genannt."
     },
@@ -118,6 +127,7 @@
       "bonus": "Stampft alle paar Schritte auf den Boden; wächst mit gesammelter Rüstung; bei kritischer Gesundheit kurz mehr Rüstung.",
       "secret": false,
       "emoji": "🐂",
+      "image": "https://vampire.survivors.wiki/images/Select-In%27_Kujata.png",
       "verified": true,
       "note": "Versteckte Waffe: Eskizzibur."
     },
@@ -131,6 +141,7 @@
       "bonus": "„Zweischneidige Geschenke. Dunkle Illusionen. Echos der Vergangenheit.“",
       "secret": false,
       "emoji": "🌌",
+      "image": "https://vampire.survivors.wiki/images/Select-Megalo_Sargon.png",
       "verified": true
     },
     {
@@ -143,6 +154,7 @@
       "bonus": "„Es ist Boden und Horizont zugleich und verschlingt sich doch selbst.“",
       "secret": false,
       "emoji": "🐋",
+      "image": "https://vampire.survivors.wiki/images/Select-Baal%27Thamut.png",
       "verified": true
     }
   ]

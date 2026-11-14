@@ -14,7 +14,9 @@ for path, tbl in tables(wt):
         rec = dict(zip(heads, cells))
         key = "Item" if "Item" in rec else "Name"
         n = names(rec.get(key, ""))
+        icon = re.search(r"\[\[File:([^|\]]+)", rec.get("Icon", ""))
         out.append({"path": "/".join(path), "name": n[0]["name"] if n else plain(rec.get(key, "")),
+                    "iconFile": icon.group(1).strip() if icon else None,
                     "pack": badge(rec.get(key, "")) or None, "description": plain(rec.get("Description", "")),
                     "maxLevel": plain(rec.get("Max level", rec.get("Max Level", ""))), "rarity": plain(rec.get("Rarity", "")),
                     "effects": plain(rec.get("Effects", "")), "unlock": plain(rec.get("Unlock by", "")),

@@ -11,6 +11,7 @@
       "bonus": "Findet immer Survarots, startet mit einer Survarot-Auswahl und hat einen Survarot-Stufenmultiplikator von 4.",
       "secret": false,
       "emoji": "🃏",
+      "image": "https://vampire.survivors.wiki/images/Select-Jimbo.png",
       "verified": true
     },
     {
@@ -23,6 +24,7 @@
       "bonus": "Überspringen beim Level-up kann eine Survarot-Auswahl auslösen.",
       "secret": false,
       "emoji": "🎭",
+      "image": "https://vampire.survivors.wiki/images/Select-Canio.png",
       "verified": true
     },
     {
@@ -35,6 +37,7 @@
       "bonus": "Findet immer Survarots und startet mit einer Survarot-Auswahl; senkt die Gesundheit von Bossen und blockt einige Spezialangriffe.",
       "secret": false,
       "emoji": "🤡",
+      "image": "https://vampire.survivors.wiki/images/Select-Chicot.png",
       "verified": true
     },
     {
@@ -47,6 +50,7 @@
       "bonus": "Findet immer Survarots; kann bis zu 100 passive Gegenstände tragen.",
       "secret": false,
       "emoji": "🎴",
+      "image": "https://vampire.survivors.wiki/images/Select-Perkeo.png",
       "verified": true,
       "note": "Kann bis zu 100 passive Gegenstände tragen; die Slot-Warnungen der App gelten für Perkeo nicht."
     }
