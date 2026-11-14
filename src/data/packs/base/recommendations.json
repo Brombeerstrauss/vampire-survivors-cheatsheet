@@ -4,12 +4,1347 @@
     {
       "character": "antonio-belpaese",
       "source": "base",
-      "summary": "Beispiel: Antonio wird mit jedem zehnten Level stärker, also lohnen sich Waffen mit hohem Grundschaden.",
+      "summary": "Robuster Nahkämpfer, dessen Macht-Bonus mit dem Level wächst. Waffen mit hohem Grundschaden und Schutz rundum passen gut.",
       "weapons": [
-        { "id": "whip", "reason": "Startwaffe; entwickelt sich mit Hollow Heart zu Bloody Tear.", "priority": 1 }
+        {
+          "id": "whip",
+          "reason": "Startwaffe; mit Hollow Heart wird sie zu Bloody Tear und heilt dich.",
+          "priority": 1
+        },
+        {
+          "id": "king-bible",
+          "reason": "Schützt rundum vor Gegnern von allen Seiten; wird mit Spellbinder zu Unholy Vespers.",
+          "priority": 2
+        },
+        {
+          "id": "garlic",
+          "reason": "Hält Gegner auf Abstand, solange du im Gedränge stehst.",
+          "priority": 2
+        },
+        {
+          "id": "santa-water",
+          "reason": "Flächenschaden gegen große Gruppen.",
+          "priority": 3
+        }
       ],
       "passives": [
-        { "id": "hollow-heart", "reason": "Nötig für Bloody Tear und macht den Nahkämpfer robuster.", "priority": 1 }
+        {
+          "id": "hollow-heart",
+          "reason": "Partner für Bloody Tear und mehr Gesundheit.",
+          "priority": 1
+        },
+        {
+          "id": "spinach",
+          "reason": "Stapelt mit seinem Macht-Bonus.",
+          "priority": 2
+        },
+        {
+          "id": "spellbinder",
+          "reason": "Partner für Unholy Vespers.",
+          "priority": 2
+        },
+        {
+          "id": "armor",
+          "reason": "Weniger Schaden im Nahkampf.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "character": "imelda-belpaese",
+      "source": "base",
+      "summary": "Levelt dank Erfahrungs-Bonus schnell auf und kommt so früh an ihre Entwicklungen.",
+      "weapons": [
+        {
+          "id": "magic-wand",
+          "reason": "Startwaffe; mit Empty Tome wird sie zu Holy Wand.",
+          "priority": 1
+        },
+        {
+          "id": "fire-wand",
+          "reason": "Hoher Schaden; mit Spinach wird sie zu Hellfire.",
+          "priority": 2
+        },
+        {
+          "id": "king-bible",
+          "reason": "Schutz rundum für die zerbrechliche Fernkämpferin.",
+          "priority": 2
+        }
+      ],
+      "passives": [
+        {
+          "id": "empty-tome",
+          "reason": "Partner für Holy Wand und kürzere Abklingzeiten.",
+          "priority": 1
+        },
+        {
+          "id": "crown",
+          "reason": "Verstärkt ihren Erfahrungs-Bonus noch weiter.",
+          "priority": 2
+        },
+        {
+          "id": "spinach",
+          "reason": "Partner für Hellfire.",
+          "priority": 2
+        },
+        {
+          "id": "duplicator",
+          "reason": "Mehr Projektile für Magic Wand.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "character": "pasqualina-belpaese",
+      "source": "base",
+      "summary": "Ihre Projektile werden mit dem Level schneller; Waffen, die fliegen und abprallen, profitieren am meisten.",
+      "weapons": [
+        {
+          "id": "runetracer",
+          "reason": "Startwaffe; mit Armor wird sie zu NO FUTURE.",
+          "priority": 1
+        },
+        {
+          "id": "knife",
+          "reason": "Profitiert stark von Projektilgeschwindigkeit; mit Bracer wird sie zu Thousand Edge.",
+          "priority": 2
+        },
+        {
+          "id": "magic-wand",
+          "reason": "Zuverlässige Zielsuche; mit Empty Tome wird sie zu Holy Wand.",
+          "priority": 3
+        }
+      ],
+      "passives": [
+        {
+          "id": "armor",
+          "reason": "Partner für NO FUTURE.",
+          "priority": 1
+        },
+        {
+          "id": "bracer",
+          "reason": "Partner für Thousand Edge und noch schnellere Projektile.",
+          "priority": 2
+        },
+        {
+          "id": "duplicator",
+          "reason": "Mehr Runetracer gleichzeitig.",
+          "priority": 2
+        },
+        {
+          "id": "spellbinder",
+          "reason": "Runetracer bleibt länger im Spiel.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "character": "gennaro-belpaese",
+      "source": "base",
+      "summary": "Jede Waffe feuert bei ihm ein Projektil mehr; Waffen mit vielen Projektilen werden besonders stark.",
+      "weapons": [
+        {
+          "id": "knife",
+          "reason": "Startwaffe; mit Bracer wird sie zu Thousand Edge.",
+          "priority": 1
+        },
+        {
+          "id": "magic-wand",
+          "reason": "Profitiert vom Zusatzprojektil; mit Empty Tome wird sie zu Holy Wand.",
+          "priority": 2
+        },
+        {
+          "id": "fire-wand",
+          "reason": "Mehr Feuerbälle mit hohem Schaden; mit Spinach wird sie zu Hellfire.",
+          "priority": 2
+        }
+      ],
+      "passives": [
+        {
+          "id": "bracer",
+          "reason": "Partner für Thousand Edge.",
+          "priority": 1
+        },
+        {
+          "id": "empty-tome",
+          "reason": "Partner für Holy Wand.",
+          "priority": 2
+        },
+        {
+          "id": "spinach",
+          "reason": "Partner für Hellfire.",
+          "priority": 2
+        },
+        {
+          "id": "duplicator",
+          "reason": "Noch mehr Projektile.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "character": "arca-ladonna",
+      "source": "base",
+      "summary": "Ihre Abklingzeit sinkt mit dem Level; Waffen mit langer Abklingzeit und hohem Schaden lohnen sich.",
+      "weapons": [
+        {
+          "id": "fire-wand",
+          "reason": "Startwaffe; mit Spinach wird sie zu Hellfire.",
+          "priority": 1
+        },
+        {
+          "id": "lightning-ring",
+          "reason": "Trifft zufällig über den ganzen Bildschirm; mit Duplicator wird sie zu Thunder Loop.",
+          "priority": 2
+        },
+        {
+          "id": "magic-wand",
+          "reason": "Ergänzt die zufälligen Treffer mit Zielsuche.",
+          "priority": 3
+        }
+      ],
+      "passives": [
+        {
+          "id": "spinach",
+          "reason": "Partner für Hellfire.",
+          "priority": 1
+        },
+        {
+          "id": "empty-tome",
+          "reason": "Stapelt mit ihrem Abklingzeit-Bonus.",
+          "priority": 2
+        },
+        {
+          "id": "duplicator",
+          "reason": "Partner für Thunder Loop.",
+          "priority": 2
+        },
+        {
+          "id": "candelabrador",
+          "reason": "Größere Explosionen.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "character": "porta-ladonna",
+      "source": "base",
+      "summary": "Startet mit +30 % Fläche, was Flächenwaffen deutlich stärker macht.",
+      "weapons": [
+        {
+          "id": "lightning-ring",
+          "reason": "Startwaffe; mit Duplicator wird sie zu Thunder Loop.",
+          "priority": 1
+        },
+        {
+          "id": "santa-water",
+          "reason": "Flächenwaffe, die von ihrem Bonus profitiert; mit Attractorb wird sie zu La Borra.",
+          "priority": 2
+        },
+        {
+          "id": "axe",
+          "reason": "Wächst stark mit der Fläche; mit Candelabrador wird sie zu Death Spiral.",
+          "priority": 2
+        }
+      ],
+      "passives": [
+        {
+          "id": "duplicator",
+          "reason": "Partner für Thunder Loop.",
+          "priority": 1
+        },
+        {
+          "id": "candelabrador",
+          "reason": "Noch mehr Fläche; Partner für Death Spiral.",
+          "priority": 2
+        },
+        {
+          "id": "attractorb",
+          "reason": "Partner für La Borra.",
+          "priority": 2
+        },
+        {
+          "id": "empty-tome",
+          "reason": "Häufigere Blitze.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "character": "lama-ladonna",
+      "source": "base",
+      "summary": "Wird alle 10 Level stärker und schneller, aber auch verfluchter. Robuste Nahkampfwaffen passen gut.",
+      "weapons": [
+        {
+          "id": "axe",
+          "reason": "Startwaffe; mit Candelabrador wird sie zu Death Spiral.",
+          "priority": 1
+        },
+        {
+          "id": "garlic",
+          "reason": "Schutz im Gedränge; mit Pummarola wird sie zu Soul Eater.",
+          "priority": 2
+        },
+        {
+          "id": "cross",
+          "reason": "Zusätzlicher Schaden vor dir; mit Clover wird sie zu Heaven Sword.",
+          "priority": 3
+        }
+      ],
+      "passives": [
+        {
+          "id": "candelabrador",
+          "reason": "Partner für Death Spiral.",
+          "priority": 1
+        },
+        {
+          "id": "spinach",
+          "reason": "Stapelt mit ihrem Macht-Bonus.",
+          "priority": 2
+        },
+        {
+          "id": "pummarola",
+          "reason": "Partner für Soul Eater; hilft gegen den wachsenden Fluch.",
+          "priority": 2
+        },
+        {
+          "id": "hollow-heart",
+          "reason": "Mehr Gesundheit gegen zahlreichere Gegner.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "character": "poe-ratcho",
+      "source": "base",
+      "summary": "Großer Aufsammelradius, aber wenig Gesundheit. Heilung und Nahbereichsschutz sind wichtig.",
+      "weapons": [
+        {
+          "id": "garlic",
+          "reason": "Startwaffe; mit Pummarola wird sie zu Soul Eater und heilt.",
+          "priority": 1
+        },
+        {
+          "id": "santa-water",
+          "reason": "Flächenschaden; mit Attractorb wird sie zu La Borra.",
+          "priority": 2
+        },
+        {
+          "id": "king-bible",
+          "reason": "Zusätzlicher Schutz rundum.",
+          "priority": 2
+        }
+      ],
+      "passives": [
+        {
+          "id": "pummarola",
+          "reason": "Partner für Soul Eater.",
+          "priority": 1
+        },
+        {
+          "id": "hollow-heart",
+          "reason": "Gleicht seine geringe Gesundheit aus.",
+          "priority": 2
+        },
+        {
+          "id": "attractorb",
+          "reason": "Partner für La Borra.",
+          "priority": 2
+        },
+        {
+          "id": "candelabrador",
+          "reason": "Größere Garlic-Aura.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "character": "suor-clerici",
+      "source": "base",
+      "summary": "Regeneriert ständig und hat viel Gesundheit; gut für Builds, die von Heilung profitieren.",
+      "weapons": [
+        {
+          "id": "santa-water",
+          "reason": "Startwaffe; mit Attractorb wird sie zu La Borra.",
+          "priority": 1
+        },
+        {
+          "id": "garlic",
+          "reason": "Mit Pummarola wird sie zu Soul Eater, das bei Heilung stärker wird.",
+          "priority": 2
+        },
+        {
+          "id": "king-bible",
+          "reason": "Schutz rundum.",
+          "priority": 3
+        }
+      ],
+      "passives": [
+        {
+          "id": "attractorb",
+          "reason": "Partner für La Borra.",
+          "priority": 1
+        },
+        {
+          "id": "pummarola",
+          "reason": "Partner für Soul Eater und noch mehr Regeneration.",
+          "priority": 2
+        },
+        {
+          "id": "candelabrador",
+          "reason": "Größere Wasserzonen.",
+          "priority": 2
+        },
+        {
+          "id": "spellbinder",
+          "reason": "Zonen bleiben länger liegen.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "character": "dommario",
+      "source": "base",
+      "summary": "Hohe Dauer und Geschwindigkeit, aber langsam zu Fuß. Waffen, die lange wirken, passen perfekt.",
+      "weapons": [
+        {
+          "id": "king-bible",
+          "reason": "Startwaffe; mit Spellbinder wird sie zu Unholy Vespers und endet nie.",
+          "priority": 1
+        },
+        {
+          "id": "santa-water",
+          "reason": "Profitiert von seiner Dauer; mit Attractorb wird sie zu La Borra.",
+          "priority": 2
+        },
+        {
+          "id": "song-of-mana",
+          "reason": "Lange Wirkdauer; mit Skull O'Maniac wird sie zu Mannajja.",
+          "priority": 3
+        }
+      ],
+      "passives": [
+        {
+          "id": "spellbinder",
+          "reason": "Partner für Unholy Vespers.",
+          "priority": 1
+        },
+        {
+          "id": "wings",
+          "reason": "Gleicht seine langsame Bewegung aus.",
+          "priority": 2
+        },
+        {
+          "id": "candelabrador",
+          "reason": "Größere Bibeln und Zonen.",
+          "priority": 2
+        },
+        {
+          "id": "empty-tome",
+          "reason": "Kürzere Pausen zwischen den Angriffen.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "character": "krochi-freetto",
+      "source": "base",
+      "summary": "Startet mit einer Wiederbelebung und bekommt eine zweite. Phieraggi wird mit Wiederbelebungen stärker.",
+      "weapons": [
+        {
+          "id": "cross",
+          "reason": "Startwaffe; mit Clover wird sie zu Heaven Sword.",
+          "priority": 1
+        },
+        {
+          "id": "phiera-der-tuphello",
+          "reason": "Teil der Union Phieraggi, die mit seinen Wiederbelebungen wächst.",
+          "priority": 2
+        },
+        {
+          "id": "eight-the-sparrow",
+          "reason": "Zweite Hälfte der Union Phieraggi.",
+          "priority": 2
+        }
+      ],
+      "passives": [
+        {
+          "id": "clover",
+          "reason": "Partner für Heaven Sword.",
+          "priority": 1
+        },
+        {
+          "id": "tirajisu",
+          "reason": "Nötig für Phieraggi und noch mehr Wiederbelebungen.",
+          "priority": 2
+        },
+        {
+          "id": "bracer",
+          "reason": "Schnellere Kreuze.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "character": "christine-davain",
+      "source": "base",
+      "summary": "Startet ein Level höher und kommt so schnell an die ersten Gegenstände.",
+      "weapons": [
+        {
+          "id": "pentagram",
+          "reason": "Startwaffe; mit Crown wird sie zu Gorgeous Moon.",
+          "priority": 1
+        },
+        {
+          "id": "lightning-ring",
+          "reason": "Schaden über den ganzen Bildschirm; mit Duplicator wird sie zu Thunder Loop.",
+          "priority": 2
+        },
+        {
+          "id": "king-bible",
+          "reason": "Schutz zwischen den Pentagram-Auslösungen.",
+          "priority": 2
+        }
+      ],
+      "passives": [
+        {
+          "id": "crown",
+          "reason": "Partner für Gorgeous Moon.",
+          "priority": 1
+        },
+        {
+          "id": "duplicator",
+          "reason": "Partner für Thunder Loop.",
+          "priority": 2
+        },
+        {
+          "id": "empty-tome",
+          "reason": "Pentagram löst häufiger aus.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "character": "pugnala-provola",
+      "source": "base",
+      "summary": "Startet mit beiden Pistolen und wird mit jedem Level stärker. Ziel ist die Union Phieraggi.",
+      "weapons": [
+        {
+          "id": "phiera-der-tuphello",
+          "reason": "Startwaffe; zusammen mit Eight The Sparrow und Tirajisú wird sie zu Phieraggi.",
+          "priority": 1
+        },
+        {
+          "id": "eight-the-sparrow",
+          "reason": "Zweite Startwaffe und Partner für Phieraggi.",
+          "priority": 1
+        },
+        {
+          "id": "king-bible",
+          "reason": "Schützt sie im Nahbereich, wo die Pistolen nicht treffen.",
+          "priority": 3
+        }
+      ],
+      "passives": [
+        {
+          "id": "tirajisu",
+          "reason": "Nötig für Phieraggi.",
+          "priority": 1
+        },
+        {
+          "id": "duplicator",
+          "reason": "Mehr Kugeln.",
+          "priority": 2
+        },
+        {
+          "id": "empty-tome",
+          "reason": "Schnelleres Feuern.",
+          "priority": 2
+        },
+        {
+          "id": "bracer",
+          "reason": "Schnellere Kugeln.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "character": "giovanna-grana",
+      "source": "base",
+      "summary": "Ihre Projektile werden pro Level schneller; die Katzen von Gatti Amari skalieren zusätzlich mit Glück.",
+      "weapons": [
+        {
+          "id": "gatti-amari",
+          "reason": "Startwaffe; mit Stone Mask wird sie zu Vicious Hunger.",
+          "priority": 1
+        },
+        {
+          "id": "knife",
+          "reason": "Profitiert von Projektilgeschwindigkeit; mit Bracer wird sie zu Thousand Edge.",
+          "priority": 3
+        }
+      ],
+      "passives": [
+        {
+          "id": "stone-mask",
+          "reason": "Partner für Vicious Hunger.",
+          "priority": 1
+        },
+        {
+          "id": "clover",
+          "reason": "Gatti Amari skaliert mit Glück.",
+          "priority": 2
+        },
+        {
+          "id": "spellbinder",
+          "reason": "Katzen bleiben länger.",
+          "priority": 2
+        },
+        {
+          "id": "duplicator",
+          "reason": "Mehr Katzen.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "character": "poppea-pecorina",
+      "source": "base",
+      "summary": "Gewinnt pro Level Dauer, was Waffen mit langer Wirkzeit stärkt.",
+      "weapons": [
+        {
+          "id": "song-of-mana",
+          "reason": "Startwaffe; mit Skull O'Maniac wird sie zu Mannajja.",
+          "priority": 1
+        },
+        {
+          "id": "king-bible",
+          "reason": "Profitiert von Dauer; mit Spellbinder wird sie zu Unholy Vespers.",
+          "priority": 2
+        },
+        {
+          "id": "santa-water",
+          "reason": "Zonen halten länger.",
+          "priority": 3
+        }
+      ],
+      "passives": [
+        {
+          "id": "skull-o-maniac",
+          "reason": "Partner für Mannajja.",
+          "priority": 1
+        },
+        {
+          "id": "spellbinder",
+          "reason": "Noch mehr Dauer; Partner für Unholy Vespers.",
+          "priority": 2
+        },
+        {
+          "id": "candelabrador",
+          "reason": "Breitere Angriffe.",
+          "priority": 2
+        },
+        {
+          "id": "empty-tome",
+          "reason": "Häufigere Angriffe.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "character": "concetta-caciotta",
+      "source": "base",
+      "summary": "Gewinnt pro Level Fläche; Shadow Pinion belohnt ständiges Laufen und Stehenbleiben.",
+      "weapons": [
+        {
+          "id": "shadow-pinion",
+          "reason": "Startwaffe; mit Wings wird sie zu Valkyrie Turner.",
+          "priority": 1
+        },
+        {
+          "id": "garlic",
+          "reason": "Flächenwaffe im Nahbereich; mit Pummarola wird sie zu Soul Eater.",
+          "priority": 2
+        },
+        {
+          "id": "axe",
+          "reason": "Wächst stark mit der Fläche; mit Candelabrador wird sie zu Death Spiral.",
+          "priority": 3
+        }
+      ],
+      "passives": [
+        {
+          "id": "wings",
+          "reason": "Partner für Valkyrie Turner.",
+          "priority": 1
+        },
+        {
+          "id": "candelabrador",
+          "reason": "Stapelt mit ihrem Flächen-Bonus.",
+          "priority": 2
+        },
+        {
+          "id": "spellbinder",
+          "reason": "Längere Schadenszonen.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "character": "mortaccio",
+      "source": "base",
+      "summary": "Erhält mit dem Level mehr Knochen. Bone entwickelt sich nicht per Truhe, sondern per Morph mit dem Relikt Chaos Malachite.",
+      "weapons": [
+        {
+          "id": "bone",
+          "reason": "Startwaffe; wird auf Level 80 mit Chaos Malachite zu Anima of Mortaccio.",
+          "priority": 1
+        },
+        {
+          "id": "runetracer",
+          "reason": "Prallt ebenfalls umher; mit Armor wird sie zu NO FUTURE.",
+          "priority": 2
+        },
+        {
+          "id": "magic-wand",
+          "reason": "Zielsuche als Ergänzung; mit Empty Tome wird sie zu Holy Wand.",
+          "priority": 3
+        }
+      ],
+      "passives": [
+        {
+          "id": "duplicator",
+          "reason": "Noch mehr Knochen.",
+          "priority": 1
+        },
+        {
+          "id": "bracer",
+          "reason": "Schnellere Knochen.",
+          "priority": 2
+        },
+        {
+          "id": "spinach",
+          "reason": "Mehr Schaden pro Treffer.",
+          "priority": 2
+        },
+        {
+          "id": "armor",
+          "reason": "Partner für NO FUTURE.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "character": "yatta-cavallo",
+      "source": "base",
+      "summary": "Erhält mit dem Level mehr Kirschbomben, die mit Glück skalieren.",
+      "weapons": [
+        {
+          "id": "cherry-bomb",
+          "reason": "Startwaffe; wird auf Level 80 mit Chaos Rosalia zu Yatta Daikarin.",
+          "priority": 1
+        },
+        {
+          "id": "cross",
+          "reason": "Profitiert ebenfalls von Glück; mit Clover wird sie zu Heaven Sword.",
+          "priority": 2
+        },
+        {
+          "id": "fire-wand",
+          "reason": "Zusätzlicher hoher Schaden.",
+          "priority": 3
+        }
+      ],
+      "passives": [
+        {
+          "id": "clover",
+          "reason": "Cherry Bomb skaliert mit Glück; Partner für Heaven Sword.",
+          "priority": 1
+        },
+        {
+          "id": "duplicator",
+          "reason": "Noch mehr Bomben.",
+          "priority": 2
+        },
+        {
+          "id": "spinach",
+          "reason": "Mehr Schaden pro Explosion.",
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "character": "bianca-ramba",
+      "source": "base",
+      "summary": "Erhält mit dem Level mehr Wagen; die Anzahl bestimmt auch, wie oft Carréllo abprallt.",
+      "weapons": [
+        {
+          "id": "carrello",
+          "reason": "Startwaffe; wird auf Level 80 mit Chaos Lazulia zu Carrozza!.",
+          "priority": 1
+        },
+        {
+          "id": "knife",
+          "reason": "Profitiert von Anzahl und Geschwindigkeit; mit Bracer wird sie zu Thousand Edge.",
+          "priority": 2
+        },
+        {
+          "id": "runetracer",
+          "reason": "Prallt ebenfalls umher.",
+          "priority": 3
+        }
+      ],
+      "passives": [
+        {
+          "id": "duplicator",
+          "reason": "Mehr Wagen und mehr Abpraller.",
+          "priority": 1
+        },
+        {
+          "id": "bracer",
+          "reason": "Schnellere Wagen; Partner für Thousand Edge.",
+          "priority": 2
+        },
+        {
+          "id": "spinach",
+          "reason": "Mehr Schaden pro Treffer.",
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "character": "o-sole-meeo",
+      "source": "base",
+      "summary": "Celestial Dusting lädt schneller, während er läuft, und skaliert mit Laufgeschwindigkeit.",
+      "weapons": [
+        {
+          "id": "celestial-dusting",
+          "reason": "Startwaffe; wird auf Level 80 mit Chaos Altemanna zu Profusione D'Amore.",
+          "priority": 1
+        },
+        {
+          "id": "shadow-pinion",
+          "reason": "Belohnt ebenfalls Bewegung; mit Wings wird sie zu Valkyrie Turner.",
+          "priority": 2
+        },
+        {
+          "id": "garlic",
+          "reason": "Schutz im Nahbereich.",
+          "priority": 3
+        }
+      ],
+      "passives": [
+        {
+          "id": "wings",
+          "reason": "Celestial Dusting skaliert mit Laufgeschwindigkeit; Partner für Valkyrie Turner.",
+          "priority": 1
+        },
+        {
+          "id": "duplicator",
+          "reason": "Mehr Projektile.",
+          "priority": 2
+        },
+        {
+          "id": "empty-tome",
+          "reason": "Noch kürzere Abklingzeit.",
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "character": "sir-ambrojoe",
+      "source": "base",
+      "summary": "La Robba wirkt am besten mit viel Dauer und Geschwindigkeit.",
+      "weapons": [
+        {
+          "id": "la-robba",
+          "reason": "Startwaffe; skaliert mit allen Werten.",
+          "priority": 1
+        },
+        {
+          "id": "king-bible",
+          "reason": "Profitiert von denselben Werten; mit Spellbinder wird sie zu Unholy Vespers.",
+          "priority": 2
+        },
+        {
+          "id": "knife",
+          "reason": "Schnelle Projektile; mit Bracer wird sie zu Thousand Edge.",
+          "priority": 3
+        }
+      ],
+      "passives": [
+        {
+          "id": "spellbinder",
+          "reason": "Mehr Dauer für La Robba; Partner für Unholy Vespers.",
+          "priority": 1
+        },
+        {
+          "id": "bracer",
+          "reason": "Schnellere Projektile; Partner für Thousand Edge.",
+          "priority": 2
+        },
+        {
+          "id": "duplicator",
+          "reason": "Mehr Projektile.",
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "character": "iguana-gallo-valletto",
+      "source": "base",
+      "summary": "Ziel ist Infinite Corridor. Silver Ring und Gold Ring gibt es nur als Fundstücke in bestimmten Stages, nicht beim Level-up.",
+      "weapons": [
+        {
+          "id": "clock-lancet",
+          "reason": "Startwaffe; mit Silver Ring und Gold Ring auf Maximalstufe wird sie zu Infinite Corridor.",
+          "priority": 1
+        },
+        {
+          "id": "laurel",
+          "reason": "Schutz, solange die Ringe noch fehlen.",
+          "priority": 3
+        }
+      ],
+      "passives": [
+        {
+          "id": "silver-ring",
+          "reason": "Partner für Infinite Corridor.",
+          "priority": 1
+        },
+        {
+          "id": "gold-ring",
+          "reason": "Partner für Infinite Corridor.",
+          "priority": 1
+        },
+        {
+          "id": "crown",
+          "reason": "Passt zu seinem Wachstums-Bonus.",
+          "priority": 2
+        },
+        {
+          "id": "empty-tome",
+          "reason": "Clock Lancet löst häufiger aus.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "character": "divano-thelma",
+      "source": "base",
+      "summary": "Gewinnt Rüstung mit dem Level. Ziel ist Crimson Shroud; die Metaglios gibt es nur als Fundstücke in bestimmten Stages.",
+      "weapons": [
+        {
+          "id": "laurel",
+          "reason": "Startwaffe; mit Metaglio Left und Metaglio Right auf Maximalstufe wird sie zu Crimson Shroud.",
+          "priority": 1
+        },
+        {
+          "id": "runetracer",
+          "reason": "Mit Armor wird sie zu NO FUTURE, das als Vergeltung explodiert.",
+          "priority": 2
+        }
+      ],
+      "passives": [
+        {
+          "id": "metaglio-left",
+          "reason": "Partner für Crimson Shroud.",
+          "priority": 1
+        },
+        {
+          "id": "metaglio-right",
+          "reason": "Partner für Crimson Shroud.",
+          "priority": 1
+        },
+        {
+          "id": "armor",
+          "reason": "Stapelt mit ihrem Rüstungs-Bonus; Partner für NO FUTURE.",
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "character": "zi-assunta-belpaese",
+      "source": "base",
+      "summary": "Gewinnt pro Level etwas Macht, Geschwindigkeit, Dauer und Fläche. Ziel ist die Union Fuwalafuwaloo aus Vento Sacro und Bloody Tear.",
+      "weapons": [
+        {
+          "id": "vento-sacro",
+          "reason": "Startwaffe; zusammen mit Bloody Tear wird sie zu Fuwalafuwaloo.",
+          "priority": 1
+        },
+        {
+          "id": "whip",
+          "reason": "Wird mit Hollow Heart zu Bloody Tear, dem Union-Partner von Vento Sacro.",
+          "priority": 1
+        }
+      ],
+      "passives": [
+        {
+          "id": "hollow-heart",
+          "reason": "Nötig für Bloody Tear.",
+          "priority": 1
+        },
+        {
+          "id": "wings",
+          "reason": "Vento Sacro wird bei Bewegung stärker.",
+          "priority": 2
+        },
+        {
+          "id": "clover",
+          "reason": "Mehr kritische Treffer.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "character": "queen-sigma",
+      "source": "base",
+      "summary": "Startet mit hohen Boni auf fast alles. Victory Sword skaliert mit Glück und Rüstung.",
+      "weapons": [
+        {
+          "id": "victory-sword",
+          "reason": "Startwaffe; mit Torrona's Box auf Maximalstufe gibt es Sole Solution als Geschenk dazu.",
+          "priority": 1
+        },
+        {
+          "id": "flames-of-misspell",
+          "reason": "Mit Torrona's Box auf Maximalstufe wird sie zu Ashes of Muspell.",
+          "priority": 3
+        }
+      ],
+      "passives": [
+        {
+          "id": "torrona-s-box",
+          "reason": "Nötig für Sole Solution (und Ashes of Muspell).",
+          "priority": 1
+        },
+        {
+          "id": "armor",
+          "reason": "Victory Sword skaliert mit Rüstung.",
+          "priority": 2
+        },
+        {
+          "id": "clover",
+          "reason": "Victory Sword skaliert mit Glück.",
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "character": "bat-robbert",
+      "source": "base",
+      "summary": "Heilt sich bei kritischer Gesundheit und gewinnt dabei max. Gesundheit; Mazo Familiar skaliert genau damit.",
+      "weapons": [
+        {
+          "id": "pako-battiliar",
+          "reason": "Startwaffe; mit Hollow Heart auf Maximalstufe wird sie zu Mazo Familiar.",
+          "priority": 1
+        },
+        {
+          "id": "whip",
+          "reason": "Nutzt ebenfalls Hollow Heart und wird zu Bloody Tear.",
+          "priority": 2
+        },
+        {
+          "id": "garlic",
+          "reason": "Schutz im Nahbereich; mit Pummarola wird sie zu Soul Eater.",
+          "priority": 3
+        }
+      ],
+      "passives": [
+        {
+          "id": "hollow-heart",
+          "reason": "Partner für Mazo Familiar und mehr max. Gesundheit.",
+          "priority": 1
+        },
+        {
+          "id": "pummarola",
+          "reason": "Regeneration; Partner für Soul Eater.",
+          "priority": 2
+        },
+        {
+          "id": "armor",
+          "reason": "Weniger erlittener Schaden.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "character": "zi-appunta-belpaese",
+      "source": "base",
+      "summary": "Findet zusätzliche Truhen in explosiven Objekten und kommt so schneller an Entwicklungen.",
+      "weapons": [
+        {
+          "id": "ammo-appalate",
+          "reason": "Startwaffe; mit Bracer auf Maximalstufe wird sie zu Gunastrophe.",
+          "priority": 1
+        },
+        {
+          "id": "knife",
+          "reason": "Nutzt ebenfalls Bracer und wird zu Thousand Edge.",
+          "priority": 2
+        }
+      ],
+      "passives": [
+        {
+          "id": "bracer",
+          "reason": "Partner für Gunastrophe und Thousand Edge.",
+          "priority": 1
+        },
+        {
+          "id": "duplicator",
+          "reason": "Mehr Projektile.",
+          "priority": 2
+        },
+        {
+          "id": "empty-tome",
+          "reason": "Schnelleres Feuern.",
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "character": "big-troubler",
+      "source": "base",
+      "summary": "Löst seine Hauptwaffe beim Aufsammeln von Goldmünzen aus. Alles, was Gold erzeugt oder heranzieht, passt.",
+      "weapons": [
+        {
+          "id": "unearthly-bolt",
+          "reason": "Startwaffe; mit Tirajisú auf Maximalstufe wird sie zu Spirit Disturbance.",
+          "priority": 1
+        },
+        {
+          "id": "gatti-amari",
+          "reason": "Wird mit Stone Mask zu Vicious Hunger, das Gegner in Gold verwandelt.",
+          "priority": 2
+        }
+      ],
+      "passives": [
+        {
+          "id": "tirajisu",
+          "reason": "Partner für Spirit Disturbance; Wiederbelebungen verstärken Unearthly Bolt.",
+          "priority": 1
+        },
+        {
+          "id": "stone-mask",
+          "reason": "Partner für Vicious Hunger und mehr Gold.",
+          "priority": 2
+        },
+        {
+          "id": "attractorb",
+          "reason": "Zieht Münzen schneller heran.",
+          "priority": 2
+        },
+        {
+          "id": "clover",
+          "reason": "Mehr kritische Treffer.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "character": "she-moon-eeta",
+      "source": "base",
+      "summary": "Glass Fandango wird durch Bewegung und gegen eingefrorene Gegner stärker.",
+      "weapons": [
+        {
+          "id": "glass-fandango",
+          "reason": "Startwaffe; mit Wings auf Maximalstufe wird sie zu Celestial Voulge.",
+          "priority": 1
+        },
+        {
+          "id": "clock-lancet",
+          "reason": "Friert Gegner ein, gegen die Glass Fandango mehr Schaden macht.",
+          "priority": 2
+        }
+      ],
+      "passives": [
+        {
+          "id": "wings",
+          "reason": "Partner für Celestial Voulge; mehr Bewegung.",
+          "priority": 1
+        },
+        {
+          "id": "clover",
+          "reason": "Mehr kritische Treffer.",
+          "priority": 2
+        },
+        {
+          "id": "armor",
+          "reason": "Passt zu ihrer Start-Rüstung.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "character": "para-kooleo",
+      "source": "base",
+      "summary": "Penshin Fatcha kann sich bei Para Kooleo nicht entwickeln, dafür ist der Limit Break verstärkt. Allgemeine Werte-Gegenstände helfen am meisten.",
+      "weapons": [
+        {
+          "id": "penshin-fatcha",
+          "reason": "Startwaffe mit verstärktem Limit Break.",
+          "priority": 1
+        },
+        {
+          "id": "king-bible",
+          "reason": "Schutz rundum.",
+          "priority": 3
+        }
+      ],
+      "passives": [
+        {
+          "id": "duplicator",
+          "reason": "Mehr Projektile.",
+          "priority": 2
+        },
+        {
+          "id": "empty-tome",
+          "reason": "Kürzere Abklingzeit.",
+          "priority": 2
+        },
+        {
+          "id": "spinach",
+          "reason": "Mehr Schaden.",
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "character": "santa-ladonna",
+      "source": "base",
+      "summary": "Startet mit viel Glück; bei Santa Javelin erhöht die Dauer die Anzahl.",
+      "weapons": [
+        {
+          "id": "santa-javelin",
+          "reason": "Startwaffe; mit Clover auf Maximalstufe wird sie zu Seraphic Cry.",
+          "priority": 1
+        },
+        {
+          "id": "cross",
+          "reason": "Nutzt ebenfalls Clover und wird zu Heaven Sword.",
+          "priority": 2
+        }
+      ],
+      "passives": [
+        {
+          "id": "clover",
+          "reason": "Partner für Seraphic Cry und Heaven Sword.",
+          "priority": 1
+        },
+        {
+          "id": "spellbinder",
+          "reason": "Dauer erhöht bei Santa Javelin die Anzahl.",
+          "priority": 2
+        },
+        {
+          "id": "empty-tome",
+          "reason": "Häufigere Würfe.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "character": "gazebo",
+      "source": "base",
+      "summary": "Überheilung gibt dauerhafte Boni, deshalb lohnt sich viel Regeneration.",
+      "weapons": [
+        {
+          "id": "gaze-of-gaea",
+          "reason": "Startwaffe; mit Parm Aegis wird sie zu Embrace of Gaea.",
+          "priority": 1
+        },
+        {
+          "id": "garlic",
+          "reason": "Mit Pummarola wird sie zu Soul Eater, das ebenfalls von Heilung profitiert.",
+          "priority": 2
+        }
+      ],
+      "passives": [
+        {
+          "id": "parm-aegis",
+          "reason": "Partner für Embrace of Gaea.",
+          "priority": 1
+        },
+        {
+          "id": "pummarola",
+          "reason": "Mehr Heilung für Überheilungs-Boni.",
+          "priority": 1
+        },
+        {
+          "id": "hollow-heart",
+          "reason": "Mehr max. Gesundheit.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "character": "chula-reh",
+      "source": "base",
+      "summary": "Würfelt regelmäßig um Glück; Waffen, die mit Glück skalieren, passen gut.",
+      "weapons": [
+        {
+          "id": "magi-stone",
+          "reason": "Startwaffe; mit Karoma's Mana wird sie zu Kyra-Stones.",
+          "priority": 1
+        },
+        {
+          "id": "cross",
+          "reason": "Mit Clover wird sie zu Heaven Sword.",
+          "priority": 2
+        }
+      ],
+      "passives": [
+        {
+          "id": "karoma-s-mana",
+          "reason": "Partner für Kyra-Stones.",
+          "priority": 1
+        },
+        {
+          "id": "clover",
+          "reason": "Noch mehr Glück; Partner für Heaven Sword.",
+          "priority": 2
+        },
+        {
+          "id": "duplicator",
+          "reason": "Mehr Steine.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "character": "space-dude",
+      "source": "base",
+      "summary": "Phas3r wächst stark mit der Anzahl, Photonstorm zusätzlich mit Glück.",
+      "weapons": [
+        {
+          "id": "phas3r",
+          "reason": "Startwaffe; mit Empty Tome auf Maximalstufe wird sie zu Photonstorm.",
+          "priority": 1
+        },
+        {
+          "id": "magic-wand",
+          "reason": "Nutzt ebenfalls Empty Tome und wird zu Holy Wand.",
+          "priority": 2
+        }
+      ],
+      "passives": [
+        {
+          "id": "empty-tome",
+          "reason": "Partner für Photonstorm und Holy Wand.",
+          "priority": 1
+        },
+        {
+          "id": "duplicator",
+          "reason": "Phas3r wächst stark mit der Anzahl.",
+          "priority": 1
+        },
+        {
+          "id": "clover",
+          "reason": "Photonstorm vervielfacht Projektile je nach Glück.",
+          "priority": 2
+        }
       ]
     }
   ]

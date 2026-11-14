@@ -6,22 +6,880 @@
       "name": "Whip",
       "source": "base",
       "kind": "base",
-      "description": "Schlägt waagerecht zu und trifft alle Gegner in der Bahn.",
+      "description": "Schlägt waagerecht zu und durchdringt Gegner.",
       "maxLevel": 8,
       "emoji": "🪢",
-      "verified": false,
-      "note": "Beispieleintrag für das Datenmodell, noch nicht gegen das Wiki geprüft."
+      "verified": true
+    },
+    {
+      "id": "magic-wand",
+      "name": "Magic Wand",
+      "source": "base",
+      "kind": "base",
+      "description": "Schießt auf den nächsten Gegner.",
+      "maxLevel": 8,
+      "emoji": "🪄",
+      "verified": true
+    },
+    {
+      "id": "knife",
+      "name": "Knife",
+      "source": "base",
+      "kind": "base",
+      "description": "Wirft schnell Messer in Blickrichtung.",
+      "maxLevel": 8,
+      "emoji": "🔪",
+      "verified": true
+    },
+    {
+      "id": "axe",
+      "name": "Axe",
+      "source": "base",
+      "kind": "base",
+      "description": "Hoher Schaden, wächst stark mit der Fläche.",
+      "maxLevel": 8,
+      "emoji": "🪓",
+      "verified": true
+    },
+    {
+      "id": "cross",
+      "name": "Cross",
+      "source": "base",
+      "kind": "base",
+      "description": "Zielt auf den nächsten Gegner und kehrt wie ein Bumerang zurück.",
+      "maxLevel": 8,
+      "emoji": "✝️",
+      "verified": true
+    },
+    {
+      "id": "king-bible",
+      "name": "King Bible",
+      "source": "base",
+      "kind": "base",
+      "description": "Kreist um den Charakter.",
+      "maxLevel": 8,
+      "emoji": "📖",
+      "verified": true
+    },
+    {
+      "id": "fire-wand",
+      "name": "Fire Wand",
+      "source": "base",
+      "kind": "base",
+      "description": "Schießt auf einen zufälligen Gegner und richtet hohen Schaden an.",
+      "maxLevel": 8,
+      "emoji": "🔥",
+      "verified": true
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic",
+      "source": "base",
+      "kind": "base",
+      "description": "Schadet Gegnern in der Nähe und senkt ihren Widerstand gegen Rückstoß und Einfrieren.",
+      "maxLevel": 8,
+      "emoji": "🧄",
+      "verified": true
+    },
+    {
+      "id": "santa-water",
+      "name": "Santa Water",
+      "source": "base",
+      "kind": "base",
+      "description": "Erzeugt Schadenszonen am Boden.",
+      "maxLevel": 8,
+      "emoji": "💧",
+      "verified": true
+    },
+    {
+      "id": "runetracer",
+      "name": "Runetracer",
+      "source": "base",
+      "kind": "base",
+      "description": "Durchdringt Gegner und prallt umher.",
+      "maxLevel": 8,
+      "emoji": "💠",
+      "verified": true
+    },
+    {
+      "id": "lightning-ring",
+      "name": "Lightning Ring",
+      "source": "base",
+      "kind": "base",
+      "description": "Trifft zufällige Gegner mit Blitzen.",
+      "maxLevel": 8,
+      "emoji": "⚡",
+      "verified": true
+    },
+    {
+      "id": "pentagram",
+      "name": "Pentagram",
+      "source": "base",
+      "kind": "base",
+      "description": "Löscht alles auf dem Bildschirm aus.",
+      "maxLevel": 8,
+      "emoji": "🔯",
+      "verified": true
+    },
+    {
+      "id": "peachone",
+      "name": "Peachone",
+      "source": "base",
+      "kind": "base",
+      "description": "Bombardiert eine kreisende Zone.",
+      "maxLevel": 8,
+      "emoji": "🕊️",
+      "verified": true
+    },
+    {
+      "id": "ebony-wings",
+      "name": "Ebony Wings",
+      "source": "base",
+      "kind": "base",
+      "description": "Bombardiert eine kreisende Zone, gegenläufig zu Peachone.",
+      "maxLevel": 8,
+      "emoji": "🦅",
+      "verified": true
+    },
+    {
+      "id": "phiera-der-tuphello",
+      "name": "Phiera Der Tuphello",
+      "source": "base",
+      "kind": "base",
+      "description": "Schießt schnell in vier feste Richtungen.",
+      "maxLevel": 8,
+      "emoji": "🔫",
+      "verified": true
+    },
+    {
+      "id": "eight-the-sparrow",
+      "name": "Eight The Sparrow",
+      "source": "base",
+      "kind": "base",
+      "description": "Schießt schnell in vier feste Richtungen.",
+      "maxLevel": 8,
+      "emoji": "🎯",
+      "verified": true
+    },
+    {
+      "id": "gatti-amari",
+      "name": "Gatti Amari",
+      "source": "base",
+      "kind": "base",
+      "description": "Ruft launische Katzen herbei, die mit Pickups spielen können.",
+      "maxLevel": 8,
+      "emoji": "🐈",
+      "verified": true
+    },
+    {
+      "id": "song-of-mana",
+      "name": "Song of Mana",
+      "source": "base",
+      "kind": "base",
+      "description": "Greift senkrecht an und durchdringt Gegner.",
+      "maxLevel": 8,
+      "emoji": "🎶",
+      "verified": true
+    },
+    {
+      "id": "shadow-pinion",
+      "name": "Shadow Pinion",
+      "source": "base",
+      "kind": "base",
+      "description": "Erzeugt beim Laufen Schadenszonen und schlägt beim Stehenbleiben zu.",
+      "maxLevel": 8,
+      "emoji": "🌀",
+      "verified": true
+    },
+    {
+      "id": "clock-lancet",
+      "name": "Clock Lancet",
+      "source": "base",
+      "kind": "base",
+      "description": "Kann Gegner in der Zeit einfrieren.",
+      "maxLevel": 7,
+      "emoji": "⏰",
+      "verified": true
+    },
+    {
+      "id": "laurel",
+      "name": "Laurel",
+      "source": "base",
+      "kind": "base",
+      "description": "Schützt vor Schaden, solange er aktiv ist.",
+      "maxLevel": 7,
+      "emoji": "🌿",
+      "verified": true
+    },
+    {
+      "id": "vento-sacro",
+      "name": "Vento Sacro",
+      "source": "base",
+      "kind": "base",
+      "description": "Wird bei ununterbrochener Bewegung stärker; kann kritisch treffen.",
+      "maxLevel": 8,
+      "emoji": "🌬️",
+      "verified": true
+    },
+    {
+      "id": "bone",
+      "name": "Bone",
+      "source": "base",
+      "kind": "base",
+      "description": "Wirft ein abprallendes Projektil.",
+      "maxLevel": 8,
+      "emoji": "🦴",
+      "verified": true
+    },
+    {
+      "id": "cherry-bomb",
+      "name": "Cherry Bomb",
+      "source": "base",
+      "kind": "base",
+      "description": "Wirft ein abprallendes Projektil, das manchmal explodiert.",
+      "maxLevel": 8,
+      "emoji": "🍒",
+      "verified": true
+    },
+    {
+      "id": "carrello",
+      "name": "Carréllo",
+      "source": "base",
+      "kind": "base",
+      "description": "Wirft ein abprallendes Projektil; die Anzahl bestimmt, wie oft es abprallt.",
+      "maxLevel": 8,
+      "emoji": "🛒",
+      "verified": true
+    },
+    {
+      "id": "celestial-dusting",
+      "name": "Celestial Dusting",
+      "source": "base",
+      "kind": "base",
+      "description": "Wirft ein abprallendes Projektil; die Abklingzeit sinkt, während du dich bewegst.",
+      "maxLevel": 8,
+      "emoji": "✨",
+      "verified": true
+    },
+    {
+      "id": "la-robba",
+      "name": "La Robba",
+      "source": "base",
+      "kind": "base",
+      "description": "Erzeugt abprallende Projektile.",
+      "maxLevel": 8,
+      "emoji": "🎁",
+      "verified": true
+    },
+    {
+      "id": "greatest-jubilee",
+      "name": "Greatest Jubilee",
+      "source": "base",
+      "kind": "base",
+      "description": "Kann Lichtquellen herbeirufen.",
+      "maxLevel": 9,
+      "emoji": "🎆",
+      "verified": true
+    },
+    {
+      "id": "bracelet",
+      "name": "Bracelet",
+      "source": "base",
+      "kind": "base",
+      "description": "Feuert drei Projektile auf einen zufälligen Gegner.",
+      "maxLevel": 6,
+      "emoji": "📿",
+      "verified": true
+    },
+    {
+      "id": "candybox",
+      "name": "Candybox",
+      "source": "base",
+      "kind": "base",
+      "description": "Lässt dich eine beliebige freigeschaltete Basiswaffe wählen.",
+      "maxLevel": 1,
+      "emoji": "🍬",
+      "verified": true
+    },
+    {
+      "id": "victory-sword",
+      "name": "Victory Sword",
+      "source": "base",
+      "kind": "base",
+      "description": "Greift den nächsten Gegner mit einer Kombo an; schlägt zurück.",
+      "maxLevel": 12,
+      "emoji": "⚔️",
+      "verified": true
+    },
+    {
+      "id": "flames-of-misspell",
+      "name": "Flames of Misspell",
+      "source": "base",
+      "kind": "base",
+      "description": "Stößt Flammenkegel aus.",
+      "maxLevel": 8,
+      "emoji": "☄️",
+      "verified": true
+    },
+    {
+      "id": "pako-battiliar",
+      "name": "Pako Battiliar",
+      "source": "base",
+      "kind": "base",
+      "description": "Kann zurückschlagen, wenn du Gesundheit verlierst.",
+      "maxLevel": 8,
+      "emoji": "🦇",
+      "verified": true
+    },
+    {
+      "id": "ammo-appalate",
+      "name": "Ammo Appalate",
+      "source": "base",
+      "kind": "base",
+      "description": "Zielt auf einen Gegner in Blickrichtung; legt Munitionsvorrat an, solange kein Gegner in Reichweite ist.",
+      "maxLevel": 8,
+      "emoji": "💥",
+      "verified": true
+    },
+    {
+      "id": "unearthly-bolt",
+      "name": "Unearthly Bolt",
+      "source": "base",
+      "kind": "base",
+      "description": "Kritische Treffer erzeugen Schadenszonen; Wiederbelebungen erhöhen den Schaden aufeinanderfolgender kritischer Treffer.",
+      "maxLevel": 8,
+      "emoji": "🌩️",
+      "verified": true
+    },
+    {
+      "id": "glass-fandango",
+      "name": "Glass Fandango",
+      "source": "base",
+      "kind": "base",
+      "description": "Wird stärker durch Bewegung, durch Orologions und gegen eingefrorene Gegner.",
+      "maxLevel": 8,
+      "emoji": "🔮",
+      "verified": true
+    },
+    {
+      "id": "penshin-fatcha",
+      "name": "Penshin Fatcha",
+      "source": "base",
+      "kind": "base",
+      "description": "Eine Auswahl an Thunfisch-Waffen, die sich endlos weiterentwickeln können.",
+      "maxLevel": 1,
+      "emoji": "🐟",
+      "verified": true
+    },
+    {
+      "id": "tonno-subito",
+      "name": "Tonno Subito",
+      "source": "base",
+      "kind": "base",
+      "description": "Einfacher Thunfisch; Level-Boni setzen auf Geschwindigkeit.",
+      "maxLevel": 6,
+      "emoji": "🐟",
+      "verified": true
+    },
+    {
+      "id": "tonnado",
+      "name": "Tonnado",
+      "source": "base",
+      "kind": "base",
+      "description": "Geschlagener Thunfisch; Level-Boni setzen auf Dauer.",
+      "maxLevel": 6,
+      "emoji": "🌪️",
+      "verified": true
+    },
+    {
+      "id": "tonn-omoto",
+      "name": "Tonn'omoto",
+      "source": "base",
+      "kind": "base",
+      "description": "Süßwasser-Thunfisch; Level-Boni setzen auf Abklingzeit.",
+      "maxLevel": 6,
+      "emoji": "🏞️",
+      "verified": true
+    },
+    {
+      "id": "tonn-oddeeo",
+      "name": "Tonn'oddeeo",
+      "source": "base",
+      "kind": "base",
+      "description": "Himmlischer Thunfisch; Level-Boni setzen auf Anzahl.",
+      "maxLevel": 6,
+      "emoji": "😇",
+      "verified": true
+    },
+    {
+      "id": "tonne",
+      "name": "Tonne",
+      "source": "base",
+      "kind": "base",
+      "description": "Riesen-Thunfisch; Level-Boni setzen auf Fläche, die Anzahl erhöht stattdessen die Trefferfrequenz.",
+      "maxLevel": 6,
+      "emoji": "🐋",
+      "verified": true
+    },
+    {
+      "id": "unsurpassed",
+      "name": "Unsurpassed",
+      "source": "base",
+      "kind": "base",
+      "description": "Premium-Thunfisch; Level-Boni setzen auf Macht.",
+      "maxLevel": 6,
+      "emoji": "🍣",
+      "verified": true
+    },
+    {
+      "id": "santa-javelin",
+      "name": "Santa Javelin",
+      "source": "base",
+      "kind": "base",
+      "description": "Die Dauer erhöht die Anzahl; kann kritisch treffen.",
+      "maxLevel": 8,
+      "emoji": "🔱",
+      "verified": true
+    },
+    {
+      "id": "gaze-of-gaea",
+      "name": "Gaze of Gaea",
+      "source": "base",
+      "kind": "base",
+      "description": "Kann Gegner entwaffnen (Defang).",
+      "maxLevel": 8,
+      "emoji": "🌍",
+      "verified": true
+    },
+    {
+      "id": "magi-stone",
+      "name": "Magi-Stone",
+      "source": "base",
+      "kind": "base",
+      "description": "Richtet festen Schaden abhängig von der Waffenstufe an.",
+      "maxLevel": 8,
+      "emoji": "💎",
+      "verified": true
+    },
+    {
+      "id": "phas3r",
+      "name": "Phas3r",
+      "source": "base",
+      "kind": "base",
+      "description": "Erzeugt schmale Schadenszonen; wächst stark mit der Anzahl.",
+      "maxLevel": 8,
+      "emoji": "📡",
+      "verified": true
+    },
+    {
+      "id": "chaos-rune",
+      "name": "Chaos Rune",
+      "source": "base",
+      "kind": "base",
+      "description": "Geschwindigkeit und Dauer erhöhen stattdessen die Zahl der Trefferzonen.",
+      "maxLevel": 8,
+      "emoji": "🌌",
+      "verified": true
+    },
+    {
+      "id": "arma-dio",
+      "name": "Arma Dio",
+      "source": "base",
+      "kind": "base",
+      "description": "Lässt dich einen zusätzlichen passiven Gegenstand wählen.",
+      "maxLevel": 1,
+      "emoji": "🗡️",
+      "verified": true
     },
     {
       "id": "bloody-tear",
       "name": "Bloody Tear",
       "source": "base",
       "kind": "evolved",
-      "description": "Entwickelte Whip: kann kritisch treffen und heilt bei Treffern.",
+      "description": "Entwicklung von Whip: kann kritisch treffen und saugt Gesundheit ab.",
       "maxLevel": 1,
       "emoji": "🩸",
-      "verified": false,
-      "note": "Beispieleintrag für das Datenmodell, noch nicht gegen das Wiki geprüft."
+      "verified": true
+    },
+    {
+      "id": "holy-wand",
+      "name": "Holy Wand",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Entwicklung von Magic Wand: feuert ohne Pause.",
+      "maxLevel": 1,
+      "emoji": "🌟",
+      "verified": true
+    },
+    {
+      "id": "thousand-edge",
+      "name": "Thousand Edge",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Entwicklung von Knife: feuert ohne Pause.",
+      "maxLevel": 1,
+      "emoji": "🗡️",
+      "verified": true
+    },
+    {
+      "id": "death-spiral",
+      "name": "Death Spiral",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Entwicklung von Axe: durchdringt Gegner.",
+      "maxLevel": 1,
+      "emoji": "🌀",
+      "verified": true
+    },
+    {
+      "id": "heaven-sword",
+      "name": "Heaven Sword",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Entwicklung von Cross: kann kritisch treffen.",
+      "maxLevel": 1,
+      "emoji": "⚔️",
+      "verified": true
+    },
+    {
+      "id": "unholy-vespers",
+      "name": "Unholy Vespers",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Entwicklung von King Bible: endet nie.",
+      "maxLevel": 1,
+      "emoji": "📕",
+      "verified": true
+    },
+    {
+      "id": "hellfire",
+      "name": "Hellfire",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Entwicklung von Fire Wand: durchdringt Gegner.",
+      "maxLevel": 1,
+      "emoji": "☄️",
+      "verified": true
+    },
+    {
+      "id": "soul-eater",
+      "name": "Soul Eater",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Entwicklung von Garlic: stiehlt Herzen und wird stärker, wenn du dich heilst.",
+      "maxLevel": 1,
+      "emoji": "👻",
+      "verified": true
+    },
+    {
+      "id": "la-borra",
+      "name": "La Borra",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Entwicklung von Santa Water: Schadenszonen folgen dir und wachsen, während sie sich bewegen.",
+      "maxLevel": 1,
+      "emoji": "🌊",
+      "verified": true
+    },
+    {
+      "id": "no-future",
+      "name": "NO FUTURE",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Entwicklung von Runetracer: explodiert beim Abprallen und als Vergeltung.",
+      "maxLevel": 1,
+      "emoji": "💥",
+      "verified": true
+    },
+    {
+      "id": "thunder-loop",
+      "name": "Thunder Loop",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Entwicklung von Lightning Ring: Blitze schlagen doppelt ein.",
+      "maxLevel": 1,
+      "emoji": "🌩️",
+      "verified": true
+    },
+    {
+      "id": "gorgeous-moon",
+      "name": "Gorgeous Moon",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Entwicklung von Pentagram: erzeugt zusätzliche Edelsteine und sammelt alle ein.",
+      "maxLevel": 1,
+      "emoji": "🌕",
+      "verified": true
+    },
+    {
+      "id": "vicious-hunger",
+      "name": "Vicious Hunger",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Entwicklung von Gatti Amari: kann alles in Gold verwandeln.",
+      "maxLevel": 1,
+      "emoji": "😼",
+      "verified": true
+    },
+    {
+      "id": "mannajja",
+      "name": "Mannajja",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Entwicklung von Song of Mana: kann Gegner verlangsamen.",
+      "maxLevel": 1,
+      "emoji": "🎼",
+      "verified": true
+    },
+    {
+      "id": "valkyrie-turner",
+      "name": "Valkyrie Turner",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Entwicklung von Shadow Pinion: größer, länger, schneller, stärker.",
+      "maxLevel": 1,
+      "emoji": "🌪️",
+      "verified": true
+    },
+    {
+      "id": "infinite-corridor",
+      "name": "Infinite Corridor",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Entwicklung von Clock Lancet: halbiert die Gesundheit der Gegner.",
+      "maxLevel": 1,
+      "emoji": "⏳",
+      "verified": true
+    },
+    {
+      "id": "crimson-shroud",
+      "name": "Crimson Shroud",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Entwicklung von Laurel: begrenzt erlittenen Schaden auf 10 und schlägt zurück, wenn Ladungen verbraucht werden.",
+      "maxLevel": 1,
+      "emoji": "🛡️",
+      "verified": true
+    },
+    {
+      "id": "bi-bracelet",
+      "name": "Bi-Bracelet",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Zweite Stufe von Bracelet: feuert drei Projektile auf einen zufälligen Gegner.",
+      "maxLevel": 6,
+      "emoji": "📿",
+      "verified": true
+    },
+    {
+      "id": "tri-bracelet",
+      "name": "Tri-Bracelet",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Dritte Stufe von Bracelet: feuert drei Projektile auf einen zufälligen Gegner.",
+      "maxLevel": 6,
+      "emoji": "📿",
+      "verified": true
+    },
+    {
+      "id": "ashes-of-muspell",
+      "name": "Ashes of Muspell",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Entwicklung von Flames of Misspell: wird stärker, je mehr Gegner besiegt werden.",
+      "maxLevel": 1,
+      "emoji": "🌋",
+      "verified": true
+    },
+    {
+      "id": "anima-of-mortaccio",
+      "name": "Anima of Mortaccio",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Entwicklung von Bone: Projektile werden beim Abprallen schneller.",
+      "maxLevel": 1,
+      "emoji": "☠️",
+      "verified": true
+    },
+    {
+      "id": "yatta-daikarin",
+      "name": "Yatta Daikarin",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Entwicklung von Cherry Bomb: erzeugt zusätzliche Explosionen, die abhängig vom Glück kritisch treffen können.",
+      "maxLevel": 1,
+      "emoji": "🍒",
+      "verified": true
+    },
+    {
+      "id": "carrozza",
+      "name": "Carrozza!",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Entwicklung von Carréllo: Dauer, Geschwindigkeit und Fläche erhöhen stattdessen den Schaden.",
+      "maxLevel": 1,
+      "emoji": "🛞",
+      "verified": true
+    },
+    {
+      "id": "profusione-d-amore",
+      "name": "Profusione D'Amore",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Entwicklung von Celestial Dusting: Projektile lösen in festen Abständen Kettenexplosionen aus.",
+      "maxLevel": 1,
+      "emoji": "💖",
+      "verified": true
+    },
+    {
+      "id": "mazo-familiar",
+      "name": "Mazo Familiar",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Entwicklung von Pako Battiliar: Schaden und Anzahl hängen von der max. Gesundheit ab.",
+      "maxLevel": 1,
+      "emoji": "🦇",
+      "verified": true
+    },
+    {
+      "id": "gunastrophe",
+      "name": "Gunastrophe",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Entwicklung von Ammo Appalate: feuert ungewöhnliche Projektile auf sichtbare Gegner.",
+      "maxLevel": 1,
+      "emoji": "🔫",
+      "verified": true
+    },
+    {
+      "id": "spirit-disturbance",
+      "name": "Spirit Disturbance",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Entwicklung von Unearthly Bolt: trifft immer kritisch.",
+      "maxLevel": 1,
+      "emoji": "👻",
+      "verified": true
+    },
+    {
+      "id": "celestial-voulge",
+      "name": "Celestial Voulge",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Entwicklung von Glass Fandango: kann kritisch treffen und Gegner einfrieren; verwandelt Orologions in Starry Heavens.",
+      "maxLevel": 1,
+      "emoji": "❄️",
+      "verified": true
+    },
+    {
+      "id": "miracle-of-multiplication",
+      "name": "Miracle of Multiplication",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Ruft alle in diesem Lauf genutzten Thunfisch-Formen herbei und verteilt die Level-Boni gleichmäßig; entwickelt sich nicht weiter.",
+      "maxLevel": 1,
+      "emoji": "🐟",
+      "verified": true
+    },
+    {
+      "id": "seraphic-cry",
+      "name": "Seraphic Cry",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Entwicklung von Santa Javelin: kritischer Schaden hängt vom Glück ab; verwandelt Rosaries in Weird Souls Purifiers.",
+      "maxLevel": 1,
+      "emoji": "👼",
+      "verified": true
+    },
+    {
+      "id": "embrace-of-gaea",
+      "name": "Embrace of Gaea",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Entwicklung von Gaze of Gaea: mehr Schaden während der Unverwundbarkeit; schlägt zurück.",
+      "maxLevel": 1,
+      "emoji": "🌏",
+      "verified": true
+    },
+    {
+      "id": "kyra-stones",
+      "name": "Kyra-Stones",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Entwicklung von Magi-Stone: mehr Schaden ab Spielerlevel 80; die Anzahl steigt mit den sichtbaren Gegnern.",
+      "maxLevel": 1,
+      "emoji": "💎",
+      "verified": true
+    },
+    {
+      "id": "photonstorm",
+      "name": "Photonstorm",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Entwicklung von Phas3r: vervielfacht die Zahl der Projektile je nach Glück bis zu ×5.",
+      "maxLevel": 1,
+      "emoji": "🌠",
+      "verified": true
+    },
+    {
+      "id": "wicked-ruler",
+      "name": "Wicked Ruler",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Entwicklung von Chaos Rune: beherrscht wilde magische Kräfte.",
+      "maxLevel": 1,
+      "emoji": "👁️",
+      "verified": true
+    },
+    {
+      "id": "vandalier",
+      "name": "Vandalier",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Union aus Peachone und Ebony Wings: zwei Zonen kreisen in beide Richtungen; gibt einen Waffen-Slot frei.",
+      "maxLevel": 8,
+      "emoji": "🕊️",
+      "verified": true
+    },
+    {
+      "id": "phieraggi",
+      "name": "Phieraggi",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Union aus Phiera Der Tuphello und Eight The Sparrow; wird mit Wiederbelebungen stärker.",
+      "maxLevel": 1,
+      "emoji": "🔫",
+      "verified": true
+    },
+    {
+      "id": "fuwalafuwaloo",
+      "name": "Fuwalafuwaloo",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Union aus Vento Sacro und Bloody Tear: kritische Treffer können Explosionen auslösen.",
+      "maxLevel": 1,
+      "emoji": "🌬️",
+      "verified": true
+    },
+    {
+      "id": "super-candybox-ii-turbo",
+      "name": "Super Candybox II Turbo",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Geschenk von Candybox: lässt dich aus einer Auswahl bereits einmal erreichter Entwicklungen wählen.",
+      "maxLevel": 1,
+      "emoji": "🍭",
+      "verified": true
+    },
+    {
+      "id": "sole-solution",
+      "name": "Sole Solution",
+      "source": "base",
+      "kind": "evolved",
+      "description": "Geschenk von Victory Sword: wird stärker, je mehr Gegner besiegt werden.",
+      "maxLevel": 1,
+      "emoji": "☀️",
+      "verified": true
     }
   ]
 }

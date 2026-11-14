@@ -15,8 +15,8 @@
         "properties": {
           "id": { "$ref": "common.schema.json#/definitions/id" },
           "kind": {
-            "enum": ["evolution", "union", "gift"],
-            "description": "evolution = Waffe wird ersetzt, union = mehrere Waffen verschmelzen, gift = Ausgangswaffe bleibt und das Ergebnis kommt dazu."
+            "enum": ["evolution", "union", "gift", "morph"],
+            "description": "evolution = Waffe wird ersetzt, union = mehrere Waffen verschmelzen, gift = Ausgangswaffe bleibt und das Ergebnis kommt dazu, morph = nur für bestimmte Charaktere, automatisch ohne Truhe."
           },
           "source": { "$ref": "common.schema.json#/definitions/source" },
           "result": {
@@ -56,10 +56,17 @@
               }
             }
           },
+          "characters": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": { "$ref": "common.schema.json#/definitions/id" },
+            "description": "Nur mit diesen Charakteren möglich (z. B. bei Morphs). Weglassen, wenn sie für alle gilt."
+          },
           "conditions": {
             "type": "array",
             "items": { "$ref": "common.schema.json#/definitions/text" },
-            "description": "Weitere Bedingungen als Text, z. B. bestimmter Charakter oder Zeitpunkt."
+            "description": "Weitere Bedingungen als Text, z. B. ein Relikt oder ein Mindestlevel."
           },
           "verified": { "$ref": "common.schema.json#/definitions/verified" },
           "note": { "type": "string" }

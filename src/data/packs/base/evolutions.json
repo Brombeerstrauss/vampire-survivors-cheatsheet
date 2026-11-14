@@ -6,10 +6,704 @@
       "kind": "evolution",
       "source": "base",
       "result": "bloody-tear",
-      "weapons": [{ "id": "whip" }],
-      "passives": [{ "id": "hollow-heart" }],
-      "verified": false,
-      "note": "Beispieleintrag für das Datenmodell, noch nicht gegen das Wiki geprüft."
+      "weapons": [
+        {
+          "id": "whip"
+        }
+      ],
+      "passives": [
+        {
+          "id": "hollow-heart"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "holy-wand",
+      "kind": "evolution",
+      "source": "base",
+      "result": "holy-wand",
+      "weapons": [
+        {
+          "id": "magic-wand"
+        }
+      ],
+      "passives": [
+        {
+          "id": "empty-tome"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "thousand-edge",
+      "kind": "evolution",
+      "source": "base",
+      "result": "thousand-edge",
+      "weapons": [
+        {
+          "id": "knife"
+        }
+      ],
+      "passives": [
+        {
+          "id": "bracer"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "death-spiral",
+      "kind": "evolution",
+      "source": "base",
+      "result": "death-spiral",
+      "weapons": [
+        {
+          "id": "axe"
+        }
+      ],
+      "passives": [
+        {
+          "id": "candelabrador"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "heaven-sword",
+      "kind": "evolution",
+      "source": "base",
+      "result": "heaven-sword",
+      "weapons": [
+        {
+          "id": "cross"
+        }
+      ],
+      "passives": [
+        {
+          "id": "clover"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "unholy-vespers",
+      "kind": "evolution",
+      "source": "base",
+      "result": "unholy-vespers",
+      "weapons": [
+        {
+          "id": "king-bible"
+        }
+      ],
+      "passives": [
+        {
+          "id": "spellbinder"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "hellfire",
+      "kind": "evolution",
+      "source": "base",
+      "result": "hellfire",
+      "weapons": [
+        {
+          "id": "fire-wand"
+        }
+      ],
+      "passives": [
+        {
+          "id": "spinach"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "soul-eater",
+      "kind": "evolution",
+      "source": "base",
+      "result": "soul-eater",
+      "weapons": [
+        {
+          "id": "garlic"
+        }
+      ],
+      "passives": [
+        {
+          "id": "pummarola"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "la-borra",
+      "kind": "evolution",
+      "source": "base",
+      "result": "la-borra",
+      "weapons": [
+        {
+          "id": "santa-water"
+        }
+      ],
+      "passives": [
+        {
+          "id": "attractorb"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "no-future",
+      "kind": "evolution",
+      "source": "base",
+      "result": "no-future",
+      "weapons": [
+        {
+          "id": "runetracer"
+        }
+      ],
+      "passives": [
+        {
+          "id": "armor"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "thunder-loop",
+      "kind": "evolution",
+      "source": "base",
+      "result": "thunder-loop",
+      "weapons": [
+        {
+          "id": "lightning-ring"
+        }
+      ],
+      "passives": [
+        {
+          "id": "duplicator"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "gorgeous-moon",
+      "kind": "evolution",
+      "source": "base",
+      "result": "gorgeous-moon",
+      "weapons": [
+        {
+          "id": "pentagram"
+        }
+      ],
+      "passives": [
+        {
+          "id": "crown"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "vicious-hunger",
+      "kind": "evolution",
+      "source": "base",
+      "result": "vicious-hunger",
+      "weapons": [
+        {
+          "id": "gatti-amari"
+        }
+      ],
+      "passives": [
+        {
+          "id": "stone-mask"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "mannajja",
+      "kind": "evolution",
+      "source": "base",
+      "result": "mannajja",
+      "weapons": [
+        {
+          "id": "song-of-mana"
+        }
+      ],
+      "passives": [
+        {
+          "id": "skull-o-maniac"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "valkyrie-turner",
+      "kind": "evolution",
+      "source": "base",
+      "result": "valkyrie-turner",
+      "weapons": [
+        {
+          "id": "shadow-pinion"
+        }
+      ],
+      "passives": [
+        {
+          "id": "wings"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "infinite-corridor",
+      "kind": "evolution",
+      "source": "base",
+      "result": "infinite-corridor",
+      "weapons": [
+        {
+          "id": "clock-lancet"
+        }
+      ],
+      "passives": [
+        {
+          "id": "silver-ring",
+          "level": "max"
+        },
+        {
+          "id": "gold-ring",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "crimson-shroud",
+      "kind": "evolution",
+      "source": "base",
+      "result": "crimson-shroud",
+      "weapons": [
+        {
+          "id": "laurel"
+        }
+      ],
+      "passives": [
+        {
+          "id": "metaglio-left",
+          "level": "max"
+        },
+        {
+          "id": "metaglio-right",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "bi-bracelet",
+      "kind": "evolution",
+      "source": "base",
+      "result": "bi-bracelet",
+      "weapons": [
+        {
+          "id": "bracelet"
+        }
+      ],
+      "passives": [],
+      "conditions": [
+        "Kein Gegenstand nötig, nur Bracelet auf Maximalstufe."
+      ],
+      "verified": true
+    },
+    {
+      "id": "tri-bracelet",
+      "kind": "evolution",
+      "source": "base",
+      "result": "tri-bracelet",
+      "weapons": [
+        {
+          "id": "bi-bracelet"
+        }
+      ],
+      "passives": [],
+      "conditions": [
+        "Kein Gegenstand nötig, nur Bi-Bracelet auf Maximalstufe."
+      ],
+      "verified": true
+    },
+    {
+      "id": "mazo-familiar",
+      "kind": "evolution",
+      "source": "base",
+      "result": "mazo-familiar",
+      "weapons": [
+        {
+          "id": "pako-battiliar"
+        }
+      ],
+      "passives": [
+        {
+          "id": "hollow-heart",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "gunastrophe",
+      "kind": "evolution",
+      "source": "base",
+      "result": "gunastrophe",
+      "weapons": [
+        {
+          "id": "ammo-appalate"
+        }
+      ],
+      "passives": [
+        {
+          "id": "bracer",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "spirit-disturbance",
+      "kind": "evolution",
+      "source": "base",
+      "result": "spirit-disturbance",
+      "weapons": [
+        {
+          "id": "unearthly-bolt"
+        }
+      ],
+      "passives": [
+        {
+          "id": "tirajisu",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ashes-of-muspell",
+      "kind": "evolution",
+      "source": "base",
+      "result": "ashes-of-muspell",
+      "weapons": [
+        {
+          "id": "flames-of-misspell"
+        }
+      ],
+      "passives": [
+        {
+          "id": "torrona-s-box",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "celestial-voulge",
+      "kind": "evolution",
+      "source": "base",
+      "result": "celestial-voulge",
+      "weapons": [
+        {
+          "id": "glass-fandango"
+        }
+      ],
+      "passives": [
+        {
+          "id": "wings",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "miracle-of-multiplication",
+      "kind": "evolution",
+      "source": "base",
+      "result": "miracle-of-multiplication",
+      "weapons": [
+        {
+          "id": "penshin-fatcha"
+        }
+      ],
+      "passives": [],
+      "conditions": [
+        "Penshin Fatcha mindestens sechsmal weiterentwickeln (jede Entwicklung wählt eine Thunfisch-Form)."
+      ],
+      "verified": true,
+      "note": "Vereinfacht: Penshin Fatcha entwickelt sich ohne Gegenstand in eine der Thunfisch-Formen; ab der sechsten Entwicklung kann Miracle of Multiplication erscheinen. Bei Para Kooleo kann sich die Startwaffe nicht entwickeln."
+    },
+    {
+      "id": "seraphic-cry",
+      "kind": "evolution",
+      "source": "base",
+      "result": "seraphic-cry",
+      "weapons": [
+        {
+          "id": "santa-javelin"
+        }
+      ],
+      "passives": [
+        {
+          "id": "clover",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "embrace-of-gaea",
+      "kind": "evolution",
+      "source": "base",
+      "result": "embrace-of-gaea",
+      "weapons": [
+        {
+          "id": "gaze-of-gaea"
+        }
+      ],
+      "passives": [
+        {
+          "id": "parm-aegis"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "kyra-stones",
+      "kind": "evolution",
+      "source": "base",
+      "result": "kyra-stones",
+      "weapons": [
+        {
+          "id": "magi-stone"
+        }
+      ],
+      "passives": [
+        {
+          "id": "karoma-s-mana"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "photonstorm",
+      "kind": "evolution",
+      "source": "base",
+      "result": "photonstorm",
+      "weapons": [
+        {
+          "id": "phas3r"
+        }
+      ],
+      "passives": [
+        {
+          "id": "empty-tome",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "wicked-ruler",
+      "kind": "evolution",
+      "source": "base",
+      "result": "wicked-ruler",
+      "weapons": [
+        {
+          "id": "chaos-rune"
+        }
+      ],
+      "passives": [
+        {
+          "id": "spellbinder",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "vandalier",
+      "kind": "union",
+      "source": "base",
+      "result": "vandalier",
+      "weapons": [
+        {
+          "id": "peachone"
+        },
+        {
+          "id": "ebony-wings"
+        }
+      ],
+      "passives": [],
+      "conditions": [
+        "Kein Gegenstand nötig."
+      ],
+      "verified": true
+    },
+    {
+      "id": "phieraggi",
+      "kind": "union",
+      "source": "base",
+      "result": "phieraggi",
+      "weapons": [
+        {
+          "id": "phiera-der-tuphello"
+        },
+        {
+          "id": "eight-the-sparrow"
+        }
+      ],
+      "passives": [
+        {
+          "id": "tirajisu"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "fuwalafuwaloo",
+      "kind": "union",
+      "source": "base",
+      "result": "fuwalafuwaloo",
+      "weapons": [
+        {
+          "id": "vento-sacro"
+        },
+        {
+          "id": "bloody-tear"
+        }
+      ],
+      "passives": [],
+      "conditions": [
+        "Kein Gegenstand nötig; Bloody Tear ist selbst eine Entwicklung von Whip."
+      ],
+      "verified": true
+    },
+    {
+      "id": "sole-solution",
+      "kind": "gift",
+      "source": "base",
+      "result": "sole-solution",
+      "weapons": [
+        {
+          "id": "victory-sword"
+        }
+      ],
+      "passives": [
+        {
+          "id": "torrona-s-box",
+          "level": "max"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "super-candybox-ii-turbo",
+      "kind": "gift",
+      "source": "base",
+      "result": "super-candybox-ii-turbo",
+      "weapons": [
+        {
+          "id": "candybox"
+        }
+      ],
+      "passives": [],
+      "conditions": [
+        "Alle Waffen und passiven Gegenstände auf Maximalstufe.",
+        "Candybox im Lauf erhalten (sie bleibt dabei erhalten).",
+        "Erscheint dann mit kleiner, glücksabhängiger Chance in einer Truhe."
+      ],
+      "verified": true
+    },
+    {
+      "id": "anima-of-mortaccio",
+      "kind": "morph",
+      "source": "base",
+      "result": "anima-of-mortaccio",
+      "weapons": [
+        {
+          "id": "bone",
+          "level": "any"
+        }
+      ],
+      "passives": [],
+      "characters": [
+        "mortaccio"
+      ],
+      "conditions": [
+        "Relikt Chaos Malachite besitzen.",
+        "Charakter erreicht Level 80."
+      ],
+      "verified": true
+    },
+    {
+      "id": "yatta-daikarin",
+      "kind": "morph",
+      "source": "base",
+      "result": "yatta-daikarin",
+      "weapons": [
+        {
+          "id": "cherry-bomb",
+          "level": "any"
+        }
+      ],
+      "passives": [],
+      "characters": [
+        "yatta-cavallo"
+      ],
+      "conditions": [
+        "Relikt Chaos Rosalia besitzen.",
+        "Charakter erreicht Level 80."
+      ],
+      "verified": true
+    },
+    {
+      "id": "carrozza",
+      "kind": "morph",
+      "source": "base",
+      "result": "carrozza",
+      "weapons": [
+        {
+          "id": "carrello",
+          "level": "any"
+        }
+      ],
+      "passives": [],
+      "characters": [
+        "bianca-ramba"
+      ],
+      "conditions": [
+        "Relikt Chaos Lazulia besitzen.",
+        "Charakter erreicht Level 80."
+      ],
+      "verified": true
+    },
+    {
+      "id": "profusione-d-amore",
+      "kind": "morph",
+      "source": "base",
+      "result": "profusione-d-amore",
+      "weapons": [
+        {
+          "id": "celestial-dusting",
+          "level": "any"
+        }
+      ],
+      "passives": [],
+      "characters": [
+        "o-sole-meeo"
+      ],
+      "conditions": [
+        "Relikt Chaos Altemanna besitzen.",
+        "Charakter erreicht Level 80."
+      ],
+      "verified": true
     }
   ]
 }

@@ -66,6 +66,9 @@ export function checkIntegrity(data: GameData): string[] {
     for (const { id } of evolution.passives) {
       if (!passives.has(id)) problems.push(`${where}: unbekannter Gegenstand "${id}"`)
     }
+    for (const id of evolution.characters ?? []) {
+      if (!characters.has(id)) problems.push(`${where}: unbekannter Charakter "${id}"`)
+    }
     if (evolution.kind === 'union' && evolution.weapons.length < 2) {
       problems.push(`${where}: eine Union braucht mindestens zwei Waffen`)
     }

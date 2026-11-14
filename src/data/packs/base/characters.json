@@ -5,12 +5,671 @@
       "id": "antonio-belpaese",
       "name": "Antonio Belpaese",
       "source": "base",
-      "startingWeapons": ["whip"],
-      "bonus": "Erhält alle 10 Level +10 % Macht (bis +50 %).",
+      "startingWeapons": [
+        "whip"
+      ],
+      "bonus": "Erhält alle 10 Level +10 % Macht (max. +50 %).",
       "secret": false,
-      "emoji": "🧛",
-      "verified": false,
-      "note": "Beispieleintrag für das Datenmodell, noch nicht gegen das Wiki geprüft."
+      "emoji": "🧔",
+      "verified": true
+    },
+    {
+      "id": "imelda-belpaese",
+      "name": "Imelda Belpaese",
+      "source": "base",
+      "startingWeapons": [
+        "magic-wand"
+      ],
+      "bonus": "Erhält alle 5 Level +10 % Erfahrung (max. +30 %).",
+      "secret": false,
+      "emoji": "👩‍🦰",
+      "verified": true
+    },
+    {
+      "id": "pasqualina-belpaese",
+      "name": "Pasqualina Belpaese",
+      "source": "base",
+      "startingWeapons": [
+        "runetracer"
+      ],
+      "bonus": "Projektile werden alle 5 Level 10 % schneller (max. +30 %).",
+      "secret": false,
+      "emoji": "👩",
+      "verified": true
+    },
+    {
+      "id": "gennaro-belpaese",
+      "name": "Gennaro Belpaese",
+      "source": "base",
+      "startingWeapons": [
+        "knife"
+      ],
+      "bonus": "Dauerhaft +1 Projektil für alle Waffen.",
+      "secret": false,
+      "emoji": "🧑",
+      "verified": true
+    },
+    {
+      "id": "arca-ladonna",
+      "name": "Arca Ladonna",
+      "source": "base",
+      "startingWeapons": [
+        "fire-wand"
+      ],
+      "bonus": "Die Abklingzeit der Waffen sinkt alle 10 Level um 5 % (max. −15 %).",
+      "secret": false,
+      "emoji": "🧙",
+      "verified": true
+    },
+    {
+      "id": "porta-ladonna",
+      "name": "Porta Ladonna",
+      "source": "base",
+      "startingWeapons": [
+        "lightning-ring"
+      ],
+      "bonus": "Dauerhaft +30 % Fläche; startet mit einem zeitweisen Abklingzeit-Bonus.",
+      "secret": false,
+      "emoji": "🧙‍♂️",
+      "verified": true
+    },
+    {
+      "id": "lama-ladonna",
+      "name": "Lama Ladonna",
+      "source": "base",
+      "startingWeapons": [
+        "axe"
+      ],
+      "bonus": "Erhält alle 10 Level +5 % Macht, Laufgeschwindigkeit und Fluch (max. +20 %).",
+      "secret": false,
+      "emoji": "🧝‍♀️",
+      "verified": true
+    },
+    {
+      "id": "poe-ratcho",
+      "name": "Poe Ratcho",
+      "source": "base",
+      "startingWeapons": [
+        "garlic"
+      ],
+      "bonus": "Dauerhaft +25 % Aufsammelradius und −30 max. Gesundheit.",
+      "secret": false,
+      "emoji": "👴",
+      "verified": true
+    },
+    {
+      "id": "suor-clerici",
+      "name": "Suor Clerici",
+      "source": "base",
+      "startingWeapons": [
+        "santa-water"
+      ],
+      "bonus": "Dauerhaft +0,5 Regeneration pro Sekunde und +50 max. Gesundheit; startet mit einem zeitweisen Flächen-Bonus.",
+      "secret": false,
+      "emoji": "🙏",
+      "verified": true
+    },
+    {
+      "id": "dommario",
+      "name": "Dommario",
+      "source": "base",
+      "startingWeapons": [
+        "king-bible"
+      ],
+      "bonus": "Dauerhaft +40 % Dauer und Geschwindigkeit, aber −40 % Laufgeschwindigkeit.",
+      "secret": false,
+      "emoji": "🧔‍♂️",
+      "verified": true
+    },
+    {
+      "id": "krochi-freetto",
+      "name": "Krochi Freetto",
+      "source": "base",
+      "startingWeapons": [
+        "cross"
+      ],
+      "bonus": "Startet mit 1 Wiederbelebung und erhält auf Level 33 eine weitere.",
+      "secret": false,
+      "emoji": "🧑‍🦱",
+      "verified": true
+    },
+    {
+      "id": "christine-davain",
+      "name": "Christine Davain",
+      "source": "base",
+      "startingWeapons": [
+        "pentagram"
+      ],
+      "bonus": "Startet mit einem zusätzlichen Level.",
+      "secret": false,
+      "emoji": "👱‍♀️",
+      "verified": true
+    },
+    {
+      "id": "pugnala-provola",
+      "name": "Pugnala Provola",
+      "source": "base",
+      "startingWeapons": [
+        "phiera-der-tuphello",
+        "eight-the-sparrow"
+      ],
+      "bonus": "Erhält pro Level +1 % Macht.",
+      "secret": false,
+      "emoji": "🤠",
+      "verified": true
+    },
+    {
+      "id": "giovanna-grana",
+      "name": "Giovanna Grana",
+      "source": "base",
+      "startingWeapons": [
+        "gatti-amari"
+      ],
+      "bonus": "Erhält pro Level +1 % Projektilgeschwindigkeit.",
+      "secret": false,
+      "emoji": "👧",
+      "verified": true
+    },
+    {
+      "id": "poppea-pecorina",
+      "name": "Poppea Pecorina",
+      "source": "base",
+      "startingWeapons": [
+        "song-of-mana"
+      ],
+      "bonus": "Erhält pro Level +1 % Dauer.",
+      "secret": false,
+      "emoji": "💃",
+      "verified": true
+    },
+    {
+      "id": "concetta-caciotta",
+      "name": "Concetta Caciotta",
+      "source": "base",
+      "startingWeapons": [
+        "shadow-pinion"
+      ],
+      "bonus": "Erhält pro Level +1 % Fläche.",
+      "secret": false,
+      "emoji": "🥷",
+      "verified": true
+    },
+    {
+      "id": "mortaccio",
+      "name": "Mortaccio",
+      "source": "base",
+      "startingWeapons": [
+        "bone"
+      ],
+      "bonus": "Erhält alle 20 Level mehr Projektile (max. +3).",
+      "secret": false,
+      "emoji": "🩻",
+      "verified": true
+    },
+    {
+      "id": "yatta-cavallo",
+      "name": "Yatta Cavallo",
+      "source": "base",
+      "startingWeapons": [
+        "cherry-bomb"
+      ],
+      "bonus": "Erhält alle 20 Level mehr Projektile (max. +3).",
+      "secret": false,
+      "emoji": "🐴",
+      "verified": true
+    },
+    {
+      "id": "bianca-ramba",
+      "name": "Bianca Ramba",
+      "source": "base",
+      "startingWeapons": [
+        "carrello"
+      ],
+      "bonus": "Erhält alle 20 Level mehr Projektile (max. +3).",
+      "secret": false,
+      "emoji": "🐄",
+      "verified": true
+    },
+    {
+      "id": "o-sole-meeo",
+      "name": "O'Sole Meeo",
+      "source": "base",
+      "startingWeapons": [
+        "celestial-dusting"
+      ],
+      "bonus": "Erhält alle 20 Level mehr Projektile (max. +3).",
+      "secret": false,
+      "emoji": "🌞",
+      "verified": true
+    },
+    {
+      "id": "sir-ambrojoe",
+      "name": "Sir Ambrojoe",
+      "source": "base",
+      "startingWeapons": [
+        "la-robba"
+      ],
+      "bonus": "Erhält alle 20 Level mehr Projektile (max. +3); startet mit einem zeitweisen Anzahl-Bonus.",
+      "secret": false,
+      "emoji": "🎩",
+      "verified": true
+    },
+    {
+      "id": "iguana-gallo-valletto",
+      "name": "Iguana Gallo Valletto",
+      "source": "base",
+      "startingWeapons": [
+        "clock-lancet"
+      ],
+      "bonus": "Startet mit einem zusätzlichen Level; erhält alle 5 Level +10 % Wachstum (max. +50 %).",
+      "secret": false,
+      "emoji": "🦎",
+      "verified": true
+    },
+    {
+      "id": "divano-thelma",
+      "name": "Divano Thelma",
+      "source": "base",
+      "startingWeapons": [
+        "laurel"
+      ],
+      "bonus": "Startet mit einem zusätzlichen Level; erhält alle 5 Level +1 Rüstung (max. +5).",
+      "secret": false,
+      "emoji": "🛋️",
+      "verified": true
+    },
+    {
+      "id": "zi-assunta-belpaese",
+      "name": "Zi'Assunta Belpaese",
+      "source": "base",
+      "startingWeapons": [
+        "vento-sacro"
+      ],
+      "bonus": "Erhält pro Level +0,5 % Macht, Geschwindigkeit, Dauer und Fläche.",
+      "secret": false,
+      "emoji": "👵",
+      "verified": true
+    },
+    {
+      "id": "queen-sigma",
+      "name": "Queen Sigma",
+      "source": "base",
+      "startingWeapons": [
+        "victory-sword"
+      ],
+      "bonus": "Besitzt alles: startet mit hohen Boni auf fast alle Werte.",
+      "secret": false,
+      "emoji": "👸",
+      "verified": true
+    },
+    {
+      "id": "bat-robbert",
+      "name": "Bat Robbert",
+      "source": "base",
+      "startingWeapons": [
+        "pako-battiliar"
+      ],
+      "bonus": "Heilt bei kritisch niedriger Gesundheit 30 % und erhält dabei +32 max. Gesundheit (max. +665).",
+      "secret": false,
+      "emoji": "🦇",
+      "verified": true
+    },
+    {
+      "id": "zi-appunta-belpaese",
+      "name": "Zi'Appunta Belpaese",
+      "source": "base",
+      "startingWeapons": [
+        "ammo-appalate"
+      ],
+      "bonus": "Findet zusätzliche explosive Objekte, die Truhen fallen lassen können; zerstört Lichtquellen durch Berührung.",
+      "secret": false,
+      "emoji": "💣",
+      "verified": true
+    },
+    {
+      "id": "big-troubler",
+      "name": "Big Troubler",
+      "source": "base",
+      "startingWeapons": [
+        "unearthly-bolt"
+      ],
+      "bonus": "Löst seine Hauptwaffe beim Aufsammeln von Goldmünzen aus und nutzt Münzen als Schadensschild; vierfache Chance auf FOIL-Survarots.",
+      "secret": false,
+      "emoji": "🪙",
+      "verified": true
+    },
+    {
+      "id": "she-moon-eeta",
+      "name": "She-Moon Eeta",
+      "source": "base",
+      "startingWeapons": [
+        "glass-fandango"
+      ],
+      "bonus": "Startet mit +2 Rüstung und +20 % Laufgeschwindigkeit; friert unter 20 % Gesundheit alle Gegner für 10 Sekunden ein.",
+      "secret": false,
+      "emoji": "🌙",
+      "verified": true
+    },
+    {
+      "id": "para-kooleo",
+      "name": "Para Kooleo",
+      "source": "base",
+      "startingWeapons": [
+        "penshin-fatcha"
+      ],
+      "bonus": "Die Startwaffe kann sich nicht entwickeln, dafür ist ihr Limit Break verstärkt.",
+      "secret": false,
+      "emoji": "🐟",
+      "verified": true
+    },
+    {
+      "id": "santa-ladonna",
+      "name": "Santa Ladonna",
+      "source": "base",
+      "startingWeapons": [
+        "santa-javelin"
+      ],
+      "bonus": "Startet mit einem zeitweisen Abklingzeit-Bonus; löst bei kritisch niedriger Gesundheit einen Rosary aus.",
+      "secret": false,
+      "emoji": "🎅",
+      "verified": true
+    },
+    {
+      "id": "gazebo",
+      "name": "Gazebo",
+      "source": "base",
+      "startingWeapons": [
+        "gaze-of-gaea"
+      ],
+      "bonus": "Jede Überheilung um 30 gibt einen dauerhaften Bonus auf einen zufälligen Wert.",
+      "secret": false,
+      "emoji": "🌿",
+      "verified": true
+    },
+    {
+      "id": "chula-reh",
+      "name": "Chula-Reh",
+      "source": "base",
+      "startingWeapons": [
+        "magi-stone"
+      ],
+      "bonus": "Würfelt alle 30 Sekunden oder beim Aufsammeln eines Rerollo um sein Glück.",
+      "secret": false,
+      "emoji": "🎲",
+      "verified": true
+    },
+    {
+      "id": "space-dude",
+      "name": "Space Dude",
+      "source": "base",
+      "startingWeapons": [
+        "phas3r"
+      ],
+      "bonus": "Löst je nach Abklingzeit gelegentlich alle Waffen doppelt aus.",
+      "secret": false,
+      "emoji": "👽",
+      "verified": true
+    },
+    {
+      "id": "exdash-exiviiq",
+      "name": "Exdash Exiviiq",
+      "source": "base",
+      "startingWeapons": [
+        "ebony-wings"
+      ],
+      "bonus": "„Wenigstens hat es Glück.“",
+      "secret": true,
+      "emoji": "👻",
+      "verified": true
+    },
+    {
+      "id": "toastie",
+      "name": "Toastie",
+      "source": "base",
+      "startingWeapons": [
+        "peachone"
+      ],
+      "bonus": "„So viel Potenzial.“",
+      "secret": true,
+      "emoji": "🍞",
+      "verified": true
+    },
+    {
+      "id": "smith-iv",
+      "name": "Smith IV",
+      "source": "base",
+      "startingWeapons": [
+        "vandalier"
+      ],
+      "bonus": "„Der schrullige weiße Bär.“",
+      "secret": true,
+      "emoji": "🐻‍❄️",
+      "verified": true
+    },
+    {
+      "id": "random",
+      "name": "Random",
+      "source": "base",
+      "startingWeapons": [],
+      "bonus": "Startet mit einer zufälligen Basiswaffe.",
+      "secret": true,
+      "emoji": "❓",
+      "verified": true,
+      "note": "Startet mit einer zufälligen Basiswaffe."
+    },
+    {
+      "id": "boon-marrabbio",
+      "name": "Boon Marrabbio",
+      "source": "base",
+      "startingWeapons": [
+        "thousand-edge"
+      ],
+      "bonus": "Startet mit +20 max. Gesundheit, +30 % Laufgeschwindigkeit, +20 % Macht, −110 % Geschwindigkeit, −80 % Gier und +10 % Fluch.",
+      "secret": true,
+      "emoji": "🐰",
+      "verified": true
+    },
+    {
+      "id": "avatar-infernas",
+      "name": "Avatar Infernas",
+      "source": "base",
+      "startingWeapons": [
+        "flames-of-misspell"
+      ],
+      "bonus": "Startet mit der zusätzlichen Arcana XIX – Heart of Fire; wird mit jedem Level stärker, verliert aber zunehmend die Kontrolle.",
+      "secret": true,
+      "emoji": "😈",
+      "verified": true
+    },
+    {
+      "id": "minnah-mannarah",
+      "name": "Minnah Mannarah",
+      "source": "base",
+      "startingWeapons": [
+        "bloody-tear"
+      ],
+      "bonus": "Macht, Projektilgeschwindigkeit, Dauer, Fläche und Abklingzeit ändern sich jede Minute.",
+      "secret": true,
+      "emoji": "🌸",
+      "verified": true
+    },
+    {
+      "id": "leda",
+      "name": "Leda",
+      "source": "base",
+      "startingWeapons": [
+        "holy-wand"
+      ],
+      "bonus": "Startet mit +5 Rüstung, +100 % Macht, +10 % Fläche und −10 % Abklingzeit, aber −20 % Laufgeschwindigkeit und −80 % Gier.",
+      "secret": true,
+      "emoji": "🗿",
+      "verified": true
+    },
+    {
+      "id": "cosmo-pavone",
+      "name": "Cosmo Pavone",
+      "source": "base",
+      "startingWeapons": [],
+      "bonus": "Erhält pro Level +1 Regeneration und +1 % Glück, alle 100 Level +1 Wiederbelebung; hat versteckte Waffen.",
+      "secret": true,
+      "emoji": "🦚",
+      "verified": true,
+      "note": "Hat keine sichtbare Startwaffe, nur versteckte Waffen."
+    },
+    {
+      "id": "peppino",
+      "name": "Peppino",
+      "source": "base",
+      "startingWeapons": [
+        "soul-eater"
+      ],
+      "bonus": "Startet mit zeitweise verringerter Fläche.",
+      "secret": true,
+      "emoji": "🌳",
+      "verified": true
+    },
+    {
+      "id": "big-trouser",
+      "name": "Big Trouser",
+      "source": "base",
+      "startingWeapons": [
+        "candybox"
+      ],
+      "bonus": "Erhält pro Level +1 % Gier; der Goldrausch hält länger an.",
+      "secret": true,
+      "emoji": "👖",
+      "verified": true
+    },
+    {
+      "id": "missingn",
+      "name": "missingN▯",
+      "source": "base",
+      "startingWeapons": [
+        "axe"
+      ],
+      "bonus": "Startet zu 50 % mit Death Spiral statt Axe.",
+      "secret": true,
+      "emoji": "👾",
+      "verified": true,
+      "note": "Startet zu 50 % mit Death Spiral statt Axe."
+    },
+    {
+      "id": "gains-boros",
+      "name": "Gains Boros",
+      "source": "base",
+      "startingWeapons": [
+        "heaven-sword"
+      ],
+      "bonus": "Erhält pro Level +2 % Wachstum.",
+      "secret": true,
+      "emoji": "🐉",
+      "verified": true
+    },
+    {
+      "id": "gyorunton",
+      "name": "Gyorunton",
+      "source": "base",
+      "startingWeapons": [
+        "bracelet"
+      ],
+      "bonus": "Erhält pro Level +1 % Fluch; kann Entwicklungen in jeder Truhe finden.",
+      "secret": true,
+      "emoji": "🌀",
+      "verified": true
+    },
+    {
+      "id": "mask-of-the-red-death",
+      "name": "Mask of the Red Death",
+      "source": "base",
+      "startingWeapons": [
+        "death-spiral"
+      ],
+      "bonus": "„Eine gotteslästerliche Verhöhnung.“",
+      "secret": true,
+      "emoji": "🎭",
+      "verified": true
+    },
+    {
+      "id": "bats-bats-bats",
+      "name": "Bats Bats Bats",
+      "source": "base",
+      "startingWeapons": [
+        "mazo-familiar"
+      ],
+      "bonus": "Die Startwaffe wird mit jedem Level stärker; Wiederbelebungen erhöhen auch die Anzahl; erhält nach einer Wiederbelebung einen Begleiter.",
+      "secret": true,
+      "emoji": "🦇",
+      "verified": true
+    },
+    {
+      "id": "rose-de-infernas",
+      "name": "Rose De Infernas",
+      "source": "base",
+      "startingWeapons": [
+        "fuwalafuwaloo"
+      ],
+      "bonus": "Erhöht die Zahl erscheinender Gegner um 100.",
+      "secret": true,
+      "emoji": "🌹",
+      "verified": true
+    },
+    {
+      "id": "torino",
+      "name": "Torino",
+      "source": "base",
+      "startingWeapons": [],
+      "bonus": "Verwandelt sich auf Level 16 in JoyaTauro und auf Level 36 in AccumulaTori; schlägt zurück.",
+      "secret": true,
+      "emoji": "🐂",
+      "verified": true,
+      "note": "Hat keine Startwaffe."
+    },
+    {
+      "id": "scorej-oni",
+      "name": "Scorej-Oni",
+      "source": "base",
+      "startingWeapons": [],
+      "bonus": "Erhält alle 8 Level einen versteckten Lightning Ring (max. 6), der auch bei erlittenem Schaden auslöst.",
+      "secret": true,
+      "emoji": "👹",
+      "verified": true,
+      "note": "Hat keine Startwaffe, erhält aber versteckte Lightning Rings."
+    },
+    {
+      "id": "gyoruntin",
+      "name": "Gyoruntin",
+      "source": "base",
+      "startingWeapons": [
+        "no-future"
+      ],
+      "bonus": "Die Startwaffe wird mit jedem Level stärker; +1 % Fluch pro Level; ignoriert Wände.",
+      "secret": true,
+      "emoji": "🌪️",
+      "verified": true
+    },
+    {
+      "id": "secretino-dagsson",
+      "name": "Secretino Dagsson",
+      "source": "base",
+      "startingWeapons": [
+        "kyra-stones"
+      ],
+      "bonus": "Findet immer Survarots; Survarot-Multiplikator entspricht log10 der Golden Eggs (max. ×10).",
+      "secret": true,
+      "emoji": "🕵️",
+      "verified": true
+    },
+    {
+      "id": "space-dette",
+      "name": "Space Dette",
+      "source": "base",
+      "startingWeapons": [
+        "photonstorm"
+      ],
+      "bonus": "Die Startwaffe wird mit jedem Level stärker; gewinnt mehr Fans, wenn sie viele Gegner besiegt.",
+      "secret": true,
+      "emoji": "👩‍🚀",
+      "verified": true
     }
   ]
 }

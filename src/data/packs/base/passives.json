@@ -2,14 +2,215 @@
   "$schema": "../../schema/passives.schema.json",
   "passives": [
     {
+      "id": "spinach",
+      "name": "Spinach",
+      "source": "base",
+      "description": "Erhöht den verursachten Schaden um 10 % pro Stufe.",
+      "maxLevel": 5,
+      "emoji": "🥬",
+      "verified": true
+    },
+    {
+      "id": "armor",
+      "name": "Armor",
+      "source": "base",
+      "description": "Verringert erlittenen Schaden um 1 und erhöht den Vergeltungsschaden um 10 % pro Stufe.",
+      "maxLevel": 5,
+      "emoji": "🛡️",
+      "verified": true
+    },
+    {
       "id": "hollow-heart",
       "name": "Hollow Heart",
       "source": "base",
-      "description": "Erhöht die maximale Gesundheit um 20 % pro Stufe.",
+      "description": "Erhöht die max. Gesundheit um 20 % pro Stufe.",
       "maxLevel": 5,
       "emoji": "🖤",
-      "verified": false,
-      "note": "Beispieleintrag für das Datenmodell, noch nicht gegen das Wiki geprüft."
+      "verified": true
+    },
+    {
+      "id": "pummarola",
+      "name": "Pummarola",
+      "source": "base",
+      "description": "Regeneriert 0,2 Gesundheit pro Sekunde pro Stufe.",
+      "maxLevel": 5,
+      "emoji": "🍅",
+      "verified": true
+    },
+    {
+      "id": "empty-tome",
+      "name": "Empty Tome",
+      "source": "base",
+      "description": "Verringert die Abklingzeit der Waffen um 8 % pro Stufe.",
+      "maxLevel": 5,
+      "emoji": "📓",
+      "verified": true
+    },
+    {
+      "id": "candelabrador",
+      "name": "Candelabrador",
+      "source": "base",
+      "description": "Vergrößert die Fläche der Angriffe um 10 % pro Stufe.",
+      "maxLevel": 5,
+      "emoji": "🕯️",
+      "verified": true
+    },
+    {
+      "id": "bracer",
+      "name": "Bracer",
+      "source": "base",
+      "description": "Erhöht die Projektilgeschwindigkeit um 10 % pro Stufe.",
+      "maxLevel": 5,
+      "emoji": "🦾",
+      "verified": true
+    },
+    {
+      "id": "spellbinder",
+      "name": "Spellbinder",
+      "source": "base",
+      "description": "Verlängert die Dauer von Waffeneffekten um 10 % pro Stufe.",
+      "maxLevel": 5,
+      "emoji": "🔮",
+      "verified": true
+    },
+    {
+      "id": "duplicator",
+      "name": "Duplicator",
+      "source": "base",
+      "description": "Waffen feuern ein zusätzliches Projektil pro Stufe.",
+      "maxLevel": 2,
+      "emoji": "➕",
+      "verified": true
+    },
+    {
+      "id": "wings",
+      "name": "Wings",
+      "source": "base",
+      "description": "Erhöht die Laufgeschwindigkeit um 10 % pro Stufe.",
+      "maxLevel": 5,
+      "emoji": "🪽",
+      "verified": true
+    },
+    {
+      "id": "attractorb",
+      "name": "Attractorb",
+      "source": "base",
+      "description": "Sammelt Gegenstände aus größerer Entfernung ein.",
+      "maxLevel": 5,
+      "emoji": "🧲",
+      "verified": true
+    },
+    {
+      "id": "clover",
+      "name": "Clover",
+      "source": "base",
+      "description": "Erhöht das Glück um 10 % pro Stufe.",
+      "maxLevel": 5,
+      "emoji": "🍀",
+      "verified": true
+    },
+    {
+      "id": "crown",
+      "name": "Crown",
+      "source": "base",
+      "description": "Erhöht die gewonnene Erfahrung um 8 % pro Stufe.",
+      "maxLevel": 5,
+      "emoji": "👑",
+      "verified": true
+    },
+    {
+      "id": "stone-mask",
+      "name": "Stone Mask",
+      "source": "base",
+      "description": "Erhöht die gesammelten Münzen um 10 % pro Stufe.",
+      "maxLevel": 5,
+      "emoji": "🗿",
+      "verified": true
+    },
+    {
+      "id": "skull-o-maniac",
+      "name": "Skull O'Maniac",
+      "source": "base",
+      "description": "Fluch: Gegner werden pro Stufe 10 % schneller, zäher, zahlreicher und häufiger.",
+      "maxLevel": 5,
+      "emoji": "💀",
+      "verified": true
+    },
+    {
+      "id": "tirajisu",
+      "name": "Tirajisú",
+      "source": "base",
+      "description": "Gewährt pro Stufe eine Wiederbelebung mit 50 % Gesundheit.",
+      "maxLevel": 2,
+      "emoji": "🍰",
+      "verified": true
+    },
+    {
+      "id": "torrona-s-box",
+      "name": "Torrona's Box",
+      "source": "base",
+      "description": "Verfluchter Gegenstand: +4 % Macht, Projektilgeschwindigkeit, Dauer und Fläche (bis +25 %), auf Stufe 9 aber +100 % Fluch.",
+      "maxLevel": 9,
+      "emoji": "📦",
+      "verified": true
+    },
+    {
+      "id": "parm-aegis",
+      "name": "Parm Aegis",
+      "source": "base",
+      "description": "Verlängert die Unverwundbarkeit nach einem Treffer um 50 ms pro Stufe.",
+      "maxLevel": 5,
+      "emoji": "🔰",
+      "verified": true
+    },
+    {
+      "id": "karoma-s-mana",
+      "name": "Karoma's Mana",
+      "source": "base",
+      "description": "Erhöht die Zahl der Gegner um 10 und verlängert Goldrausch und Gold Finger um 10 % pro Stufe.",
+      "maxLevel": 5,
+      "emoji": "🏺",
+      "verified": true
+    },
+    {
+      "id": "silver-ring",
+      "name": "Silver Ring",
+      "source": "base",
+      "description": "+5 % Dauer und Fläche pro Stufe (max. +40 %). Mit Gold Ring auf Maximalstufe wird Clock Lancet zu Infinite Corridor.",
+      "maxLevel": 9,
+      "stageOnly": true,
+      "emoji": "⚪",
+      "verified": true
+    },
+    {
+      "id": "gold-ring",
+      "name": "Gold Ring",
+      "source": "base",
+      "description": "+5 % Fluch pro Stufe (max. +40 %). Mit Silver Ring auf Maximalstufe wird Clock Lancet zu Infinite Corridor.",
+      "maxLevel": 9,
+      "stageOnly": true,
+      "emoji": "🟡",
+      "verified": true
+    },
+    {
+      "id": "metaglio-left",
+      "name": "Metaglio Left",
+      "source": "base",
+      "description": "+0,1 Regeneration und +5 % max. Gesundheit pro Stufe. Mit Metaglio Right auf Maximalstufe wird Laurel zu Crimson Shroud.",
+      "maxLevel": 9,
+      "stageOnly": true,
+      "emoji": "🌘",
+      "verified": true
+    },
+    {
+      "id": "metaglio-right",
+      "name": "Metaglio Right",
+      "source": "base",
+      "description": "+5 % Fluch pro Stufe (max. +40 %). Mit Metaglio Left auf Maximalstufe wird Laurel zu Crimson Shroud.",
+      "maxLevel": 9,
+      "stageOnly": true,
+      "emoji": "🌒",
+      "verified": true
     }
   ]
 }

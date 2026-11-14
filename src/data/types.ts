@@ -91,11 +91,13 @@ export interface PassiveRequirement {
 
 /**
  * Wie eine Entwicklung abläuft:
- * - `evolution`: die Waffe wird durch das Ergebnis ersetzt
+ * - `evolution`: die Waffe wird durch das Ergebnis ersetzt (aus einer Truhe)
  * - `union`: mehrere Waffen verschmelzen zu einer (gibt Waffen-Slots frei)
  * - `gift`: die Ausgangswaffe bleibt, das Ergebnis kommt zusätzlich dazu
+ * - `morph`: nur für bestimmte Charaktere; passiert automatisch, sobald
+ *   Relikt und Level erreicht sind, ohne Truhe
  */
-export type EvolutionKind = 'evolution' | 'union' | 'gift'
+export type EvolutionKind = 'evolution' | 'union' | 'gift' | 'morph'
 
 export interface Evolution {
   id: EvolutionId
@@ -108,7 +110,9 @@ export interface Evolution {
   weapons: WeaponRequirement[]
   /** Benötigte passive Gegenstände; darf leer sein. */
   passives: PassiveRequirement[]
-  /** Weitere Bedingungen als Text, z. B. bestimmter Charakter oder Zeitpunkt. */
+  /** Nur mit diesen Charakteren möglich (z. B. bei Morphs). Fehlt das Feld, gilt sie für alle. */
+  characters?: CharacterId[]
+  /** Weitere Bedingungen als Text, z. B. ein Relikt oder ein Mindestlevel. */
   conditions?: string[]
   verified: boolean
   note?: string
