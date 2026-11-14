@@ -32,6 +32,10 @@ your home screen, and it works offline.*
 - **DLC-Filter**: In den Einstellungen wählst du, welche DLCs du besitzt. Entwicklungen über
   DLC-Grenzen hinweg erscheinen nur, wenn alle beteiligten Inhalte aktiv sind.
 - **Zurücksetzen** des Laufs mit einem Tippen, mit Rückgängig-Knopf.
+- **Mod mit In-Game-Overlay** (PC, Steam, optional): Das BepInEx-Plugin aus `mod/` zeigt im
+  Spiel, was pro Waffe für die nächste Entwicklung fehlt, und übergibt den Lauf auf Wunsch an
+  die App (Einstellungen: "Lauf aus dem Spiel übernehmen"). Anleitung in
+  [`mod/README.md`](mod/README.md).
 - **Zwei Sprachen**: Auf Englisch stehen die Namen und Beschreibungen aus dem Spiel. Auf
   Deutsch die offiziellen deutschen Namen, soweit es sie gibt (siehe „Deutsche Namen“).
 - **Version** der App mit Datum und Code-Stand steht in den Einstellungen.

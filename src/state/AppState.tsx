@@ -3,8 +3,10 @@ import { gameData } from '../data/index.ts'
 import type { Lang, PackId } from '../data/types.ts'
 import { detectLanguage } from '../i18n/names.ts'
 import { createCatalog, type Catalog } from '../logic/catalog.ts'
+import { buildGameIdIndex, liveRunFromPlayer, sameRun } from '../logic/modBridge.ts'
 import { sanitizeRun, type RunState } from '../logic/run.ts'
-import { Context, type AppState, type Notice } from './context.ts'
+import { Context, type AppState, type LiveState, type Notice } from './context.ts'
+import { useModConnection } from './modConnection.ts'
 import { loadSettings } from './settings.ts'
 import { readStored, writeStored } from './storage.ts'
 
@@ -14,6 +16,8 @@ const RUN_KEY = 'vsc.run.v1'
 /** Alle Pakete, unabhängig vom Filter: für Namen und Stufen von Teilen, die schon im Lauf sind. */
 const fullCatalog = createCatalog(gameData, new Set(gameData.packs.map((p) => p.id)))
 
+/** Spielkennung -> Kennung der App, für Meldungen aus dem Mod. */
+const gameIdIndex = buildGameIdIndex(gameData)
 
 export function AppStateProvider({ children }: { children: ReactNode }) {
   const [settings, setSettings] = useState(() =>
@@ -41,6 +45,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
   const setShowSecrets = useCallback((show: boolean) => setSettings((s) => ({ ...s, showSecrets: show })), [])
   const setShowImages = useCallback((show: boolean) => setSettings((s) => ({ ...s, showImages: show })), [])
   const setLanguage = useCallback((language: Lang) => setSettings((s) => ({ ...s, language })), [])
+  const setModBridge = useCallback((modBridge: boolean) => setSettings((s) => ({ ...s, modBridge })), [])
 
   // Der aktuelle Lauf als Ref, damit Änderungen und Rückgängig-Meldung zusammen entstehen.
   const runRef = useRef(run)
@@ -57,6 +62,21 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
     setNotice(message ? { message, undo: () => setRun(previous) } : null)
   }, [])
 
+  // Live-Daten aus dem Spiel: Während eines Laufs ist das Spiel die Wahrheit und
+  // überschreibt den Lauf der App. Im Menü bleibt der letzte Stand stehen.
+  // Im Koop wird Spieler 1 übernommen; das In-Game-Overlay des Mods zeigt alle Spieler.
+  const { status, snapshot } = useModConnection(settings.modBridge)
+  const livePlayer = snapshot?.inRun ? snapshot.players[0] : undefined
+  const liveRun = useMemo(() => (livePlayer ? liveRunFromPlayer(livePlayer, gameIdIndex) : null), [livePlayer])
+
+  useEffect(() => {
+    if (!liveRun || sameRun(liveRun.run, runRef.current)) return
+    runRef.current = liveRun.run
+    setRun(liveRun.run)
+  }, [liveRun])
+
+  const live = useMemo<LiveState>(() => ({ status }), [status])
+
   useEffect(() => {
     if (!notice) return
     const timer = window.setTimeout(() => setNotice(null), 6000)
@@ -70,6 +90,8 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
       setShowSecrets,
       setShowImages,
       setLanguage,
+      setModBridge,
+      live,
       catalog,
       fullCatalog,
       run,
@@ -77,9 +99,8 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
       notice,
       dismissNotice: () => setNotice(null),
     }),
-    [settings, setOwnedPack, setShowSecrets, setShowImages, setLanguage, catalog, run, updateRun, notice],
+    [settings, setOwnedPack, setShowSecrets, setShowImages, setLanguage, setModBridge, live, catalog, run, updateRun, notice],
   )
 
   return <Context.Provider value={value}>{children}</Context.Provider>
 }
-

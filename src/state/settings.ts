@@ -11,6 +11,8 @@ export interface Settings {
   showImages: boolean
   /** Sprache der App. */
   language: Lang
+  /** Lauf live aus dem Spiel übernehmen (BepInEx-Plugin unter `mod/`). */
+  modBridge: boolean
 }
 
 const isString = (value: unknown): value is string => typeof value === 'string'
@@ -36,5 +38,6 @@ export function loadSettings(raw: unknown, packs: Pack[], deviceLanguage: Lang =
     showSecrets: typeof stored.showSecrets === 'boolean' ? stored.showSecrets : true,
     showImages: typeof stored.showImages === 'boolean' ? stored.showImages : true,
     language: stored.language === 'de' || stored.language === 'en' ? stored.language : deviceLanguage,
+    modBridge: stored.modBridge === true,
   }
 }
