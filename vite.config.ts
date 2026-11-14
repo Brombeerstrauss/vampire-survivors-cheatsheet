@@ -31,6 +31,8 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
+      // Registrierung übernimmt src/main.tsx (lädt nach einem Update einmal neu).
+      injectRegister: false,
       includeAssets: ['favicon.ico', 'logo.svg', 'apple-touch-icon-180x180.png', 'custom-icons/**/*'],
       manifest: {
         name: 'Vampire Survivors Cheatsheet',
