@@ -7,6 +7,8 @@ danach auch offline.
 Die Oberfläche ist deutsch, Namen von Charakteren, Waffen und Gegenständen bleiben englisch
 wie im Spiel.
 
+**App öffnen:** https://brombeerstrauss.github.io/vs-companion/
+
 ## Funktionen
 
 - **Charaktere**: alle Charaktere aus Basisspiel und DLCs mit Suche, Startwaffe, Entwicklung
