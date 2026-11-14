@@ -53,6 +53,9 @@ export default defineConfig({
         ],
       },
       workbox: {
+        // Neue Versionen sofort aktivieren; ohne das wartet ein Update, bis alle Fenster der App zu sind.
+        skipWaiting: true,
+        clientsClaim: true,
         // Alles vorab cachen, damit die App komplett offline läuft.
         globPatterns: ['**/*.{js,css,html,svg,png,webp,jpg,ico,json,woff2}'],
         // Originalbilder aus dem Wiki: beim ersten Anzeigen speichern, danach auch offline nutzbar.
