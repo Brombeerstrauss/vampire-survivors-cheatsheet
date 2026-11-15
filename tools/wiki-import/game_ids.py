@@ -3,7 +3,7 @@
 # each wiki page (field "id") and are exactly what the BepInEx plugin in mod/ reports.
 #
 # Runs after build_pack.py in run.sh, but also works on its own without rebuilding the packs
-# (manual edits are kept):
+# (manual edits are kept). An entry the wiki gives no ID for keeps the IDs it already has:
 #   python3 -I tools/wiki-import/game_ids.py https://vampire.survivors.wiki/api.php src/data/packs
 import json, os, re, sys, time, urllib.parse, urllib.request
 
@@ -92,7 +92,9 @@ def load_packs():
 
 
 def with_game_ids(entry, gids):
-    """Put gameIds right after id so the files stay readable."""
+    """Put gameIds right after id so the files stay readable. Without IDs from the wiki
+    (page not found, renamed, or without an id field) the entry keeps the ones it has."""
+    gids = gids or entry.get("gameIds")
     out = {}
     for k, v in entry.items():
         if k in ("gameId", "gameIds"):
@@ -105,7 +107,7 @@ def with_game_ids(entry, gids):
 
 files = load_packs()
 entries = [(kind, e) for kind, doc in files.values() for e in doc[kind]]
-found, missing = {}, []
+found, kept, missing = {}, [], []
 
 # Round 1: page title = name; later rounds: with the suffixes from KINDS.
 for round_ in range(max(len(s) for _, s in KINDS.values())):
@@ -124,18 +126,23 @@ for path, (kind, doc) in files.items():
     for e in doc[kind]:
         if "gameIds" not in e:
             missing.append(f"{kind}: {e['name']} ({e['id']})")
+        elif (kind, e["id"]) not in found:
+            kept.append(f"{kind}: {e['name']} ({e['id']})")
     with open(path, "w", encoding="utf-8") as f:
         json.dump(doc, f, ensure_ascii=False, indent=2)
         f.write("\n")
 
 # The same game ID on two entries of the same kind would be a mapping error.
 seen = {}
-for (kind, eid), gids in found.items():
-    for gid in gids:
-        seen.setdefault((kind, gid), []).append(eid)
+for kind, doc in files.values():
+    for e in doc[kind]:
+        for gid in e.get("gameIds", []):
+            seen.setdefault((kind, gid), []).append(e["id"])
 dupes = {k: v for k, v in seen.items() if len(v) > 1}
 
-print(f"gameIds: {len(found)} found, {len(missing)} missing")
+print(f"gameIds: {len(found)} found, {len(kept)} kept, {len(missing)} missing")
+for m in kept:
+    print("  NOTE not in the wiki, kept as is:", m)
 for m in missing:
     print("  WARN without gameIds:", m)
 for (kind, gid), ids in dupes.items():
