@@ -42,6 +42,11 @@ export interface Pack {
 /** Fields shared by characters, weapons and passive items. */
 interface Entry {
   id: string
+  /**
+   * The game's internal IDs from the wiki infobox (field `id`), e.g. `MAGIC_MISSILE`
+   * for Magic Wand. Usually exactly one; the app uses them to match data from the mod.
+   */
+  gameIds?: string[]
   /** English name as in the game. */
   name: string
   /** Official German name from the game, if it differs from the English one. */

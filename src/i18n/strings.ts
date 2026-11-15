@@ -176,6 +176,14 @@ export const de = {
   versionLine: (version: string, date: string) => `Version ${version} vom ${date}`,
   codeState: (commit: string) => `Code-Stand ${commit}`,
   sourceCode: 'Quellcode auf GitHub',
+
+  // Live-Daten aus dem Spiel
+  liveStatus: { off: 'Manuell', connecting: 'Verbinde ...', live: 'Live', offline: 'Spiel nicht verbunden' },
+  liveData: 'Live-Daten aus dem Spiel',
+  modBridge: 'Lauf aus dem Spiel übernehmen',
+  modBridgeHelp:
+    'Braucht das Mod-Plugin (PC, Steam). Während eines Laufs trägt die App Charakter, Waffen und Gegenstände selbst ein. Der Browser fragt beim ersten Mal, ob die App auf dein Gerät zugreifen darf.',
+  modHowTo: 'Anleitung zum Mod',
 }
 
 export type Strings = typeof de
@@ -339,4 +347,12 @@ export const en: Strings = {
   versionLine: (version: string, date: string) => `Version ${version} from ${date}`,
   codeState: (commit: string) => `Code ${commit}`,
   sourceCode: 'Source code on GitHub',
+
+  // Live data from the game
+  liveStatus: { off: 'Manual', connecting: 'Connecting ...', live: 'Live', offline: 'Game not connected' },
+  liveData: 'Live data from the game',
+  modBridge: 'Take the run from the game',
+  modBridgeHelp:
+    'Needs the mod plugin (PC, Steam). During a run the app fills in character, weapons and items by itself. The browser asks once whether the app may access your device.',
+  modHowTo: 'How to install the mod',
 }

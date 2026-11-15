@@ -13,6 +13,8 @@ export interface Settings {
   language: Lang
   /** Did the user pick the language in the settings? Until then the app uses English. */
   languageChosen: boolean
+  /** Take the run live from the game (BepInEx plugin in `mod/`). */
+  modBridge: boolean
 }
 
 const isString = (value: unknown): value is string => typeof value === 'string'
@@ -42,5 +44,6 @@ export function loadSettings(raw: unknown, packs: Pack[]): Settings {
     showImages: typeof stored.showImages === 'boolean' ? stored.showImages : true,
     language: chosen && (stored.language === 'de' || stored.language === 'en') ? stored.language : 'en',
     languageChosen: chosen,
+    modBridge: stored.modBridge === true,
   }
 }

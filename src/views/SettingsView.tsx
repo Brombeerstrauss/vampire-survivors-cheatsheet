@@ -134,7 +134,7 @@ function AboutData({ unverified }: { unverified: number }) {
 }
 
 export function SettingsView() {
-  const { settings, setOwnedPack, setShowSecrets, setShowImages } = useAppState()
+  const { settings, setOwnedPack, setShowSecrets, setShowImages, setModBridge, live } = useAppState()
   const { t, text, lang } = useI18n()
   const owned = new Set(settings.ownedPacks)
   const all = [...gameData.characters, ...gameData.weapons, ...gameData.passives, ...gameData.evolutions]
@@ -185,6 +185,26 @@ export function SettingsView() {
           })}
         </Card>
         <p className="text-sm text-white/55">{t.crossDlcNote}</p>
+      </Section>
+
+      <Section title={t.liveData}>
+        <Card className="divide-y divide-white/8 py-1">
+          <Toggle label={t.modBridge} description={t.modBridgeHelp} checked={settings.modBridge} onChange={setModBridge} />
+          {settings.modBridge && (
+            <p className="flex items-center gap-2 py-3 text-sm text-white/70">
+              <span
+                className={`size-2 rounded-full ${
+                  { off: 'bg-white/25', connecting: 'bg-amber-400', live: 'bg-emerald-400', offline: 'bg-red-400' }[live.status]
+                }`}
+                aria-hidden="true"
+              />
+              {t.liveStatus[live.status]}
+            </p>
+          )}
+        </Card>
+        <a className="text-sm text-gold-300 underline" href={`${REPOSITORY}/tree/main/mod`} target="_blank" rel="noreferrer">
+          {t.modHowTo}
+        </a>
       </Section>
 
       <Section title={t.aboutData}>

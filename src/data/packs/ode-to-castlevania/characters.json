@@ -3,6 +3,9 @@
   "characters": [
     {
       "id": "leon-belmont",
+      "gameIds": [
+        "TP_LEON"
+      ],
       "name": "Leon Belmont",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -19,6 +22,9 @@
     },
     {
       "id": "sonia-belmont",
+      "gameIds": [
+        "TP_SONIA"
+      ],
       "name": "Sonia Belmont",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -35,6 +41,9 @@
     },
     {
       "id": "trevor-belmont",
+      "gameIds": [
+        "TP_TREVOR"
+      ],
       "name": "Trevor Belmont",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -51,6 +60,9 @@
     },
     {
       "id": "christopher-belmont",
+      "gameIds": [
+        "TP_CHRISTOPHER"
+      ],
       "name": "Christopher Belmont",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -67,6 +79,9 @@
     },
     {
       "id": "simon-belmont",
+      "gameIds": [
+        "TP_SIMON"
+      ],
       "name": "Simon Belmont",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -83,6 +98,9 @@
     },
     {
       "id": "juste-belmont",
+      "gameIds": [
+        "TP_JUSTE"
+      ],
       "name": "Juste Belmont",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -99,6 +117,9 @@
     },
     {
       "id": "richter-belmont",
+      "gameIds": [
+        "TP_RICHTER"
+      ],
       "name": "Richter Belmont",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -115,6 +136,9 @@
     },
     {
       "id": "julius-belmont",
+      "gameIds": [
+        "TP_JULIUS"
+      ],
       "name": "Julius Belmont",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -131,6 +155,9 @@
     },
     {
       "id": "grant-danasty",
+      "gameIds": [
+        "TP_GRANT"
+      ],
       "name": "Grant Danasty",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -147,6 +174,9 @@
     },
     {
       "id": "john-morris",
+      "gameIds": [
+        "TP_JOHN"
+      ],
       "name": "John Morris",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -163,6 +193,9 @@
     },
     {
       "id": "jonathan-morris",
+      "gameIds": [
+        "TP_JONATHAN"
+      ],
       "name": "Jonathan Morris",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -179,6 +212,9 @@
     },
     {
       "id": "soma-cruz",
+      "gameIds": [
+        "TP_SOMA"
+      ],
       "name": "Soma Cruz",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -195,6 +231,9 @@
     },
     {
       "id": "charlotte-aulin",
+      "gameIds": [
+        "TP_CHARLOTTE"
+      ],
       "name": "Charlotte Aulin",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -211,6 +250,9 @@
     },
     {
       "id": "sypha-belnades",
+      "gameIds": [
+        "TP_SYPHA"
+      ],
       "name": "Sypha Belnades",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -227,6 +269,9 @@
     },
     {
       "id": "yoko-belnades",
+      "gameIds": [
+        "TP_YOKO"
+      ],
       "name": "Yoko Belnades",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -243,6 +288,9 @@
     },
     {
       "id": "alucard",
+      "gameIds": [
+        "TP_ALUCARD"
+      ],
       "name": "Alucard",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -259,6 +307,9 @@
     },
     {
       "id": "eric-lecarde",
+      "gameIds": [
+        "TP_ERIC"
+      ],
       "name": "Eric Lecarde",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -275,6 +326,9 @@
     },
     {
       "id": "hector",
+      "gameIds": [
+        "TP_HECTOR"
+      ],
       "name": "Hector",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -291,6 +345,9 @@
     },
     {
       "id": "maria-renard",
+      "gameIds": [
+        "TP_MARIAA"
+      ],
       "name": "Maria Renard",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -307,6 +364,9 @@
     },
     {
       "id": "shanoa",
+      "gameIds": [
+        "TP_SHANOA"
+      ],
       "name": "Shanoa",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -323,6 +383,9 @@
     },
     {
       "id": "quincy-morris",
+      "gameIds": [
+        "TP_QUINCY"
+      ],
       "name": "Quincy Morris",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -339,6 +402,9 @@
     },
     {
       "id": "maxim-kischine",
+      "gameIds": [
+        "TP_MAXIM"
+      ],
       "name": "Maxim Kischine",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -355,6 +421,9 @@
     },
     {
       "id": "henry",
+      "gameIds": [
+        "TP_HENRY"
+      ],
       "name": "Henry",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -371,6 +440,9 @@
     },
     {
       "id": "vlad-tepes-dracula",
+      "gameIds": [
+        "TP_DRACULA"
+      ],
       "name": "Vlad Tepes Dracula",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -387,6 +459,9 @@
     },
     {
       "id": "julia-laforeze",
+      "gameIds": [
+        "TP_JULIA"
+      ],
       "name": "Julia Laforeze",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -403,6 +478,9 @@
     },
     {
       "id": "carrie-fernandez",
+      "gameIds": [
+        "TP_CARRIE"
+      ],
       "name": "Carrie Fernandez",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -419,6 +497,9 @@
     },
     {
       "id": "rinaldo-gandolfi",
+      "gameIds": [
+        "TP_RINALDO"
+      ],
       "name": "Rinaldo Gandolfi",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -435,6 +516,9 @@
     },
     {
       "id": "mina-hakuba",
+      "gameIds": [
+        "TP_MINA"
+      ],
       "name": "Mina Hakuba",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -451,6 +535,9 @@
     },
     {
       "id": "elizabeth-bartley",
+      "gameIds": [
+        "TP_ELIZABETH"
+      ],
       "name": "Elizabeth Bartley",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -467,6 +554,9 @@
     },
     {
       "id": "reinhardt-schneider",
+      "gameIds": [
+        "TP_REINHARDT"
+      ],
       "name": "Reinhardt Schneider",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -483,6 +573,9 @@
     },
     {
       "id": "isaac",
+      "gameIds": [
+        "TP_ISAAC"
+      ],
       "name": "Isaac",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -499,6 +592,9 @@
     },
     {
       "id": "sara-trantoul",
+      "gameIds": [
+        "TP_SARA"
+      ],
       "name": "Sara Trantoul",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -515,6 +611,9 @@
     },
     {
       "id": "vincent-dorin",
+      "gameIds": [
+        "TP_VINCENT"
+      ],
       "name": "Vincent Dorin",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -531,6 +630,9 @@
     },
     {
       "id": "albus",
+      "gameIds": [
+        "TP_ALBUS"
+      ],
       "name": "Albus",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -547,6 +649,9 @@
     },
     {
       "id": "lisa-tepes",
+      "gameIds": [
+        "TP_LISA"
+      ],
       "name": "Lisa Tepes",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -563,6 +668,9 @@
     },
     {
       "id": "shaft",
+      "gameIds": [
+        "TP_SHAFT"
+      ],
       "name": "Shaft",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -579,6 +687,9 @@
     },
     {
       "id": "saint-germain",
+      "gameIds": [
+        "TP_STGERMAIN"
+      ],
       "name": "Saint Germain",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -595,6 +706,9 @@
     },
     {
       "id": "nathan-graves",
+      "gameIds": [
+        "TP_NATHAN"
+      ],
       "name": "Nathan Graves",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -611,6 +725,9 @@
     },
     {
       "id": "cornell",
+      "gameIds": [
+        "TP_CORNELL"
+      ],
       "name": "Cornell",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -631,6 +748,9 @@
     },
     {
       "id": "barlowe",
+      "gameIds": [
+        "TP_BARLOWE"
+      ],
       "name": "Barlowe",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -651,6 +771,9 @@
     },
     {
       "id": "young-maria-renard",
+      "gameIds": [
+        "TP_MARIAB"
+      ],
       "name": "Young Maria Renard",
       "nameDeHint": "Junge Maria Renard",
       "source": "ode-to-castlevania",
@@ -668,6 +791,9 @@
     },
     {
       "id": "familiar",
+      "gameIds": [
+        "TP_FAMILIARS"
+      ],
       "name": "Familiar",
       "nameDeHint": "Vertrauter",
       "source": "ode-to-castlevania",
@@ -688,6 +814,9 @@
     },
     {
       "id": "innocent-devil",
+      "gameIds": [
+        "TP_INNOCENT_DEVILS"
+      ],
       "name": "Innocent Devil",
       "nameDeHint": "Unschuldiger Teufel",
       "source": "ode-to-castlevania",
@@ -712,6 +841,9 @@
     },
     {
       "id": "blue-crescent-moon-cornell",
+      "gameIds": [
+        "TP_CORNELL_BCM"
+      ],
       "name": "Blue Crescent Moon Cornell",
       "nameDeHint": "Blauer-Sichelmond-Cornell",
       "source": "ode-to-castlevania",
@@ -729,6 +861,9 @@
     },
     {
       "id": "ferryman",
+      "gameIds": [
+        "TP_FERRYMAN"
+      ],
       "name": "Ferryman",
       "nameDeHint": "Fährmann",
       "source": "ode-to-castlevania",
@@ -748,6 +883,9 @@
     },
     {
       "id": "master-librarian",
+      "gameIds": [
+        "TP_LIBRARIAN"
+      ],
       "name": "Master Librarian",
       "nameDeHint": "Meisterbibliothekar",
       "source": "ode-to-castlevania",
@@ -765,6 +903,9 @@
     },
     {
       "id": "hammer",
+      "gameIds": [
+        "TP_HAMMER"
+      ],
       "name": "Hammer",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -781,6 +922,9 @@
     },
     {
       "id": "wind",
+      "gameIds": [
+        "TP_WIND"
+      ],
       "name": "Wind",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -797,6 +941,9 @@
     },
     {
       "id": "hugh-baldwin",
+      "gameIds": [
+        "TP_HUGH"
+      ],
       "name": "Hugh Baldwin",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -813,6 +960,9 @@
     },
     {
       "id": "morris-baldwin",
+      "gameIds": [
+        "TP_MORRIS"
+      ],
       "name": "Morris Baldwin",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -829,6 +979,9 @@
     },
     {
       "id": "annette",
+      "gameIds": [
+        "TP_ANNETTE"
+      ],
       "name": "Annette",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -849,6 +1002,9 @@
     },
     {
       "id": "tera",
+      "gameIds": [
+        "TP_TERA"
+      ],
       "name": "Tera",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -865,6 +1021,9 @@
     },
     {
       "id": "jonathan-charlotte",
+      "gameIds": [
+        "TP_JONATHAN_AND_CHARLOTTE"
+      ],
       "name": "Jonathan & Charlotte",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -888,6 +1047,9 @@
     },
     {
       "id": "charlotte-jonathan",
+      "gameIds": [
+        "TP_CHARLOTTE_AND_JONATHAN"
+      ],
       "name": "Charlotte & Jonathan",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -909,6 +1071,9 @@
     },
     {
       "id": "stella-loretta-lecarde",
+      "gameIds": [
+        "TP_STELLA_AND_LORETTA"
+      ],
       "name": "Stella & Loretta Lecarde",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -929,6 +1094,9 @@
     },
     {
       "id": "loretta-stella-lecarde",
+      "gameIds": [
+        "TP_LORETTA_AND_STELLA"
+      ],
       "name": "Loretta & Stella Lecarde",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -949,6 +1117,9 @@
     },
     {
       "id": "stella-lecarde",
+      "gameIds": [
+        "TP_STELLA"
+      ],
       "name": "Stella Lecarde",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -965,6 +1136,9 @@
     },
     {
       "id": "loretta-lecarde",
+      "gameIds": [
+        "TP_LORETTA"
+      ],
       "name": "Loretta Lecarde",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -981,6 +1155,9 @@
     },
     {
       "id": "brauner",
+      "gameIds": [
+        "TP_BRAUNER"
+      ],
       "name": "Brauner",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -1001,6 +1178,9 @@
     },
     {
       "id": "soleil-belmont",
+      "gameIds": [
+        "TP_SOLEIL"
+      ],
       "name": "Soleil Belmont",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -1023,6 +1203,9 @@
     },
     {
       "id": "dario-bossi",
+      "gameIds": [
+        "TP_DARIO"
+      ],
       "name": "Dario Bossi",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -1039,6 +1222,9 @@
     },
     {
       "id": "dmitrii-blinov",
+      "gameIds": [
+        "TP_DMITRI"
+      ],
       "name": "Dmitrii Blinov",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -1059,6 +1245,9 @@
     },
     {
       "id": "celia-fortner",
+      "gameIds": [
+        "TP_CELIA"
+      ],
       "name": "Celia Fortner",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -1076,6 +1265,9 @@
     },
     {
       "id": "graham-jones",
+      "gameIds": [
+        "TP_GRAHAM"
+      ],
       "name": "Graham Jones",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -1092,6 +1284,9 @@
     },
     {
       "id": "genya-arikado",
+      "gameIds": [
+        "TP_GENYA"
+      ],
       "name": "Genya Arikado",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -1108,6 +1303,9 @@
     },
     {
       "id": "joachim-armster",
+      "gameIds": [
+        "TP_JOACHIM"
+      ],
       "name": "Joachim Armster",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -1124,6 +1322,9 @@
     },
     {
       "id": "walter-bernhard",
+      "gameIds": [
+        "TP_WALTER"
+      ],
       "name": "Walter Bernhard",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -1140,6 +1341,9 @@
     },
     {
       "id": "carmilla",
+      "gameIds": [
+        "TP_CARMILLA"
+      ],
       "name": "Carmilla",
       "source": "ode-to-castlevania",
       "startingWeapons": [],
@@ -1158,6 +1362,9 @@
     },
     {
       "id": "cave-troll",
+      "gameIds": [
+        "TP_CAVETROLL"
+      ],
       "name": "Cave Troll",
       "nameDeHint": "Höhlentroll",
       "source": "ode-to-castlevania",
@@ -1175,6 +1382,9 @@
     },
     {
       "id": "fleaman",
+      "gameIds": [
+        "TP_FLEAMAN"
+      ],
       "name": "Fleaman",
       "nameDeHint": "Flohmann",
       "source": "ode-to-castlevania",
@@ -1190,6 +1400,9 @@
     },
     {
       "id": "axe-armor",
+      "gameIds": [
+        "TP_AXEARMOR"
+      ],
       "name": "Axe Armor",
       "nameDeHint": "Axtrüstung",
       "source": "ode-to-castlevania",
@@ -1207,6 +1420,9 @@
     },
     {
       "id": "frozenshade",
+      "gameIds": [
+        "TP_FROZENSHADE"
+      ],
       "name": "Frozenshade",
       "nameDeHint": "Frostschatten",
       "source": "ode-to-castlevania",
@@ -1224,6 +1440,9 @@
     },
     {
       "id": "alamaric-sniper",
+      "gameIds": [
+        "TP_SNIPER"
+      ],
       "name": "Alamaric Sniper",
       "nameDeHint": "Alamaric-Scharfschütze",
       "source": "ode-to-castlevania",
@@ -1241,6 +1460,9 @@
     },
     {
       "id": "stone-skull",
+      "gameIds": [
+        "TP_STONESKULL"
+      ],
       "name": "Stone Skull",
       "nameDeHint": "Steinschädel",
       "source": "ode-to-castlevania",
@@ -1260,6 +1482,9 @@
     },
     {
       "id": "ruler-sword",
+      "gameIds": [
+        "TP_SWORDRULER"
+      ],
       "name": "Ruler Sword",
       "nameDeHint": "Herrscherschwert",
       "source": "ode-to-castlevania",
@@ -1277,6 +1502,9 @@
     },
     {
       "id": "persephone",
+      "gameIds": [
+        "TP_PERSEPHONE"
+      ],
       "name": "Persephone",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -1293,6 +1521,9 @@
     },
     {
       "id": "keremet",
+      "gameIds": [
+        "TP_KEREMET"
+      ],
       "name": "Keremet",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -1309,6 +1540,9 @@
     },
     {
       "id": "astarte",
+      "gameIds": [
+        "TP_ASTARTE"
+      ],
       "name": "Astarte",
       "source": "ode-to-castlevania",
       "startingWeapons": [],
@@ -1327,6 +1561,9 @@
     },
     {
       "id": "drolta-tzuentes",
+      "gameIds": [
+        "TP_DROLTA"
+      ],
       "name": "Drolta Tzuentes",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -1343,6 +1580,9 @@
     },
     {
       "id": "witch-actrise",
+      "gameIds": [
+        "TP_ACTRISE"
+      ],
       "name": "Witch Actrise",
       "nameDeHint": "Hexe Actrise",
       "source": "ode-to-castlevania",
@@ -1364,6 +1604,9 @@
     },
     {
       "id": "atlantis-shrine-wizard",
+      "gameIds": [
+        "TP_WATERMAGICIAN"
+      ],
       "name": "Atlantis Shrine Wizard",
       "nameDeHint": "Zauberer des Atlantis-Schreins",
       "source": "ode-to-castlevania",
@@ -1385,6 +1628,9 @@
     },
     {
       "id": "succubus",
+      "gameIds": [
+        "TP_SUCCUBUS"
+      ],
       "name": "Succubus",
       "nameDeHint": "Sukkubus",
       "source": "ode-to-castlevania",
@@ -1402,6 +1648,9 @@
     },
     {
       "id": "fake-trio",
+      "gameIds": [
+        "TP_FAKE_TRIO"
+      ],
       "name": "Fake Trio",
       "nameDeHint": "Falsches Trio",
       "source": "ode-to-castlevania",
@@ -1425,6 +1674,9 @@
     },
     {
       "id": "slogra-and-gaibon",
+      "gameIds": [
+        "TP_SLOGRA_AND_GAIBON"
+      ],
       "name": "Slogra and Gaibon",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -1442,6 +1694,9 @@
     },
     {
       "id": "zephyr",
+      "gameIds": [
+        "TP_ZEPHYR"
+      ],
       "name": "Zephyr",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -1462,6 +1717,9 @@
     },
     {
       "id": "jiangshi",
+      "gameIds": [
+        "TP_JIANGSHI"
+      ],
       "name": "Jiangshi",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -1478,6 +1736,9 @@
     },
     {
       "id": "blackmore",
+      "gameIds": [
+        "TP_BLACKMORE"
+      ],
       "name": "Blackmore",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -1494,6 +1755,9 @@
     },
     {
       "id": "count-olrox",
+      "gameIds": [
+        "TP_OLROX"
+      ],
       "name": "Count Olrox",
       "nameDeHint": "Graf Olrox",
       "source": "ode-to-castlevania",
@@ -1511,6 +1775,9 @@
     },
     {
       "id": "malphas",
+      "gameIds": [
+        "TP_MALPHAS"
+      ],
       "name": "Malphas",
       "source": "ode-to-castlevania",
       "startingWeapons": [],
@@ -1529,6 +1796,9 @@
     },
     {
       "id": "death",
+      "gameIds": [
+        "TP_DEATH"
+      ],
       "name": "Death",
       "nameDeHint": "Tod",
       "source": "ode-to-castlevania",
@@ -1546,6 +1816,9 @@
     },
     {
       "id": "galamoth",
+      "gameIds": [
+        "TP_GALAMOTH"
+      ],
       "name": "Galamoth",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -1562,6 +1835,9 @@
     },
     {
       "id": "megalo-elizabeth-bartley",
+      "gameIds": [
+        "TP_ELIZABETH_MEGA"
+      ],
       "name": "Megalo Elizabeth Bartley",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -1583,6 +1859,9 @@
     },
     {
       "id": "megalo-olrox",
+      "gameIds": [
+        "TP_OLROX_MEGA"
+      ],
       "name": "Megalo Olrox",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -1599,6 +1878,9 @@
     },
     {
       "id": "megalo-death",
+      "gameIds": [
+        "TP_DEATH_MEGA"
+      ],
       "name": "Megalo Death",
       "nameDeHint": "Megalo-Tod",
       "source": "ode-to-castlevania",
@@ -1620,6 +1902,9 @@
     },
     {
       "id": "megalo-dracula",
+      "gameIds": [
+        "TP_DRACULA_MEGA"
+      ],
       "name": "Megalo Dracula",
       "source": "ode-to-castlevania",
       "startingWeapons": [
@@ -1640,6 +1925,9 @@
     },
     {
       "id": "chaos",
+      "gameIds": [
+        "TP_CHAOS"
+      ],
       "name": "Chaos",
       "source": "ode-to-castlevania",
       "startingWeapons": [

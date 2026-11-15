@@ -3,6 +3,9 @@
   "weapons": [
     {
       "id": "fleuret",
+      "gameIds": [
+        "EME_RAPIER1"
+      ],
       "name": "Fleuret",
       "nameDeHint": "Florett",
       "source": "emerald-diorama",
@@ -18,6 +21,9 @@
     },
     {
       "id": "town-sword",
+      "gameIds": [
+        "EME_LONGSWORD1"
+      ],
       "name": "Town Sword",
       "nameDeHint": "Stadtschwert",
       "source": "emerald-diorama",
@@ -33,6 +39,9 @@
     },
     {
       "id": "splashers",
+      "gameIds": [
+        "EME_DUAL1"
+      ],
       "name": "Splashers",
       "nameDeHint": "Spritzer",
       "source": "emerald-diorama",
@@ -48,6 +57,9 @@
     },
     {
       "id": "flamberge",
+      "gameIds": [
+        "EME_GREATSWORD1"
+      ],
       "name": "Flamberge",
       "source": "emerald-diorama",
       "kind": "base",
@@ -62,6 +74,9 @@
     },
     {
       "id": "punch",
+      "gameIds": [
+        "EME_PUNCH1"
+      ],
       "name": "Punch",
       "nameDeHint": "Faustschlag",
       "source": "emerald-diorama",
@@ -77,6 +92,9 @@
     },
     {
       "id": "kick",
+      "gameIds": [
+        "EME_KICK1"
+      ],
       "name": "Kick",
       "nameDeHint": "Tritt",
       "source": "emerald-diorama",
@@ -92,6 +110,9 @@
     },
     {
       "id": "saber-machine-gun",
+      "gameIds": [
+        "EME_CANNON1"
+      ],
       "name": "Saber Machine Gun",
       "nameDeHint": "Säbel-Maschinengewehr",
       "source": "emerald-diorama",
@@ -107,6 +128,9 @@
     },
     {
       "id": "super-missile",
+      "gameIds": [
+        "EME_MECH1"
+      ],
       "name": "Super Missile",
       "nameDeHint": "Superrakete",
       "source": "emerald-diorama",
@@ -122,6 +146,9 @@
     },
     {
       "id": "eagle-gun",
+      "gameIds": [
+        "EME_PISTOL1"
+      ],
       "name": "Eagle Gun",
       "nameDeHint": "Adlerkanone",
       "source": "emerald-diorama",
@@ -137,6 +164,9 @@
     },
     {
       "id": "khukuri",
+      "gameIds": [
+        "EME_KNIFE1"
+      ],
       "name": "Khukuri",
       "source": "emerald-diorama",
       "kind": "base",
@@ -151,6 +181,9 @@
     },
     {
       "id": "twin-dragon",
+      "gameIds": [
+        "EME_KATANA1"
+      ],
       "name": "Twin Dragon",
       "nameDeHint": "Zwillingsdrache",
       "source": "emerald-diorama",
@@ -166,6 +199,9 @@
     },
     {
       "id": "bullova",
+      "gameIds": [
+        "EME_AXE1"
+      ],
       "name": "Bullova",
       "source": "emerald-diorama",
       "kind": "base",
@@ -180,6 +216,9 @@
     },
     {
       "id": "sanguine-star",
+      "gameIds": [
+        "EME_BLOOD1"
+      ],
       "name": "Sanguine Star",
       "nameDeHint": "Blutroter Stern",
       "source": "emerald-diorama",
@@ -195,6 +234,9 @@
     },
     {
       "id": "glaive",
+      "gameIds": [
+        "EME_SPEAR1"
+      ],
       "name": "Glaive",
       "nameDeHint": "Glefe",
       "source": "emerald-diorama",
@@ -210,6 +252,9 @@
     },
     {
       "id": "spirit-rings",
+      "gameIds": [
+        "EME_MAGIC1"
+      ],
       "name": "Spirit Rings",
       "nameDeHint": "Geisterringe",
       "source": "emerald-diorama",
@@ -225,6 +270,9 @@
     },
     {
       "id": "emerald-rapture",
+      "gameIds": [
+        "EME_WAVE"
+      ],
       "name": "Emerald Rapture",
       "nameDeHint": "Smaragd-Entrückung",
       "source": "emerald-diorama",
@@ -240,6 +288,9 @@
     },
     {
       "id": "intuition",
+      "gameIds": [
+        "EME_SELECTOR"
+      ],
       "name": "Intuition",
       "source": "emerald-diorama",
       "kind": "base",
@@ -254,6 +305,9 @@
     },
     {
       "id": "dress-sword",
+      "gameIds": [
+        "EME_RAPIER2"
+      ],
       "name": "Dress Sword",
       "nameDeHint": "Galadegen",
       "source": "emerald-diorama",
@@ -269,6 +323,9 @@
     },
     {
       "id": "espada-ropera",
+      "gameIds": [
+        "EME_RAPIER3"
+      ],
       "name": "Espada Ropera",
       "source": "emerald-diorama",
       "kind": "evolved",
@@ -283,6 +340,9 @@
     },
     {
       "id": "lordstar",
+      "gameIds": [
+        "EME_LONGSWORD2"
+      ],
       "name": "Lordstar",
       "nameDeHint": "Herrenstern",
       "source": "emerald-diorama",
@@ -298,6 +358,9 @@
     },
     {
       "id": "dayblade",
+      "gameIds": [
+        "EME_LONGSWORD3"
+      ],
       "name": "Dayblade",
       "nameDeHint": "Tagesklinge",
       "source": "emerald-diorama",
@@ -313,6 +376,9 @@
     },
     {
       "id": "pursuant-blades",
+      "gameIds": [
+        "EME_DUAL2"
+      ],
       "name": "Pursuant Blades",
       "nameDeHint": "Verfolgerklingen",
       "source": "emerald-diorama",
@@ -328,6 +394,9 @@
     },
     {
       "id": "zweihander",
+      "gameIds": [
+        "EME_GREATSWORD2"
+      ],
       "name": "Zweihander",
       "nameDeHint": "Zweihänder",
       "source": "emerald-diorama",
@@ -343,6 +412,9 @@
     },
     {
       "id": "galatyn",
+      "gameIds": [
+        "EME_GREATSWORD3"
+      ],
       "name": "Galatyn",
       "source": "emerald-diorama",
       "kind": "evolved",
@@ -357,6 +429,9 @@
     },
     {
       "id": "pressure-point",
+      "gameIds": [
+        "EME_PUNCH2"
+      ],
       "name": "Pressure Point",
       "nameDeHint": "Druckpunkt",
       "source": "emerald-diorama",
@@ -372,6 +447,9 @@
     },
     {
       "id": "gilded-hand",
+      "gameIds": [
+        "EME_PUNCH3"
+      ],
       "name": "Gilded Hand",
       "nameDeHint": "Vergoldete Hand",
       "source": "emerald-diorama",
@@ -387,6 +465,9 @@
     },
     {
       "id": "triangle-kick",
+      "gameIds": [
+        "EME_KICK2"
+      ],
       "name": "Triangle Kick",
       "nameDeHint": "Dreieckstritt",
       "source": "emerald-diorama",
@@ -402,6 +483,9 @@
     },
     {
       "id": "hecaton-machine-gun",
+      "gameIds": [
+        "EME_CANNON2"
+      ],
       "name": "Hecaton Machine Gun",
       "nameDeHint": "Hekaton-Maschinengewehr",
       "source": "emerald-diorama",
@@ -417,6 +501,9 @@
     },
     {
       "id": "divergence",
+      "gameIds": [
+        "EME_CANNON3"
+      ],
       "name": "Divergence",
       "nameDeHint": "Divergenz",
       "source": "emerald-diorama",
@@ -432,6 +519,9 @@
     },
     {
       "id": "hydra-cannon",
+      "gameIds": [
+        "EME_MECH2"
+      ],
       "name": "Hydra Cannon",
       "nameDeHint": "Hydra-Kanone",
       "source": "emerald-diorama",
@@ -447,6 +537,9 @@
     },
     {
       "id": "hyperion-bazooka",
+      "gameIds": [
+        "EME_MECH3"
+      ],
       "name": "Hyperion Bazooka",
       "nameDeHint": "Hyperion-Bazooka",
       "source": "emerald-diorama",
@@ -462,6 +555,9 @@
     },
     {
       "id": "pendragon",
+      "gameIds": [
+        "EME_PISTOL2"
+      ],
       "name": "Pendragon",
       "source": "emerald-diorama",
       "kind": "evolved",
@@ -476,6 +572,9 @@
     },
     {
       "id": "jetstream",
+      "gameIds": [
+        "EME_KNIFE2"
+      ],
       "name": "Jetstream",
       "source": "emerald-diorama",
       "kind": "evolved",
@@ -490,6 +589,9 @@
     },
     {
       "id": "gekkabijin",
+      "gameIds": [
+        "EME_KATANA2"
+      ],
       "name": "Gekkabijin",
       "source": "emerald-diorama",
       "kind": "evolved",
@@ -504,6 +606,9 @@
     },
     {
       "id": "falconwind",
+      "gameIds": [
+        "EME_AXE2"
+      ],
       "name": "Falconwind",
       "nameDeHint": "Falkenwind",
       "source": "emerald-diorama",
@@ -519,6 +624,9 @@
     },
     {
       "id": "blood-chalice",
+      "gameIds": [
+        "EME_BLOOD2"
+      ],
       "name": "Blood Chalice",
       "nameDeHint": "Blutkelch",
       "source": "emerald-diorama",
@@ -534,6 +642,9 @@
     },
     {
       "id": "feather-spear",
+      "gameIds": [
+        "EME_SPEAR2"
+      ],
       "name": "Feather Spear",
       "nameDeHint": "Federspeer",
       "source": "emerald-diorama",
@@ -549,6 +660,9 @@
     },
     {
       "id": "lohengrin",
+      "gameIds": [
+        "EME_SPEAR3"
+      ],
       "name": "Lohengrin",
       "source": "emerald-diorama",
       "kind": "evolved",
@@ -563,6 +677,9 @@
     },
     {
       "id": "rings-of-calamity",
+      "gameIds": [
+        "EME_MAGIC2"
+      ],
       "name": "Rings of Calamity",
       "nameDeHint": "Ringe des Unheils",
       "source": "emerald-diorama",
@@ -578,6 +695,9 @@
     },
     {
       "id": "emerald-wave",
+      "gameIds": [
+        "EME_WAVE2"
+      ],
       "name": "Emerald Wave",
       "nameDeHint": "Smaragdwelle",
       "source": "emerald-diorama",

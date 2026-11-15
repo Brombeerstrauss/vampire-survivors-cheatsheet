@@ -3,6 +3,9 @@
   "weapons": [
     {
       "id": "alchemy-whip",
+      "gameIds": [
+        "TP_ALCHEMYWHIP1"
+      ],
       "name": "Alchemy Whip",
       "nameDeHint": "Alchemiepeitsche",
       "source": "ode-to-castlevania",
@@ -18,6 +21,9 @@
     },
     {
       "id": "wind-whip",
+      "gameIds": [
+        "TP_WINDWHIP1"
+      ],
       "name": "Wind Whip",
       "nameDeHint": "Windpeitsche",
       "source": "ode-to-castlevania",
@@ -33,6 +39,9 @@
     },
     {
       "id": "platinum-whip",
+      "gameIds": [
+        "TP_PLATINUMWHIP1"
+      ],
       "name": "Platinum Whip",
       "nameDeHint": "Platinpeitsche",
       "source": "ode-to-castlevania",
@@ -48,6 +57,9 @@
     },
     {
       "id": "dragon-water-whip",
+      "gameIds": [
+        "TP_DRAGONWATER1"
+      ],
       "name": "Dragon Water Whip",
       "nameDeHint": "Drachenwasserpeitsche",
       "source": "ode-to-castlevania",
@@ -63,6 +75,9 @@
     },
     {
       "id": "sonic-whip",
+      "gameIds": [
+        "TP_SONICWHIP1"
+      ],
       "name": "Sonic Whip",
       "nameDeHint": "Schallpeitsche",
       "source": "ode-to-castlevania",
@@ -78,6 +93,9 @@
     },
     {
       "id": "jet-black-whip",
+      "gameIds": [
+        "TP_LEMURIA1"
+      ],
       "name": "Jet Black Whip",
       "nameDeHint": "Pechschwarze Peitsche",
       "source": "ode-to-castlevania",
@@ -93,6 +111,9 @@
     },
     {
       "id": "vibhuti-whip",
+      "gameIds": [
+        "TP_HOLYWHIP1"
+      ],
       "name": "Vibhuti Whip",
       "nameDeHint": "Vibhuti-Peitsche",
       "source": "ode-to-castlevania",
@@ -108,6 +129,9 @@
     },
     {
       "id": "vanitas-whip",
+      "gameIds": [
+        "TP_MARTIALWHIP1"
+      ],
       "name": "Vanitas Whip",
       "nameDeHint": "Vanitas-Peitsche",
       "source": "ode-to-castlevania",
@@ -123,6 +147,9 @@
     },
     {
       "id": "shuriken",
+      "gameIds": [
+        "TP_SHURIKEN1"
+      ],
       "name": "Shuriken",
       "source": "ode-to-castlevania",
       "kind": "base",
@@ -137,6 +164,9 @@
     },
     {
       "id": "curved-knife",
+      "gameIds": [
+        "TP_BWAKA1"
+      ],
       "name": "Curved Knife",
       "nameDeHint": "Krummmesser",
       "source": "ode-to-castlevania",
@@ -152,6 +182,9 @@
     },
     {
       "id": "javelin",
+      "gameIds": [
+        "TP_JAVELIN1"
+      ],
       "name": "Javelin",
       "nameDeHint": "Wurfspeer",
       "source": "ode-to-castlevania",
@@ -167,6 +200,9 @@
     },
     {
       "id": "discus",
+      "gameIds": [
+        "TP_DISCUS1"
+      ],
       "name": "Discus",
       "nameDeHint": "Diskus",
       "source": "ode-to-castlevania",
@@ -182,6 +218,9 @@
     },
     {
       "id": "iron-ball",
+      "gameIds": [
+        "TP_IRONBALL1"
+      ],
       "name": "Iron Ball",
       "nameDeHint": "Eisenkugel",
       "source": "ode-to-castlevania",
@@ -197,6 +236,9 @@
     },
     {
       "id": "silver-revolver",
+      "gameIds": [
+        "TP_GUN1"
+      ],
       "name": "Silver Revolver",
       "nameDeHint": "Silberrevolver",
       "source": "ode-to-castlevania",
@@ -212,6 +254,9 @@
     },
     {
       "id": "hand-grenade",
+      "gameIds": [
+        "TP_RPG1"
+      ],
       "name": "Hand Grenade",
       "nameDeHint": "Handgranate",
       "source": "ode-to-castlevania",
@@ -227,6 +272,9 @@
     },
     {
       "id": "wine-glass",
+      "gameIds": [
+        "TP_WINEGLASS1"
+      ],
       "name": "Wine Glass",
       "nameDeHint": "Weinglas",
       "source": "ode-to-castlevania",
@@ -242,6 +290,9 @@
     },
     {
       "id": "raging-fire",
+      "gameIds": [
+        "TP_FIRE1"
+      ],
       "name": "Raging Fire",
       "nameDeHint": "Wütendes Feuer",
       "source": "ode-to-castlevania",
@@ -257,6 +308,9 @@
     },
     {
       "id": "ice-fang",
+      "gameIds": [
+        "TP_ICE1"
+      ],
       "name": "Ice Fang",
       "nameDeHint": "Eiszahn",
       "source": "ode-to-castlevania",
@@ -272,6 +326,9 @@
     },
     {
       "id": "gale-force",
+      "gameIds": [
+        "TP_WIND1"
+      ],
       "name": "Gale Force",
       "nameDeHint": "Sturmkraft",
       "source": "ode-to-castlevania",
@@ -287,6 +344,9 @@
     },
     {
       "id": "rock-riot",
+      "gameIds": [
+        "TP_EARTH1"
+      ],
       "name": "Rock Riot",
       "nameDeHint": "Felsaufruhr",
       "source": "ode-to-castlevania",
@@ -302,6 +362,9 @@
     },
     {
       "id": "fulgur",
+      "gameIds": [
+        "TP_ELEC1"
+      ],
       "name": "Fulgur",
       "source": "ode-to-castlevania",
       "kind": "base",
@@ -316,6 +379,9 @@
     },
     {
       "id": "keremet-bubbles",
+      "gameIds": [
+        "TP_ACID1"
+      ],
       "name": "Keremet Bubbles",
       "nameDeHint": "Keremet-Blasen",
       "source": "ode-to-castlevania",
@@ -331,6 +397,9 @@
     },
     {
       "id": "hex",
+      "gameIds": [
+        "TP_EVIL1"
+      ],
       "name": "Hex",
       "nameDeHint": "Fluch",
       "source": "ode-to-castlevania",
@@ -346,6 +415,9 @@
     },
     {
       "id": "refectio",
+      "gameIds": [
+        "TP_HOLY1"
+      ],
       "name": "Refectio",
       "source": "ode-to-castlevania",
       "kind": "base",
@@ -360,6 +432,9 @@
     },
     {
       "id": "mace",
+      "gameIds": [
+        "TP_MACE1"
+      ],
       "name": "Mace",
       "nameDeHint": "Streitkolben",
       "source": "ode-to-castlevania",
@@ -375,6 +450,9 @@
     },
     {
       "id": "star-flail",
+      "gameIds": [
+        "TP_STARFLAIL1"
+      ],
       "name": "Star Flail",
       "nameDeHint": "Sternflegel",
       "source": "ode-to-castlevania",
@@ -390,6 +468,9 @@
     },
     {
       "id": "alucard-spear",
+      "gameIds": [
+        "TP_ALUCARDSPEAR1"
+      ],
       "name": "Alucard Spear",
       "nameDeHint": "Alucards Speer",
       "source": "ode-to-castlevania",
@@ -405,6 +486,9 @@
     },
     {
       "id": "trident",
+      "gameIds": [
+        "TP_CHAUVE1"
+      ],
       "name": "Trident",
       "nameDeHint": "Dreizack",
       "source": "ode-to-castlevania",
@@ -420,6 +504,9 @@
     },
     {
       "id": "iron-shield",
+      "gameIds": [
+        "TP_SHIELD1"
+      ],
       "name": "Iron Shield",
       "nameDeHint": "Eisenschild",
       "source": "ode-to-castlevania",
@@ -435,6 +522,9 @@
     },
     {
       "id": "guardian-s-targe",
+      "gameIds": [
+        "TP_SACREDBEASTS1"
+      ],
       "name": "Guardian's Targe",
       "nameDeHint": "Tartsche des Wächters",
       "source": "ode-to-castlevania",
@@ -450,6 +540,9 @@
     },
     {
       "id": "tyrfing",
+      "gameIds": [
+        "TP_SLASH1"
+      ],
       "name": "Tyrfing",
       "source": "ode-to-castlevania",
       "kind": "base",
@@ -464,6 +557,9 @@
     },
     {
       "id": "alucart-sworb",
+      "gameIds": [
+        "TP_ALUCARDSWORD1"
+      ],
       "name": "Alucart Sworb",
       "source": "ode-to-castlevania",
       "kind": "base",
@@ -478,6 +574,9 @@
     },
     {
       "id": "confodere",
+      "gameIds": [
+        "TP_CONFODERE1"
+      ],
       "name": "Confodere",
       "source": "ode-to-castlevania",
       "kind": "base",
@@ -492,6 +591,9 @@
     },
     {
       "id": "globus",
+      "gameIds": [
+        "TP_ENERGY1"
+      ],
       "name": "Globus",
       "source": "ode-to-castlevania",
       "kind": "base",
@@ -506,6 +608,9 @@
     },
     {
       "id": "optical-shot",
+      "gameIds": [
+        "TP_SPITE1"
+      ],
       "name": "Optical Shot",
       "nameDeHint": "Optischer Schuss",
       "source": "ode-to-castlevania",
@@ -521,6 +626,9 @@
     },
     {
       "id": "dextro-custos",
+      "gameIds": [
+        "TP_CUSTOS1"
+      ],
       "name": "Dextro Custos",
       "source": "ode-to-castlevania",
       "kind": "base",
@@ -535,6 +643,9 @@
     },
     {
       "id": "sinestro-custos",
+      "gameIds": [
+        "TP_CUSTOS2"
+      ],
       "name": "Sinestro Custos",
       "source": "ode-to-castlevania",
       "kind": "base",
@@ -549,6 +660,9 @@
     },
     {
       "id": "centralis-custos",
+      "gameIds": [
+        "TP_CUSTOS3"
+      ],
       "name": "Centralis Custos",
       "source": "ode-to-castlevania",
       "kind": "base",
@@ -563,6 +677,9 @@
     },
     {
       "id": "dominus-anger",
+      "gameIds": [
+        "TP_DOMINUS1"
+      ],
       "name": "Dominus Anger",
       "nameDeHint": "Dominus Zorn",
       "source": "ode-to-castlevania",
@@ -578,6 +695,9 @@
     },
     {
       "id": "dominus-hatred",
+      "gameIds": [
+        "TP_DOMINUS2"
+      ],
       "name": "Dominus Hatred",
       "nameDeHint": "Dominus Hass",
       "source": "ode-to-castlevania",
@@ -593,6 +713,9 @@
     },
     {
       "id": "dominus-agony",
+      "gameIds": [
+        "TP_DOMINUS3"
+      ],
       "name": "Dominus Agony",
       "nameDeHint": "Dominus Qual",
       "source": "ode-to-castlevania",
@@ -608,6 +731,9 @@
     },
     {
       "id": "sonic-dash",
+      "gameIds": [
+        "TP_RAPIDUS1"
+      ],
       "name": "Sonic Dash",
       "nameDeHint": "Schallsprint",
       "source": "ode-to-castlevania",
@@ -623,6 +749,9 @@
     },
     {
       "id": "luminatio",
+      "gameIds": [
+        "TP_LIGHT1"
+      ],
       "name": "Luminatio",
       "source": "ode-to-castlevania",
       "kind": "base",
@@ -637,6 +766,9 @@
     },
     {
       "id": "umbra",
+      "gameIds": [
+        "TP_DARK1"
+      ],
       "name": "Umbra",
       "source": "ode-to-castlevania",
       "kind": "base",
@@ -651,6 +783,9 @@
     },
     {
       "id": "morning-star",
+      "gameIds": [
+        "TP_MORNINGSTAR"
+      ],
       "name": "Morning Star",
       "nameDeHint": "Morgenstern",
       "source": "ode-to-castlevania",
@@ -666,6 +801,9 @@
     },
     {
       "id": "coat-of-arms",
+      "gameIds": [
+        "TP_COATOFARMS"
+      ],
       "name": "Coat of Arms",
       "nameDeHint": "Wappen",
       "source": "ode-to-castlevania",
@@ -681,6 +819,9 @@
     },
     {
       "id": "belnades-spellbook",
+      "gameIds": [
+        "TP_SPELLBOOK"
+      ],
       "name": "Belnades' Spellbook",
       "nameDeHint": "Belnades' Zauberbuch",
       "source": "ode-to-castlevania",
@@ -696,6 +837,9 @@
     },
     {
       "id": "spectral-sword",
+      "gameIds": [
+        "TP_SPECTRALSWORD"
+      ],
       "name": "Spectral Sword",
       "nameDeHint": "Geisterschwert",
       "source": "ode-to-castlevania",
@@ -711,6 +855,9 @@
     },
     {
       "id": "ebony-diabologue",
+      "gameIds": [
+        "TP_DIABOLOGUE"
+      ],
       "name": "Ebony Diabologue",
       "nameDeHint": "Ebenholz-Diabolog",
       "source": "ode-to-castlevania",
@@ -726,6 +873,9 @@
     },
     {
       "id": "valmanway",
+      "gameIds": [
+        "TP_VALMANWAY"
+      ],
       "name": "Valmanway",
       "source": "ode-to-castlevania",
       "kind": "base",
@@ -740,6 +890,9 @@
     },
     {
       "id": "icebrand",
+      "gameIds": [
+        "TP_ICEBRAND"
+      ],
       "name": "Icebrand",
       "nameDeHint": "Eisbrand",
       "source": "ode-to-castlevania",
@@ -755,6 +908,9 @@
     },
     {
       "id": "arrow-of-goth",
+      "gameIds": [
+        "TP_GOTH_MISSILE"
+      ],
       "name": "Arrow of Goth",
       "nameDeHint": "Pfeil von Goth",
       "source": "ode-to-castlevania",
@@ -770,6 +926,9 @@
     },
     {
       "id": "aura-blast",
+      "gameIds": [
+        "TP_AURABLAST_WEAPON"
+      ],
       "name": "Aura Blast",
       "nameDeHint": "Aurastoß",
       "source": "ode-to-castlevania",
@@ -785,6 +944,9 @@
     },
     {
       "id": "kaiser-knuckle",
+      "gameIds": [
+        "TP_LAPISTE1"
+      ],
       "name": "Kaiser Knuckle",
       "nameDeHint": "Kaiserfaust",
       "source": "ode-to-castlevania",
@@ -800,6 +962,9 @@
     },
     {
       "id": "pocket-knife",
+      "gameIds": [
+        "TP_POCKET1"
+      ],
       "name": "Pocket Knife",
       "nameDeHint": "Taschenmesser",
       "source": "ode-to-castlevania",
@@ -815,6 +980,9 @@
     },
     {
       "id": "svarog-statue",
+      "gameIds": [
+        "TP_SAVROG_WEAPON"
+      ],
       "name": "Svarog Statue",
       "nameDeHint": "Svarog-Statue",
       "source": "ode-to-castlevania",
@@ -830,6 +998,9 @@
     },
     {
       "id": "troll-bomb",
+      "gameIds": [
+        "TP_NEUTRON_WEAPON"
+      ],
       "name": "Troll Bomb",
       "nameDeHint": "Trollbombe",
       "source": "ode-to-castlevania",
@@ -845,6 +1016,9 @@
     },
     {
       "id": "hydro-storm",
+      "gameIds": [
+        "TP_HYDROSTORM"
+      ],
       "name": "Hydro Storm",
       "nameDeHint": "Hydrosturm",
       "source": "ode-to-castlevania",
@@ -860,6 +1034,9 @@
     },
     {
       "id": "grand-cross",
+      "gameIds": [
+        "TP_GRANDCROSS"
+      ],
       "name": "Grand Cross",
       "nameDeHint": "Großes Kreuz",
       "source": "ode-to-castlevania",
@@ -875,6 +1052,9 @@
     },
     {
       "id": "summon-spirit",
+      "gameIds": [
+        "TP_SUMMON_SPIRIT"
+      ],
       "name": "Summon Spirit",
       "nameDeHint": "Geist beschwören",
       "source": "ode-to-castlevania",
@@ -890,6 +1070,9 @@
     },
     {
       "id": "soul-steal",
+      "gameIds": [
+        "TP_SOULSTEAL_WEAPON"
+      ],
       "name": "Soul Steal",
       "nameDeHint": "Seelenraub",
       "source": "ode-to-castlevania",
@@ -905,6 +1088,9 @@
     },
     {
       "id": "dark-rift",
+      "gameIds": [
+        "TP_DARKRIFT"
+      ],
       "name": "Dark Rift",
       "nameDeHint": "Dunkler Riss",
       "source": "ode-to-castlevania",
@@ -920,6 +1106,9 @@
     },
     {
       "id": "sword-brothers",
+      "gameIds": [
+        "TP_SWORD_BROTHERS"
+      ],
       "name": "Sword Brothers",
       "nameDeHint": "Schwertbrüder",
       "source": "ode-to-castlevania",
@@ -935,6 +1124,9 @@
     },
     {
       "id": "summon-spirit-tornado",
+      "gameIds": [
+        "TP_SPIRITTORNADO"
+      ],
       "name": "Summon Spirit Tornado",
       "nameDeHint": "Geistertornado beschwören",
       "source": "ode-to-castlevania",
@@ -950,6 +1142,9 @@
     },
     {
       "id": "anura",
+      "gameIds": [
+        "TP_FROG"
+      ],
       "name": "Anura",
       "source": "ode-to-castlevania",
       "kind": "base",
@@ -964,6 +1159,9 @@
     },
     {
       "id": "endo-gears",
+      "gameIds": [
+        "TP_GEARS_WEAPON"
+      ],
       "name": "Endo Gears",
       "nameDeHint": "Endo-Zahnräder",
       "source": "ode-to-castlevania",
@@ -979,6 +1177,9 @@
     },
     {
       "id": "peri-pendulum",
+      "gameIds": [
+        "TP_PENDULUM_WEAPON"
+      ],
       "name": "Peri Pendulum",
       "nameDeHint": "Peri-Pendel",
       "source": "ode-to-castlevania",
@@ -994,6 +1195,9 @@
     },
     {
       "id": "myo-lift",
+      "gameIds": [
+        "TP_ELEVATOR_WEAPON"
+      ],
       "name": "Myo Lift",
       "nameDeHint": "Myo-Aufzug",
       "source": "ode-to-castlevania",
@@ -1009,6 +1213,9 @@
     },
     {
       "id": "epi-head",
+      "gameIds": [
+        "TP_HEADS_WEAPON"
+      ],
       "name": "Epi Head",
       "nameDeHint": "Epi-Kopf",
       "source": "ode-to-castlevania",
@@ -1024,6 +1231,9 @@
     },
     {
       "id": "familiar-forge",
+      "gameIds": [
+        "TP_FAMILIARFORGE"
+      ],
       "name": "Familiar Forge",
       "nameDeHint": "Familiar-Schmiede",
       "source": "ode-to-castlevania",
@@ -1039,6 +1249,9 @@
     },
     {
       "id": "vampire-killer",
+      "gameIds": [
+        "TP_ALCHEMYWHIP2"
+      ],
       "name": "Vampire Killer",
       "nameDeHint": "Vampirtöter",
       "source": "ode-to-castlevania",
@@ -1054,6 +1267,9 @@
     },
     {
       "id": "spirit-tornado-tip",
+      "gameIds": [
+        "TP_WINDWHIP2"
+      ],
       "name": "Spirit Tornado Tip",
       "nameDeHint": "Geistertornado-Spitze",
       "source": "ode-to-castlevania",
@@ -1069,6 +1285,9 @@
     },
     {
       "id": "cross-crasher-tip",
+      "gameIds": [
+        "TP_PLATINUMWHIP2"
+      ],
       "name": "Cross Crasher Tip",
       "nameDeHint": "Kreuzbrecher-Spitze",
       "source": "ode-to-castlevania",
@@ -1084,6 +1303,9 @@
     },
     {
       "id": "hydrostormer-tip",
+      "gameIds": [
+        "TP_DRAGONWATER2"
+      ],
       "name": "Hydrostormer Tip",
       "nameDeHint": "Hydrostürmer-Spitze",
       "source": "ode-to-castlevania",
@@ -1099,6 +1321,9 @@
     },
     {
       "id": "crissaegrim-tip",
+      "gameIds": [
+        "TP_SONICWHIP2"
+      ],
       "name": "Crissaegrim Tip",
       "nameDeHint": "Crissaegrim-Spitze",
       "source": "ode-to-castlevania",
@@ -1114,6 +1339,9 @@
     },
     {
       "id": "mormegil-tip",
+      "gameIds": [
+        "TP_LEMURIA2"
+      ],
       "name": "Mormegil Tip",
       "nameDeHint": "Mormegil-Spitze",
       "source": "ode-to-castlevania",
@@ -1129,6 +1357,9 @@
     },
     {
       "id": "daybreaker-tip",
+      "gameIds": [
+        "TP_HOLYWHIP2"
+      ],
       "name": "Daybreaker Tip",
       "nameDeHint": "Tagesanbruch-Spitze",
       "source": "ode-to-castlevania",
@@ -1144,6 +1375,9 @@
     },
     {
       "id": "aurablaster-tip",
+      "gameIds": [
+        "TP_MARTIALWHIP2"
+      ],
       "name": "Aurablaster Tip",
       "nameDeHint": "Aurastoß-Spitze",
       "source": "ode-to-castlevania",
@@ -1159,6 +1393,9 @@
     },
     {
       "id": "yagyu-shuriken",
+      "gameIds": [
+        "TP_SHURIKEN2"
+      ],
       "name": "Yagyu Shuriken",
       "source": "ode-to-castlevania",
       "kind": "evolved",
@@ -1173,6 +1410,9 @@
     },
     {
       "id": "bwaka-knife",
+      "gameIds": [
+        "TP_BWAKA2"
+      ],
       "name": "Bwaka Knife",
       "nameDeHint": "Bwaka-Messer",
       "source": "ode-to-castlevania",
@@ -1188,6 +1428,9 @@
     },
     {
       "id": "long-inus",
+      "gameIds": [
+        "TP_JAVELIN2"
+      ],
       "name": "Long Inus",
       "source": "ode-to-castlevania",
       "kind": "evolved",
@@ -1202,6 +1445,9 @@
     },
     {
       "id": "stellar-blade",
+      "gameIds": [
+        "TP_DISCUS2"
+      ],
       "name": "Stellar Blade",
       "nameDeHint": "Sternenklinge",
       "source": "ode-to-castlevania",
@@ -1217,6 +1463,9 @@
     },
     {
       "id": "wrecking-ball",
+      "gameIds": [
+        "TP_IRONBALL2"
+      ],
       "name": "Wrecking Ball",
       "nameDeHint": "Abrissbirne",
       "source": "ode-to-castlevania",
@@ -1232,6 +1481,9 @@
     },
     {
       "id": "jewel-gun",
+      "gameIds": [
+        "TP_GUN2"
+      ],
       "name": "Jewel Gun",
       "nameDeHint": "Juwelenkanone",
       "source": "ode-to-castlevania",
@@ -1247,6 +1499,9 @@
     },
     {
       "id": "the-rpg",
+      "gameIds": [
+        "TP_RPG2"
+      ],
       "name": "The RPG",
       "nameDeHint": "Die Panzerfaust",
       "source": "ode-to-castlevania",
@@ -1262,6 +1517,9 @@
     },
     {
       "id": "meal-ticket",
+      "gameIds": [
+        "TP_WINEGLASS2"
+      ],
       "name": "Meal Ticket",
       "nameDeHint": "Essensmarke",
       "source": "ode-to-castlevania",
@@ -1277,6 +1535,9 @@
     },
     {
       "id": "salamender",
+      "gameIds": [
+        "TP_FIRE2"
+      ],
       "name": "Salamender",
       "source": "ode-to-castlevania",
       "kind": "evolved",
@@ -1291,6 +1552,9 @@
     },
     {
       "id": "cocytus",
+      "gameIds": [
+        "TP_ICE2"
+      ],
       "name": "Cocytus",
       "nameDeHint": "Kokytos",
       "source": "ode-to-castlevania",
@@ -1306,6 +1570,9 @@
     },
     {
       "id": "pneuma-tempestas",
+      "gameIds": [
+        "TP_WIND2"
+      ],
       "name": "Pneuma Tempestas",
       "source": "ode-to-castlevania",
       "kind": "evolved",
@@ -1320,6 +1587,9 @@
     },
     {
       "id": "gemma-torpor",
+      "gameIds": [
+        "TP_EARTH2"
+      ],
       "name": "Gemma Torpor",
       "source": "ode-to-castlevania",
       "kind": "evolved",
@@ -1334,6 +1604,9 @@
     },
     {
       "id": "tenebris-tonitrus",
+      "gameIds": [
+        "TP_ELEC2"
+      ],
       "name": "Tenebris Tonitrus",
       "source": "ode-to-castlevania",
       "kind": "evolved",
@@ -1348,6 +1621,9 @@
     },
     {
       "id": "keremet-morbus",
+      "gameIds": [
+        "TP_ACID2"
+      ],
       "name": "Keremet Morbus",
       "source": "ode-to-castlevania",
       "kind": "evolved",
@@ -1362,6 +1638,9 @@
     },
     {
       "id": "nightmare",
+      "gameIds": [
+        "TP_EVIL2"
+      ],
       "name": "Nightmare",
       "nameDeHint": "Albtraum",
       "source": "ode-to-castlevania",
@@ -1377,6 +1656,9 @@
     },
     {
       "id": "sanctuary",
+      "gameIds": [
+        "TP_HOLY2"
+      ],
       "name": "Sanctuary",
       "nameDeHint": "Zuflucht",
       "source": "ode-to-castlevania",
@@ -1392,6 +1674,9 @@
     },
     {
       "id": "stamazza",
+      "gameIds": [
+        "TP_MACE2"
+      ],
       "name": "Stamazza",
       "source": "ode-to-castlevania",
       "kind": "evolved",
@@ -1406,6 +1691,9 @@
     },
     {
       "id": "moon-rod",
+      "gameIds": [
+        "TP_STARFLAIL2"
+      ],
       "name": "Moon Rod",
       "nameDeHint": "Mondstab",
       "source": "ode-to-castlevania",
@@ -1421,6 +1709,9 @@
     },
     {
       "id": "thunderbolt-spear",
+      "gameIds": [
+        "TP_ALUCARDSPEAR2"
+      ],
       "name": "Thunderbolt Spear",
       "nameDeHint": "Donnerkeilspeer",
       "source": "ode-to-castlevania",
@@ -1436,6 +1727,9 @@
     },
     {
       "id": "gungnir-souris",
+      "gameIds": [
+        "TP_CHAUVE2"
+      ],
       "name": "Gungnir-Souris",
       "source": "ode-to-castlevania",
       "kind": "evolved",
@@ -1450,6 +1744,9 @@
     },
     {
       "id": "dark-iron-shield",
+      "gameIds": [
+        "TP_SHIELD2"
+      ],
       "name": "Dark Iron Shield",
       "nameDeHint": "Dunkler Eisenschild",
       "source": "ode-to-castlevania",
@@ -1465,6 +1762,9 @@
     },
     {
       "id": "sacred-beasts-tower-shield",
+      "gameIds": [
+        "TP_SACREDBEASTS2"
+      ],
       "name": "Sacred Beasts Tower Shield",
       "nameDeHint": "Turmschild der heiligen Bestien",
       "source": "ode-to-castlevania",
@@ -1480,6 +1780,9 @@
     },
     {
       "id": "rune-sword",
+      "gameIds": [
+        "TP_SLASH2"
+      ],
       "name": "Rune Sword",
       "nameDeHint": "Runenschwert",
       "source": "ode-to-castlevania",
@@ -1495,6 +1798,9 @@
     },
     {
       "id": "alucard-swords",
+      "gameIds": [
+        "TP_ALUCARDSWORD2"
+      ],
       "name": "Alucard Swords",
       "nameDeHint": "Alucards Schwerter",
       "source": "ode-to-castlevania",
@@ -1510,6 +1816,9 @@
     },
     {
       "id": "vol-confodere",
+      "gameIds": [
+        "TP_CONFODERE2"
+      ],
       "name": "Vol Confodere",
       "source": "ode-to-castlevania",
       "kind": "evolved",
@@ -1524,6 +1833,9 @@
     },
     {
       "id": "melio-confodere",
+      "gameIds": [
+        "TP_CONFODERE3"
+      ],
       "name": "Melio Confodere",
       "source": "ode-to-castlevania",
       "kind": "evolved",
@@ -1538,6 +1850,9 @@
     },
     {
       "id": "nitesco",
+      "gameIds": [
+        "TP_ENERGY2"
+      ],
       "name": "Nitesco",
       "source": "ode-to-castlevania",
       "kind": "evolved",
@@ -1552,6 +1867,9 @@
     },
     {
       "id": "acerbatus",
+      "gameIds": [
+        "TP_SPITE2"
+      ],
       "name": "Acerbatus",
       "source": "ode-to-castlevania",
       "kind": "evolved",
@@ -1566,6 +1884,9 @@
     },
     {
       "id": "rapidus-fio",
+      "gameIds": [
+        "TP_RAPIDUS2"
+      ],
       "name": "Rapidus Fio",
       "source": "ode-to-castlevania",
       "kind": "evolved",
@@ -1580,6 +1901,9 @@
     },
     {
       "id": "vol-luminatio",
+      "gameIds": [
+        "TP_LIGHT2"
+      ],
       "name": "Vol Luminatio",
       "source": "ode-to-castlevania",
       "kind": "evolved",
@@ -1594,6 +1918,9 @@
     },
     {
       "id": "vol-umbra",
+      "gameIds": [
+        "TP_DARK2"
+      ],
       "name": "Vol Umbra",
       "source": "ode-to-castlevania",
       "kind": "evolved",
@@ -1608,6 +1935,9 @@
     },
     {
       "id": "claimh-solais",
+      "gameIds": [
+        "TP_POCKET2"
+      ],
       "name": "Claimh Solais",
       "source": "ode-to-castlevania",
       "kind": "evolved",
@@ -1622,6 +1952,9 @@
     },
     {
       "id": "trinum-custodem",
+      "gameIds": [
+        "TP_CUSTOS4"
+      ],
       "name": "Trinum Custodem",
       "source": "ode-to-castlevania",
       "kind": "evolved",
@@ -1636,6 +1969,9 @@
     },
     {
       "id": "power-of-sire",
+      "gameIds": [
+        "TP_DOMINUS4"
+      ],
       "name": "Power of Sire",
       "nameDeHint": "Macht des Herrn",
       "source": "ode-to-castlevania",
@@ -1651,6 +1987,9 @@
     },
     {
       "id": "million-cut",
+      "gameIds": [
+        "TP_VALMANWAY2"
+      ],
       "name": "Million Cut",
       "nameDeHint": "Millionenschnitt",
       "source": "ode-to-castlevania",
@@ -1666,6 +2005,9 @@
     },
     {
       "id": "ninth-circle",
+      "gameIds": [
+        "TP_ICEBRAND2"
+      ],
       "name": "Ninth Circle",
       "nameDeHint": "Neunter Kreis",
       "source": "ode-to-castlevania",
@@ -1681,6 +2023,9 @@
     },
     {
       "id": "dies-irae",
+      "gameIds": [
+        "TP_GOTH_MISSILE2"
+      ],
       "name": "Dies Irae",
       "source": "ode-to-castlevania",
       "kind": "evolved",
@@ -1695,6 +2040,9 @@
     },
     {
       "id": "kardia-phlegeton",
+      "gameIds": [
+        "TP_AURABLAST_WEAPON2"
+      ],
       "name": "Kardía Phlegeton",
       "source": "ode-to-castlevania",
       "kind": "evolved",
@@ -1709,6 +2057,9 @@
     },
     {
       "id": "lapiste-tepisto",
+      "gameIds": [
+        "TP_LAPISTE2"
+      ],
       "name": "Lapiste Tepisto",
       "source": "ode-to-castlevania",
       "kind": "evolved",
@@ -1723,6 +2074,9 @@
     },
     {
       "id": "darkness-illusion",
+      "gameIds": [
+        "TP_SAVROG_WEAPON2"
+      ],
       "name": "Darkness Illusion",
       "nameDeHint": "Illusion der Dunkelheit",
       "source": "ode-to-castlevania",
@@ -1738,6 +2092,9 @@
     },
     {
       "id": "carnage-heart",
+      "gameIds": [
+        "TP_NEUTRON_WEAPON2"
+      ],
       "name": "Carnage Heart",
       "nameDeHint": "Blutbadherz",
       "source": "ode-to-castlevania",
@@ -1753,6 +2110,9 @@
     },
     {
       "id": "hydro-pump-climax",
+      "gameIds": [
+        "TP_HYDROSTORM2"
+      ],
       "name": "Hydro Pump Climax",
       "nameDeHint": "Hydropumpen-Höhepunkt",
       "source": "ode-to-castlevania",
@@ -1768,6 +2128,9 @@
     },
     {
       "id": "arch-angle",
+      "gameIds": [
+        "TP_GRANDCROSS2"
+      ],
       "name": "Arch Angle",
       "source": "ode-to-castlevania",
       "kind": "evolved",
@@ -1782,6 +2145,9 @@
     },
     {
       "id": "spirit-of-light",
+      "gameIds": [
+        "TP_SUMMON_SPIRIT2"
+      ],
       "name": "Spirit of Light",
       "nameDeHint": "Geist des Lichts",
       "source": "ode-to-castlevania",
@@ -1797,6 +2163,10 @@
     },
     {
       "id": "power-of-lire",
+      "gameIds": [
+        "TP_POWEROFLIRE",
+        "TP_SOULSTEAL_WEAPON2"
+      ],
       "name": "Power of Lire",
       "source": "ode-to-castlevania",
       "kind": "evolved",
@@ -1811,6 +2181,9 @@
     },
     {
       "id": "legacy-of-death-soul-river",
+      "gameIds": [
+        "TP_DARKRIFT2"
+      ],
       "name": "Legacy of Death: Soul River",
       "nameDeHint": "Vermächtnis des Todes: Seelenfluss",
       "source": "ode-to-castlevania",
@@ -1826,6 +2199,9 @@
     },
     {
       "id": "vjaya-sisters",
+      "gameIds": [
+        "TP_SWORD_BROTHERS2"
+      ],
       "name": "Vjaya Sisters",
       "nameDeHint": "Vjaya-Schwestern",
       "source": "ode-to-castlevania",
@@ -1841,6 +2217,9 @@
     },
     {
       "id": "venus-crescent",
+      "gameIds": [
+        "TP_SPIRITTORNADO2"
+      ],
       "name": "Venus Crescent",
       "nameDeHint": "Venus-Sichel",
       "source": "ode-to-castlevania",
@@ -1856,6 +2235,9 @@
     },
     {
       "id": "dark-frogamorphosis",
+      "gameIds": [
+        "TP_FROG2"
+      ],
       "name": "Dark Frogamorphosis",
       "nameDeHint": "Dunkle Froschamorphose",
       "source": "ode-to-castlevania",
@@ -1871,6 +2253,9 @@
     },
     {
       "id": "clock-tower",
+      "gameIds": [
+        "TP_CLOCKTOWER_WEAPON"
+      ],
       "name": "Clock Tower",
       "nameDeHint": "Uhrturm",
       "source": "ode-to-castlevania",
@@ -1886,6 +2271,9 @@
     },
     {
       "id": "alucard-shield",
+      "gameIds": [
+        "TP_ALUCARDSHIELD"
+      ],
       "name": "Alucard Shield",
       "nameDeHint": "Alucards Schild",
       "source": "ode-to-castlevania",
@@ -1901,6 +2289,9 @@
     },
     {
       "id": "universitas",
+      "gameIds": [
+        "TP_UNIVERSITAS"
+      ],
       "name": "Universitas",
       "source": "ode-to-castlevania",
       "kind": "evolved",

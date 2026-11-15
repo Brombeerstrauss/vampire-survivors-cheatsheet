@@ -3,6 +3,9 @@
   "weapons": [
     {
       "id": "scarlet-needle",
+      "gameIds": [
+        "BMN000_SCARLET1"
+      ],
       "name": "Scarlet Needle",
       "nameDeHint": "Scharlachnadel",
       "source": "legacy-of-the-bloodmoon",
@@ -18,6 +21,9 @@
     },
     {
       "id": "ashella",
+      "gameIds": [
+        "BMN004_AXE1"
+      ],
       "name": "Ashella",
       "source": "legacy-of-the-bloodmoon",
       "kind": "base",
@@ -32,6 +38,9 @@
     },
     {
       "id": "incineration",
+      "gameIds": [
+        "BMN002_DUST1"
+      ],
       "name": "Incineration",
       "nameDeHint": "Einäscherung",
       "source": "legacy-of-the-bloodmoon",
@@ -47,6 +56,9 @@
     },
     {
       "id": "screams-from-the-void",
+      "gameIds": [
+        "BMN006_SCREAM1"
+      ],
       "name": "Screams from the Void",
       "nameDeHint": "Schreie aus der Leere",
       "source": "legacy-of-the-bloodmoon",
@@ -62,6 +74,9 @@
     },
     {
       "id": "blacken-firmament",
+      "gameIds": [
+        "BMN008_BLACKEN1"
+      ],
       "name": "Blacken Firmament",
       "nameDeHint": "Verdunkeltes Firmament",
       "source": "legacy-of-the-bloodmoon",
@@ -77,6 +92,9 @@
     },
     {
       "id": "108-responsive-prayers",
+      "gameIds": [
+        "PRAYERS"
+      ],
       "name": "108 Responsive Prayers",
       "nameDeHint": "108 erhörte Gebete",
       "source": "legacy-of-the-bloodmoon",
@@ -92,6 +110,9 @@
     },
     {
       "id": "firefall",
+      "gameIds": [
+        "BMN010_FIRE1_FALL"
+      ],
       "name": "FireFall",
       "nameDeHint": "Feuerfall",
       "source": "legacy-of-the-bloodmoon",
@@ -107,6 +128,9 @@
     },
     {
       "id": "fireball",
+      "gameIds": [
+        "BMN011_FIRE2_BALL"
+      ],
       "name": "FireBall",
       "nameDeHint": "Feuerball",
       "source": "legacy-of-the-bloodmoon",
@@ -122,6 +146,9 @@
     },
     {
       "id": "firewall",
+      "gameIds": [
+        "BMN012_FIRE3_WALL"
+      ],
       "name": "FireWall",
       "nameDeHint": "Feuerwand",
       "source": "legacy-of-the-bloodmoon",
@@ -137,6 +164,9 @@
     },
     {
       "id": "descent-into-misery",
+      "gameIds": [
+        "DESCENT_MISERY"
+      ],
       "name": "Descent Into Misery",
       "nameDeHint": "Abstieg ins Elend",
       "source": "legacy-of-the-bloodmoon",
@@ -152,6 +182,9 @@
     },
     {
       "id": "cardinal-rain",
+      "gameIds": [
+        "BMN001_SCARLET2"
+      ],
       "name": "Cardinal Rain",
       "nameDeHint": "Kardinalsregen",
       "source": "legacy-of-the-bloodmoon",
@@ -167,6 +200,9 @@
     },
     {
       "id": "bloodlust",
+      "gameIds": [
+        "BMN005_AXE2"
+      ],
       "name": "Bloodlust",
       "nameDeHint": "Blutdurst",
       "source": "legacy-of-the-bloodmoon",
@@ -182,6 +218,9 @@
     },
     {
       "id": "dust-to-dust",
+      "gameIds": [
+        "BMN003_DUST2"
+      ],
       "name": "Dust to Dust",
       "nameDeHint": "Staub zu Staub",
       "source": "legacy-of-the-bloodmoon",
@@ -197,6 +236,9 @@
     },
     {
       "id": "forbidden-siren",
+      "gameIds": [
+        "BMN007_SCREAM2"
+      ],
       "name": "Forbidden Siren",
       "nameDeHint": "Verbotene Sirene",
       "source": "legacy-of-the-bloodmoon",
@@ -212,6 +254,9 @@
     },
     {
       "id": "damnation",
+      "gameIds": [
+        "BMN009_BLACKEN2"
+      ],
       "name": "Damnation",
       "nameDeHint": "Verdammnis",
       "source": "legacy-of-the-bloodmoon",
@@ -227,6 +272,9 @@
     },
     {
       "id": "road-to-heaven",
+      "gameIds": [
+        "HEAVENSROAD"
+      ],
       "name": "Road to Heaven",
       "nameDeHint": "Weg in den Himmel",
       "source": "legacy-of-the-bloodmoon",
@@ -242,6 +290,9 @@
     },
     {
       "id": "firestall",
+      "gameIds": [
+        "BMN013_FIRE4"
+      ],
       "name": "FireStall",
       "source": "legacy-of-the-bloodmoon",
       "kind": "evolved",
@@ -256,6 +307,9 @@
     },
     {
       "id": "shimmering-sands",
+      "gameIds": [
+        "SHIMMERING_SANDS"
+      ],
       "name": "Shimmering Sands",
       "nameDeHint": "Schimmernder Sand",
       "source": "legacy-of-the-bloodmoon",

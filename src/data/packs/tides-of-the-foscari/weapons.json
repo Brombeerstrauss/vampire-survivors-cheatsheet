@@ -3,6 +3,9 @@
   "weapons": [
     {
       "id": "spellstring",
+      "gameIds": [
+        "SPELL_STRING"
+      ],
       "name": "SpellString",
       "nameDeHint": "Zauberfaden",
       "source": "tides-of-the-foscari",
@@ -18,6 +21,9 @@
     },
     {
       "id": "spellstream",
+      "gameIds": [
+        "SPELL_STREAM"
+      ],
       "name": "SpellStream",
       "nameDeHint": "Zauberstrom",
       "source": "tides-of-the-foscari",
@@ -33,6 +39,9 @@
     },
     {
       "id": "spellstrike",
+      "gameIds": [
+        "SPELL_STRIKE"
+      ],
       "name": "SpellStrike",
       "nameDeHint": "Zauberschlag",
       "source": "tides-of-the-foscari",
@@ -48,6 +57,9 @@
     },
     {
       "id": "eskizzibur",
+      "gameIds": [
+        "SWORD"
+      ],
       "name": "Eskizzibur",
       "source": "tides-of-the-foscari",
       "kind": "base",
@@ -62,6 +74,9 @@
     },
     {
       "id": "flash-arrow",
+      "gameIds": [
+        "FLASHARROW"
+      ],
       "name": "Flash Arrow",
       "nameDeHint": "Blitzpfeil",
       "source": "tides-of-the-foscari",
@@ -77,6 +92,9 @@
     },
     {
       "id": "prismatic-missile",
+      "gameIds": [
+        "PRISMATICMISS"
+      ],
       "name": "Prismatic Missile",
       "nameDeHint": "Prismatisches Geschoss",
       "source": "tides-of-the-foscari",
@@ -92,6 +110,9 @@
     },
     {
       "id": "shadow-servant",
+      "gameIds": [
+        "SHADOWSERVANT"
+      ],
       "name": "Shadow Servant",
       "nameDeHint": "Schattendiener",
       "source": "tides-of-the-foscari",
@@ -107,6 +128,9 @@
     },
     {
       "id": "party-popper",
+      "gameIds": [
+        "PARTY"
+      ],
       "name": "Party Popper",
       "nameDeHint": "Partyknaller",
       "source": "tides-of-the-foscari",
@@ -122,6 +146,9 @@
     },
     {
       "id": "legionnaire",
+      "gameIds": [
+        "SWORD2"
+      ],
       "name": "Legionnaire",
       "nameDeHint": "Legionär",
       "source": "tides-of-the-foscari",
@@ -137,6 +164,9 @@
     },
     {
       "id": "millionaire",
+      "gameIds": [
+        "FLASHARROW2"
+      ],
       "name": "Millionaire",
       "nameDeHint": "Millionär",
       "source": "tides-of-the-foscari",
@@ -152,6 +182,9 @@
     },
     {
       "id": "luminaire",
+      "gameIds": [
+        "PRISMATICMISS2"
+      ],
       "name": "Luminaire",
       "nameDeHint": "Leuchte",
       "source": "tides-of-the-foscari",
@@ -167,6 +200,9 @@
     },
     {
       "id": "ophion",
+      "gameIds": [
+        "SHADOWSERVANT2"
+      ],
       "name": "Ophion",
       "source": "tides-of-the-foscari",
       "kind": "evolved",
@@ -181,6 +217,9 @@
     },
     {
       "id": "spellstrom",
+      "gameIds": [
+        "SPELL_STROM"
+      ],
       "name": "SpellStrom",
       "source": "tides-of-the-foscari",
       "kind": "evolved",

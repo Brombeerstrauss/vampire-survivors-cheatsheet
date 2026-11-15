@@ -2,11 +2,17 @@ import { createContext, useContext } from 'react'
 import type { Lang, PackId } from '../data/types.ts'
 import type { Catalog } from '../logic/catalog.ts'
 import type { RunState } from '../logic/run.ts'
+import type { ModStatus } from './modConnection.ts'
 import type { Settings } from './settings.ts'
 
 export interface Notice {
   message: string
   undo?: () => void
+}
+
+/** Zustand der Live-Verbindung zum Spiel. */
+export interface LiveState {
+  status: ModStatus
 }
 
 export interface AppState {
@@ -15,6 +21,8 @@ export interface AppState {
   setShowSecrets(show: boolean): void
   setShowImages(show: boolean): void
   setLanguage(language: Lang): void
+  setModBridge(enabled: boolean): void
+  live: LiveState
   /** Catalog of the enabled packs. */
   catalog: Catalog
   /** Catalog of all packs. */

@@ -14,6 +14,7 @@
         "additionalProperties": false,
         "properties": {
           "id": { "$ref": "common.schema.json#/definitions/id" },
+          "gameIds": { "$ref": "common.schema.json#/definitions/gameIds" },
           "name": { "$ref": "common.schema.json#/definitions/name" },
           "nameDe": { "$ref": "common.schema.json#/definitions/nameDe" },
           "nameDeHint": { "$ref": "common.schema.json#/definitions/nameDeHint" },

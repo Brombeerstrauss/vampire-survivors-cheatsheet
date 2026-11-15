@@ -3,6 +3,9 @@
   "passives": [
     {
       "id": "outer-saboteur",
+      "gameIds": [
+        "LEM_ACC_SABOTEUR"
+      ],
       "name": "Outer Saboteur",
       "nameDeHint": "Äußerer Saboteur",
       "source": "ante-chamber",

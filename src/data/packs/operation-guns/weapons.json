@@ -3,6 +3,9 @@
   "weapons": [
     {
       "id": "long-gun",
+      "gameIds": [
+        "FB_FULLAUTO"
+      ],
       "name": "Long Gun",
       "nameDeHint": "Langes Gewehr",
       "source": "operation-guns",
@@ -18,6 +21,9 @@
     },
     {
       "id": "short-gun",
+      "gameIds": [
+        "FB_RAPIDFIRE"
+      ],
       "name": "Short Gun",
       "nameDeHint": "Kurzes Gewehr",
       "source": "operation-guns",
@@ -33,6 +39,9 @@
     },
     {
       "id": "spread-shot",
+      "gameIds": [
+        "FB_SPREAD"
+      ],
       "name": "Spread Shot",
       "nameDeHint": "Streuschuss",
       "source": "operation-guns",
@@ -48,6 +57,9 @@
     },
     {
       "id": "c-u-laser",
+      "gameIds": [
+        "FB_LASER"
+      ],
       "name": "C-U-Laser",
       "source": "operation-guns",
       "kind": "base",
@@ -62,6 +74,9 @@
     },
     {
       "id": "firearm",
+      "gameIds": [
+        "FB_FIREARM"
+      ],
       "name": "Firearm",
       "nameDeHint": "Feuerwaffe",
       "source": "operation-guns",
@@ -77,6 +92,9 @@
     },
     {
       "id": "sonic-bloom",
+      "gameIds": [
+        "FB_SONIC"
+      ],
       "name": "Sonic Bloom",
       "nameDeHint": "Schallblüte",
       "source": "operation-guns",
@@ -92,6 +110,9 @@
     },
     {
       "id": "homing-miss",
+      "gameIds": [
+        "FB_HOMING"
+      ],
       "name": "Homing Miss",
       "nameDeHint": "Zielsuchrakete",
       "source": "operation-guns",
@@ -107,6 +128,9 @@
     },
     {
       "id": "diver-mines",
+      "gameIds": [
+        "FB_DIVERMINES"
+      ],
       "name": "Diver Mines",
       "nameDeHint": "Taucherminen",
       "source": "operation-guns",
@@ -122,6 +146,9 @@
     },
     {
       "id": "blade-crossbow",
+      "gameIds": [
+        "FB_BLADECROSSBOW"
+      ],
       "name": "Blade Crossbow",
       "nameDeHint": "Klingenarmbrust",
       "source": "operation-guns",
@@ -137,6 +164,9 @@
     },
     {
       "id": "prism-lass",
+      "gameIds": [
+        "FB_PRISMCUTLASS"
+      ],
       "name": "Prism Lass",
       "source": "operation-guns",
       "kind": "base",
@@ -151,6 +181,9 @@
     },
     {
       "id": "metal-claw",
+      "gameIds": [
+        "FB_METALCLAW"
+      ],
       "name": "Metal Claw",
       "nameDeHint": "Metallklaue",
       "source": "operation-guns",
@@ -166,6 +199,9 @@
     },
     {
       "id": "prototype-a",
+      "gameIds": [
+        "FB_PROTOTYPE_A"
+      ],
       "name": "Prototype A",
       "nameDeHint": "Prototyp A",
       "source": "operation-guns",
@@ -181,6 +217,9 @@
     },
     {
       "id": "prototype-b",
+      "gameIds": [
+        "FB_PROTOTYPE_B"
+      ],
       "name": "Prototype B",
       "nameDeHint": "Prototyp B",
       "source": "operation-guns",
@@ -196,6 +235,9 @@
     },
     {
       "id": "prototype-c",
+      "gameIds": [
+        "FB_PROTOTYPE_C"
+      ],
       "name": "Prototype C",
       "nameDeHint": "Prototyp C",
       "source": "operation-guns",
@@ -211,6 +253,9 @@
     },
     {
       "id": "pronto-beam",
+      "gameIds": [
+        "FB_PROTONBEAM"
+      ],
       "name": "Pronto Beam",
       "nameDeHint": "Pronto-Strahl",
       "source": "operation-guns",
@@ -226,6 +271,9 @@
     },
     {
       "id": "fire-l3gs",
+      "gameIds": [
+        "FB_FIREWALL"
+      ],
       "name": "Fire-L3GS",
       "source": "operation-guns",
       "kind": "evolved",
@@ -240,6 +288,9 @@
     },
     {
       "id": "wave-beam",
+      "gameIds": [
+        "FB_WAVE"
+      ],
       "name": "Wave Beam",
       "nameDeHint": "Wellenstrahl",
       "source": "operation-guns",
@@ -255,6 +306,9 @@
     },
     {
       "id": "multistage-missiles",
+      "gameIds": [
+        "FB_MULTISTAGE"
+      ],
       "name": "Multistage Missiles",
       "nameDeHint": "Mehrstufenraketen",
       "source": "operation-guns",
@@ -270,6 +324,9 @@
     },
     {
       "id": "atmo-torpedo",
+      "gameIds": [
+        "FB_CRUSH"
+      ],
       "name": "Atmo-Torpedo",
       "source": "operation-guns",
       "kind": "evolved",
@@ -284,6 +341,9 @@
     },
     {
       "id": "bfc2000-ad",
+      "gameIds": [
+        "FB_CROSSBOWCRASH"
+      ],
       "name": "BFC2000-AD",
       "source": "operation-guns",
       "kind": "evolved",
@@ -298,6 +358,9 @@
     },
     {
       "id": "time-warp",
+      "gameIds": [
+        "FB_TIMEWARP"
+      ],
       "name": "Time Warp",
       "nameDeHint": "Zeitsprung",
       "source": "operation-guns",
@@ -313,6 +376,9 @@
     },
     {
       "id": "big-fuzzy-fist",
+      "gameIds": [
+        "FB_BIGFUZZYFIST"
+      ],
       "name": "Big Fuzzy Fist",
       "nameDeHint": "Große flauschige Faust",
       "source": "operation-guns",

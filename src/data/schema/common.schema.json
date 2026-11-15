@@ -7,6 +7,13 @@
       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
       "description": "ID: lowercase letters, digits and hyphens, e.g. magic-wand."
     },
+    "gameIds": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^[A-Z][A-Z0-9_]*$" },
+      "description": "The game's internal IDs (wiki infobox, field id), e.g. MAGIC_MISSILE. The app uses them to match data from the mod."
+    },
     "name": {
       "type": "string",
       "minLength": 1,

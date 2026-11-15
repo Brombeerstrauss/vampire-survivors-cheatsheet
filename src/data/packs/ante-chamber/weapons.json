@@ -3,6 +3,9 @@
   "weapons": [
     {
       "id": "infernolatro",
+      "gameIds": [
+        "LEM_INFERNO1"
+      ],
       "name": "Infernolatro",
       "source": "ante-chamber",
       "kind": "base",
@@ -17,6 +20,9 @@
     },
     {
       "id": "gros-michel",
+      "gameIds": [
+        "LEM_BANANA1"
+      ],
       "name": "Gros Michel",
       "source": "ante-chamber",
       "kind": "base",
@@ -31,6 +37,9 @@
     },
     {
       "id": "fibonacci-spritz",
+      "gameIds": [
+        "LEM_FIBONACCI1"
+      ],
       "name": "Fibonacci Spritz",
       "source": "ante-chamber",
       "kind": "base",
@@ -45,6 +54,9 @@
     },
     {
       "id": "celestial-booster",
+      "gameIds": [
+        "LEM_PLANETS1"
+      ],
       "name": "Celestial Booster",
       "nameDeHint": "Himmelsbooster",
       "source": "ante-chamber",
@@ -60,6 +72,9 @@
     },
     {
       "id": "naneinferno",
+      "gameIds": [
+        "LEM_INFERNO2"
+      ],
       "name": "NaneInferno",
       "source": "ante-chamber",
       "kind": "evolved",
@@ -74,6 +89,9 @@
     },
     {
       "id": "cavendish",
+      "gameIds": [
+        "LEM_BANANA2"
+      ],
       "name": "Cavendish",
       "source": "ante-chamber",
       "kind": "evolved",
@@ -88,6 +106,9 @@
     },
     {
       "id": "royal-flush",
+      "gameIds": [
+        "LEM_FIBONACCI2"
+      ],
       "name": "Royal Flush",
       "source": "ante-chamber",
       "kind": "evolved",
@@ -102,6 +123,9 @@
     },
     {
       "id": "negative-space",
+      "gameIds": [
+        "LEM_PLANETS2"
+      ],
       "name": "Negative Space",
       "nameDeHint": "Negativer Raum",
       "source": "ante-chamber",

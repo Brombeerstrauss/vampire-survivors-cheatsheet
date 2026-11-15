@@ -47,6 +47,16 @@ describe('Game data', () => {
     expect(order).toEqual(data.packs.map((p) => p.id).filter((id) => order.includes(id)))
     expect(data.characters[0]?.source).toBe('base')
   })
+
+  // Without a game ID the app cannot match the entry with data from the mod.
+  // To fill them in: python3 -I tools/wiki-import/game_ids.py https://vampire.survivors.wiki/api.php src/data/packs
+  it('characters, weapons and items have game IDs (gameIds)', () => {
+    const { data } = loadGameData(packsFile, files)
+    const missing = [...data.characters, ...data.weapons, ...data.passives]
+      .filter((entry) => !entry.gameIds?.length)
+      .map((entry) => entry.id)
+    expect(missing).toEqual([])
+  })
 })
 
 describe('Schemas reject broken entries', () => {
@@ -127,6 +137,12 @@ describe('checkIntegrity', () => {
       'Evolution "bloody-tear": unknown weapon "whipp"',
       'Evolution "bloody-tear": unknown item "hollow-hart"',
     ])
+  })
+
+  it('reports game IDs that belong to two entries', () => {
+    const [whip, tear] = base.weapons
+    const data = { ...base, weapons: [{ ...whip!, gameIds: ['WHIP'] }, { ...tear!, gameIds: ['VAMPIRICA', 'WHIP'] }] }
+    expect(checkIntegrity(data)).toEqual(['Weapon "bloody-tear": game ID WHIP already belongs to "whip"'])
   })
 
   it('reports results that are not evolved weapons', () => {

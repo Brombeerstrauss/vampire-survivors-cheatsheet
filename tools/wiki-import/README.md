@@ -21,6 +21,11 @@ The script downloads the wiki pages, parses the tables and rewrites all packs.
 - `texts/names_de.py`: own German translations for names without an official German name.
 - `parse_localisation.py`: reads the official German names from poncle's public
   localisation sheet, which the script downloads fresh on every run.
+- `game_ids.py`: adds `gameIds` to characters, weapons and items: the game's internal IDs
+  from the infobox of each wiki page (field `id`, e.g. `MAGIC_MISSILE` for Magic Wand). The app
+  uses them to match data from the mod in `mod/`. Runs at the end of `run.sh`, but also works on
+  its own without losing manual edits:
+  `python3 -I tools/wiki-import/game_ids.py https://vampire.survivors.wiki/api.php src/data/packs`
 - `build_pack.py`: only sets `verified` when the evolution list, weapon list and item list
   agree; differences go into the `note` field.
 

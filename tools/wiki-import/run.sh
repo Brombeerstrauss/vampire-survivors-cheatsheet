@@ -45,5 +45,8 @@ for pair in base:base lm:legacy-of-the-moonspell bm:legacy-of-the-bloodmoon tf:t
   code=${pair%%:*}; id=${pair#*:}
   python3 -I "$HERE/build_pack.py" "$HERE/texts" "$RAW" "$code" "$id" "de_$code" "$PROJECT/src/data/packs/$id"
 done
+
+echo "Adding game IDs (gameIds) from the wiki infoboxes ..."
+python3 -I "$HERE/game_ids.py" "$API" "$PROJECT/src/data/packs"
 rm -rf "$RAW"
 echo "Done. Now check with 'npm test'."

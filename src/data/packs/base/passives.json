@@ -3,6 +3,9 @@
   "passives": [
     {
       "id": "spinach",
+      "gameIds": [
+        "POWER"
+      ],
       "name": "Spinach",
       "nameDe": "Spinat",
       "source": "base",
@@ -17,6 +20,9 @@
     },
     {
       "id": "armor",
+      "gameIds": [
+        "ARMOR"
+      ],
       "name": "Armor",
       "nameDe": "Rüstung",
       "source": "base",
@@ -31,6 +37,9 @@
     },
     {
       "id": "hollow-heart",
+      "gameIds": [
+        "MAXHEALTH"
+      ],
       "name": "Hollow Heart",
       "nameDe": "Hohlherz",
       "source": "base",
@@ -45,6 +54,9 @@
     },
     {
       "id": "pummarola",
+      "gameIds": [
+        "REGEN"
+      ],
       "name": "Pummarola",
       "source": "base",
       "description": {
@@ -58,6 +70,9 @@
     },
     {
       "id": "empty-tome",
+      "gameIds": [
+        "COOLDOWN"
+      ],
       "name": "Empty Tome",
       "nameDe": "Leerer Foliant",
       "source": "base",
@@ -72,6 +87,9 @@
     },
     {
       "id": "candelabrador",
+      "gameIds": [
+        "AREA"
+      ],
       "name": "Candelabrador",
       "nameDe": "Kandelabrador",
       "source": "base",
@@ -86,6 +104,9 @@
     },
     {
       "id": "bracer",
+      "gameIds": [
+        "SPEED"
+      ],
       "name": "Bracer",
       "nameDe": "Armschiene",
       "source": "base",
@@ -100,6 +121,9 @@
     },
     {
       "id": "spellbinder",
+      "gameIds": [
+        "DURATION"
+      ],
       "name": "Spellbinder",
       "nameDe": "Zauberbinder",
       "source": "base",
@@ -114,6 +138,9 @@
     },
     {
       "id": "duplicator",
+      "gameIds": [
+        "AMOUNT"
+      ],
       "name": "Duplicator",
       "nameDe": "Verdoppler",
       "source": "base",
@@ -128,6 +155,9 @@
     },
     {
       "id": "wings",
+      "gameIds": [
+        "MOVESPEED"
+      ],
       "name": "Wings",
       "nameDe": "Flügel",
       "source": "base",
@@ -142,6 +172,9 @@
     },
     {
       "id": "attractorb",
+      "gameIds": [
+        "MAGNET"
+      ],
       "name": "Attractorb",
       "nameDe": "Anziehungskugel",
       "source": "base",
@@ -156,6 +189,9 @@
     },
     {
       "id": "clover",
+      "gameIds": [
+        "LUCK"
+      ],
       "name": "Clover",
       "nameDe": "Kleeblatt",
       "source": "base",
@@ -170,6 +206,9 @@
     },
     {
       "id": "crown",
+      "gameIds": [
+        "GROWTH"
+      ],
       "name": "Crown",
       "nameDe": "Krone",
       "source": "base",
@@ -184,6 +223,9 @@
     },
     {
       "id": "stone-mask",
+      "gameIds": [
+        "GREED"
+      ],
       "name": "Stone Mask",
       "nameDe": "Steinmaske",
       "source": "base",
@@ -198,6 +240,9 @@
     },
     {
       "id": "skull-o-maniac",
+      "gameIds": [
+        "CURSE"
+      ],
       "name": "Skull O'Maniac",
       "nameDe": "Schädel O'Maniac",
       "source": "base",
@@ -212,6 +257,9 @@
     },
     {
       "id": "tirajisu",
+      "gameIds": [
+        "REVIVAL"
+      ],
       "name": "Tirajisú",
       "source": "base",
       "description": {
@@ -225,6 +273,9 @@
     },
     {
       "id": "torrona-s-box",
+      "gameIds": [
+        "PANDORA"
+      ],
       "name": "Torrona's Box",
       "source": "base",
       "description": {
@@ -238,6 +289,9 @@
     },
     {
       "id": "parm-aegis",
+      "gameIds": [
+        "PARMA"
+      ],
       "name": "Parm Aegis",
       "source": "base",
       "description": {
@@ -251,6 +305,9 @@
     },
     {
       "id": "karoma-s-mana",
+      "gameIds": [
+        "DOMINION"
+      ],
       "name": "Karoma's Mana",
       "source": "base",
       "description": {
@@ -264,6 +321,9 @@
     },
     {
       "id": "silver-ring",
+      "gameIds": [
+        "SILVER"
+      ],
       "name": "Silver Ring",
       "source": "base",
       "description": {
@@ -278,6 +338,9 @@
     },
     {
       "id": "gold-ring",
+      "gameIds": [
+        "GOLD"
+      ],
       "name": "Gold Ring",
       "source": "base",
       "description": {
@@ -292,6 +355,9 @@
     },
     {
       "id": "metaglio-left",
+      "gameIds": [
+        "LEFT"
+      ],
       "name": "Metaglio Left",
       "source": "base",
       "description": {
@@ -306,6 +372,9 @@
     },
     {
       "id": "metaglio-right",
+      "gameIds": [
+        "RIGHT"
+      ],
       "name": "Metaglio Right",
       "source": "base",
       "description": {

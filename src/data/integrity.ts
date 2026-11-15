@@ -22,6 +22,21 @@ export function checkIntegrity(data: GameData): string[] {
   const passives = idsOf('Item', data.passives)
   idsOf('Evolution', data.evolutions)
 
+  // A game ID must point to exactly one entry, otherwise data from the mod is matched wrongly.
+  const gameIdsOf = (label: string, entries: { id: string; gameIds?: string[] }[]) => {
+    const owner = new Map<string, string>()
+    for (const { id, gameIds } of entries) {
+      for (const gameId of gameIds ?? []) {
+        const other = owner.get(gameId)
+        if (other && other !== id) problems.push(`${label} "${id}": game ID ${gameId} already belongs to "${other}"`)
+        owner.set(gameId, id)
+      }
+    }
+  }
+  gameIdsOf('Character', data.characters)
+  gameIdsOf('Weapon', data.weapons)
+  gameIdsOf('Item', data.passives)
+
   const weaponById = new Map(data.weapons.map((weapon) => [weapon.id, weapon]))
 
   const checkSource = (where: string, source: string) => {
