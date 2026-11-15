@@ -42,6 +42,8 @@ public class Plugin : BasePlugin
         Logger = Log;
         ConfigEntry<int> port = Config.Bind("Server", "Port", 47321,
             "Port on 127.0.0.1 where the app queries the run.");
+        ConfigEntry<string> origins = Config.Bind("Server", "AllowedOrigins", "https://brombeerstrauss.github.io",
+            "Websites that may read the run, separated by commas. Pages served by this PC (localhost) are always allowed.");
         ConfigEntry<int> interval = Config.Bind("Server", "IntervalMs", 500,
             "How often the run is read (milliseconds).");
         ConfigEntry<string> language = Config.Bind("Overlay", "Language", "en", "Overlay language: en or de.");
@@ -68,7 +70,7 @@ public class Plugin : BasePlugin
             Logger.LogError($"Overlay data is missing ({dataPath}): {ex.Message}");
         }
 
-        Server = new StateServer(port.Value, Logger);
+        Server = new StateServer(port.Value, origins.Value, Logger);
         Server.Start();
 
         ClassInjector.RegisterTypeInIl2Cpp<BridgeBehaviour>();

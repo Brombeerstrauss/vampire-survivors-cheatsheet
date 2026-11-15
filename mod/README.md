@@ -20,7 +20,9 @@ The names and evolutions in the overlay come from the app's data
 (`scripts/export-mod-data.mjs` writes `cheatsheet-data.json` next to the DLL during the build).
 
 The plugin does not change anything in the game. It only reads and only listens on `127.0.0.1`,
-so it cannot be reached from outside.
+so it cannot be reached from outside. Websites in your browser can only read the run if they
+are on the `AllowedOrigins` list (by default the published app) or are served by this PC, such
+as the app's dev server.
 
 *Prototype: the field names come from community documentation and other mods and have not yet
 been confirmed in the game.*
@@ -89,6 +91,9 @@ Plugin messages are written to `BepInEx/LogOutput.log`.
 `BepInEx/config/de.cheatsheet.vs.bridge.cfg` (created on the first start with the plugin):
 
 - `Port`: default `47321`
+- `AllowedOrigins`: websites that may read the run, separated by commas, default
+  `https://brombeerstrauss.github.io` (the published app). Add your own address here if you
+  host the app somewhere else. Pages served by this PC (`localhost`) are always allowed.
 - `IntervalMs`: how often the run is read, default `500`
 - Section `Overlay`: `Language` (`en`/`de`, default `en`), `Visible`, `ToggleKey` (default `F8`), `ResetKey` (default `F9`), `Icons`, position
   `X`/`Y` and `Width` as a fraction of the screen, `Opacity`, `FontScale`, `ShareCoopPassives`
