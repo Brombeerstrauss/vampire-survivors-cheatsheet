@@ -56,6 +56,33 @@ Alternatively set the environment variable `VS_GAME_DIR`. The build copies the D
 `BepInEx/plugins/VSCheatsheetBridge/`. While the game is running the DLL is locked, and the build
 only reports a warning. Close the game, build again, start the game.
 
+## Steam Deck and Linux with Proton (untested)
+
+Nobody has tried this yet. The steps assume that Steam runs the Windows version of the game
+through Proton, which is the case if the game folder contains `VampireSurvivors.exe`. Then the
+same `win-x64` BepInEx package and the same plugin files are used as on Windows.
+
+1. On the Steam Deck, switch to Desktop Mode. In Steam, right-click the game → Manage → Browse
+   local files to open the game folder.
+2. Extract the BepInEx ZIP into the game folder, as on Windows.
+3. Let Proton load BepInEx: right-click the game → Properties → General → Launch Options, and
+   enter `WINEDLLOVERRIDES="winhttp=n,b" %command%`
+4. Start the game once and wait for BepInEx to generate the interop files, then close it.
+5. Build the plugin on a Windows PC and copy the folder `BepInEx/plugins/VSCheatsheetBridge/`
+   (the DLL and `cheatsheet-data.json`) to the same place in the game folder on the Deck. Use
+   the same game version on both devices, because the plugin is built against the game's files.
+
+Things to know:
+
+- The overlay is visible by default, so it needs no key. F8 and F9 need a keyboard, or a button
+  bound to these keys in Steam's controller settings. The position can also be set with `X` and
+  `Y` in the config file.
+- Keys and dragging use Windows functions (`user32.dll`). Proton provides them, but whether
+  they behave the same there is not confirmed. If they fail, the overlay and the server keep
+  working and only F8, F9 and dragging stop.
+- The app can only take the run from the game in a browser on the same device, because the
+  plugin only listens on `127.0.0.1`.
+
 ## Testing
 
 Start the game, begin a run, then:
