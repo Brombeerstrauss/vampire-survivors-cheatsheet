@@ -20,7 +20,9 @@ The names and evolutions in the overlay come from the app's data
 (`scripts/export-mod-data.mjs` writes `cheatsheet-data.json` next to the DLL during the build).
 
 The plugin does not change anything in the game. It only reads and only listens on `127.0.0.1`,
-so it cannot be reached from outside.
+so it cannot be reached from outside. Websites in your browser can only read the run if they
+are on the `AllowedOrigins` list (by default the published app) or are served by this PC, such
+as the app's dev server.
 
 *Prototype: the field names come from community documentation and other mods and have not yet
 been confirmed in the game.*
@@ -53,6 +55,33 @@ dotnet build mod/VSCheatsheetBridge -c Release -p:GameDir="D:\SteamLibrary\steam
 Alternatively set the environment variable `VS_GAME_DIR`. The build copies the DLL straight to
 `BepInEx/plugins/VSCheatsheetBridge/`. While the game is running the DLL is locked, and the build
 only reports a warning. Close the game, build again, start the game.
+
+## Steam Deck and Linux with Proton (untested)
+
+Nobody has tried this yet. The steps assume that Steam runs the Windows version of the game
+through Proton, which is the case if the game folder contains `VampireSurvivors.exe`. Then the
+same `win-x64` BepInEx package and the same plugin files are used as on Windows.
+
+1. On the Steam Deck, switch to Desktop Mode. In Steam, right-click the game → Manage → Browse
+   local files to open the game folder.
+2. Extract the BepInEx ZIP into the game folder, as on Windows.
+3. Let Proton load BepInEx: right-click the game → Properties → General → Launch Options, and
+   enter `WINEDLLOVERRIDES="winhttp=n,b" %command%`
+4. Start the game once and wait for BepInEx to generate the interop files, then close it.
+5. Build the plugin on a Windows PC and copy the folder `BepInEx/plugins/VSCheatsheetBridge/`
+   (the DLL and `cheatsheet-data.json`) to the same place in the game folder on the Deck. Use
+   the same game version on both devices, because the plugin is built against the game's files.
+
+Things to know:
+
+- The overlay is visible by default, so it needs no key. F8 and F9 need a keyboard, or a button
+  bound to these keys in Steam's controller settings. The position can also be set with `X` and
+  `Y` in the config file.
+- Keys and dragging use Windows functions (`user32.dll`). Proton provides them, but whether
+  they behave the same there is not confirmed. If they fail, the overlay and the server keep
+  working and only F8, F9 and dragging stop.
+- The app can only take the run from the game in a browser on the same device, because the
+  plugin only listens on `127.0.0.1`.
 
 ## Testing
 
@@ -89,6 +118,9 @@ Plugin messages are written to `BepInEx/LogOutput.log`.
 `BepInEx/config/de.cheatsheet.vs.bridge.cfg` (created on the first start with the plugin):
 
 - `Port`: default `47321`
+- `AllowedOrigins`: websites that may read the run, separated by commas, default
+  `https://brombeerstrauss.github.io` (the published app). Add your own address here if you
+  host the app somewhere else. Pages served by this PC (`localhost`) are always allowed.
 - `IntervalMs`: how often the run is read, default `500`
 - Section `Overlay`: `Language` (`en`/`de`, default `en`), `Visible`, `ToggleKey` (default `F8`), `ResetKey` (default `F9`), `Icons`, position
   `X`/`Y` and `Width` as a fraction of the screen, `Opacity`, `FontScale`, `ShareCoopPassives`

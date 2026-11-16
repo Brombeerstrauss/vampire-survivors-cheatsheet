@@ -24,7 +24,7 @@ The script downloads the wiki pages, parses the tables and rewrites all packs.
 - `game_ids.py`: adds `gameIds` to characters, weapons and items: the game's internal IDs
   from the infobox of each wiki page (field `id`, e.g. `MAGIC_MISSILE` for Magic Wand). The app
   uses them to match data from the mod in `mod/`. Runs at the end of `run.sh`, but also works on
-  its own without losing manual edits:
+  its own without losing manual edits. An entry the wiki gives no ID for keeps the IDs it has:
   `python3 -I tools/wiki-import/game_ids.py https://vampire.survivors.wiki/api.php src/data/packs`
 - `build_pack.py`: only sets `verified` when the evolution list, weapon list and item list
   agree; differences go into the `note` field.
