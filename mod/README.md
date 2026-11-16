@@ -33,7 +33,7 @@ been confirmed in the game.*
 - [BepInEx 6.0.0-be.788](https://builds.bepinex.dev/projects/bepinex_be), package
   `BepInEx-Unity.IL2CPP-win-x64`. Older MelonLoader guides no longer apply since game version
   1.16.
-- .NET SDK 6 or newer and Node.js (only for building)
+- .NET SDK 6 or newer and Node.js (only if you build the plugin yourself)
 
 ## Installing BepInEx
 
@@ -43,6 +43,22 @@ been confirmed in the game.*
 
 **Uninstall:** delete `BepInEx/`, `dotnet/`, `winhttp.dll`, `doorstop_config.ini`,
 `.doorstop_version` and `changelog.txt` from the game folder.
+
+## Installing the plugin from a release
+
+No build tools needed. Releases are on the project's
+[Releases page](https://github.com/Brombeerstrauss/vampire-survivors-cheatsheet/releases).
+
+1. Download `VSCheatsheetBridge-<version>.zip` from the newest release. Its notes say which
+   game version it was built for.
+2. Close the game and extract the ZIP into the game folder (where `VampireSurvivors.exe` is).
+   The files land in `BepInEx/plugins/VSCheatsheetBridge/`.
+3. Start the game and begin a run.
+
+**Update:** extract the new ZIP over the old files. **Remove the plugin only:** delete the
+folder `BepInEx/plugins/VSCheatsheetBridge/`.
+
+If there is no release for your game version, build the plugin yourself as described below.
 
 ## Building
 
@@ -56,6 +72,19 @@ Alternatively set the environment variable `VS_GAME_DIR`. The build copies the D
 `BepInEx/plugins/VSCheatsheetBridge/`. While the game is running the DLL is locked, and the build
 only reports a warning. Close the game, build again, start the game.
 
+### Making a release
+
+The build needs files from a game installation, so GitHub cannot build the plugin by itself.
+A release is built on a PC with the game and uploaded by hand:
+
+1. Set the new version in `<Version>` in `VSCheatsheetBridge.csproj`. The plugin and the name
+   of the ZIP take it from there.
+2. Build with `-c Release` as shown above. Besides copying the plugin into the game, this writes
+   `mod/release/VSCheatsheetBridge-<version>.zip`.
+3. Start the game and check that the overlay works.
+4. On GitHub, open Releases → Draft a new release. Create the tag `mod-v<version>`, upload the
+   ZIP, name the game version in the notes and publish.
+
 ## Steam Deck and Linux with Proton (untested)
 
 Nobody has tried this yet. The steps assume that Steam runs the Windows version of the game
@@ -68,8 +97,9 @@ same `win-x64` BepInEx package and the same plugin files are used as on Windows.
 3. Let Proton load BepInEx: right-click the game → Properties → General → Launch Options, and
    enter `WINEDLLOVERRIDES="winhttp=n,b" %command%`
 4. Start the game once and wait for BepInEx to generate the interop files, then close it.
-5. Build the plugin on a Windows PC and copy the folder `BepInEx/plugins/VSCheatsheetBridge/`
-   (the DLL and `cheatsheet-data.json`) to the same place in the game folder on the Deck. Use
+5. Extract the release ZIP into the game folder, as described under "Installing the plugin from
+   a release". Without a release, build the plugin on a Windows PC and copy the folder
+   `BepInEx/plugins/VSCheatsheetBridge/` to the same place in the game folder on the Deck. Use
    the same game version on both devices, because the plugin is built against the game's files.
 
 Things to know:
@@ -100,7 +130,7 @@ curl http://127.0.0.1:47321/state
 Example for `/state`:
 
 ```json
-{"v":1,"plugin":"0.1.0","inRun":true,"time":1731600000000,
+{"v":1,"plugin":"0.6.0","inRun":true,"time":1731600000000,
  "players":[{"index":0,"character":"ANTONIO",
    "weapons":[{"type":"WHIP","level":3}],
    "passives":[{"type":"MAXHEALTH","level":1}]}]}
