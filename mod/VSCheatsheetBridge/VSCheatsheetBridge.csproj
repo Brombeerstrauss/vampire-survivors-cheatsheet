@@ -12,7 +12,8 @@
     <ImplicitUsings>disable</ImplicitUsings>
     <AssemblyName>VSCheatsheetBridge</AssemblyName>
     <RootNamespace>VSCheatsheetBridge</RootNamespace>
-    <Version>0.2.0</Version>
+    <!-- The one place for the version: the plugin and the name of the release ZIP take it from here. -->
+    <Version>0.6.0</Version>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
@@ -40,6 +41,19 @@
     <Reference Include="Il2CppSystem"><HintPath>$(BepInExInterop)\Il2CppSystem.dll</HintPath><Private>false</Private></Reference>
   </ItemGroup>
 
+  <!-- Hands the version from above to the code as BuildInfo.Version (used by Plugin.Version). -->
+  <Target Name="GenerateBuildInfo" BeforeTargets="CoreCompile">
+    <PropertyGroup>
+      <BuildInfoFile>$(IntermediateOutputPath)BuildInfo.g.cs</BuildInfoFile>
+    </PropertyGroup>
+    <WriteLinesToFile File="$(BuildInfoFile)" Overwrite="true" WriteOnlyWhenDifferent="true"
+                      Lines="namespace VSCheatsheetBridge { internal static class BuildInfo { public const string Version = &quot;$(Version)&quot;%3B } }" />
+    <ItemGroup>
+      <Compile Include="$(BuildInfoFile)" />
+      <FileWrites Include="$(BuildInfoFile)" />
+    </ItemGroup>
+  </Target>
+
   <!-- Names and evolutions for the overlay come from the app's data (single source). Requires Node.js. -->
   <Target Name="ExportCheatsheetData" AfterTargets="Build">
     <Exec Command="node &quot;$(MSBuildThisFileDirectory)..\..\scripts\export-mod-data.mjs&quot; &quot;$(OutDir)cheatsheet-data.json&quot;" />
@@ -51,5 +65,26 @@
   -->
   <Target Name="CopyToGame" AfterTargets="ExportCheatsheetData" Condition="Exists('$(GameDir)\BepInEx\plugins')">
     <Copy SourceFiles="$(TargetPath);$(OutDir)cheatsheet-data.json" DestinationFolder="$(GameDir)\BepInEx\plugins\VSCheatsheetBridge" Retries="0" ContinueOnError="WarnAndContinue" />
+  </Target>
+
+  <!--
+    A Release build also packs the ZIP for a GitHub release into mod/release. The ZIP is
+    extracted into the game folder, so its files land in BepInEx/plugins/VSCheatsheetBridge.
+  -->
+  <Target Name="PackageRelease" AfterTargets="ExportCheatsheetData" Condition="'$(Configuration)' == 'Release'">
+    <PropertyGroup>
+      <ReleaseDir>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)../release'))</ReleaseDir>
+      <ReleaseStage>$(IntermediateOutputPath)release-zip</ReleaseStage>
+      <ReleaseZip>$([System.IO.Path]::Combine('$(ReleaseDir)', 'VSCheatsheetBridge-$(Version).zip'))</ReleaseZip>
+    </PropertyGroup>
+    <ItemGroup>
+      <ReleaseFile Include="$(TargetPath);$(OutDir)cheatsheet-data.json" />
+      <ReleaseFile Include="$(MSBuildThisFileDirectory)../../LICENSE;$(MSBuildThisFileDirectory)../../LICENSE-DATA.md" />
+    </ItemGroup>
+    <RemoveDir Directories="$(ReleaseStage)" />
+    <Copy SourceFiles="@(ReleaseFile)" DestinationFolder="$(ReleaseStage)/BepInEx/plugins/VSCheatsheetBridge" />
+    <MakeDir Directories="$(ReleaseDir)" />
+    <ZipDirectory SourceDirectory="$(ReleaseStage)" DestinationFile="$(ReleaseZip)" Overwrite="true" />
+    <Message Importance="high" Text="Release ZIP: $(ReleaseZip)" />
   </Target>
 </Project>

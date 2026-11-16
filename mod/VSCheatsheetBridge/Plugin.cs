@@ -19,7 +19,7 @@ public class Plugin : BasePlugin
 {
     public const string Guid = "de.cheatsheet.vs.bridge";
     public const string Name = "VS Cheatsheet Bridge";
-    public const string Version = "0.5.0";
+    public const string Version = BuildInfo.Version; // <Version> in VSCheatsheetBridge.csproj
 
     internal static ManualLogSource Logger;
     internal static StateServer Server;

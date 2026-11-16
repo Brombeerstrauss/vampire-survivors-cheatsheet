@@ -27,3 +27,4 @@ __pycache__
 # C#-Mod (Build-Ergebnisse)
 mod/**/bin
 mod/**/obj
+mod/release
