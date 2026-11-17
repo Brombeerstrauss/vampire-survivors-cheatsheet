@@ -33,7 +33,8 @@ been confirmed in the game.*
 - [BepInEx 6.0.0-be.788](https://builds.bepinex.dev/projects/bepinex_be), package
   `BepInEx-Unity.IL2CPP-win-x64`. Older MelonLoader guides no longer apply since game version
   1.16.
-- .NET SDK 6 or newer and Node.js (only if you build the plugin yourself)
+- .NET SDK 6 or newer and Node.js (only if you build the plugin yourself; on Linux the build
+  script downloads them if they are missing)
 
 ## Installing BepInEx
 
@@ -62,7 +63,8 @@ If there is no release for your game version, build the plugin yourself as descr
 
 ## Building
 
-Pass the game folder if the game is not in the default Steam library:
+On Linux and the Steam Deck, use the build script, see "Building on Linux or the Steam Deck"
+below. On Windows, pass the game folder if the game is not in the default Steam library:
 
 ```bash
 dotnet build mod/VSCheatsheetBridge -c Release -p:GameDir="D:\SteamLibrary\steamapps\common\Vampire Survivors"
@@ -72,6 +74,34 @@ Alternatively set the environment variable `VS_GAME_DIR`. The build copies the D
 `BepInEx/plugins/VSCheatsheetBridge/`. While the game is running the DLL is locked, and the build
 only reports a warning. Close the game, build again, start the game.
 
+### Building on Linux or the Steam Deck
+
+`mod/build-linux.sh` builds the plugin on Linux, for example on the Steam Deck itself, and
+copies it into the game. No Windows PC is needed. It has not been run on a Steam Deck yet.
+
+1. Set up the game first: steps 1 to 4 under "Steam Deck and Linux with Proton" (BepInEx
+   installed, launch option set, game started once).
+2. Download the project from GitHub (Code → Download ZIP) and extract it, for example into
+   `Downloads`.
+3. Open a terminal (on the Steam Deck in Desktop Mode: Konsole) and run:
+
+   ```bash
+   cd ~/Downloads/vampire-survivors-cheatsheet-main
+   bash mod/build-linux.sh
+   ```
+
+The script finds the game in your Steam libraries, also on an SD card. Otherwise pass the game
+folder: `bash mod/build-linux.sh "/path/to/Vampire Survivors"`. Before building it checks that
+BepInEx is set up and says what is missing.
+
+It needs an internet connection. If the .NET SDK or Node.js are not installed, it downloads them
+into `~/.cache/vs-cheatsheet-build`: the .NET SDK with Microsoft's install script, Node.js from
+nodejs.org, checked against its published checksum. Together with the build's caches this takes
+about 1 GB. .NET telemetry is turned off. Nothing is installed system-wide: delete that folder
+to remove all of it.
+
+At the end the plugin is in the game and the release ZIP in `mod/release/`.
+
 ### Making a release
 
 The build needs files from a game installation, so GitHub cannot build the plugin by itself.
@@ -79,8 +109,8 @@ A release is built on a PC with the game and uploaded by hand:
 
 1. Set the new version in `<Version>` in `VSCheatsheetBridge.csproj`. The plugin and the name
    of the ZIP take it from there.
-2. Build with `-c Release` as shown above. Besides copying the plugin into the game, this writes
-   `mod/release/VSCheatsheetBridge-<version>.zip`.
+2. Build with `-c Release` as shown above, or with `mod/build-linux.sh` on Linux. Besides
+   copying the plugin into the game, this writes `mod/release/VSCheatsheetBridge-<version>.zip`.
 3. Start the game and check that the overlay works.
 4. On GitHub, open Releases → Draft a new release. Create the tag `mod-v<version>`, upload the
    ZIP, name the game version in the notes and publish.
@@ -97,10 +127,13 @@ same `win-x64` BepInEx package and the same plugin files are used as on Windows.
 3. Let Proton load BepInEx: right-click the game → Properties → General → Launch Options, and
    enter `WINEDLLOVERRIDES="winhttp=n,b" %command%`
 4. Start the game once and wait for BepInEx to generate the interop files, then close it.
-5. Extract the release ZIP into the game folder, as described under "Installing the plugin from
-   a release". Without a release, build the plugin on a Windows PC and copy the folder
-   `BepInEx/plugins/VSCheatsheetBridge/` to the same place in the game folder on the Deck. Use
-   the same game version on both devices, because the plugin is built against the game's files.
+5. Install the plugin in one of these ways:
+   - Extract the release ZIP into the game folder, see "Installing the plugin from a release".
+   - Build it on the Deck itself with `mod/build-linux.sh`, see "Building on Linux or the Steam
+     Deck".
+   - Build it on a Windows PC and copy the folder `BepInEx/plugins/VSCheatsheetBridge/` to the
+     same place in the game folder on the Deck. Use the same game version on both devices,
+     because the plugin is built against the game's files.
 
 Things to know:
 
