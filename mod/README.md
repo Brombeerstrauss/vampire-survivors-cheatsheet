@@ -7,10 +7,18 @@ character, weapons and passive items of every player and
   next evolution (faded = missing) and the result. The weapon name is red (ingredients
   missing), yellow (everything there, but a level is still missing; below it "Needed to evolve"
   with current/required level), green (ready, next chest) or white (evolved or no
-  evolution). At the very bottom a "missing:" line lists all missing ingredients. Labels are
-  shown in German or English depending on the `Language` setting.
-- Controls: **F8** shows and hides it, the **left mouse button** on the panel moves it (the
-  position is saved), **F9** resets it to the default position.
+  evolution). If the evolved weapon can evolve again (e.g. a union with it), a faded "then:"
+  line shows that step too, up to two steps ahead; steps with content from DLCs that are not
+  installed are left out. At the very bottom a "missing:" line lists all missing ingredients.
+- Language: by default the overlay follows the game's language (German or English). Weapon and
+  item names then come from the game itself, exactly as it shows them. If the game's texts
+  can't be read, the names come from the app's data: in German the official name or the app's
+  own translation.
+- Width: the panel grows by itself for long names; names that are still too long wrap.
+- Controls: a **click on the title bar** (`[-] Evolutions`) collapses the overlay to that bar
+  and expands it again; collapsed, it shows how many evolutions are ready. **Dragging** with the
+  left mouse button anywhere on the panel moves it (the position is saved). **F8** shows and
+  hides it, **F9** resets it to the default position.
 - Co-op: one block per player. Other players' passive items count toward your own
   evolutions and are then tagged with their origin ("P2"). Can be turned off with `ShareCoopPassives`.
 - also serves the run locally at `http://127.0.0.1:47321` so the
@@ -140,9 +148,10 @@ Things to know:
 - The overlay is visible by default, so it needs no key. F8 and F9 need a keyboard, or a button
   bound to these keys in Steam's controller settings. The position can also be set with `X` and
   `Y` in the config file.
-- Keys and dragging use Windows functions (`user32.dll`). Proton provides them, but whether
-  they behave the same there is not confirmed. If they fail, the overlay and the server keep
-  working and only F8, F9 and dragging stop.
+- Keys, clicking and dragging use Windows functions (`user32.dll`). Proton provides them, but
+  whether they behave the same there is not confirmed. If they fail, the overlay and the server
+  keep working and only F8, F9, collapsing and dragging stop. `Collapsed` in the config file
+  collapses the overlay without a mouse.
 - The app can only take the run from the game in a browser on the same device, because the
   plugin only listens on `127.0.0.1`.
 
@@ -185,5 +194,10 @@ Plugin messages are written to `BepInEx/LogOutput.log`.
   `https://brombeerstrauss.github.io` (the published app). Add your own address here if you
   host the app somewhere else. Pages served by this PC (`localhost`) are always allowed.
 - `IntervalMs`: how often the run is read, default `500`
-- Section `Overlay`: `Language` (`en`/`de`, default `en`), `Visible`, `ToggleKey` (default `F8`), `ResetKey` (default `F9`), `Icons`, position
-  `X`/`Y` and `Width` as a fraction of the screen, `Opacity`, `FontScale`, `ShareCoopPassives`
+- Section `Overlay`: `Language` (`auto` = like the game, `de` or `en`; default `auto`), `Visible`,
+  `Collapsed` (only the title bar), `ToggleKey` (default `F8`), `ResetKey` (default `F9`), `Icons`,
+  position `X`/`Y` and `Width` as a fraction of the screen (the width grows by itself for long
+  names, up to 0.26), `Opacity`, `FontScale`, `ShareCoopPassives`
+
+Older versions of the plugin wrote `Language = de` or `Language = en` into the config file. Set
+it to `auto` if the overlay should follow the game's language.

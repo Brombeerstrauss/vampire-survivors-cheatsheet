@@ -14,27 +14,42 @@ namespace VSCheatsheetBridge;
 // elements when the run changes; Unity draws them itself, without plugin code per frame.
 // Other stable mods for this game do it the same way.
 //
-// Layout per weapon:
+// Layout:
+//   [-] Evolutions                     ::     <- title bar: click collapses/expands, drag moves
 //   [image] Name                        5/8
 //           [ingredient] [ingredient] -> [result]
 //           missing: Empty Tome
+// Collapsed, only the title bar remains: "[+] Evolutions  2 ready  ::".
+//
+// Width: the configured width, wider for long names (up to MaxAutoWidth of the screen);
+// names that are still too long wrap onto a second line.
 internal sealed class UiOverlay
 {
     private static readonly Color Gold = new(1f, 0.84f, 0.37f);
     private static readonly Color Red = new(1f, 0.55f, 0.55f);
     private static readonly Color Green = new(0.49f, 1f, 0.6f);
     private static readonly Color Grey = new(0.6f, 0.6f, 0.6f);
+    private static readonly Color Light = new(0.88f, 0.88f, 0.88f);
     private static readonly Color Blue = new(0.62f, 0.8f, 1f);
+    private static readonly Color HeaderShade = new(0f, 0f, 0f, 0.35f);
+
+    /// <summary>The panel grows up to this fraction of the screen width for long names.</summary>
+    private const float MaxAutoWidth = 0.26f;
 
     private GameObject _root;
     private RectTransform _panel;
     private Image _background;
     private TMP_FontAsset _font;
+    private TextMeshProUGUI _measure;
+    private float _headerHeight;
 
     /// <summary>Panel position in screen pixels, origin top left (for dragging).</summary>
     public Rect ScreenRect { get; private set; }
 
     public bool Visible => _root != null && _root.activeSelf;
+
+    /// <summary>Is the point (screen pixels, origin top left) on the title bar?</summary>
+    public bool OnHeader(Vector2 point) => ScreenRect.Contains(point) && point.y - ScreenRect.y <= _headerHeight;
 
     /// <summary>Moves the panel without rebuilding (top left corner in pixels, from top left).</summary>
     public void MoveTo(float x, float y)
@@ -53,13 +68,13 @@ internal sealed class UiOverlay
     }
 
     /// <summary>Rebuilds the overlay for the current run. Only call on changes.</summary>
-    public void Show(List<PlayerPanel> panels)
+    public void Show(List<PlayerPanel> panels, bool collapsed)
     {
         if (panels == null || panels.Count == 0) { Hide(); return; }
         if (!EnsureRoot()) return;
         Clear();
         MissingIcons = false;
-        Build(panels);
+        Build(panels, collapsed);
         _root.SetActive(true);
     }
 
@@ -106,7 +121,22 @@ internal sealed class UiOverlay
     {
         for (int i = _panel.childCount - 1; i >= 0; i--)
             Object.Destroy(_panel.GetChild(i).gameObject);
+        _measure = null;
     }
+
+    // Size of a text, measured with an invisible text element in the panel (removed with the
+    // next Clear). width > 0: with line breaks at that width (for the height).
+    private Vector2 MeasureText(string text, float size, bool bold, float width = 0f)
+    {
+        if (string.IsNullOrEmpty(text)) return new Vector2(0f, 0f);
+        if (_measure == null) _measure = Text(0f, 0f, 1f, 1f, "", size, new Color(0f, 0f, 0f, 0f));
+        _measure.fontSize = size;
+        _measure.fontStyle = bold ? FontStyles.Bold : FontStyles.Normal;
+        _measure.enableWordWrapping = width > 0f;
+        return _measure.GetPreferredValues(text, width > 0f ? width : 100000f, 0f);
+    }
+
+    private float Measure(string text, float size, bool bold) => MeasureText(text, size, bold).x;
 
     // ---- Elements ------------------------------------------------------------------------
 
@@ -185,16 +215,93 @@ internal sealed class UiOverlay
 
     // ---- Layout --------------------------------------------------------------------------
 
-    private void Build(List<PlayerPanel> panels)
+    private void Build(List<PlayerPanel> panels, bool collapsed)
     {
         float sw = Screen.width, sh = Screen.height;
         float f = Mathf.Max(11f, sh / 62f * Plugin.FontScale.Value);
-        float width = sw * Plugin.OverlayWidth.Value;
         float pad = f * 0.5f, gap = Mathf.Round(f * 0.35f);
         float icon = Mathf.Round(f * 1.8f), part = Mathf.Round(f * 1.45f);
         float lineH = f * 1.4f, small = f * 0.82f, badge = f * 0.62f;
-        float inner = width - 2 * pad;
-        float x = pad, y = pad;
+        float levelWidth = f * 2.8f;
+        float headerH = Mathf.Round(f * 1.5f);
+
+        // Title bar. Collapsed it also says how many evolutions are ready.
+        int ready = 0;
+        foreach (PlayerPanel panel in panels)
+            foreach (WeaponRow row in panel.Rows)
+                if (row.Status == RowStatus.Ready) ready++;
+        string toggle = collapsed ? "[+]" : "[-]";
+        string title = Plugin.Advisor.Text("Entwicklungen", "Evolutions");
+        string summary = collapsed && ready > 0 ? Plugin.Advisor.Text($"{ready} bereit", $"{ready} ready") : null;
+        const string grip = "::";
+        float toggleW = Measure(toggle, small, true);
+        float titleW = Measure(title, small, false);
+        float summaryW = Measure(summary, small, true);
+        float gripW = Measure(grip, small, true);
+        float headerInner = toggleW + gap + titleW + (summary != null ? gap * 2 + summaryW : 0f) + gap * 3 + gripW;
+
+        // Width: as configured, wider for long names up to MaxAutoWidth; longer names wrap.
+        var nameWidths = new Dictionary<string, float>();
+        float NameWidth(string name)
+        {
+            name ??= "";
+            if (!nameWidths.TryGetValue(name, out float w)) nameWidths[name] = w = Measure(name, f, true);
+            return w;
+        }
+        float inner;
+        if (collapsed)
+        {
+            inner = headerInner;
+        }
+        else
+        {
+            float baseInner = sw * Plugin.OverlayWidth.Value - 2 * pad;
+            float maxInner = Mathf.Max(baseInner, sw * MaxAutoWidth - 2 * pad);
+            float needed = headerInner;
+            foreach (PlayerPanel panel in panels)
+            {
+                if (panel.Title != null) needed = Mathf.Max(needed, NameWidth(panel.Title));
+                foreach (WeaponRow row in panel.Rows)
+                    needed = Mathf.Max(needed, icon + 2 * gap + NameWidth(row.Weapon.Name) + levelWidth);
+            }
+            inner = Mathf.Clamp(needed, baseInner, maxInner);
+        }
+        float width = inner + 2 * pad;
+        _headerHeight = headerH;
+
+        Box(0f, 0f, width, headerH, HeaderShade);
+        float hx = pad;
+        Text(hx, 0f, toggleW + 4f, headerH, toggle, small, Gold, TextAlignmentOptions.MidlineLeft, bold: true);
+        hx += toggleW + gap;
+        Text(hx, 0f, titleW + 4f, headerH, title, small, Light, TextAlignmentOptions.MidlineLeft);
+        hx += titleW + gap * 2;
+        if (summary != null) Text(hx, 0f, summaryW + 4f, headerH, summary, small, Green, TextAlignmentOptions.MidlineLeft, bold: true);
+        Text(width - pad - gripW - 4f, 0f, gripW + 4f, headerH, grip, small, Grey, TextAlignmentOptions.MidlineRight, bold: true);
+
+        float x = pad, y = headerH;
+        if (!collapsed)
+        {
+            y += pad;
+            y = BuildRuns(panels, x, y, inner, f, gap, icon, part, lineH, small, badge, levelWidth, NameWidth);
+            y += pad;
+        }
+
+        float height = y;
+        float px = Mathf.Clamp(sw * Plugin.OverlayX.Value, 0f, Mathf.Max(0f, sw - width));
+        float py = Mathf.Clamp(sh * Plugin.OverlayY.Value, 0f, Mathf.Max(0f, sh - height));
+        _panel.anchoredPosition = new Vector2(px, -py);
+        _panel.sizeDelta = new Vector2(width, height);
+        ScreenRect = new Rect(px, py, width, height);
+        _background.color = new Color(0f, 0f, 0f, Plugin.OverlayOpacity.Value);
+    }
+
+    // The players' weapons below the title bar. Returns the y below the last element.
+    private float BuildRuns(List<PlayerPanel> panels, float x, float y, float inner, float f, float gap,
+        float icon, float part, float lineH, float small, float badge, float levelWidth, System.Func<string, float> nameWidth)
+    {
+        float indent = x + icon + gap;
+        float lineWidth = inner - icon - gap;
+        float nameAvail = inner - icon - 2 * gap - levelWidth;
 
         for (int p = 0; p < panels.Count; p++)
         {
@@ -211,37 +318,32 @@ internal sealed class UiOverlay
                 // Red: ingredients missing; yellow: everything there, but a condition is open (e.g. max level);
                 // green: ready; white: evolved or no evolution.
                 Color nameColor = row.Status switch { RowStatus.Missing => Red, RowStatus.NeedsMax => Gold, RowStatus.Ready => Green, _ => Color.white };
-                float levelWidth = f * 2.8f;
-                float textY = y + (icon - lineH) / 2f;
-                IconAt(x, y, icon, row.Weapon, 1f, badge);
-                Text(x + icon + gap, textY, inner - icon - gap - levelWidth, lineH, row.Weapon.Name, f, nameColor, TextAlignmentOptions.MidlineLeft, bold: true);
+                string name = row.Weapon.Name ?? "";
+
+                // Names that don't fit even in the widened panel wrap onto further lines.
+                float nameW = nameWidth(name);
+                bool wrap = nameW > nameAvail;
+                float nameH = lineH;
+                if (wrap)
+                {
+                    float lines = Mathf.Ceil(nameW / Mathf.Max(1f, nameAvail));
+                    nameH = Mathf.Max(MeasureText(name, f, true, nameAvail).y, lines * f * 1.3f);
+                }
+                float rowH = Mathf.Max(icon, nameH);
+
+                IconAt(x, y + (rowH - icon) / 2f, icon, row.Weapon, 1f, badge);
+                Text(indent, y + (rowH - nameH) / 2f, nameAvail, nameH, name, f, nameColor, TextAlignmentOptions.MidlineLeft, bold: true, wrap: wrap);
                 if (row.Weapon.Max > 1)
                 {
                     bool max = row.Weapon.Level >= row.Weapon.Max;
-                    Text(x + inner - levelWidth, textY, levelWidth, lineH, max ? "MAX" : $"{row.Weapon.Level}/{row.Weapon.Max}", small,
+                    Text(x + inner - levelWidth, y + (rowH - lineH) / 2f, levelWidth, lineH, max ? "MAX" : $"{row.Weapon.Level}/{row.Weapon.Max}", small,
                         max || row.Weapon.NeedsMax ? Gold : Grey, TextAlignmentOptions.MidlineRight);
                 }
-                y += icon + gap * 0.5f;
-
-                float indent = x + icon + gap;
-                float lineWidth = inner - icon - gap;
+                y += rowH + gap * 0.5f;
 
                 if (row.Result != null)
                 {
-                    float cx = indent;
-                    foreach (Icon ing in row.Parts)
-                    {
-                        IconAt(cx, y, part, ing, ing.Owned ? 1f : 0.3f, badge);
-                        cx += part + gap;
-                    }
-                    if (row.Parts.Count > 0)
-                    {
-                        Text(cx - gap * 0.5f, y, f * 1.6f, part, "->", f, Gold, TextAlignmentOptions.Midline, bold: true);
-                        cx += f * 1.4f;
-                    }
-                    bool ready = row.Status == RowStatus.Ready;
-                    if (ready) Box(cx - 2f, y - 2f, part + 4f, part + 4f, new Color(Green.r, Green.g, Green.b, 0.45f));
-                    IconAt(cx, y, part, row.Result, ready ? 1f : 0.85f, badge);
+                    EvolutionLine(indent, y, part, gap, f, badge, row.Parts, row.Result, row.Status == RowStatus.Ready, 0.85f);
                     y += part + gap * 0.5f;
                 }
 
@@ -262,6 +364,18 @@ internal sealed class UiOverlay
                     }
                     y += part + gap * 0.5f;
                 }
+
+                // What the evolved weapon can become next (e.g. a union with it), faded as an outlook.
+                foreach (EvolutionStep step in row.Next)
+                {
+                    string label = Plugin.Advisor.Text("danach:", "then:");
+                    TextMeshProUGUI t = Text(indent, y, lineWidth, part, label, small, Grey, TextAlignmentOptions.MidlineLeft);
+                    float lx = indent + t.GetPreferredValues(label, lineWidth, 0f).x + gap * 2;
+                    float stepWidth = step.Parts.Count * (part + gap) + (step.Parts.Count > 0 ? f * 1.4f : 0f) + part;
+                    if (lx + stepWidth > indent + lineWidth) { lx = indent + gap * 2; y += part + gap * 0.5f; }
+                    EvolutionLine(lx, y, part, gap, f, badge, step.Parts, step.Result, false, 0.7f);
+                    y += part + gap * 0.5f;
+                }
                 y += gap;
             }
 
@@ -280,7 +394,7 @@ internal sealed class UiOverlay
                 y += part;
             }
 
-            // A "missing:" line with all of this player's missing ingredients.
+            // A "missing:" line with all of this player's missing ingredients (next evolution only).
             var missingIcons = new List<Icon>();
             var seen = new HashSet<string>();
             foreach (WeaponRow row in panel.Rows)
@@ -302,13 +416,24 @@ internal sealed class UiOverlay
                 y += part;
             }
         }
+        return y;
+    }
 
-        float px = Mathf.Clamp(sw * Plugin.OverlayX.Value, 0f, Mathf.Max(0f, sw - width));
-        float py = Mathf.Clamp(sh * Plugin.OverlayY.Value, 0f, Mathf.Max(0f, sh - (y + pad)));
-        _panel.anchoredPosition = new Vector2(px, -py);
-        _panel.sizeDelta = new Vector2(width, y + pad);
-        ScreenRect = new Rect(px, py, width, y + pad);
-        _background.color = new Color(0f, 0f, 0f, Plugin.OverlayOpacity.Value);
+    // [ingredient] [ingredient] -> [result]; missing ingredients faded.
+    private void EvolutionLine(float cx, float y, float part, float gap, float f, float badge, List<Icon> parts, Icon result, bool ready, float resultAlpha)
+    {
+        foreach (Icon ing in parts)
+        {
+            IconAt(cx, y, part, ing, ing.Owned ? 1f : 0.3f, badge);
+            cx += part + gap;
+        }
+        if (parts.Count > 0)
+        {
+            Text(cx - gap * 0.5f, y, f * 1.6f, part, "->", f, Gold, TextAlignmentOptions.Midline, bold: true);
+            cx += f * 1.4f;
+        }
+        if (ready) Box(cx - 2f, y - 2f, part + 4f, part + 4f, new Color(Green.r, Green.g, Green.b, 0.45f));
+        IconAt(cx, y, part, result, ready ? 1f : resultAlpha, badge);
     }
 
     private static string Initials(string name)

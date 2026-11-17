@@ -13,7 +13,7 @@
     <AssemblyName>VSCheatsheetBridge</AssemblyName>
     <RootNamespace>VSCheatsheetBridge</RootNamespace>
     <!-- The one place for the version: the plugin and the name of the release ZIP take it from here. -->
-    <Version>0.6.0</Version>
+    <Version>0.7.0</Version>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
