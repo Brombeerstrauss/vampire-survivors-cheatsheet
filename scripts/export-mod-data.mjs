@@ -27,9 +27,11 @@ const gameIdMap = (entries) => {
 }
 const names = {}
 for (const e of [...characters, ...weapons, ...passives]) {
-  // g: first game ID, so the plugin can find the in-game image
+  // g: first game ID, so the plugin can find the in-game image and the game's own name.
+  // de: official German name, otherwise our own translation, so the German overlay has no
+  // English names in between (the plugin prefers the game's own German name when it can read it).
   names[e.id] = {
-    de: e.nameDe ?? e.name,
+    de: e.nameDe ?? e.nameDeHint ?? e.name,
     en: e.name,
     ...(e.maxLevel ? { max: e.maxLevel } : {}),
     ...(e.gameIds?.length ? { g: e.gameIds[0] } : {}),

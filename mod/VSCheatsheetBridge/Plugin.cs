@@ -27,6 +27,7 @@ public class Plugin : BasePlugin
     internal static EvolutionAdvisor Advisor;
 
     internal static ConfigEntry<bool> OverlayVisible;
+    internal static ConfigEntry<bool> OverlayCollapsed;
     internal static ConfigEntry<KeyCode> ToggleKey;
     internal static ConfigEntry<KeyCode> ResetKey;
     internal static ConfigEntry<float> OverlayX;
@@ -46,13 +47,17 @@ public class Plugin : BasePlugin
             "Websites that may read the run, separated by commas. Pages served by this PC (localhost) are always allowed.");
         ConfigEntry<int> interval = Config.Bind("Server", "IntervalMs", 500,
             "How often the run is read (milliseconds).");
-        ConfigEntry<string> language = Config.Bind("Overlay", "Language", "en", "Overlay language: en or de.");
+        ConfigEntry<string> language = Config.Bind("Overlay", "Language", "auto",
+            "Overlay language: auto (same as the game), de or en. Weapon and item names come from the game when it runs in this language.");
         OverlayVisible = Config.Bind("Overlay", "Visible", true, "Show the overlay on startup.");
+        OverlayCollapsed = Config.Bind("Overlay", "Collapsed", false,
+            "Only show the title bar. In the game, click the title bar to collapse or expand the overlay.");
         ToggleKey = Config.Bind("Overlay", "ToggleKey", KeyCode.F8, "Key to show and hide the overlay.");
         ResetKey = Config.Bind("Overlay", "ResetKey", KeyCode.F9, "Key to reset the overlay to its default position.");
         OverlayX = Config.Bind("Overlay", "X", 0.005f, "Left edge, fraction of the screen width (0 to 1). Saved when dragging with the mouse.");
         OverlayY = Config.Bind("Overlay", "Y", 0.11f, "Top edge, fraction of the screen height (0 to 1). Saved when dragging with the mouse.");
-        OverlayWidth = Config.Bind("Overlay", "Width", 0.19f, "Width, fraction of the screen width.");
+        OverlayWidth = Config.Bind("Overlay", "Width", 0.19f,
+            "Width, fraction of the screen width. Grows by itself for long names (up to 0.26), longer names wrap.");
         OverlayOpacity = Config.Bind("Overlay", "Opacity", 0.6f, "Background opacity (0 to 1).");
         FontScale = Config.Bind("Overlay", "FontScale", 1f, "Font size (1 = default).");
         ShareCoopPassives = Config.Bind("Overlay", "ShareCoopPassives", true,
@@ -63,7 +68,7 @@ public class Plugin : BasePlugin
         string dataPath = Path.Combine(Path.GetDirectoryName(typeof(Plugin).Assembly.Location) ?? ".", "cheatsheet-data.json");
         try
         {
-            Advisor = new EvolutionAdvisor(CheatsheetData.Load(dataPath), language.Value != "en");
+            Advisor = new EvolutionAdvisor(CheatsheetData.Load(dataPath), language.Value);
         }
         catch (Exception ex)
         {
@@ -75,7 +80,8 @@ public class Plugin : BasePlugin
 
         ClassInjector.RegisterTypeInIl2Cpp<BridgeBehaviour>();
         AddComponent<BridgeBehaviour>();
-        Logger.LogInfo($"{Name} {Version} running on http://127.0.0.1:{port.Value}/state, toggle overlay with {ToggleKey.Value}");
+        Logger.LogInfo($"{Name} {Version} running on http://127.0.0.1:{port.Value}/state, toggle overlay with {ToggleKey.Value}, " +
+            "click its title bar to collapse/expand, drag it with the left mouse button");
     }
 
     public override bool Unload()
@@ -108,9 +114,27 @@ public class BridgeBehaviour : MonoBehaviour
     [System.Runtime.InteropServices.DllImport("user32.dll")]
     private static extern IntPtr GetActiveWindow();
 
+    [System.Runtime.InteropServices.DllImport("user32.dll")]
+    private static extern IntPtr GetForegroundWindow();
+
+    [System.Runtime.InteropServices.DllImport("user32.dll")]
+    private static extern uint GetWindowThreadProcessId(IntPtr hWnd, out uint processId);
+
+    [System.Runtime.InteropServices.StructLayout(System.Runtime.InteropServices.LayoutKind.Sequential)]
+    private struct RECT { public int Left, Top, Right, Bottom; }
+
+    [System.Runtime.InteropServices.DllImport("user32.dll")]
+    private static extern bool GetClientRect(IntPtr hWnd, out RECT rect);
+
+    /// <summary>Pixels the mouse must move with the button held before the panel follows (below: a click).</summary>
+    private const float DragThreshold = 5f;
+
     private bool _resetDown;
     private bool _mouseDown;
+    private bool _pressed;
+    private bool _pressOnHeader;
     private bool _dragging;
+    private Vector2 _pressPos;
     private Vector2 _dragOffset;
 
     private readonly Stopwatch _clock = Stopwatch.StartNew();
@@ -152,12 +176,14 @@ public class BridgeBehaviour : MonoBehaviour
             // Only read image names once the stage has surely finished loading.
             if (_inRun && Plugin.Icons.Value && !GameSprites.Ready && now - _runStartedAt > 3000)
                 GameSprites.LoadFrames();
-            if (GameSprites.Ready != _iconsReady) { _iconsReady = GameSprites.Ready; _dirty = true; }
+            // With the game's data read, later evolution steps from DLCs that are not installed disappear.
+            bool gameDataChanged = GameSprites.Ready != _iconsReady;
+            if (gameDataChanged) { _iconsReady = GameSprites.Ready; _dirty = true; }
             if (Screen.width != _screenW || Screen.height != _screenH) { _screenW = Screen.width; _screenH = Screen.height; _dirty = true; }
-            if (key != _key)
+            if (key != _key || gameDataChanged)
             {
                 _key = key;
-                _panels = Plugin.Advisor?.Build(snap, Plugin.ShareCoopPassives.Value);
+                _panels = Plugin.Advisor?.Build(snap, Plugin.ShareCoopPassives.Value, GameSprites.Knows);
                 _dirty = true;
             }
             // If images were missing because the game is still loading the atlas: rebuild a few times later.
@@ -172,9 +198,10 @@ public class BridgeBehaviour : MonoBehaviour
 
     private void Refresh()
     {
+        if (_dragging) return; // rebuild after letting go, otherwise the panel jumps back
         _dirty = false;
         if (!Plugin.OverlayVisible.Value || !_inRun) { _ui.Hide(); return; }
-        _ui.Show(_panels);
+        _ui.Show(_panels, Plugin.OverlayCollapsed.Value);
         if (_ui.MissingIcons && _iconRetries < 6) { _iconRetries++; _retryIconsAt = _clock.Elapsed.TotalMilliseconds + 5000; }
         else if (!_ui.MissingIcons) _iconRetries = 0;
     }
@@ -210,44 +237,94 @@ public class BridgeBehaviour : MonoBehaviour
         }
     }
 
-    // Dragging with the left mouse button, directly via Windows (window coordinates, origin top
-    // left like the panel). On release the position is saved to the config.
+    // Mouse on the panel, read directly from Windows. Press and move: drag (the position is saved
+    // to the config on release). Press and release on the title bar without moving: collapse or expand.
     private void PollDrag()
     {
         try
         {
-            if (!_ui.Visible || !Application.isFocused) { _dragging = false; return; }
+            if (!_ui.Visible || !Application.isFocused) { _pressed = _dragging = false; return; }
             bool down = (GetAsyncKeyState(0x01) & 0x8000) != 0;
             if (!down && !_mouseDown) return;
-
-            IntPtr hwnd = GetActiveWindow();
-            if (hwnd == IntPtr.Zero || !GetCursorPos(out POINT p) || !ScreenToClient(hwnd, ref p)) return;
-            var mouse = new Vector2(p.X, p.Y);
+            bool wasDown = _mouseDown;
+            _mouseDown = down;
+            if (!TryGetMouse(out Vector2 mouse))
+            {
+                if (!down) _pressed = _dragging = false;
+                return;
+            }
             Rect r = _ui.ScreenRect;
 
-            if (down && !_mouseDown && r.Contains(mouse))
+            if (down && !wasDown)
             {
-                _dragging = true;
+                _pressed = r.Contains(mouse);
+                _pressOnHeader = _pressed && _ui.OnHeader(mouse);
+                _dragging = false;
+                _pressPos = mouse;
                 _dragOffset = mouse - r.position;
             }
-            else if (down && _dragging)
+            else if (down && _pressed)
             {
-                float x = Mathf.Clamp(mouse.x - _dragOffset.x, 0f, Mathf.Max(0f, Screen.width - r.width));
-                float y = Mathf.Clamp(mouse.y - _dragOffset.y, 0f, Mathf.Max(0f, Screen.height - r.height));
-                _ui.MoveTo(x, y);
+                float dx = mouse.x - _pressPos.x, dy = mouse.y - _pressPos.y;
+                if (!_dragging && dx * dx + dy * dy > DragThreshold * DragThreshold) _dragging = true;
+                if (_dragging)
+                {
+                    float x = Mathf.Clamp(mouse.x - _dragOffset.x, 0f, Mathf.Max(0f, Screen.width - r.width));
+                    float y = Mathf.Clamp(mouse.y - _dragOffset.y, 0f, Mathf.Max(0f, Screen.height - r.height));
+                    _ui.MoveTo(x, y);
+                }
             }
-            else if (!down && _dragging)
+            else if (!down && _pressed)
             {
-                _dragging = false;
-                Plugin.OverlayX.Value = _ui.ScreenRect.x / Mathf.Max(1, Screen.width);
-                Plugin.OverlayY.Value = _ui.ScreenRect.y / Mathf.Max(1, Screen.height);
+                _pressed = false;
+                if (_dragging)
+                {
+                    _dragging = false;
+                    Plugin.OverlayX.Value = _ui.ScreenRect.x / Mathf.Max(1, Screen.width);
+                    Plugin.OverlayY.Value = _ui.ScreenRect.y / Mathf.Max(1, Screen.height);
+                }
+                else if (_pressOnHeader)
+                {
+                    Plugin.OverlayCollapsed.Value = !Plugin.OverlayCollapsed.Value;
+                    _dirty = true;
+                }
+                if (_dirty) Refresh();
             }
-            _mouseDown = down;
         }
         catch (Exception ex)
         {
+            _pressed = _dragging = false;
             RunReader.WarnOnce("drag", ex);
         }
+    }
+
+    // Mouse position in Unity's screen pixels, origin top left like the panel.
+    private static bool TryGetMouse(out Vector2 mouse)
+    {
+        mouse = new Vector2(0f, 0f);
+        IntPtr hwnd = GameWindow();
+        if (hwnd == IntPtr.Zero || !GetCursorPos(out POINT p) || !ScreenToClient(hwnd, ref p)) return false;
+        float x = p.X, y = p.Y;
+        // The window can be larger than the picture Unity renders (e.g. full screen with a lower
+        // resolution): convert window pixels to Unity pixels.
+        if (GetClientRect(hwnd, out RECT c) && c.Right > 0 && c.Bottom > 0 && (c.Right != Screen.width || c.Bottom != Screen.height))
+        {
+            x *= Screen.width / (float)c.Right;
+            y *= Screen.height / (float)c.Bottom;
+        }
+        mouse = new Vector2(x, y);
+        return true;
+    }
+
+    // The game window: the active window of this thread, otherwise the foreground window if it
+    // belongs to the game's process.
+    private static IntPtr GameWindow()
+    {
+        IntPtr hwnd = GetActiveWindow();
+        if (hwnd != IntPtr.Zero) return hwnd;
+        hwnd = GetForegroundWindow();
+        if (hwnd != IntPtr.Zero && GetWindowThreadProcessId(hwnd, out uint pid) != 0 && pid == (uint)Environment.ProcessId) return hwnd;
+        return IntPtr.Zero;
     }
 
     private static int VirtualKey(KeyCode key)

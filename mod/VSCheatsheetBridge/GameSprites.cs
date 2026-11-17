@@ -16,14 +16,23 @@ internal static class GameSprites
 {
     /// <summary>Game ID -> (frame name, atlas), as plain .NET strings.</summary>
     private static Dictionary<string, (string frame, string texture)> _frames;
+    /// <summary>All weapon and item IDs in the game's data (null: not read).</summary>
+    private static HashSet<string> _ids;
     private static readonly Dictionary<string, float> MissUntil = new();
 
     public static bool Ready => _frames != null;
+
+    /// <summary>
+    /// Does the game have this weapon or item? Missing for DLCs that are not installed.
+    /// True as long as the game's data has not been read (unknown).
+    /// </summary>
+    public static bool Knows(string gameId) => _ids == null || string.IsNullOrEmpty(gameId) || _ids.Contains(gameId);
 
     /// <summary>Forgets everything, e.g. when a run ends (atlases may get unloaded).</summary>
     public static void Reset()
     {
         _frames = null;
+        _ids = null;
         Sprites.Clear();
         MissUntil.Clear();
     }
@@ -96,8 +105,10 @@ internal static class GameSprites
     private static void ParseFrames(string json, Dictionary<string, (string, string)> frames)
     {
         using var doc = System.Text.Json.JsonDocument.Parse(json);
+        var ids = new HashSet<string>();
         foreach (var prop in doc.RootElement.EnumerateObject())
         {
+            ids.Add(prop.Name);
             var value = prop.Value;
             var first = value.ValueKind == System.Text.Json.JsonValueKind.Array && value.GetArrayLength() > 0 ? value[0] : value;
             if (first.ValueKind != System.Text.Json.JsonValueKind.Object) continue;
@@ -105,6 +116,8 @@ internal static class GameSprites
             string texture = first.TryGetProperty("texture", out var t) && t.ValueKind == System.Text.Json.JsonValueKind.String ? t.GetString() : null;
             if (!string.IsNullOrEmpty(frame)) frames[prop.Name] = (frame, texture);
         }
+        // Too few entries means the data was not read properly: then rather show everything.
+        if (ids.Count >= 50) _ids = ids;
     }
 
     private static readonly Dictionary<string, Sprite> Sprites = new();
