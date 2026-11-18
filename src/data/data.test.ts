@@ -2,8 +2,9 @@ import Ajv from 'ajv'
 import { describe, expect, it } from 'vitest'
 import { checkIntegrity } from './integrity.ts'
 import { loadGameData, PACK_FILES } from './load.ts'
+import communityTiersFile from './community-tiers.json'
 import packsFile from './packs.json'
-import type { GameData, LocalizedText } from './types.ts'
+import type { CommunityTiers, GameData, LocalizedText } from './types.ts'
 
 const both = (text: string): LocalizedText => ({ de: text, en: text })
 
@@ -56,6 +57,29 @@ describe('Game data', () => {
       .filter((entry) => !entry.gameIds?.length)
       .map((entry) => entry.id)
     expect(missing).toEqual([])
+  })
+})
+
+describe('Community tiers', () => {
+  const tiers = communityTiersFile as CommunityTiers
+
+  it('community-tiers.json matches its schema', () => {
+    expect(schemaErrors('community-tiers', communityTiersFile)).toEqual([])
+  })
+
+  it('every entry is a known weapon or passive item, once, rated by known sources', () => {
+    const { data } = loadGameData(packsFile, files)
+    const known = new Set([...data.weapons, ...data.passives].map((entry) => entry.id))
+    const sources = new Set(tiers.sources.map((source) => source.id))
+    const problems: string[] = []
+    const seen = new Set<string>()
+    for (const entry of tiers.tiers) {
+      if (!known.has(entry.id)) problems.push(`unknown weapon or item "${entry.id}"`)
+      if (seen.has(entry.id)) problems.push(`"${entry.id}" appears more than once`)
+      seen.add(entry.id)
+      for (const source of entry.sources) if (!sources.has(source)) problems.push(`"${entry.id}": unknown source "${source}"`)
+    }
+    expect(problems).toEqual([])
   })
 })
 

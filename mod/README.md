@@ -22,20 +22,25 @@ character, weapons and passive items of every player and
 - Co-op: one block per player. Other players' passive items count toward your own
   evolutions and are then tagged with their origin ("P2"). Can be turned off with `ShareCoopPassives`.
 - **Level-up grades:** while the level-up screen is open, the overlay lists its choices in the
-  game's order, each with a grade and a short reason ("for Bloody Tear", "recommended"):
-  - **A**: a missing ingredient for an evolution of a weapon you have; your weapon or item
-    still needs max level for an evolution whose ingredients are all there; or a core
-    recommendation for your character
-  - **B**: a weapon that evolves with items you already have; a level toward an evolution that
-    still misses ingredients; or a good addition for your character
-  - **C**: an optional recommendation for your character
-  - **D**: the app's data knows no fit. That doesn't make it a bad choice.
-  - **?**: the game offers something the app's data doesn't have yet.
+  game's order, each with a grade from A (best fit) to D and a short reason. Each choice gets
+  the best grade of these checks; with equal grades the reason of the earlier check is shown:
+  1. **Evolutions** of your weapons: a missing ingredient (A, "for Bloody Tear"); your weapon
+     or item still needs max level (A if all ingredients are there, otherwise B, "max for ...").
+  2. **Pairing:** a new weapon that evolves with items you already have (B, "pairs with ...").
+  3. **Character:** the app's recommendation, priority 1/2/3 = A/B/C ("recommended"). Only the
+     34 regular base game characters have hand-written recommendations; DLC characters have
+     their starting weapon and its evolution partners.
+  4. **Stats** from the game's own weapon data: an item raises area, amount, duration or speed
+     of two or more of your weapons (B) or one (C, "boosts Knife"); a weapon scales with two or
+     more of your items (B) or one (C, "uses Duplicator"). A weapon scales with a stat when its
+     level-ups raise it. Might and cooldown help every weapon and are left to the next check.
+  5. **Community** tier lists (`src/data/community-tiers.json`): tier 1/2/3 = A/B/C. A weapon
+     also counts with the tier of what it evolves into ("community: Holy Wand").
 
-  The recommendations come from the app. Only the 34 regular characters of the base game have
-  hand-written ones; DLC characters only have their starting weapon and its evolution partners,
-  so for them most choices get a D unless they fit your current weapons and items. Collapsed,
-  the overlay doesn't show the grades. Can be turned off with `LevelUpGrades`.
+  **D** means none of these apply: the data knows no fit, which doesn't make it a bad choice.
+  **?** means the game offers something the app's data doesn't have yet. Collapsed, the
+  overlay doesn't show the grades. Can be turned off with `LevelUpGrades`. The stats are read
+  together with the images a few seconds into a run, also when `Icons` is off.
 - also serves the run locally at `http://127.0.0.1:47321` so the
   cheatsheet app can pick it up.
 

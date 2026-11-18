@@ -178,8 +178,9 @@ public class BridgeBehaviour : MonoBehaviour
             if (snap.InRun != _inRun) _dirty = true;
             _inRun = snap.InRun;
 
-            // Only read image names once the stage has surely finished loading.
-            if (_inRun && Plugin.Icons.Value && !GameSprites.Ready && now - _runStartedAt > 3000)
+            // Only read the game's weapon data (images, stats for the level-up grades) once the
+            // stage has surely finished loading.
+            if (_inRun && (Plugin.Icons.Value || Plugin.LevelUpGrades.Value) && !GameSprites.Ready && now - _runStartedAt > 3000)
                 GameSprites.LoadFrames();
             // With the game's data read, later evolution steps from DLCs that are not installed disappear.
             bool gameDataChanged = GameSprites.Ready != _iconsReady;

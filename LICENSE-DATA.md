@@ -5,7 +5,8 @@ apply to the game data.
 
 ## What is the game data?
 
-- all files under `src/data/packs/` and the file `src/data/packs.json`
+- all files under `src/data/packs/` and the files `src/data/packs.json` and
+  `src/data/community-tiers.json`
 - the German texts under `tools/wiki-import/texts/`
 
 ## Origin and license
@@ -21,6 +22,13 @@ This means:
   contributors as the source.
 - **NonCommercial:** The data may not be used for commercial purposes.
 - **ShareAlike:** Modified versions are again licensed under CC BY-NC-SA 3.0.
+
+## Community tiers
+
+`src/data/community-tiers.json` contains the project's own grades (tier 1 to 3) for weapons and
+passive items. They are computed by a fixed rule from the placements in the community tier
+lists named in the file (with links and dates). The file does not contain these tier lists or
+their texts; they belong to their authors.
 
 ## Official German names
 

@@ -62,6 +62,7 @@ All game data lives as JSON under `src/data/`:
 ```
 src/data/
 ├── packs.json                 list of packs (base game and DLCs)
+├── community-tiers.json       general strength of weapons and items from community tier lists
 ├── packs/<pack>/
 │   ├── characters.json        characters
 │   ├── weapons.json           base and evolved weapons
@@ -86,6 +87,19 @@ Key rules:
 After every change, `npm test` checks that all files match their schema and that all references point to existing entries.
 
 **Adding a new DLC:** create a folder under `src/data/packs/` with the five files and add the pack to `packs.json`. No code changes are needed.
+
+### Community tiers
+
+`community-tiers.json` rates weapons and passive items independently of the character: tier 1 (strong), 2 (good) or 3 (decent). The mod uses it for its grades on the level-up screen. Each tier is the weighted mean of the community tier lists that rate the entry (S = 5, A = 4, B = 3, C = 2, D = 1, F = 0; at least 4.5 = tier 1, 3.5 = tier 2, 2.5 = tier 3; below that the entry is left out). The sources, with links, dates and weights, are listed in the file itself. As of 18 November 2026:
+
+| Source | As of | Covers | Weight |
+|---|---|---|---|
+| Rogue Ranker, weapon tier list | March 2026 (game 1.13) | 184 weapons including many DLC weapons | 2 |
+| Rogue Ranker, passive items | May 2026 | passive items | 2 |
+| Gfinity Esports, weapon tier list | July 2024 | 131 weapons | 1 |
+| Choost Games, passive items | July 2026 | 16 passive items | 1 |
+
+The tier lists are opinions and partly older than the current game version; they also contradict each other in places. Choost Games' weapon table was left out because it names several wrong evolution recipes. To change a tier, edit the file; `npm test` checks that every ID exists.
 
 ### German names
 
@@ -135,6 +149,7 @@ More notes:
 - The recommendations for the 34 regular base game characters are hand-written. DLC characters get a basic recommendation (starting weapon and the partners for its evolution), which can be extended in `recommendations.json`.
 - English names and descriptions are the original texts from the game (according to the wiki). German descriptions are official texts where poncle's sheet has them, otherwise own translations.
 - Special weapons (e.g. the Arcana Gemini counterparts) and Arcanas are not included.
+- The community tiers cover 151 weapons and items (13 of them tier 1, 31 tier 2, 107 tier 3). Many character-specific DLC weapons are not rated by any of the tier lists.
 
 ## Sources and license
 

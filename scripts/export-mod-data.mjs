@@ -1,6 +1,7 @@
 // Builds the data for the mod's in-game overlay (mod/VSCheatsheetBridge) from the app's
-// game data: names in English and German, max levels, evolutions and the game ID mapping
-// (gameIds). That way there is only one data source.
+// game data: names in English and German, max levels, evolutions, the game ID mapping
+// (gameIds), the recommendations per character and the community tiers. That way there is
+// only one data source.
 //   node scripts/export-mod-data.mjs <target.json>
 // The mod's build runs this script by itself.
 import { readFileSync, writeFileSync } from 'node:fs'
@@ -20,6 +21,7 @@ const weapons = load('weapons', 'weapons')
 const passives = load('passives', 'passives')
 const evolutions = load('evolutions', 'evolutions')
 const recommendations = load('recommendations', 'recommendations')
+const { tiers: communityTiers } = read('src/data/community-tiers.json')
 
 const gameIdMap = (entries) => {
   const map = {}
@@ -61,10 +63,13 @@ const data = {
     ...(e.characters ? { characters: e.characters } : {}),
   })),
   recommendations: recommended,
+  // Weapon or item -> general strength from community tier lists (1 = strong, 2 = good, 3 = decent).
+  community: Object.fromEntries(communityTiers.map((t) => [t.id, t.tier])),
 }
 
 writeFileSync(target, JSON.stringify(data))
 console.log(
   `Mod data: ${evolutions.length} evolutions, ${Object.keys(names).length} names, ` +
-    `recommendations for ${Object.keys(recommended).length} characters -> ${target}`,
+    `recommendations for ${Object.keys(recommended).length} characters, ` +
+    `community tiers for ${communityTiers.length} weapons and items -> ${target}`,
 )

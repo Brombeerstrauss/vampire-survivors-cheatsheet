@@ -17,6 +17,8 @@ internal sealed class CheatsheetData
     public List<EvolutionEntry> Evolutions { get; set; } = new();
     /// <summary>Character -> weapon or item -> priority (1 = core, 2 = good, 3 = optional).</summary>
     public Dictionary<string, Dictionary<string, int>> Recommendations { get; set; } = new();
+    /// <summary>Weapon or item -> general strength from community tier lists (1 = strong, 2 = good, 3 = decent).</summary>
+    public Dictionary<string, int> Community { get; set; } = new();
 
     public static CheatsheetData Load(string path)
     {
@@ -283,15 +285,18 @@ internal sealed class EvolutionAdvisor
 
     // ---- Level-up grades ------------------------------------------------------------------
 
-    // Grades the choices on the level-up screen. Each choice gets the best grade that applies:
-    //   A  missing ingredient for an evolution of a weapon you have; your weapon or item still
-    //      needs max level for an evolution whose ingredients are all there; core
-    //      recommendation for the character (priority 1)
-    //   B  weapon that evolves with items you already have; your weapon or item needs max
-    //      level for an evolution that still misses ingredients; good addition (priority 2)
-    //   C  optional recommendation (priority 3)
-    //   D  none of these. The app's data knows no fit, which doesn't make it a bad choice.
-    // An evolved weapon counts like the weapon it came from.
+    // Grades the choices on the level-up screen. Each choice gets the best grade that applies;
+    // with equal grades the reason that comes first in this list is shown:
+    //   1. Evolutions of your weapons: missing ingredient (A); your weapon or item still needs
+    //      max level, A if all ingredients are there, otherwise B.
+    //   2. A new weapon that evolves with items you already have (B).
+    //   3. Recommendation for the character: priority 1/2/3 = A/B/C.
+    //   4. Stats (game data): an item raises area, amount, duration or speed of at least two of
+    //      your weapons (B) or one (C); a weapon scales with two of your items (B) or one (C).
+    //   5. Community tier lists: tier 1/2/3 = A/B/C. A weapon also counts with the tier of what
+    //      it evolves into.
+    //   D  none of these. The data knows no fit, which doesn't make it a bad choice.
+    // An evolved weapon counts like the weapon it came from (recommendation, stats).
     private List<OfferRow> GradeOffers(PlayerItems me, List<PlayerItems> team, Func<string, bool> inGame)
     {
         var rows = new List<OfferRow>();
@@ -344,9 +349,63 @@ internal sealed class EvolutionAdvisor
 
             int priority = Priority(me.Character, id);
             if (priority > 0) Consider((char)('A' + priority - 1), T("empfohlen", "recommended"));
+
+            // Stats from the game's data: does the choice fit your weapons or items?
+            HashSet<string> raises = WeaponStats.Raises(gameId);
+            if (raises.Count > 0)
+            {
+                List<string> boosted = me.Weapons.Where(x => ScalesOf(x).Overlaps(raises)).ToList();
+                if (boosted.Count > 0) Consider(boosted.Count >= 2 ? 'B' : 'C', T("verstärkt ", "boosts ") + NameList(boosted));
+            }
+            else if (_data.Weapons.ContainsKey(gameId))
+            {
+                HashSet<string> scales = ScalesOf(id);
+                List<string> helpers = me.Passives.Where(x => WeaponStats.Raises(GameId(x)).Overlaps(scales)).ToList();
+                if (helpers.Count > 0) Consider(helpers.Count >= 2 ? 'B' : 'C', T("nutzt ", "uses ") + NameList(helpers));
+            }
+
+            int tier = CommunityTier(id, me, Applies, out string via);
+            if (tier > 0) Consider((char)('A' + tier - 1), via == null ? T("Community", "community") : T("Community: ", "community: ") + Name(via));
             rows.Add(row);
         }
         return rows;
+    }
+
+    // At most two names, then "+1" etc., so the reason stays short.
+    private string NameList(List<string> ids) =>
+        string.Join(", ", ids.Take(2).Select(Name)) + (ids.Count > 2 ? $" +{ids.Count - 2}" : "");
+
+    // Stats a weapon scales with; an evolved weapon without level-ups of its own also counts
+    // with those of the weapons it came from.
+    private HashSet<string> ScalesOf(string id)
+    {
+        HashSet<string> own = WeaponStats.Scales(GameId(id));
+        if (own.Count > 0) return own;
+        var inherited = new HashSet<string>();
+        foreach (EvolutionEntry e in _data.Evolutions)
+            if (e.Result == id)
+                foreach (Ingredient w in e.Weapons)
+                    inherited.UnionWith(WeaponStats.Scales(GameId(w.Id)));
+        return inherited;
+    }
+
+    // General strength from the community tier lists (1 to 3, 0 = none). A weapon also counts
+    // with the tier of what it can evolve into for this character; `via` names that result.
+    private int CommunityTier(string id, PlayerItems me, Func<EvolutionEntry, bool> applies, out string via)
+    {
+        via = null;
+        int best = _data.Community.TryGetValue(id, out int own) && own >= 1 && own <= 3 ? own : 0;
+        if (!_data.Weapons.ContainsValue(id)) return best;
+        foreach (EvolutionEntry e in _data.Evolutions)
+        {
+            if (!e.Weapons.Any(w => w.Id == id) || !applies(e)) continue;
+            if (_data.Community.TryGetValue(e.Result, out int tier) && tier >= 1 && tier <= 3 && (best == 0 || tier < best))
+            {
+                best = tier;
+                via = e.Result;
+            }
+        }
+        return best;
     }
 
     // Recommendation for the character: 1 to 3, 0 = none. An evolved weapon takes the best
