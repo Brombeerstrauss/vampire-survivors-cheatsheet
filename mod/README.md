@@ -30,10 +30,12 @@ character, weapons and passive items of every player and
   3. **Character:** the app's recommendation, priority 1/2/3 = A/B/C ("recommended"). Only the
      34 regular base game characters have hand-written recommendations; DLC characters have
      their starting weapon and its evolution partners.
-  4. **Stats** from the game's own weapon data: an item raises area, amount, duration or speed
-     of two or more of your weapons (B) or one (C, "boosts Knife"); a weapon scales with two or
-     more of your items (B) or one (C, "uses Duplicator"). A weapon scales with a stat when its
-     level-ups raise it. Might and cooldown help every weapon and are left to the next check.
+  4. **Stats:** an item raises area, amount, duration or speed of two or more of your weapons
+     (B) or one (C, "boosts Knife"); a weapon scales with two or more of your items (B) or one
+     (C, "uses Duplicator"). Which stats a weapon scales with comes from the wiki's "Stats and
+     passive items" table (the app's `affectedBy`), otherwise from the game's own weapon data
+     (the stats its level-ups raise); which stat an item raises comes from the game's data.
+     Might and cooldown help every weapon and are left to the next check.
   5. **Community** tier lists (`src/data/community-tiers.json`): tier 1/2/3 = A/B/C. A weapon
      also counts with the tier of what it evolves into ("community: Holy Wand").
 

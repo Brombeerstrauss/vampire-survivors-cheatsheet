@@ -19,6 +19,8 @@ internal sealed class CheatsheetData
     public Dictionary<string, Dictionary<string, int>> Recommendations { get; set; } = new();
     /// <summary>Weapon or item -> general strength from community tier lists (1 = strong, 2 = good, 3 = decent).</summary>
     public Dictionary<string, int> Community { get; set; } = new();
+    /// <summary>Weapon -> stats from the wiki that affect it (area, amount, duration, speed).</summary>
+    public Dictionary<string, List<string>> Scales { get; set; } = new();
 
     public static CheatsheetData Load(string path)
     {
@@ -291,8 +293,10 @@ internal sealed class EvolutionAdvisor
     //      max level, A if all ingredients are there, otherwise B.
     //   2. A new weapon that evolves with items you already have (B).
     //   3. Recommendation for the character: priority 1/2/3 = A/B/C.
-    //   4. Stats (game data): an item raises area, amount, duration or speed of at least two of
-    //      your weapons (B) or one (C); a weapon scales with two of your items (B) or one (C).
+    //   4. Stats: an item raises area, amount, duration or speed of at least two of your weapons
+    //      (B) or one (C); a weapon scales with two of your items (B) or one (C). Which stats a
+    //      weapon scales with comes from the wiki, otherwise from the game's level-ups; which
+    //      stat an item raises from the game's data.
     //   5. Community tier lists: tier 1/2/3 = A/B/C. A weapon also counts with the tier of what
     //      it evolves into.
     //   D  none of these. The data knows no fit, which doesn't make it a bad choice.
@@ -375,10 +379,11 @@ internal sealed class EvolutionAdvisor
     private string NameList(List<string> ids) =>
         string.Join(", ", ids.Take(2).Select(Name)) + (ids.Count > 2 ? $" +{ids.Count - 2}" : "");
 
-    // Stats a weapon scales with; an evolved weapon without level-ups of its own also counts
-    // with those of the weapons it came from.
+    // Stats a weapon scales with: from the wiki (app data) if it lists them, otherwise from the
+    // game's level-ups. An evolved weapon without either also counts with the weapons it came from.
     private HashSet<string> ScalesOf(string id)
     {
+        if (_data.Scales.TryGetValue(id, out List<string> fromWiki) && fromWiki.Count > 0) return new HashSet<string>(fromWiki);
         HashSet<string> own = WeaponStats.Scales(GameId(id));
         if (own.Count > 0) return own;
         var inherited = new HashSet<string>();

@@ -23,6 +23,9 @@ const evolutions = load('evolutions', 'evolutions')
 const recommendations = load('recommendations', 'recommendations')
 const { tiers: communityTiers } = read('src/data/community-tiers.json')
 
+// The stats whose passive items only help some weapons (Might and Cooldown help every weapon).
+const SCALING_STATS = ['area', 'amount', 'duration', 'speed']
+
 const gameIdMap = (entries) => {
   const map = {}
   for (const e of entries) for (const g of e.gameIds ?? []) map[g] ??= e.id
@@ -65,6 +68,12 @@ const data = {
   recommendations: recommended,
   // Weapon or item -> general strength from community tier lists (1 = strong, 2 = good, 3 = decent).
   community: Object.fromEntries(communityTiers.map((t) => [t.id, t.tier])),
+  // Weapon -> the stats from the wiki that tell weapons apart for the level-up grades.
+  scales: Object.fromEntries(
+    weapons
+      .map((w) => [w.id, (w.affectedBy ?? []).filter((s) => SCALING_STATS.includes(s))])
+      .filter(([, stats]) => stats.length > 0),
+  ),
 }
 
 writeFileSync(target, JSON.stringify(data))
