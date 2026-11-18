@@ -15,7 +15,7 @@ The app is available in **English and German**. It starts in English; you can sw
 - **Weapons and items**: browse everything with description, evolution, origin and matching characters.
 - **DLC filter**: choose the DLCs you own in the settings. Evolutions across DLC boundaries only appear when all the content involved is enabled.
 - **Reset** the run with one tap, with an undo button.
-- **Mod with in-game overlay** (PC, Steam, optional): the BepInEx plugin in `mod/` shows inside the game what each weapon still needs for its next evolution, and can pass the run to the app (settings: "Take the run from the game"). See [`mod/README.md`](mod/README.md).
+- **Mod with in-game overlay** (PC, Steam, optional): the BepInEx plugin in `mod/` shows inside the game what each weapon still needs for its next evolution, grades the choices on the level-up screen from A to D for your character and run, and can pass the run to the app (settings: "Take the run from the game"). See [`mod/README.md`](mod/README.md).
 - **Two languages**: English shows the names and descriptions from the game. German shows the official German names where they exist (see "German names").
 - **Version**: the app version, build date and commit are shown in the settings.
 

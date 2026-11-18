@@ -10,8 +10,10 @@ namespace VSCheatsheetBridge;
 // { "v":1, "inRun":true, "time":1731600000000,
 //   "players":[{ "index":0, "character":"ANTONIO",
 //                "weapons":[{"type":"WHIP","level":3}],
-//                "passives":[{"type":"MAXHEALTH","level":1}] }] }
-// The names are the game's enum names (WeaponType/ItemType/CharacterType).
+//                "passives":[{"type":"MAXHEALTH","level":1}],
+//                "offers":["POWER","GARLIC"] }] }
+// The names are the game's enum names (WeaponType/ItemType/CharacterType). "offers" only exists
+// while the level-up screen is open for this player: the weapons and items it offers.
 internal sealed class RunSnapshot
 {
     public bool InRun;
@@ -41,12 +43,15 @@ internal sealed class PlayerSnapshot
     public string Character;
     public List<ItemSnapshot> Weapons = new();
     public List<ItemSnapshot> Passives = new();
+    /// <summary>Game IDs offered on the open level-up screen (empty: no level-up screen for this player).</summary>
+    public List<string> Offers = new();
 
     public string ToJson() =>
         "{\"index\":" + Index.ToString(CultureInfo.InvariantCulture) +
         ",\"character\":" + Json.Str(Character) +
         ",\"weapons\":[" + string.Join(",", Weapons.Select(w => w.ToJson())) + "]" +
-        ",\"passives\":[" + string.Join(",", Passives.Select(w => w.ToJson())) + "]}";
+        ",\"passives\":[" + string.Join(",", Passives.Select(w => w.ToJson())) + "]" +
+        (Offers.Count > 0 ? ",\"offers\":[" + string.Join(",", Offers.Select(Json.Str)) + "]" : "") + "}";
 }
 
 internal sealed class ItemSnapshot

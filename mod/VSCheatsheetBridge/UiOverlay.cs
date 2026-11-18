@@ -16,6 +16,10 @@ namespace VSCheatsheetBridge;
 //
 // Layout:
 //   [-] Evolutions                     ::     <- title bar: click collapses/expands, drag moves
+//   Level-up choices                          <- only while the level-up screen is open
+//   [A] [image] Hollow Heart   for Bloody Tear
+//   [D] [image] Garlic
+//   ------------------------------------
 //   [image] Name                        5/8
 //           [ingredient] [ingredient] -> [result]
 //           missing: Empty Tome
@@ -261,6 +265,8 @@ internal sealed class UiOverlay
             foreach (PlayerPanel panel in panels)
             {
                 if (panel.Title != null) needed = Mathf.Max(needed, NameWidth(panel.Title));
+                foreach (OfferRow offer in panel.Offers)
+                    needed = Mathf.Max(needed, GradeWidth(f) + part + 2 * gap + NameWidth(offer.Item.Name));
                 foreach (WeaponRow row in panel.Rows)
                     needed = Mathf.Max(needed, icon + 2 * gap + NameWidth(row.Weapon.Name) + levelWidth);
             }
@@ -311,6 +317,14 @@ internal sealed class UiOverlay
             {
                 Text(x, y, inner, lineH, panel.Title, f, Gold, bold: true);
                 y += lineH;
+            }
+
+            if (panel.Offers.Count > 0)
+            {
+                y = OfferRows(panel.Offers, x, y, inner, f, gap, part, lineH, small, badge, nameWidth);
+                y += gap * 0.5f;
+                Box(x, y, inner, 1f, new Color(1f, 1f, 1f, 0.15f));
+                y += gap * 1.5f;
             }
 
             foreach (WeaponRow row in panel.Rows)
@@ -415,6 +429,57 @@ internal sealed class UiOverlay
                 }
                 y += part;
             }
+        }
+        return y;
+    }
+
+    private static float GradeWidth(float f) => Mathf.Round(f * 1.4f);
+
+    // A green, B yellow, C blue, D and ? grey.
+    private static Color GradeColor(char grade) => grade switch { 'A' => Green, 'B' => Gold, 'C' => Blue, _ => Grey };
+
+    // The choices on the level-up screen with their grades, in the game's order. The reason
+    // follows the name, or goes on the next line if it doesn't fit.
+    private float OfferRows(List<OfferRow> offers, float x, float y, float inner, float f, float gap, float part,
+        float lineH, float small, float badge, System.Func<string, float> nameWidth)
+    {
+        Text(x, y, inner, lineH, Plugin.Advisor.Text("Level-Up-Auswahl", "Level-up choices"), small, Gold, TextAlignmentOptions.MidlineLeft);
+        y += lineH;
+        float gradeW = GradeWidth(f);
+        float nameX = x + gradeW + gap + part + gap;
+        float nameAvail = Mathf.Max(1f, x + inner - nameX);
+
+        foreach (OfferRow offer in offers)
+        {
+            string name = offer.Item.Name ?? "";
+            float nameW = nameWidth(name);
+            bool wrap = nameW > nameAvail;
+            float nameH = wrap ? Mathf.Max(MeasureText(name, f, true, nameAvail).y, lineH) : lineH;
+            float rowH = Mathf.Max(part, nameH);
+
+            Color color = GradeColor(offer.Grade);
+            float gy = y + (rowH - gradeW) / 2f;
+            Box(x, gy, gradeW, gradeW, new Color(color.r, color.g, color.b, 0.2f));
+            Text(x, gy, gradeW, gradeW, offer.Grade.ToString(), f, color, TextAlignmentOptions.Center, bold: true);
+            IconAt(x + gradeW + gap, y + (rowH - part) / 2f, part, offer.Item, 1f, badge);
+            Text(nameX, y + (rowH - nameH) / 2f, nameAvail, nameH, name, f, Light, TextAlignmentOptions.MidlineLeft, bold: true, wrap: wrap);
+
+            if (offer.Reason != null)
+            {
+                float reasonW = Measure(offer.Reason, small, false);
+                float rx = nameX + Mathf.Min(nameW, nameAvail) + gap * 2;
+                if (!wrap && rx + reasonW <= x + inner)
+                {
+                    Text(rx, y + (rowH - lineH) / 2f, reasonW + 4f, lineH, offer.Reason, small, Grey, TextAlignmentOptions.MidlineLeft);
+                }
+                else
+                {
+                    y += rowH;
+                    rowH = Mathf.Max(MeasureText(offer.Reason, small, false, nameAvail).y, small * 1.3f);
+                    Text(nameX, y, nameAvail, rowH, offer.Reason, small, Grey, TextAlignmentOptions.MidlineLeft, wrap: true);
+                }
+            }
+            y += rowH + gap * 0.5f;
         }
         return y;
     }

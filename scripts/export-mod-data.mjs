@@ -19,6 +19,7 @@ const characters = load('characters', 'characters')
 const weapons = load('weapons', 'weapons')
 const passives = load('passives', 'passives')
 const evolutions = load('evolutions', 'evolutions')
+const recommendations = load('recommendations', 'recommendations')
 
 const gameIdMap = (entries) => {
   const map = {}
@@ -38,6 +39,15 @@ for (const e of [...characters, ...weapons, ...passives]) {
   }
 }
 
+// Character -> weapon or passive item -> priority (1 = core, 2 = good, 3 = optional), for the
+// overlay's grades on the level-up screen. Several packs may add to the same character:
+// the best priority wins.
+const recommended = {}
+for (const r of recommendations) {
+  const items = (recommended[r.character] ??= {})
+  for (const item of [...r.weapons, ...r.passives]) items[item.id] = Math.min(items[item.id] ?? 3, item.priority)
+}
+
 const data = {
   characters: gameIdMap(characters),
   weapons: gameIdMap(weapons),
@@ -50,7 +60,11 @@ const data = {
     passives: e.passives.map((p) => ({ id: p.id, max: p.level === 'max' })),
     ...(e.characters ? { characters: e.characters } : {}),
   })),
+  recommendations: recommended,
 }
 
 writeFileSync(target, JSON.stringify(data))
-console.log(`Mod data: ${evolutions.length} evolutions, ${Object.keys(names).length} names -> ${target}`)
+console.log(
+  `Mod data: ${evolutions.length} evolutions, ${Object.keys(names).length} names, ` +
+    `recommendations for ${Object.keys(recommended).length} characters -> ${target}`,
+)

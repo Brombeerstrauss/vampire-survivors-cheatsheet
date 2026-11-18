@@ -21,6 +21,21 @@ character, weapons and passive items of every player and
   hides it, **F9** resets it to the default position.
 - Co-op: one block per player. Other players' passive items count toward your own
   evolutions and are then tagged with their origin ("P2"). Can be turned off with `ShareCoopPassives`.
+- **Level-up grades:** while the level-up screen is open, the overlay lists its choices in the
+  game's order, each with a grade and a short reason ("for Bloody Tear", "recommended"):
+  - **A**: a missing ingredient for an evolution of a weapon you have; your weapon or item
+    still needs max level for an evolution whose ingredients are all there; or a core
+    recommendation for your character
+  - **B**: a weapon that evolves with items you already have; a level toward an evolution that
+    still misses ingredients; or a good addition for your character
+  - **C**: an optional recommendation for your character
+  - **D**: the app's data knows no fit. That doesn't make it a bad choice.
+  - **?**: the game offers something the app's data doesn't have yet.
+
+  The recommendations come from the app. Only the 34 regular characters of the base game have
+  hand-written ones; DLC characters only have their starting weapon and its evolution partners,
+  so for them most choices get a D unless they fit your current weapons and items. Collapsed,
+  the overlay doesn't show the grades. Can be turned off with `LevelUpGrades`.
 - also serves the run locally at `http://127.0.0.1:47321` so the
   cheatsheet app can pick it up.
 
@@ -33,7 +48,10 @@ are on the `AllowedOrigins` list (by default the published app) or are served by
 as the app's dev server.
 
 *Prototype: the field names come from community documentation and other mods and have not yet
-been confirmed in the game.*
+been confirmed in the game. This applies above all to the level-up screen (`LevelUpPage`,
+`LevelUpItemUI`), whose names come from the decompiled code used by the mods
+[VSEvolutionHelperEx](https://github.com/n3rdyguy/VSEvolutionHelperEx) and
+[jev_vampire_survivors](https://github.com/oldmoldycake/jev_vampire_survivors).*
 
 ## Requirements
 
@@ -167,7 +185,7 @@ curl http://127.0.0.1:47321/state
 |---|---|
 | `/state` | current run as JSON |
 | `/events` | Server-Sent Events: new state on every change |
-| `/debug` | field names of the game objects, in case something stays empty after an update |
+| `/debug` | field names of the game objects, in case something stays empty after an update (`levelUpPage` and `levelUpItem` appear once a level-up screen was open) |
 
 Example for `/state`:
 
@@ -177,6 +195,10 @@ Example for `/state`:
    "weapons":[{"type":"WHIP","level":3}],
    "passives":[{"type":"MAXHEALTH","level":1}]}]}
 ```
+
+While the level-up screen is open, the player it belongs to also has `"offers":["POWER","GARLIC"]`:
+the weapons and items on its cards. The first three level-ups of a game session are also
+written to the log (`[LevelUp] P1 offered: ...`).
 
 The names are the game's internal IDs (`WHIP`, `MAXHEALTH` for Hollow Heart). They are listed
 in the infobox of every wiki page (field `id`). The app stores them in its data as
@@ -197,7 +219,8 @@ Plugin messages are written to `BepInEx/LogOutput.log`.
 - Section `Overlay`: `Language` (`auto` = like the game, `de` or `en`; default `auto`), `Visible`,
   `Collapsed` (only the title bar), `ToggleKey` (default `F8`), `ResetKey` (default `F9`), `Icons`,
   position `X`/`Y` and `Width` as a fraction of the screen (the width grows by itself for long
-  names, up to 0.26), `Opacity`, `FontScale`, `ShareCoopPassives`
+  names, up to 0.26), `Opacity`, `FontScale`, `ShareCoopPassives`, `LevelUpGrades` (grades on the
+  level-up screen, default on)
 
 Older versions of the plugin wrote `Language = de` or `Language = en` into the config file. Set
 it to `auto` if the overlay should follow the game's language.
