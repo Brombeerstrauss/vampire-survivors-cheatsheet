@@ -7,7 +7,7 @@ import type { SuggestionReason, SuggestionWarning } from '../logic/suggestions.t
 import { describeReason, describeWarning, readyText } from './describe.ts'
 import { makeI18n } from './index.ts'
 import { loadSettings } from '../state/settings.ts'
-import { displayName, fullName, searchNames } from './names.ts'
+import { displayName, fullName, searchNames, sortByName } from './names.ts'
 import { de, en } from './strings.ts'
 
 describe('Names', () => {
@@ -37,6 +37,44 @@ describe('Names', () => {
     expect(searchNames(whip)).toContain('Peitsche')
     expect(searchNames(whip)).toContain('Whip')
     expect(searchNames(bolt)).toContain('Überirdischer')
+  })
+})
+
+describe('Sorting by name', () => {
+  const entries = [
+    { name: 'Whip', nameDe: 'Peitsche' },
+    { name: 'Axe', nameDe: 'Axt' },
+    { name: '108 Bocce' },
+    { name: '8 Bocce' },
+    { name: 'Ebony Wings', nameDe: 'Ebenholz-Flügel' },
+    { name: 'Orologion' },
+  ]
+  const names = (lang: 'de' | 'en') => sortByName(entries, lang).map((e) => fullName(e, lang))
+
+  it('sorts by the displayed name of the language, numbers by value', () => {
+    expect(names('en')).toEqual(['8 Bocce', '108 Bocce', 'Axe', 'Ebony Wings', 'Orologion', 'Whip'])
+    expect(names('de')).toEqual(['8 Bocce', '108 Bocce', 'Axt', 'Ebenholz-Flügel', 'Orologion', 'Peitsche'])
+  })
+
+  it('puts umlauts next to their base letter and keeps the order of equal names', () => {
+    const umlauts = [{ name: 'Zz' }, { name: 'Öl' }, { name: 'Oa' }, { name: 'Same', id: 1 }, { name: 'same', id: 2 }]
+    expect(sortByName(umlauts, 'de').map((e) => e.name)).toEqual(['Oa', 'Öl', 'Same', 'same', 'Zz'])
+  })
+
+  it('does not change the list it gets', () => {
+    const copy = [...entries]
+    sortByName(entries, 'en')
+    expect(entries).toEqual(copy)
+  })
+})
+
+describe('Sort order setting', () => {
+  const load = (raw: unknown) => loadSettings(raw, gameData.packs)
+
+  it('starts in the game order and keeps a stored choice per list', () => {
+    expect(load(undefined)).toMatchObject({ characterSort: 'game', librarySort: 'game' })
+    expect(load({ characterSort: 'name', librarySort: 'game' })).toMatchObject({ characterSort: 'name', librarySort: 'game' })
+    expect(load({ characterSort: 'abc' }).characterSort).toBe('game')
   })
 })
 

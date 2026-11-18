@@ -14,6 +14,17 @@
         "de": "Feuert ununterbrochen in Blickrichtung.",
         "en": "Fires constantly in the faced direction."
       },
+      "effects": {
+        "de": "Long Gun ist ein klassisches Videospiel-Maschinengewehr und feuert schnell kleine, schwache Kugeln in Blickrichtung.\n\nAnzahl wirkt besonders: Statt mehr Geschosse verkürzt sie die Abklingzeit weiter, aber nicht unter das Minimum der Waffe.",
+        "en": "As a classic videogame-style machine gun, Long Gun rapidly fires small, weak bullet projectiles in the faced direction of the character.\n\nLong Gun scales uniquely with Amount - rather than add extra projectiles, it will instead decrease the cooldown of the weapon further. However, this bonus cannot allow it to exceed its minimum cooldown."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🔫",
       "image": "https://vampire.survivors.wiki/images/Sprite-Long_Gun.png",
@@ -32,6 +43,18 @@
         "de": "Feuert waagerechte Salven kurzlebiger Projektile.",
         "en": "Fires bursts of decaying projectiles horizontally."
       },
+      "effects": {
+        "de": "Short Gun feuert eine Salve Geschosse mit kurzer Reichweite direkt nach links oder rechts, je nach Blickrichtung. Die Geschosse können von Gegnern zurück zum Spieler abprallen. Geschwindigkeit und Dauer erhöhen ihre Reichweite deutlich.",
+        "en": "Short Gun fires a burst of short-range projectiles directly to the left or right of the character, depending on which direction they're facing. These projectiles can bounce off of enemies, rebounding towards the player. Speed and Duration can allow them to reach much further."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🔫",
       "image": "https://vampire.survivors.wiki/images/Sprite-Short_Gun.png",
@@ -50,6 +73,17 @@
         "de": "Feuert breit gestreut in Blickrichtung.",
         "en": "Fires in a wide spread in the faced direction."
       },
+      "effects": {
+        "de": "Spread Shot feuert einen Fächer (mit festen Winkelabständen) roter Kugeln in Blickrichtung, in 8 festen Richtungen.\n\nAnzahl erhöht die Zahl der Geschosse nur bei ungeraden Werten (3, 5, 7 …), jeweils um genau 2.",
+        "en": "Spread Shot fires a spread (with fixed interval angle) of red bullet projectiles based on where the player is facing, having 8 fixed directions in which it can fire.\n\nAmount will only increase the quantity of projectiles on odd intervals - 3, 5, 7, etc. Those increases will always add exactly 2 extra projectiles."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🎆",
       "image": "https://vampire.survivors.wiki/images/Sprite-Spread_Shot.png",
@@ -67,6 +101,18 @@
         "de": "Feuert ein durchdringendes Projektil in Blickrichtung.",
         "en": "Fires a piercing projectile in the faced direction."
       },
+      "effects": {
+        "de": "C-U-Laser feuert eine Reihe durchdringender Laserstrahlen in Blickrichtung, die etwas vor dem Charakter beginnen. Dauer bestimmt die Länge der Strahlen und damit den möglichen Gesamtschaden.\n\nDie Strahlen bewegen sich leicht mit dem Charakter, aber nur, solange er sich in ihre Richtung bewegt.",
+        "en": "C-U-Laser fires a line of piercing laser beams in the faced direction, the beams' starting point being slightly away from the character. Duration affects the length of the laser beam and the overall damage it may deal.\n\nThe laser beams fired can move slightly with the character, but only as long as they're moving in the same direction as the lasers."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🔦",
       "image": "https://vampire.survivors.wiki/images/Sprite-C-U-Laser.png",
@@ -85,6 +131,17 @@
         "de": "Feuert rotierende Projektile auf den nächsten Gegner.",
         "en": "Fires spinning projectiles at the nearest enemy."
       },
+      "effects": {
+        "de": "Firearm feuert einen rotierenden Ring aus Feuergeschossen auf den nächsten Gegner. Anzahl bestimmt, wie viele Geschosse ein Ring hat.",
+        "en": "Firearm fires a spinning ring of fire projectiles at the nearest enemy. Amount affects how many fire projectiles a ring contains."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🔥",
       "image": "https://vampire.survivors.wiki/images/Sprite-Firearm.png",
@@ -103,6 +160,18 @@
         "de": "Feuert wachsende Projektile in Blickrichtung.",
         "en": "Fires growing projectiles in the faced direction."
       },
+      "effects": {
+        "de": "Sonic Bloom feuert ein violettes ringförmiges Geschoss in Blickrichtung, das wächst und eine begrenzte Dauer hat. Die Abklingzeit ist anfangs lang, dafür durchdringt es Gegner (anfangs bis zu 2).",
+        "en": "Sonic Bloom fires a purple ring-shaped projectile with increasing size and limited Duration in the faced direction. It starts with long Cooldown, but can pierce through enemies (up to 2 at base)."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🌸",
       "image": "https://vampire.survivors.wiki/images/Sprite-Sonic_Bloom.png",
@@ -121,6 +190,17 @@
         "de": "Feuert explodierende, zielsuchende Projektile.",
         "en": "Fires exploding projectiles that home in on enemies."
       },
+      "effects": {
+        "de": "Homing Miss feuert mehrere zielsuchende Raketen in Blickrichtung. Sie suchen sich einen zufälligen Gegner, explodieren beim Treffer (auf höheren Leveln, wenn ihr Durchschlag verbraucht ist) und wechseln das Ziel, wenn das erste stirbt.",
+        "en": "Homing Miss fires multiple homing missiles in the faced direction. These missiles home in on a random enemy and explode on hit (or when their pierce runs out, on later levels), switching targets when the initial target dies."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🚀",
       "image": "https://vampire.survivors.wiki/images/Sprite-Homing_Miss.png",
@@ -138,6 +218,10 @@
       "description": {
         "de": "Feuert explosive Projektile, die an Wänden entlanglaufen.",
         "en": "Fires explosive projectiles that travel along walls."
+      },
+      "effects": {
+        "de": "Diver Mines feuert eine rollende Mine in Blickrichtung, die wie bei Axt scheinbar der Schwerkraft folgend nach unten fällt. Erreicht sie Wände oder den Bildschirmrand, rollt sie daran entlang. Beim Treffer oder am Ende der Dauer explodiert sie mit einem Radius, der von Fläche abhängt; die Minen selbst werden nicht größer.",
+        "en": "Diver Mines fires a rolling mine at the faced direction, which goes downwards seemingly affected by gravity, just like Axe. This rolling mine will also travel along walls or the edge of the screen once it reaches them. It creates an explosion when hitting an enemy or when Duration ends, dealing damage in a radius affected by Area, though note the mines themselves do not increase in size."
       },
       "maxLevel": 8,
       "emoji": "💣",
@@ -157,6 +241,10 @@
         "de": "Feuert zielsuchende Projektile, die sich beim Treffer auf der Stelle drehen.",
         "en": "Fires homing projectiles that spin in place when they hit."
       },
+      "effects": {
+        "de": "Blade Crossbow feuert eine rotierende Glefe in Blickrichtung, die leicht zum Gegner hin abbiegt. Trifft sie, bleibt sie stehen, wächst, dreht sich bis zum Ende der Dauer und kehrt dann zum Charakter zurück; auf dem Rückweg trifft sie Gegner erneut.\n\nBlade Crossbow hat eine Trefferverzögerung von 0,1 Sekunden: Dieselbe Glefe kann denselben Gegner höchstens zehnmal pro Sekunde treffen. Weil alle laufenden Verzögerungen gleichzeitig zurückgesetzt werden, sobald eine abläuft, werden manche Gegner trotzdem öfter getroffen.",
+        "en": "Blade Crossbow fires a spinning glaive in the faced direction that has a slightly homing ability which curves toward the enemy. Once it hits an enemy, it stops moving, increases in Area, spins until Duration ends, then returns to the character. When returning, the glaive will strike enemies it encounters on the way.\n\nBlade Crossbow has a 0.1 seconds Hitbox Delay, meaning that the same enemy cannot be hit more often than every 1tenth of a second by the same glaive. However, because all active delays are reset simultaneously as soon as any one elapses, some enemies may get hit more often."
+      },
       "maxLevel": 8,
       "emoji": "🏹",
       "image": "https://vampire.survivors.wiki/images/Sprite-Blade_Crossbow.png",
@@ -173,6 +261,10 @@
       "description": {
         "de": "Kann Gegner mit kleiner Chance einfrieren.",
         "en": "Has a small chance to freeze enemies."
+      },
+      "effects": {
+        "de": "Prism Lass feuert ein klingenförmiges Geschoss in die Richtung, in die sich der Spieler bewegt oder zuletzt bewegt hat. Es schneidet durch alle Gegner auf dem Weg und endet mit einem großen Hieb. Geschoss und Hieb wachsen mit Fläche, die Flugweite bestimmt Geschwindigkeit. Anzahl bestimmt, wie viele Geschosse gleichzeitig fliegen; jedes zweite geht in die Gegenrichtung.\n\nMit Probotector sehen die Geschosse wie seine blau gefärbte Nahkampfanimation aus, bei anderen Charakteren wie eine blaue Klinge.",
+        "en": "Prism Lass fires a blade shaped projectile in the direction that the player is moving or last moved. The blade will slice through all enemies in its path, performing a large slash at the end of it. Both the initial projectile and slash can increase in Area, and the projectile's travel distance is determined by Speed. Amount affects how many projectiles are fired at once, with every second projectile being fired in the opposite direction that the player is facing.\n\nWhen playing as Probotector, the projectiles will use a blue tinted version of his melee attack animation, it will only be a blue blade with other characters."
       },
       "maxLevel": 8,
       "emoji": "💎",
@@ -192,6 +284,17 @@
         "de": "Die Abklingzeit hängt von der fehlenden Gesundheit ab.",
         "en": "Cooldown is affected by missing health."
       },
+      "effects": {
+        "de": "Metal Claw schlägt waagerecht zu beiden Seiten des Spielers zu. Weitere Hiebe durch Anzahl reichen immer weiter hinaus und vergrößern die Reichweite.\n\nDie Abklingzeit hängt vom Anteil fehlender Gesundheit ab: Je mehr Gesundheit der Charakter verloren hat, desto schneller greift die Waffe an.",
+        "en": "Metal Claw slashes horizontally both ways around the player. Additional slashes granted by Amount will move further and further away, increasing the weapon's reach.\n\nMetal Claw's Cooldown is affected by a percentage of missing health: The more health the player character loses, the faster it attacks."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "amount",
+        "cooldown",
+        "maxHealth"
+      ],
       "maxLevel": 8,
       "emoji": "🦀",
       "image": "https://vampire.survivors.wiki/images/Sprite-Metal_Claw.png",
@@ -210,6 +313,17 @@
         "de": "Entwicklung von Long Gun: ruft 2 Drohnen zur Feuerunterstützung.",
         "en": "Evolved Long Gun. Calls forth 2 drones for support fire."
       },
+      "effects": {
+        "de": "Prototype A macht aus dem Hauptangriff eine Spirale aus Geschossen mit viel mehr Schaden und Fläche. Wie bei der Grundform verkürzt Anzahl die Abklingzeit, statt mehr Geschosse zu bringen.\n\nDazu erscheinen 2 Jet-Drohnen, die etwas hinter dem Charakter schweben, genauso zielen wie die Hauptwaffe und dieselben Geschosse wie Long Gun feuern. Sie skalieren nicht mit Anzahl und feuern immer mit minimaler Abklingzeit.",
+        "en": "Prototype A changes the main weapon's attack into a helix of projectiles, granting it much larger damage output and area coverage. Just like its unevolved form, Amount decreases the weapon's cooldown rather than adding more projectiles.\n\nAlongside it, 2 jet drones are summoned that aim exactly like the main weapon, floating slightly behind the character and shooting the exact same projectiles as the Long Gun. These drones do not scale with Amount, and always fire on minimum cooldown."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "🛸",
       "image": "https://vampire.survivors.wiki/images/Sprite-Prototype_A.png",
@@ -228,6 +342,18 @@
         "de": "Entwicklung von Short Gun: ruft 2 Drohnen zur Feuerunterstützung.",
         "en": "Evolved Short Gun. Calls forth 2 drones for support fire."
       },
+      "effects": {
+        "de": "Prototype B verstärkt die Geschosse der Hauptwaffe und färbt sie leuchtend gelb. Dazu erscheinen 2 Jet-Drohnen hinter dem Charakter, die dieselben Geschosse wie Short Gun feuern, aber in jede Richtung zielen können.",
+        "en": "Prototype B improves the main weapon's projectiles and turns them a bright yellow color. Alongside this, 2 jet drones are summoned to aid the player, staying behind the character and shooting the same projectiles as the Short Gun. Unlike it, though, these drones can aim and shoot in any direction."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "🛸",
       "image": "https://vampire.survivors.wiki/images/Sprite-Prototype_B.png",
@@ -246,6 +372,17 @@
         "de": "Entwicklung von Spread Shot: ruft 2 Drohnen zur Feuerunterstützung.",
         "en": "Evolved Spread Shot. Calls forth 2 drones for support fire."
       },
+      "effects": {
+        "de": "Prototype C beschwört 2 Jet-Drohnen, die dem Charakter folgen und zusätzliche Geschosse von Spread Shot in Blickrichtung feuern. Anders als die Hauptwaffe können sie in jedem Winkel schießen.\n\nAnzahl wirkt nicht auf die Drohnen.",
+        "en": "Prototype C summons 2 jet drones that follow the character and shoot additional Spread Shot projectiles in whichever direction the character is facing. Unlike the main weapon, these drones can freely shoot at any angle.\n\nThe drones ignore Amount."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "🛸",
       "image": "https://vampire.survivors.wiki/images/Sprite-Prototype_C.png",
@@ -264,6 +401,15 @@
         "de": "Entwicklung von C-U-Laser: Laser teilen sich beim Treffer in mehrere Strahlen.",
         "en": "Evolved C-U-Laser. Lasers split into multiple beams when they hit."
       },
+      "effects": {
+        "de": "Pronto Beam feuert ähnlich wie die Grundform, doch die Laser folgen dem Charakter vollständig, bis ihre Dauer endet.\n\nTrifft ein Laser einen Gegner, kann er einen kleineren Laser in eine zufällige Richtung abspalten; auch dieser kann beim Treffer weitere abspalten.",
+        "en": "Pronto Beam follows a similar firing pattern to its unevolved form, except the Pronto lasers follow the character fully until their Duration runs out.\n\nWhen a Pronto laser hits any enemy, it has a chance to release a smaller laser that will fire out in a random direction. These smaller lasers also have a chance to fire off their own lasers when they hit enemies."
+      },
+      "affectedBy": [
+        "area",
+        "speed",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "🔆",
       "image": "https://vampire.survivors.wiki/images/Sprite-Pronto_Beam.png",
@@ -281,6 +427,18 @@
         "de": "Entwicklung von Firearm: feuert erneut, wenn eine Lichtquelle oder ein zerstörbares Objekt zerstört wird.",
         "en": "Evolved Firearm. Fires again when destroying a light source or destructible item."
       },
+      "effects": {
+        "de": "Fire-L3GS setzt eine Welle aus Flammenpartikeln frei, die zuerst im Bogen um den Spieler beginnt und sich dann begradigt. Anders als Firearm, das auf den nächsten Gegner zielt, feuert Fire-L3GS in die Richtung, in die sich der Spieler bewegt oder zuletzt bewegt hat. Die Geschosse durchdringen Gegner.\n\nZerstört ein Geschoss eine Lichtquelle oder ein anderes zerstörbares Objekt der Stage, rollt eine Feuerwelle in Richtung Spieler, durch ihn hindurch bis zum Bildschirmrand.",
+        "en": "Fire-L3GS releases a wave of flame particles which starts in an arch around the player before straightening out as it moves further away. Unlike Firearm, which shoots at the nearest enemy, Fire-L3GS fires in the direction that the player is moving or last moved. Projectiles pierce through enemies.\n\nWhen a Fire-L3GS projectile destroys a Light source or any other type of destructible stage item, a wave of fire will be released in the direction of the player, passing through them and continuing to the edges of the screen."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "🔥",
       "image": "https://vampire.survivors.wiki/images/Sprite-Fire-L3GS.png",
@@ -299,6 +457,18 @@
         "de": "Entwicklung von Sonic Bloom: lädt im Stehen einen stärkeren, automatisch zielenden Schuss auf.",
         "en": "Evolved Sonic Bloom. Charges up a more powerful auto-aimed blast when standing still."
       },
+      "effects": {
+        "de": "Beim Laufen verhält sich Wave Beam wie die Grundform und schießt große türkise, durchdringende Wellen direkt vor dem Charakter.\n\nIm Stehen hört die Waffe auf anzugreifen und lädt stattdessen eine orange Aura unter dem Charakter auf. Voll geladen feuert sie verstärkte orange Strahlen auf die nächsten Gegner: größer, stärker und mit mehr Durchschlag. Abklingzeit beschleunigt das Aufladen.",
+        "en": "While moving, Wave Beam maintains the behaviour of its previous form, shooting large cyan piercing waves directly in front of the character.\n\nWhen standing still, the weapon will cease attacking and instead charge up an orange aura underneath the character. Once it is fully charged, it will fire enchanced orange beams towards the nearest enemies - larger, stronger, piercing more enemies. The charge-up speed can be affected by Cooldown."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "〰️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Wave_Beam.png",
@@ -317,6 +487,10 @@
         "de": "Entwicklung von Homing Miss: Projektile teilen sich beim Treffer in kleinere.",
         "en": "Evolved Homing Miss. Projectiles split into smaller ones when they hit."
       },
+      "effects": {
+        "de": "Multistage Missiles verhalten sich fast wie die Grundform, tauschen aber ihren Durchschlag gegen die Fähigkeit, beim Explodieren in kleinere Raketen zu zerfallen. Diese suchen sich ebenfalls Gegner und explodieren, wenden aber viel schärfer und sind deutlich schneller.",
+        "en": "Multistage Missiles behave nearly identically to their unevolved form, with the major difference being trading away their pierce for the ability to split into extra smaller missiles upon exploding. These smaller missiles will seek out and explode on enemies the same way as the main projectiles, although their turning is much more sharp, and their Speed is greatly increased."
+      },
       "maxLevel": 1,
       "emoji": "🚀",
       "image": "https://vampire.survivors.wiki/images/Sprite-Multistage_Missiles.png",
@@ -334,6 +508,10 @@
         "de": "Entwicklung von Diver Mines: erzeugt Schadenszonen, die Gegner anziehen.",
         "en": "Evolved Diver Mines. Creates damaging zones that attract enemies."
       },
+      "effects": {
+        "de": "Atmo-Torpedo ersetzt die rollenden Minen durch Torpedos, die selbstständig zu ihren Zielen fliegen; die Ziele sind zufällig, Gegner nahe dem Bildschirmrand haben aber Vorrang.\n\nBeim Einschlag entstehen Strudelzonen, die Gegner hineinziehen und regelmäßig Schaden verursachen; je größer die Zone, desto stärker der Sog. Die Zonen wachsen mit Fläche und Dauer.",
+        "en": "Atmo-Torpedo replaces the rolling mine projectiles with torpedoes that independently fly towards their designated enemies, choosing their targets randomly but putting high priority on those near the edges of the screen.\n\nUpon landing, the torpedoes create vortex zones that drag enemies in and deal periodic damage - the bigger the zone, the stronger its pull. These zones scale with both Area and Duration."
+      },
       "maxLevel": 1,
       "emoji": "🌀",
       "image": "https://vampire.survivors.wiki/images/Sprite-Atmo-Torpedo.png",
@@ -350,6 +528,10 @@
       "description": {
         "de": "Entwicklung von Blade Crossbow: ruft göttliches Eingreifen, je öfter, desto mehr Glück.",
         "en": "Evolved Blade Crossbow. Calls forth divine intervention with a Luck-based frequency."
+      },
+      "effects": {
+        "de": "BFC2000-AD behält die Eigenschaften der Grundform und erhält zusätzlich den Angriff „Glaive Beam“: Eine Lichtsäule mit großen kreisenden Glefen steigt vom unteren Bildschirmrand auf und zerfetzt Gegner auf dem Weg.\n\nGlaive Beam löst unabhängig von den normalen Angriffen aus; wie oft, hängt von Glück ab. Die riesigen Glefen steigen spiralförmig auf, fügen Gegnern bei Berührung Schaden zu und bleiben, bis alle verschwunden sind. Sie können kritisch treffen, mit zehnfachem Schaden.",
+        "en": "BFCD2000-AD keeps the properties of its predecessor, while gaining a separate Glaive Beam attack that summons a pillar of light with large glaives orbiting within it, appearing from the bottom of the screen and making their way upwards while shredding enemies in their path.\n\nThe Glaive Beam activates independently of regular attacks, its chance of appearing relying on Luck - the higher it is, the more frequently the attack happens. When activated, massive Glaives will spiral upwards, dealing damage to any enemies they come in contact with, lasting until all the glaives are gone. These Glaives are capable of dealing critical damage with a x10 multiplier."
       },
       "maxLevel": 1,
       "emoji": "✝️",
@@ -369,6 +551,10 @@
         "de": "Entwicklung von Prism Lass: kann Gegner einfrieren, verlangsamen oder entwaffnen.",
         "en": "Evolved Prism Lass. May freeze, slow down, or DeFang enemies."
       },
+      "effects": {
+        "de": "Statt wie Prism Lass Geschosse zu feuern, schwingt Time Warp herum und erzeugt große blaue Kreise um den Charakter, die Gegnern in der Nähe schnell hintereinander Schaden zufügen. Getroffene Gegner können eingefroren, verlangsamt oder harmlos gemacht werden; die Chance hängt von Glück ab. Anzahl erzeugt pro Auslösung zusätzliche Ringe, was die getroffene Fläche und die Trefferrate stark erhöht.",
+        "en": "Instead of firing projectiles like its base weapon Prism Lass, Time Warp swings around and creates large blue circles around the character which rapidly damage enemies in an area around the player while active. Time Warp has a chance to freeze, slow down, or DeFang enemies it hits, the chance of which is based on Luck. Amount will cause extra rings to generate with each cast, increasing the weapon's effective Area and drastically increasing the hit-rate of the weapon."
+      },
       "maxLevel": 1,
       "emoji": "⏳",
       "image": "https://vampire.survivors.wiki/images/Sprite-Time_Warp.png",
@@ -386,6 +572,10 @@
       "description": {
         "de": "Entwicklung von Metal Claw: verprügelt die stärksten sichtbaren Gegner.",
         "en": "Evolved Metal Claw. Pummels the most powerful enemies in sight."
+      },
+      "effects": {
+        "de": "Statt waagerecht anzugreifen, beschwört Big Fuzzy Fist zwei Metallfäuste, die den stärksten Gegner in Reichweite anvisieren und verprügeln. Dabei entstehen Druckwellen, die ihm und allen Gegnern um ihn Schaden zufügen; sie wachsen mit Fläche, und Anzahl bestimmt die Treffer pro Auslösung.\n\nAls stärkster Gegner gilt der mit der höchsten maximalen Gesundheit. Er wird angegriffen, bis er stirbt, ein stärkerer auftaucht oder er außer Reichweite gerät. Ist kein ausreichend starker Gegner in Reichweite, können sich die Fäuste aufteilen.",
+        "en": "Instead of horizontal attacks, Big Fuzzy Fist summons two metal fists that lock onto and pummel the strongest enemy in their range, creating shockwaves that damage the target and every enemy around it. These shockwaves can increase in size with Area, and the number of hits per trigger depends on Amount.\n\nThe strongest enemy is chosen by their Max Health, and will be attacked relentlessly until it either dies, a stronger enemy appears, or it is left out of range. The fists can split up and attack separate targets if no sufficiently powerful foes are in range."
       },
       "maxLevel": 1,
       "emoji": "👊",

@@ -3,6 +3,7 @@ import { describe, expect, it } from 'vitest'
 import { checkIntegrity } from './integrity.ts'
 import { loadGameData, PACK_FILES } from './load.ts'
 import communityTiersFile from './community-tiers.json'
+import { STAT_ITEMS } from './stats.ts'
 import packsFile from './packs.json'
 import type { CommunityTiers, GameData, LocalizedText } from './types.ts'
 
@@ -57,6 +58,23 @@ describe('Game data', () => {
       .filter((entry) => !entry.gameIds?.length)
       .map((entry) => entry.id)
     expect(missing).toEqual([])
+  })
+})
+
+describe('Weapon effects', () => {
+  it('every stat has a passive item that exists', () => {
+    const { data } = loadGameData(packsFile, files)
+    const passives = new Set(data.passives.map((p) => p.id))
+    expect(Object.values(STAT_ITEMS).filter((id) => !passives.has(id))).toEqual([])
+  })
+
+  it('effects texts are plain text in both languages', () => {
+    const { data } = loadGameData(packsFile, files)
+    const broken = data.weapons
+      .filter((w) => w.effects)
+      .filter((w) => [w.effects!.de, w.effects!.en].some((t) => !t.trim() || /[{}[\]|]|:\s*$/.test(t)))
+      .map((w) => w.id)
+    expect(broken).toEqual([])
   })
 })
 

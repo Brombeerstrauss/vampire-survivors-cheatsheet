@@ -41,6 +41,18 @@ export function searchNames(entry: Named): string {
   return [entry.name, entry.nameDe, entry.nameDeHint].filter(Boolean).join(' ')
 }
 
+/**
+ * Entries sorted alphabetically by their displayed name (the main name, as in the list), with
+ * the language's rules: umlauts next to their base letter, numbers by value ("8" before "108").
+ * Equal names keep their order.
+ */
+export function sortByName<T extends Named>(entries: readonly T[], lang: Lang): T[] {
+  const collator = new Intl.Collator(lang, { sensitivity: 'base', numeric: true })
+  const keyed = entries.map((entry, index) => ({ entry, index, key: displayName(entry, lang).main }))
+  keyed.sort((a, b) => collator.compare(a.key, b.key) || a.index - b.index)
+  return keyed.map((k) => k.entry)
+}
+
 export function localize(text: LocalizedText | undefined, lang: Lang): string {
   return text ? text[lang] : ''
 }

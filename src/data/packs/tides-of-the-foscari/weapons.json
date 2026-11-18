@@ -14,6 +14,16 @@
         "de": "Trifft Gegner in der Nähe; der Schaden wird mit der Geschwindigkeit multipliziert.",
         "en": "Strikes at nearby enemies. Damage multiplied by Speed."
       },
+      "effects": {
+        "de": "SpellString schießt mehrere funkelnde blaue Zauberfäden auf den Gegner, der dem Spieler am nächsten ist.\n\nDer Schaden wird zusätzlich mit 1,25 × Geschwindigkeit multipliziert.",
+        "en": "SpellString shoots multiple blue strings of magic that sparkle at the closest enemy to the player.\n\nIts damage is also multiplied by 1.25x Projectile Speed."
+      },
+      "affectedBy": [
+        "might",
+        "speed",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 6,
       "emoji": "🪡",
       "image": "https://vampire.survivors.wiki/images/Sprite-SpellString.png",
@@ -32,6 +42,17 @@
         "de": "Erzeugt eine wachsende Schadenszone; der Schaden wird mit der Fläche multipliziert.",
         "en": "Generates an expanding damaging zone. Damage multiplied by Area."
       },
+      "effects": {
+        "de": "SpellStream schießt wachsende blaue Zauberzonen auf den nächsten Gegner; die Zone wandert ein Stück hinaus und wird dann zum Charakter zurückgezogen.\n\nDer Schaden wird mit 1,25 × Fläche multipliziert.",
+        "en": "SpellStream shoots expanding blue magic zones at the closest enemy, the zone moves out a bit then pull toward to character.\n\nIts damage is multiplied by 1.25x Area."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "cooldown"
+      ],
       "maxLevel": 6,
       "emoji": "🌊",
       "image": "https://vampire.survivors.wiki/images/Sprite-SpellStream.png",
@@ -50,6 +71,15 @@
         "de": "Trifft den nächsten Gegner; der Schaden wird zusätzlich mit der Macht multipliziert.",
         "en": "Strikes at the nearest enemy. Damage further multiplied by Might."
       },
+      "effects": {
+        "de": "SpellStrike erzeugt am nächsten Gegner eine Zone, die ihn trifft.\n\nDer Schaden wird zusätzlich mit 1,25 × Macht multipliziert. Damit gehört SpellStrike mit hohen Werten zu den stärksten Waffen für reinen Schaden. Dieser Faktor ignoriert die Obergrenze von 1000 % Macht, SpellStrike skaliert also unbegrenzt.",
+        "en": "SpellStrike creates a zone at the nearest enemy strike at them.\n\nIts damage is further multiplied by 1.25x Might, which makes it one of the most powerful weapon that deals pure damage with high stats. This multiplier ignores the total Might cap of 1000%, allowing SpellStrike to scale infinitely."
+      },
+      "affectedBy": [
+        "might",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 6,
       "emoji": "⚡",
       "image": "https://vampire.survivors.wiki/images/Sprite-SpellStrike.png",
@@ -67,6 +97,18 @@
         "de": "Greift Gegner in der Nähe an; schlägt zurück.",
         "en": "Attacks nearby enemies. Retaliates."
       },
+      "effects": {
+        "de": "Eskizzibur schwingt ein Schwert vor dem Charakter. Ab Level 5 kann jeder fünfte Angriff in den Boden schlagen und ihn aufreißen, mit sehr großem Flächenschaden. Als Vergeltung greift es sofort erneut an, höchstens alle 1,5 Sekunden.\n\nWeitere Schwünge durch Anzahl wechseln zwischen Blickrichtung und Gegenrichtung.",
+        "en": "The Eskizzibur creates a sword swing in front of the character. After reaching level 5, it may also strike at the ground every fifth attack, cracking it for a huge Area-of-Effect damage. When retaliating, it attacks immediately again and can retaliate every 1.5 seconds.\n\nConsecutive swing from increased Amount alternate between firing towards and away from the direction the character is facing."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "amount",
+        "cooldown",
+        "luck",
+        "armor"
+      ],
       "maxLevel": 8,
       "emoji": "🗡️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Eskizzibur.png",
@@ -85,6 +127,18 @@
         "de": "Kann kritisch treffen; die Anzahl erhöht stattdessen den Schaden.",
         "en": "Can deal critical damage. Amount affects damage instead."
       },
+      "effects": {
+        "de": "Flash Arrow schießt einen Pfeil in die Richtung, in die sich der Spieler bewegt oder zuletzt bewegt hat. Er durchdringt viele Gegner.\n\nAnzahl vervielfacht den Schaden, statt mehr Pfeile zu bringen.",
+        "en": "Flash Arrow shoots an arrow in the direction the player is moving or last moved. It can pierce through many enemies.\n\nAmount multiplies its damage instead of providing more arrows."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown",
+        "luck"
+      ],
       "maxLevel": 8,
       "emoji": "🏹",
       "image": "https://vampire.survivors.wiki/images/Sprite-Flash_Arrow.png",
@@ -103,6 +157,17 @@
         "de": "Erzeugt Explosionen um den Charakter; wird von der zuerst gewählten Arcana II, XIV oder XIX beeinflusst.",
         "en": "Generates explosions around the character. Affected by the first chosen Arcana between II, XIV, or XIX."
       },
+      "effects": {
+        "de": "Prismatic Missile lässt einen Ring aus Regenbogenraketen von oben erscheinen, die spiralförmig zum aktuellen Standort des Charakters herabfliegen (beim Laufen folgen sie ihm) und in Regenbogenstaub explodieren. Die Explosionen können die Effekte von Twilight Requiem (II), Jail of Crystal (XIV) oder Heart of Fire (XIX) übernehmen (Fehler: Eigentlich sollte nur die zuerst gewählte Arcana wirken, es wirkt aber die zuletzt erhaltene, wenn die Arcanas vorher erhalten wurden).",
+        "en": "Prismatic Missile spawns a ring of rainbow missiles from the top of the screen then spiral down and around the character's present location (track behind the character when moving), which later explodes with rainbow-colored dust. They can add the explosions of Twilight Requiem (II), Jail of Crystal (XIV), or Heart of Fire (XIX) (Bug: Should only apply the first chosen Arcana, but will only apply the last if the Arcana are obtained before)."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🔷",
       "image": "https://vampire.survivors.wiki/images/Sprite-Prismatic_Missile.png",
@@ -121,6 +186,19 @@
         "de": "Kann Gegner verlangsamen.",
         "en": "Has a chance to slow enemies down."
       },
+      "effects": {
+        "de": "Shadow Servant erzeugt eine Schlange, die zu einem zufälligen Gegner kriecht und an ihm explodiert.\n\nGetroffene Gegner können dauerhaft verlangsamt werden: Die Chance liegt bei 50 % und hängt von Glück ab. Ist ein Gegner nicht immun gegen Schwächungen, sinkt seine Bewegungsgeschwindigkeit mit jedem Treffer um weitere 5 %, bis nach 16 Treffern 20 % der ursprünglichen erreicht sind. Die Verlangsamung wirkt multiplikativ mit anderen Änderungen der Bewegungsgeschwindigkeit.",
+        "en": "Shadow Servant spawns a snek that wanders out at a random enemy and explodes on them.\n\nEnemies hit by Shadow Servant are slowed down permanently. The snek has a 50% chance to slow down enemies, affected by Luck. If the enemy is not immune to debuffs, each hit reduces the Movement Speed of the affected enemy by an additional 5%, until it reaches a minimum of 20% of their original speed after 16 hits. The slow effect stacks multiplicatively with other Movement Speed modifications."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown",
+        "luck"
+      ],
       "maxLevel": 8,
       "emoji": "👤",
       "image": "https://vampire.survivors.wiki/images/Sprite-Shadow_Servant.png",
@@ -139,6 +217,18 @@
         "de": "Wirft abprallende Projektile.",
         "en": "Throws bouncing projectiles."
       },
+      "effects": {
+        "de": "Party Popper schießt Konfetti schräg nach oben in Blickrichtung, das scheinbar der Schwerkraft folgend im Bogen herabfällt.\n\nEs kann einmal von einem Gegner abprallen und hat Durchschlag 10.",
+        "en": "Party Popper shoots confetti upward diagonally based on where the character is facing, which arcs downward seemingly affected by gravity.\n\nParty Popper can bounce on an enemy once, has 10 Pierce."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🎉",
       "image": "https://vampire.survivors.wiki/images/Sprite-Party_Popper.png",
@@ -157,6 +247,20 @@
         "de": "Entwicklung von Eskizzibur: erzeugt zusätzliche Projektile mit Vergeltungsschaden.",
         "en": "Evolved Eskizzibur. Generates additional projectiles that deal retaliatory damage."
       },
+      "effects": {
+        "de": "Legionnaire erzeugt Schwerthiebe um den Charakter und dazu Klone, die in die Richtung laufen, in die sich der Spieler bewegt oder zuletzt bewegt hat. Jeder fünfte Angriff kann in den Boden schlagen und ihn aufreißen, mit sehr großem Flächenschaden. Als Vergeltung greift es sofort erneut an, höchstens alle 1,5 Sekunden. Die Klone zählen als Vergeltungsschaden, werden also durch Rüstung verstärkt und lösen Divine Bloodline (IX) aus.\n\nLegionnaire hat mehr Fläche, mit Slash (XVI) eine geringere Chance auf kritische Treffer und ein höheres Pool-Limit.",
+        "en": "Legionnaire creates sword swings around the character, and also clones of the character traveling in the direction the player is moving or last moved. It may also strike at the ground every fifth attack, cracking it for a huge Area-of-Effect damage. When retaliating, it attacks immediately again and can retaliate every 1.5 seconds. The clones are considered retaliatory damage to be boosted by Armor and triggers Divine Bloodline (IX).\n\nLegionnaire have a bigger Area and lower critical chance when using Slash (XVI). It also has a higher Pool Limit."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown",
+        "luck",
+        "armor"
+      ],
       "maxLevel": 1,
       "emoji": "🛡️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Legionnaire.png",
@@ -175,6 +279,18 @@
         "de": "Entwicklung von Flash Arrow: feuert zusätzliche Projektile je nach Anzahl und beim Aufsammeln von Goldmünzen.",
         "en": "Evolved Flash Arrow. Fires additional projectiles based on Amount and when picking up gold coins."
       },
+      "effects": {
+        "de": "Millionaire schießt einen Pfeil in die Richtung, in die sich der Spieler bewegt oder zuletzt bewegt hat, der viele Gegner durchdringt. Werden Münzen und Münzbeutel eingesammelt oder Gegner mit dem Pfeil besiegt, regnen gelbe Kugeln aus der oberen Bildschirmecke, die der Blickrichtung abgewandt ist.\n\nFläche und Pool-Limit sind höher, der Durchschlag unbegrenzt.",
+        "en": "Millionaire shoots an arrow in the direction the player is moving or last moved. It can pierce through many enemies. When collecting Coins and Coin Bags or defeating enemies with the arrow, yellow bullets rains down on the screen from the top corner away from where the player is looking.\n\nIt has a bigger Area and Pool Limit, and infinite pierce."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown",
+        "luck"
+      ],
       "maxLevel": 1,
       "emoji": "💰",
       "image": "https://vampire.survivors.wiki/images/Sprite-Millionaire.png",
@@ -193,6 +309,16 @@
         "de": "Entwicklung von Prismatic Missile: erhöht den Wert von Edelsteinen und Münzen am Boden.",
         "en": "Evolved Prismatic Missile. Increases the value of gems and coins on the ground."
       },
+      "effects": {
+        "de": "Luminaire lässt orange, gelbe, blaue und magentafarbene Strahlen senkrecht auf jeden Gegner niedergehen. Dazu drehen sich einige verschlungene Kreise gegen den Uhrzeigersinn, und regelmäßig regnen weiße Strahlen; beides ist nur Optik. Die Strahlen können mit den Effekten von Twilight Requiem (II), Jail of Crystal (XIV) oder Heart of Fire (XIX) explodieren (Fehler: Eigentlich sollte nur die zuerst gewählte Arcana wirken, es wirkt aber die zuletzt erhaltene, wenn die Arcanas vorher erhalten wurden); diese Arcanas im Lauf zu wählen, verstärkt die jeweiligen Effekte.\n\nGrundschaden und Pool-Limit sind höher, das Intervall kürzer, dafür sind Fläche geringer und Abklingzeit länger. Geschwindigkeit wirkt nicht mehr.",
+        "en": "Luminaire creates orange, yellow, blue, and magenta beams that strike at every enemy vertically. It also makes a few intricate circles rotating counter-clockwise and periodically rains down white beams, both of which are purely cosmetic. The beams can explode with the effects of Twilight Requiem (II), Jail of Crystal (XIV), or Heart of Fire (XIX) (Bug: Should only apply the first chosen Arcana, but will only apply the last if the Arcana are obtained before); selecting these Arcanas in a run will enhance their respective effects.\n\nLuminaire has a higher base damage and Pool Limit, shorter interval, but lower Area and longer Cooldown. It is no longer affected by Speed."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "💡",
       "image": "https://vampire.survivors.wiki/images/Sprite-Luminaire.png",
@@ -210,6 +336,18 @@
         "de": "Entwicklung von Shadow Servant: kann Gegner sofort töten.",
         "en": "Evolved Shadow Servant. Has a chance to instantly kill enemies."
       },
+      "effects": {
+        "de": "Ophion beschwört ortsfeste Kugeln aus dunkler Energie mit violettem Rauch und einem rotierenden Ouroboros in der Mitte. Am Ende explodieren sie und reichen dabei etwas über ihre normale Fläche hinaus. Pool-Limit ist höher, die Fläche kleiner, und zwischen den Angriffen liegt ein kleines Intervall.\n\nStatt der 50 % Chance auf Verlangsamung haben die Kugeln 1 % Chance (abhängig von Glück), einen Gegner wie ein Rosenkranz sofort zu töten.",
+        "en": "Ophion summons stationary dark energy orbs with purple smoke and an ouroboros spinning in the middle. When it expires, it explodes and extends a bit beyond its normal area. Ophion has a higher Pool Limit, smaller Area, and a small interval between each attack.\n\nThe orbs have a 1% chance to instantly kill an enemy just like a Rosary, affected by Luck, replacing the 50% chance to slow down enemies."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "duration",
+        "amount",
+        "cooldown",
+        "luck"
+      ],
       "maxLevel": 1,
       "emoji": "🐍",
       "image": "https://vampire.survivors.wiki/images/Sprite-Ophion.png",
@@ -227,6 +365,18 @@
         "de": "Union aus SpellString, SpellStream und SpellStrike: wird nach jeder Singularität stärker.",
         "en": "Union of SpellString, SpellStream, and SpellStrike. Grows stronger after every singularity."
       },
+      "effects": {
+        "de": "SpellStrom sendet viele blaue Partikel aus und erzeugt zwei Schwerkraftsenken, die um den Charakter kreisen und eine gepunktete Partikelspur hinterlassen. Auf jeder Senke sitzt ein SpellString; SpellStream und SpellStrike wirken weiter normal, alle mit der Stärke von Level 6. SpellString erhält +10 Grundschaden, SpellStream +100 % Geschwindigkeit, +0,5 Sekunden Dauer und +50 % Fläche, SpellStrike +2 Anzahl. Limit-Break-Boni bleiben erhalten, ebenso die Schadensfaktoren: 1,25 × Geschwindigkeit für SpellString, 1,25 × Fläche für SpellStream und 1,25 × Macht für SpellStrike.",
+        "en": "SpellStrom emits a lot of blue particles, creating two gravity wells which orbit around the character and leave behind a dotted particle path. Each well has a SpellString on it, and SpellStream and SpellStrike still work as normal, all at their level 6 strength. SpellString gets +10 base damage; SpellStream gets +100% Projectile Speed, +0.5 seconds to Duration, and +50% Area; SpellStrike gets +2 Amount. They also retain the Limit Break bonuses. All weapon components retain their respective stat damage multipliers: 1.25x Projectile Speed for SpellString, 1.25x Area for SpellStream, and 1.25x Might for SpellStrike."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "🌪️",
       "image": "https://vampire.survivors.wiki/images/Sprite-SpellStrom.png",

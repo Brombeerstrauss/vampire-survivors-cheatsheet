@@ -8,11 +8,11 @@ The app is available in **English and German**. It starts in English; you can sw
 
 ## Features
 
-- **Characters**: every character from the base game and all DLCs, with search, starting weapon, evolution and recommendations. Secret characters can be hidden.
+- **Characters**: every character from the base game and all DLCs, with search, starting weapon, evolution and recommendations. Secret characters can be hidden. The list can be sorted as in the game or A–Z.
 - **Run tracker**: add the weapons and passive items of your current run (6 slots each). For each weapon, the app shows what is still missing for its evolution. Once all parts are there, it tells you what needs max level before the next chest brings the evolution. You don't enter levels. Unions, gifts, morphs and evolutions with several items are covered.
 - **Original images**: characters, weapons and items appear with the artwork from the game. The app loads it straight from the wiki and contains no copies itself; you can turn this off in the settings to get emojis instead.
 - **Suggestions**: missing evolution partners first, then weapons that pair with your items, then recommendations for the character. Warns when the slots won't be enough for the evolutions you are planning.
-- **Weapons and items**: browse everything with description, evolution, origin and matching characters.
+- **Weapons and items**: browse everything with description, evolution, origin and matching characters. For weapons also how they work and what triggers them, and which stats boost them, each with the passive item for it. Sorted as in the game or A–Z.
 - **DLC filter**: choose the DLCs you own in the settings. Evolutions across DLC boundaries only appear when all the content involved is enabled.
 - **Reset** the run with one tap, with an undo button.
 - **Mod with in-game overlay** (PC, Steam, optional): the BepInEx plugin in `mod/` shows inside the game what each weapon still needs for its next evolution, grades the choices on the level-up screen from A to D for your character and run, and can pass the run to the app (settings: "Take the run from the game"). See [`mod/README.md`](mod/README.md).
@@ -80,6 +80,7 @@ Key rules:
 - `verified: false` means: not yet reliably checked against the wiki. The app marks these entries as "unverified".
 - By default, an evolution needs the weapon at max level, while for items owning them is enough. `"level": "max"` or `"level": "any"` changes this per ingredient. The app only shows this as a hint; levels are not tracked in the run.
 - `image` is the URL of the original image on the wiki, `emoji` the placeholder used when the image doesn't load or images are turned off.
+- Weapons can have `effects` (how the weapon works and what triggers it: the first paragraphs of the wiki's "Effects" section) and `affectedBy` (the stats that directly affect it, from the wiki's "Stats and passive items" table). `tools/wiki-import/weapon_effects.py` fills both in.
 - Texts exist in both languages, e.g. `"description": { "de": "…", "en": "…" }`. This applies to descriptions, bonuses, conditions, notes and recommendations.
 - `name` is the English name from the game. `nameDe` is the official German name, `nameDeHint` an own translation for names without an official German name.
 - Recommendations from all enabled packs are merged, so a DLC can add recommendations for a base game character.
@@ -149,6 +150,7 @@ More notes:
 - The recommendations for the 34 regular base game characters are hand-written. DLC characters get a basic recommendation (starting weapon and the partners for its evolution), which can be extended in `recommendations.json`.
 - English names and descriptions are the original texts from the game (according to the wiki). German descriptions are official texts where poncle's sheet has them, otherwise own translations.
 - Special weapons (e.g. the Arcana Gemini counterparts) and Arcanas are not included.
+- 339 of 352 weapons have an `effects` text and 281 an `affectedBy` list from the wiki. The German `effects` texts are own translations (`tools/wiki-import/texts/effects_de.py`).
 - The community tiers cover 151 weapons and items (13 of them tier 1, 31 tier 2, 107 tier 3). Many character-specific DLC weapons are not rated by any of the tier lists.
 
 ## Sources and license

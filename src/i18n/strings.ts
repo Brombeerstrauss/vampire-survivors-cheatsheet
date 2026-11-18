@@ -1,5 +1,6 @@
 // All UI texts in German and English.
 // `en` has the same type as `de`: if a text is missing in one language, TypeScript reports an error.
+import type { Stat } from '../data/types.ts'
 
 const listDe = (names: string[]) =>
   names.length <= 1 ? names.join('') : `${names.slice(0, -1).join(', ')} und ${names[names.length - 1]}`
@@ -155,6 +156,32 @@ export const de = {
   usesNoSlot: 'Belegt keinen Slot',
   notNeededForEvolution: 'Wird für keine Entwicklung gebraucht (mit deinen freigeschalteten Inhalten).',
   recommendedFor: 'Empfohlen für',
+  howItWorks: 'So funktioniert sie',
+  boostedBy: 'Wird verstärkt durch',
+  boostedByHint: 'Werte, die direkt auf die Waffe wirken, mit dem passiven Gegenstand dafür.',
+  moreOnWiki: 'Mehr im Wiki',
+  fromWiki: 'Aus dem Vampire Survivors Wiki',
+  stat: {
+    might: 'Macht',
+    area: 'Fläche',
+    speed: 'Geschwindigkeit',
+    duration: 'Dauer',
+    amount: 'Anzahl',
+    cooldown: 'Abklingzeit',
+    luck: 'Glück',
+    maxHealth: 'Max. Gesundheit',
+    recovery: 'Erholung',
+    armor: 'Rüstung',
+    moveSpeed: 'Bewegungsgeschwindigkeit',
+    magnet: 'Magnet',
+    growth: 'Wachstum',
+    greed: 'Gier',
+    curse: 'Fluch',
+    revival: 'Wiederbelebung',
+  } as Record<Stat, string>,
+  sortOrder: 'Sortierung',
+  sortGame: 'Wie im Spiel',
+  sortName: 'A–Z',
 
   // Settings
   settings: 'Einstellungen',
@@ -328,6 +355,32 @@ export const en: Strings = {
   usesNoSlot: 'Uses no slot',
   notNeededForEvolution: 'Not needed for any evolution (with your enabled content).',
   recommendedFor: 'Recommended for',
+  howItWorks: 'How it works',
+  boostedBy: 'Boosted by',
+  boostedByHint: 'Stats that directly affect the weapon, with the passive item for each.',
+  moreOnWiki: 'More on the wiki',
+  fromWiki: 'From the Vampire Survivors Wiki',
+  stat: {
+    might: 'Might',
+    area: 'Area',
+    speed: 'Speed',
+    duration: 'Duration',
+    amount: 'Amount',
+    cooldown: 'Cooldown',
+    luck: 'Luck',
+    maxHealth: 'Max Health',
+    recovery: 'Recovery',
+    armor: 'Armor',
+    moveSpeed: 'Move Speed',
+    magnet: 'Magnet',
+    growth: 'Growth',
+    greed: 'Greed',
+    curse: 'Curse',
+    revival: 'Revival',
+  },
+  sortOrder: 'Sort order',
+  sortGame: 'Game order',
+  sortName: 'A–Z',
 
   settings: 'Settings',
   yourContent: 'Your content',

@@ -48,5 +48,8 @@ done
 
 echo "Adding game IDs (gameIds) from the wiki infoboxes ..."
 python3 -I "$HERE/game_ids.py" "$API" "$PROJECT/src/data/packs"
+
+echo "Adding how each weapon works (effects, affectedBy) from the weapon pages ..."
+python3 -I "$HERE/weapon_effects.py" "$API" "$PROJECT/src/data/packs"
 rm -rf "$RAW"
 echo "Done. Now check with 'npm test'."

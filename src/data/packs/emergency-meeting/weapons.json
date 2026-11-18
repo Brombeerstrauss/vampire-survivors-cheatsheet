@@ -14,6 +14,17 @@
         "de": "Schadet Gegnern und stößt sie weg.",
         "en": "Damages enemies and pushes them away."
       },
+      "effects": {
+        "de": "Report! sendet einen Kegel aus Schallwellen nach links oder rechts, je nach Blickrichtung des Charakters. Die Schallwellen verursachen Schaden und stoßen Gegner zurück. Nach oben oder unten gehen sie nie, egal wohin sich der Spieler bewegt.\n\nStirbt im Koop ein Spieler, löst das Überlaufen seiner Leiche einen Rosenkranz-Effekt aus; dazu erscheint „Dead Body Reported“.",
+        "en": "Report! emits a cone of soundwaves to the left or right of the character, depending on which direction they are currently facing. These soundwaves will damage and knock back enemies. They cannot be emitted above or below the character, regardless of what direction the player is moving in.\n\nOnce a player in Co-op mode dies, walking over the dead body triggers a Rosary effect as the character lies sideways, a skull in a bubble above them, and the words \"Dead Body Reported\" displayed over a red flame-like flash."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "📢",
       "image": "https://vampire.survivors.wiki/images/Sprite-Report%21.png",
@@ -32,6 +43,18 @@
         "de": "Die Zahl der Angriffe hängt von der Anzahl und von niedrigem Glück ab.",
         "en": "The amount of attacks is affected by Amount and by low Luck."
       },
+      "effects": {
+        "de": "Lucky Swipe erzeugt eine Ausweiskarte, die immer schneller von links nach rechts über den Spieler gezogen wird. Anzahl und Glück unter 100 % erhöhen, wie oft die Karte durchgezogen wird, wobei das Tempo zunimmt.",
+        "en": "Lucky Swipe creates an ID card that is being swiped from left to right over the player faster and faster. Amount and Luck lower than 100% increase the number of times the card being swiped, with the swiping speed accelerating."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown",
+        "luck"
+      ],
       "maxLevel": 8,
       "emoji": "💳",
       "image": "https://vampire.survivors.wiki/images/Sprite-Lucky_Swipe.png",
@@ -50,6 +73,16 @@
         "de": "Heilt abhängig von Anzahl und Regeneration.",
         "en": "Restores HP based on Amount and Recovery."
       },
+      "effects": {
+        "de": "Lifesign Scan erzeugt ein grünes elliptisches Raster, das den Charakter von unten nach oben abtastet. Danach blitzt ein großer grüner Kreis um ihn auf, der im Koop alle Spieler darin heilt. Fläche vergrößert den Radius; die Heilung wird mit Anzahl und Erholung multipliziert.",
+        "en": "Lifesign Scan creates a green elliptic grid that scans the character from bottom to top, after which a big green circle flashes around the character and healing every player in it in Co-op mode. The radius is increased by Area. Its healing effect is multiplied by Amount and Recovery."
+      },
+      "affectedBy": [
+        "area",
+        "amount",
+        "cooldown",
+        "recovery"
+      ],
       "maxLevel": 8,
       "emoji": "📈",
       "image": "https://vampire.survivors.wiki/images/Sprite-Lifesign_Scan.png",
@@ -68,6 +101,17 @@
         "de": "Vernichtet Gegner oder schadet ihnen schwer; die Anzahl bestimmt, wie oft er auslöst.",
         "en": "Destroys or heavily damages enemies. Amount affects how many times it can trigger."
       },
+      "effects": {
+        "de": "Just Vent erzeugt unter dem Charakter einen Lüftungsschacht mit schwarzer runder Aura als Falle. Normale Gegner, die hineingeraten, sterben sofort; besonders starke Gegner und Bosse erleiden stattdessen hohen Schaden. Sind so viele Gegner hineingefallen, wie die Anzahl vorgibt, verschwindet der Schacht und erzeugt Erfahrungskristalle.",
+        "en": "Just Vent creates a vent underneath the character with a black circular aura as the trap zone. Normal enemies who entered are killed instantly upon entering the vent, while especially strong enemies and bosses take high damage instead. Once a set number of enemies based on Amount have fallen into the vent, the vent disappears and generates experience gems."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🕳️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Just_Vent.png",
@@ -86,6 +130,18 @@
         "de": "Erzeugt mitwandernde Zonen, aus denen Projektile kommen.",
         "en": "Generates projectile spawning zones that follow the player."
       },
+      "effects": {
+        "de": "Clear Debris bildet eine senkrechte Rutsche auf dem Bildschirm, die sich nicht mit dem Spieler bewegt. Trümmer fallen von oben hindurch; treffen sie keinen Gegner, werden sie wieder nach oben versetzt und fallen schneller, bis die Dauer endet.\n\nClear Debris hat eine Trefferverzögerung von 0,5 Sekunden: Dasselbe Trümmerstück kann denselben Gegner höchstens alle halbe Sekunde treffen. Weil alle laufenden Verzögerungen gleichzeitig zurückgesetzt werden, sobald eine abläuft, werden manche Gegner trotzdem öfter getroffen.",
+        "en": "Clear Debris forms a vertical chute on the screen, it does not move with the player. Debris fall through the chute from the top, if they did not hit any enemies, they are teleported back to the top and falling with greater speed until Duration ends.\n\nClear Debris has a 0.5 seconds Hitbox Delay, meaning that the same enemy cannot be hit more often than every half a second by the same debris. However, because all active delays are reset simultaneously as soon as any one elapses or bounces off a wall, some enemies may get hit more often."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "☄️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Clear_Debris.png",
@@ -104,6 +160,18 @@
         "de": "Trifft Gegner vor dir; der Schaden wird mit der Regeneration multipliziert.",
         "en": "Strikes enemies in front of you. Damage multiplied by Recovery."
       },
+      "effects": {
+        "de": "Sharp Tongue schießt zielsuchende rosa Zungen in Linien vom Charakter auf Gegner vor ihm. Der Schaden wird mit (1 + Erholung) multipliziert.",
+        "en": "Sharp Tongue fires seeking pink tongues in lines from the character to stab at nearby enemies in front of them. The damage of this weapon is multiplied by (1 + Recovery)."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown",
+        "recovery"
+      ],
       "maxLevel": 8,
       "emoji": "👅",
       "image": "https://vampire.survivors.wiki/images/Sprite-Sharp_Tongue.png",
@@ -122,6 +190,17 @@
         "de": "Erzeugt Zonen, die bei Berührung explodieren; die Anzahl bestimmt die Zahl der Explosionsgruppen.",
         "en": "Generates zones that explode when touched by a player. Amount affects the number of explosion clusters."
       },
+      "effects": {
+        "de": "Science Rocks verteilt seltsame Steine mit pulsierender violetter Aura um den Charakter. Berührt er einen Stein, explodiert dieser und fügt Gegnern in der Nähe mehrfach Schaden zu, abhängig von Anzahl.",
+        "en": "Science Rocks scatters weird-looking rocks around the character that emit a pulsating purple aura. Upon coming into contact with a rock, it explodes and damages nearby enemies multiple times based on Amount."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🪨",
       "image": "https://vampire.survivors.wiki/images/Sprite-Science_Rocks.png",
@@ -140,6 +219,18 @@
         "de": "Wirft niedliche, abprallende Projektile mit zufälligen Eigenschaften.",
         "en": "Throws cute bouncing projectiles with random properties."
       },
+      "effects": {
+        "de": "Hats stapelt zufällige Hüte auf dem Kopf des Charakters. Jeder Hut wird abwechselnd auf den nächsten Gegner, zufällig und in Blickrichtung geworfen, mit jedem Hut im Stapel etwas schneller. Ein Hut prallt bis zu 2-mal von Gegnern oder vom Bildschirmrand ab. Ist der Stapel leer, erscheint ein neuer; höchstens 10 Hüte liegen auf einmal.",
+        "en": "Hats summons a pile of random hats on the character's head. Each hat projectile is then thrown at the closest enemy, randomly, and at the faced direction, cycling between the three options, getting slightly faster for each hat in a stack. The hat bounces onto other enemies or off the screen up to 2 times. When the pile of hats is depleted, a new pile appears. There can be a stack of at most 10 hats."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🎩",
       "image": "https://vampire.survivors.wiki/images/Sprite-Hats.png",
@@ -158,6 +249,17 @@
         "de": "Entwicklung von Report!: vernichtet gelegentlich alle Gegner einer Art.",
         "en": "Evolved Report! Occasionally destroys all of one type of enemy."
       },
+      "effects": {
+        "de": "Emergency Meeting sendet einen Kegel aus Schallwellen in die Richtung, in die sich der Spieler bewegt oder zuletzt bewegt hat. Regelmäßig wählt die Waffe außerdem einen zufälligen Typ normaler Gegner auf dem Bildschirm, „wählt ihn raus“ und vernichtet ihn sofort.\n\nStirbt im Koop ein Spieler, löst das Überlaufen seiner Leiche einen Rosenkranz-Effekt aus; dazu erscheint „Dead Body Reported“.",
+        "en": "Emergency Meeting emits a cone of soundwaves in the direction the player is moving or last moved. It also periodically chooses a random type of normal enemy on-screen to \"vote out\" and instantly destroys them.\n\nOnce a player in Co-op mode died, walking over the dead body triggers a Rosary effect as the character lies sideways, a skull in a bubble above them, and the words \"Dead Body Reported\" displayed over a red flame-like flash."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "🚨",
       "image": "https://vampire.survivors.wiki/images/Sprite-Emergency_Meeting.png",
@@ -176,6 +278,19 @@
         "de": "Entwicklung von Lucky Swipe: greift in bis zu vier Richtungen an.",
         "en": "Evolved Lucky Swipe. Attacks in up to four directions."
       },
+      "effects": {
+        "de": "Crossed Wires erzeugt links und rechts am Bildschirm Stümpfe von vier gerissenen Kabeln in zufälliger Reihenfolge (rot, blau, gelb, magenta). Nacheinander wandert je ein Kabel vom linken zum passenden rechten Stumpf und fügt Gegnern auf dem Weg Schaden zu. Passen die Farben, verbindet es sich und sendet regelmäßig Stromstöße, die einzeln Schaden verursachen. Sind alle vier verbunden, fließt einige Sekunden lang Dauerstrom; danach trennen sich alle Kabel und alles beginnt von vorn. Geschwindigkeit beschleunigt das Verbinden, Abklingzeit erhöht die Frequenz der Stöße, Dauer verlängert die Dauerstrom-Phase, Glück erhöht die Chance auf eine erfolgreiche Verbindung (bei Fehlschlag wird das Verbinden schneller).",
+        "en": "Crossed Wires creates stubs of four broken electrical wires on the left and right side of the screen. The wires are of different colors in a random order: red, blue, yellow, and magenta. One by one wires will cross the screen from the stub on the left to the corresponding stub on the right, damaging enemies in the wire's path. If the wires match, they will connect and begin sending periodic pulses of electricity through the wire, each pulse can deal damage individually. Once all four wires are connected they will send a continuous stream of electricity for a few seconds, then all the wires will disconnect and the process will start over again. Projectile Speed increases the speed of the wire connecting. Cooldown increases the frequency of the pulses. Duration extends the continuous electricity phase. Luck increases the chance of the wire connecting successfully, with the the connecting speed accelerating if it fails."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown",
+        "luck"
+      ],
       "maxLevel": 1,
       "emoji": "🔌",
       "image": "https://vampire.survivors.wiki/images/Sprite-Crossed_Wires.png",
@@ -194,6 +309,16 @@
         "de": "Entwicklung von Lifesign Scan: gibt regelmäßig einen dauerhaften zufälligen Werte-Bonus.",
         "en": "Evolved Lifesign Scan. Periodically grants a random stat boost for the rest of the run."
       },
+      "effects": {
+        "de": "Paranormal Scan erzeugt ein türkises elliptisches Raster, das den Charakter von unten nach oben abtastet. Danach blitzt ein großer türkiser Kreis um ihn auf, der im Koop alle Spieler darin heilt. Fläche vergrößert den Radius; die Heilung wird mit Anzahl und Erholung multipliziert. Außerdem erhöht die Waffe einen zufälligen Wert bis zum Ende des Laufs.",
+        "en": "Paranormal Scan creates a cyan elliptic grid that scans the character from bottom to top, after which a big cyan circle flashes around the character and healing every player in it in Co-op mode. The radius is increased by Area. Its healing effect is multiplied by Amount and Recovery. It also grants a boost to a random stat that lasts until the end of the run."
+      },
+      "affectedBy": [
+        "area",
+        "amount",
+        "cooldown",
+        "recovery"
+      ],
       "maxLevel": 1,
       "emoji": "🔮",
       "image": "https://vampire.survivors.wiki/images/Sprite-Paranormal_Scan.png",
@@ -212,6 +337,16 @@
         "de": "Entwicklung von Just Vent: saugt Gegner ein.",
         "en": "Evolved Just Vent. Sucks in enemies."
       },
+      "effects": {
+        "de": "Unjust Ejection beschwört regelmäßig eine riesige Metallluke am linken oder rechten Bildschirmrand hinter dem Charakter. Beim Öffnen zieht sie alle Gegner an. Die meisten, die vor dem Schließen hineingezogen werden, sterben sofort; danach erscheint „X enemies are ejected.“ Besonders starke Gegner und Bosse erleiden stattdessen über Zeit hohen Schaden. Ist die Abklingzeit niedrig genug, kommt ein weiterer Effekt hinzu: Dreht sich der Spieler kurz vor der nächsten Luke um, schiebt eine Kraftwand die Gegner einmal zur Luke.",
+        "en": "Unjust Ejection periodically summons a massive metal hatch at the left or right side of the screen to the back of the character. As it opens, it pulls in all enemies. Most enemies who are pulled into the hatch's opening before it closes are killed instantly, as it finishes it shows the message \"X enemies are ejected.\" Especially strong enemies and bosses take high damage over time instead. Once Cooldown is low enough, it gains an additional effect where it creates a wall of force and particles to push enemies to the hatch once if the player switches where they face right before the next one starts."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "🌀",
       "image": "https://vampire.survivors.wiki/images/Sprite-Unjust_Ejection.png",
@@ -230,6 +365,17 @@
         "de": "Entwicklung von Clear Debris: die Anzahl erzeugt Explosionsgruppen.",
         "en": "Evolved Clear Debris. Amount creates cluster explosions."
       },
+      "effects": {
+        "de": "Clear Asteroids erzeugt ein Asteroidenfeld, das von rechts nach links über den Bildschirm treibt. Ein grünes Fadenkreuz feuert Schusspaare auf die Asteroiden und zerstört sie mit einer Explosion, die auch Gegnern in der Nähe Schaden zufügt. Anzahl erhöht die Explosionen pro abgeschossenem Asteroiden.\n\nKein Durchschlag mehr, dafür deutlich mehr Grundschaden und halbe Abklingzeit, aber viel weniger Anzahl, weil die Waffe ganz anders angreift. Das Intervall ist minimal kürzer.",
+        "en": "Clear Asteroids creates a field of asteroids that drift across the screen from right to left. A green crosshair fires pairs of bolts at the asteroids, destroying them with an explosion that also damages nearby enemies. Amount increases the explosion per asteroid being shot down.\n\nClear Asteroids no longer has Pierce, gains a massive increase in Base Damage and its Cooldown cut in half in exchanged for a much lower Amount, as the nature of their attack is very different. It has a tiny decrease in Interval."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "🌠",
       "image": "https://vampire.survivors.wiki/images/Sprite-Clear_Asteroids.png",
@@ -247,6 +393,19 @@
         "de": "Entwicklung von Sharp Tongue: hoher Schaden am stärksten Gegner und allem auf dem Weg.",
         "en": "Evolved Sharp Tongue. Deals high damage to the strongest enemy and anything in its path."
       },
+      "effects": {
+        "de": "Impostongue schießt zielsuchende rosa Zungen in Linien vom Charakter auf Gegner vor ihm; manche sind rot und können überall auf dem Bildschirm zielen. Regelmäßig trifft ein roter Blitz den stärksten Gegner auf dem Bildschirm und alle anderen in einem waagerechten Bereich um ihn mit hohem Schaden. Der Schaden wird mit (1 + Erholung) multipliziert.\n\nGrundschaden und Geschwindigkeit sind etwas höher, Abklingzeit und Intervall kürzer.",
+        "en": "Impostongue fires seeking pink tongues in lines from the character to stab at nearby enemies in front of them, some are fired as red tongues which can aim at anywhere on screen. It periodically blasts a red flash at the strongest on-screen enemy and all other enemies in a horizontal area centered on the original target with high damage. The damage of this weapon is multiplied by (1 + Recovery).\n\nImpostongue gains a bit of Base Damage and Projectile Speed, while having a lower Cooldown and Interval."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown",
+        "luck",
+        "recovery"
+      ],
       "maxLevel": 1,
       "emoji": "🗡️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Impostongue.png",
@@ -265,6 +424,17 @@
         "de": "Entwicklung von Science Rocks: löst unter den richtigen Bedingungen einen Abschluss-Angriff aus.",
         "en": "Evolved Science Rocks. Triggers a finisher when the right conditions are met."
       },
+      "effects": {
+        "de": "Rocket Science zeigt die Reihenfolge an und erzeugt dann acht blaue quadratische Knöpfe um den Spieler. Läuft er darüber, explodieren sie und fügen Gegnern im Bereich mehrfach Schaden zu, abhängig von Anzahl. Bis zu fünf zufällige Knöpfe sind von eins bis fünf nummeriert; drückt der Spieler sie in aufsteigender Reihenfolge, erscheinen oben am Bildschirm Raketentriebwerke, die Gegner über eine riesige Fläche mit Feuer treffen.\n\nGrundschaden und Anzahl sind höher, das Intervall ist etwas länger.",
+        "en": "Rocket Science displays the order then creates eight blue square buttons in an area around the player. The player can walk over these buttons to detonate them, damaging the enemies in that area multiple times based on Amount. In addition, up to a random selection of five of the eight buttons are numbered one through five. If the player walks over these buttons in ascending order, rocket engines will appear at the top of the screen, blasting enemies with fire in an enormous area.\n\nRocket Science's Base Damage and Amount has increased, with a slight increase in Interval as well."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "🚀",
       "image": "https://vampire.survivors.wiki/images/Sprite-Rocket_Science.png",

@@ -1,5 +1,8 @@
 import type { Lang, Pack, PackId } from '../data/types.ts'
 
+/** Order of the lists: as in the game (the data's order) or alphabetical by displayed name. */
+export type SortOrder = 'game' | 'name'
+
 export interface Settings {
   /** Packs you own. The base game is always included. */
   ownedPacks: PackId[]
@@ -15,7 +18,13 @@ export interface Settings {
   languageChosen: boolean
   /** Take the run live from the game (BepInEx plugin in `mod/`). */
   modBridge: boolean
+  /** Order of the character list. */
+  characterSort: SortOrder
+  /** Order of the weapon and item lists. */
+  librarySort: SortOrder
 }
+
+const sortOrder = (value: unknown): SortOrder => (value === 'name' ? 'name' : 'game')
 
 const isString = (value: unknown): value is string => typeof value === 'string'
 
@@ -45,5 +54,7 @@ export function loadSettings(raw: unknown, packs: Pack[]): Settings {
     language: chosen && (stored.language === 'de' || stored.language === 'en') ? stored.language : 'en',
     languageChosen: chosen,
     modBridge: stored.modBridge === true,
+    characterSort: sortOrder(stored.characterSort),
+    librarySort: sortOrder(stored.librarySort),
   }
 }

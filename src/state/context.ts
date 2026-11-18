@@ -3,7 +3,7 @@ import type { Lang, PackId } from '../data/types.ts'
 import type { Catalog } from '../logic/catalog.ts'
 import type { RunState } from '../logic/run.ts'
 import type { ModStatus } from './modConnection.ts'
-import type { Settings } from './settings.ts'
+import type { Settings, SortOrder } from './settings.ts'
 
 export interface Notice {
   message: string
@@ -22,6 +22,7 @@ export interface AppState {
   setShowImages(show: boolean): void
   setLanguage(language: Lang): void
   setModBridge(enabled: boolean): void
+  setSortOrder(list: 'characters' | 'library', order: SortOrder): void
   live: LiveState
   /** Catalog of the enabled packs. */
   catalog: Catalog

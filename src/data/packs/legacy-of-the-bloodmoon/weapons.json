@@ -14,6 +14,16 @@
         "de": "Schadensnadeln heften den nächsten Gegner an Ort und Stelle.",
         "en": "Damaging needles pin the nearest enemy in place."
       },
+      "effects": {
+        "de": "Scarlet Needle lässt Nadeln auf den nächsten Gegner fallen; Anzahl erhöht, wie viele Gegner angegriffen werden können. Gibt es weniger Gegner als die Anzahl, erhält ein Gegner mehrere Nadeln.\n\nDer Wert Dauer wirkt nicht auf die Nadeln; nur Level-Ups verlängern, wie lange sie liegen bleiben.",
+        "en": "Scarlet Needle will drop needles on the nearest enemy, with Amount increasing how many enemies can be attacked. If there are fewer enemies than the weapon's amount, then a single enemy will receive multiple needles.\n\nDuration (stat) has no effect on the duration of Scarlet Needle's needles; only level ups will increase the duration that they linger on the field."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "📍",
       "image": "https://vampire.survivors.wiki/images/Sprite-Scarlet_Needle.png",
@@ -31,6 +41,18 @@
         "de": "Kann kritisch treffen.",
         "en": "Can deal critical hits."
       },
+      "effects": {
+        "de": "Ashella schlägt abwechselnd in einem Bogen über und unter dem Spieler zu; Schaden verursacht der Axtkopf beim Drehen.\n\nAnzahl wirkt ähnlich wie Dauer: Jeder weitere Punkt verlängert die Kombo. Abklingzeit verkürzt die Pause zwischen den Kombos.",
+        "en": "Ashella alternates between slashing in an arc above and below the player, dealing damage to enemies hit by the head of the axe as it rotates.\n\nAmount acts similarly to Duration, where each additional Amount increases the length of the combo. Cooldown decreases the delay between combos."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown",
+        "luck"
+      ],
       "maxLevel": 8,
       "emoji": "🪶",
       "image": "https://vampire.survivors.wiki/images/Sprite-Ashella.png",
@@ -49,6 +71,15 @@
         "de": "Löscht Gegner in Blickrichtung aus.",
         "en": "Erases enemies in the faced direction."
       },
+      "effects": {
+        "de": "Incineration erzeugt ab und zu einen Zauberkreis in Blickrichtung. Nach einer Sekunde setzt sie eine Aschewelle frei, die jeden Gegner ohne Resistenz gegen Sofort-Tötung garantiert sofort besiegt; resistente Gegner erleiden normalen Schaden.\n\nFläche vergrößert die Aschewelle und wie weit sie reicht.",
+        "en": "Incineration will occaisionally spawn a magic circle in the player's faced direction. After one second has elapsed, Incineration will release a wave of ash that is guaranteed to instantly defeat any enemy it passes through if they do not possess instant kill resistance. If an enemy does possess instant kill resistance, then they will instead take normal damage.\n\nArea will increase the size of the wave of ash and how far it travels before expiring."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🔥",
       "image": "https://vampire.survivors.wiki/images/Sprite-Incineration.png",
@@ -67,6 +98,17 @@
         "de": "Stößt Schreie mit starkem Rückstoß aus; schlägt zurück.",
         "en": "Unleash screams with high knockback. Retaliates."
       },
+      "effects": {
+        "de": "Screams from the Void lässt ab und zu Druckwellen vom Spieler ausgehen, die Gegnern bei Berührung Schaden zufügen und sie stark zurückstoßen.\n\nAnzahl erhöht die Zahl der Druckwellen pro Angriff.",
+        "en": "Screams from the Void causes shockwaves to occasionally ripple out from the player, dealing damage to enemies they contact with high levels of knockback.\n\nThe number of shockwaves done in a single attack increases with Amount."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "amount",
+        "cooldown",
+        "armor"
+      ],
       "maxLevel": 8,
       "emoji": "😱",
       "image": "https://vampire.survivors.wiki/images/Sprite-Screams_from_the_Void.png",
@@ -85,6 +127,17 @@
         "de": "Löscht einen zufälligen Gegner aus und hinterlässt manchmal einen schädlichen Riss in der Wirklichkeit.",
         "en": "Erasing a random enemy, occasionally leaving a damaging tear in reality."
       },
+      "effects": {
+        "de": "Blacken Firmament erzeugt oben am Bildschirm ein großes Becken aus Leere, das nur optisch ist. Ab und zu löscht die Waffe einen zufälligen Gegner auf dem Bildschirm und besiegt ihn sofort; an seiner Stelle bleibt ein Riss im Raum. Anzahl erhöht die Zahl der gelöschten Gegner pro Auslösung.",
+        "en": "Blacken Firmament creates a large pool of void at the top of the screen, which is purely visual. Occaisionally, Blacken Firmament will pick a random, on-screen enemy to erase, instantly defeating it and leaving a dimensional tear where it was erased. The number of enemies erased with each activation is increased with Amount."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🌑",
       "image": "https://vampire.survivors.wiki/images/Sprite-Blacken_Firmament.png",
@@ -103,6 +156,19 @@
         "de": "Eigentlich nur 16; der Schaden hängt vom Unterschied zwischen Fluch und Glück ab.",
         "en": "Actually it's just 16. Damage affected by the difference between Curse and Luck."
       },
+      "effects": {
+        "de": "108 Responsive Prayers erzeugt eine rotierende senkrechte Spirale aus Ofuda-Amuletten um den Spieler. Beim Auslösen hören die Amulette auf zu rotieren, und entlang der Spirale entstehen Explosionen.\n\nDer Schaden der Explosionen steigt um +1 % pro 1 % Unterschied zwischen Glück und Fluch, bis zum 11-Fachen bei 1000 % Unterschied.",
+        "en": "108 Responsive Prayers creates a spinning vertical spiral of ofuda amulets centered on the player. When the weapon fires, the amulets will stop spinning and explosions will occur along the spiral.\n\nThe damage of the explosions is increased by +1% for every 1% difference in Luck and Curse, maxing out at a damage increase of 11x at a difference of 1000%."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "duration",
+        "amount",
+        "cooldown",
+        "luck",
+        "curse"
+      ],
       "maxLevel": 8,
       "emoji": "📿",
       "image": "https://vampire.survivors.wiki/images/Sprite-108_Responsive_Prayers.png",
@@ -121,6 +187,16 @@
         "de": "Trifft den entferntesten Gegner; der Schaden wird zusätzlich mit der Macht multipliziert.",
         "en": "Strikes at the furthest enemy. Damage further multiplied by Might."
       },
+      "effects": {
+        "de": "FireFall lässt eine kleine Feuersäule auf den am weitesten entfernten Gegner auf dem Bildschirm fallen; beim Aufprall entsteht kreisförmiger Schaden, während das Feuer nach außen spiralt. Weitere Feuerbälle durch Anzahl zielen auf Gegner in der Nähe des ersten, zunehmend in Richtung Spieler.\n\nWegen eines Fehlers skaliert FireFall derzeit nicht besonders mit Macht, anders als etwa SpellStrike.",
+        "en": "FireFall drops a small column of fire from the sky on the furthest on-screen enemy, dealing damage in a circle when it lands as fire spirals outward. Consecutive fireballs, from increased Amount, will target enemies near the initial enemy targeted, trending towards the player.\n\nDue to a bug, FireFall currently does not possess any special Might scaling, unlike weapons such as SpellStrike."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 6,
       "emoji": "☄️",
       "image": "https://vampire.survivors.wiki/images/Sprite-FireFall.png",
@@ -139,6 +215,16 @@
         "de": "Erzeugt eine wachsende Schadenszone; der Schaden wird mit der Fläche multipliziert.",
         "en": "Generates at expanding damaging zone. Damage multiplied by Area."
       },
+      "effects": {
+        "de": "FireBall setzt einen Feuerball in Laufrichtung frei, der getroffene Gegner durchdringt. Er beginnt klein und wächst, bis er verschwindet; am Bildschirmrand prallt er im Bogen ab. Dauer verlängert die Lebenszeit der Feuerbälle.\n\nAb einer Fläche von 3 Einheiten (etwa 4,29-fache Grundgröße) wirkt mehr Fläche nur noch abgeschwächt (logarithmisch statt linear).",
+        "en": "FireBall releases a fireball in the direction the character is moving, piercing enemies it hits. The fireball starts small, but grows in size over time until it expires. When it hits the edge of the screen, it bounces in an arc. Duration increases how long fireballs last.\n\nOnce FireBall's projectiles reach an area of 3 units, or around 4.29x the base size, further increases to their Area will begin having a reduced effect, scaling logarithmically instead of linearly."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "duration",
+        "cooldown"
+      ],
       "maxLevel": 6,
       "emoji": "🔥",
       "image": "https://vampire.survivors.wiki/images/Sprite-FireBall.png",
@@ -157,6 +243,16 @@
         "de": "Erzeugt eine gerichtete Schadenszone; wächst stark mit der Anzahl.",
         "en": "Generates a directional damaging zone. Greatly affected by Amount."
       },
+      "effects": {
+        "de": "FireWall erzeugt einen kleinen Flammenbogen in Blickrichtung, der sich mit dem Charakter dreht.\n\nAnfangs gibt es 2 Flammen, jeder weitere Punkt Anzahl bringt 3 mehr. Mit mehr Flammen wird der Bogen breiter, und ist ein Bogen voll, kommen weitere Bögen hinzu.",
+        "en": "FireWall creates a small arc of flames in the direction the character is facing, rotating alongside them.\n\nThe base number of flames is 2, with each additional Amount increasing the number of flames by 3. As more flames are added, the weapon's arc will expand, adding more arcs as FireWall reaches the maximum number of flames in a given arc."
+      },
+      "affectedBy": [
+        "might",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 6,
       "emoji": "🧱",
       "image": "https://vampire.survivors.wiki/images/Sprite-FireWall.png",
@@ -175,6 +271,17 @@
         "de": "Verfluchter Gegenstand: die Anzahl erhöht den Schaden; kritische Treffer oder Richtungswechsel lösen Zusatzangriffe aus.",
         "en": "Cursed item. Amount affects damage. Critical hits or changing movement direction ensure extra attacks."
       },
+      "effects": {
+        "de": "Descent Into Misery lässt am Charakter ein rotes Funkeln aufblitzen und erzeugt nach 0,7 Sekunden eine Reihe roter Hiebe, die einen Teil des Bildschirms abdecken. Fläche vergrößert die Hiebe nur um ihre Quadratwurzel, wirkt also deutlich schwächer.\n\nUnter Level 3 gibt es nur einen Hieb. Mit höherem Level umfasst die Kombo mehr Angriffe; ein Richtungswechsel zwischen den Hieben setzt die Kombo fort. Bei einem kritischen Treffer läuft der Rest der Kombo automatisch ab, weiterhin begrenzt durch das Level.",
+        "en": "Descent Into Misery creates a red glint at the player character and, after 0.7 seconds, creates a series of red slashes that take up a portion of the screen. Area will increase the the sizes of Descent Into Misery's slashes by the square root of itself, leading to a significantly diminished effect.\n\nBelow level 3, only one slash can be created. As the weapon's level increases, granting it more attacks in its combo, changing direction between slashes will cause it to continue its current combo. On a critical hit, the weapon automatically proceed with the rest of the combo, still being limited by level, but not requiring player input."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "amount",
+        "cooldown",
+        "luck"
+      ],
       "maxLevel": 9,
       "emoji": "⬇️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Descent_Into_Misery.png",
@@ -193,6 +300,17 @@
         "de": "Entwicklung von Scarlet Needle: endloser Regen, der in jede Richtung treffen kann.",
         "en": "Evolved Scarlet Needle. Endless rain can hit in any direction."
       },
+      "effects": {
+        "de": "Cardinal Rain funktioniert fast wie Scarlet Needle, greift aber beliebige Gegner auf dem Bildschirm an (vermutlich zufällig) statt den nächsten. Die Nadeln halten Gegner weiterhin fest.\n\nGegenüber Scarlet Needle hat sie +3 Grundschaden, +5 Anzahl und +30 Pool-Limit.",
+        "en": "Cardinal Rain functions nearly identically to its predecessor, Scarlet Needle, instead attacking any enemy on screen, presumably randomly, rather than the closest enemy to the player. Cardinal Rain retains the ability to pin enemies in place and uses the same type of damage number as Scarlet Needle.\n\nCardinal Rain has +3 Base Damage, +5 Amount, and +30 Pool Limit compared to Scarlet Needle."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "amount",
+        "cooldown",
+        "recovery"
+      ],
       "maxLevel": 1,
       "emoji": "🌧️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Cardinal_Rain.png",
@@ -211,6 +329,19 @@
         "de": "Entwicklung von Ashella: kritischer Schaden hängt von der Anzahl ab.",
         "en": "Evolved Ashella. Critical damage affected by Amount."
       },
+      "effects": {
+        "de": "Bloodlust verhält sich ähnlich wie Ashella, schwingt aber einmal komplett um den Spieler. Nach dem Schwung bleibt die Axt eine Weile am Boden liegen; Dauer verlängert diese Zeit.\n• Die Griffe von Bloodlust und den liegenden Äxten können nicht kritisch treffen, nur die Axtköpfe.\n\nGegenüber Ashella hat Bloodlust +20 % Geschwindigkeit, +0,8 Sekunden Dauer, +0,45 Sekunden Intervall und +22 Pool-Limit.",
+        "en": "Bloodlust acts similarly to its predecessor, Ashella. However, Bloodlust will instead swing completely around the player. When an axe has finished swinging, it will linger on the ground. The time an axe lingers on the ground is increased by Duration. \n• Note that the handles of both Bloodlust and its lingering axes can not crit; only the axe heads are able to.\n\nCompared to Ashella, Bloodlust has +20% Speed, +0.8 seconds of Duration, +0.45 seconds of Interval, and +22 Pool Limit."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown",
+        "luck"
+      ],
       "maxLevel": 1,
       "emoji": "🩸",
       "image": "https://vampire.survivors.wiki/images/Sprite-Bloodlust.png",
@@ -229,6 +360,15 @@
         "de": "Entwicklung von Incineration: höllische Asche weht zurück und löscht Gegner aus.",
         "en": "Evolved Incineration. Infernal ashes blow back, erasing enemies."
       },
+      "effects": {
+        "de": "Dust to Dust verhält sich ähnlich wie Incineration. Erreicht die Aschewelle den Bildschirmrand, prallt sie zurück und löscht weiter Gegner auf ihrem Weg, während sie wächst.\n\nGegenüber Incineration hat Dust to Dust -20 % Fläche, +0,2 Sekunden Dauer, +0,5 Sekunden Abklingzeit, +0,1 Sekunden Wiederholungsintervall und +95 Pool-Limit.",
+        "en": "Dust to Dust retains similar behavior to Incineration. When Dust to Dust's wave of ash reaches the edge of the screen, it will rebound in the opposite direction, erasing enemies in its path as it continues to grow in size.\n\nCompared to Incineration, Dust to Dust has -20% Area, +0.2 seconds of Duration, +0.5 seconds of Cooldown, +0.1 seconds of Repeat Interval, and +95 Pool Limit."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "⚱️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Dust_to_Dust.png",
@@ -247,6 +387,17 @@
         "de": "Entwicklung von Screams from the Void: zieht Gegner an und entwaffnet sie.",
         "en": "Evolved Screams from the Void. Pulls and defangs enemies."
       },
+      "effects": {
+        "de": "Forbidden Siren behält fast alles von Screams from the Void, auch die Vergeltung, weil der Teil von Screams from the Void und der Sog-Teil als getrennte Waffen zählen. Anders als bei manchen anderen Doppelwaffen (etwa denen aus Belnades' Spellbook) hängt das nicht davon ab, wie man die Waffe erhalten hat: Beide Teile sind immer da. Beim Auslösen erscheinen Musiknoten, die nur optisch sind und keinen Schaden verursachen.",
+        "en": "Forbidden Siren retains nearly all of the behavior of Screams from the Void, including its ability to retaliate, as both the Screams from the Void part and suction part of Forbidden Siren are considered separate weapons. Unlike some other weapons that function as two distinct weapons, such as weapons in the Belnades' Spellbook, the effects of Forbidden Siren do not depend on method of obtainment; both factors of the weapon will always be present. When activating, Forbidden Siren will create music note projectiles that are purely visual and deal no damage."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "amount",
+        "cooldown",
+        "armor"
+      ],
       "maxLevel": 1,
       "emoji": "🧜",
       "image": "https://vampire.survivors.wiki/images/Sprite-Forbidden_Siren.png",
@@ -265,6 +416,17 @@
         "de": "Entwicklung von Blacken Firmament: zieht Gegner ins Verderben.",
         "en": "Evolved Blacken Firmament. Draws enemies to ruin."
       },
+      "effects": {
+        "de": "Damnation verhält sich ähnlich wie Blacken Firmament und behält diese als versteckte Waffe. Bei der Entwicklung aus Blacken Firmament bleiben alle Limit-Break-Verbesserungen erhalten; Damnation erhöht den Grundschaden von Blacken Firmament um 40. Wer Damnation aus einer Super Candybox II Turbo wählt, erhält eine versteckte Blacken Firmament auf Höchstlevel.\n\nGegenüber Blacken Firmament hat Damnation +165 Grundschaden, +100 % Fläche, -5 Anzahl, +0,5 Sekunden Dauer, -0,3 Sekunden Wiederholungsintervall und +0,25 Sekunden Trefferverzögerung.",
+        "en": "Damnation retains similar behavior to Blacken Firmament, treating its predecessor as a hidden weapon. When evolving from Blacken Firmament, Damnation will retain all Limit Break upgrades given to Blacken Firmament. Acquiring Damnation will increase the Base Damage of Blacken Firmament by 40. If the player picks Damnation from a Super Candybox II Turbo, then a hidden Blacken Firmament will be granted at max level.\n\nCompared to Blacken Firmament, Damnation has +165 Base Damage, +100% Area, -5 Amount, +0.5 seconds of Duration, -0.3 seconds of Repeat Interval, and +0.25 seconds of Hitbox Delay."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "⛓️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Damnation.png",
@@ -283,6 +445,16 @@
         "de": "Union aus 108 Bocce und 108 Responsive Prayers: 108-mal auslösen, um die Erleuchtung zu erahnen.",
         "en": "Union of 108 Bocce and 108 Responsive Prayers. Activate 108 times to glimpse enlightenment."
       },
+      "effects": {
+        "de": "Road to Heaven beschwört Kacheln mit dem Bild von Menya Moonspell, die über den Bildschirm wandern und Gegnern bei Berührung Schaden zufügen. Der Schaden steigt um 1 % pro 1 % Unterschied zwischen Glück und Fluch, bis zum 11-Fachen bei 1000 % Unterschied.",
+        "en": "Road to Heaven will summon tiles, picturing Menya Moonspell, that wander around the screen, dealing damage to enemies they contact. The damage of these tiles is increased by the difference between Luck and Curse, with each difference of 1% increasing the damage the tiles deal by 1%, maxing out at 11x when the difference between Luck and Curse is 1000%."
+      },
+      "affectedBy": [
+        "might",
+        "cooldown",
+        "luck",
+        "curse"
+      ],
       "maxLevel": 1,
       "emoji": "🛕",
       "image": "https://vampire.survivors.wiki/images/Sprite-Road_to_Heaven.png",
@@ -300,6 +472,18 @@
         "de": "Union aus FireFall, FireBall und FireWall: wird nach jeder Singularität stärker.",
         "en": "Union of FireFall, FireBall, and Firewall. Grows stronger after every singularity."
       },
+      "effects": {
+        "de": "FireStall verhält sich wie seine Bestandteile, mit kleinen Änderungen rund um die zwei schwingenden Sätze von FireWall:\n• FireFall zielt auf die schwingenden Sätze von FireWall statt auf den entferntesten Gegner.\n• FireBall wird von den Sätzen von FireWall ausgesandt; weil es zwei gibt, entstehen zwei FireBalls statt einem.\n• FireWall wird verdoppelt und gespiegelt: Zwei Sätze schwingen auf beiden Seiten des Spielers auf und ab und drehen sich weiterhin mit ihm.\n\nAlle drei Teile behalten ihre besondere Skalierung mit Werten.",
+        "en": "FireStall retains similar behavior to its constituent parts, with minor changes centering around the 2 sets of oscillations sets of FireWall:\n• FireFall will target the oscillating sets of FireWall, rather than the further enemy. \n• FireBall will instead be emitted from the sets of FireWall. Since there are 2 sets of FireWall, 2 instances of FireBall will be emitted rather than 1.\n• FireWall is duplicated and reversed. Two sets of FireWall exist, oscillating up and down on either side of the player. FireWall retains its ability to rotate with the player.\n\nAll 3 parts of FireStall retain their special stat scalings."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "🌋",
       "image": "https://vampire.survivors.wiki/images/Sprite-FireStall.png",
@@ -318,6 +502,18 @@
         "de": "Union aus Kyra-Stones und Descent Into Misery: Treibsand zieht Gegner in die Hölle.",
         "en": "Union of Kyra-Stones and Descent Into Misery. Quicksand drags enemies down to hell."
       },
+      "effects": {
+        "de": "Shimmering Sands kombiniert seine Bestandteile: Die Hiebkombo von Descent Into Misery bleibt, die Edelsteine von Kyra-Stones werden durch eigene Sandkristalle ersetzt.\n\nDie Sandkristalle erscheinen über dem Spieler und fügen Gegnern bei Berührung fortlaufend Schaden zu. Sie sinken mit einer Rate nach unten, die Geschwindigkeit bestimmt; Größe, Lebenszeit und Zahl bestimmen Fläche, Dauer und Anzahl. Wie bei Kyra-Stones verursachen sie festen Schaden, der für jedes Level über 80 um 1 steigt.",
+        "en": "Shimmering Sands acts as a combination of its component weapons, keeping the slashing combo of \nDescent Into Misery while replacing Kyra-Stones' gem projectiles with its own, resembling particles of sand.\n\nThe sand crystals will appear above the player, dealing constant damage to any enemies they come in contact with. They will descend downwards at a rate determined by Speed. The size of crystals, their lifetime and their quantity is determined by Area, Duration and Amount, respectively. They deal fixed damage that increases by 1 for every level above 80, similar to Kyra-Stones."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "⏳",
       "image": "https://vampire.survivors.wiki/images/Sprite-Shimmering_Sands.png",

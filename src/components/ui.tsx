@@ -110,6 +110,33 @@ export function Pill({ children, tone = 'neutral' }: { children: ReactNode; tone
   )
 }
 
+/** Two buttons to pick the order of a list: as in the game, or A–Z. */
+export function SortToggle({ value, onChange }: { value: 'game' | 'name'; onChange: (value: 'game' | 'name') => void }) {
+  const { t } = useI18n()
+  return (
+    <div className="flex items-center gap-1.5" role="group" aria-label={t.sortOrder}>
+      {(
+        [
+          ['game', t.sortGame],
+          ['name', t.sortName],
+        ] as const
+      ).map(([option, label]) => (
+        <button
+          key={option}
+          type="button"
+          aria-pressed={value === option}
+          onClick={() => onChange(option)}
+          className={`min-h-9 rounded-full px-3 text-sm ring-1 ${
+            value === option ? 'bg-gold-500/15 text-gold-300 ring-gold-500/40' : 'text-white/60 ring-white/10 hover:text-white'
+          }`}
+        >
+          {label}
+        </button>
+      ))}
+    </div>
+  )
+}
+
 export function SearchField({
   value,
   onChange,

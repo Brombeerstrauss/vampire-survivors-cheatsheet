@@ -8,27 +8,32 @@ import {
   Pill,
   SearchField,
   Section,
+  SortToggle,
   SourceBadge,
   UnverifiedBadge,
 } from '../components/ui.tsx'
 import { buttonClass, matches } from '../components/styles.ts'
+import { STAT_ITEMS, wikiUrl } from '../data/stats.ts'
 import type { Character, PassiveItem, Weapon } from '../data/types.ts'
 import { useI18n } from '../i18n/index.ts'
-import { searchNames } from '../i18n/names.ts'
+import { searchNames, sortByName } from '../i18n/names.ts'
 import { useAppState } from '../state/context.ts'
 import { characterHref, passiveHref, routeHref, weaponHref } from '../state/route.ts'
 
 type WeaponFilter = 'all' | 'base' | 'evolved'
 
 export function LibraryView({ tab, selectedId }: { tab: 'weapons' | 'passives'; selectedId?: string }) {
-  const { catalog } = useAppState()
-  const { t, text } = useI18n()
+  const { catalog, settings, setSortOrder } = useAppState()
+  const { t, text, lang } = useI18n()
   const [query, setQuery] = useState('')
   const [filter, setFilter] = useState<WeaponFilter>('all')
 
   const found = (entry: Weapon | PassiveItem) => matches(searchNames(entry), query) || matches(text(entry.description), query)
-  const weapons = catalog.weapons.filter((w) => (filter === 'all' || w.kind === filter) && found(w))
-  const passives = catalog.passives.filter(found)
+  const byName = settings.librarySort === 'name'
+  const weapons = (byName ? sortByName(catalog.weapons, lang) : catalog.weapons).filter(
+    (w) => (filter === 'all' || w.kind === filter) && found(w),
+  )
+  const passives = (byName ? sortByName(catalog.passives, lang) : catalog.passives).filter(found)
   const selectedWeapon = tab === 'weapons' && selectedId ? catalog.weapon(selectedId) : undefined
   const selectedPassive = tab === 'passives' && selectedId ? catalog.passive(selectedId) : undefined
   const hasSelection = Boolean(selectedWeapon || selectedPassive)
@@ -58,29 +63,34 @@ export function LibraryView({ tab, selectedId }: { tab: 'weapons' | 'passives'; 
           ))}
         </div>
         <SearchField value={query} onChange={setQuery} placeholder={tab === 'weapons' ? t.searchWeapon : t.searchItem} />
-        {tab === 'weapons' && (
-          <div className="flex gap-1.5" role="group" aria-label={t.weaponType}>
-            {(
-              [
-                ['all', t.filterAll],
-                ['base', t.filterBase],
-                ['evolved', t.filterEvolved],
-              ] as const
-            ).map(([value, label]) => (
-              <button
-                key={value}
-                type="button"
-                aria-pressed={filter === value}
-                onClick={() => setFilter(value)}
-                className={`min-h-9 rounded-full px-3 text-sm ring-1 ${
-                  filter === value ? 'bg-gold-500/15 text-gold-300 ring-gold-500/40' : 'text-white/60 ring-white/10 hover:text-white'
-                }`}
-              >
-                {label}
-              </button>
-            ))}
-          </div>
-        )}
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          {tab === 'weapons' ? (
+            <div className="flex gap-1.5" role="group" aria-label={t.weaponType}>
+              {(
+                [
+                  ['all', t.filterAll],
+                  ['base', t.filterBase],
+                  ['evolved', t.filterEvolved],
+                ] as const
+              ).map(([value, label]) => (
+                <button
+                  key={value}
+                  type="button"
+                  aria-pressed={filter === value}
+                  onClick={() => setFilter(value)}
+                  className={`min-h-9 rounded-full px-3 text-sm ring-1 ${
+                    filter === value ? 'bg-gold-500/15 text-gold-300 ring-gold-500/40' : 'text-white/60 ring-white/10 hover:text-white'
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+          ) : (
+            <span />
+          )}
+          <SortToggle value={settings.librarySort} onChange={(order) => setSortOrder('library', order)} />
+        </div>
         <ul className="space-y-1.5 md:max-h-[calc(100dvh-16rem)] md:overflow-y-auto md:pr-1">
           {list.map((entry) => (
             <li key={entry.id}>
@@ -145,7 +155,7 @@ function DetailHeader({ entry, children }: { entry: Weapon | PassiveItem; childr
 
 function WeaponDetail({ weapon }: { weapon: Weapon }) {
   const { catalog, settings } = useAppState()
-  const { t } = useI18n()
+  const { t, text } = useI18n()
   const evolvesInto = catalog.evolutionsFromWeapon(weapon.id)
   const comesFrom = catalog.evolutionsToWeapon(weapon.id)
   const visible = (c: Character) => settings.showSecrets || !c.secret
@@ -162,6 +172,28 @@ function WeaponDetail({ weapon }: { weapon: Weapon }) {
           {weapon.kind === 'evolved' ? t.evolvedWeapon : t.baseWeapon}
         </Pill>
       </DetailHeader>
+
+      {weapon.effects && (
+        <Section title={t.howItWorks}>
+          <div className="space-y-2 text-white/80">
+            {text(weapon.effects)
+              .split('\n\n')
+              .map((paragraph) => (
+                <p key={paragraph} className="whitespace-pre-line">
+                  {paragraph}
+                </p>
+              ))}
+          </div>
+          <p className="text-xs text-white/45">
+            {t.fromWiki} ·{' '}
+            <a href={wikiUrl(weapon.name)} target="_blank" rel="noopener noreferrer" className="underline hover:text-white/70">
+              {t.moreOnWiki}
+            </a>
+          </p>
+        </Section>
+      )}
+
+      {weapon.affectedBy && weapon.affectedBy.length > 0 && <BoostedBy weapon={weapon} />}
 
       {comesFrom.length > 0 && (
         <Section title={t.howToGet}>
@@ -193,6 +225,47 @@ function WeaponDetail({ weapon }: { weapon: Weapon }) {
         <CharacterReasons weaponOrPassiveId={weapon.id} starters={starters} recommenders={recommenders} />
       </Section>
     </article>
+  )
+}
+
+/** The stats that affect the weapon, each with the passive item that raises it. */
+function BoostedBy({ weapon }: { weapon: Weapon }) {
+  const { catalog } = useAppState()
+  const { t } = useI18n()
+  return (
+    <Section title={t.boostedBy}>
+      <p className="text-sm text-white/55">{t.boostedByHint}</p>
+      <ul className="flex flex-wrap gap-2">
+        {(weapon.affectedBy ?? []).map((stat) => {
+          const item = catalog.passive(STAT_ITEMS[stat])
+          const label = (
+            <>
+              {item && <EntryIcon entry={item} size="sm" />}
+              <span className="min-w-0">
+                <span className="block text-sm font-medium">{t.stat[stat]}</span>
+                {item && <EntryName entry={item} className="block text-xs text-white/55" />}
+              </span>
+            </>
+          )
+          return (
+            <li key={stat}>
+              {item ? (
+                <a
+                  href={passiveHref(item.id)}
+                  className="flex items-center gap-2 rounded-xl border border-white/8 bg-night-800/70 py-1.5 pr-3 pl-1.5 hover:bg-night-700/70"
+                >
+                  {label}
+                </a>
+              ) : (
+                <span className="flex items-center gap-2 rounded-xl border border-white/8 bg-night-800/70 px-3 py-1.5">
+                  {label}
+                </span>
+              )}
+            </li>
+          )
+        })}
+      </ul>
+    </Section>
   )
 }
 

@@ -14,6 +14,18 @@
         "de": "Geschwindigkeit erhöht den Schaden; kann die Technik „Crystalline Carve“ glimmern.",
         "en": "Speed affects damage. Can glimmer the \"Crystalline Carve\" tech."
       },
+      "effects": {
+        "de": "Fleuret schlägt nach dem nächsten Gegner in Reichweite und erzeugt um ihn eine Schadenszone, ähnlich wie Confodere. Geschwindigkeit erhöht den Schaden, Dauer wirkt nicht.\n\nKann die Glimmer-Technik „Crystalline Carve“ auslösen.",
+        "en": "Fleuret slashes at closest enemy within attacking range, creating a damaging area around it, similar to Confodere. Speed affects damage. It ignores Duration.\n\nCan glimmer the \"Crystalline Carve\" tech."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown",
+        "luck"
+      ],
       "maxLevel": 6,
       "emoji": "🤺",
       "image": "https://vampire.survivors.wiki/images/Sprite-Fleuret.png",
@@ -32,6 +44,15 @@
         "de": "Schlägt in Blickrichtung zu; kann „Swallow Slice“ glimmern.",
         "en": "Strikes in the faced direction. Can glimmer the \"Swallow Slice\" tech."
       },
+      "effects": {
+        "de": "Beim Auslösen erzeugt Town Sword vor dem Charakter in Blickrichtung eine kleine runde Schadenszone, die etwa 1 Sekunde lang allen Gegnern darin Schaden zufügt. Geschwindigkeit und Dauer wirken nicht; Anzahl bestimmt die Zahl der Treffer.\n\nKann die Glimmer-Technik „Swallow Slice“★ auslösen, eine durchdringende Schadenswelle nach vorne, bei jeder dritten Aktivierung.",
+        "en": "Once triggered, Town Sword creates a small circle-shaped damaging area ahead of the character in the faced direction, constantly damaging enemies it touches for about 1 second. It ignores Speed and Duration. Amount affects number of hits.\n\nIt can glimmer the \"Swallow Slice\" tech★, firing a piercing damaging wave forward. This glimmer triggers every 3rd activation."
+      },
+      "affectedBy": [
+        "area",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 6,
       "emoji": "🗡️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Town_Sword.png",
@@ -50,6 +71,10 @@
         "de": "Dauer erhöht den Schaden; kann „Dual Whirlwind“ glimmern.",
         "en": "Duration affects damage. Can glimmer the \"Dual Whirlwind\" tech."
       },
+      "effects": {
+        "de": "Dauer erhöht den Schaden. Kann die Glimmer-Technik „Dual Whirlwind“ auslösen. Am besten mit: Dauer.\n\nSplashers greift mit zwei Hieben über und unter dem Spieler an, in Blickrichtung und leicht nach vorne.",
+        "en": "Duration affects damage. Can glimmer the \"Dual Whirlwind\" tech. Best with: Duration.\n\nSplashers attacks using two slashes above and below the player. These attack in the faced direction and slightly forward."
+      },
       "maxLevel": 8,
       "emoji": "💦",
       "image": "https://vampire.survivors.wiki/images/Sprite-Splashers.png",
@@ -67,6 +92,17 @@
         "de": "Wirft rotierende Schwerter nach oben; kann „Bull Crush“ glimmern.",
         "en": "Throws spinning swords upwards. Can glimmer the \"Bull Crush\" tech."
       },
+      "effects": {
+        "de": "Beim Auslösen wirft Flamberge rotierende Schwerter nach oben, die herabfallen und sich in den Boden bohren, wie eine Flächenversion von Axt. Geschwindigkeit und Dauer wirken nicht.\n\nKann die Glimmer-Technik „Bull Crush“ auslösen, die ein riesiges Schwert über eine große Fläche schlagen lässt.",
+        "en": "Once triggered, the Flamberge throws spinning swords upwards, which will drop down and stab into the ground, like a area-of-effect version of Axe. It ignores Speed and Duration.\n\nCan glimmer the \"Bull Crush\" tech, summoning a giant sword that slashes a large area."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "amount",
+        "cooldown",
+        "luck"
+      ],
       "maxLevel": 6,
       "emoji": "⚔️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Flamberge.png",
@@ -84,6 +120,10 @@
       "description": {
         "de": "Greift seitlich an; kann „Raksha“ glimmern.",
         "en": "Attacks sideways. Can glimmer the \"Raksha\" tech."
+      },
+      "effects": {
+        "de": "Punch greift in einem Bogen an, der hinter dem Charakter beginnt und über und unter ihm verläuft. Kann die Glimmer-Technik „Raksha“ auslösen: 10 brennende Schläge kegelförmig kurz vor dem Charakter, die am Auslöseort bleiben.",
+        "en": "Punch attacks in a curved pattern starting from behind the character and going above and below them. Can glimmer the \"Raksha\" tech, which fires 10 flaming punches a short distance in front of the character in a cone pattern that does not move from the activation location."
       },
       "maxLevel": 6,
       "emoji": "👊",
@@ -103,6 +143,10 @@
         "de": "Mehr Schaden bei voller Gesundheit; kann „Thunder Kick“ glimmern.",
         "en": "Deal more damage when at full health. Can glimmer the \"Thunder Kick\" tech."
       },
+      "effects": {
+        "de": "Kick greift kreisförmig vor dem Charakter an und verursacht bei voller Gesundheit mehr Schaden. Geschwindigkeit und Dauer wirken nicht.\n\nKann die Glimmer-Technik „Thunder Kick“ auslösen: ein Blitz schräg nach oben, der dann scharf abbiegt; wann er abbiegt, hängt von Anzahl ab.",
+        "en": "Kick attacks in a circular pattern in front of the character and deals more damage when at full health. It ignores Speed and Duration.\n\nCan glimmer the \"Thunder Kick\" tech, summoning a lightning bolt diagonally upwards, then turns sharply. Time of turning affected by Amount."
+      },
       "maxLevel": 8,
       "emoji": "🦵",
       "image": "https://vampire.survivors.wiki/images/Sprite-Kick.png",
@@ -121,6 +165,18 @@
         "de": "Feuert in Blickrichtung; kann „Shockwave“ glimmern.",
         "en": "Fires in the faced direction. Can glimmer the \"Shockwave\" tech."
       },
+      "effects": {
+        "de": "Saber Machine Gun feuert schnell eine Salve Kugeln in Blickrichtung. Die Kugeln haben eine begrenzte Dauer und durchdringen Gegner.\n\nKann die Glimmer-Technik „Shockwave“ auslösen, die Explosionen um zufällige Gegner erzeugt.",
+        "en": "Saber Machine Gun fires a barrage of bullets rapidly in the faced direction. Bullets have limited duration and can pierce through enemies.\n\nCan glimmer the \"Shockwave\" tech, which creates explosions around random enemies."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 6,
       "emoji": "🔫",
       "image": "https://vampire.survivors.wiki/images/Sprite-Saber_Machine_Gun.png",
@@ -138,6 +194,10 @@
       "description": {
         "de": "Feuert explodierende Projektile; kann „Ballistic Missiles“ glimmern.",
         "en": "Fires exploding projectiles. Can glimmer the \"Ballistic Missiles\" tech."
+      },
+      "effects": {
+        "de": "Super Missile feuert eine Rakete in Blickrichtung, die beim Aufprall explodiert und im Flug schneller wird.\n\nKann die Glimmer-Technik „Ballistic Missiles“ auslösen: zwei Raketenbündel schräg nach oben, die bald nach unten fliegen und ein flügelförmiges Muster bilden.",
+        "en": "Super Missile fires a missile in the faced direction that explodes on impact. It increases in speed as it travels.\n\nCan glimmer the \"Ballistic Missiles\" tech, firing 2 clusters of missiles upward diagonally, which will travel downward soon, forming a wing-shaped pattern."
       },
       "maxLevel": 6,
       "emoji": "🚀",
@@ -157,6 +217,17 @@
         "de": "Schießt auf Gegner in der Nähe; kann „Falconfire“ glimmern.",
         "en": "Fires at nearby enemies. Can glimmer the \"Falconfire\" tech."
       },
+      "effects": {
+        "de": "Eagle Gun erfasst Gegner in der Nähe mit Zielmarkierungen und feuert auf sie. Anzahl bestimmt die Höchstzahl der Markierungen. Dauer wirkt nicht.\n\nKann die Glimmer-Technik „Falconfire“ auslösen, eine große Explosion um den nächsten Gegner.",
+        "en": "Eagle Gun locks on nearby enemies with cursors and fires at them. Amount affects the max number of locking cursors. Ignores: Duration.\n\nCan glimmer the \"Falconfire\" tech, which generates a large explosion around the closest foe."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🦅",
       "image": "https://vampire.survivors.wiki/images/Sprite-Eagle_Gun.png",
@@ -173,6 +244,10 @@
       "description": {
         "de": "Schattenklone treffen Gegner in der Nähe; kann „Moonfall Slash“ glimmern.",
         "en": "Shadow clones strike nearby enemies. Can glimmer the \"Moonfall Slash\" tech."
+      },
+      "effects": {
+        "de": "Khukuri beschwört einen Schattenklon, der Gegner in der Nähe angreift. Wie weit der Klon kommt, hängt von der Grund-Bewegungsgeschwindigkeit des Charakters ab, nicht von Boni durch Waffen und passive Gegenstände.\n\nKann die Glimmer-Technik „Moonfall Slash“ auslösen: ein laufender Schattenklon, der bei jedem Treffer explodiert.",
+        "en": "Khukuri summons a Shadow clone that strikes nearby enemies. The clone's distance travelled is affected by the character's base Move Speed, unaffected by stat increases from weapons and passive items.\n\nCan glimmer the \"Moonfall Slash\" tech, which creates a moving shadow clone that explodes every time it hits an enemy"
       },
       "maxLevel": 8,
       "emoji": "🔪",
@@ -192,6 +267,10 @@
         "de": "Greift waagerecht an; kann „Gravedigger“ glimmern.",
         "en": "Attacks horizontally. Can glimmer the \"Gravedigger\" tech."
       },
+      "effects": {
+        "de": "Twin Dragon schlägt in Blickrichtung. Die Hiebe kommen nacheinander, sodass sich die Richtung mitten im Angriff ändern lässt.\n\nGeschwindigkeit und Dauer wirken nicht.",
+        "en": "Twin Dragon slashes in the faced direction. The slashing projectiles firing in sequence, allowing the direction to be changed mid-attack.\n\nIt ignores Speed and Duration."
+      },
       "maxLevel": 8,
       "emoji": "🐉",
       "image": "https://vampire.survivors.wiki/images/Sprite-Twin_Dragon.png",
@@ -208,6 +287,10 @@
       "description": {
         "de": "Durchdringt Gegner; kann „Hell's Fury“ glimmern.",
         "en": "Passes through enemies. Can glimmer the \"Hell's Fury\" tech."
+      },
+      "effects": {
+        "de": "Bullova beschwört eine riesige Streitaxt, die waagerecht zuschlägt. Geschwindigkeit wirkt nicht.\n\nKann die Glimmer-Technik „Hell's Fury“ auslösen: eine rote senkrechte Schadenszone über den Bildschirm, die Gegnern bei Berührung fortlaufend Schaden zufügt.",
+        "en": "Bullova summons a giant battle axe that slashes horizontally. It ignores Speed.\n\nCan glimmer the \"Hell's Fury\" tech, creating a red vertical damaging zone across the screen, continuously damaging enemies it touches."
       },
       "maxLevel": 8,
       "emoji": "🪓",
@@ -227,6 +310,10 @@
         "de": "Trifft die nächsten Gegner; kann „Blood Rage“ glimmern (doppelter Schaden, doppelte Fläche).",
         "en": "Strikes at the nearest enemies. Can glimmer the \"Blood Rage\" tech: damage x2, area x2."
       },
+      "effects": {
+        "de": "Sanguine Star erzeugt Blutexplosionen am nächsten Ziel, die allen Gegnern in einem kleinen Bereich Schaden zufügen.\n\nKann die Glimmer-Technik „Blood Rage“ auslösen: doppelter Schaden, doppelte Fläche.",
+        "en": "Sanguine Star creates blood explosions at the nearest target, damaging all enemies in a small area.\n\nCan glimmer the \"Blood Rage\" tech: damage x2, area x2."
+      },
       "maxLevel": 8,
       "emoji": "🩸",
       "image": "https://vampire.survivors.wiki/images/Sprite-Sanguine_Star.png",
@@ -244,6 +331,10 @@
       "description": {
         "de": "Sticht in Blickrichtung; kann „Divine Lancer“ glimmern.",
         "en": "Stabs in the faced direction. Can glimmer the \"Divine Lancer\" tech."
+      },
+      "effects": {
+        "de": "Glaive beschwört Glefen in Blickrichtung. Kann die Glimmer-Technik „Divine Lancer“ auslösen, die eine einzelne riesige Glefe in Blickrichtung beschwört.\n\nDauer wirkt nicht.",
+        "en": "Glaive summons glaives in the the faced direction. Can glimmer the \"Divine Lancer\" tech, which summons a single massive glaive in the faced direction.\n\nIgnores Duration."
       },
       "maxLevel": 6,
       "emoji": "🔱",
@@ -263,6 +354,19 @@
         "de": "Löst zusätzliche Techniken aus, wenn Fläche, Geschwindigkeit, Dauer und/oder Wachstum bei 155 % oder mehr liegen.",
         "en": "Triggers additional techs when Area, Speed, Duration, and/or Growth bonuses are at or above 155%."
       },
+      "effects": {
+        "de": "Löst zusätzliche Techniken aus, wenn Fläche, Geschwindigkeit, Dauer und/oder Wachstum bei mindestens 155 % liegen (+55 % in der Werteübersicht).\n\nSpirit Rings verursacht keinen direkten Schaden, sondern greift über Techniken an. Zu Beginn hat es die Technik „Sunlight“, die mehrere wandernde Lichtsäulen beschwört.",
+        "en": "Triggers additional techs when Area, Speed, Duration, and/or Growth bonuses are at or above 155% (+55% on the stats screen).\n\nSpirit Rings does not deal damage directly, but instead attacks through techs. It starts with the Sunlight tech, which summons several light pillars that move around."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown",
+        "growth"
+      ],
       "maxLevel": 8,
       "emoji": "💍",
       "image": "https://vampire.survivors.wiki/images/Sprite-Spirit_Rings.png",
@@ -281,6 +385,16 @@
         "de": "Teleportiert zufällige Gegner weg, die dann eventuell keine Erfahrung fallen lassen.",
         "en": "Picks random enemies to teleport away, but they might not drop XP gems."
       },
+      "effects": {
+        "de": "Emerald Rapture beschwört grüne gekrümmte Linien, die Gegner „teleportieren“ (sofort töten); dabei lassen sie aber nicht immer Erfahrungskristalle fallen.\n\nDie Chance auf Erfahrung liegt anfangs bei 45 % und hängt nicht von Glück ab. Jedes Level der Waffe erhöht sie um 5 %.",
+        "en": "The Emerald Rapture summons green curved lines that \"teleport\" (instantly kill) enemies , but they might not drop experience gems.\n\nThe chance to reward experience, at base, is 45%. This chance is unaffected by Luck. Every level of the weapon will increase the chance to reward experience by 5%."
+      },
+      "affectedBy": [
+        "might",
+        "speed",
+        "duration",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "💚",
       "image": "https://vampire.survivors.wiki/images/Sprite-Emerald_Rapture.png",
@@ -316,6 +430,10 @@
         "de": "Entwicklung von Fleuret: kann „Shocking Rush“ glimmern.",
         "en": "Evolved Fleuret. Can glimmer the \"Shocking Rush\" tech."
       },
+      "effects": {
+        "de": "Ermöglicht die Glimmer-Technik „Mega Thrust“.",
+        "en": "Allows to glimmer the \"Mega Thrust\" tech."
+      },
       "maxLevel": 6,
       "emoji": "🤺",
       "image": "https://vampire.survivors.wiki/images/Sprite-Dress_Sword.png",
@@ -332,6 +450,10 @@
       "description": {
         "de": "Entwicklung von Dress Sword: erlaubt die Technik „Mega Thrust“.",
         "en": "Evolved Dress Sword. Allows to glimmer the \"Mega Thrust\" tech."
+      },
+      "effects": {
+        "de": "Ermöglicht die Glimmer-Technik „Mega Thrust“.",
+        "en": "Allows to glimmer the \"Mega Thrust\" tech."
       },
       "maxLevel": 1,
       "emoji": "🗡️",
@@ -351,6 +473,16 @@
         "de": "Entwicklung von Town Sword: kann „Airwave“ glimmern (fünffacher Schaden).",
         "en": "Evolved Town Sword. Can glimmer the \"Airwave\" tech: damage x5."
       },
+      "effects": {
+        "de": "Kann die Glimmer-Technik „Airwave“★★ auslösen: eine große, durchdringende Schadenswelle nach vorne.",
+        "en": "Can glimmer the \"Airwave\" tech★★: Fires a large piercing damaging wave projectile forward."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 6,
       "emoji": "⭐",
       "image": "https://vampire.survivors.wiki/images/Sprite-Lordstar.png",
@@ -368,6 +500,10 @@
       "description": {
         "de": "Entwicklung von Lordstar: kann „Life Sprinkler“ glimmern.",
         "en": "Evolved Lordstar. Can glimmer the \"Life Sprinkler\" tech."
+      },
+      "effects": {
+        "de": "Kann die Glimmer-Technik „Life Sprinkler“ auslösen.",
+        "en": "Can glimmer the \"Life Sprinkler\" tech."
       },
       "maxLevel": 1,
       "emoji": "☀️",
@@ -387,6 +523,10 @@
         "de": "Entwicklung von Splashers: kann „Dual Torrent“ glimmern.",
         "en": "Evolved Splashers. Can glimmer the \"Dual Torrent\" tech."
       },
+      "effects": {
+        "de": "Kann die Glimmer-Technik „Dual Torrent“ auslösen.",
+        "en": "Can glimmer the \"Dual Torrent\" tech."
+      },
       "maxLevel": 8,
       "emoji": "🌊",
       "image": "https://vampire.survivors.wiki/images/Sprite-Pursuant_Blades.png",
@@ -405,6 +545,10 @@
         "de": "Entwicklung von Flamberge: kann „Absetzen“ glimmern.",
         "en": "Evolved Flamberge. Can glimmer the \"Absetzen\" tech."
       },
+      "effects": {
+        "de": "Kann die Glimmer-Technik „Absetzen“ auslösen.",
+        "en": "Can glimmer the \"Absetzen\" tech."
+      },
       "maxLevel": 6,
       "emoji": "⚔️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Zweihander.png",
@@ -421,6 +565,10 @@
       "description": {
         "de": "Entwicklung von Zweihander: kann „Vandalize“ glimmern.",
         "en": "Evolved Zweihander. Can glimmer the \"Vandalize\" tech."
+      },
+      "effects": {
+        "de": "Kann die Glimmer-Technik „Vandalize“ auslösen.",
+        "en": "Can glimmer the \"Vandalize\" tech."
       },
       "maxLevel": 1,
       "emoji": "🗡️",
@@ -440,6 +588,10 @@
         "de": "Entwicklung von Punch: kann „Shenlong Firefist“ glimmern.",
         "en": "Evolved Punch. Can glimmer the \"Shenlong Firefist\" tech."
       },
+      "effects": {
+        "de": "Kann die Glimmer-Technik „Shenlong Firefist“ auslösen.",
+        "en": "Can glimmer the \"Shenlong Firefist\" tech."
+      },
       "maxLevel": 6,
       "emoji": "👊",
       "image": "https://vampire.survivors.wiki/images/Sprite-Pressure_Point.png",
@@ -457,6 +609,10 @@
       "description": {
         "de": "Entwicklung von Pressure Point: kann „Guanyin“ glimmern.",
         "en": "Evolved Pressure Point. Can glimmer the \"Guanyin\" tech."
+      },
+      "effects": {
+        "de": "Kann die Glimmer-Technik „Guanyin“ auslösen.",
+        "en": "Can glimmer the \"Guanyin\" tech."
       },
       "maxLevel": 1,
       "emoji": "✋",
@@ -476,6 +632,10 @@
         "de": "Entwicklung von Kick: glimmert „Triple Dragon“, dessen Schaden von der gesamten Überheilung abhängt.",
         "en": "Evolved Kick. Glimmers \"Triple Dragon\": damage affected by overheal total."
       },
+      "effects": {
+        "de": "Löst die Glimmer-Technik „Triple Dragon“ aus: ein Blitz nach unten, der dann scharf abbiegt; wann er abbiegt, hängt von Anzahl ab. Der Schaden hängt von der gesamten Überheilung ab.",
+        "en": "Glimmers \"Triple Dragon\": summoning a lightning bolt downwards, then turns sharply. Time of turning affected by Amount. Damage affected by overheal total."
+      },
       "maxLevel": 8,
       "emoji": "🔺",
       "image": "https://vampire.survivors.wiki/images/Sprite-Triangle_Kick.png",
@@ -493,6 +653,10 @@
       "description": {
         "de": "Entwicklung von Saber Machine Gun: kann „Bombarding Fire“ glimmern.",
         "en": "Evolved Saber Machine Gun. Can glimmer the \"Bombarding Fire\" tech."
+      },
+      "effects": {
+        "de": "Hecaton Machine Gun feuert schnell eine Salve Kugeln in Blickrichtung. Die Kugeln haben eine begrenzte Dauer und durchdringen Gegner.\n\nKann die Glimmer-Technik „Bombarding Fire“ auslösen.",
+        "en": "Hecaton Machine Gun fires a barrage of bullets rapidly in the faced direction. Bullets have limited duration and can pierce through enemies.\n\nCan glimmer the \"Bombarding Fire\" tech."
       },
       "maxLevel": 6,
       "emoji": "🔫",
@@ -512,6 +676,10 @@
         "de": "Entwicklung von Hecaton Machine Gun: kann „Sunlight Shower“ glimmern.",
         "en": "Evolved Hecaton Machine Gun. Can Glimmer the \"Sunlight Shower\" tech."
       },
+      "effects": {
+        "de": "Kann die Glimmer-Technik „Sunlight Shower“ auslösen.",
+        "en": "Can Glimmer the \"Sunlight Shower\" tech."
+      },
       "maxLevel": 1,
       "emoji": "🌦️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Divergence.png",
@@ -529,6 +697,10 @@
       "description": {
         "de": "Entwicklung von Super Missile: kann „Artificial Hailstorm“ glimmern.",
         "en": "Evolved Super Missile. Can glimmer the \"Artificial Hailstorm\" tech."
+      },
+      "effects": {
+        "de": "Hydra Cannon feuert 2 durchdringende Raketen in Blickrichtung.\n\nKann die Glimmer-Technik „Artificial Hailstorm“ auslösen: zwei Raketenbündel schräg nach oben, die bald nach unten fliegen und ein flügelförmiges Muster bilden.",
+        "en": "Hydra Cannon fires 2 piercing missiles that propel at faced direction.\n\nCan glimmer the \"Artificial Hailstorm\" tech, firing 2 clusters of missiles upward diagonally, which will travel downward soon, forming a wing-shaped pattern."
       },
       "maxLevel": 6,
       "emoji": "🐍",
@@ -548,6 +720,10 @@
         "de": "Entwicklung von Hydra Cannon: kann „Cosmic Rave“ glimmern.",
         "en": "Evolved Hydra Cannon. Can glimmer the \"Cosmic Rave\" tech."
       },
+      "effects": {
+        "de": "Kann die Glimmer-Technik „Cosmic Rave“ auslösen.",
+        "en": "Can glimmer the \"Cosmic Rave\" tech."
+      },
       "maxLevel": 1,
       "emoji": "🚀",
       "image": "https://vampire.survivors.wiki/images/Sprite-Hyperion_Bazooka.png",
@@ -564,6 +740,10 @@
       "description": {
         "de": "Entwicklung von Eagle Gun: kann „Bounding Shot“ glimmern.",
         "en": "Evolved Eagle Gun. Can glimmer the \"Bounding Shot\" tech."
+      },
+      "effects": {
+        "de": "Kann die Glimmer-Technik „Bounding Shot“ auslösen.",
+        "en": "Can glimmer the \"Bounding Shot\" tech."
       },
       "maxLevel": 8,
       "emoji": "🐲",
@@ -582,6 +762,19 @@
         "de": "Entwicklung von Khukuri: kritische Treffer können kurz unverwundbar machen; kann „Kaleidoscope“ glimmern.",
         "en": "Evolved Khukuri. Critical hits may give temporary invulnerability. Can glimmer the \"Kaleidoscope\" tech."
       },
+      "effects": {
+        "de": "Kritische Treffer können kurz unverwundbar machen. Kann die Glimmer-Technik „Kaleidoscope“ auslösen, die kaleidoskopartige Schadenszonen unter Gegnern erzeugt, die von den springenden Klonen getroffen wurden.\n\nJetstream beschwört einen Schattenklon, der Gegner in der Nähe angreift. Wie weit der Klon kommt, hängt von der Grund-Bewegungsgeschwindigkeit des Charakters ab, nicht von Boni durch Waffen und passive Gegenstände.",
+        "en": "Critical hits may give temporary invulnerability. Can glimmer the \"Kaleidoscope\" tech, which creates kaleidoscopic damaging areas under enemies hit by the bouncing clones.\n\nJetstream summons a Shadow clone that strike nearby enemies. The clone's distance travelled is affected by the character's base Move Speed, unaffected by stat increases from weapons and passive items."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown",
+        "luck"
+      ],
       "maxLevel": 8,
       "emoji": "💨",
       "image": "https://vampire.survivors.wiki/images/Sprite-Jetstream.png",
@@ -598,6 +791,10 @@
       "description": {
         "de": "Entwicklung von Twin Dragon: kann „Scattered Petals“ glimmern.",
         "en": "Evolved Twin Dragon. Can glimmer the \"Scattered Petals\" tech."
+      },
+      "effects": {
+        "de": "Kann die Glimmer-Technik „Scattered Petals“ auslösen.",
+        "en": "Can glimmer the \"Scattered Petals\" tech."
       },
       "maxLevel": 8,
       "emoji": "🌺",
@@ -617,6 +814,10 @@
         "de": "Entwicklung von Bullova: kann „Reverse Delta“ glimmern.",
         "en": "Evolved Bullova. Can glimmer the \"Reverse Delta\" tech."
       },
+      "effects": {
+        "de": "Kann die Glimmer-Technik „Reverse Delta“ auslösen.",
+        "en": "Can glimmer the \"Reverse Delta\" tech."
+      },
       "maxLevel": 8,
       "emoji": "🦅",
       "image": "https://vampire.survivors.wiki/images/Sprite-Falconwind.png",
@@ -634,6 +835,10 @@
       "description": {
         "de": "Entwicklung von Sanguine Star: kann „Scarlet Harbinger“ glimmern (Schaden hängt von der Gier ab, kann Herzen stehlen).",
         "en": "Evolved Sanguine Star. Can glimmer the \"Scarlet Harbinger\" tech: damage affected by Greed, might steal hearts."
+      },
+      "effects": {
+        "de": "Kann die Glimmer-Technik „Scarlet Harbinger“ auslösen: Schaden hängt von Gier ab, kann Herzen stehlen.",
+        "en": "Can glimmer the \"Scarlet Harbinger\" tech: damage affected by Greed, might steal hearts."
       },
       "maxLevel": 8,
       "emoji": "🍷",
@@ -653,6 +858,10 @@
         "de": "Entwicklung von Glaive: kann „Stardust“ glimmern.",
         "en": "Evolved Glaive. Can glimmer the \"Stardust\" tech."
       },
+      "effects": {
+        "de": "Kann die Glimmer-Technik „Stardust“ auslösen.",
+        "en": "Can glimmer the \"Stardust\" tech."
+      },
       "maxLevel": 6,
       "emoji": "🪶",
       "image": "https://vampire.survivors.wiki/images/Sprite-Feather_Spear.png",
@@ -669,6 +878,10 @@
       "description": {
         "de": "Entwicklung von Feather Spear: kann „Triumvirate“ glimmern (dreifacher Schaden).",
         "en": "Evolved Feather Spear. Can glimmer the \"Triumvirate\" tech: damage x3."
+      },
+      "effects": {
+        "de": "Kann die Glimmer-Technik „Triumvirate“ auslösen: dreifacher Schaden.",
+        "en": "Can glimmer the \"Triumvirate\" tech: damage x3."
       },
       "maxLevel": 1,
       "emoji": "🦢",
@@ -688,6 +901,19 @@
         "de": "Entwicklung von Spirit Rings: löst zusätzlich die Technik „Chaos Disaster“ aus.",
         "en": "Evolved Spirit Rings. Also triggers the \"Chaos Disaster\" tech."
       },
+      "effects": {
+        "de": "Rings of Calamity greift nicht direkt an, sondern löst die Technik „Chaos Disaster“ aus: Fünf Kugeln laden sich auf und schießen zum Bildschirmrand, was dem ganzen Bildschirm Schaden zufügt. Die Kugeln selbst verursachen doppelt so viel Schaden wie der Effekt auf dem ganzen Bildschirm.\n\nZusätzlich bleibt der Effekt von Spirit Rings erhalten: Weitere Techniken lösen aus, wenn Fläche, Geschwindigkeit, Dauer und/oder Wachstum bei mindestens 155 % liegen (+55 % in der Werteübersicht). Zu Beginn gibt es die Technik „Sunlight“, die mehrere wandernde Lichtsäulen beschwört.",
+        "en": "Rings of Calamity does not attack directly and instead triggers the \"Chaos Disaster\" tech. Chaos Disaster summons five orbs that charge up and shoot to the border of the screen dealing screenwide damage. The orbs deal twice the damage of the fullscreen effect.\n\nIn addition, Rings of Calamity maintains the effect from Spirit Rings, triggering additional techs when Area, Speed, Duration, and/or Growth bonuses are at or above 155% (+55% on the stats screen). At base it has the Sunlight tech, which summons several light pillars that move around."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown",
+        "growth"
+      ],
       "maxLevel": 1,
       "emoji": "💫",
       "image": "https://vampire.survivors.wiki/images/Sprite-Rings_of_Calamity.png",
@@ -706,6 +932,19 @@
         "de": "Entwicklung von Emerald Rapture: teleportiert alle Gegner auf ihrem Weg, die dann immer ihre besten Erfahrungs-Edelsteine fallen lassen.",
         "en": "Evolved Emerald Rapture. Teleports any enemy on its path and they always drop their best XP gems."
       },
+      "effects": {
+        "de": "Emerald Wave beschwört viele grüne gekrümmte Linien, die Gegner mit einer gewissen Chance „teleportieren“ (sofort töten) und dabei einen roten Erfahrungskristall mit mindestens 10 Erfahrung fallen lassen.\n\nDie Chance, Gegner zu töten, hängt von allen Werten ab.",
+        "en": "The Emerald Wave summons many green curved lines that have a chance to \"teleport\" (instantly kill) enemies, and make them drop a red experience gem, worth a minimum of 10 experience.\n\nThe chance of the attacks killing enemies is affected by all stats."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown",
+        "luck"
+      ],
       "maxLevel": 1,
       "emoji": "🌊",
       "image": "https://vampire.survivors.wiki/images/Sprite-Emerald_Wave.png",

@@ -24,6 +24,18 @@
             "description": "evolved = result of an evolution, union or gift."
           },
           "description": { "$ref": "common.schema.json#/definitions/localizedText", "description": "What the weapon does." },
+          "effects": {
+            "$ref": "common.schema.json#/definitions/localizedText",
+            "description": "How the weapon works and what triggers it: the first paragraphs of the wiki's Effects section (tools/wiki-import/weapon_effects.py)."
+          },
+          "affectedBy": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "enum": ["might", "area", "speed", "duration", "amount", "cooldown", "luck", "maxHealth", "recovery", "armor", "moveSpeed", "magnet", "growth", "greed", "curse", "revival"]
+            },
+            "description": "Stats that directly affect the weapon (wiki table Stats and passive items, value 1)."
+          },
           "maxLevel": { "$ref": "common.schema.json#/definitions/maxLevel" },
           "exclusiveTo": {
             "type": "array",
