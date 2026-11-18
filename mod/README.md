@@ -22,22 +22,28 @@ character, weapons and passive items of every player and
 - Co-op: one block per player. Other players' passive items count toward your own
   evolutions and are then tagged with their origin ("P2"). Can be turned off with `ShareCoopPassives`.
 - **Level-up grades:** while the level-up screen is open, the overlay lists its choices in the
-  game's order, each with a grade from A (best fit) to D and a short reason. Each choice gets
-  the best grade of these checks; with equal grades the reason of the earlier check is shown:
-  1. **Evolutions** of your weapons: a missing ingredient (A, "for Bloody Tear"); your weapon
-     or item still needs max level (A if all ingredients are there, otherwise B, "max for ...").
-  2. **Pairing:** a new weapon that evolves with items you already have (B, "pairs with ...").
-  3. **Character:** the app's recommendation, priority 1/2/3 = A/B/C ("recommended"). Only the
+  game's order, each with a grade from A (best fit) to D and the reasons with the most weight.
+  The grade adds up points from five checks (per check only its best finding counts):
+  1. **Evolutions** of your weapons: a missing ingredient (3, "for Bloody Tear"); your weapon
+     or item still needs max level (3 if all ingredients are there, otherwise 2, "max for ...").
+  2. **Pairing:** a new weapon that evolves with items you already have (2, "pairs with ...").
+  3. **Character:** the app's recommendation, priority 1/2/3 = 3/2/1 ("recommended"). Only the
      34 regular base game characters have hand-written recommendations; DLC characters have
      their starting weapon and its evolution partners.
-  4. **Stats:** an item raises area, amount, duration or speed of two or more of your weapons
-     (B) or one (C, "boosts Knife"); a weapon scales with two or more of your items (B) or one
-     (C, "uses Duplicator"). Which stats a weapon scales with comes from the wiki's "Stats and
+  4. **Stats:** an item raises a stat that affects your weapons: 1 per weapon, at most 2
+     ("boosts Screams from the Void"). A weapon is affected by stats your items raise: 1 per
+     item, at most 2 ("uses Duplicator"); Might and Cooldown don't count for weapons, because
+     every weapon uses them. Which stats affect a weapon comes from the wiki's "Stats and
      passive items" table (the app's `affectedBy`), otherwise from the game's own weapon data
-     (the stats its level-ups raise); which stat an item raises comes from the game's data.
-     Might and cooldown help every weapon and are left to the next check.
-  5. **Community** tier lists (`src/data/community-tiers.json`): tier 1/2/3 = A/B/C. A weapon
+     (the stats its level-ups raise). Which stat an item raises comes from the app's data
+     (`src/data/stat-items.json`) and the game's data.
+  5. **Community** tier lists (`src/data/community-tiers.json`): tier 1/2/3 = 2/1.5/1. A weapon
      also counts with the tier of what it evolves into ("community: Holy Wand").
+
+  From 3 points the grade is A, from 2 B, from 1 C. So an item that is generally strong and
+  also boosts your weapon ranks above one that is only generally strong: starting as
+  Congregation with Screams from the Void, Empty Tome gets an A (community and "boosts Screams
+  from the Void"), Candelabrador and Armor a B, Bracer and Wings a C.
 
   **D** means none of these apply: the data knows no fit, which doesn't make it a bad choice.
   **?** means the game offers something the app's data doesn't have yet. Collapsed, the

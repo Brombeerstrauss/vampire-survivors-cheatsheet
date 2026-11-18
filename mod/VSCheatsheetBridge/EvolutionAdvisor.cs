@@ -19,8 +19,10 @@ internal sealed class CheatsheetData
     public Dictionary<string, Dictionary<string, int>> Recommendations { get; set; } = new();
     /// <summary>Weapon or item -> general strength from community tier lists (1 = strong, 2 = good, 3 = decent).</summary>
     public Dictionary<string, int> Community { get; set; } = new();
-    /// <summary>Weapon -> stats from the wiki that affect it (area, amount, duration, speed).</summary>
+    /// <summary>Weapon -> stats from the wiki that directly affect it (might, area, amount, ...).</summary>
     public Dictionary<string, List<string>> Scales { get; set; } = new();
+    /// <summary>Passive item -> stats it raises (Spinach -> might, Candelabrador -> area, ...).</summary>
+    public Dictionary<string, List<string>> ItemStats { get; set; } = new();
 
     public static CheatsheetData Load(string path)
     {
@@ -287,20 +289,22 @@ internal sealed class EvolutionAdvisor
 
     // ---- Level-up grades ------------------------------------------------------------------
 
-    // Grades the choices on the level-up screen. Each choice gets the best grade that applies;
-    // with equal grades the reason that comes first in this list is shown:
-    //   1. Evolutions of your weapons: missing ingredient (A); your weapon or item still needs
-    //      max level, A if all ingredients are there, otherwise B.
-    //   2. A new weapon that evolves with items you already have (B).
-    //   3. Recommendation for the character: priority 1/2/3 = A/B/C.
-    //   4. Stats: an item raises area, amount, duration or speed of at least two of your weapons
-    //      (B) or one (C); a weapon scales with two of your items (B) or one (C). Which stats a
-    //      weapon scales with comes from the wiki, otherwise from the game's level-ups; which
-    //      stat an item raises from the game's data.
-    //   5. Community tier lists: tier 1/2/3 = A/B/C. A weapon also counts with the tier of what
-    //      it evolves into.
-    //   D  none of these. The data knows no fit, which doesn't make it a bad choice.
-    // An evolved weapon counts like the weapon it came from (recommendation, stats).
+    // Grades the choices on the level-up screen by adding up points from five checks. Per
+    // check only its best finding counts:
+    //   Evolution  of your weapons: missing ingredient 3; your weapon or item still needs max
+    //              level 3 if all ingredients are there, otherwise 2.
+    //   Pairing    a new weapon that evolves with items you already have: 2.
+    //   Character  the app's recommendation, priority 1/2/3: 3/2/1.
+    //   Stats      an item raises a stat that affects your weapons (the wiki's table): 1 per
+    //              weapon, at most 2. A weapon is affected by the stats your items raise: 1 per
+    //              item, at most 2; Might and Cooldown don't count here, every weapon uses them.
+    //   Community  tier lists, tier 1/2/3: 2/1.5/1. A weapon also counts with the tier of what
+    //              it evolves into.
+    // Sum: from 3 = A, from 2 = B, from 1 = C, below = D. So an item that is generally good and
+    // also boosts your weapon ends up above one that is only generally good. The reason shows
+    // the two checks with the most points.
+    private const double ForA = 3, ForB = 2, ForC = 1;
+
     private List<OfferRow> GradeOffers(PlayerItems me, List<PlayerItems> team, Func<string, bool> inGame)
     {
         var rows = new List<OfferRow>();
@@ -314,12 +318,14 @@ internal sealed class EvolutionAdvisor
                 rows.Add(new OfferRow { Item = new Icon { GameId = gameId, Name = GameText.WeaponName(gameId) ?? gameId }, Grade = '?' });
                 continue;
             }
-            var row = new OfferRow { Item = MakeIcon(id, 0), Grade = 'D' };
-            void Consider(char grade, string reason)
+
+            // Check -> best points and reason, in the order of the checks.
+            var found = new List<(string check, double points, string reason)>();
+            void Add(string check, double points, string reason)
             {
-                if (grade >= row.Grade) return;
-                row.Grade = grade;
-                row.Reason = reason;
+                int i = found.FindIndex(f => f.check == check);
+                if (i < 0) found.Add((check, points, reason));
+                else if (points > found[i].points) found[i] = (check, points, reason);
             }
 
             bool Applies(EvolutionEntry e) =>
@@ -334,45 +340,66 @@ internal sealed class EvolutionAdvisor
                     if (!e.Weapons.Any(x => x.Id == weapon) || me.Weapons.Contains(e.Result) || !Applies(e)) continue;
                     CheckResult r = Check(e, weapon, me, team);
                     Icon part = r.Parts.FirstOrDefault(x => x.Id == id);
-                    if (part != null && !part.Owned) Consider('A', T("für ", "for ") + Name(e.Result));
+                    if (part != null && !part.Owned) Add("evolution", 3, T("für ", "for ") + Name(e.Result));
                     bool needsMax = (id == weapon && r.WeaponNeedsMax) || (part != null && part.Owned && part.NeedsMax && part.From == null);
-                    if (needsMax) Consider(r.Missing == 0 ? 'A' : 'B', T("Max für ", "max for ") + Name(e.Result));
+                    if (needsMax) Add("evolution", r.Missing == 0 ? 3 : 2, T("Max für ", "max for ") + Name(e.Result));
                 }
             }
 
             // A new weapon that evolves with items you already have.
-            if (!me.Weapons.Contains(id))
+            bool isWeapon = _data.Weapons.ContainsKey(gameId);
+            if (isWeapon && !me.Weapons.Contains(id))
             {
                 foreach (EvolutionEntry e in _data.Evolutions)
                 {
                     if (e.Passives.Count == 0 || !e.Weapons.Any(x => x.Id == id) || !Applies(e)) continue;
                     if (!e.Passives.All(x => me.Passives.Contains(x.Id) || (team != null && team.Any(t => t.Passives.Contains(x.Id))))) continue;
-                    Consider('B', T("passt zu ", "pairs with ") + string.Join(", ", e.Passives.Select(x => Name(x.Id))));
+                    Add("pairing", 2, T("passt zu ", "pairs with ") + string.Join(", ", e.Passives.Select(x => Name(x.Id))));
                 }
             }
 
             int priority = Priority(me.Character, id);
-            if (priority > 0) Consider((char)('A' + priority - 1), T("empfohlen", "recommended"));
+            if (priority > 0) Add("character", 4 - priority, T("empfohlen", "recommended"));
 
-            // Stats from the game's data: does the choice fit your weapons or items?
-            HashSet<string> raises = WeaponStats.Raises(gameId);
-            if (raises.Count > 0)
+            // Stats: does the choice boost your weapons, or do your items boost it?
+            if (!isWeapon)
             {
+                HashSet<string> raises = RaisesOf(id, gameId);
                 List<string> boosted = me.Weapons.Where(x => ScalesOf(x).Overlaps(raises)).ToList();
-                if (boosted.Count > 0) Consider(boosted.Count >= 2 ? 'B' : 'C', T("verstärkt ", "boosts ") + NameList(boosted));
+                if (boosted.Count > 0) Add("stats", Math.Min(2, boosted.Count), T("verstärkt ", "boosts ") + NameList(boosted));
             }
-            else if (_data.Weapons.ContainsKey(gameId))
+            else
             {
                 HashSet<string> scales = ScalesOf(id);
-                List<string> helpers = me.Passives.Where(x => WeaponStats.Raises(GameId(x)).Overlaps(scales)).ToList();
-                if (helpers.Count > 0) Consider(helpers.Count >= 2 ? 'B' : 'C', T("nutzt ", "uses ") + NameList(helpers));
+                scales.ExceptWith(Universal);
+                List<string> helpers = me.Passives.Where(x => RaisesOf(x, GameId(x)).Overlaps(scales)).ToList();
+                if (helpers.Count > 0) Add("stats", Math.Min(2, helpers.Count), T("nutzt ", "uses ") + NameList(helpers));
             }
 
             int tier = CommunityTier(id, me, Applies, out string via);
-            if (tier > 0) Consider((char)('A' + tier - 1), via == null ? T("Community", "community") : T("Community: ", "community: ") + Name(via));
-            rows.Add(row);
+            if (tier > 0)
+                Add("community", tier == 1 ? 2 : tier == 2 ? 1.5 : 1,
+                    via == null ? T("Community", "community") : T("Community: ", "community: ") + Name(via));
+
+            double score = found.Sum(f => f.points);
+            char grade = score >= ForA ? 'A' : score >= ForB ? 'B' : score >= ForC ? 'C' : 'D';
+            string reason = grade == 'D' ? null
+                : string.Join(" · ", found.OrderByDescending(f => f.points).Take(2).Select(f => f.reason));
+            rows.Add(new OfferRow { Item = MakeIcon(id, 0), Grade = grade, Reason = reason });
         }
         return rows;
+    }
+
+    /// <summary>Stats every weapon uses: they don't tell weapons apart.</summary>
+    private static readonly string[] Universal = { "might", "cooldown" };
+
+    // Stats a passive item raises: from the app's data (Spinach -> might, ...), otherwise from
+    // the game's data (area, amount, duration, speed).
+    private HashSet<string> RaisesOf(string id, string gameId)
+    {
+        var stats = new HashSet<string>(WeaponStats.Raises(gameId));
+        if (id != null && _data.ItemStats.TryGetValue(id, out List<string> fromApp)) stats.UnionWith(fromApp);
+        return stats;
     }
 
     // At most two names, then "+1" etc., so the reason stays short.
@@ -385,7 +412,7 @@ internal sealed class EvolutionAdvisor
     {
         if (_data.Scales.TryGetValue(id, out List<string> fromWiki) && fromWiki.Count > 0) return new HashSet<string>(fromWiki);
         HashSet<string> own = WeaponStats.Scales(GameId(id));
-        if (own.Count > 0) return own;
+        if (own.Count > 0) return new HashSet<string>(own);
         var inherited = new HashSet<string>();
         foreach (EvolutionEntry e in _data.Evolutions)
             if (e.Result == id)
