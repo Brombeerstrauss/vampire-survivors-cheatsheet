@@ -35,7 +35,20 @@
           "source": { "$ref": "common.schema.json#/definitions/source" },
           "summary": { "$ref": "common.schema.json#/definitions/localizedText", "description": "Play style in one or two sentences." },
           "weapons": { "type": "array", "items": { "$ref": "#/definitions/item" } },
-          "passives": { "type": "array", "items": { "$ref": "#/definitions/item" } }
+          "passives": { "type": "array", "items": { "$ref": "#/definitions/item" } },
+          "avoid": {
+            "type": "array",
+            "description": "Weapons or items the wiki clearly advises against for this character.",
+            "items": {
+              "type": "object",
+              "required": ["id", "reason"],
+              "additionalProperties": false,
+              "properties": {
+                "id": { "$ref": "common.schema.json#/definitions/id" },
+                "reason": { "$ref": "common.schema.json#/definitions/localizedText" }
+              }
+            }
+          }
         }
       }
     }

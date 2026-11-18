@@ -12,6 +12,22 @@
             "en": "Starting weapon; with Pummarola it becomes Cardinal Rain."
           },
           "priority": 1
+        },
+        {
+          "id": "sharp-tongue",
+          "reason": {
+            "de": "Schaden wächst stark mit Erholung, die bei ihr mitwächst.",
+            "en": "Damage grows steeply with Recovery, which grows for her."
+          },
+          "priority": 2
+        },
+        {
+          "id": "star-flail",
+          "reason": {
+            "de": "Schaden wächst stark mit Erholung, die bei ihr mitwächst.",
+            "en": "Damage grows steeply with Recovery, which grows for her."
+          },
+          "priority": 2
         }
       ],
       "passives": [
@@ -36,6 +52,14 @@
             "en": "Starting weapon; with Duplicator it becomes Bloodlust."
           },
           "priority": 1
+        },
+        {
+          "id": "night-sword",
+          "reason": {
+            "de": "Laut Wiki stark zu erwägen: Muramasa skaliert mit Gier, vergeltet und löst seine Werteboni aus.",
+            "en": "Strongly consider per the wiki: Muramasa scales with Greed, retaliates and triggers his stat boosts."
+          },
+          "priority": 2
         }
       ],
       "passives": [
@@ -70,6 +94,14 @@
             "en": "Needed for Dust to Dust."
           },
           "priority": 1
+        },
+        {
+          "id": "velvet-dodecahedron",
+          "reason": {
+            "de": "Bringt ihr bis zu +6 Wiederbelebungen.",
+            "en": "Gives her up to +6 Revivals."
+          },
+          "priority": 2
         }
       ]
     },
@@ -125,7 +157,16 @@
           "priority": 1
         }
       ],
-      "passives": []
+      "passives": [
+        {
+          "id": "hollow-heart",
+          "reason": {
+            "de": "Gleicht etwas von der verlorenen maximalen Gesundheit aus.",
+            "en": "Makes up some of the lost Max Health."
+          },
+          "priority": 3
+        }
+      ]
     },
     {
       "character": "congregation",
@@ -148,6 +189,14 @@
             "en": "Needed for Forbidden Siren."
           },
           "priority": 1
+        },
+        {
+          "id": "tirajisu",
+          "reason": {
+            "de": "Jede Wiederbelebung über eins gibt Congregation einen weiteren Slot für passive Gegenstände.",
+            "en": "Every Revival beyond one gives Congregation another passive item slot."
+          },
+          "priority": 2
         }
       ]
     },
@@ -162,6 +211,30 @@
             "en": "Starting weapon; with Torrona's Box it becomes Damnation."
           },
           "priority": 1
+        },
+        {
+          "id": "incineration",
+          "reason": {
+            "de": "Laut Wiki vielleicht der beste Nutzer von Dust to Dust, das als Höllenwaffe zählt.",
+            "en": "Perhaps the best user of Dust to Dust per the wiki, which counts as a Hell weapon."
+          },
+          "priority": 2
+        },
+        {
+          "id": "night-sword",
+          "reason": {
+            "de": "Muramasa ist eine Blutwaffe und nutzt seine hohe Gier.",
+            "en": "Muramasa is a Blood weapon and uses his high Greed."
+          },
+          "priority": 3
+        },
+        {
+          "id": "pako-battiliar",
+          "reason": {
+            "de": "Mazo Familiar ist eine Blutwaffe und nutzt seine hohe Gesundheit.",
+            "en": "Mazo Familiar is a Blood weapon and uses his high Health."
+          },
+          "priority": 3
         }
       ],
       "passives": [
@@ -172,6 +245,14 @@
             "en": "Needed for Damnation."
           },
           "priority": 1
+        },
+        {
+          "id": "empty-tome",
+          "reason": {
+            "de": "Verkürzt die lange Abklingzeit von Dust to Dust.",
+            "en": "Shortens the long cooldown of Dust to Dust."
+          },
+          "priority": 3
         }
       ]
     },
@@ -224,9 +305,65 @@
             "en": "Starting weapon."
           },
           "priority": 1
+        },
+        {
+          "id": "spellstrike",
+          "reason": {
+            "de": "Multipliziert mit Macht ohne Obergrenze; seine Macht geht weit über 900 %.",
+            "en": "Multiplied by Might without a cap; his Might goes far beyond 900%."
+          },
+          "priority": 2
+        },
+        {
+          "id": "firefall",
+          "reason": {
+            "de": "Multipliziert mit Macht ohne Obergrenze; seine Macht geht weit über 900 %.",
+            "en": "Multiplied by Might without a cap; his Might goes far beyond 900%."
+          },
+          "priority": 2
         }
       ],
       "passives": []
+    },
+    {
+      "character": "in-kujata",
+      "source": "legacy-of-the-bloodmoon",
+      "weapons": [
+        {
+          "id": "sonic-dash",
+          "reason": {
+            "de": "Entwickelt sich zu Rapidus Fio; mehr Bewegungsgeschwindigkeit für ihre versteckte Waffe.",
+            "en": "Evolves into Rapidus Fio; more Move Speed for her hidden weapon."
+          },
+          "priority": 2
+        },
+        {
+          "id": "centralis-custos",
+          "reason": {
+            "de": "Teil von Trinum Custodem: bis zu +20 Rüstung, dazu Erholung und Abklingzeit.",
+            "en": "Part of Trinum Custodem: up to +20 Armor, plus Recovery and Cooldown."
+          },
+          "priority": 2
+        }
+      ],
+      "passives": [
+        {
+          "id": "wings",
+          "reason": {
+            "de": "Laut Wiki sehr empfohlen: Bewegungsgeschwindigkeit erhöht die Angriffsrate ihrer versteckten Waffe.",
+            "en": "Highly recommended per the wiki: Move Speed raises the attack rate of her hidden weapon."
+          },
+          "priority": 1
+        },
+        {
+          "id": "armor",
+          "reason": {
+            "de": "Bis zu +5 Rüstung.",
+            "en": "Up to +5 Armor."
+          },
+          "priority": 3
+        }
+      ]
     }
   ]
 }

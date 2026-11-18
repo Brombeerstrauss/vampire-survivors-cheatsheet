@@ -188,6 +188,14 @@ export interface Recommendation {
   summary?: LocalizedText
   weapons: RecommendedItem<WeaponId>[]
   passives: RecommendedItem<PassiveId>[]
+  /** Weapons or items the wiki clearly advises against for this character. */
+  avoid?: AvoidedItem[]
+}
+
+/** A weapon or item to avoid for a character, with the reason. */
+export interface AvoidedItem {
+  id: WeaponId | PassiveId
+  reason: LocalizedText
 }
 
 /** All packs merged, as the app uses them. */

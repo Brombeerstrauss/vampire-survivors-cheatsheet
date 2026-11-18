@@ -43,6 +43,22 @@
             "en": "Starting weapon; with Armor it becomes Legionnaire."
           },
           "priority": 1
+        },
+        {
+          "id": "night-sword",
+          "reason": {
+            "de": "Laut Wiki Pflicht: Muramasas Lebensentzug hält seinen Rüstungsbonus oben.",
+            "en": "A must-pick per the wiki: Muramasa's health drain keeps his Armor bonus up."
+          },
+          "priority": 1
+        },
+        {
+          "id": "victory-sword",
+          "reason": {
+            "de": "Hervorragende Vergeltungswaffe.",
+            "en": "A fantastic retaliation weapon."
+          },
+          "priority": 2
         }
       ],
       "passives": [
@@ -53,6 +69,22 @@
             "en": "Needed for Legionnaire."
           },
           "priority": 1
+        },
+        {
+          "id": "torrona-s-box",
+          "reason": {
+            "de": "Mehr Fluch bringt mehr Gegner für seinen Vergeltungsschaden.",
+            "en": "More Curse feeds more enemies to his retaliation damage."
+          },
+          "priority": 2
+        },
+        {
+          "id": "skull-o-maniac",
+          "reason": {
+            "de": "Mehr Fluch bringt mehr Gegner für seinen Vergeltungsschaden.",
+            "en": "More Curse feeds more enemies to his retaliation damage."
+          },
+          "priority": 2
         }
       ]
     },
@@ -67,6 +99,30 @@
             "en": "Starting weapon; with Bracer it becomes Millionaire."
           },
           "priority": 1
+        },
+        {
+          "id": "108-bocce",
+          "reason": {
+            "de": "Laut Wiki sehr empfohlen: ihr wachsendes Glück erhöht den Schaden bis aufs 11-Fache.",
+            "en": "Highly recommended per the wiki: her growing Luck raises its damage up to 11 times."
+          },
+          "priority": 1
+        },
+        {
+          "id": "santa-javelin",
+          "reason": {
+            "de": "Schaden wächst mit Glück.",
+            "en": "Damage scales with Luck."
+          },
+          "priority": 2
+        },
+        {
+          "id": "phas3r",
+          "reason": {
+            "de": "Photonstorm ist bei ihr sehr stark: skaliert mit Anzahl und Glück.",
+            "en": "Photonstorm is very strong on her: scales with Amount and Luck."
+          },
+          "priority": 2
         }
       ],
       "passives": [
@@ -91,6 +147,30 @@
             "en": "Starting weapon; with Crown it becomes Luminaire."
           },
           "priority": 1
+        },
+        {
+          "id": "phiera-der-tuphello",
+          "reason": {
+            "de": "Phieraggi gehört laut Wiki mit ihren vielen Wiederbelebungen zu ihren besten Waffen.",
+            "en": "Phieraggi is one of her best weapons per the wiki thanks to her many Revivals."
+          },
+          "priority": 1
+        },
+        {
+          "id": "eight-the-sparrow",
+          "reason": {
+            "de": "Phieraggi gehört laut Wiki mit ihren vielen Wiederbelebungen zu ihren besten Waffen.",
+            "en": "Phieraggi is one of her best weapons per the wiki thanks to her many Revivals."
+          },
+          "priority": 1
+        },
+        {
+          "id": "wine-glass",
+          "reason": {
+            "de": "Meal Ticket gehört laut Wiki mit ihren vielen Wiederbelebungen zu ihren besten Waffen.",
+            "en": "Meal Ticket is one of her best weapons per the wiki thanks to her many Revivals."
+          },
+          "priority": 1
         }
       ],
       "passives": [
@@ -101,6 +181,30 @@
             "en": "Needed for Luminaire."
           },
           "priority": 1
+        },
+        {
+          "id": "attractorb",
+          "reason": {
+            "de": "Laut Wiki sehr empfohlen: gleichmäßig leveln statt Erfahrung zu sammeln.",
+            "en": "Highly recommended per the wiki: level up steadily instead of saving up experience."
+          },
+          "priority": 1
+        },
+        {
+          "id": "skull-o-maniac",
+          "reason": {
+            "de": "Mehr Fluch löst öfter Rosenkränze aus.",
+            "en": "More Curse triggers Rosaries more often."
+          },
+          "priority": 3
+        },
+        {
+          "id": "torrona-s-box",
+          "reason": {
+            "de": "Mehr Fluch löst öfter Rosenkränze aus.",
+            "en": "More Curse triggers Rosaries more often."
+          },
+          "priority": 3
         }
       ]
     },
@@ -125,6 +229,14 @@
             "en": "Needed for Ophion."
           },
           "priority": 1
+        },
+        {
+          "id": "tirajisu",
+          "reason": {
+            "de": "Mehr Wiederbelebungen, also mehr Leben für ihren Schutz vor dem Tod.",
+            "en": "More Revivals, so more lives for her death save."
+          },
+          "priority": 2
         }
       ]
     },
@@ -139,6 +251,14 @@
             "en": "Starting weapon; with Skull O'Maniac it becomes Ophion."
           },
           "priority": 1
+        },
+        {
+          "id": "prismatic-missile",
+          "reason": {
+            "de": "Entwickelt sich zu Luminaire, laut Wiki aus demselben Grund empfohlen.",
+            "en": "Evolves into Luminaire, recommended per the wiki for the same reason."
+          },
+          "priority": 2
         }
       ],
       "passives": [
@@ -149,6 +269,22 @@
             "en": "Needed for Ophion."
           },
           "priority": 1
+        },
+        {
+          "id": "tirajisu",
+          "reason": {
+            "de": "Mehr Wiederbelebungen, also mehr Leben für den Schutz vor dem Tod.",
+            "en": "More Revivals, so more lives for its death save."
+          },
+          "priority": 2
+        },
+        {
+          "id": "crown",
+          "reason": {
+            "de": "Löst den Vacuum-Effekt öfter aus.",
+            "en": "Triggers its Vacuum effect more often."
+          },
+          "priority": 2
         }
       ]
     },

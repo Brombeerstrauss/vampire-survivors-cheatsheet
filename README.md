@@ -134,6 +134,7 @@ Every evolution was checked automatically against three pages of the wiki (evolu
 More notes:
 
 - The recommendations for the 34 regular base game characters are hand-written. DLC characters get a basic recommendation (starting weapon and the partners for its evolution), which can be extended in `recommendations.json`.
+- In addition, 186 recommendations for 75 characters come from the "Tips" sections of the character pages on the wiki, checked by hand: only explicit advice for a weapon or item, not advice that depends on an Arcana or a special setup (`tools/wiki-import/texts/wiki_tips.py`). Three clear warnings appear under "Better avoid" (e.g. Empty Tome for Babi-Onna, who ignores Cooldown).
 - English names and descriptions are the original texts from the game (according to the wiki). German descriptions are official texts where poncle's sheet has them, otherwise own translations.
 - Special weapons (e.g. the Arcana Gemini counterparts) and Arcanas are not included.
 - 339 of 352 weapons have an `effects` text and 281 an `affectedBy` list from the wiki. The German `effects` texts are own translations (`tools/wiki-import/texts/effects_de.py`).

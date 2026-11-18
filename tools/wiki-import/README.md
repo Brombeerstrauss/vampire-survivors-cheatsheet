@@ -35,5 +35,11 @@ The script downloads the wiki pages, parses the tables and rewrites all packs.
   only prints the English texts, to translate new ones. Runs at the end of `run.sh`, but also
   works on its own without losing manual edits:
   `python3 -I tools/wiki-import/weapon_effects.py https://vampire.survivors.wiki/api.php src/data/packs`
+- `wiki_tips.py`: merges `texts/wiki_tips.py` into the recommendations: clear advice from the
+  "Tips" sections of the character pages, checked by hand (only explicit recommendations of a
+  weapon or item for that character, not ones that depend on an Arcana, the Merchant or a
+  special setup), with German and English reasons, plus a few items to avoid. Existing
+  recommendations keep their better priority and get the wiki's reason added. Runs at the end
+  of `run.sh`; on its own: `python3 -I tools/wiki-import/wiki_tips.py src/data/packs`
 
 Requirements: `python3` (included with macOS) and `curl`.

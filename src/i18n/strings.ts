@@ -52,6 +52,7 @@ export const de = {
   startsWithoutWeapon: (name: string) => `${name} startet ohne sichtbare Waffe.`,
   recommendations: 'Empfehlungen',
   noRecommendations: (name: string) => `Für ${name} sind noch keine Empfehlungen hinterlegt.`,
+  betterAvoid: 'Eher meiden',
   startsEvolved: 'Startet bereits als entwickelte Waffe.',
   noEvolution: 'Diese Waffe hat keine Entwicklung.',
 
@@ -257,6 +258,7 @@ export const en: Strings = {
   startsWithoutWeapon: (name: string) => `${name} starts without a visible weapon.`,
   recommendations: 'Recommendations',
   noRecommendations: (name: string) => `No recommendations for ${name} yet.`,
+  betterAvoid: 'Better avoid',
   startsEvolved: 'Already starts as an evolved weapon.',
   noEvolution: 'This weapon has no evolution.',
 

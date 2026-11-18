@@ -108,6 +108,14 @@
             "en": "All-round protection for the fragile ranged fighter."
           },
           "priority": 2
+        },
+        {
+          "id": "wind-whip",
+          "reason": {
+            "de": "Wird mit Wachstum stärker, passt früh zu ihrem Erfahrungs-Bonus.",
+            "en": "Grows stronger with Growth, fits her experience bonus early on."
+          },
+          "priority": 3
         }
       ],
       "passives": [
@@ -516,6 +524,14 @@
             "en": "Extra all-round protection."
           },
           "priority": 2
+        },
+        {
+          "id": "sharp-tongue",
+          "reason": {
+            "de": "Schaden wächst mit Erholung; Poe gehört zu den besten Nutzern der Entwicklung Impostongue.",
+            "en": "Damage grows with Recovery; Poe is one of the best users of its evolution Impostongue."
+          },
+          "priority": 2
         }
       ],
       "passives": [
@@ -646,10 +662,50 @@
           "priority": 2
         },
         {
+          "id": "runetracer",
+          "reason": {
+            "de": "Profitiert stark von Geschwindigkeit und Dauer wie sein Bonus.",
+            "en": "Benefits greatly from Speed and Duration, like his bonus."
+          },
+          "priority": 2
+        },
+        {
+          "id": "bone",
+          "reason": {
+            "de": "Profitiert stark von Geschwindigkeit und Dauer wie sein Bonus.",
+            "en": "Benefits greatly from Speed and Duration, like his bonus."
+          },
+          "priority": 2
+        },
+        {
           "id": "song-of-mana",
           "reason": {
             "de": "Lange Wirkdauer; mit Schädel O'Maniac wird sie zu Mannajja.",
             "en": "Long effect duration; becomes Mannajja with Skull O'Maniac."
+          },
+          "priority": 3
+        },
+        {
+          "id": "mace",
+          "reason": {
+            "de": "Profitiert von Geschwindigkeit und Dauer wie sein Bonus.",
+            "en": "Benefits from Speed and Duration, like his bonus."
+          },
+          "priority": 3
+        },
+        {
+          "id": "hydro-storm",
+          "reason": {
+            "de": "Profitiert von Geschwindigkeit und Dauer wie sein Bonus.",
+            "en": "Benefits from Speed and Duration, like his bonus."
+          },
+          "priority": 3
+        },
+        {
+          "id": "sonic-dash",
+          "reason": {
+            "de": "Gleicht seine geringe Bewegungsgeschwindigkeit aus.",
+            "en": "Makes up for his low Move Speed."
           },
           "priority": 3
         }
@@ -686,6 +742,15 @@
             "en": "Shorter pauses between attacks."
           },
           "priority": 3
+        }
+      ],
+      "avoid": [
+        {
+          "id": "vento-sacro",
+          "reason": {
+            "de": "Laut Wiki ungeeignet: braucht Bewegungsgeschwindigkeit, die Dommario fehlt.",
+            "en": "Not suitable per the wiki: needs Move Speed, which Dommario lacks."
+          }
         }
       ]
     },
@@ -894,6 +959,30 @@
           "priority": 1
         },
         {
+          "id": "runetracer",
+          "reason": {
+            "de": "Wird mit ihrem unbegrenzt wachsenden Bonus auf hohen Leveln sehr stark.",
+            "en": "Becomes very strong at high levels with her uncapped bonus."
+          },
+          "priority": 2
+        },
+        {
+          "id": "bone",
+          "reason": {
+            "de": "Wird mit ihrem unbegrenzt wachsenden Bonus auf hohen Leveln sehr stark.",
+            "en": "Becomes very strong at high levels with her uncapped bonus."
+          },
+          "priority": 2
+        },
+        {
+          "id": "greatest-jubilee",
+          "reason": {
+            "de": "Erzeugt Lichtquellen, die Floor Chicken für Gatti Amari fallen lassen können.",
+            "en": "Creates light sources that can drop Floor Chicken for Gatti Amari."
+          },
+          "priority": 2
+        },
+        {
           "id": "knife",
           "reason": {
             "de": "Profitiert von Projektilgeschwindigkeit; mit Armschiene wird sie zu Tausendschneide.",
@@ -1034,6 +1123,22 @@
           "reason": {
             "de": "Wächst stark mit der Fläche; mit Kandelabrador wird sie zu Todesspirale.",
             "en": "Scales strongly with Area; becomes Death Spiral with Candelabrador."
+          },
+          "priority": 3
+        },
+        {
+          "id": "santa-water",
+          "reason": {
+            "de": "Wird mit ihrem unbegrenzt wachsenden Bonus auf hohen Leveln sehr stark.",
+            "en": "Becomes very strong at high levels with her uncapped bonus."
+          },
+          "priority": 3
+        },
+        {
+          "id": "song-of-mana",
+          "reason": {
+            "de": "Wird mit ihrem unbegrenzt wachsenden Bonus auf hohen Leveln sehr stark.",
+            "en": "Becomes very strong at high levels with her uncapped bonus."
           },
           "priority": 3
         }
@@ -1508,6 +1613,14 @@
             "en": "Becomes Bloody Tear with Hollow Heart, the union partner of Vento Sacro."
           },
           "priority": 1
+        },
+        {
+          "id": "rune-sword",
+          "reason": {
+            "de": "Ihre wachsende Macht, Fläche, Geschwindigkeit und Dauer erhöhen den kritischen Schaden stark.",
+            "en": "Her growing Might, Area, Speed and Duration greatly raise its critical damage."
+          },
+          "priority": 2
         }
       ],
       "passives": [
@@ -1680,6 +1793,14 @@
           "reason": {
             "de": "Partner für Gunastrophe und Tausendschneide.",
             "en": "Partner for Gunastrophe and Thousand Edge."
+          },
+          "priority": 1
+        },
+        {
+          "id": "clover",
+          "reason": {
+            "de": "Laut Wiki Pflicht: Glück erhöht die Chance auf goldene Truhen aus ihren Lichtquellen.",
+            "en": "A must-pick per the wiki: Luck raises the chance of golden chests from her light sources."
           },
           "priority": 1
         },
@@ -1934,10 +2055,26 @@
           "priority": 1
         },
         {
+          "id": "lifesign-scan",
+          "reason": {
+            "de": "Entwickelt sich zu Paranormal Scan: laut Wiki extrem wichtig, überheilt zuverlässig und gibt eigene Wertebonusse.",
+            "en": "Evolves into Paranormal Scan: extremely important per the wiki, overheals reliably and gives its own stat bonuses."
+          },
+          "priority": 1
+        },
+        {
           "id": "garlic",
           "reason": {
             "de": "Mit Pummarola wird sie zu Seelenfresser, das ebenfalls von Heilung profitiert.",
             "en": "Becomes Soul Eater with Pummarola, which also benefits from healing."
+          },
+          "priority": 2
+        },
+        {
+          "id": "greatest-jubilee",
+          "reason": {
+            "de": "Erzeugt Lichtquellen, die Floor Chicken fallen lassen können.",
+            "en": "Creates light sources that can drop Floor Chicken."
           },
           "priority": 2
         }
@@ -1958,6 +2095,22 @@
             "en": "More healing for overheal bonuses."
           },
           "priority": 1
+        },
+        {
+          "id": "mini-ghost",
+          "reason": {
+            "de": "Partner für Paranormal Scan.",
+            "en": "Partner for Paranormal Scan."
+          },
+          "priority": 2
+        },
+        {
+          "id": "clover",
+          "reason": {
+            "de": "Mehr Glück bringt mehr Floor Chicken und Wall Chicken.",
+            "en": "More Luck finds more Floor Chicken and Wall Chicken."
+          },
+          "priority": 2
         },
         {
           "id": "hollow-heart",
@@ -1990,6 +2143,22 @@
           "reason": {
             "de": "Mit Kleeblatt wird sie zu Himmelsschwert.",
             "en": "Becomes Heaven Sword with Clover."
+          },
+          "priority": 2
+        },
+        {
+          "id": "greatest-jubilee",
+          "reason": {
+            "de": "Laut Wiki sehr gut; löst mit seinem wachsenden Glück öfter aus.",
+            "en": "A very good pick per the wiki; triggers more often with his growing Luck."
+          },
+          "priority": 2
+        },
+        {
+          "id": "108-bocce",
+          "reason": {
+            "de": "Passt laut Wiki hervorragend: mehr Schaden, egal wie er würfelt.",
+            "en": "Synergizes incredibly well per the wiki: more damage however he rolls."
           },
           "priority": 2
         }
@@ -2044,6 +2213,38 @@
             "en": "Also uses Empty Tome and becomes Holy Wand."
           },
           "priority": 2
+        },
+        {
+          "id": "santa-javelin",
+          "reason": {
+            "de": "Starke Waffe mit langer Abklingzeit (Seraphic Cry), die von seiner doppelten Auslösung profitiert.",
+            "en": "Strong long-cooldown weapon (Seraphic Cry) that profits from his double activation."
+          },
+          "priority": 3
+        },
+        {
+          "id": "lifesign-scan",
+          "reason": {
+            "de": "Starke Waffe mit langer Abklingzeit (Paranormal Scan), die von seiner doppelten Auslösung profitiert.",
+            "en": "Strong long-cooldown weapon (Paranormal Scan) that profits from his double activation."
+          },
+          "priority": 3
+        },
+        {
+          "id": "report",
+          "reason": {
+            "de": "Starke Waffe mit langer Abklingzeit (Emergency Meeting), die von seiner doppelten Auslösung profitiert.",
+            "en": "Strong long-cooldown weapon (Emergency Meeting) that profits from his double activation."
+          },
+          "priority": 3
+        },
+        {
+          "id": "diver-mines",
+          "reason": {
+            "de": "Starke Waffe mit langer Abklingzeit (Atmo-Torpedo), die von seiner doppelten Auslösung profitiert.",
+            "en": "Strong long-cooldown weapon (Atmo-Torpedo) that profits from his double activation."
+          },
+          "priority": 3
         }
       ],
       "passives": [
@@ -2072,6 +2273,414 @@
           "priority": 2
         }
       ]
+    },
+    {
+      "character": "toastie",
+      "source": "base",
+      "weapons": [
+        {
+          "id": "centralis-custos",
+          "reason": {
+            "de": "Gibt allein schon 10 Rüstung.",
+            "en": "Gives 10 Armor on its own."
+          },
+          "priority": 2
+        }
+      ],
+      "passives": [
+        {
+          "id": "crown",
+          "reason": {
+            "de": "Wachstum bringt Toastie schneller auf Level 100 und 200.",
+            "en": "Growth gets Toastie to level 100 and 200 faster."
+          },
+          "priority": 2
+        },
+        {
+          "id": "armor",
+          "reason": {
+            "de": "Rüstung hilft, den Reaper ab Level 200 auszuhalten.",
+            "en": "Armor helps withstand the Reaper from level 200."
+          },
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "character": "smith-iv",
+      "source": "base",
+      "weapons": [
+        {
+          "id": "spellstrike",
+          "reason": {
+            "de": "Wachsende Macht, Fläche und Geschwindigkeit; die Union SpellStrom profitiert zusätzlich von Abklingzeit und Dauer.",
+            "en": "Growing Might, Area and Speed; the union SpellStrom also profits from Cooldown and Duration."
+          },
+          "priority": 2
+        },
+        {
+          "id": "spellstring",
+          "reason": {
+            "de": "Teil der Union SpellStrom, die von Smiths wachsenden Werten stark profitiert.",
+            "en": "Part of the union SpellStrom, which profits greatly from Smith's growing stats."
+          },
+          "priority": 2
+        },
+        {
+          "id": "spellstream",
+          "reason": {
+            "de": "Teil der Union SpellStrom, die von Smiths wachsenden Werten stark profitiert.",
+            "en": "Part of the union SpellStrom, which profits greatly from Smith's growing stats."
+          },
+          "priority": 2
+        },
+        {
+          "id": "rune-sword",
+          "reason": {
+            "de": "Wachsende Fläche, Geschwindigkeit, Dauer und Glück erhöhen kritische Treffer.",
+            "en": "Growing Area, Speed, Duration and Luck boost its critical hits."
+          },
+          "priority": 2
+        },
+        {
+          "id": "sharp-tongue",
+          "reason": {
+            "de": "Schaden wächst mit Erholung, die bei Smith mitwächst.",
+            "en": "Damage grows with Recovery, which grows for Smith."
+          },
+          "priority": 3
+        },
+        {
+          "id": "star-flail",
+          "reason": {
+            "de": "Schaden wächst mit Erholung, die bei Smith mitwächst.",
+            "en": "Damage grows with Recovery, which grows for Smith."
+          },
+          "priority": 3
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "avatar-infernas",
+      "source": "base",
+      "weapons": [
+        {
+          "id": "pentagram",
+          "reason": {
+            "de": "Seine unbegrenzt sinkende Abklingzeit macht starke Waffen mit langer Abklingzeit sehr gut.",
+            "en": "His endlessly shrinking Cooldown makes strong long-cooldown weapons very good."
+          },
+          "priority": 2
+        },
+        {
+          "id": "clock-lancet",
+          "reason": {
+            "de": "Feuert irgendwann so schnell, dass Gegner dauerhaft eingefroren bleiben.",
+            "en": "Eventually fires so fast that enemies stay frozen."
+          },
+          "priority": 2
+        },
+        {
+          "id": "laurel",
+          "reason": {
+            "de": "Ab -87,5 % Abklingzeit völlig unverwundbar.",
+            "en": "Fully invincible from -87.5% Cooldown."
+          },
+          "priority": 2
+        },
+        {
+          "id": "shadow-pinion",
+          "reason": {
+            "de": "Profitiert von seiner wachsenden Bewegungsgeschwindigkeit.",
+            "en": "Profits from his growing Move Speed."
+          },
+          "priority": 2
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "leda",
+      "source": "base",
+      "weapons": [
+        {
+          "id": "spellstrike",
+          "reason": {
+            "de": "Ihre hohe Macht macht SpellStrike und SpellStrom sehr stark.",
+            "en": "Her high Might makes SpellStrike and SpellStrom very strong."
+          },
+          "priority": 2
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "cosmo-pavone",
+      "source": "base",
+      "weapons": [
+        {
+          "id": "sharp-tongue",
+          "reason": {
+            "de": "Schaden wird mit Erholung multipliziert, die bei Cosmo pro Level um 1 steigt.",
+            "en": "Damage is multiplied by Recovery, which grows by 1 per level for Cosmo."
+          },
+          "priority": 1
+        },
+        {
+          "id": "star-flail",
+          "reason": {
+            "de": "Schaden wird mit Erholung multipliziert, die bei Cosmo pro Level um 1 steigt.",
+            "en": "Damage is multiplied by Recovery, which grows by 1 per level for Cosmo."
+          },
+          "priority": 1
+        },
+        {
+          "id": "scarlet-needle",
+          "reason": {
+            "de": "Entwickelt sich zu Cardinal Rain, dessen Schaden mit Erholung wächst.",
+            "en": "Evolves into Cardinal Rain, whose damage grows with Recovery."
+          },
+          "priority": 2
+        },
+        {
+          "id": "garlic",
+          "reason": {
+            "de": "Seine starke Regeneration erhöht den Schaden von Seelenfresser.",
+            "en": "His strong regeneration boosts Soul Eater's damage."
+          },
+          "priority": 2
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "peppino",
+      "source": "base",
+      "weapons": [
+        {
+          "id": "sonic-dash",
+          "reason": {
+            "de": "Hilft beim Bewegen dank kurzem Tempo-Schub.",
+            "en": "Helps moving with its brief speed boost."
+          },
+          "priority": 3
+        }
+      ],
+      "passives": [
+        {
+          "id": "attractorb",
+          "reason": {
+            "de": "Laut Wiki eines der wichtigsten Pickups: sammelt Erfahrung ein, ohne sich zu bewegen.",
+            "en": "One of the most important pickups per the wiki: collects experience without moving."
+          },
+          "priority": 1
+        },
+        {
+          "id": "wings",
+          "reason": {
+            "de": "Gleicht die fehlende Bewegungsgeschwindigkeit etwas aus.",
+            "en": "Makes up a little for the missing Move Speed."
+          },
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "character": "big-trouser",
+      "source": "base",
+      "weapons": [
+        {
+          "id": "night-sword",
+          "reason": {
+            "de": "Entwickelt sich zu Muramasa; mit seiner wachsenden Gier einer der besten Nutzer.",
+            "en": "Evolves into Muramasa; one of its best users thanks to his growing Greed."
+          },
+          "priority": 2
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "gains-boros",
+      "source": "base",
+      "weapons": [
+        {
+          "id": "wind-whip",
+          "reason": {
+            "de": "Schaden wächst mit Wachstum, das bei Gains unbegrenzt steigt.",
+            "en": "Damage grows with Growth, which grows endlessly for Gains."
+          },
+          "priority": 2
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "gyorunton",
+      "source": "base",
+      "weapons": [
+        {
+          "id": "108-bocce",
+          "reason": {
+            "de": "Skaliert mit Fluch, der bei Gyorunton unbegrenzt steigt.",
+            "en": "Scales with Curse, which grows endlessly for Gyorunton."
+          },
+          "priority": 2
+        },
+        {
+          "id": "lifesign-scan",
+          "reason": {
+            "de": "Entwickelt sich zu Paranormal Scan, das Gyorunton den ganzen Lauf über stärker macht.",
+            "en": "Evolves into Paranormal Scan, which keeps Gyorunton scaling all run."
+          },
+          "priority": 2
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "bats-bats-bats",
+      "source": "base",
+      "weapons": [
+        {
+          "id": "phiera-der-tuphello",
+          "reason": {
+            "de": "Die Union Phieraggi gewinnt Anzahl aus Wiederbelebungen und Anzahl-Boni.",
+            "en": "The union Phieraggi gains Amount from Revivals and Amount bonuses."
+          },
+          "priority": 2
+        },
+        {
+          "id": "eight-the-sparrow",
+          "reason": {
+            "de": "Die Union Phieraggi gewinnt Anzahl aus Wiederbelebungen und Anzahl-Boni.",
+            "en": "The union Phieraggi gains Amount from Revivals and Amount bonuses."
+          },
+          "priority": 2
+        },
+        {
+          "id": "flash-arrow",
+          "reason": {
+            "de": "Gewinnt durch seine hohe Anzahl enorm Schaden.",
+            "en": "Gains massive damage from its high Amount."
+          },
+          "priority": 2
+        }
+      ],
+      "passives": [
+        {
+          "id": "tirajisu",
+          "reason": {
+            "de": "Laut Wiki fast Pflicht: Wiederbelebungen geben Anzahl und einen weiteren Begleiter.",
+            "en": "Almost mandatory per the wiki: Revivals give Amount and another follower."
+          },
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "rose-de-infernas",
+      "source": "base",
+      "weapons": [
+        {
+          "id": "victory-sword",
+          "reason": {
+            "de": "Entwickelt sich zu Sole Solution, das mit getöteten Gegnern wächst; Rose tötet mehr als alle anderen.",
+            "en": "Evolves into Sole Solution, which grows with kills; Rose racks up more kills than anyone."
+          },
+          "priority": 2
+        },
+        {
+          "id": "flames-of-misspell",
+          "reason": {
+            "de": "Entwickelt sich zu Ashes of Muspell, das mit getöteten Gegnern wächst.",
+            "en": "Evolves into Ashes of Muspell, which grows with kills."
+          },
+          "priority": 2
+        }
+      ],
+      "passives": [
+        {
+          "id": "spinach",
+          "reason": {
+            "de": "Laut Wiki früh nehmen: mehr Macht.",
+            "en": "Take early per the wiki: more Might."
+          },
+          "priority": 2
+        },
+        {
+          "id": "crown",
+          "reason": {
+            "de": "Laut Wiki früh nehmen: mehr Wachstum.",
+            "en": "Take early per the wiki: more Growth."
+          },
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "character": "scorej-oni",
+      "source": "base",
+      "weapons": [
+        {
+          "id": "night-sword",
+          "reason": {
+            "de": "Entwickelt sich zu Muramasa, dessen Lebensentzug ihre versteckten Blitzringe auslöst.",
+            "en": "Evolves into Muramasa, whose health drain triggers her hidden Lightning Rings."
+          },
+          "priority": 2
+        }
+      ],
+      "passives": []
+    },
+    {
+      "character": "gyoruntin",
+      "source": "base",
+      "weapons": [
+        {
+          "id": "108-bocce",
+          "reason": {
+            "de": "Sein wachsender Fluch erhöht den Schaden bis aufs 11-Fache.",
+            "en": "His growing Curse raises its damage up to 11 times."
+          },
+          "priority": 2
+        }
+      ],
+      "passives": [
+        {
+          "id": "crown",
+          "reason": {
+            "de": "Laut Wiki sehr empfohlen: mehr Level bedeuten mehr Fluch und einen stärkeren NO FUTURE.",
+            "en": "Highly recommended per the wiki: more levels mean more Curse and a stronger NO FUTURE."
+          },
+          "priority": 1
+        }
+      ],
+      "avoid": [
+        {
+          "id": "troll-bomb",
+          "reason": {
+            "de": "Die Union Carnage Heart mit NO FUTURE zerstört dessen Skalierung mit dem Level.",
+            "en": "The union Carnage Heart with NO FUTURE breaks its level scaling."
+          }
+        }
+      ]
+    },
+    {
+      "character": "secretino-dagsson",
+      "source": "base",
+      "weapons": [
+        {
+          "id": "greatest-jubilee",
+          "reason": {
+            "de": "Erzeugt Lichtquellen, die ihm mehr Survarots bringen.",
+            "en": "Creates light sources that grant him more Survarots."
+          },
+          "priority": 2
+        }
+      ],
+      "passives": []
     }
   ]
 }
