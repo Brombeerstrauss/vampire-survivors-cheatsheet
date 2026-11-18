@@ -12,6 +12,14 @@
             "en": "Starting weapon; with Mini Crewmate it becomes Emergency Meeting."
           },
           "priority": 1
+        },
+        {
+          "id": "penshin-fatcha",
+          "reason": {
+            "de": "Laut Wiki mit Abstand die wichtigste Waffe: entwickelt sich unbegrenzt oft und löst ihre Fähigkeit jedes Mal aus.",
+            "en": "By far the most key weapon per the wiki: evolves endlessly and triggers the ability every time."
+          },
+          "priority": 1
         }
       ],
       "passives": [
@@ -46,6 +54,14 @@
             "en": "Needed for Crossed Wires."
           },
           "priority": 1
+        },
+        {
+          "id": "crown",
+          "reason": {
+            "de": "Kann Krone auf Level 2 garantiert bekommen, sehr hilfreich für einen schnellen Start.",
+            "en": "Can guarantee Crown at level 2, very helpful for a fast start."
+          },
+          "priority": 2
         }
       ]
     },
@@ -60,6 +76,14 @@
             "en": "Starting weapon; with Mini Ghost it becomes Paranormal Scan."
           },
           "priority": 1
+        },
+        {
+          "id": "pentagram",
+          "reason": {
+            "de": "Tötet sofort und funktioniert trotz -100 % Macht.",
+            "en": "Kills instantly and works despite -100% Might."
+          },
+          "priority": 2
         }
       ],
       "passives": [
@@ -84,6 +108,22 @@
             "en": "Starting weapon; with Mini Shapeshifter it becomes Unjust Ejection."
           },
           "priority": 1
+        },
+        {
+          "id": "victory-sword",
+          "reason": {
+            "de": "Vergeltungswaffe, die ihre Fähigkeit ausnutzt.",
+            "en": "Retaliation weapon that makes use of her ability."
+          },
+          "priority": 3
+        },
+        {
+          "id": "night-sword",
+          "reason": {
+            "de": "Vergeltungswaffe, die ihre Fähigkeit ausnutzt.",
+            "en": "Retaliation weapon that makes use of her ability."
+          },
+          "priority": 3
         }
       ],
       "passives": [
@@ -94,6 +134,14 @@
             "en": "Needed for Unjust Ejection."
           },
           "priority": 1
+        },
+        {
+          "id": "wings",
+          "reason": {
+            "de": "Mehr Bewegung lässt Unjust Ejection mehr Gegner erfassen.",
+            "en": "More movement lets Unjust Ejection catch more enemies."
+          },
+          "priority": 3
         }
       ]
     },
@@ -108,6 +156,22 @@
             "en": "Starting weapon; with Mini Guardian it becomes Clear Asteroids."
           },
           "priority": 1
+        },
+        {
+          "id": "phiera-der-tuphello",
+          "reason": {
+            "de": "Die Union Phieraggi ist stark, weil Guardian Wiederbelebungen oft nicht verbraucht.",
+            "en": "The union Phieraggi is strong because Guardian often doesn't use up Revivals."
+          },
+          "priority": 2
+        },
+        {
+          "id": "eight-the-sparrow",
+          "reason": {
+            "de": "Die Union Phieraggi ist stark, weil Guardian Wiederbelebungen oft nicht verbraucht.",
+            "en": "The union Phieraggi is strong because Guardian often doesn't use up Revivals."
+          },
+          "priority": 2
         }
       ],
       "passives": [
@@ -132,6 +196,14 @@
             "en": "Starting weapon; with Mini Impostor it becomes Impostongue."
           },
           "priority": 1
+        },
+        {
+          "id": "shadow-servant",
+          "reason": {
+            "de": "Entwickelt sich zu Ophion, das mit Fluch stark bleibt.",
+            "en": "Evolves into Ophion, which keeps up with high Curse."
+          },
+          "priority": 2
         }
       ],
       "passives": [
@@ -142,6 +214,14 @@
             "en": "Needed for Impostongue."
           },
           "priority": 1
+        },
+        {
+          "id": "skull-o-maniac",
+          "reason": {
+            "de": "Mehr Fluch bringt mehr Gegner, damit öfter ihre stärkere Form.",
+            "en": "More Curse brings more enemies, so her stronger form more often."
+          },
+          "priority": 2
         }
       ]
     },

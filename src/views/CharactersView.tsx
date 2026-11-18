@@ -13,7 +13,7 @@ import {
   UnverifiedBadge,
 } from '../components/ui.tsx'
 import { buttonClass, matches } from '../components/styles.ts'
-import type { Character, RecommendedItem } from '../data/types.ts'
+import type { AvoidedItem, Character, RecommendedItem } from '../data/types.ts'
 import { useI18n } from '../i18n/index.ts'
 import { searchNames, sortByName } from '../i18n/names.ts'
 import type { Catalog } from '../logic/catalog.ts'
@@ -167,6 +167,7 @@ function CharacterDetail({ character }: { character: Character }) {
               <RecommendedList title={t.weapons} items={recWeapons} type="weapon" />
               <RecommendedList title={t.passiveItems} items={recPassives} type="passive" />
             </div>
+            <AvoidList items={recommendations.flatMap((r) => r.avoid ?? [])} />
           </div>
         )}
       </Section>
@@ -204,6 +205,40 @@ function StartingWeapon({ weaponId, characterId }: { weaponId: string; character
         </div>
       )}
     </Card>
+  )
+}
+
+/** Weapons and items the wiki clearly advises against for this character. */
+function AvoidList({ items }: { items: AvoidedItem[] }) {
+  const { catalog } = useAppState()
+  const { t, text } = useI18n()
+  const shown = items.filter((item, i) => items.findIndex((x) => x.id === item.id) === i)
+  if (shown.length === 0) return null
+  return (
+    <div className="space-y-2">
+      <h3 className="text-sm font-medium text-red-200/80">{t.betterAvoid}</h3>
+      <ul className="space-y-1.5">
+        {shown.map((item) => {
+          const weapon = catalog.weapon(item.id)
+          const entry = weapon ?? catalog.passive(item.id)
+          if (!entry) return null
+          return (
+            <li key={item.id}>
+              <a
+                href={weapon ? weaponHref(item.id) : passiveHref(item.id)}
+                className="flex items-start gap-3 rounded-xl p-2 hover:bg-white/5"
+              >
+                <EntryIcon entry={entry} size="sm" />
+                <span className="min-w-0 flex-1">
+                  <EntryName entry={entry} className="font-medium" />
+                  <span className="block text-sm text-white/60">{text(item.reason)}</span>
+                </span>
+              </a>
+            </li>
+          )
+        })}
+      </ul>
+    </div>
   )
 }
 

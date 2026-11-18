@@ -276,6 +276,30 @@
             "en": "Starting weapon."
           },
           "priority": 1
+        },
+        {
+          "id": "108-bocce",
+          "reason": {
+            "de": "Glücksmalus und hoher Fluch ergeben einen großen Unterschied, der den Schaden stark erhöht.",
+            "en": "Its Luck penalty and high Curse make a large difference that boosts the damage a lot."
+          },
+          "priority": 2
+        },
+        {
+          "id": "king-bible",
+          "reason": {
+            "de": "Früh eine Schutzwaffe nehmen, gegen die vielen Gegner durch hohen Fluch.",
+            "en": "Take a defensive weapon early against the many enemies from high Curse."
+          },
+          "priority": 2
+        },
+        {
+          "id": "garlic",
+          "reason": {
+            "de": "Früh eine Schutzwaffe nehmen, gegen die vielen Gegner durch hohen Fluch.",
+            "en": "Take a defensive weapon early against the many enemies from high Curse."
+          },
+          "priority": 2
         }
       ],
       "passives": []

@@ -36,6 +36,14 @@
             "en": "Starting weapon; with Skull O'Maniac it becomes Crissaegrim Tip."
           },
           "priority": 1
+        },
+        {
+          "id": "lifesign-scan",
+          "reason": {
+            "de": "Hält mit Paranormal Scan ihre Fähigkeit fast dauerhaft aktiv.",
+            "en": "With Paranormal Scan, keeps her ability almost permanently active."
+          },
+          "priority": 2
         }
       ],
       "passives": [
@@ -252,6 +260,14 @@
             "en": "Starting weapon; with Spellbinder it becomes Long Inus."
           },
           "priority": 1
+        },
+        {
+          "id": "troll-bomb",
+          "reason": {
+            "de": "Laut Wiki Pflicht: Jonathan löst sie viel öfter aus als andere.",
+            "en": "A must-pick per the wiki: Jonathan triggers it far more often than others."
+          },
+          "priority": 1
         }
       ],
       "passives": [
@@ -262,6 +278,14 @@
             "en": "Needed for Long Inus."
           },
           "priority": 1
+        },
+        {
+          "id": "duplicator",
+          "reason": {
+            "de": "Mehr Anzahl lässt Troll Bomb länger wirken.",
+            "en": "More Amount makes Troll Bomb last longer."
+          },
+          "priority": 2
         }
       ]
     },
@@ -276,6 +300,14 @@
             "en": "Starting weapon; with Candelabrador it becomes The RPG."
           },
           "priority": 1
+        },
+        {
+          "id": "night-sword",
+          "reason": {
+            "de": "Muramasa ist eine der besten Waffen für Dark Lord Soma: skaliert mit seiner Gier ohne Obergrenze.",
+            "en": "Muramasa is one of the best weapons for Dark Lord Soma: scales with his uncapped Greed."
+          },
+          "priority": 2
         }
       ],
       "passives": [
@@ -300,6 +332,14 @@
             "en": "Starting weapon; with Spinach it becomes Salamender."
           },
           "priority": 1
+        },
+        {
+          "id": "refectio",
+          "reason": {
+            "de": "Entwickelt sich zu Sanctuary, laut Wiki fast Pflicht: Sie löst es viel öfter aus als andere.",
+            "en": "Evolves into Sanctuary, almost a must-pick per the wiki: she triggers it far more often than others."
+          },
+          "priority": 2
         }
       ],
       "passives": [
@@ -308,6 +348,14 @@
           "reason": {
             "de": "Nötig für Salamender.",
             "en": "Needed for Salamender."
+          },
+          "priority": 1
+        },
+        {
+          "id": "crown",
+          "reason": {
+            "de": "Laut Wiki Pflicht: Ihre Aufladefähigkeit hängt von Wachstum ab.",
+            "en": "A must-pick per the wiki: her charge ability depends on Growth."
           },
           "priority": 1
         }
@@ -498,6 +546,30 @@
             "en": "Starting weapon; with Parm Aegis it becomes Stellar Blade."
           },
           "priority": 1
+        },
+        {
+          "id": "confodere",
+          "reason": {
+            "de": "Melio Confodere skaliert mit Geschwindigkeit und nutzt so seine Fähigkeit.",
+            "en": "Melio Confodere scales with Speed and so uses his ability."
+          },
+          "priority": 2
+        },
+        {
+          "id": "guardian-s-targe",
+          "reason": {
+            "de": "Entwickelt sich zu Sacred Beasts Tower Shield, das bei Überheilung unverwundbar macht.",
+            "en": "Evolves into Sacred Beasts Tower Shield, which grants invulnerability on overheal."
+          },
+          "priority": 2
+        },
+        {
+          "id": "lifesign-scan",
+          "reason": {
+            "de": "Paranormal Scan ist sehr stark und löst seinen Überheilungs-Bonus aus.",
+            "en": "Paranormal Scan is very strong and triggers his overheal bonus."
+          },
+          "priority": 2
         }
       ],
       "passives": [
@@ -554,6 +626,22 @@
           "reason": {
             "de": "Nötig für Meal Ticket.",
             "en": "Needed for Meal Ticket."
+          },
+          "priority": 1
+        },
+        {
+          "id": "torrona-s-box",
+          "reason": {
+            "de": "Laut Wiki sehr empfohlen: Fluch-Nachteile gleicht Dracula leicht aus.",
+            "en": "Highly recommended per the wiki: Dracula easily negates the downsides of Curse."
+          },
+          "priority": 1
+        },
+        {
+          "id": "skull-o-maniac",
+          "reason": {
+            "de": "Laut Wiki sehr empfohlen: Fluch-Nachteile gleicht Dracula leicht aus.",
+            "en": "Highly recommended per the wiki: Dracula easily negates the downsides of Curse."
           },
           "priority": 1
         }
@@ -676,6 +764,22 @@
             "en": "Needed for Nightmare."
           },
           "priority": 1
+        },
+        {
+          "id": "torrona-s-box",
+          "reason": {
+            "de": "Laut Wiki wichtig: Mehr Fluch bringt mehr Gegner für ihre Fähigkeit.",
+            "en": "Important per the wiki: more Curse brings more enemies for her ability."
+          },
+          "priority": 1
+        },
+        {
+          "id": "karoma-s-mana",
+          "reason": {
+            "de": "Laut Wiki wichtig: Mehr Charm bringt mehr Gegner für ihre Fähigkeit.",
+            "en": "Important per the wiki: more Charm brings more enemies for her ability."
+          },
+          "priority": 1
         }
       ]
     },
@@ -690,6 +794,14 @@
             "en": "Starting weapon; with Spinach it becomes Rune Sword."
           },
           "priority": 1
+        },
+        {
+          "id": "mace",
+          "reason": {
+            "de": "Mit der Entwicklung Stamazza erzielt er einige der höchsten Werte.",
+            "en": "With its evolution Stamazza he reaches some of the highest numbers."
+          },
+          "priority": 2
         }
       ],
       "passives": [
@@ -700,6 +812,14 @@
             "en": "Needed for Rune Sword."
           },
           "priority": 1
+        },
+        {
+          "id": "clover",
+          "reason": {
+            "de": "Mehr Glück erhöht die Chance auf kritische Treffer.",
+            "en": "More Luck raises the chance of critical hits."
+          },
+          "priority": 2
         }
       ]
     },
@@ -796,6 +916,14 @@
             "en": "Needed for Acerbatus."
           },
           "priority": 1
+        },
+        {
+          "id": "torrona-s-box",
+          "reason": {
+            "de": "Mehr Fluch bringt mehr Gegner und damit mehr Boni.",
+            "en": "More Curse brings more enemies and so more bonuses."
+          },
+          "priority": 2
         }
       ]
     },
@@ -810,6 +938,14 @@
             "en": "Starting weapon; with Crown it becomes Vol Luminatio."
           },
           "priority": 1
+        },
+        {
+          "id": "lifesign-scan",
+          "reason": {
+            "de": "Optimierter Build laut Wiki: Paranormal Scan statt Umbra, wird mit ihrer Abklingzeit extrem stark.",
+            "en": "Optimized build per the wiki: Paranormal Scan instead of Umbra, extremely strong with her Cooldown."
+          },
+          "priority": 2
         }
       ],
       "passives": [
@@ -834,6 +970,30 @@
             "en": "Starting weapon; with Attractorb it becomes Vol Umbra."
           },
           "priority": 1
+        },
+        {
+          "id": "108-bocce",
+          "reason": {
+            "de": "Laut Wiki sehr empfohlen: skaliert mit Fluch, der bei Shaft wächst.",
+            "en": "Highly recommended per the wiki: scales with Curse, which grows for Shaft."
+          },
+          "priority": 1
+        },
+        {
+          "id": "shadow-servant",
+          "reason": {
+            "de": "Entwickelt sich zu Ophion, laut Wiki sehr empfohlen: skaliert mit Fluch.",
+            "en": "Evolves into Ophion, highly recommended per the wiki: scales with Curse."
+          },
+          "priority": 1
+        },
+        {
+          "id": "lifesign-scan",
+          "reason": {
+            "de": "Paranormal Scan heilt stark und lässt seine Werte mitwachsen.",
+            "en": "Paranormal Scan heals a lot and helps his stats keep up."
+          },
+          "priority": 2
         }
       ],
       "passives": [
@@ -1196,6 +1356,14 @@
           "reason": {
             "de": "Startwaffe.",
             "en": "Starting weapon."
+          },
+          "priority": 1
+        },
+        {
+          "id": "night-sword",
+          "reason": {
+            "de": "Mit seiner riesigen Gier ein außergewöhnlich starker Nutzer von Muramasa.",
+            "en": "An exceptionally powerful user of Muramasa thanks to his massive Greed."
           },
           "priority": 1
         }
@@ -1570,9 +1738,34 @@
             "en": "Starting weapon."
           },
           "priority": 1
+        },
+        {
+          "id": "svarog-statue",
+          "reason": {
+            "de": "Laut Wiki einer der besten Nutzer: sein fester Schadensbonus hilft schnellen, schwachen Waffen.",
+            "en": "One of its best users per the wiki: his flat damage bonus helps fast, weak weapons."
+          },
+          "priority": 2
         }
       ],
-      "passives": []
+      "passives": [
+        {
+          "id": "crown",
+          "reason": {
+            "de": "Laut Wiki ratsam: Er profitiert vom Leveln.",
+            "en": "Advisable per the wiki: he benefits from leveling up."
+          },
+          "priority": 2
+        },
+        {
+          "id": "torrona-s-box",
+          "reason": {
+            "de": "Fluch-Item, das zu seinem Spielstil passt.",
+            "en": "A Curse item that fits his playstyle."
+          },
+          "priority": 2
+        }
+      ]
     },
     {
       "character": "dmitrii-blinov",
@@ -1650,7 +1843,16 @@
           "priority": 1
         }
       ],
-      "passives": []
+      "passives": [
+        {
+          "id": "attractorb",
+          "reason": {
+            "de": "Macht seine Startwaffe stärker.",
+            "en": "Makes his starting weapon stronger."
+          },
+          "priority": 2
+        }
+      ]
     },
     {
       "character": "genya-arikado",
@@ -1702,9 +1904,42 @@
             "en": "Starting weapon."
           },
           "priority": 1
+        },
+        {
+          "id": "night-sword",
+          "reason": {
+            "de": "Muramasa heilt und passt zu seiner hohen Gier.",
+            "en": "Muramasa heals and fits his high Greed."
+          },
+          "priority": 2
+        },
+        {
+          "id": "lifesign-scan",
+          "reason": {
+            "de": "Paranormal Scan, laut Wiki wohl die beste Waffe im Spiel.",
+            "en": "Paranormal Scan, arguably the best weapon in the game per the wiki."
+          },
+          "priority": 2
+        },
+        {
+          "id": "soul-steal",
+          "reason": {
+            "de": "Laut Wiki vielleicht die beste Ebony-Diabologue-Waffe für ihn.",
+            "en": "Perhaps the best Ebony Diabologue weapon for him per the wiki."
+          },
+          "priority": 2
         }
       ],
-      "passives": []
+      "passives": [
+        {
+          "id": "pummarola",
+          "reason": {
+            "de": "Hilft, Soul Steal immer wieder selbst auszulösen.",
+            "en": "Helps Soul Steal retrigger itself."
+          },
+          "priority": 2
+        }
+      ]
     },
     {
       "character": "cave-troll",
@@ -1856,9 +2091,66 @@
             "en": "Starting weapon."
           },
           "priority": 1
+        },
+        {
+          "id": "sonic-dash",
+          "reason": {
+            "de": "Laut Wiki sehr empfohlen (auch als Rapidus Fio): mehr Bewegung.",
+            "en": "Highly recommended per the wiki (also as Rapidus Fio): more movement."
+          },
+          "priority": 1
+        },
+        {
+          "id": "eskizzibur",
+          "reason": {
+            "de": "Entwickelt sich zu Legionnaire, dessen Vergeltungsschaden mit seiner sehr hohen Rüstung wächst.",
+            "en": "Evolves into Legionnaire, whose retaliation damage grows with his very high Armor."
+          },
+          "priority": 2
+        },
+        {
+          "id": "iron-ball",
+          "reason": {
+            "de": "Schaden wächst mit seiner sehr hohen Rüstung (auch als Wrecking Ball).",
+            "en": "Damage grows with his very high Armor (also as Wrecking Ball)."
+          },
+          "priority": 2
+        },
+        {
+          "id": "four-seasons",
+          "reason": {
+            "de": "Profitiert stark von Dauer, besonders als Godai Shuffle.",
+            "en": "Benefits greatly from Duration, especially as Godai Shuffle."
+          },
+          "priority": 2
+        },
+        {
+          "id": "santa-javelin",
+          "reason": {
+            "de": "Profitiert stark von Dauer, besonders als Seraphic Cry.",
+            "en": "Benefits greatly from Duration, especially as Seraphic Cry."
+          },
+          "priority": 2
         }
       ],
-      "passives": []
+      "passives": [
+        {
+          "id": "wings",
+          "reason": {
+            "de": "Laut Wiki sehr empfohlen: Keremet kann sich sonst kaum bewegen.",
+            "en": "Highly recommended per the wiki: Keremet can barely move otherwise."
+          },
+          "priority": 1
+        },
+        {
+          "id": "attractorb",
+          "reason": {
+            "de": "Laut Wiki wichtig: Er hat keinen Magnet-Bonus, um Erfahrung einzusammeln.",
+            "en": "Important per the wiki: he has no Magnet bonus to collect experience."
+          },
+          "priority": 1
+        }
+      ]
     },
     {
       "character": "drolta-tzuentes",
@@ -2059,9 +2351,42 @@
             "en": "Partner for the union Power of Lire."
           },
           "priority": 1
+        },
+        {
+          "id": "troll-bomb",
+          "reason": {
+            "de": "Hilft gegen Bosse, die Soul Steal allein nicht schafft.",
+            "en": "Helps against bosses that Soul Steal alone can't handle."
+          },
+          "priority": 3
         }
       ],
-      "passives": []
+      "passives": [
+        {
+          "id": "wings",
+          "reason": {
+            "de": "Mehr Tempo stärkt ihre Fähigkeit.",
+            "en": "More speed strengthens its ability."
+          },
+          "priority": 2
+        },
+        {
+          "id": "armor",
+          "reason": {
+            "de": "Laut Wiki empfohlen: Jiangshi ist zerbrechlich.",
+            "en": "Recommended per the wiki: Jiangshi is frail."
+          },
+          "priority": 2
+        },
+        {
+          "id": "parm-aegis",
+          "reason": {
+            "de": "Laut Wiki empfohlen: Jiangshi ist zerbrechlich.",
+            "en": "Recommended per the wiki: Jiangshi is frail."
+          },
+          "priority": 2
+        }
+      ]
     },
     {
       "character": "blackmore",
@@ -2105,9 +2430,34 @@
             "en": "Partner for the union Legacy of Death: Soul River."
           },
           "priority": 1
+        },
+        {
+          "id": "lifesign-scan",
+          "reason": {
+            "de": "Paranormal Scan wächst in seiner Megalo-Form schnell und hält ihn spät im Spiel mit.",
+            "en": "Paranormal Scan snowballs quickly in his Megalo form and keeps him up late in the run."
+          },
+          "priority": 2
         }
       ],
-      "passives": []
+      "passives": [
+        {
+          "id": "torrona-s-box",
+          "reason": {
+            "de": "Laut Wiki wichtig: Mehr Fluch bringt mehr Gegner für seine Fähigkeit.",
+            "en": "Important per the wiki: more Curse brings more enemies for his ability."
+          },
+          "priority": 1
+        },
+        {
+          "id": "karoma-s-mana",
+          "reason": {
+            "de": "Laut Wiki wichtig: Mehr Charm bringt mehr Gegner für seine Fähigkeit.",
+            "en": "Important per the wiki: more Charm brings more enemies for his ability."
+          },
+          "priority": 1
+        }
+      ]
     },
     {
       "character": "death",
@@ -2143,6 +2493,14 @@
             "en": "Starting weapon."
           },
           "priority": 1
+        },
+        {
+          "id": "night-sword",
+          "reason": {
+            "de": "Muramasa: mit seiner hohen Gier und Macht fast so stark wie alle seine Blitzringe zusammen.",
+            "en": "Muramasa: with his high Greed and Might almost as strong as all his Lightning Rings together."
+          },
+          "priority": 2
         }
       ],
       "passives": []
@@ -2251,9 +2609,90 @@
             "en": "Starting weapon."
           },
           "priority": 1
+        },
+        {
+          "id": "pako-battiliar",
+          "reason": {
+            "de": "Mazo Familiar ist laut Wiki vielleicht die beste Waffe für Chaos.",
+            "en": "Mazo Familiar is perhaps the absolute best weapon for Chaos per the wiki."
+          },
+          "priority": 1
+        },
+        {
+          "id": "night-sword",
+          "reason": {
+            "de": "Muramasa löst mit Lebensentzug Mazo Familiar immer wieder aus.",
+            "en": "Muramasa's health drain keeps triggering Mazo Familiar."
+          },
+          "priority": 2
         }
       ],
-      "passives": []
+      "passives": [
+        {
+          "id": "hollow-heart",
+          "reason": {
+            "de": "Laut Wiki Pflicht: Mehr maximale Gesundheit stärkt das eingebaute Divine Bloodline enorm.",
+            "en": "A must-pick per the wiki: more Max Health hugely boosts its built-in Divine Bloodline."
+          },
+          "priority": 1
+        },
+        {
+          "id": "crown",
+          "reason": {
+            "de": "Beschleunigt sein anfangs sehr geringes Wachstum.",
+            "en": "Speeds up its very low early Growth."
+          },
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "character": "ferryman",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "dark-rift",
+          "reason": {
+            "de": "Mit Acquazzone fast volle Bildschirmabdeckung schon vor den ersten Entwicklungen.",
+            "en": "With Acquazzone almost full screen coverage before the first evolutions."
+          },
+          "priority": 2
+        }
+      ],
+      "passives": [
+        {
+          "id": "wings",
+          "reason": {
+            "de": "Hilft früh beim Positionieren über den Gegnern.",
+            "en": "Helps positioning over enemies early on."
+          },
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "character": "stone-skull",
+      "source": "ode-to-castlevania",
+      "weapons": [
+        {
+          "id": "sonic-dash",
+          "reason": {
+            "de": "Gibt regelmäßig einen Tempo-Schub.",
+            "en": "Gives a regular speed boost."
+          },
+          "priority": 3
+        }
+      ],
+      "passives": [
+        {
+          "id": "wings",
+          "reason": {
+            "de": "Laut Wiki Pflicht (außer auf senkrechten Stages): gleicht seine geringe Geschwindigkeit zur Seite aus.",
+            "en": "A must per the wiki (except on vertical stages): makes up for his low horizontal speed."
+          },
+          "priority": 1
+        }
+      ]
     }
   ]
 }

@@ -101,6 +101,9 @@ export function checkIntegrity(data: GameData): string[] {
     for (const { id } of recommendation.passives) {
       if (!passives.has(id)) problems.push(`${where}: unknown item "${id}"`)
     }
+    for (const { id } of recommendation.avoid ?? []) {
+      if (!weapons.has(id) && !passives.has(id)) problems.push(`${where}: unknown weapon or item to avoid "${id}"`)
+    }
   }
 
   return problems

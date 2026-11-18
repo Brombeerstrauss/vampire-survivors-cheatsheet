@@ -75,6 +75,22 @@
             "en": "Starting weapon; with Weapon Power-Up and Tirajisú it becomes Pronto Beam."
           },
           "priority": 1
+        },
+        {
+          "id": "phiera-der-tuphello",
+          "reason": {
+            "de": "Laut Wiki sehr empfohlen: Phieraggi skaliert mit Wiederbelebungen.",
+            "en": "Highly recommended per the wiki: Phieraggi scales with Revivals."
+          },
+          "priority": 1
+        },
+        {
+          "id": "eight-the-sparrow",
+          "reason": {
+            "de": "Laut Wiki sehr empfohlen: Phieraggi skaliert mit Wiederbelebungen.",
+            "en": "Highly recommended per the wiki: Phieraggi scales with Revivals."
+          },
+          "priority": 1
         }
       ],
       "passives": [
@@ -99,6 +115,14 @@
             "en": "Starting weapon; with Weapon Power-Up and Candelabrador it becomes Fire-L3GS."
           },
           "priority": 1
+        },
+        {
+          "id": "night-sword",
+          "reason": {
+            "de": "Muramasa entzieht Gesundheit und hält ihn so bei niedriger Gesundheit.",
+            "en": "Muramasa drains health and so keeps him at low health."
+          },
+          "priority": 2
         }
       ],
       "passives": [
@@ -109,6 +133,14 @@
             "en": "Needed for Fire-L3GS."
           },
           "priority": 1
+        },
+        {
+          "id": "hollow-heart",
+          "reason": {
+            "de": "Bringt ihn ohne Schaden näher an seine Boni bei niedriger Gesundheit.",
+            "en": "Gets him closer to his low-health bonuses without taking damage."
+          },
+          "priority": 2
         }
       ]
     },
@@ -147,6 +179,14 @@
             "en": "Starting weapon; with Weapon Power-Up and Clover it becomes BFC2000-AD."
           },
           "priority": 1
+        },
+        {
+          "id": "sonic-dash",
+          "reason": {
+            "de": "Entwickelt sich zu Rapidus Fio; mit Wings maximaler Abklingzeit-Bonus.",
+            "en": "Evolves into Rapidus Fio; with Wings it maxes out her Cooldown bonus."
+          },
+          "priority": 2
         }
       ],
       "passives": [
@@ -157,6 +197,14 @@
             "en": "Needed for BFC2000-AD."
           },
           "priority": 1
+        },
+        {
+          "id": "wings",
+          "reason": {
+            "de": "Mit Wings auf Max und Rapidus Fio erreicht ihr Abklingzeit-Bonus das Maximum.",
+            "en": "Maxed Wings plus Rapidus Fio max out her Cooldown bonus."
+          },
+          "priority": 2
         }
       ]
     },
@@ -171,6 +219,38 @@
             "en": "Starting weapon; with Weapon Power-Up and Wings it becomes Time Warp."
           },
           "priority": 1
+        },
+        {
+          "id": "centralis-custos",
+          "reason": {
+            "de": "Laut Wiki wichtigste Waffe: Trinum Custodem gibt bis zu 20 Rüstung, also +200 % Macht.",
+            "en": "The most important weapon per the wiki: Trinum Custodem gives up to 20 Armor, i.e. +200% Might."
+          },
+          "priority": 1
+        },
+        {
+          "id": "dextro-custos",
+          "reason": {
+            "de": "Teil von Trinum Custodem, laut Wiki seine wichtigste Waffe.",
+            "en": "Part of Trinum Custodem, his most important weapon per the wiki."
+          },
+          "priority": 1
+        },
+        {
+          "id": "sinestro-custos",
+          "reason": {
+            "de": "Teil von Trinum Custodem, laut Wiki seine wichtigste Waffe.",
+            "en": "Part of Trinum Custodem, his most important weapon per the wiki."
+          },
+          "priority": 1
+        },
+        {
+          "id": "pocket-knife",
+          "reason": {
+            "de": "Entwickelt sich zu Claimh Solais, das ihm bis zu +100 % Macht gibt.",
+            "en": "Evolves into Claimh Solais, which gives him up to +100% Might."
+          },
+          "priority": 2
         }
       ],
       "passives": [
@@ -181,6 +261,14 @@
             "en": "Needed for Time Warp."
           },
           "priority": 1
+        },
+        {
+          "id": "armor",
+          "reason": {
+            "de": "Mehr Rüstung bedeutet bei ihm mehr Macht.",
+            "en": "More Armor means more Might for him."
+          },
+          "priority": 2
         }
       ]
     },
@@ -243,6 +331,22 @@
             "en": "Starting weapon; with Weapon Power-Up and Hollow Heart it becomes Big Fuzzy Fist."
           },
           "priority": 1
+        },
+        {
+          "id": "spellstrike",
+          "reason": {
+            "de": "Laut Wiki sehr stark mit seiner hohen, wachsenden Macht.",
+            "en": "Very powerful per the wiki with his high, growing Might."
+          },
+          "priority": 2
+        },
+        {
+          "id": "sonic-whip",
+          "reason": {
+            "de": "Sofort-Tötung skaliert mit Fluch, nützlich gegen die vielen Gegner.",
+            "en": "Instant kills scale with Curse, useful against the many enemies."
+          },
+          "priority": 3
         }
       ],
       "passives": [
@@ -253,6 +357,29 @@
             "en": "Needed for Big Fuzzy Fist."
           },
           "priority": 1
+        },
+        {
+          "id": "torrona-s-box",
+          "reason": {
+            "de": "Laut Wiki sehr empfohlen.",
+            "en": "Highly recommended per the wiki."
+          },
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "character": "simondo-belmont",
+      "source": "operation-guns",
+      "weapons": [],
+      "passives": [
+        {
+          "id": "empty-tome",
+          "reason": {
+            "de": "Mehr Abklingzeit holt das Meiste aus seinen Boni.",
+            "en": "More Cooldown gets the most out of his bonuses."
+          },
+          "priority": 2
         }
       ]
     }

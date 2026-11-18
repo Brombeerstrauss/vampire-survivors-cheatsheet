@@ -159,6 +159,17 @@ describe('checkIntegrity', () => {
     expect(checkIntegrity(data)).toEqual(['Weapon "whip" appears more than once'])
   })
 
+  it('reports unknown weapons or items to avoid', () => {
+    const data: GameData = {
+      ...base,
+      characters: [{ id: 'antonio', name: 'Antonio', source: 'base', startingWeapons: ['whip'], bonus: both(''), secret: false, verified: true }],
+      recommendations: [
+        { character: 'antonio', source: 'base', weapons: [], passives: [], avoid: [{ id: 'whip', reason: both('') }, { id: 'garlik', reason: both('') }] },
+      ],
+    }
+    expect(checkIntegrity(data)).toEqual(['Recommendation for "antonio" (base): unknown weapon or item to avoid "garlik"'])
+  })
+
   it('reports references to unknown ingredients and packs', () => {
     const data: GameData = {
       ...base,
