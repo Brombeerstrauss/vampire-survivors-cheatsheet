@@ -45,7 +45,11 @@ character, weapons and passive items of every player and
   Congregation with Screams from the Void, Empty Tome gets an A (community and "boosts Screams
   from the Void"), Candelabrador and Armor a B, Bracer and Wings a C.
 
-  **D** means none of these apply: the data knows no fit, which doesn't make it a bad choice.
+  Where the wiki clearly advises against a choice for the character (the app's "Better avoid",
+  e.g. Empty Tome for Babi-Onna, who ignores Cooldown), it gets a D with the reason ("avoid: ...").
+
+  **D** otherwise means none of these apply: the data knows no fit, which doesn't make it a bad
+  choice.
   **?** means the game offers something the app's data doesn't have yet. Collapsed, the
   overlay doesn't show the grades. Can be turned off with `LevelUpGrades`. The stats are read
   together with the images a few seconds into a run, also when `Icons` is off.

@@ -46,9 +46,12 @@ for (const e of [...characters, ...weapons, ...passives]) {
 // overlay's grades on the level-up screen. Several packs may add to the same character:
 // the best priority wins.
 const recommended = {}
+// Character -> weapon or item -> reason in both languages: clear advice against it (from the wiki).
+const avoid = {}
 for (const r of recommendations) {
   const items = (recommended[r.character] ??= {})
   for (const item of [...r.weapons, ...r.passives]) items[item.id] = Math.min(items[item.id] ?? 3, item.priority)
+  for (const item of r.avoid ?? []) (avoid[r.character] ??= {})[item.id] = item.reason
 }
 
 const data = {
@@ -64,6 +67,7 @@ const data = {
     ...(e.characters ? { characters: e.characters } : {}),
   })),
   recommendations: recommended,
+  avoid,
   // Weapon or item -> general strength from community tier lists (1 = strong, 2 = good, 3 = decent).
   community: Object.fromEntries(communityTiers.map((t) => [t.id, t.tier])),
   // Weapon -> the stats from the wiki that directly affect it, and passive item -> the stat it

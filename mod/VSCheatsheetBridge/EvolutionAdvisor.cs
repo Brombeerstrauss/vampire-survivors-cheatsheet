@@ -17,6 +17,8 @@ internal sealed class CheatsheetData
     public List<EvolutionEntry> Evolutions { get; set; } = new();
     /// <summary>Character -> weapon or item -> priority (1 = core, 2 = good, 3 = optional).</summary>
     public Dictionary<string, Dictionary<string, int>> Recommendations { get; set; } = new();
+    /// <summary>Character -> weapon or item -> reason (de/en): clear advice from the wiki against it.</summary>
+    public Dictionary<string, Dictionary<string, Dictionary<string, string>>> Avoid { get; set; } = new();
     /// <summary>Weapon or item -> general strength from community tier lists (1 = strong, 2 = good, 3 = decent).</summary>
     public Dictionary<string, int> Community { get; set; } = new();
     /// <summary>Weapon -> stats from the wiki that directly affect it (might, area, amount, ...).</summary>
@@ -302,7 +304,8 @@ internal sealed class EvolutionAdvisor
     //              it evolves into.
     // Sum: from 3 = A, from 2 = B, from 1 = C, below = D. So an item that is generally good and
     // also boosts your weapon ends up above one that is only generally good. The reason shows
-    // the two checks with the most points.
+    // the two checks with the most points. Clear advice from the wiki against a choice for the
+    // character (the app's "avoid") makes it a D, whatever the points.
     private const double ForA = 3, ForB = 2, ForC = 1;
 
     private List<OfferRow> GradeOffers(PlayerItems me, List<PlayerItems> team, Func<string, bool> inGame)
@@ -385,6 +388,15 @@ internal sealed class EvolutionAdvisor
             char grade = score >= ForA ? 'A' : score >= ForB ? 'B' : score >= ForC ? 'C' : 'D';
             string reason = grade == 'D' ? null
                 : string.Join(" · ", found.OrderByDescending(f => f.points).Take(2).Select(f => f.reason));
+
+            // Clear advice from the wiki against this choice for the character: always D.
+            if (me.Character != null && _data.Avoid.TryGetValue(me.Character, out var avoided)
+                && avoided.TryGetValue(id, out Dictionary<string, string> why))
+            {
+                grade = 'D';
+                string text = (_german && why.TryGetValue("de", out string de) ? de : null) ?? (why.TryGetValue("en", out string en) ? en : "");
+                reason = T("meiden: ", "avoid: ") + text;
+            }
             rows.Add(new OfferRow { Item = MakeIcon(id, 0), Grade = grade, Reason = reason });
         }
         return rows;
