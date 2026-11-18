@@ -6,7 +6,7 @@ import { buildGameIdIndex, liveRunFromPlayer, sameRun } from '../logic/modBridge
 import { sanitizeRun, type RunState } from '../logic/run.ts'
 import { Context, type AppState, type LiveState, type Notice } from './context.ts'
 import { useModConnection } from './modConnection.ts'
-import { loadSettings } from './settings.ts'
+import { loadSettings, type SortOrder } from './settings.ts'
 import { readStored, writeStored } from './storage.ts'
 
 const SETTINGS_KEY = 'vsc.settings.v1'
@@ -43,6 +43,11 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
   const setShowImages = useCallback((show: boolean) => setSettings((s) => ({ ...s, showImages: show })), [])
   const setLanguage = useCallback((language: Lang) => setSettings((s) => ({ ...s, language, languageChosen: true })), [])
   const setModBridge = useCallback((modBridge: boolean) => setSettings((s) => ({ ...s, modBridge })), [])
+  const setSortOrder = useCallback(
+    (list: 'characters' | 'library', order: SortOrder) =>
+      setSettings((s) => (list === 'characters' ? { ...s, characterSort: order } : { ...s, librarySort: order })),
+    [],
+  )
 
   // The current run as a ref, so a change and its undo notice are created together.
   const runRef = useRef(run)
@@ -88,6 +93,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
       setShowImages,
       setLanguage,
       setModBridge,
+      setSortOrder,
       live,
       catalog,
       fullCatalog,
@@ -96,7 +102,20 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
       notice,
       dismissNotice: () => setNotice(null),
     }),
-    [settings, setOwnedPack, setShowSecrets, setShowImages, setLanguage, setModBridge, live, catalog, run, updateRun, notice],
+    [
+      settings,
+      setOwnedPack,
+      setShowSecrets,
+      setShowImages,
+      setLanguage,
+      setModBridge,
+      setSortOrder,
+      live,
+      catalog,
+      run,
+      updateRun,
+      notice,
+    ],
   )
 
   return <Context.Provider value={value}>{children}</Context.Provider>

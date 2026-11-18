@@ -8,25 +8,27 @@ import {
   Pill,
   SearchField,
   Section,
+  SortToggle,
   SourceBadge,
   UnverifiedBadge,
 } from '../components/ui.tsx'
 import { buttonClass, matches } from '../components/styles.ts'
 import type { Character, RecommendedItem } from '../data/types.ts'
 import { useI18n } from '../i18n/index.ts'
-import { searchNames } from '../i18n/names.ts'
+import { searchNames, sortByName } from '../i18n/names.ts'
 import type { Catalog } from '../logic/catalog.ts'
 import { isRunEmpty, startRun } from '../logic/run.ts'
 import { useAppState } from '../state/context.ts'
 import { characterHref, navigate, passiveHref, weaponHref } from '../state/route.ts'
 
 export function CharactersView({ selectedId }: { selectedId?: string }) {
-  const { catalog, settings } = useAppState()
-  const { t } = useI18n()
+  const { catalog, settings, setSortOrder } = useAppState()
+  const { t, lang } = useI18n()
   const [query, setQuery] = useState('')
 
   const selected = selectedId ? catalog.character(selectedId) : undefined
-  const visible = catalog.characters.filter(
+  const ordered = settings.characterSort === 'name' ? sortByName(catalog.characters, lang) : catalog.characters
+  const visible = ordered.filter(
     (c) =>
       (settings.showSecrets || !c.secret || c.id === selectedId) &&
       (matches(searchNames(c), query) ||
@@ -40,9 +42,12 @@ export function CharactersView({ selectedId }: { selectedId?: string }) {
     <div className="grid grid-cols-[minmax(0,1fr)] gap-6 md:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] md:items-start">
       <div className={`space-y-3 ${selected ? 'hidden md:block' : ''}`}>
         <SearchField value={query} onChange={setQuery} placeholder={t.searchCharacter} />
-        <p className="text-xs text-white/50">
-          {t.characterCount(visible.length, catalog.characters.length, !settings.showSecrets)}
-        </p>
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <p className="text-xs text-white/50">
+            {t.characterCount(visible.length, catalog.characters.length, !settings.showSecrets)}
+          </p>
+          <SortToggle value={settings.characterSort} onChange={(order) => setSortOrder('characters', order)} />
+        </div>
         {visible.length === 0 ? (
           <EmptyHint>{t.noCharacterMatches}</EmptyHint>
         ) : (

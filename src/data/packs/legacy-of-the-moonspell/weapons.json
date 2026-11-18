@@ -14,6 +14,20 @@
         "de": "Besiegte Gegner können Herzen fallen lassen.",
         "en": "Defeated enemies might drop hearts."
       },
+      "effects": {
+        "de": "Silver Wind feuert funkelnde Energiekugeln, die ungefähr oval um den Charakter kreisen. Sie bleiben relativ zum Charakter und bewegen sich mit ihm.\n\nFläche bestimmt die Größe der Kugeln und wie weit vom Spieler entfernt sie kreisen.",
+        "en": "Silver Wind fires sparkling energy orbs that travel around the character in an oval-like pattern. The orbs are positioned relative to the character, and follow the character's movement.\n\nArea affects the orb's size and how far away from the player they travel."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown",
+        "luck",
+        "recovery"
+      ],
       "maxLevel": 8,
       "emoji": "🌬️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Silver_Wind.png",
@@ -32,6 +46,17 @@
         "de": "Erzeugt 4 Explosionen; Anzahl und Dauer erhöhen stattdessen den Schaden.",
         "en": "Generates 4 explosions. Amount and Duration affect damage instead."
       },
+      "effects": {
+        "de": "Four Seasons erzeugt zwei schräg vom Charakter wegkreisende Perlen; vier Paare bilden ein Rechteck um ihn. Sie sind das Zentrum von vier Explosionen mit Blumen, grünem Laub, Herbstlaub und Schneeflocken und den Schriftzeichen 春 (Frühling), 夏 (Sommer), 秋 (Herbst) und 冬 (Winter) – oben links, oben rechts, unten links und unten rechts.\n\nFläche vergrößert die Explosionen; Level-Ups schieben die Perlen weiter auseinander, bis sie die Ecken erreichen. Anzahl und Dauer erhöhen stattdessen den Schaden, nach der Formel (Grundschaden + Dauer in Sekunden) × Anzahl.",
+        "en": "Four Seasons creates two orbiting beads diagonally away from the character, with four pairs of them forming a rectangle around the character. They are the center of four explosions, with flowers, green leaves, autumn leaves, and snowflakes; with the characters 春 (spring), 夏 (summer), 秋 (autumn), and 冬 (winter); in the top left, top right, bottom left, and bottom right beads respectively in that order.\n\nArea causes the explosion to be bigger, while level ups can move the beads further apart until they reach the corners. Amount and Duration affect damage of Four Seasons instead; with the base damage formula (baseDamage + Duration in seconds) * Amount."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🍂",
       "image": "https://vampire.survivors.wiki/images/Sprite-Four_Seasons.png",
@@ -50,6 +75,17 @@
         "de": "Erzeugt Schadenszonen über dem Charakter.",
         "en": "Generates damaging zones above the character."
       },
+      "effects": {
+        "de": "Summon Night beschwört Klauen, die von oben über dem Charakter herabgreifen und eine anhaltende Schadenszone aus dunklen Wolken hinterlassen.\n\nFläche bestimmt, wie weit die Klauen nach unten reichen.",
+        "en": "Summon Night summons claws above the character from the top of the screen, leaving behind a lingering damage zone of dark clouds.\n\nArea extends how far down the claws reach."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🌌",
       "image": "https://vampire.survivors.wiki/images/Sprite-Summon_Night.png",
@@ -68,6 +104,18 @@
         "de": "Erzeugt einfrierende, stehende Projektile, die explodieren können.",
         "en": "Generates freezing static projectiles with a chance to explode."
       },
+      "effects": {
+        "de": "Mirage Robe erzeugt Trugbilder um den Charakter, die wie seine Nachbilder aussehen und Gegner einfrieren.\n\nFläche vergrößert die Explosion. Dauer verlängert, wie lange Gegner eingefroren bleiben und wie lange die Trugbilder bestehen.",
+        "en": "Mirage Robe creates mirage around the character, which looks like the after image of the character and freezes enemies.\n\nArea increases the size of the explosion. Duration will add to the time enemies are frozen and how long the mirage last."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "duration",
+        "amount",
+        "cooldown",
+        "luck"
+      ],
       "maxLevel": 8,
       "emoji": "🧥",
       "image": "https://vampire.survivors.wiki/images/Sprite-Mirage_Robe.png",
@@ -86,6 +134,20 @@
         "de": "Schlägt mit Bonusschaden zurück, der von der Gier abhängt; kann Herzen stehlen.",
         "en": "Retaliates with a bonus damage affected by Greed. Might steal hearts."
       },
+      "effects": {
+        "de": "Night Sword führt eine Reihe von Hieben gegen die nächsten Gegner aus. Als Vergeltung schlägt es sechsmal um den Charakter herum zu, höchstens alle 0,6 Sekunden.\n\nDer Vergeltungsschaden wird mit 2 × (Gier über 100 %) multipliziert und kann nicht negativ werden.",
+        "en": "Night Sword creates a series of slashes at the closest enemies. When retaliating, it slashes six times around the character and can retaliate every 0.6 seconds.\n\nNight Sword's retaliatory damage is multiplied by 2 x Greed above 100% and cannot go negative."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "amount",
+        "cooldown",
+        "luck",
+        "recovery",
+        "armor",
+        "greed"
+      ],
       "maxLevel": 8,
       "emoji": "🗡️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Night_Sword.png",
@@ -103,6 +165,18 @@
         "de": "Feuert Projektile, die eine Weile bleiben.",
         "en": "Fires lingering projectiles."
       },
+      "effects": {
+        "de": "Mille Bolle Blu schießt blaue Blasen auf den Gegner, der dem Charakter am nächsten ist; sie bleiben am Boden liegen.",
+        "en": "Mille Bolle Blu shoots blue bubbles at the enemy closest to the player character which linger on the ground."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🫧",
       "image": "https://vampire.survivors.wiki/images/Sprite-Mille_Bolle_Blu.png",
@@ -120,6 +194,17 @@
         "de": "Eigentlich nur 8; der Schaden hängt vom Unterschied zwischen Fluch und Glück ab.",
         "en": "Actually it's just 8. Damage affected by the difference between Curse and Luck."
       },
+      "effects": {
+        "de": "108 Bocce legt eine schwarze Aura um den Spieler, die jedem Gegner darin Schaden zufügt; zusätzlich kreisen 8 Perlen um den Charakter.\n\nDie Abklingzeit wirkt wie eine Trefferverzögerung: Ein Gegner, der zum ersten Mal in den Kreis kommt, erleidet sofort Schaden und kann erst wieder getroffen werden, wenn die Abklingzeit vorbei ist, auch wenn er den Bereich kurz verlässt.",
+        "en": "108 Bocce places a black aura around the player, dealing damage to every enemy who is inside of it. It also has 8 beads orbiting around the character.\n\nCooldown acts similar to Hitbox Delay for 108 Bocce. Damage will be dealt instantly to an enemy if they have never been in the circle before, after which they cannot be hit by it again until the 108 Bocce's Cooldown is over, even if they temporarily leave its area."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "cooldown",
+        "luck",
+        "curse"
+      ],
       "maxLevel": 8,
       "emoji": "🎱",
       "image": "https://vampire.survivors.wiki/images/Sprite-108_Bocce.png",
@@ -138,6 +223,15 @@
         "de": "Erzeugt eine Schadenszone, die die Macht leicht erhöht.",
         "en": "Generate a damaging zone that slightly increases Might."
       },
+      "effects": {
+        "de": "LunarMight erzeugt am Standort des Charakters einen Zauberkreis, der Gegnern bei Berührung Schaden zufügt. Die Zonen halten anfangs 2,5 Sekunden, mit Dauer länger.\n\nAuf Level 1 erhöht LunarMight die Macht jedes Charakters darin um +5 %, auf Level 3 um +10 % und auf Level 6 um +20 %. Dieser Bonus steigt mit anderen Macht-Quellen, außer Silent Old Sanctuary (XX), dessen Macht getrennt addiert wird, und Divine Bloodline (IX), dessen Schadensbonus zwar als Macht angezeigt wird, aber keine Macht ist.\n• Beispiel: Mit den +35 % Macht aus den PowerUps gibt LunarMight auf Level 6 +27 % Macht.",
+        "en": "LunarMight creates a magic circle at the character's location, damaging enemies that it contacts. The zones created by LunarMight will last for a base of 2.5 seconds, increasing with Duration.\n\nAt level 1, LunarMight will increase the Might of any character within it by +5%. At levels 3 and 6, this increases to +10% and +20%, respectively. This Might bonus is increased by other sources of Might, excluding Silent Old Sanctuary (XX), as its Might is added separately, and Divine Bloodline (IX), as, even though its flat damage bonus is displayed as Might, it does not give Might.\n• For example, the base amount of Might from PowerUps, +35%, leads to LunarMight giving +27% Might at level 6."
+      },
+      "affectedBy": [
+        "might",
+        "duration",
+        "cooldown"
+      ],
       "maxLevel": 6,
       "emoji": "🌑",
       "image": "https://vampire.survivors.wiki/images/Sprite-LunarMight.png",
@@ -156,6 +250,15 @@
         "de": "Erzeugt Schadenszonen, die dem Charakter gelegentlich folgen.",
         "en": "Generates damaging zones that occasionally follow the character."
       },
+      "effects": {
+        "de": "LunarSight erzeugt bis zu 8 Schadenszonen in Form der Mondphasen gegen den Uhrzeigersinn um den Spieler. Neue Zonen entstehen an seiner aktuellen Position, alte folgen ihm nicht. Gegner, die die Zonen berühren, erleiden Schaden.\n\nLunarSight hat eine Trefferverzögerung von 0,25 Sekunden: Dieselbe Mondphase kann denselben Gegner höchstens alle 0,25 Sekunden treffen. Weil alle laufenden Verzögerungen gleichzeitig zurückgesetzt werden, sobald eine abläuft, werden manche Gegner trotzdem öfter getroffen.",
+        "en": "LunarSight creates up to 8 damaging zones, depicting the 8 phases of the moon, around the player, in a counter-clockwise pattern based on their current position. New zones will be created based on the player's current position, but old zones will not follow the player. Enemies that contact these zones will take damage.\n\nLunarSight has a 0.25 second Hitbox Delay, meaning that the same enemy cannot be hit more often than every 0.25 seconds by the same lunar phase. However, because all active delays are reset simultaneously as soon as any one elapses, some enemies may get hit more often."
+      },
+      "affectedBy": [
+        "might",
+        "duration",
+        "cooldown"
+      ],
       "maxLevel": 6,
       "emoji": "🌒",
       "image": "https://vampire.survivors.wiki/images/Sprite-LunarSight.png",
@@ -174,6 +277,15 @@
         "de": "Kann getroffene Gegner verlangsamen.",
         "en": "Has a chance to slow down enemies hit."
       },
+      "effects": {
+        "de": "LunarBight erzeugt einen Lichtstrahl, der in festem Abstand um den Punkt kreist, an dem der Spieler beim Auslösen stand; wie bei LunarSight folgen aktive Strahlen dem Spieler nicht. Getroffene Gegner erleiden Schaden.\n\nGegner ohne Resistenz gegen Schwächungen werden verlangsamt, mit höherem Level stärker.\n• In älteren Versionen verlangsamt LunarBight wegen eines Fehlers gar nicht.",
+        "en": "LunarBight creates a beam of light that orbits a set distance from where the player was when LunarBight activated; much like LunarSight, active beams will not follow the player. Enemies hit by these beams will take damage.\n\nEnemies that don't have debuff resistance, when hit by LunarBight, will be slowed. As LunarBight's level increases, the amount of slow it applies will also increase.\n• On older versions, LunarBight is bugged to not apply any slow."
+      },
+      "affectedBy": [
+        "might",
+        "duration",
+        "cooldown"
+      ],
       "maxLevel": 6,
       "emoji": "🌘",
       "image": "https://vampire.survivors.wiki/images/Sprite-LunarBight.png",
@@ -192,6 +304,20 @@
         "de": "Entwicklung von Silver Wind: schwächt die Abwehr der Gegner.",
         "en": "Evolved Silver Wind. Weakens enemies defenses."
       },
+      "effects": {
+        "de": "Festive Winds feuert funkelnde blattförmige Energiekugeln, die ungefähr oval um den Charakter kreisen. Sie bleiben relativ zum Charakter und bewegen sich mit ihm.\n\nDie Geschwindigkeit ist höher, die Dauer kürzer.",
+        "en": "Festive Winds fires sparkling leaf-shaped energy orbs that travel around the character in an oval-like pattern. The orbs are positioned relative to the character, and follow the character's movement.\n\nFestive Winds' Speed is increased but Duration is lowered."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown",
+        "luck",
+        "recovery"
+      ],
       "maxLevel": 1,
       "emoji": "🎐",
       "image": "https://vampire.survivors.wiki/images/Sprite-Festive_Winds.png",
@@ -210,6 +336,19 @@
         "de": "Entwicklung von Festive Winds: zerfetzt die Abwehr der Gegner.",
         "en": "Evolved Festive Winds. Shreds enemies defenses."
       },
+      "effects": {
+        "de": "Argent Flow erzeugt einen Windstrom über die ganze Bildschirmbreite, der Gegnern bei Berührung Schaden zufügt. Der Wind folgt dem Charakter und ist immer auf ihn zentriert. Anzahl erhöht die Zahl der Trefferflächen, ohne die Optik zu ändern.\n\nGrund-Abklingzeit und Grunddauer sind gleich, daher ist fast immer ein Windstrom aktiv. Mehr Abklingzeit oder Dauer lässt mehrere sich überlagern.",
+        "en": "Argent Flow creates a stream of wind that spans the length of the screen, dealing damage to enemies that contact it. This wind will follow the user and will always be centered on them. The number of hitboxes is increased by Amount, though the visual effects of the weapon are unaffected.\n\nThe base Cooldown and Duration are equal, meaning that a stream of wind will almost always be active. Increases to either stat can allow multiple instances to overlap."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "duration",
+        "amount",
+        "cooldown",
+        "luck",
+        "recovery"
+      ],
       "maxLevel": 1,
       "emoji": "🌊",
       "image": "https://vampire.survivors.wiki/images/Sprite-Argent_Flow.png",
@@ -227,6 +366,17 @@
         "de": "Entwicklung von Four Seasons: erzeugt eine zusätzliche Explosion.",
         "en": "Evolved Four Seasons. Generates an additional explosion."
       },
+      "effects": {
+        "de": "Godai Shuffle lässt viele Perlen weit entfernt um den Charakter kreisen. Es gibt fünf statt vier Explosionen – mit Felsen, Bambusblättern, Feuer, Wasserkristall und einer Luftkugel mit Blitz und den Schriftzeichen 地 (Erde), 風 (Wind), 火 (Feuer), 水 (Wasser) und 空 (Leere) – oben links, oben rechts, unten links, unten rechts und auf dem Charakter.\n\nGrundschaden und Anzahl sind deutlich höher, was beides den Gesamtschaden erhöht.",
+        "en": "Godai Shuffle makes a bunch of beads orbiting around the character far away. It causes five explosions instead of four, with rocks, bamboo leaves, fire, water crystal, and ball of air with a horizontal lightning; with the character 地 (earth), 風 (wind), 火 (fire), 水 (water), and 空 (void); in the top left, top right, bottom left, bottom right corner, and on the character respectively in that order.\n\nGodai Shuffle gains more Base Damage and a lot more Amount, which both increase Godai Shuffle's overall damage."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "🎴",
       "image": "https://vampire.survivors.wiki/images/Sprite-Godai_Shuffle.png",
@@ -245,6 +395,17 @@
         "de": "Entwicklung von Summon Night: erzeugt auch Schadenszonen unter dem Charakter.",
         "en": "Evolved Summon Night. Also generates damaging zones below the character."
       },
+      "effects": {
+        "de": "Echo Night beschwört abwechselnd von oben und unten Klauen über und unter dem Charakter, die eine anhaltende Schadenszone aus dunklen Wolken hinterlassen.\n\nDer Grundschaden ist höher, die Klauen etwas länger und die Abklingzeit viel kürzer. Die Anzahl sinkt um eins (wird dann aber verdoppelt), Dauer steigt nicht mehr mit Level-Ups, und die Trefferverzögerung ist etwas länger.",
+        "en": "Echo Night summon claws above and below the character alternatively from the top and bottom of the screen, leaving behind a lingering damage zone of dark clouds.\n\nEcho Night gains more Base Damage, becomes slightly longer, and gets a much shorter Cooldown. However, Amount is lowered by one (but then doubled), Duration reverts back to being ungraded, and Hitbox Delay is slightly longer."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "🌃",
       "image": "https://vampire.survivors.wiki/images/Sprite-Echo_Night.png",
@@ -262,6 +423,19 @@
         "de": "Entwicklung von Mirage Robe: Projektile bewegen sich und verwirren Gegner.",
         "en": "Evolved Mirage Robe. Projectiles move and confuse enemies."
       },
+      "effects": {
+        "de": "J'Odore sendet Trugbilder aus, die wie Nachbilder des Charakters aussehen und Gegner einfrieren. Manche Gegner lassen sich verwirren und verfolgen ein Trugbild statt des Spielers.\n\nGrundschaden, Anzahl, Explosionschance und Pool-Limit sind höher, und die Trugbilder durchdringen einige Gegner. Fläche und Dauer sind geringer, das Intervall länger.",
+        "en": "J'Odore shoots out mirages which look like the afterimage of the character and freeze enemies. Enemies may get confused by some mirages and chase it instead of the player.\n\nJ'Odore has more Base Damage, Amount, can pierce through some enemies, higher chance to explode, and higher Pool Limit. It has a smaller Area, Duration is lowered, and a longer Interval."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown",
+        "luck"
+      ],
       "maxLevel": 1,
       "emoji": "🌫️",
       "image": "https://vampire.survivors.wiki/images/Sprite-J%27Odore.png",
@@ -279,6 +453,20 @@
         "de": "Entwicklung von Night Sword: ermöglicht kritische Treffer und einen Kombo-Abschluss; saugt Gesundheit ab.",
         "en": "Evolved Night Sword. Enables critical hits and combo finisher. Drains Health."
       },
+      "effects": {
+        "de": "Muramasa führt eine Reihe von Hieben gegen die nächsten Gegner aus. Als Vergeltung schlägt es sechsmal um den Charakter herum zu, höchstens alle 0,6 Sekunden.\n\nGegenüber Night Sword ist der Grundschaden doppelt so hoch, Abklingzeit und Intervall sind kürzer; dafür gibt es weniger Hiebe pro Angriff.",
+        "en": "Muramasa creates a series of slashes at the closest enemies. When retaliating, it slashes six times around the character and can retaliate every 0.6 seconds.\n\nMuramasa's Base Damage is doubled and has a lower Cooldown and Interval, compared to Night Sword. The Amount of slashes for each attack is lowered."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "amount",
+        "cooldown",
+        "luck",
+        "recovery",
+        "armor",
+        "greed"
+      ],
       "maxLevel": 1,
       "emoji": "⚔️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Muramasa.png",
@@ -296,6 +484,18 @@
         "de": "Entwicklung von Mille Bolle Blu: Projektile können dasselbe Ziel mehrfach treffen.",
         "en": "Evolved Mille Bolle Blu. Projectiles can hit the same target more than once."
       },
+      "effects": {
+        "de": "Boo Roo Boolle schießt bunte Blasen auf den Gegner, der dem Charakter am nächsten ist; sie bleiben am Boden liegen.\n\nGrundschaden, Fläche und Pool-Limit sind höher, die Anzahl ist um zwei geringer.",
+        "en": "Boo Roo Boolle shoots colorful bubbles at the enemy closest to the player character which linger on the ground.\n\nBoo Roo Boolle has more Base Damage, Area, and a higher Pool Limit, but Amount is lowered by two."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "🫧",
       "image": "https://vampire.survivors.wiki/images/Sprite-Boo_Roo_Boolle.png",
@@ -314,6 +514,15 @@
         "de": "Union aus LunarMight, LunarSight und LunarBight: werde eins mit den Mondzeichen.",
         "en": "Union of LunarMight, LunarSight, and LunarBight. Become one with the lunar glyphs."
       },
+      "effects": {
+        "de": "LunarFlight behält die Effekte seiner Bestandteile und fügt eine weitere, größere Schadenszone hinzu, die alle anderen konzentrisch umschließt.\n\nStatt an Ort und Stelle zu bleiben, folgen die Zonen dem Spieler ständig. Der Macht-Bonus von LunarMight steigt auf +30 %.",
+        "en": "LunarFlight retains the effects of its constituent parts, with an extra, larger damage zone being encompassing all of them, arranged concentrically.\n\nInstead of damage zones lingering in place, they will constantly follow the player. The Might bonus provided by LunarMight will also increase to +30%."
+      },
+      "affectedBy": [
+        "might",
+        "duration",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "🌙",
       "image": "https://vampire.survivors.wiki/images/Sprite-LunarFlight.png",

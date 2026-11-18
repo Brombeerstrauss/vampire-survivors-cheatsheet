@@ -81,10 +81,33 @@ export interface Character extends Entry {
   secret: boolean
 }
 
+/** Character stats as the wiki names them (Might, Area, Amount ...). */
+export type Stat =
+  | 'might'
+  | 'area'
+  | 'speed'
+  | 'duration'
+  | 'amount'
+  | 'cooldown'
+  | 'luck'
+  | 'maxHealth'
+  | 'recovery'
+  | 'armor'
+  | 'moveSpeed'
+  | 'magnet'
+  | 'growth'
+  | 'greed'
+  | 'curse'
+  | 'revival'
+
 export interface Weapon extends Entry {
   /** `evolved` = result of an evolution, union or gift. */
   kind: 'base' | 'evolved'
   description: LocalizedText
+  /** How the weapon works and what triggers it (from the wiki's "Effects" section). */
+  effects?: LocalizedText
+  /** Stats that directly affect the weapon (wiki table "Stats and passive items"). */
+  affectedBy?: Stat[]
   /** Maximum level (base weapons usually 8, evolved ones usually 1). */
   maxLevel: number
   /** Only these characters can use the weapon; without this field, anyone can. */

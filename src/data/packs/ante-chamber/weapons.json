@@ -13,6 +13,16 @@
         "de": "Erzeugt eine Flammenzone in Blickrichtung; wird durch besiegte Gegner stärker.",
         "en": "Creates a zone of flames in the faced direction. Empowered by enemy kills."
       },
+      "effects": {
+        "de": "Infernolatro erzeugt eine Flammenzone in Blickrichtung. Ihr Grundschaden, ihre Fläche und ihre Dauer steigen mit jedem Gegner, der auf beliebige Weise stirbt, und setzen sich zurück, wenn die Dauer der Waffe endet. Ein Zähler zeigt, wie viele Gegner während dieser Zone gestorben sind. Es kann immer nur eine Flammenzone gleichzeitig aktiv sein.",
+        "en": "Infernolatro creates a zone of flames in the faced direction, and it gets increased Base Damage, Area, and Duration by killing more enemies by any means, resetting when the weapon's duration ends. A counter will show the number of enemies killed during that instance of the weapon. Only one flame zone can be triggered at the same time."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "duration",
+        "cooldown"
+      ],
       "maxLevel": 9,
       "emoji": "🔥",
       "image": "https://vampire.survivors.wiki/images/Sprite-Infernolatro.png",
@@ -30,6 +40,19 @@
         "de": "Wirft gebogene Bananen; 1 zu 6 Chance auf kritischen Treffer mit Explosion.",
         "en": "Flings curving bananas. 1 in 6 chance to critically hit and explode."
       },
+      "effects": {
+        "de": "Gros Michel schleudert gekrümmte Bananen in Blickrichtung, die sich mit jeder weiteren Banane auffächern. Jede hat eine Chance von 1 zu 6, kritischen Schaden zu verursachen und zu explodieren. Diese Chance hängt von Glück ab.\n\nBananen, die keinen kritischen Schaden verursachen und damit nicht explodieren, können einmal zu einem zufälligen Gegner springen. Dabei werden sie schneller, ihre Dauer beginnt neu und die Chance auf kritischen Schaden mit Explosion wird erneut ausgewürfelt. Sonst verschwindet die Banane, wenn ihre Dauer abläuft.",
+        "en": "Gros Michel flings curving bananas in the faced direction, spreading out for each banana, which have a 1 in 6 chance to deal critical damage and explode. This chance is affected by Luck.\n\nBananas that do not deal critical damage, and thus explode, have a chance to bounce once to a random enemy, speed up, reset its Duration, and reroll the critical chance to deal critical damage and explode. Otherwise, the banana will simply disappear as its Duration expires."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown",
+        "luck"
+      ],
       "maxLevel": 9,
       "emoji": "🍌",
       "image": "https://vampire.survivors.wiki/images/Sprite-Gros_Michel.png",
@@ -47,6 +70,18 @@
         "de": "Versprüht spiralförmig Sprudelwasser; kann eine andere ausgerüstete Waffe mit auslösen.",
         "en": "Creates a spiral spray of fizzy water. Has a chance to fire another equipped weapon."
       },
+      "effects": {
+        "de": "Fibonacci Spritz feuert einen Sprudel in Blickrichtung, der Sprudelwasser versprüht und spiralförmig aus dem Bildschirm wandert. Dabei kann er eine zufällige ausgerüstete Waffe auslösen. Die Chance dafür ist anfangs 0 % und steigt mit jedem Level der Waffe auf bis zu 34 %. Glück wird nicht multipliziert, sondern ein Zehntel des Glücksbonus des Charakters wird direkt addiert.\n\nFibonacci Spritz hat eine Trefferverzögerung von 1 Sekunde: Derselbe Sprühstoß kann denselben Gegner höchstens einmal pro Sekunde treffen. Weil alle laufenden Verzögerungen gleichzeitig zurückgesetzt werden, sobald eine abläuft, werden manche Gegner trotzdem öfter getroffen.",
+        "en": "Fibonacci Spritz fires a seltzer in the faced direction, which sprays fizzy water and spirals out of the screen, and has a chance to fire a random equipped weapon. This chance is 0% at base, increasing with each level of the weapon up to a max of 34%. Instead of being multiplied by the player's Luck bonus, this chance is affected by Luck by directly adding one tenth of the character's Luck bonus to it.\n\nFibonacci Spritz has a 1 second Hitbox Delay, meaning that the same enemy cannot be hit more often than every second by the same spray. However, because all active delays are reset simultaneously as soon as any one elapses, some enemies may get hit more often."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown",
+        "luck"
+      ],
       "maxLevel": 9,
       "emoji": "🫧",
       "image": "https://vampire.survivors.wiki/images/Sprite-Fibonacci_Spritz.png",
@@ -65,6 +100,17 @@
         "de": "Planeten kreisen um dich; der Schaden steigt mit den in diesem Lauf gesammelten Münzen.",
         "en": "Planets orbit around you. Damage increases by amount of coins collected this run."
       },
+      "effects": {
+        "de": "Celestial Booster erzeugt Planeten, die den Spieler umkreisen. Zuerst ruft die Waffe eine Rakete herbei, mit jedem weiteren Punkt Anzahl einen neuen Planeten, beginnend mit Merkur und endend mit Pluto. Bei jedem neuen Planeten erscheint über dem Spieler eine Planetenkarte, die ihn zeigt. Die Waffe erzeugt höchstens 10 Projektile, obwohl ihr Pool-Limit 100 beträgt. Dieses Maximum zählt sowohl den Wert Anzahl als auch die Anzahl, die Celestial Booster durch seine Level erhält.",
+        "en": "Celestial Booster creates planets that orbit around the player. The weapon will start by summoning a rocket, with each additional Amount, it will summon a new planet, starting with Mercury and ending with Pluto. Upon receiving a new planet, a Planet Card will appear above the player, showcasing which planet was received. A maximum of 10 projectiles can be summoned by this weapon, despite the Pool Limit of 100. This maximum accounts for both the Amount stat and the Amount that Celestial Booster receives from its levels."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "greed"
+      ],
       "maxLevel": 9,
       "emoji": "🪐",
       "image": "https://vampire.survivors.wiki/images/Sprite-Celestial_Booster.png",
@@ -82,6 +128,16 @@
         "de": "Entwicklung von Infernolatro: fügt eine zweite Zone hinzu; überlagerte Zonen vervielfachen ihre Wirkung.",
         "en": "Evolved Infernolatro. Adds a second zone. Zone effects multiply when combined."
       },
+      "effects": {
+        "de": "NaneInferno fügt hinter der Blickrichtung eine zweite, blaue Flammenzone hinzu, die sich langsamer bewegt als die vordere. Grundschaden, Fläche und Dauer beider Zonen steigen mit jedem Gegner, der auf beliebige Weise stirbt, und setzen sich zurück, wenn die Dauer der Waffe endet. Jede Zone hat ihren eigenen Zähler. Berührt die rote Zone beim Umdrehen die blaue, verschmelzen beide zu einer Zone, die mehr vom Bildschirm abdeckt. Danach ergeben je 10 Tötungen eine Größenordnung mehr Punkte pro Zone (z. B. werden 180 Tötungen zu e18). Abklingzeit und Dauer sind länger, die Fläche ist kleiner.",
+        "en": "NaneInferno adds a second zone of blue flame behind the faced direction, which moves slower than the front one, and they get increased Base Damage, Area, and Duration by killing more enemies by any means, resetting when the weapon's duration ends. Each zone has an individual kill counter. As the red one touches the blue one when the player turns around, they merge into one zone that covers more of the screen. After combining, every 10 kills translates to 1 order of magnitude more score for each zone (e.g. 180 kills turns into e18). It has a longer Cooldown and Duration, and the Area decreased."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "duration",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "🔥",
       "image": "https://vampire.survivors.wiki/images/Sprite-NaneInferno.png",
@@ -99,6 +155,19 @@
         "de": "Entwicklung von Gros Michel: trifft immer kritisch und explodiert immer; andere Waffen treffen öfter kritisch.",
         "en": "Evolved Gros Michel. Always crits. Always explodes. Other weapons crit more often."
       },
+      "effects": {
+        "de": "Cavendish schleudert gekrümmte Bananen abwechselnd in Blickrichtung und in die Gegenrichtung, die sich mit jeder weiteren Banane auffächern. Diese Bananen verursachen immer kritischen Schaden, explodieren und verschwinden danach nicht: Sie enden erst, wenn alle Sprünge verbraucht sind oder die Dauer abläuft. Außerdem erhält die Waffe mehr Grundschaden und Anzahl.\n\nCavendish verdoppelt zudem die Grundchance auf kritische Treffer aller Waffen, die kritisch treffen können.",
+        "en": "Cavendish flings curving bananas in the faced direction and opposite of it, alternating between each direction, and spreading out for each banana. These bananas will always deal critical damage and explode, and do not despawn after exploding, so they expire only after exhausting all their bounces or the Duration elapses. It also gains Base Damage and Amount.\n\nCavendish also doubles the base critical hit chance of weapons that can deal critical hits."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown",
+        "luck"
+      ],
       "maxLevel": 1,
       "emoji": "🍌",
       "image": "https://vampire.survivors.wiki/images/Sprite-Cavendish.png",
@@ -116,6 +185,18 @@
         "de": "Entwicklung von Fibonacci Spritz: 55 % Chance, 1, 2, 3 oder 5 andere Waffen mit auszulösen.",
         "en": "Evolved Fibonacci Spritz. Has a 55% chance to fire 1, 2, 3 or 5 other weapons."
       },
+      "effects": {
+        "de": "Royal Flush erzeugt am Bildschirmrand einen Strudel aus den vier Spielkartenfarben, der gelegentlich eine Spirale aus Kartensymbolen zur Bildschirmmitte feuert. Die Waffe hat mehr Grundschaden und kein Intervall mehr.\n\nMit 55 % Chance löst sie 1, 2, 3 oder 5 andere Waffen aus. Glück wird nicht multipliziert, sondern ein Zehntel des Glücksbonus des Charakters wird direkt addiert. Die Einzelchancen für 1, 2, 3 oder 5 Waffen betragen 50 %, 20 %, 20 % und 10 %; diese Verteilung hängt nicht von Glück ab.\n• Ein Glücksbonus von +450 % garantiert das Auslösen.",
+        "en": "Royal Flush creates a whirlpool filled with the 4 playing card suits around the edge of the screen, occasionally firing a spiral of suits towards the center of the screen. It deals more Base Damage and no longer has an Interval.\n\nThis weapon has a 55% chance to fire 1, 2, 3 or 5 other weapons. Instead of being multiplied by the player's Luck bonus, this chance is affected by Luck by directly adding one tenth of the character's Luck bonus to it. The individual chances to trigger 1, 2, 3, or 5 weapons are 50%, 20%, 20%, and 10%, respectively. This distribution is not affected by Luck.\n• A Luck bonus of +450% will guarantee the forced activation."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown",
+        "luck"
+      ],
       "maxLevel": 1,
       "emoji": "🂡",
       "image": "https://vampire.survivors.wiki/images/Sprite-Royal_Flush.png",
@@ -134,6 +215,18 @@
         "de": "Entwicklung von Celestial Booster: enthüllt geheime Planeten, die gelegentlich negativ werden.",
         "en": "Evolved Celestial Booster. Reveals secret planets. Planets occasionally turn negative."
       },
+      "effects": {
+        "de": "Negative Space verleiht sofort alle Planeten von Celestial Booster und zeigt zusätzlich geheime Planeten (Planet X, Ceres und Eris), die als weitere Projektile wirken. Der Grundschaden steigt leicht; die Anzahl wird auf 1 gesetzt, weil alle Planeten immer aktiv sind und die Waffe nicht mehr von Anzahl profitiert.\n\nAlle 15 - 5 * (1 - Abklingzeit des Spielers) Sekunden werden alle Planeten negativ: Für 5 + 1 * Dauer des Spielers Sekunden erhalten sie +10 Grundschaden sowie mehr Fläche und Geschwindigkeit. Die Umlaufbahnen kippen dabei nach oben und lassen sich durch Bewegung nach links oder rechts langsam im bzw. gegen den Uhrzeigersinn drehen.",
+        "en": "Negative Space instantly grants all of the planets summoned by Celestial Booster while additionally revealing secret planets (Planet X, Ceres, and Eris) that act as extra projectiles. Its Base Damage is slightly increased, with Amount reset to 1 as all the planets are always active and the weapon no longer benefits from it.\n\nEvery 15 - 5 * (1 - playerCooldown) seconds, all planets will become negative, gaining +10 Base Damage, and increased Area and Speed for 5 + 1 * playerDuration seconds. The orbits of each planet will tilt up, which can be slowly controlled by moving left or right to rotate the orbits clockwise or counterclockwise, respectively."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "cooldown",
+        "greed"
+      ],
       "maxLevel": 1,
       "emoji": "🌌",
       "image": "https://vampire.survivors.wiki/images/Sprite-Negative_Space.png",

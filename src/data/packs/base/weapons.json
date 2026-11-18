@@ -14,6 +14,16 @@
         "de": "Greift waagerecht an, durchdringt Gegner.",
         "en": "Attacks horizontally, passes through enemies."
       },
+      "effects": {
+        "de": "Peitsche erzeugt einen waagerechten Hieb, der vorne vom Oberkörper des Charakters ausgeht und allen Gegnern im Bereich Schaden zufügt.\n\nWeitere Hiebe durch mehr Anzahl wechseln zwischen Blickrichtung und Gegenrichtung und setzen jeweils etwas höher an.",
+        "en": "Whip creates a slash horizontally that frontally originates from the character's torso, damaging all enemies in the area.\n\nConsecutive slashes from increased Amount alternate between firing towards and away from the direction the character is facing, getting progressively higher."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🪢",
       "image": "https://vampire.survivors.wiki/images/Sprite-Whip.png",
@@ -32,6 +42,17 @@
         "de": "Feuert auf den nächstgelegenen Gegner.",
         "en": "Fires at the nearest enemy."
       },
+      "effects": {
+        "de": "Zauberstab schießt ein blaues magisches Geschoss auf den Gegner, der dem Spieler am nächsten ist.\n\nZusätzliche Geschosse durch Anzahl werden nacheinander abgefeuert. Jedes Geschoss trifft anfangs einen Gegner und löst sich dann auf. Die Geschosse können nicht durch Wände fliegen.",
+        "en": "Magic Wand shoots a blue magic missile that is fired at the closest enemy to the player.\n\nAdditional projectiles from Amount will be fired in a sequence. Each missile can initially hit one enemy before dissipating. The missiles cannot pass through walls."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🪄",
       "image": "https://vampire.survivors.wiki/images/Sprite-Magic_Wand.png",
@@ -50,6 +71,17 @@
         "de": "Schießt schnell in die gegenüberliegende Richtung.",
         "en": "Fires quickly in the faced direction."
       },
+      "effects": {
+        "de": "Messer wirft Geschosse in die Richtung, in die sich der Spieler bewegt oder zuletzt bewegt hat. Dauer wirkt nicht, Fläche nur begrenzt.\n\nMehrere Messer durch Anzahl werden in kurzen Salven parallel geworfen. Auf Level 4, 6 und 8 sinkt das Intervall, sodass die Messer einer Salve dichter beieinander fliegen. Jedes Messer trifft anfangs einen Gegner und löst sich dann auf. Sie können nicht durch Wände fliegen.",
+        "en": "Knife throws projectiles in the direction the player is moving or last moved. It ignores Duration and has limited benefit from Area.\n\nMultiple knives from Amount are fired in short volleys in parallel. The firing Interval is decreased on levels 4, 6 and 8, grouping each volley of knives closer together. Each knife can initially hit one enemy before dissipating. They cannot pass through walls."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🔪",
       "image": "https://vampire.survivors.wiki/images/Sprite-Knife.png",
@@ -68,6 +100,17 @@
         "de": "Hoher Schaden, hohe Bereichsskalierung.",
         "en": "High damage, high Area scaling."
       },
+      "effects": {
+        "de": "Axt wirft Geschosse über den Spieler, die im Bogen nach unten fallen. Die erste Axt fliegt direkt nach oben, weitere Äxte durch Anzahl folgen schnell hintereinander in immer weiteren Bögen in Blickrichtung. Geschwindigkeit bestimmt, wie hoch die Äxte fliegen, bevor sie fallen. Jede Axt trifft anfangs bis zu drei Gegner und löst sich dann auf.\n\nAxt skaliert mit dem Flächenwert des Charakters mal 1,3.",
+        "en": "Axe throws projectiles above the player, which arc downward. The first axe is thrown directly above the character and subsequent axes from Amount are thrown in quick succession towards the direction the player is facing in progressively wider arcs. Speed determines how far up axes can be thrown before they start falling. Each axe can initially hit up to three enemies before dissipating.\n\nAxe scales with the character's Area stat multiplied by 1.3."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🪓",
       "image": "https://vampire.survivors.wiki/images/Sprite-Axe.png",
@@ -86,6 +129,17 @@
         "de": "Zielt auf den nächsten Gegner und hat einen Bumerangeffekt.",
         "en": "Aims at nearest enemy, has boomerang effect."
       },
+      "effects": {
+        "de": "Kreuz feuert ein rotierendes Geschoss auf den nächsten Gegner. Nach kurzer Strecke kehrt es um und fliegt geradeaus, bis es den Bildschirm verlässt, ähnlich wie ein Bumerang. Kreuz durchdringt unbegrenzt viele Gegner.\n\nGeschwindigkeit bestimmt, wie weit die Kreuze fliegen, bevor sie umkehren.",
+        "en": "Cross fires a spinning projectile at the closest enemy. After traveling for a bit, it reverses its direction and travels in a straight line until it leaves the screen, much like a boomerang. Cross has infinite pierce.\n\nSpeed determines how far the crosses can initially travel before they return."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "✝️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Cross.png",
@@ -104,6 +158,18 @@
         "de": "Kreist um den Charakter.",
         "en": "Orbits around the character."
       },
+      "effects": {
+        "de": "Königsbibel erzeugt einen Ring aus blauen Bibeln um den Spieler, aus denen ab und zu Seiten fallen. Die Bibeln kreisen im Uhrzeigersinn um den Spieler und fügen jedem Gegner Schaden zu, den sie berühren.\n\nWeitere Bibeln durch Anzahl kommen gleichmäßig verteilt in den Kreis. Geschwindigkeit bestimmt, wie schnell sie kreisen, Dauer, wie lange sie kreisen, bevor die Abklingzeit beginnt, und Fläche, wie weit vom Spieler entfernt sie kreisen (bis zu einer Obergrenze) und wie groß sie sind.",
+        "en": "King Bible spawns a ring of blue bibles around the player that occasionally has pages fall out of it. The bibles spin clockwise around the player and deal damage to any enemy it touches.\n\nAdditional bibles from Amount are added to the circle and spaced evenly. Speed affects how fast the books rotate, Duration affects how long they rotate before cooling down, and Area affects how far away from the player they spin which has a cap in size and increases the size of the bibles."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "📖",
       "image": "https://vampire.survivors.wiki/images/Sprite-King_Bible.png",
@@ -122,6 +188,17 @@
         "de": "Feuert auf einen zufälligen Gegner, verursacht schweren Schaden.",
         "en": "Fires at a random enemy, deals heavy damage."
       },
+      "effects": {
+        "de": "Feuerstab schießt einen Fächer aus Feuerbällen in Richtung eines zufälligen Gegners.\n\nDie Feuerbälle werden fast gleichzeitig abgefeuert; zusätzliche durch Anzahl kommen an den Rändern des Fächers dazu. Sie können nicht durch Wände fliegen. Jeder Feuerball trifft einen Gegner und löst sich dann auf.",
+        "en": "Fire Wand shoots an arc of fireballs in the direction of a random enemy.\n\nFireballs are fired near simultaneously and additional ones gained through Amount bonuses are added to the ends of the arc of fireballs. The fireballs cannot pass through walls. Each fireball can hit one enemy before dissipating."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🔥",
       "image": "https://vampire.survivors.wiki/images/Sprite-Fire_Wand.png",
@@ -140,6 +217,15 @@
         "de": "Fügt Gegnern in der Nähe Schaden zu. Verringert den Widerstand gegen Rückschlag und Einfrieren.",
         "en": "Damages nearby enemies. Reduces resistance to knockback and freeze."
       },
+      "effects": {
+        "de": "Knoblauch legt eine Aura aus drei rotierenden, konzentrischen Kreisen um den Spieler, die Gegnern darin Schaden zufügt.\n\nBei Knoblauch wirkt die Abklingzeit wie eine Trefferverzögerung: Ein Gegner, der zum ersten Mal in den Kreis kommt, erleidet sofort Schaden. Danach kann er erst wieder getroffen werden, wenn die Abklingzeit des Knoblauchs vorbei ist, auch wenn er den Bereich kurz verlässt.",
+        "en": "Garlic places an aura of three rotating concentric circles around the player, dealing damage to enemies inside it.\n\nCooldown acts similarly to Hitbox Delay for Garlic. Damage will be dealt instantly to an enemy if they have never been in the circle before, after which they cannot be hit by it again until the Garlic's Cooldown is over, even if they temporarily leave its area."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🧄",
       "image": "https://vampire.survivors.wiki/images/Sprite-Garlic.png",
@@ -158,6 +244,17 @@
         "de": "Erzeugt schädliche Zonen.",
         "en": "Generates damaging zones."
       },
+      "effects": {
+        "de": "Santa Wasser lässt Flaschen mit Weihwasser vom Himmel regnen, die beim Aufprall zerbrechen und Pfützen aus Wasser und blauen Flammen hinterlassen, die Gegnern Schaden zufügen.\n\nSolange die gesamte Anzahl unter vier liegt, zielt die erste Flasche jedes Wurfs auf den nächsten Gegner. Sonst fallen die Flaschen im Uhrzeigersinn ungefähr im Kreis.",
+        "en": "Santa Water rains down bottles of holy water from the sky, which break upon impact with the ground, leaving puddles of water and blue flames that damage enemies.\n\nUntil Santa Water's total Amount reaches four, the first bottle of each cast aims at the closest enemy. Otherwise, the bottles are dropped in a clockwise, roughly circular pattern."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "💧",
       "image": "https://vampire.survivors.wiki/images/Sprite-Santa_Water.png",
@@ -176,6 +273,18 @@
         "de": "Durchdring Gegner, hüpft herum.",
         "en": "Passes through enemies, bounces around."
       },
+      "effects": {
+        "de": "Runenläufer feuert langsame, rautenförmige Runen in zufällige Richtungen, jede mit einer andersfarbigen Spur. Die Runen durchdringen unbegrenzt viele Gegner und prallen von Bildschirmrändern und Hindernissen ab. Dadurch profitiert die Waffe gut von allen Werteboni, braucht aber auch viele verschiedene, um stark zu werden.\n\nRunenläufer hat eine Trefferverzögerung von 0,5 Sekunden: Dieselbe Rune kann denselben Gegner höchstens alle halbe Sekunde treffen. Weil alle laufenden Verzögerungen gleichzeitig zurückgesetzt werden, sobald eine abläuft oder eine Rune abprallt, werden manche Gegner trotzdem öfter getroffen.",
+        "en": "Runetracer fires slow-moving diamond-shaped runes in random directions, each has a different color trail. The runes have infinite pierce and bounce off the edges of the screen and obstacles, damaging enemies they hit. Its nature makes it scale up with all stat bonuses well, which also means it needs lots of different stat bonuses to become strong.\n\nRunetracer has a 0.5 seconds Hitbox Delay, meaning that the same enemy cannot be hit more often than every half a second by the same rune. However, because all active delays are reset simultaneously as soon as any one elapses or bounces off a wall, some enemies may get hit more often."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "💠",
       "image": "https://vampire.survivors.wiki/images/Sprite-Runetracer.png",
@@ -194,6 +303,16 @@
         "de": "Schlägt auf zufällige Gegner ein.",
         "en": "Strikes at random enemies."
       },
+      "effects": {
+        "de": "Blitzring lässt Blitze vom Himmel auf zufällige Gegner einschlagen. Schaden macht nicht der Blitz selbst, sondern die Trefferfläche, die beim Einschlag am Boden entsteht.\n\nBoni auf Fläche vergrößern diese Trefferfläche.",
+        "en": "Lightning Ring summons lightning strikes from the sky to deal damage to random enemies. When the lightning strikes the ground, it creates a hitbox that deals damage, rather than the lightning bolts themselves.\n\nBonuses to Area affect how large this hitbox is."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "⚡",
       "image": "https://vampire.survivors.wiki/images/Sprite-Lightning_Ring.png",
@@ -212,6 +331,14 @@
         "de": "Löscht alles in Sichtweite aus.",
         "en": "Erases everything in sight."
       },
+      "effects": {
+        "de": "Pentagramm beschwört ein violettes Zeichen mit goldenem Rand, das mit jedem Level detailreicher wird. Danach zerspringt es und löscht sofort alle Gegner, ihre Beute und alle Gegenstände auf dem Bildschirm, außer Gegenständen der Stage. Pentagramm verursacht immer Schaden in Höhe der maximalen Gesundheit des Gegners. Liegt dieser unter 660, wird ein Wert zwischen 655 und 665 angezeigt.",
+        "en": "Pentagram summons a purple glyph with golden lining, visual details of which increase as Pentagram levels up. After summoning, the glyph shatters, instantly erasing every enemy, their drops, and all items on the screen, except for stage items. Pentagram always deals damage equal to the max health of the enemy. If it is lower than 660, the damage number is overwritten to display it between 655 and 665."
+      },
+      "affectedBy": [
+        "cooldown",
+        "luck"
+      ],
       "maxLevel": 8,
       "emoji": "🔯",
       "image": "https://vampire.survivors.wiki/images/Sprite-Pentagram.png",
@@ -229,6 +356,18 @@
         "de": "Bombardiert in einer kreisenden Zone.",
         "en": "Bombards in a circling zone."
       },
+      "effects": {
+        "de": "Peachone ist ein Vogel, der um den Spieler fliegt und eine kreisende Zone mit Geschossen bombardiert. Die Zone dreht sich im Uhrzeigersinn um den Spieler. Der Vogel folgt langsamer hinter dem Spieler, die Zone bleibt aber immer an derselben Stelle relativ zum Spieler.\n\nStandardmäßig feuert Peachone 4 Salven mit je 4 Geschossen. Jede Salve trifft ungefähr dieselbe Stelle, nämlich die, an der die sichtbare Zone beim Start der Salve ist. Salven und Zone laufen auf getrennten Zeitgebern, daher kann die erste Salve bis zu eine Sekunde nach dem Aufleuchten der Zone beginnen und die Zahl der Salven pro Auslösung um 1 schwanken.",
+        "en": "Peachone is a bird that flies around the player and bombards a circling zone with projectiles. The zone revolves clockwise around the player. The bird moves behind the player at a slower speed, but the bombarding circle will always stay in a position relative to the player.\n\nBy default, Peachone fires 4 sets of 4 projectiles. Each set fires all of its projectiles at about the same spot, set by the position of the visible zone at the instant that set starts. A set firing is on a different timer to the zone being active, so the first set can start firing up to a second after the zone lights up. This means that the number of sets per activation can vary by 1."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🕊️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Peachone.png",
@@ -247,6 +386,18 @@
         "de": "Bombardiert in einer kreisenden Zone.",
         "en": "Bombards in a circling zone."
       },
+      "effects": {
+        "de": "Ebenholz-Flügel ist ein Vogel, der um den Spieler fliegt und eine kreisende Zone mit Geschossen bombardiert. Die Zone dreht sich gegen den Uhrzeigersinn um den Spieler. Der Vogel folgt langsamer hinter dem Spieler, die Zone bleibt aber immer an derselben Stelle relativ zum Spieler.\n\nStandardmäßig feuert Ebenholz-Flügel 4 Salven mit je 4 Geschossen. Jede Salve trifft ungefähr dieselbe Stelle, nämlich die, an der die sichtbare Zone beim Start der Salve ist. Salven und Zone laufen auf getrennten Zeitgebern, daher kann die erste Salve bis zu eine Sekunde nach dem Aufleuchten der Zone beginnen und die Zahl der Salven pro Auslösung um 1 schwanken.",
+        "en": "Ebony Wings is a bird that flies around the player and bombards a circling zone with projectiles. The zone revolves counterclockwise around the player. The bird moves behind the player at a slower speed, but the bombarding circle will always stay in a position relative to the player.\n\nBy default, Ebony Wings fires 4 sets of 4 projectiles. Each set fires all of its projectiles at about the same spot, set by the position of the visible zone at the instant that set starts. A set firing is on a different timer to the zone being active, so the first set can start firing up to a second after the zone lights up. This means that the number of sets per activation can vary by 1."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🦅",
       "image": "https://vampire.survivors.wiki/images/Sprite-Ebony_Wings.png",
@@ -264,6 +415,17 @@
         "de": "Schieße schnell in all vier festgelegten Richtungen.",
         "en": "Fires quickly in four fixed directions."
       },
+      "effects": {
+        "de": "Phiera Der Tuphello schießt runde rote Energiekugeln in die vier diagonalen Richtungen des Charakters. Jede Kugel trifft anfangs einen Gegner und löst sich dann auf. Die Kugeln können nicht durch Wände fliegen.\n\nAnzahl wirkt auf alle vier Richtungen: Jeder Punkt Anzahl bringt insgesamt vier Kugeln mehr.",
+        "en": "Phiera Der Tuphello shoots a circular red energy bullet in the four ordinal directions of the character. Each bullet can initially hit one enemy before dissipating. The bullets cannot pass through walls.\n\nAmount affects all four bullet streams, granting four bullets total per point in Amount."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🔫",
       "image": "https://vampire.survivors.wiki/images/Sprite-Phiera_Der_Tuphello.png",
@@ -282,6 +444,17 @@
         "de": "Schieße schnell in all vier festgelegten Richtungen.",
         "en": "Fires quickly in four fixed directions."
       },
+      "effects": {
+        "de": "Acht der Spatz schießt je eine runde blaue Energiekugel in Richtung der vier Bildschirmecken. Jede Kugel trifft anfangs einen Gegner und löst sich dann auf. Die Kugeln können nicht durch Wände fliegen.\n\nJeder Punkt Anzahl bringt in allen vier Richtungen eine Kugel mehr.",
+        "en": "Eight The Sparrow shoots a circular blue energy bullet toward each of the four corners of the screen. Each bullet can initially hit one enemy before dissipating. The bullets cannot pass through walls.\n\nEach point in Amount grants an additional bullet in all four directions."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🎯",
       "image": "https://vampire.survivors.wiki/images/Sprite-Eight_The_Sparrow.png",
@@ -299,6 +472,19 @@
         "de": "Ruft launische Katzen herbei, die mit Pickups spielen können.",
         "en": "Summons capricious projectiles. Might interact with pickups."
       },
+      "effects": {
+        "de": "Gatti Amari beschwört Katzen aus einem Hexagramm am Bildschirmrand. Die Katzen laufen meist geradeaus, wechseln nach einer Weile die Richtung und kratzen manchmal Gegner in ihrer Nähe. Sie können auch den eigenen Charakter verletzen, wenn sie ihm nahe kommen, und verursachen dabei doppelten Schaden. Treffen zwei Katzen aufeinander, können sie sich prügeln und eine große Staubwolke erzeugen, die eine Weile Flächenschaden verursacht. Läuft eine Katze über ein Pickup, frisst sie es, was sie auf verschiedene Weise verändert.",
+        "en": "Gatti Amari summons cats from a hexagram on the edge of the screen. These cats mostly walk around in a straight line and may change direction after a while, and have a chance to attack with their claws when they are close to the enemies. They can also occasionally hurt the player character when they are close to it, dealing twice the usual damage. When a cat is close to another, they have a chance to start a fight, which creates a huge Area-of-Effect of cartoonish scuffle cloud that lasts for a while. If a cat walks over a Pickup on the screen, it gets automatically consumed, affecting the cat in different ways."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown",
+        "luck"
+      ],
       "maxLevel": 8,
       "emoji": "🐈",
       "image": "https://vampire.survivors.wiki/images/Sprite-Gatti_Amari.png",
@@ -317,6 +503,16 @@
         "de": "Attackiert vertical, geht durch Gegner.",
         "en": "Attacks vertically, passes through enemies."
       },
+      "effects": {
+        "de": "Mana-Lied sendet eine Welle funkelnder Partikel in Form einer senkrechten Ellipse aus, die an den Rändern einer senkrechten Säule um den Charakter abprallt. Die Partikel bleiben relativ zum Charakter und bewegen sich mit ihm.\n\nMana-Lied hat eine Trefferverzögerung von 1 Sekunde: Derselbe Impuls kann denselben Gegner höchstens einmal pro Sekunde treffen. Weil alle laufenden Verzögerungen gleichzeitig zurückgesetzt werden, sobald eine abläuft, werden manche Gegner trotzdem öfter getroffen.",
+        "en": "Song of Mana pulses a wave of sparkling particles outwards in the shape of a vertical ellipse, bouncing along the edges of a vertical column centered around the character. The particles are positioned relative to the character, and follow the character's movement.\n\nSong of Mana has a 1 second Hitbox Delay, meaning that the same enemy cannot be hit more often than every second by the same pulse. However, because all active delays are reset simultaneously as soon as any one elapses, some enemies may get hit more often."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "duration",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🎶",
       "image": "https://vampire.survivors.wiki/images/Sprite-Song_of_Mana.png",
@@ -334,6 +530,19 @@
         "de": "Generates damaging zones when moving, strikes when stopping.",
         "en": "Generating damaging zones when moving, strikes when stopping."
       },
+      "effects": {
+        "de": "Während der Bewegung erzeugt Shadow Pinion bohrerförmige Geschosse hinter dem Charakter, die langsam nach hinten beschleunigen und Gegnern Schaden zufügen, die darüber laufen. Bleibt der Charakter stehen, werden alle in Blickrichtung abgefeuert.\n\nBewegungsgeschwindigkeit erhöht beim Laufen, wie oft Bohrer entstehen; beim Stehenbleiben beginnt die normale Abklingzeit. Fläche erhöht, wie weit die Bohrer fliegen, Geschwindigkeit ihre Beschleunigung.",
+        "en": "While moving, Shadow Pinion spawns projectiles in the form of drills that spawn behind the character, which slowly accelerate backwards and deal damage to enemies walking over them. When the character stops, all of them are fired in the direction the character is facing.\n\nMove Speed increases its overall spawn rate when moving; when the character stops, it initiates the default Cooldown. Area also increases how far the drills travel when they are fired. Speed increases the acceleration."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown",
+        "moveSpeed"
+      ],
       "maxLevel": 8,
       "emoji": "🌀",
       "image": "https://vampire.survivors.wiki/images/Sprite-Shadow_Pinion.png",
@@ -352,6 +561,14 @@
         "de": "Chance, Gegner in der Zeit einzufrieren.",
         "en": "Chance to freeze enemies in time."
       },
+      "effects": {
+        "de": "Uhr-Lanzette feuert nacheinander im Uhrzeigersinn einen dünnen Frierstrahl in zwölf Richtungen um den Charakter. Der Strahl verursacht keinen Schaden, friert aber jeden getroffenen Gegner ein.\n\nBoni auf Dauer verlängern, wie lange Gegner eingefroren bleiben. Boni auf Abklingzeit erhöhen die Feuerrate.",
+        "en": "Clock Lancet fires a thin, freezing beam around the character in twelve directions clockwise one at a time. The freezing beam does no damage, but will freeze any enemy it hits.\n\nBonuses to Duration will add to the time enemies are frozen. Bonuses to Cooldown will increase the fire rate of the weapon."
+      },
+      "affectedBy": [
+        "duration",
+        "cooldown"
+      ],
       "maxLevel": 7,
       "emoji": "⏰",
       "image": "https://vampire.survivors.wiki/images/Sprite-Clock_Lancet.png",
@@ -370,6 +587,13 @@
         "de": "Schützt vor Schaden, wenn sie aktiv ist.",
         "en": "Shields from damage when active."
       },
+      "effects": {
+        "de": "Beim Auslösen erzeugt Lorbeer einen Schild. Erleidet der Spieler das nächste Mal Schaden, verliert stattdessen der Schild eine Ladung und der Spieler ist kurz unverwundbar. Ohne Ladung zerbricht der Schild. Die Farbe zeigt die verbleibenden Ladungen: eine blau, zwei grün, drei gelb. Ein Treffer während der Unverwundbarkeit durch Lorbeer kostet keine Ladung.\n\nLorbeer profitiert nur von Boni auf Abklingzeit. Anders als die meisten Waffen profitiert Lorbeer nicht von Limit Break.",
+        "en": "Upon triggering, Laurel creates a shield. The next time the player takes damage, the shield loses a charge instead and briefly makes the player invulnerable. When the shield is out of charge, it breaks. The shield's color changes based on the remaining charges: one is blue, two is green, and three is yellow. Taking a hit during Laurel's invulnerability window does not trigger the shield.\n\nLaurel only benefits from bonuses to Cooldown. Unlike most weapons, Laurel does not benefit from Limit Break."
+      },
+      "affectedBy": [
+        "cooldown"
+      ],
       "maxLevel": 7,
       "emoji": "🌿",
       "image": "https://vampire.survivors.wiki/images/Sprite-Laurel.png",
@@ -387,6 +611,20 @@
         "de": "Wird bei ununterbrochener Bewegung stärker; kann kritisch treffen.",
         "en": "Stronger with continuous movement. Can deal critical damage."
       },
+      "effects": {
+        "de": "Vento Sacro erzeugt mehrere waagerechte Hiebe vor dem Charakter, die allen Gegnern im Bereich Schaden zufügen.\n\nBewegungsgeschwindigkeit erhöht beim Laufen die Feuerrate; beim Stehenbleiben beginnt die normale Abklingzeit. Geschwindigkeit lässt die Hiebe weiter zur Seite reichen, Dauer verlängert, wie lange die Trefferfläche bestehen bleibt.",
+        "en": "Vento Sacro creates multiple slashes horizontally in front of the character, damaging all enemies in the area.\n\nMove Speed increases its overall fire rate when moving; when the character stops, it initiates the default Cooldown. Speed makes the slashes go further out horizontally. Duration increases how long the hitbox lingers."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown",
+        "luck",
+        "moveSpeed"
+      ],
       "maxLevel": 8,
       "emoji": "🌬️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Vento_Sacro.png",
@@ -405,6 +643,18 @@
         "de": "Wirft ein hüpfendes Geschoss.",
         "en": "Throws a bouncing projectile."
       },
+      "effects": {
+        "de": "Knochen wirft einen kleinen rotierenden Knochen in eine zufällige Richtung. Er fliegt geradeaus und prallt von Gegnern, Wänden und Bildschirmrändern ab, bis seine Dauer endet.",
+        "en": "Bone throws a small spinning bone at a random direction. The bone travels in a straight line, bouncing off enemies, walls, and the edges of the screen until the end of its duration."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🦴",
       "image": "https://vampire.survivors.wiki/images/Sprite-Bone.png",
@@ -423,6 +673,19 @@
         "de": "Wirft ein hüpfendes Geschoss. Explodiert manchmal.",
         "en": "Throws a bouncing projectile. Explodes, sometimes."
       },
+      "effects": {
+        "de": "Kirschbombe wirft eine kleine rotierende Bombe auf den nächsten Gegner. Sie fliegt geradeaus und prallt von Gegnern, Wänden und Bildschirmrändern ab. Dabei wird sie langsamer und bleibt schließlich liegen; explodiert sie, entstehen eine Druckwelle, Blütenblätter und ein Feuerwerk.\n\nAbhängig von Level und Glück besteht eine Chance, dass die Bombe explodiert. Macht und Fläche wirken sowohl auf die springenden Bomben als auch auf ihre Explosionen.",
+        "en": "Cherry Bomb throws a small spinning bomb at the nearest enemy. The bomb travels in a straight line, bouncing off enemies, walls, and edges of the screen. They will decelerate and eventually stop; when they explode, they create a shockwave, flower petals, and a firework with a similar sound effect.\n\nDepending on its level and the Luck stat, there is a chance for the bomb to explode. Might and Area affect both the bouncing Cherry Bombs and their explosions."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown",
+        "luck"
+      ],
       "maxLevel": 8,
       "emoji": "🍒",
       "image": "https://vampire.survivors.wiki/images/Sprite-Cherry_Bomb.png",
@@ -440,6 +703,17 @@
         "de": "Wirft ein abprallendes Projektil; die Anzahl bestimmt, wie oft es abprallt.",
         "en": "Throws a bouncing projectile. Number of bounces affected by Amount."
       },
+      "effects": {
+        "de": "Carréllo schickt einen einzelnen Wagen mit sprühenden Funken an den Rädern waagerecht in Blickrichtung. Er prallt von Hindernissen und Bildschirmrändern ab und überfährt dabei alle Gegner.\n\nWie oft er abprallt, bevor er zerbricht, bestimmt die Anzahl; mit der Grundanzahl 2 prallt er einmal ab. Die Explosion beim Zerbrechen verursacht ebenfalls Schaden.",
+        "en": "Carréllo shoots a single cart that travels horizontally, with mechanical sparks emitting from the wheels, to the direction the player is facing. It bounces off of obstacles and the sides of the screen, running over any enemies along the way.\n\nThe amount of bounces before it shatters is determined by Amount, with its base Amount of 2 allowing it to bounce once. The explosion upon shattering also damages enemies."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🛒",
       "image": "https://vampire.survivors.wiki/images/Sprite-Carr%C3%A9llo.png",
@@ -457,6 +731,19 @@
         "de": "Wirft ein abprallendes Projektil; die Abklingzeit sinkt, während du dich bewegst.",
         "en": "Throws a bouncing projectile. Cooldown reduces when moving."
       },
+      "effects": {
+        "de": "Celestial Dusting feuert Blumen entgegen der Laufrichtung des Charakters. Sie prallen von Wänden und Hindernissen ab, durchdringen aber unbegrenzt viele Gegner. Am Ende ihrer Dauer werden sie langsamer und verlieren Blütenblätter in Form eines kleinen X, die Gegnern in der Nähe zusätzlichen Schaden zufügen.\n\nBewegungsgeschwindigkeit erhöht beim Laufen, wie oft Blumen entstehen; beim Stehenbleiben beginnt die normale Abklingzeit. Boni auf Geschwindigkeit wirken nur über die eigenen Level-Ups.",
+        "en": "Celestial Dusting fires flowers away from the player character's walking direction that bounce off of walls and obstacles, but pierce through an unlimited number of enemies. As they reach the end of their Duration, they slow down and shed petals in a small X shape, dealing additional damage to nearby enemies.\n\nMove Speed increases its overall spawn rate when moving, when the character stops it initiates the default Cooldown. Celestial Dusting ignores Speed bonuses outside of its level ups."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "duration",
+        "amount",
+        "cooldown",
+        "recovery",
+        "moveSpeed"
+      ],
       "maxLevel": 8,
       "emoji": "✨",
       "image": "https://vampire.survivors.wiki/images/Sprite-Celestial_Dusting.png",
@@ -474,6 +761,18 @@
         "de": "Erzeugt abprallende Projektile.",
         "en": "Generates bouncing projectiles."
       },
+      "effects": {
+        "de": "La Robba lässt Möbel von oben aus der Bildschirmmitte regnen, die von Gegnern abprallen, bis ihre Dauer endet oder sie den Bildschirm verlassen.\n\nLa Robba hat eine Trefferverzögerung von 0,5 Sekunden: Dasselbe Möbelstück kann denselben Gegner höchstens alle 0,5 Sekunden treffen. Weil alle laufenden Verzögerungen gleichzeitig zurückgesetzt werden, sobald eine abläuft, werden manche Gegner trotzdem öfter getroffen.",
+        "en": "La Robba rains down furniture from the top middle of the screen, bouncing off of enemies until the end of its duration or disappears off-screen.\n\nLa Robba has a 0.5 second Hitbox Delay, meaning that the same enemy cannot be hit more often than every 0.5 seconds by the same piece of furniture. However, because all active delays are reset simultaneously as soon as any one elapses, some enemies may get hit more often."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🎁",
       "image": "https://vampire.survivors.wiki/images/Sprite-La_Robba.png",
@@ -492,6 +791,18 @@
         "de": "Kann Lichtquellen herbeirufen.",
         "en": "Has a chance to summon light sources."
       },
+      "effects": {
+        "de": "Greatest Jubilee zündet Feuerwerk in der oberen Bildschirmhälfte. Die Funken werden vom Spieler angezogen, die Trefferfläche bleibt aber am Explosionsort, wächst langsam statt sofort und trifft jeden Gegner nur einmal. Solange die gesamte Anzahl unter vier liegt, zielt das erste Feuerwerk jedes Aufrufs auf den nächsten Gegner, sonst explodiert es in der oberen Hälfte.\n\nMit 1 % Chance (abhängig von Glück) entstehen außerdem vier Lichtquellen um den Spieler. Es gibt höchstens 10 Lichtquellen gleichzeitig; ältere verschwinden zugunsten neuer.",
+        "en": "Greatest Jubilee summons fireworks at the top half of the screen. The firework particles are attracted to the player, but the explosion hitbox is centered on where it originally explodes, expands in size instead of an instant Area-of-Effect, and can only hit the same enemy once. Until Greatest Jubilee's total Amount reaches four, the first firework of each summon aims at the closest enemy, otherwise the firework explodes at the top half.\n\nThere is also a 1% chance to spawn four light sources around the player, affected by Luck. The total amount of light sources on screen cannot exceed 10, with the old ones disappearing and being replaced by the newly summoned."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "duration",
+        "amount",
+        "cooldown",
+        "luck"
+      ],
       "maxLevel": 9,
       "emoji": "🎆",
       "image": "https://vampire.survivors.wiki/images/Sprite-Greatest_Jubilee.png",
@@ -509,6 +820,18 @@
         "de": "Feuert drei Projektile auf einen zufälligen Gegner.",
         "en": "Fires three projectiles at a random enemy."
       },
+      "effects": {
+        "de": "Bracelet schießt eine Gruppe wolkiger Funkengeschosse mit begrenzter Dauer auf zufällige Gegner.",
+        "en": "Bracelet shoots out a group of cloudy sparkle projectiles with limited Duration at random enemies."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 6,
       "emoji": "📿",
       "image": "https://vampire.survivors.wiki/images/Sprite-Bracelet.png",
@@ -526,6 +849,13 @@
         "de": "Lässt dich eine beliebige freigeschaltete Basiswaffe wählen.",
         "en": "Allows you to choose any unlocked base weapon."
       },
+      "effects": {
+        "de": "Wer Candybox erhält, bekommt eine Liste aller Basiswaffen, die im Lauf noch fehlen. Eine Waffe erscheint dort nur, wenn sie im Spielstand schon einmal benutzt wurde.\n\nAuch verbannte Waffen stehen in der Liste. Die Seltenheit wird mit Glück multipliziert. Normalerweise gibt es Candybox nur einmal: Wer sie beim ersten Angebot nicht nimmt, bekommt sie bei Level-Ups nie wieder angeboten.",
+        "en": "Obtaining Candybox opens a list of all base weapons remaining to be obtained in the run. For a weapon to appear in the Candybox, it has to be used at least once in the entire save file beforehand.\n\nWeapons that were banished will also still appear in the list. Its rarity is multiplied by Luck. Under normal circumstances, it is only available once. If it is not taken when it is first offered, it will never be offered again with level ups."
+      },
+      "affectedBy": [
+        "luck"
+      ],
       "maxLevel": 1,
       "emoji": "🍬",
       "image": "https://vampire.survivors.wiki/images/Sprite-Candybox.png",
@@ -543,6 +873,18 @@
         "de": "Greift den nächsten Gegner mit einer Kombo an; schlägt zurück.",
         "en": "Strikes with a combo attack at the nearest enemy. Retaliates."
       },
+      "effects": {
+        "de": "Victory Sword führt eine Reihe blauer Hiebe gegen die nächsten Gegner aus. Als Vergeltung schlägt es sechsmal um den Charakter herum zu, höchstens alle 0,6 Sekunden.\n\nAuf Level 8 kann es kritisch treffen: doppelter Schaden mit 10 % Chance, abhängig von Glück. Ab Level 8 wird außerdem jeder fünfte Hieb zum Finisher, einem senkrechten Hieb über eine große Fläche.",
+        "en": "Victory Sword creates a series of blue slashes at the closest enemies. When retaliating, it slashes six times around the character and can retaliate every 0.6 seconds.\n\nAt level 8, it becomes capable of dealing critical hits, which deal 2x damage and have 10% chance to occur. This chance is affected by Luck. Upon reaching level 8, its finisher is also activated, causing every five slashes to become a finisher that slashes vertically, covering a large area."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "amount",
+        "cooldown",
+        "luck",
+        "armor"
+      ],
       "maxLevel": 12,
       "emoji": "⚔️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Victory_Sword.png",
@@ -561,6 +903,18 @@
         "de": "Stößt Flammenkegel aus.",
         "en": "Emits cones of flames."
       },
+      "effects": {
+        "de": "Flames of Misspell schießt einen Flammenstoß, ähnlich wie Nduja Fritta Tanto, in die Richtung, in die sich der Spieler bewegt oder zuletzt bewegt hat.",
+        "en": "Flames of Misspell shoots a burst of flames, similar to Nduja Fritta Tanto, in the direction the player is moving or last moved."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "☄️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Flames_of_Misspell.png",
@@ -578,6 +932,18 @@
         "de": "Kann zurückschlagen, wenn du Gesundheit verlierst.",
         "en": "May retaliate when losing health."
       },
+      "effects": {
+        "de": "Pako Battiliar erzeugt eine Gruppe Fledermäuse mit roten Nachbildern, die von einem zufälligen Punkt außerhalb des Bildschirms geradeaus quer durch die Bildschirmmitte fliegen. Jede Fledermaus trifft Gegner bis zu ihrem Durchschlag und verschwindet dann. Als Vergeltung erzeugt die Waffe eine weitere Gruppe, höchstens etwa alle 1,8 Sekunden.",
+        "en": "The Pako Battiliar spawns a group of bats with red afterimages which flies in a straight line across the screen, starting at a random location off-screen and passes through the center of the screen relative to where they spawned. Each bat deals damage to enemies it encounters up to its Pierce and then disappears. When retaliating, it spawns another group of bats and can retaliate every ~1.8 seconds."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown",
+        "armor"
+      ],
       "maxLevel": 8,
       "emoji": "🦇",
       "image": "https://vampire.survivors.wiki/images/Sprite-Pako_Battiliar.png",
@@ -595,6 +961,17 @@
         "de": "Zielt auf einen Gegner in Blickrichtung; legt Munitionsvorrat an, solange kein Gegner in Reichweite ist.",
         "en": "Aims at an enemy in the faced direction. Stockpiles projectiles when enemies are out of range."
       },
+      "effects": {
+        "de": "Ammo Appalate schießt kleine weiße Kugeln in Salven auf den nächsten Gegner in Blickrichtung. Sind keine Gegner da, wird die Munition für später gespart.",
+        "en": "Ammo Appalate shoots small white bullets at the closest enemy in the faced direction in a burst, and saves up ammo if there are no enemies to be unloaded later."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "💥",
       "image": "https://vampire.survivors.wiki/images/Sprite-Ammo_Appalate.png",
@@ -613,6 +990,18 @@
         "de": "Kritische Treffer erzeugen Schadenszonen; Wiederbelebungen erhöhen den Schaden aufeinanderfolgender kritischer Treffer.",
         "en": "Critical hits generate damaging zones. Revivals affect damage of consecutive critical strikes."
       },
+      "effects": {
+        "de": "Unearthly Bolt erzeugt grüne Blitze, die den nächsten Gegner anvisieren. Kritische Treffer erhöhen den Schaden nicht, sondern lösen eine grüne Explosion um den getroffenen Gegner aus, die allen Gegnern in ihrem Radius Schaden zufügt.",
+        "en": "Unearthly Bolt spawns green lightning bolts that target the nearest enemy. This weapon does not deal increased damage when it crits. Instead it creates a green explosion, centered on the targeted enemy, which deals damage to all enemies in its radius."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "amount",
+        "cooldown",
+        "luck",
+        "revival"
+      ],
       "maxLevel": 8,
       "emoji": "🌩️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Unearthly_Bolt.png",
@@ -631,6 +1020,17 @@
         "de": "Wird stärker durch Bewegung, durch Orologions und gegen eingefrorene Gegner.",
         "en": "Stronger with movement, Orologions, and against frozen enemies"
       },
+      "effects": {
+        "de": "Glass Fandango hat zwei Angriffsmuster mit einer kurzen, durchscheinenden blauen Klinge: Beim Laufen greift es in Blickrichtung an, im Stehen mit der normalen Verzögerung in sechs Richtungen um den Charakter.\n\nBewegungsgeschwindigkeit erhöht beim Laufen die Feuerrate; beim Stehenbleiben beginnt die normale Abklingzeit.",
+        "en": "Glass Fandango has two attack patterns which involve firing a short-ranged translucent blue blade: While moving, it attacks in the faced direction; while standing still, it will have the standard attack speed delay and attack in six directions around the character.\n\nMove Speed increases its overall fire rate when moving; when the character stops, it initiates the default Cooldown."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "amount",
+        "cooldown",
+        "moveSpeed"
+      ],
       "maxLevel": 8,
       "emoji": "🔮",
       "image": "https://vampire.survivors.wiki/images/Sprite-Glass_Fandango.png",
@@ -666,6 +1066,18 @@
         "de": "Einfacher Thunfisch; Level-Boni setzen auf Geschwindigkeit.",
         "en": "Basic tuna. Level up bonuses focus on Speed."
       },
+      "effects": {
+        "de": "Tonno Subito schießt einen zappelnden Thunfisch auf den nächsten Gegner, der eine anhaltende blaue Explosion mit Blasen erzeugt.\n\nTonno Subito hat eine Trefferverzögerung von 0,35 Sekunden: Dieselbe Explosion kann denselben Gegner höchstens alle 0,35 Sekunden treffen. Weil alle laufenden Verzögerungen gleichzeitig zurückgesetzt werden, sobald eine abläuft, werden manche Gegner trotzdem öfter getroffen.",
+        "en": "Tonno Subito shoots a flopping tuna at the closest enemy, creating a lingering blue explosion that spawns bubbles.\n\nTonno Subito has a 0.35 seconds Hitbox Delay, meaning that the same enemy cannot be hit more often than every 0.35 seconds by the same explosion. However, because all active delays are reset simultaneously as soon as any one elapses, some enemies may get hit more often."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 6,
       "emoji": "🐟",
       "image": "https://vampire.survivors.wiki/images/Sprite-Tonno_Subito.png",
@@ -683,6 +1095,10 @@
       "description": {
         "de": "Geschlagener Thunfisch; Level-Boni setzen auf Dauer.",
         "en": "Whipped tuna. Level up bonuses focus on Duration."
+      },
+      "effects": {
+        "de": "Tonnado feuert einen zylinderförmigen Tornado mit einem Thunfisch darin, der manchmal zwischen Gegnern hin und her springt.\n\nTonnado hat eine Trefferverzögerung von 1 Sekunde: Derselbe Tornado kann denselben Gegner höchstens einmal pro Sekunde treffen. Weil alle laufenden Verzögerungen gleichzeitig zurückgesetzt werden, sobald eine abläuft, werden manche Gegner trotzdem öfter getroffen.",
+        "en": "Tonnado fires a cylindrical tornado with a tuna caught up in it, sometimes bouncing between the enemies.\n\nTonnado has a 1 second Hitbox Delay, meaning that the same enemy cannot be hit more often than every second by the same tornado. However, because all active delays are reset simultaneously as soon as any one elapses, some enemies may get hit more often."
       },
       "maxLevel": 6,
       "emoji": "🌪️",
@@ -702,6 +1118,10 @@
         "de": "Süßwasser-Thunfisch; Level-Boni setzen auf Abklingzeit.",
         "en": "Freshwater tuna. Level up bonuses focus on Cooldown."
       },
+      "effects": {
+        "de": "Tonn'omoto feuert Thunfische vom unteren Bildschirmrand schräg nach oben, zu der Seite, von der der Charakter wegschaut. An den Bildschirmrändern springen sie wieder schräg nach oben. Beim Aufsteigen stoßen sie hellere Blasen aus, bis sie an Schwung verlieren. Die Thunfische bewegen sich nicht mit dem Charakter; mit passender Bewegung springen sie zwischen den Rändern hin und her, ohne unten aus dem Bild zu fallen, bis die Dauer endet.",
+        "en": "Tonn'omoto fires tuna diagonally upwards from the bottom of the screen to whichever side the character is facing away from. Once they reach the sides of the screen, they bounce diagonally upwards again. When they climb up, whiter bubbles comes out of them until they lose upward momentum. The tuna does not move relative to the character, and the player can move such that they can keep bouncing between the sides without falling off the bottom of the screen again until the Duration runs out."
+      },
       "maxLevel": 6,
       "emoji": "🏞️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Tonn%27omoto.png",
@@ -720,6 +1140,10 @@
         "de": "Himmlischer Thunfisch; Level-Boni setzen auf Anzahl.",
         "en": "Heavenly tuna. Level up bonuses focus on Amount."
       },
+      "effects": {
+        "de": "Tonn'oddeeo lässt Thunfische von oben rechts regnen, die auf dem Boden landen und eine anhaltende blaue Zone mit Blasen erzeugen. Sie drehen sich im Fallen, springen nach der Landung nach links und bleiben liegen; auch dann verursachen sie neben der Zone noch Schaden.\n\nTonn'oddeeo hat eine Trefferverzögerung von 0,75 Sekunden: Dieselbe Zone und derselbe Thunfisch können denselben Gegner höchstens alle 0,75 Sekunden treffen. Weil alle laufenden Verzögerungen gleichzeitig zurückgesetzt werden, sobald eine abläuft, werden manche Gegner trotzdem öfter getroffen.",
+        "en": "Tonn'oddeeo rains down tunas from the top right, causing them to land on the floor and creating a lingering blue zone that spawns bubbles. They spin when falling and after they land, bounce to the left and stop, in which they can still damage enemies besides the zone.\n\nTonn'oddeeo has a 0.75 seconds Hitbox Delay, meaning that the same enemy cannot be hit more often than every 0.75 seconds by the same zone and tuna. However, because all active delays are reset simultaneously as soon as any one elapses, some enemies may get hit more often."
+      },
       "maxLevel": 6,
       "emoji": "😇",
       "image": "https://vampire.survivors.wiki/images/Sprite-Tonn%27oddeeo.png",
@@ -737,6 +1161,10 @@
       "description": {
         "de": "Riesen-Thunfisch; Level-Boni setzen auf Fläche, die Anzahl erhöht stattdessen die Trefferfrequenz.",
         "en": "King-sized tuna. Level up bonuses focus on Area. Amount affects hit box frequency instead."
+      },
+      "effects": {
+        "de": "Tonne beschwört über dem Charakter einen riesigen Thunfisch, der mit einem Salto herabfällt und eine anhaltende blaue Zone mit Blasen erzeugt. Er bewegt sich nicht mit dem Charakter, sondern fällt eine feste Strecke an der Stelle, an der er erscheint.\n\nTonne hat eine Trefferverzögerung von 1,5 Sekunden: Dieselbe Zone kann denselben Gegner höchstens alle 1,5 Sekunden treffen. Mehr Anzahl verkürzt diese Verzögerung bis zu einer Untergrenze; die genauen Werte sind im Wiki noch offen. Weil alle laufenden Verzögerungen gleichzeitig zurückgesetzt werden, sobald eine abläuft, werden manche Gegner trotzdem öfter getroffen.",
+        "en": "Tonne summon a giant tuna above the character that falls while doing a flip, creating a lingering blue zone that spawns bubbles. It does not move with the character, falling down a set distance where it is summoned.\n\nTonne has a 1.5 seconds Hitbox Delay, meaning that the same enemy cannot be hit more often than every 1.5 seconds by the same zone. This is reduced by ? seconds per Amount to a cap of ?, so they cannot be hit more often than every ?. However, because all active delays are reset simultaneously as soon as any one elapses, some enemies may get hit more often."
       },
       "maxLevel": 6,
       "emoji": "🐋",
@@ -757,6 +1185,10 @@
         "de": "Premium-Thunfisch; Level-Boni setzen auf Macht.",
         "en": "Premium tuna. Level up bonuses focus on Might."
       },
+      "effects": {
+        "de": "Unsurpassed beschwört Thunfische von der Seite hinter dem Charakter, die zappelnd waagerecht über den Bildschirm schießen und eine begrenzte Dauer haben.\n\nUnsurpassed hat eine Trefferverzögerung von 1 Sekunde: Derselbe Thunfisch kann denselben Gegner höchstens einmal pro Sekunde treffen. Weil alle laufenden Verzögerungen gleichzeitig zurückgesetzt werden, sobald eine abläuft, werden manche Gegner trotzdem öfter getroffen.",
+        "en": "Unsurpassed summons tuna from the side behind the character, as they flop and dash through the screen horizontally, they have a limited Duration.\n\nUnsurpassed has a 1 second Hitbox Delay, meaning that the same enemy cannot be hit more often than every second by the same tuna. However, because all active delays are reset simultaneously as soon as any one elapses, some enemies may get hit more often."
+      },
       "maxLevel": 6,
       "emoji": "🍣",
       "image": "https://vampire.survivors.wiki/images/Sprite-Unsurpassed.png",
@@ -775,6 +1207,18 @@
         "de": "Die Dauer erhöht die Anzahl; kann kritisch treffen.",
         "en": "Duration affects Amount. Can deal critical damage."
       },
+      "effects": {
+        "de": "Santa Javelin lässt in Abständen Eiszapfen fächerförmig vom Himmel fallen. Jeder erzeugt beim Aufprall eine blaue Druckwelle mit Flächenschaden. Mehr Dauer erhöht die Anzahl.\n\nStandardmäßig kann die Waffe kritisch treffen: doppelter Schaden mit 5 % Chance, abhängig von Glück.",
+        "en": "Santa Javelin intermittently drops icicles in a fan-shaped pattern from the sky onto the ground, each creating a blue shockwave at the point of impact that deals Area-of-Effect damage. Increases to Duration increase Amount.\n\nBy default, it is capable of dealing critical hits, which deal 2x damage and have 5% chance to occur. This chance is affected by Luck."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "duration",
+        "amount",
+        "cooldown",
+        "luck"
+      ],
       "maxLevel": 8,
       "emoji": "🔱",
       "image": "https://vampire.survivors.wiki/images/Sprite-Santa_Javelin.png",
@@ -793,6 +1237,18 @@
         "de": "Kann Gegner entwaffnen (Defang).",
         "en": "Might Defang enemies."
       },
+      "effects": {
+        "de": "Beim Auslösen erzeugt Gaze of Gaea eine tropfenförmige Schadenszone in Blickrichtung.\n\nMit 3 % Chance (abhängig von Glück) macht sie Gegner harmlos.",
+        "en": "Upon triggering, Gaze of Gaea creates a teardrop-shaped damaging zone in the faced direction.\n\nIt has a 3% chance to defang enemies, which is affected by Luck."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "duration",
+        "amount",
+        "cooldown",
+        "luck"
+      ],
       "maxLevel": 8,
       "emoji": "🌍",
       "image": "https://vampire.survivors.wiki/images/Sprite-Gaze_of_Gaea.png",
@@ -811,6 +1267,16 @@
         "de": "Richtet festen Schaden abhängig von der Waffenstufe an.",
         "en": "Deals fixed damage based on Weapon Level."
       },
+      "effects": {
+        "de": "Magi-Stone lässt rote, blaue und gelbe Doppelpyramiden-Edelsteine von oben fallen, die beim Treffer in kleinere Steine zerbrechen. Der Grundschaden steigt mit jedem Level um 10. Macht und Dauer wirken nicht.\n\nZwischen dem großen Stein und seinen Bruchstücken gibt es keine Trefferverzögerung. Die kleinen Steine verursachen halb so viel Grundschaden wie der große.",
+        "en": "Magi-Stone drops red, blue, and yellow bipyramid gems from the top of the screen that break into smaller gems upon hitting their target. The base damage of this weapon is increased by 10 every level. It ignores Might and Duration.\n\nThere is zero hitbox delay between the large gem and smaller pieces it breaks into. The smaller gems deal half the base damage of the larger gem."
+      },
+      "affectedBy": [
+        "area",
+        "speed",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "💎",
       "image": "https://vampire.survivors.wiki/images/Sprite-Magi-Stone.png",
@@ -828,6 +1294,16 @@
         "de": "Erzeugt schmale Schadenszonen; wächst stark mit der Anzahl.",
         "en": "Generates thin damaging zones. High Amount scaling."
       },
+      "effects": {
+        "de": "Phas3r sendet waagerechte bunte Lichtstrahlen um einen Gegner aus, zuerst rot, dann gelb, blau und magenta; ist es nicht der erste Schuss der Folge, ersetzt orange das Rot. Die roten Strahlen erreichen weiter entfernte Gegner und feuern als große Salve, deren maximale Anzahl auf bestimmten Leveln steigt. Die übrigen Strahlen teilen sich die restliche Anzahl der Folge und feuern meist nur ein oder zwei gleichzeitig, weil jedes Level auch mehr Schüsse pro Folge in derselben Zeit bringt. Jeder Schuss spielt einen Ton; mit steigendem Level wird die Feuerrate höher und die Melodie deutlicher.",
+        "en": "Phas3r emits horizontal colorful beams of light centered around an enemy, starting with red, then yellow, blue, magenta, with orange replacing red when it is not the first shot of the sequence. The red beams can target enemies from further away and fire in a big burst, the max Amount of the burst is increased at certain levels; the remaining beams split up the leftover Amount for the sequence, usually only firing up to 1 or 2 at once as each level also increases how many shots is fired for each sequence in the same amount of time. Each time the weapon shoots, it plays a note. As the weapon levels up, the fire rate increases and makes the melody it plays more apparent."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "📡",
       "image": "https://vampire.survivors.wiki/images/Sprite-Phas3r.png",
@@ -846,6 +1322,18 @@
         "de": "Geschwindigkeit und Dauer erhöhen stattdessen die Zahl der Trefferzonen.",
         "en": "Speed and Duration affect the number of hit boxes instead."
       },
+      "effects": {
+        "de": "Chaos Rune schießt rote Runen vom unteren Bildschirmrand nach oben, die Gegner durchdringen und chaotisch wieder herabfallen.\n• Die Runen verursachen erst Schaden, nachdem sie ihren höchsten Punkt erreicht haben und wieder fallen; beim Aufsteigen machen sie keinen Schaden.\n\nAnzahl bestimmt, wie viele Runen pro Auslösung entstehen, Geschwindigkeit und Dauer, wie oft jede Rune Schaden verursachen kann.",
+        "en": "Chaos Rune shoots red runes upwards from the bottom of the screen, passing through enemies and arcing back down chaotically.\n• Note that the runes fired by Chaos Rune are only able to deal damage after reaching their apex and falling back down. Runes will not deal damage to enemies when they are shot upwards.\n\nAmount affects how many runes are summoned with each activation, while Speed and Duration affect how many times each rune can deal damage."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 8,
       "emoji": "🌌",
       "image": "https://vampire.survivors.wiki/images/Sprite-Chaos_Rune.png",
@@ -863,6 +1351,13 @@
         "de": "Lässt dich einen zusätzlichen passiven Gegenstand wählen.",
         "en": "Allows you to choose an extra passive weapon."
       },
+      "effects": {
+        "de": "Wer Arma Dio erhält, bekommt eine Liste aller noch verfügbaren passiven Gegenstände. Die Seltenheit wird mit Glück multipliziert. Wie die meisten Waffen verschwindet sie nach der Auswahl aus dem Pool.\n\nPassive Gegenstände, die erst unter bestimmten Bedingungen in den Level-Up-Pool kommen (etwa die Mini-Crewmates, die ihre Waffe auf einem bestimmten Level brauchen, oder Weapon Power-Up, das eine Waffe aus Operation Guns braucht), lassen sich über Arma Dio erst wählen, wenn diese Bedingungen erfüllt sind.",
+        "en": "Obtaining Arma Dio opens a list of all passive items still available. Its rarity is multiplied by Luck. Like most weapons, it will be removed from the item pool upon being picked.\n\nPassive items which only get added to the level-up item pool after certain requirements are met, like all Mini Crewmates requiring their corresponding weapon at a certain level and Weapon Power-Up requiring any weapon from the Operation Guns, are only selectable via the Arma Dio after those requirements are met."
+      },
+      "affectedBy": [
+        "luck"
+      ],
       "maxLevel": 1,
       "emoji": "🗡️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Arma_Dio.png",
@@ -881,6 +1376,17 @@
         "de": "Weiterentwickelte Peitsche. Kann kritischen Schaden verursachen und LP absorbieren.",
         "en": "Evolved Whip. Can deal critical damage and absorb HP."
       },
+      "effects": {
+        "de": "Blutige Träne erzeugt einen roten waagerechten Hieb, der vom Oberkörper des Spielers ausgeht und allen Gegnern im Bereich Schaden zufügt.\n\nNach der Entwicklung sind die Hiebe größer.",
+        "en": "Bloody Tear's attack creates a red slash horizontally that originates from the player's torso, damaging all enemies in the area.\n\nBloody Tear's slashes are larger when evolved."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "amount",
+        "cooldown",
+        "luck"
+      ],
       "maxLevel": 1,
       "emoji": "🩸",
       "image": "https://vampire.survivors.wiki/images/Sprite-Bloody_Tear.png",
@@ -899,6 +1405,17 @@
         "de": "Weiterentwickelter Zauberstab. Feuert ohne Verzögerung.",
         "en": "Evolved Magic Wand. Fires with no delay."
       },
+      "effects": {
+        "de": "Heiliger Zauberstab feuert nicht durchdringende blaue Zauberblitze auf Gegner in der Nähe, mit halber Abklingzeit und doppelter Geschossgeschwindigkeit gegenüber der Grundform. Zusätzliche Geschosse durch Anzahl werden nacheinander abgefeuert. Die Geschosse können nicht durch Wände fliegen.",
+        "en": "Holy Wand fires non-piercing blue magic bolts at nearby enemies, and has half the Cooldown and double the Bracer of its base form. Additional projectiles from Amount will be fired in a sequence. The projectiles cannot pass through walls."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "🌟",
       "image": "https://vampire.survivors.wiki/images/Sprite-Holy_Wand.png",
@@ -917,6 +1434,17 @@
         "de": "Weiterentwickeltes Messer. Feuert ohne Verzögerung.",
         "en": "Evolved Knife. Fires with no delay."
       },
+      "effects": {
+        "de": "Tausendschneide feuert einen endlosen Strom von Messern in die Richtung, in die sich der Spieler bewegt oder zuletzt bewegt hat.\n\nSie schießt dreimal so schnell, mit deutlich mehr Geschwindigkeit und etwas längerem Intervall. Die Geschosse können nicht durch Wände fliegen.",
+        "en": "Thousand Edge continuously fires a never-ending stream of knife projectiles in the direction the player is moving or last moved.\n\nThousand Edge shoots three times faster with a sizable increase to Speed, with a small increase to Interval. The projectiles cannot pass through walls."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "🗡️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Thousand_Edge.png",
@@ -935,6 +1463,17 @@
         "de": "Weiterentwickelte Axt. Durchdringt Gegner.",
         "en": "Evolved Axe. Passes through enemies."
       },
+      "effects": {
+        "de": "Todesspirale schleudert neun rote, rotierende Sensen rund um den Spieler. Jede Sense hat sehr hohen Durchschlag und ist größer, dafür ist der Schaden geringer. Die geringere Geschwindigkeit hält sie länger auf dem Bildschirm.\n\nTodesspirale skaliert mit dem Flächenwert des Charakters mal 1,2, also 0,1 weniger als Axt. Weil die Grundfläche aber größer ist, ergibt das insgesamt einen Faktor von 1,44. Flächenboni des Charakters sind auf das Zehnfache des Grundwerts begrenzt: Axt wird höchstens 10-mal, Todesspirale höchstens 12-mal so groß wie ursprünglich.",
+        "en": "Death Spiral shoots out nine red spinning scythes around the player. Each scythe has extremely high Pierce and are bigger, with damage reduction to compensate. It also has a slower Speed which make them stay on screen for longer.\n\nDeath Spiral scales with the character's Area stat multiplied by 1.2, decreased by 0.1 compared to Axe. While this may seem like a downside, Death Spiral base Area is increased and in total it gives a multiplier of 1.44. Also, Area bonuses from the character is capped at 10 times the base value. In the end, Axe will still cap at 10 times bigger the original and Death Spiral will cap at 12 times bigger."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "🌀",
       "image": "https://vampire.survivors.wiki/images/Sprite-Death_Spiral.png",
@@ -953,6 +1492,17 @@
         "de": "Weiterentwickeltes Kreuz. Kann kritischen Schaden verursachen.",
         "en": "Evolved Cross. Can deal critical damage."
       },
+      "effects": {
+        "de": "Himmelsschwert wirft ein riesiges Schwert auf den nächsten Gegner, das dann zu rotieren beginnt und wie ein Bumerang in die Gegenrichtung fliegt, bis es den Bildschirm verlässt. Die Geschwindigkeit ist doppelt so hoch, der Schaden mehr als doppelt. Als Ausgleich für weniger Anzahl, kleineres Pool-Limit und längere Abklingzeit stößt es Gegner sehr stark zurück.\n\nStandardmäßig kann es kritisch treffen: 2,5-facher Schaden mit 10 % Chance, abhängig von Glück.",
+        "en": "Heaven Sword throws a giant sword projectile at the closest enemy, which then starts spinning and boomerangs in the opposite direction it was thrown until it leaves the screen. Its Speed is doubled and damage more than doubles. It gains an extreme amount of knockback to push enemies back to compensate for the Amount and Pool Limit loss, and Cooldown increase.\n\nBy default, it is capable of dealing critical hits, which deal 2.5x damage and have 10% chance to occur. This chance is affected by Luck."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "⚔️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Heaven_Sword.png",
@@ -971,6 +1521,19 @@
         "de": "Weiterentwickelte Königsbibel. Endet nie.",
         "en": "Evolved King Bible. Never ends."
       },
+      "effects": {
+        "de": "Unheilige Vesper erzeugt einen Ring aus roten Symbolen um den Spieler, aus dem ab und zu violette Seiten fallen. Die Symbole kreisen im Uhrzeigersinn und fügen jedem Gegner Schaden zu, den sie berühren. Gegenüber der Grundform hat sie etwas mehr Fläche, viel mehr Rückstoß sowie weniger Geschwindigkeit und Dauer. Weitere Symbole durch Anzahl kommen gleichmäßig verteilt in den Kreis.\n\nGeschwindigkeit bestimmt, wie schnell die Symbole kreisen, Dauer, wie lange sie kreisen, bevor die Abklingzeit beginnt, und Fläche, wie weit vom Spieler entfernt sie kreisen (bis zu einer Obergrenze) und wie groß sie sind.",
+        "en": "Unholy Vespers spawn a ring of red symbols around the player that occasionally has purple pages fall out of it. The symbols revolve clockwise around the player and deal damage to any enemy they touch. It has a small increase in Area, a massive increase in knockback, and a decrease of Speed and Duration. Additional symbols from Amount are added to the circle and spaced evenly.\n\nProjectile Speed affects how fast the symbols rotate, Duration affects how long they rotate before cooling down, and Area affects how far away from the player they spin which has a cap in size and increases the size of the symbols."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown",
+        "curse"
+      ],
       "maxLevel": 1,
       "emoji": "📕",
       "image": "https://vampire.survivors.wiki/images/Sprite-Unholy_Vespers.png",
@@ -989,6 +1552,18 @@
         "de": "Weiterentwickelter Feuerstab. Geht durch Gegner hindurch.",
         "en": "Evolved Fire Wand. Passes through enemies."
       },
+      "effects": {
+        "de": "Höllenfeuer schießt große brennende Meteore auf Gegner in der Nähe, die langsam in eine Richtung fliegen und unbegrenzt viele Gegner durchdringen.\n\nDer Grundschaden ist noch höher, dafür sind Geschwindigkeit, Anzahl und Pool-Limit geringer. Das Intervall ist deutlich länger, sodass die Meteore weiter auseinander fliegen. Sie können jetzt auch durch Wände fliegen.",
+        "en": "Hellfire shoots large flaming meteors at nearby enemies that move slowly in a given direction and Pierce infinitely.\n\nHellfire gets an even higher Base Damage, but with slower Projectile Speed and reduced Amount and Pool Limit. Its Interval is increased substantially, spacing out the meteors much more. The meteors can now also pass through walls."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown",
+        "luck"
+      ],
       "maxLevel": 1,
       "emoji": "☄️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Hellfire.png",
@@ -1007,6 +1582,17 @@
         "de": "Entwickler Knoblauch. Klaut Herzen. Kraft steigt wenn LP zurückerlangt wird",
         "en": "Evolved Garlic. Steals hearts. Power increases when recovering HP."
       },
+      "effects": {
+        "de": "Seelenfresser legt eine runde schwarze Aura um den Spieler, die Partikel anzieht, langsam nach innen pulsiert und Gegnern darin Schaden zufügt.\n\nGegenüber Knoblauch wächst die Fläche stärker, und der Grundschaden ist höher.",
+        "en": "Soul Eater places a circular black aura around the player that pulls particles and slowly pulses inward, dealing damage to enemies inside it.\n\nSoul Eater has a larger increase in Area and an increase in Base Damage."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "cooldown",
+        "recovery",
+        "revival"
+      ],
       "maxLevel": 1,
       "emoji": "👻",
       "image": "https://vampire.survivors.wiki/images/Sprite-Soul_Eater.png",
@@ -1024,6 +1610,19 @@
         "de": "Entwickltes Santa Wasser. Die Schadenszone folgt dir und wenn sie sich bewegen.",
         "en": "Evolved Santa Water. Damaging zones follow you and grow when they move."
       },
+      "effects": {
+        "de": "La Borra lässt Flaschen mit Weihwasser vom Himmel regnen, die beim Aufprall zerbrechen und Pfützen aus Wasser und blauen Flammen hinterlassen, die Gegnern Schaden zufügen. Die Flaschen fallen im Uhrzeigersinn ungefähr im Kreis. Die Pfützen kriechen langsam auf den Charakter zu und wachsen dabei bis zu einer Höchstgröße.\n\nDie Pfützen haben mehr Fläche und Dauer, die Abklingzeit ist kürzer. Dank hohem Pool-Limit können mehr Pfützen gleichzeitig auf dem Bildschirm sein.",
+        "en": "La Borra rains down bottles of holy water from the sky, which break upon impact with the ground, leaving puddles of water and blue flames that damage enemies. The bottles are dropped in a clockwise, roughly circular pattern. These puddles then slowly creep towards the character, increase in size as they travel, and have a maximum size limit.\n\nIts puddle have a bigger Area, increased Duration, and lower Cooldown. More pools can be on screen at once with a high Pool Limit."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown",
+        "moveSpeed"
+      ],
       "maxLevel": 1,
       "emoji": "🌊",
       "image": "https://vampire.survivors.wiki/images/Sprite-La_Borra.png",
@@ -1041,6 +1640,19 @@
         "de": "Entwicklung von Runenläufer: explodiert beim Abprallen und als Vergeltung.",
         "en": "Evolved Runetracer. Explodes when bouncing and in retaliation."
       },
+      "effects": {
+        "de": "NO FUTURE feuert einen abprallenden türkisen Laser in zufällige Richtungen. Er durchdringt unbegrenzt viele Gegner und prallt von Bildschirmrändern und Hindernissen ab. Als Vergeltung erzeugt die Waffe eine Explosion um den Charakter, höchstens alle 0,5 Sekunden.\n\nGegenüber Runenläufer hat sie viel mehr Geschwindigkeit, weniger Anzahl, etwas weniger Dauer und kein Intervall. Ihre Abklingzeit hängt von der Dauer der Waffe ab und verlängert sich dadurch von 3 auf insgesamt 4 Sekunden. Jeder Punkt Rüstung erhöht den Schaden der Vergeltungsexplosion um 10 % (additiv).",
+        "en": "NO FUTURE fires a ricocheting cyan laser in random directions. It has infinite Pierce and bounces off the edge of the screen or obstacles, damaging enemies they hit. The explosion radius has a translucent test pattern, surrounded by a circle of purple particles. When retaliating, it creates an explosion around the character and can retaliate every 0.5 seconds.\n\nIt has a much higher Speed, lower Amount, slightly lower Duration and no Interval compared to the Runetracer. However, its Cooldown depends on the weapon's Duration, meaning that its Cooldown is extended by its Duration of 3 seconds to 4 seconds total. Each Armor also increase the retaliatory explosion damage by 10% additively."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown",
+        "armor"
+      ],
       "maxLevel": 1,
       "emoji": "💥",
       "image": "https://vampire.survivors.wiki/images/Sprite-NO_FUTURE.png",
@@ -1059,6 +1671,16 @@
         "de": "Entwicklter Blizring. Geschosse schlagen zweimal ein.",
         "en": "Evolved Lightning Ring. Projectiles strike twice."
       },
+      "effects": {
+        "de": "Donnerschlinge lässt Blitze vom Himmel auf zufällige Gegner einschlagen; nach kurzer Verzögerung schlägt an derselben Stelle ein zweiter Blitz ein, was die Angriffsrate praktisch verdoppelt. Beim Einschlag entsteht ein oranger, funkelnder Kreis als Trefferfläche, die bis zum zweiten Einschlag bestehen bleibt. Die Blitze selbst verursachen keinen Schaden. Das Einschlagmuster ist komplexer als beim Blitzring.\n\nZwischen den Einschlägen gibt es kein kurzes Intervall mehr.",
+        "en": "Thunder Loop summons lightning strikes from the sky to deal damage to random enemies, and the lightning strikes again in the same location after a small delay, effectively doubling the attack rate. When the lightning strikes the ground, it creates an orange circle that sparkles red, orange, and yellow. That hitbox lingers and is visible with another circle slowly closing in until the second strike. The lightning bolts themselves do not deal damage. The pattern of the lightning strikes is also more complex.\n\nThunder Loop does not attack with a small Interval between each strike anymore."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "🌩️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Thunder_Loop.png",
@@ -1077,6 +1699,15 @@
         "de": "Entwickeltes Pentagramm. Erzeugt extra Edelsteine und sammelt sie alle.",
         "en": "Evolved Pentagram. Generates extra gems and gathers all of them."
       },
+      "effects": {
+        "de": "Wie Pentagramm löscht Prächtiger Mond die Gegner auf dem Bildschirm, zerstört aber keine Pickups mehr, sondern erzeugt zusätzliche Erfahrung. Die Erzeugungs- und die Löschphase verursachen immer Schaden in Höhe der maximalen Gesundheit des Gegners. Liegt dieser unter 660, wird ein Wert zwischen 655 und 665 angezeigt.",
+        "en": "Similar to Pentagram, Gorgeous Moon erases enemies on the screen, but no longer destroys pickups. Instead, it generates additional experience. Gorgeous Moon Generation and Erasure phase always deal damage equal to the max health of the enemy. If it is lower than 660, the damage number is overwritten to display it between 655 and 665."
+      },
+      "affectedBy": [
+        "cooldown",
+        "luck",
+        "growth"
+      ],
       "maxLevel": 1,
       "emoji": "🌕",
       "image": "https://vampire.survivors.wiki/images/Sprite-Gorgeous_Moon.png",
@@ -1094,6 +1725,20 @@
         "de": "Entwicklung von Gatti Amari: kann alles in Gold verwandeln.",
         "en": "Evolved Gatti Amari. Might turn anything into gold."
       },
+      "effects": {
+        "de": "Vicious Hunger beschwört riesige gelbe Katzenaugen mit einem Hexagramm am Bildschirmrand. Sie bewegen sich meist geradeaus, wechseln nach einer Weile die Richtung und fügen Gegnern bei Berührung Schaden zu. Der Grundschaden steigt gegenüber Gatti Amari auf 30, außer der Grundschaden von Gatti Amari ist durch gefressene Floor Chicken schon höher. Dafür ist die Dauer etwas kürzer, die Abklingzeit deutlich länger und die Anzahl um 1 geringer.",
+        "en": "Vicious Hunger summons giant yellow cat eyeballs with a hexagram on the edge of the screen. The eyeballs mostly travel in a straight line and may change direction after a while, dealing damage when in contact with enemies. Compared to Gatti Amari, the Base Damage is increased to 30 and will be overridden by Gatti Amari's Base Damage if it is already higher from all the Floor Chicken consumed. However, it has a slight decrease in Duration, and a big increase in Cooldown and Amount is also lowered by 1."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown",
+        "luck",
+        "greed"
+      ],
       "maxLevel": 1,
       "emoji": "😼",
       "image": "https://vampire.survivors.wiki/images/Sprite-Vicious_Hunger.png",
@@ -1111,6 +1756,16 @@
         "de": "Entwickeltes Mana-Lied. Verlangsamt Gegner manchmal.",
         "en": "Evolved Song of Mana. Might slow enemies down."
       },
+      "effects": {
+        "de": "Mannajja sendet eine pulsierende Welle funkelnder violetter Partikel in fünf konzentrischen Kreisen aus, ähnlich einer Schallwelle. Die Partikel bleiben in einer senkrechten Säule relativ zum Spieler und bewegen sich mit ihm. Mannajja deckt eine viel größere Fläche ab, hat aber eine etwas längere Abklingzeit.\n\nGetroffene Gegner werden dauerhaft verlangsamt: Ist ein Gegner nicht immun gegen Schwächungen, sinkt seine Bewegungsgeschwindigkeit mit jedem Treffer um weitere 5 %, bis nach 16 Treffern 20 % der ursprünglichen erreicht sind. Die Verlangsamung wirkt multiplikativ mit anderen Änderungen der Bewegungsgeschwindigkeit.",
+        "en": "Mannajja releases a pulsing wave of sparkling purple particles outwards from the player in the shape of five concentric circles similar to a sound wave. The particles are positioned relative to the player in a vertical column around them, and follow their movement. The Mannajja covers a much wider Area but has a slightly longer Cooldown.\n\nEnemies hit by the Mannajja are slowed down permanently. If the enemy is not immune to debuffs, each hit reduces the Movement Speed of the affected enemy by an additional 5%, until it reaches a minimum of 20% of their original speed after 16 hits. The slow effect stacks multiplicatively with other Movement Speed modifications."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "duration",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "🎼",
       "image": "https://vampire.survivors.wiki/images/Sprite-Mannajja.png",
@@ -1128,6 +1783,19 @@
         "de": "Entwicklung von Shadow Pinion: größer, länger, schneller, stärker.",
         "en": "Evolved Shadow Pinion. Bigger, longer, faster, stronger."
       },
+      "effects": {
+        "de": "Während der Bewegung erzeugt Valkyrie Turner Flammen hinter dem Spieler, die langsam nach hinten beschleunigen und Gegnern Schaden zufügen, die darüber laufen. Bleibt der Spieler stehen, werden alle Flammen zu brennenden Lasern, die in Blickrichtung fliegen. Fläche, Dauer, Geschwindigkeit und Grundschaden sind höher, die Anzahl ist um 1 geringer.\n\nBewegungsgeschwindigkeit erhöht beim Laufen, wie oft Flammen entstehen; beim Stehenbleiben beginnt die normale Abklingzeit. Fläche erhöht, wie weit die Flammen fliegen, Geschwindigkeit ihre Beschleunigung.",
+        "en": "While moving, Valkyrie Tuner spawns projectiles in the form of flames behind the player, which slowly accelerate backwards and deal damage to enemies walking over them. When the player stops moving, all of the flames turn into burning lasers that move in the direction the player is facing. It has higher Area, Duration, Speed, and Base Damage. However, its Amount is reduced by 1.\n\nMove Speed increases its overall spawn rate when moving; when the character stops, it initiates the default Cooldown. Area also increases how far the flames travel when they are fired. Speed increases the acceleration."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown",
+        "moveSpeed"
+      ],
       "maxLevel": 1,
       "emoji": "🌪️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Valkyrie_Turner.png",
@@ -1145,6 +1813,14 @@
         "de": "Evolved Clock Lancet. Halves enemies health.",
         "en": "Evolved Clock Lancet. Halves enemies' health."
       },
+      "effects": {
+        "de": "Infinite Corridor feuert nacheinander im Uhrzeigersinn einen weißen Strahl in zwölf Richtungen um den Spieler. Der Strahl verursacht keinen Schaden, friert aber jeden getroffenen Gegner ein. Nach einer vollen Umdrehung, beim Schuss nach oben (12 Uhr), entsteht eine rotierende Regenbogenaura um den Spieler, die die Gesundheit jedes Gegners auf dem Bildschirm halbiert.\n\nInfinite Corridor kann die sonst unverwundbaren Stalker und Drowner in Dairy Plant, Gallo Tower, Cappella Magna und The Bone Zone vor Minute 30 angreifen und besiegen; sie lassen dann Schatztruhen fallen.",
+        "en": "Infinite Corridor fires a white beam around the player in twelve directions clockwise one at a time. The beam does no damage, but will freeze any enemy it hits. After the freezing beam has completed one full rotation and it fires upwards in the 12 o'clock direction, it creates a spinning, shining rainbow aura around the player, halving the health of every enemy on screen.\n\nInfinite Corridor can attack and defeat the otherwise intangible Stalkers and Drowners in Dairy Plant, Gallo Tower, Cappella Magna, and The Bone Zone before minute 30, causing them to drop Treasure Chests."
+      },
+      "affectedBy": [
+        "duration",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "⏳",
       "image": "https://vampire.survivors.wiki/images/Sprite-Infinite_Corridor.png",
@@ -1162,6 +1838,18 @@
         "de": "Entwicklung von Lorbeer: begrenzt erlittenen Schaden auf 10 und schlägt zurück, wenn Ladungen verbraucht werden.",
         "en": "Evolved Laurel. Caps incoming damage at 10. Retaliates when losing charges."
       },
+      "effects": {
+        "de": "Crimson Shroud erzeugt beim Auslösen einen Schild, der vor Schaden schützt und den Spieler kurz unverwundbar macht. Die Farbe zeigt die verbleibenden Ladungen: eine grün, zwei durchscheinend grün mit Orange, drei rot. Beim Verbrauch einer Ladung verursacht der Schild außerdem Vergeltungsschaden in Form einer Explosion mit mehreren Druckwellen. Zusätzlich wird jeder erlittene Schaden auf höchstens 10 begrenzt.",
+        "en": "Crimson Shroud creates a shield that protects from damage and briefly makes the player invulnerable upon triggering. The shield's color changes based on the remaining charges: one is green, two is a transparent green with orange inside, and three is red. It now also causes retaliatory damage when a charge is used; the explosion creates a few shockwaves and a transparent red circle surrounding a quickly expanding and retracting inverted color circle centered slightly above the player. Additionally, all incoming damage is capped at 10."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "amount",
+        "cooldown",
+        "armor",
+        "curse"
+      ],
       "maxLevel": 1,
       "emoji": "🛡️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Crimson_Shroud.png",
@@ -1179,6 +1867,18 @@
         "de": "Zweite Stufe von Bracelet: feuert drei Projektile auf einen zufälligen Gegner.",
         "en": "Fires three projectiles at a random enemy."
       },
+      "effects": {
+        "de": "Bi-Bracelet schießt eine Gruppe wolkiger Funken mit begrenzter Dauer auf einen zufälligen Gegner. Es übernimmt die Werte des Bracelet auf Höchstlevel und kann von Twilight Requiem (II) profitieren.",
+        "en": "Bi-Bracelet shoots out a group of cloudy sparkles with limited Duration at a random enemy. It inherits the stats of the max level Bracelet and can benefit from Twilight Requiem (II)."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 6,
       "emoji": "📿",
       "image": "https://vampire.survivors.wiki/images/Sprite-Bi-Bracelet.png",
@@ -1196,6 +1896,18 @@
         "de": "Dritte Stufe von Bracelet: feuert drei Projektile auf einen zufälligen Gegner.",
         "en": "Fires three projectiles at a random enemy."
       },
+      "effects": {
+        "de": "Tri-Bracelet schießt eine Gruppe wolkiger Funken mit begrenzter Dauer auf einen zufälligen Gegner. Es übernimmt die Werte des Bi-Bracelet auf Höchstlevel und kann von Heart of Fire (XIX) profitieren.",
+        "en": "Tri-Bracelet shoots out a group of cloudy sparkles with limited Duration at a random enemy. It inherits the stats of the max level Bi-Bracelet and can benefit from Heart of Fire (XIX)."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 6,
       "emoji": "📿",
       "image": "https://vampire.survivors.wiki/images/Sprite-Tri-Bracelet.png",
@@ -1214,6 +1926,18 @@
         "de": "Entwicklung von Flames of Misspell: wird stärker, je mehr Gegner besiegt werden.",
         "en": "Evolved Flames of Misspell. The more enemies are defeated, the stronger it grows."
       },
+      "effects": {
+        "de": "Ashes of Muspell erzeugt einen Stoß schwarzer Flammen in Blickrichtung und hinter dem Charakter.\n\nGegenüber Flames of Misspell hat sie mehr Fläche, Dauer, Geschwindigkeit und Pool-Limit sowie eine kürzere Abklingzeit.",
+        "en": "Ashes of Muspell spawns a burst of black flames in the faced direction and behind the character.\n\nAshes of Muspell has a bigger Area, increased Duration, increased Speed, lower Cooldown, and increased Pool Limit over the Flames of Misspell."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "🌋",
       "image": "https://vampire.survivors.wiki/images/Sprite-Ashes_of_Muspell.png",
@@ -1232,6 +1956,18 @@
         "de": "Entwicklung von Knochen: Projektile werden beim Abprallen schneller.",
         "en": "Evolved Bone. Projectiles accelerate when bouncing."
       },
+      "effects": {
+        "de": "Anima of Mortaccio wirft rotierende Knochen in eine zufällige Richtung. Sie fliegen geradeaus, prallen von Gegnern, Wänden und Bildschirmrändern ab und werden mit jedem Abprall schneller, bis ihre Dauer endet. Außerdem bekommt der Charakter zwei Knochenarme: Nach fünf normalen Würfen kreisen sie um den Charakter und fliegen dann als weiteres Paar springender Geschosse davon, bis sie zurückkehren. Mortaccio verwandelt sich dabei optisch in einen Gashadokuro; bei anderen Charakteren erscheint ein durchscheinender, verwandelter Mortaccio hinter ihnen.",
+        "en": "Anima of Mortaccio throws spinning bones in a random direction. The bone travels in a straight line, bouncing off of enemies, walls, and the edges of the screen, accelerating each bounce until the end of its duration. It also adds a pair of bone arms on the character. After five normal bone shots, they start rotating around the character, then they fling off as another pair of bouncing projectiles until they return to the character. The arms leave behind afterimages. It also causes Mortaccio to visually transform into a Goshadokuro. If another character other than Mortaccio gets the weapon, a translucent, transformed Mortaccio appears behind the character."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "☠️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Anima_of_Mortaccio.png",
@@ -1249,6 +1985,19 @@
         "de": "Entwicklung von Kirschbombe: erzeugt zusätzliche Explosionen, die abhängig vom Glück kritisch treffen können.",
         "en": "Evolved Cherry Bomb. Generates extra explosions that can deal critical Luck based damage."
       },
+      "effects": {
+        "de": "Yatta Daikarin wirft eine rotierende Bombe auf den nächsten Gegner. Sie fliegt geradeaus, prallt von Gegnern, Wänden und Bildschirmrändern ab, wird langsamer und bleibt schließlich liegen; beim Explodieren entstehen Sternpartikel. Zusätzlich zeichnet die Waffe ein Sternbild auf den Bildschirm, dessen Linien Schaden verursachen. Ist der siebte Stern fertig, explodieren alle Sterne in Linien aus Sternpartikeln. Die Bombe explodiert garantiert; Dauer und Pool-Limit sind höher.\n\nMacht und Fläche wirken sowohl auf die springenden Bomben als auch auf ihre Explosionen.",
+        "en": "Yatta Daikarin throws a spinning bomb at the nearest enemy. The bomb travels in a straight line, bouncing off enemies, walls, and edges of the screen. They will decelerate and eventually stop; when they explode, they create star particles. It also draws a constellation on the screen, the line drawn can deal damage and stop when a star is made. Once the seventh star is created, all the star explodes into lines of star particles. Yatta Daikarin guarantees the chance to explode, gains Duration and extra Pool Limit.\n\nMight and Area affect both the bouncing Cherry Bombs and their explosions."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown",
+        "luck"
+      ],
       "maxLevel": 1,
       "emoji": "🍒",
       "image": "https://vampire.survivors.wiki/images/Sprite-Yatta_Daikarin.png",
@@ -1266,6 +2015,17 @@
         "de": "Entwicklung von Carréllo: Dauer, Geschwindigkeit und Fläche erhöhen stattdessen den Schaden.",
         "en": "Evolved Carréllo. Duration, Speed, and Area affect damage instead."
       },
+      "effects": {
+        "de": "Carrozza! behält die Wagen von Carréllo, die von Hindernissen und Bildschirmrändern abprallen.\n\nZusätzlich ruft Carrozza! den Zug „Take Us Away“ aus dem Laborratory, der abwechselnd über und unter dem Spieler über den Bildschirm fährt. Fläche, Dauer und Geschwindigkeit des Zuges sind fest; diese Werte erhöhen stattdessen seinen Schaden. Die Wagen von Carréllo werden normal beeinflusst.",
+        "en": "Carrozza! retains the carts fired by Carréllo, which bounces off of obstacles and the boundaries of the player's screen.\n\nIn addition to this, Carrozza! also summons the Take Us Away train from Laborratory. This train is alternatingly summoned above and below the player, running across the screen. The Area, Duration, and Speed of the train are set and cannot be changed. Instead, these stats increase the damage the train deals. Carréllo projectiles are affected normally."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "🛞",
       "image": "https://vampire.survivors.wiki/images/Sprite-Carrozza%21.png",
@@ -1284,6 +2044,17 @@
         "de": "Entwicklung von Celestial Dusting: Projektile lösen in festen Abständen Kettenexplosionen aus.",
         "en": "Evolved Celestial Dusting. Projectiles generate a chain explosion at fixed intervals."
       },
+      "effects": {
+        "de": "Profusione D'Amore feuert Blumen entgegen der Laufrichtung des Charakters, die von Wänden und Hindernissen abprallen, aber unbegrenzt viele Gegner durchdringen. Am Ende ihrer Dauer werden sie langsamer und verlieren Blütenblätter in Form eines kleinen X, die Gegnern in der Nähe zusätzlichen Schaden zufügen. Nach einem normalen Angriff folgt beim nächsten Angriff eine Welle aus Wasser und Blumen über den ganzen Bildschirm, die von einem zufälligen Punkt ausgeht und etwa viereinhalbmal so viel Schaden macht wie die normalen Blumen.\n\nDie Geschwindigkeit ist geringer; das Intervall fällt weg, sodass alle Blumen auf einmal erscheinen.",
+        "en": "Profusione D'Amore fires flowers away from the character's walking direction that bounce off of walls and obstacles, but pierce through an unlimited number of enemies. As they reach the end of their Duration, they slow down and shed petals in a small X shape, dealing additional damage to nearby enemies. Profusione D'Amore starts a petal effect after a normal attack, then sends out water waves with flowers across the entire screen on the next attack. It deals around four and a half times the damage compared to the normal flowers. These waves pick a random point to start propagating.\n\nProfusione D'Amore has a slower Speed, and its Interval is removed spawning all the flowers at once."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "amount",
+        "cooldown",
+        "moveSpeed"
+      ],
       "maxLevel": 1,
       "emoji": "💖",
       "image": "https://vampire.survivors.wiki/images/Sprite-Profusione_D%27Amore.png",
@@ -1301,6 +2072,19 @@
         "de": "Entwicklung von Pako Battiliar: Schaden und Anzahl hängen von der max. Gesundheit ab.",
         "en": "Evolved Pako Battiliar. Damage and Amount affected by Max Health."
       },
+      "effects": {
+        "de": "Mazo Familiar erzeugt eine Gruppe größerer Fledermäuse mit violetten Nachbildern, die von einem zufälligen Punkt außerhalb des Bildschirms geradeaus quer durch die Bildschirmmitte fliegen. Jede Fledermaus trifft Gegner bis zu ihrem Durchschlag und verschwindet dann. Als Vergeltung erzeugt die Waffe eine weitere Gruppe, höchstens etwa alle 1,8 Sekunden.\n\nGegenüber Pako Battiliar gewinnt sie Anzahl, Durchschlag und ein kleines Intervall, sodass nicht mehr alle Fledermäuse gleichzeitig erscheinen. Das Pool-Limit halbiert sich.",
+        "en": "The Mazo Familiar spawns a group of bigger bats with purple afterimages which fly in a straight line across the screen, starting at randomly off-screen and pass through the center of the screen relative to where they spawned. Each bat will deal damage to enemies it will encounter up to its Pierce and then disappear. When retaliating, it spawn another group of bats and can retaliate every ~1.8 seconds.\n\nThe Mazo Familiar gains Amount, Pierce, and a small bit of Interval, no longer causing all the bats to spawn at once. It loses half of its Pool Limit."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown",
+        "maxHealth",
+        "armor"
+      ],
       "maxLevel": 1,
       "emoji": "🦇",
       "image": "https://vampire.survivors.wiki/images/Sprite-Mazo_Familiar.png",
@@ -1318,6 +2102,17 @@
         "de": "Entwicklung von Ammo Appalate: feuert ungewöhnliche Projektile auf sichtbare Gegner.",
         "en": "Evolved Ammo Appalate. Fires unorthodox projectiles at enemies in sight."
       },
+      "effects": {
+        "de": "Gunastrophe erzeugt in der oberen Bildschirmecke in Blickrichtung zwei Schübe mit sehr vielen Waffen, die über den Bildschirm springen. Anzahl bestimmt die Zahl der Schübe pro Angriff; die Grundanzahl der Waffe wirkt nicht.\n\nFläche wirkt nicht mehr, Dauer dagegen schon.",
+        "en": "Gunastrophe spawns two bursts of a massive number of guns at the top corner of the screen where the character is facing which bounce around the screen. Amount affects the number of bursts of guns per attack, base Amount from the weapon has no effect.\n\nIt is no longer affected by Area, but can be affected by Duration."
+      },
+      "affectedBy": [
+        "might",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "🔫",
       "image": "https://vampire.survivors.wiki/images/Sprite-Gunastrophe.png",
@@ -1336,6 +2131,17 @@
         "de": "Entwicklung von Unearthly Bolt: trifft immer kritisch.",
         "en": "Evolved Unearthly Bolt. Always deals critical hits."
       },
+      "effects": {
+        "de": "Spirit Disturbance beschwört oben auf dem Bildschirm einen grünen Drachen, der in einer Acht fliegt. Er speit Blitze auf die nächsten Gegner um den Charakter.\n\nSpirit Disturbance trifft immer kritisch. Kritische Treffer erhöhen bei dieser Waffe normalerweise aber nicht den Schaden, sondern lösen eine grüne Explosion um den getroffenen Gegner aus.",
+        "en": "Spirit Disturbance spawns a green dragon at the top of the screen that flies in a looping, infinity-shaped path. The dragon shoots lightning bolts from its mouth, targeting the closest enemies around the character.\n\nSpirit Disturbance always deals critical hits. For this weapon, however, critical hits do not deal increased damage under normal circumstances; instead, they create a green explosion centered on the enemy hit."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "amount",
+        "cooldown",
+        "revival"
+      ],
       "maxLevel": 1,
       "emoji": "👻",
       "image": "https://vampire.survivors.wiki/images/Sprite-Spirit_Disturbance.png",
@@ -1354,6 +2160,18 @@
         "de": "Entwicklung von Glass Fandango: kann kritisch treffen und Gegner einfrieren; verwandelt Orologions in Starry Heavens.",
         "en": "Evolved Glass Fandango. Might deal critical damage and freeze enemies. Turns Orologions into Starry Heavens."
       },
+      "effects": {
+        "de": "Celestial Voulge hat zwei Angriffsmuster mit einer kurzen, durchscheinenden blauen Klinge: Beim Laufen greift sie in Blickrichtung an, im Stehen mit der normalen Verzögerung in sechs Richtungen um den Charakter. Fläche und Anzahl sind höher.\n\nBewegungsgeschwindigkeit erhöht beim Laufen die Feuerrate; beim Stehenbleiben beginnt die normale Abklingzeit.",
+        "en": "Celestial Voulge has two attack patterns which involve firing a short-ranged translucent blue blade: While moving, it attacks in the faced direction; while standing still, it will have the standard attack speed delay and attack in six directions around the character. It gains a bonus to Area and Amount.\n\nMove Speed increases its overall fire rate when moving; when the character stops, it initiates the default Cooldown."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "amount",
+        "cooldown",
+        "luck",
+        "moveSpeed"
+      ],
       "maxLevel": 1,
       "emoji": "❄️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Celestial_Voulge.png",
@@ -1371,6 +2189,10 @@
       "description": {
         "de": "Ruft alle in diesem Lauf genutzten Thunfisch-Formen herbei und verteilt die Level-Boni gleichmäßig; entwickelt sich nicht weiter.",
         "en": "Summons all tuna forms used this run, splitting all level up bonuses evenly. Cannot evolve."
+      },
+      "effects": {
+        "de": "Miracle of Multiplication greift mit allen zuvor gewählten Thunfisch-Formen gleichzeitig an und verteilt die Level gleichmäßig auf sie. Beispiel: Wurden zwei Formen gewählt und vorher insgesamt siebenmal entwickelt, stehen 42 Level zur Verfügung; jede Waffe erhält 21, auch wenn die erste sechsmal und die zweite nur einmal gewählt wurde. Vor der Wahl von Miracle of Multiplication lassen sich die Formen beliebig oft entwickeln.\n\nDanach steigt die Waffe nicht mehr normal im Level und entwickelt sich nicht weiter; die Werteboni aus den vorherigen Entscheidungen bleiben fest.",
+        "en": "Miracle of Multiplication attacks with all the previously selected tuna forms at once, splitting the levels across each one evenly. For example, if two tuna forms are picked and evolve a total of seven times before Miracle of Multiplication is picked, 42 total levels are available; each weapon will receive 21 levels even if the first one is picked six times and the other weapon just once, effectively boosting the stats based on their own six levels three times over with an extra three levels. Previous forms can be evolved infinitely before Miracle of Multiplication is picked.\n\nIt can no longer level up normally and be evolved, locking in its stat boost from the previous choices."
       },
       "maxLevel": 1,
       "emoji": "🐟",
@@ -1390,6 +2212,18 @@
         "de": "Entwicklung von Santa Javelin: kritischer Schaden hängt vom Glück ab; verwandelt Rosaries in Weird Souls Purifiers.",
         "en": "Evolved Santa Javelin. Critical damage affected by Luck. Turns Rosaries into Weird Souls Purifiers."
       },
+      "effects": {
+        "de": "Seraphic Cry beschwört eine Reihe Seraphen über Gegnern, die gelbe heilige Lichtstrahlen vom Himmel schießen. Jeder Strahl erzeugt beim Aufprall eine gelbe Druckwelle mit Flächenschaden. Mehr Dauer erhöht die Anzahl. Die Druckwellen sind kleiner, und zwischen den Strahlen liegt ein längeres Intervall. Glück erhöht den Schaden, bis zum 11-Fachen bei +900 % Glück.",
+        "en": "Seraphic Cry summons an array of seraphs over enemies which shoot down a holy yellow light beam from the sky, each creating a yellow shockwave at the point of impact that deals Area-of-Effect damage. Increases to Duration increase Amount. It reduces the Area of each shockwave and increases the Interval between each beam. Luck increases the damage of this weapon up to a maximum of 11x at +900% Luck."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "duration",
+        "amount",
+        "cooldown",
+        "luck"
+      ],
       "maxLevel": 1,
       "emoji": "👼",
       "image": "https://vampire.survivors.wiki/images/Sprite-Seraphic_Cry.png",
@@ -1408,6 +2242,18 @@
         "de": "Entwicklung von Gaze of Gaea: mehr Schaden während der Unverwundbarkeit; schlägt zurück.",
         "en": "Evolved Gaze of Gaea. Damage is increased while invulnerable. Retaliates."
       },
+      "effects": {
+        "de": "Embrace of Gaea erzeugt einen ortsfesten, rotierenden grünen Kreis, der in schneller Folge Schaden verursacht, auch als Vergeltung. Grundschaden, Fläche und Dauer sind höher und das Intervall kürzer; dafür entfällt die Anzahl und die Abklingzeit ist länger.\n\nMit 5 % Chance (abhängig von Glück) macht er Gegner harmlos.",
+        "en": "Embrace of Gaea creates a stationary, spinning green circle that rapidly deals damage. Embrace of Gaea can deal retaliatory damage. It gains a bonus to Base Damage, Area, Duration, and a lower Interval, but loses the Amount and has a longer Cooldown.\n\nIt has a 5% chance to defang enemies, which is affected by Luck."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "duration",
+        "amount",
+        "cooldown",
+        "armor"
+      ],
       "maxLevel": 1,
       "emoji": "🌏",
       "image": "https://vampire.survivors.wiki/images/Sprite-Embrace_of_Gaea.png",
@@ -1425,6 +2271,16 @@
         "de": "Entwicklung von Magi-Stone: mehr Schaden ab Spielerlevel 80; die Anzahl steigt mit den sichtbaren Gegnern.",
         "en": "Evolved Magi-Stone. Damage increases when Player Level is above 80. Amount increases with visible enemies."
       },
+      "effects": {
+        "de": "Kyra-Stones lässt bunte Edelsteine von oben fallen, die in einem Bereich festen Schaden verursachen; dieser steigt, wenn der Charakter über Level 80 hinauskommt. Fläche, Geschwindigkeit und Anzahl steigen, Abklingzeit und Intervall sinken.\n\nAnzahl wirkt hier anders: Sie erhöht abwechselnd die Zahl der großen Kristalle und die der kleinen Splitter.",
+        "en": "Kyra-Stones drops colorful gems from the top of the screen, dealing fixed damage in an area which increases when the character levels up past 80 . It gains Area, Speed, and Amount, and reduces Cooldown and Interval.\n\nAmount affects this weapon differently, alternating between increasing the number of large crystals or increasing the number of small fragments."
+      },
+      "affectedBy": [
+        "area",
+        "speed",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "💎",
       "image": "https://vampire.survivors.wiki/images/Sprite-Kyra-Stones.png",
@@ -1443,6 +2299,17 @@
         "de": "Entwicklung von Phas3r: vervielfacht die Zahl der Projektile je nach Glück bis zu ×5.",
         "en": "Evolved Phas3r. Multiplies numbers of projectiles by up to 5, depending on Luck."
       },
+      "effects": {
+        "de": "Photonstorm feuert mehrere waagerechte Lichtstrahlen in Regenbogenfarben quer über den Bildschirm. Jede Folge beginnt weiterhin mit einer Salve. Grundschaden und Anzahl sind höher, das Intervall kürzer. Jeder Schuss spielt einen Ton, zusammen eine Melodie.\n\nGlück erhöht die Anzahl der Strahlen, bis zum Fünffachen. Fläche macht die Strahlen breiter.",
+        "en": "Photonstorm fires multiple horizontal rainbow-colored beams of light across the screen. Each sequence still starts with a burst of beams. It gains a bonus to Base Damage and Amount, and a shorter Interval. Each time the weapon shoots, it plays a note which makes a melody.\n\nLuck increases the Amount of beams it can shoot, up to 5 times. Area makes the beams wider."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "amount",
+        "cooldown",
+        "luck"
+      ],
       "maxLevel": 1,
       "emoji": "🌠",
       "image": "https://vampire.survivors.wiki/images/Sprite-Photonstorm.png",
@@ -1461,6 +2328,18 @@
         "de": "Entwicklung von Chaos Rune: beherrscht wilde magische Kräfte.",
         "en": "Evolved Chaos Rune. Exerts control over wild magical forces."
       },
+      "effects": {
+        "de": "Statt vom unteren Bildschirmrand feuert Wicked Ruler Runen aus einem Runenkreis, der den Spieler umkreist, und vom Spieler selbst; die Geschosse fliegen chaotisch auf den Spieler bzw. auf den nächsten Gegner zu. Der Runenkreis verursacht bei Berührung Schaden. Der Grundschaden ist etwas geringer.\n\nAnzahl bestimmt, wie viele Runen pro Auslösung entstehen, Geschwindigkeit und Dauer, wie oft jede Rune Schaden verursachen kann.",
+        "en": "Instead of firing from the bottom of the screen, Wicked Ruler fires runes from a runic circle orbiting the player and the player themselves, firing chaotic projectiles towards them and the closest enemy respectively. This rune circle can deal contact damage. It has a slightly decreased Base Damage.\n\nAmount affects how many runes are summoned with each activation, while Speed and Duration affect how many times each rune can deal damage."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown"
+      ],
       "maxLevel": 1,
       "emoji": "👁️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Wicked_Ruler.png",
@@ -1478,6 +2357,19 @@
         "de": "Verbindung von Ebenholz-Flügeln und Peachone.",
         "en": "Union of Ebony Wings and Peachone."
       },
+      "effects": {
+        "de": "Vandalier ist ein bunter Vogel, der um den Spieler fliegt und zwei kreisende Zonen mit Geschossen bombardiert: eine dreht sich im, die andere gegen den Uhrzeigersinn. Der Vogel folgt langsamer, die Zonen bleiben aber immer an derselben Stelle relativ zum Spieler. Grundschaden und Gesamtzahl der Geschosse sind etwas geringer, und der Abklingzeit-Bonus von Peachone und Ebenholz-Flügel entfällt; dafür steigen Geschwindigkeit und Pool-Limit.",
+        "en": "Vandalier is a vibrant, multicolored bird that flies around the player and bombards two circling zones with projectiles. Two zones revolve around the player, one moves clockwise, and the other counterclockwise. The bird moves behind the player at a slower speed, but the bombarding circle will always stay in a position relative to the player. Its Base Damage and combined Amount of projectiles are slightly less, and it reverts the Cooldown bonus that Peachone and Ebony Wings got, but it increases Speed and Pool Limit."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown",
+        "luck"
+      ],
       "maxLevel": 8,
       "emoji": "🕊️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Vandalier.png",
@@ -1495,6 +2387,18 @@
         "de": "Verbindung von Phiera Der Tuphello and Acht der Spatz. Nimmt mit jeder Wiedergeburt zu.",
         "en": "Union of Phiera Der Tuphello and Eight The Sparrow. Scales with Revivals."
       },
+      "effects": {
+        "de": "Phieraggi schießt vier blaue Laser, die im Uhrzeigersinn um den Charakter kreisen und sich zurückziehen, wenn sie nicht feuern. Geschwindigkeit ist geringer, Anzahl höher, Intervall und Rückstoß etwas geringer. Die Laser gehen jetzt auch durch Wände.\n\nMit genug Abklingzeit bleiben die Laser dauerhaft aktiv; ist sie niedrig genug, überlagern sich mehrere pro Laser, auch wenn man es kaum sieht. Die Aktivzeit hängt nicht von Dauer ab. Fläche macht die Laser breiter, Anzahl bestimmt, wie viele gleichzeitig feuern.",
+        "en": "Phieraggi shoot four blue lasers that rotate clockwise around the character. It retracts when not firing. Its Speed is lowered and Amount is increased. There is a slight decrease in Interval and Knockback. The lasers can now also pass through walls.\n\nWith enough Cooldown, the lasers permanently stay up, and more than one can be stacked on each laser if Cooldown is low enough even if it cannot be clearly seen. The uptime is not affected by Duration. Area increases the width of the lasers. Amount affects how many lasers are fired at once."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "amount",
+        "cooldown",
+        "revival"
+      ],
       "maxLevel": 1,
       "emoji": "🔫",
       "image": "https://vampire.survivors.wiki/images/Sprite-Phieraggi.png",
@@ -1512,6 +2416,20 @@
         "de": "Union of Vento Sacro and Bloody Tear. Critical hits might generate explosions.",
         "en": "Union of Vento Sacro and Bloody Tear. Critical hits might generate explosions"
       },
+      "effects": {
+        "de": "Fuwalafuwaloo erzeugt wie Vento Sacro mehrere dunkelrote waagerechte Hiebe vor dem Charakter und zusätzlich einen Kreis aus Hieben, der um ihn rotiert und allen Gegnern im Bereich Schaden zufügt.\n\nDer Grundschaden ist deutlich höher als bei Vento Sacro, nämlich halb so hoch wie bei Blutige Träne. Pro Schub gibt es einen Hieb mehr und etwas mehr Rückstoß.",
+        "en": "Fuwalafuwaloo, similar to Vento Sacro, creates multiple dark red slashes horizontally in front of the character and a circle of slashes that cycle around the character, damaging all enemies in the area.\n\nFuwalafuwaloo's Base Damage is dramatically increased compared to Vento Sacro, and it is half of Bloody Tear. It has one more slash per burst and a slight increase in Knockback."
+      },
+      "affectedBy": [
+        "might",
+        "area",
+        "speed",
+        "duration",
+        "amount",
+        "cooldown",
+        "luck",
+        "moveSpeed"
+      ],
       "maxLevel": 1,
       "emoji": "🌬️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Fuwalafuwaloo.png",
@@ -1529,6 +2447,13 @@
         "de": "Geschenk von Candybox: lässt dich aus einer Auswahl bereits einmal erreichter Entwicklungen wählen.",
         "en": "Gift of Candybox. Allows to choose among a selection of advanced weapons."
       },
+      "effects": {
+        "de": "Wer Super Candybox II Turbo erhält, bekommt eine Liste der meisten Entwicklungen, die im Lauf noch fehlen (sofern sie in früheren Läufen schon einmal entwickelt wurden). Die Seltenheit wird mit Glück multipliziert.\n\nVoraussetzung sind vollständig aufgewertete Waffen und passive Gegenstände (damit Münzbeutel in Truhen erscheinen) und dass im Lauf irgendwann Candybox genommen wurde. Dann kann Super Candybox II Turbo mit sehr kleiner, glücksabhängiger Chance statt eines großen Münzbeutels in einer Schatztruhe erscheinen. Truhen mit fünf Gegenständen enthalten sie unter diesen Bedingungen garantiert.",
+        "en": "Obtaining Super Candybox II Turbo opens a list of most evolutions (that were already evolved at least once in previous runs) remaining to be obtained in the run. Its rarity is multiplied by Luck.\n\nObtaining Super Candybox II Turbo requires fully upgraded weapons and passive items (so that Coin Bags spawn in chests), as well as obtaining Candybox at some point in the run. Once these conditions are met, Super Candybox II Turbo has a very small luck-based chance to appear in any Treasure Chest the player opens, in place of a Big Coin Bag. Treasure Chests containing five items guarantee spawning a Super Candybox II Turbo with the above condition maxed."
+      },
+      "affectedBy": [
+        "luck"
+      ],
       "maxLevel": 1,
       "emoji": "🍭",
       "image": "https://vampire.survivors.wiki/images/Sprite-Super_Candybox_II_Turbo.png",
@@ -1546,6 +2471,13 @@
         "de": "Geschenk von Victory Sword: wird stärker, je mehr Gegner besiegt werden.",
         "en": "Gift of Victory Sword. The more enemies are defeated, the stronger it grows."
       },
+      "effects": {
+        "de": "Vor dem Angriff lässt Sole Solution Funken vom Charakter ausgehen. Dann beschwört sie eine riesige, gegen den Uhrzeigersinn wirbelnde Galaxie, die allem auf dem Bildschirm Schaden zufügt und den Charakter für 10 Sekunden unberührbar macht. Am Ende dreht sich die Galaxie schnell im Uhrzeigersinn und schrumpft.\n\nSolange der Charakter unberührbar ist, kann er keine Schatztruhen öffnen. Pickups sammelt er zwar auf, sie wirken aber erst, wenn der Effekt von Sole Solution endet.",
+        "en": "Before Sole Solution attacks, it generates sparkles out from the character. Sole Solution then summons a massive galaxy which swirls counter-clockwise, damaging everything on screen and making the character intangible until it ends after 10 seconds. When it ends, the galaxy quickly swirls clockwise and shrinks.\n\nWhen the character is intangible, Treasure Chests cannot be interacted with, but they can still collect pickups. However, they will not be collected and take effect until after Sole Solution's effect ends."
+      },
+      "affectedBy": [
+        "might"
+      ],
       "maxLevel": 1,
       "emoji": "☀️",
       "image": "https://vampire.survivors.wiki/images/Sprite-Sole_Solution.png",

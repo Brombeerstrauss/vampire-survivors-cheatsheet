@@ -28,5 +28,12 @@ The script downloads the wiki pages, parses the tables and rewrites all packs.
   `python3 -I tools/wiki-import/game_ids.py https://vampire.survivors.wiki/api.php src/data/packs`
 - `build_pack.py`: only sets `verified` when the evolution list, weapon list and item list
   agree; differences go into the `note` field.
+- `weapon_effects.py`: adds `effects` (how a weapon works and what triggers it, from the first
+  paragraphs of each weapon page's "Effects" section) and `affectedBy` (the stats from the
+  page's "Stats and passive items" table). The German texts are in `texts/effects_de.py`; a
+  weapon without one is reported as `WARN` and keeps what it has. With `--english` the script
+  only prints the English texts, to translate new ones. Runs at the end of `run.sh`, but also
+  works on its own without losing manual edits:
+  `python3 -I tools/wiki-import/weapon_effects.py https://vampire.survivors.wiki/api.php src/data/packs`
 
 Requirements: `python3` (included with macOS) and `curl`.
