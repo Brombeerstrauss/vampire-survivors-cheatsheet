@@ -1,0 +1,1162 @@
+{
+  "$schema": "./schema/community-tiers.schema.json",
+  "sources": [
+    {
+      "id": "rogueranker-weapons",
+      "name": "Rogue Ranker: Vampire Survivors Weapon Tier List",
+      "url": "https://rogueranker.com/vampire-survivors-weapon-tier-list/",
+      "updated": "2026-03-21",
+      "weight": 2
+    },
+    {
+      "id": "rogueranker-passives",
+      "name": "Rogue Ranker: Vampire Survivors Passive Items (Pickup Priority Tier List)",
+      "url": "https://rogueranker.com/vampire-survivors-passive-items/",
+      "updated": "2026-05-01",
+      "weight": 2
+    },
+    {
+      "id": "gfinity-weapons",
+      "name": "Gfinity Esports: Vampire Survivors weapons tier list",
+      "url": "https://www.gfinityesports.com/guides/vampire-survivors-weapons-tier-list/",
+      "updated": "2024-07-30",
+      "weight": 1
+    },
+    {
+      "id": "choost-passives",
+      "name": "Choost Games: Vampire Survivors Tier List (passive items)",
+      "url": "https://choostgames.com/blog/vampire-survivors-tier-list/",
+      "updated": "2026-07-12",
+      "weight": 1
+    }
+  ],
+  "tiers": [
+    {
+      "id": "outer-saboteur",
+      "tier": 2,
+      "sources": [
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "king-bible",
+      "tier": 3,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "santa-water",
+      "tier": 3,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "gatti-amari",
+      "tier": 2,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "song-of-mana",
+      "tier": 3,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "la-robba",
+      "tier": 3,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "greatest-jubilee",
+      "tier": 1,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "candybox",
+      "tier": 1,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "victory-sword",
+      "tier": 3,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "phas3r",
+      "tier": 3,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "bloody-tear",
+      "tier": 3,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "holy-wand",
+      "tier": 3,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "thousand-edge",
+      "tier": 3,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "death-spiral",
+      "tier": 2,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "heaven-sword",
+      "tier": 2,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "unholy-vespers",
+      "tier": 3,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "hellfire",
+      "tier": 3,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "soul-eater",
+      "tier": 3,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "la-borra",
+      "tier": 2,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "no-future",
+      "tier": 2,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "thunder-loop",
+      "tier": 3,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "gorgeous-moon",
+      "tier": 2,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "vicious-hunger",
+      "tier": 2,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "mannajja",
+      "tier": 3,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "valkyrie-turner",
+      "tier": 2,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "infinite-corridor",
+      "tier": 1,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "crimson-shroud",
+      "tier": 1,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "tri-bracelet",
+      "tier": 3,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "ashes-of-muspell",
+      "tier": 3,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "anima-of-mortaccio",
+      "tier": 3,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "celestial-voulge",
+      "tier": 3,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "seraphic-cry",
+      "tier": 1,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "photonstorm",
+      "tier": 2,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "vandalier",
+      "tier": 2,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "phieraggi",
+      "tier": 2,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "fuwalafuwaloo",
+      "tier": 3,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "super-candybox-ii-turbo",
+      "tier": 2,
+      "sources": [
+        "gfinity-weapons"
+      ]
+    },
+    {
+      "id": "sole-solution",
+      "tier": 3,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "spinach",
+      "tier": 1,
+      "sources": [
+        "choost-passives",
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "armor",
+      "tier": 3,
+      "sources": [
+        "choost-passives",
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "hollow-heart",
+      "tier": 2,
+      "sources": [
+        "choost-passives",
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "pummarola",
+      "tier": 3,
+      "sources": [
+        "choost-passives",
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "empty-tome",
+      "tier": 1,
+      "sources": [
+        "choost-passives",
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "candelabrador",
+      "tier": 2,
+      "sources": [
+        "choost-passives",
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "bracer",
+      "tier": 3,
+      "sources": [
+        "choost-passives",
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "spellbinder",
+      "tier": 2,
+      "sources": [
+        "choost-passives",
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "duplicator",
+      "tier": 1,
+      "sources": [
+        "choost-passives",
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "wings",
+      "tier": 3,
+      "sources": [
+        "choost-passives",
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "attractorb",
+      "tier": 2,
+      "sources": [
+        "choost-passives",
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "clover",
+      "tier": 2,
+      "sources": [
+        "choost-passives",
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "crown",
+      "tier": 1,
+      "sources": [
+        "choost-passives",
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "stone-mask",
+      "tier": 3,
+      "sources": [
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "skull-o-maniac",
+      "tier": 2,
+      "sources": [
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "tirajisu",
+      "tier": 2,
+      "sources": [
+        "choost-passives",
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "torrona-s-box",
+      "tier": 2,
+      "sources": [
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "parm-aegis",
+      "tier": 3,
+      "sources": [
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "karoma-s-mana",
+      "tier": 3,
+      "sources": [
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "silver-ring",
+      "tier": 3,
+      "sources": [
+        "choost-passives",
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "gold-ring",
+      "tier": 3,
+      "sources": [
+        "choost-passives",
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "metaglio-left",
+      "tier": 3,
+      "sources": [
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "metaglio-right",
+      "tier": 3,
+      "sources": [
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "emergency-meeting",
+      "tier": 3,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "crossed-wires",
+      "tier": 2,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "paranormal-scan",
+      "tier": 1,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "unjust-ejection",
+      "tier": 3,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "clear-asteroids",
+      "tier": 2,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "rocket-science",
+      "tier": 3,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "mini-crewmate",
+      "tier": 3,
+      "sources": [
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "mini-engineer",
+      "tier": 3,
+      "sources": [
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "mini-ghost",
+      "tier": 3,
+      "sources": [
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "mini-shapeshifter",
+      "tier": 3,
+      "sources": [
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "mini-guardian",
+      "tier": 3,
+      "sources": [
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "mini-impostor",
+      "tier": 3,
+      "sources": [
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "mini-scientist",
+      "tier": 3,
+      "sources": [
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "mini-horse",
+      "tier": 3,
+      "sources": [
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "four-seasons",
+      "tier": 3,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "summon-night",
+      "tier": 3,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "festive-winds",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "godai-shuffle",
+      "tier": 1,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "echo-night",
+      "tier": 2,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "j-odore",
+      "tier": 3,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "alchemy-whip",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "wind-whip",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "platinum-whip",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "dragon-water-whip",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "sonic-whip",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "jet-black-whip",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "vibhuti-whip",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "vanitas-whip",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "shuriken",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "curved-knife",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "javelin",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "discus",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "iron-ball",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "silver-revolver",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "hand-grenade",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "wine-glass",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "raging-fire",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "ice-fang",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "gale-force",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "rock-riot",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "fulgur",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "keremet-bubbles",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "hex",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "refectio",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "mace",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "star-flail",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "alucard-spear",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "trident",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "iron-shield",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "guardian-s-targe",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "tyrfing",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "alucart-sworb",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "confodere",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "globus",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "optical-shot",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "dextro-custos",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "sinestro-custos",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "centralis-custos",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "dominus-anger",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "dominus-hatred",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "dominus-agony",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "sonic-dash",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "luminatio",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "umbra",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "valmanway",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "icebrand",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "arrow-of-goth",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "aura-blast",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "svarog-statue",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "hydro-storm",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "grand-cross",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "summon-spirit",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "sword-brothers",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "endo-gears",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "peri-pendulum",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "myo-lift",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "epi-head",
+      "tier": 3,
+      "sources": [
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "pronto-beam",
+      "tier": 3,
+      "sources": [
+        "gfinity-weapons"
+      ]
+    },
+    {
+      "id": "atmo-torpedo",
+      "tier": 3,
+      "sources": [
+        "gfinity-weapons"
+      ]
+    },
+    {
+      "id": "bfc2000-ad",
+      "tier": 3,
+      "sources": [
+        "gfinity-weapons"
+      ]
+    },
+    {
+      "id": "time-warp",
+      "tier": 2,
+      "sources": [
+        "gfinity-weapons"
+      ]
+    },
+    {
+      "id": "weapon-power-up",
+      "tier": 2,
+      "sources": [
+        "rogueranker-passives"
+      ]
+    },
+    {
+      "id": "spellstrike",
+      "tier": 3,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "prismatic-missile",
+      "tier": 2,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "legionnaire",
+      "tier": 1,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "millionaire",
+      "tier": 2,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "luminaire",
+      "tier": 2,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "ophion",
+      "tier": 1,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "spellstrom",
+      "tier": 2,
+      "sources": [
+        "gfinity-weapons",
+        "rogueranker-weapons"
+      ]
+    },
+    {
+      "id": "academy-badge",
+      "tier": 2,
+      "sources": [
+        "rogueranker-passives"
+      ]
+    }
+  ]
+}

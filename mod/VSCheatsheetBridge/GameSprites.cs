@@ -33,6 +33,7 @@ internal static class GameSprites
     {
         _frames = null;
         _ids = null;
+        WeaponStats.Reset();
         Sprites.Clear();
         MissUntil.Clear();
     }
@@ -118,6 +119,14 @@ internal static class GameSprites
         }
         // Too few entries means the data was not read properly: then rather show everything.
         if (ids.Count >= 50) _ids = ids;
+        try
+        {
+            WeaponStats.Read(doc.RootElement);
+        }
+        catch (Exception ex)
+        {
+            Plugin.Logger.LogWarning("[Stats] weapon stats not readable: " + ex.Message);
+        }
     }
 
     private static readonly Dictionary<string, Sprite> Sprites = new();

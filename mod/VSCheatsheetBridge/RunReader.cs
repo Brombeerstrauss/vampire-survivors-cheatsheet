@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using Il2CppInterop.Runtime;
+using Il2CppInterop.Runtime.InteropTypes;
 
 namespace VSCheatsheetBridge;
 
@@ -17,10 +19,16 @@ internal static class RunReader
 
     private static Type _gameManagerType;
     private static Type _gmType;
+    private static Type _levelUpPageType;
+    private static Il2CppSystem.Type _levelUpPageIl2CppType;
+    private static MethodInfo _castToLevelUpPage;
     private static bool _typesResolved;
     private static string _debugJson = "{}";
     private static Type _debugFor;
+    private static readonly List<KeyValuePair<string, string>> DebugEntries = new();
+    private static readonly Dictionary<string, Type> DebugTypes = new();
     private static readonly HashSet<string> Warned = new();
+    private static int _offerLogs;
 
     /// <summary>The game's GameManager (or null in the main menu).</summary>
     public static object GameManager()
@@ -40,6 +48,7 @@ internal static class RunReader
         if (gm == null) return snap;
 
         List<object> characters = FindCharacters(gm);
+        var playerObjects = new List<object>(); // the game object of each entry in snap.Players
         for (int i = 0; i < characters.Count; i++)
         {
             object c = characters[i];
@@ -50,8 +59,11 @@ internal static class RunReader
             if (_debugFor != c.GetType())
             {
                 _debugFor = c.GetType();
-                _debugJson = BuildDebug(gm, c, weapons, accessories);
-                snap.DebugJson = _debugJson;
+                AddDebug("gameManager", gm);
+                AddDebug("character", c);
+                AddDebug("weaponsManager", weapons);
+                AddDebug("firstWeapon", Items(Get(weapons, "ActiveEquipment", "_activeEquipment", "Equipment")).FirstOrDefault());
+                AddDebug("accessoriesManager", accessories);
             }
 
             snap.Players.Add(new PlayerSnapshot
@@ -61,8 +73,11 @@ internal static class RunReader
                 Weapons = ReadEquipment(weapons, "WeaponType"),
                 Passives = ReadEquipment(accessories, "ItemType"),
             });
+            playerObjects.Add(c);
         }
         snap.InRun = snap.Players.Count > 0;
+        if (snap.InRun && Plugin.LevelUpGrades.Value) ReadLevelUp(snap, playerObjects);
+        snap.DebugJson = _debugJson;
         return snap;
     }
 
@@ -86,11 +101,13 @@ internal static class RunReader
                     if (t.Namespace == null || !t.Namespace.StartsWith("VampireSurvivors")) continue;
                     if (t.Name == "GameManager" && _gameManagerType == null) _gameManagerType = t;
                     if (t.Name == "GM" && _gmType == null) _gmType = t;
+                    if (t.Name == "LevelUpPage" && _levelUpPageType == null) _levelUpPageType = t;
                 }
                 catch { }
             }
         }
-        Plugin.Logger.LogInfo($"GameManager: {_gameManagerType?.FullName ?? "not found"}, GM: {_gmType?.FullName ?? "not found"}");
+        Plugin.Logger.LogInfo($"GameManager: {_gameManagerType?.FullName ?? "not found"}, GM: {_gmType?.FullName ?? "not found"}, " +
+            $"LevelUpPage: {_levelUpPageType?.FullName ?? "not found"}");
         if (_gameManagerType == null) _typesResolved = false; // assembly may not be loaded yet
     }
 
@@ -167,6 +184,87 @@ internal static class RunReader
         return list;
     }
 
+    // ---- Level-up screen ----------------------------------------------------
+
+    // The open level-up screen (LevelUpPage) and what its cards offer. Each card is a
+    // LevelUpItemUI: _type is the WeaponType (passive items are WeaponTypes too, e.g. POWER),
+    // VOID for other pickups such as gold, which only have an _itemType; limit breaks
+    // have _isLimitBreak. Names per the game's decompiled code, as used by the community mods
+    // VSEvolutionHelperEx and jev_vampire_survivors. /debug lists the real names.
+    private static void ReadLevelUp(RunSnapshot snap, List<object> playerObjects)
+    {
+        object page = FindLevelUpPage();
+        if (page == null) return;
+
+        var offers = new List<string>();
+        object firstCard = null;
+        foreach (object card in Items(Get(page, "LevelUpItems", "_spawnedItems")))
+        {
+            firstCard ??= card;
+            if (Get(card, "_isLimitBreak", "IsLimitBreak") is bool limitBreak && limitBreak) continue;
+            string type = EnumName(Get(card, "_type", "Type", "_weaponType"));
+            if (type == null || type == "VOID" || offers.Contains(type)) continue;
+            offers.Add(type);
+        }
+        AddDebug("levelUpPage", page);
+        if (firstCard != null) AddDebug("levelUpItem", firstCard);
+        if (offers.Count == 0)
+        {
+            if (firstCard == null) WarnOnce("levelUpCards", new InvalidOperationException("level-up screen found, but no cards (see /debug, levelUpPage)"));
+            return;
+        }
+
+        PlayerSnapshot player = ControllingPlayer(page, snap, playerObjects);
+        if (player == null) return;
+        player.Offers.AddRange(offers);
+        if (_offerLogs < 3)
+        {
+            _offerLogs++;
+            Plugin.Logger.LogInfo($"[LevelUp] P{player.Index + 1} offered: {string.Join(", ", offers)}");
+        }
+    }
+
+    // Unity only finds active objects, so this is null while the level-up screen is closed.
+    private static object FindLevelUpPage()
+    {
+        if (_levelUpPageType == null) return null;
+        try
+        {
+            _levelUpPageIl2CppType ??= Il2CppType.From(_levelUpPageType);
+            // Typed wrapper (TryCast<LevelUpPage>), so reflection sees the page's fields.
+            _castToLevelUpPage ??= typeof(Il2CppObjectBase).GetMethod("TryCast", Type.EmptyTypes)?.MakeGenericMethod(_levelUpPageType);
+            var found = UnityEngine.Object.FindObjectsOfType(_levelUpPageIl2CppType);
+            if (found == null || _castToLevelUpPage == null) return null;
+            foreach (UnityEngine.Object o in found)
+            {
+                if (o == null) continue;
+                object page = _castToLevelUpPage.Invoke(o, null);
+                if (page != null) return page;
+            }
+        }
+        catch (Exception ex)
+        {
+            WarnOnce("levelUpPage", ex);
+        }
+        return null;
+    }
+
+    // Whose level-up is it? In co-op the screen belongs to one player.
+    private static PlayerSnapshot ControllingPlayer(object page, RunSnapshot snap, List<object> playerObjects)
+    {
+        if (snap.Players.Count <= 1) return snap.Players.FirstOrDefault();
+        IntPtr controlling = PointerOf(Call(page, "GetCharacterControllingUi"));
+        if (controlling != IntPtr.Zero)
+        {
+            for (int i = 0; i < playerObjects.Count; i++)
+                if (PointerOf(playerObjects[i]) == controlling) return snap.Players[i];
+        }
+        WarnOnce("levelUpPlayer", new InvalidOperationException("level-up screen: player not found, grades shown for player 1"));
+        return snap.Players[0];
+    }
+
+    private static IntPtr PointerOf(object o) => o is Il2CppObjectBase b ? b.Pointer : IntPtr.Zero;
+
     // ---- Reflection helpers -----------------------------------------------
 
     private static object Get(object obj, params string[] names)
@@ -240,22 +338,21 @@ internal static class RunReader
         if (Warned.Add(key)) Plugin.Logger.LogWarning($"[{key}] {ex.GetType().Name}: {ex.Message}");
     }
 
-    // Names of the existing fields, so renamed fields can be found quickly.
-    private static string BuildDebug(object gm, object character, object weapons, object accessories)
+    // Names of the existing fields for /debug, so renamed fields can be found quickly.
+    // Each entry is only rebuilt when the object's type changes.
+    private static void AddDebug(string key, object o)
     {
-        var sb = new StringBuilder("{");
-        void Add(string key, object o, bool last = false)
-        {
-            sb.Append(Json.Str(key)).Append(":{\"type\":").Append(Json.Str(o?.GetType().FullName ?? "null")).Append(",\"members\":[");
-            if (o != null)
-                sb.Append(string.Join(",", o.GetType().GetProperties(Inst).Select(p => Json.Str(p.Name)).Distinct().OrderBy(s => s)));
-            sb.Append("]}").Append(last ? "" : ",");
-        }
-        Add("gameManager", gm);
-        Add("character", character);
-        Add("weaponsManager", weapons);
-        Add("firstWeapon", Items(Get(weapons, "ActiveEquipment", "_activeEquipment", "Equipment")).FirstOrDefault());
-        Add("accessoriesManager", accessories, last: true);
-        return sb.Append('}').ToString();
+        Type t = o?.GetType();
+        if (DebugTypes.TryGetValue(key, out Type known) && known == t) return;
+        DebugTypes[key] = t;
+        var sb = new StringBuilder("{\"type\":").Append(Json.Str(t?.FullName ?? "null")).Append(",\"members\":[");
+        if (t != null)
+            sb.Append(string.Join(",", t.GetProperties(Inst).Select(p => Json.Str(p.Name)).Distinct().OrderBy(s => s)));
+        sb.Append("]}");
+        var entry = new KeyValuePair<string, string>(key, sb.ToString());
+        int i = DebugEntries.FindIndex(e => e.Key == key);
+        if (i >= 0) DebugEntries[i] = entry;
+        else DebugEntries.Add(entry);
+        _debugJson = "{" + string.Join(",", DebugEntries.Select(e => Json.Str(e.Key) + ":" + e.Value)) + "}";
     }
 }
