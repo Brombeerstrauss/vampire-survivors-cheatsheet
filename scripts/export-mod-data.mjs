@@ -74,6 +74,8 @@ const data = {
   // raises: for the level-up grades (does an item boost your weapons?).
   scales: Object.fromEntries(weapons.filter((w) => w.affectedBy?.length).map((w) => [w.id, w.affectedBy])),
   itemStats: Object.fromEntries(Object.entries(statItems).map(([stat, item]) => [item, [stat]])),
+  // Passive items that don't take one of the 6 slots (for the level-up grades' slot check).
+  noSlot: passives.filter((p) => p.noSlot).map((p) => p.id),
 }
 
 writeFileSync(target, JSON.stringify(data))
