@@ -44,8 +44,11 @@ character, weapons and passive items of every player and
   5. **Community** tier lists (`src/data/community-tiers.json`): tier 1/2/3 = 2/1.5/1. A weapon
      also counts with the tier of what it evolves into ("community: Holy Wand").
 
-  From 3 points the grade is A, from 2 B, from 1 C. The list is sorted by the points, so
-  choices with the same letter are still in order. An item that is generally strong and also
+  From 3 points the grade is A, from 2 B, from 1 C. **A+** marks a choice with at least 5
+  points that also brings an evolution closer: an ingredient, a level the evolution needs, or
+  a new weapon whose evolution item you already have (e.g. Knife when you have Bracer and
+  Duplicator). The list is sorted by the points, so choices with the same letter are still in
+  order. An item that is generally strong and also
   boosts your weapon ranks above one that is only generally strong: starting as
   Congregation with Screams from the Void, Empty Tome gets an A (community and "boosts Screams
   from the Void"), Candelabrador and Armor a B, Bracer and Wings a C.

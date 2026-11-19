@@ -17,7 +17,7 @@ namespace VSCheatsheetBridge;
 // Layout:
 //   [-] Evolutions                     ::     <- title bar: click collapses/expands, drag moves
 //   Level-up choices, best first              <- only while the level-up screen is open
-//   [A] [image] Hollow Heart   for Bloody Tear
+//   [A+] [image] Hollow Heart  for Bloody Tear · recommended
 //   [D] [image] Garlic
 //   ------------------------------------
 //   [image] Name                        5/8
@@ -433,10 +433,12 @@ internal sealed class UiOverlay
         return y;
     }
 
-    private static float GradeWidth(float f) => Mathf.Round(f * 1.4f);
+    // Wide enough for "A+".
+    private static float GradeWidth(float f) => Mathf.Round(f * 1.8f);
 
-    // A green, B yellow, C blue, D and ? grey.
-    private static Color GradeColor(char grade) => grade switch { 'A' => Green, 'B' => Gold, 'C' => Blue, _ => Grey };
+    // A+ and A green (A+ on a stronger background), B yellow, C blue, D and ? grey.
+    private static Color GradeColor(string grade) => string.IsNullOrEmpty(grade) ? Grey
+        : grade[0] switch { 'A' => Green, 'B' => Gold, 'C' => Blue, _ => Grey };
 
     // The choices on the level-up screen with their grades, best first. The reason follows the
     // name, or goes on the next line if it doesn't fit.
@@ -459,8 +461,9 @@ internal sealed class UiOverlay
 
             Color color = GradeColor(offer.Grade);
             float gy = y + (rowH - gradeW) / 2f;
-            Box(x, gy, gradeW, gradeW, new Color(color.r, color.g, color.b, 0.2f));
-            Text(x, gy, gradeW, gradeW, offer.Grade.ToString(), f, color, TextAlignmentOptions.Center, bold: true);
+            bool top = offer.Grade == "A+";
+            Box(x, gy, gradeW, gradeW, new Color(color.r, color.g, color.b, top ? 0.45f : 0.2f));
+            Text(x, gy, gradeW, gradeW, offer.Grade, top ? f * 0.9f : f, top ? Color.white : color, TextAlignmentOptions.Center, bold: true);
             IconAt(x + gradeW + gap, y + (rowH - part) / 2f, part, offer.Item, 1f, badge);
             Text(nameX, y + (rowH - nameH) / 2f, nameAvail, nameH, name, f, Light, TextAlignmentOptions.MidlineLeft, bold: true, wrap: wrap);
 

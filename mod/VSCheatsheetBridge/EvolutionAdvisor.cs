@@ -100,8 +100,9 @@ internal sealed class EvolutionStep
 internal sealed class OfferRow
 {
     public Icon Item;
-    /// <summary>'A' (best fit) to 'D' (no fit known); '?' if the item is not in the app's data.</summary>
-    public char Grade;
+    /// <summary>"A+" (strong and brings an evolution closer), "A" (best fit) to "D" (no fit known);
+    /// "?" if the item is not in the app's data.</summary>
+    public string Grade;
     /// <summary>Why, e.g. "for Bloody Tear"; null for D.</summary>
     public string Reason;
     /// <summary>Points behind the grade; the overlay lists the best first.</summary>
@@ -308,12 +309,13 @@ internal sealed class EvolutionAdvisor
     //              So the build you have counts more than the build you're heading for.
     //   Community  tier lists, tier 1/2/3: 2/1.5/1. A weapon also counts with the tier of what
     //              it evolves into.
-    // Sum: from 3 = A, from 2 = B, from 1 = C, below = D. So an item that is generally good and
+    // Sum: from 3 = A, from 2 = B, from 1 = C, below = D. From 5 points it is A+ if the choice
+    // also brings an evolution closer (evolution check, or pairing with items you have). So an item that is generally good and
     // also boosts your weapon ends up above one that is only generally good. The list is sorted
     // by the points, best first, so choices with the same letter are still in order. The reason
     // shows the two checks with the most points. Clear advice from the wiki against a choice for the
     // character (the app's "avoid") makes it a D, whatever the points.
-    private const double ForA = 3, ForB = 2, ForC = 1;
+    private const double ForAPlus = 5, ForA = 3, ForB = 2, ForC = 1;
 
     private const double Owned = 1, Planned = 0.5, MaxBuild = 3;
 
@@ -328,7 +330,7 @@ internal sealed class EvolutionAdvisor
             if (id == null)
             {
                 // Newer than the app's data: name from the game, no grade.
-                rows.Add(new OfferRow { Item = new Icon { GameId = gameId, Name = GameText.WeaponName(gameId) ?? gameId }, Grade = '?', Score = 0 });
+                rows.Add(new OfferRow { Item = new Icon { GameId = gameId, Name = GameText.WeaponName(gameId) ?? gameId }, Grade = "?", Score = 0 });
                 continue;
             }
 
@@ -417,15 +419,19 @@ internal sealed class EvolutionAdvisor
                     via == null ? T("Community", "community") : T("Community: ", "community: ") + Name(via));
 
             double score = found.Sum(f => f.points);
-            char grade = score >= ForA ? 'A' : score >= ForB ? 'B' : score >= ForC ? 'C' : 'D';
-            string reason = grade == 'D' ? null
+            string grade = score >= ForA ? "A" : score >= ForB ? "B" : score >= ForC ? "C" : "D";
+            // A+: a strong choice that also brings an evolution closer (an ingredient, a level
+            // the evolution needs, or a new weapon whose evolution item you already have).
+            bool evolves = found.Any(f => f.check == "evolution" || (f.check == "pairing" && f.points >= 2));
+            if (score >= ForAPlus && evolves) grade = "A+";
+            string reason = grade == "D" ? null
                 : string.Join(" · ", found.OrderByDescending(f => f.points).Take(2).Select(f => f.reason));
 
             // Clear advice from the wiki against this choice for the character: always D, last.
             if (me.Character != null && _data.Avoid.TryGetValue(me.Character, out var avoided)
                 && avoided.TryGetValue(id, out Dictionary<string, string> why))
             {
-                grade = 'D';
+                grade = "D";
                 score = -1;
                 string text = (_german && why.TryGetValue("de", out string de) ? de : null) ?? (why.TryGetValue("en", out string en) ? en : "");
                 reason = T("meiden: ", "avoid: ") + text;
