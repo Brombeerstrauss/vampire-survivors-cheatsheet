@@ -104,6 +104,8 @@ internal sealed class OfferRow
     public char Grade;
     /// <summary>Why, e.g. "for Bloody Tear"; null for D.</summary>
     public string Reason;
+    /// <summary>Points behind the grade; the overlay lists the best first.</summary>
+    public double Score;
 }
 
 internal sealed class PlayerPanel
@@ -111,7 +113,7 @@ internal sealed class PlayerPanel
     public string Title;
     public List<WeaponRow> Rows = new();
     public List<Icon> Passives = new();
-    /// <summary>Choices on the open level-up screen, in the game's order (empty: no level-up).</summary>
+    /// <summary>Choices on the open level-up screen, best first (empty: no level-up).</summary>
     public List<OfferRow> Offers = new();
 }
 
@@ -295,22 +297,30 @@ internal sealed class EvolutionAdvisor
     // check only its best finding counts:
     //   Evolution  of your weapons: missing ingredient 3; your weapon or item still needs max
     //              level 3 if all ingredients are there, otherwise 2.
-    //   Pairing    a new weapon that evolves with items you already have: 2.
+    //   Pairing    a new weapon that evolves with items you already have: 2; with items your
+    //              build still wants: 1.
     //   Character  the app's recommendation, priority 1/2/3: 3/2/1.
-    //   Stats      an item raises a stat that affects your weapons (the wiki's table): 1 per
-    //              weapon, at most 2. A weapon is affected by the stats your items raise: 1 per
-    //              item, at most 2; Might and Cooldown don't count here, every weapon uses them.
+    //   Build      a weapon is affected by stats your items raise (the wiki's table): 1 per item
+    //              you have, 0.5 per item your build still wants (the character's recommended
+    //              items and the partners for your weapons' evolutions); half that for Might and
+    //              Cooldown, which affect almost every weapon. An item raises a stat that affects
+    //              your weapons: 1 per weapon you have, 0.5 per recommended weapon. At most 3.
+    //              So the build you have counts more than the build you're heading for.
     //   Community  tier lists, tier 1/2/3: 2/1.5/1. A weapon also counts with the tier of what
     //              it evolves into.
     // Sum: from 3 = A, from 2 = B, from 1 = C, below = D. So an item that is generally good and
-    // also boosts your weapon ends up above one that is only generally good. The reason shows
-    // the two checks with the most points. Clear advice from the wiki against a choice for the
+    // also boosts your weapon ends up above one that is only generally good. The list is sorted
+    // by the points, best first, so choices with the same letter are still in order. The reason
+    // shows the two checks with the most points. Clear advice from the wiki against a choice for the
     // character (the app's "avoid") makes it a D, whatever the points.
     private const double ForA = 3, ForB = 2, ForC = 1;
+
+    private const double Owned = 1, Planned = 0.5, MaxBuild = 3;
 
     private List<OfferRow> GradeOffers(PlayerItems me, List<PlayerItems> team, Func<string, bool> inGame)
     {
         var rows = new List<OfferRow>();
+        BuildPlan plan = Plan(me, inGame);
         foreach (string gameId in me.Offers)
         {
             string id = _data.Weapons.TryGetValue(gameId, out string w) ? w
@@ -318,7 +328,7 @@ internal sealed class EvolutionAdvisor
             if (id == null)
             {
                 // Newer than the app's data: name from the game, no grade.
-                rows.Add(new OfferRow { Item = new Icon { GameId = gameId, Name = GameText.WeaponName(gameId) ?? gameId }, Grade = '?' });
+                rows.Add(new OfferRow { Item = new Icon { GameId = gameId, Name = GameText.WeaponName(gameId) ?? gameId }, Grade = '?', Score = 0 });
                 continue;
             }
 
@@ -356,27 +366,49 @@ internal sealed class EvolutionAdvisor
                 foreach (EvolutionEntry e in _data.Evolutions)
                 {
                     if (e.Passives.Count == 0 || !e.Weapons.Any(x => x.Id == id) || !Applies(e)) continue;
-                    if (!e.Passives.All(x => me.Passives.Contains(x.Id) || (team != null && team.Any(t => t.Passives.Contains(x.Id))))) continue;
-                    Add("pairing", 2, T("passt zu ", "pairs with ") + string.Join(", ", e.Passives.Select(x => Name(x.Id))));
+                    bool Have(string p) => me.Passives.Contains(p) || (team != null && team.Any(t => t.Passives.Contains(p)));
+                    string names = string.Join(", ", e.Passives.Select(x => Name(x.Id)));
+                    if (e.Passives.All(x => Have(x.Id))) Add("pairing", 2, T("passt zu ", "pairs with ") + names);
+                    else if (e.Passives.All(x => Have(x.Id) || plan.Passives.Contains(x.Id)))
+                        Add("pairing", 1, T("passt zum Build: ", "fits the build: ") + names);
                 }
             }
 
             int priority = Priority(me.Character, id);
             if (priority > 0) Add("character", 4 - priority, T("empfohlen", "recommended"));
 
-            // Stats: does the choice boost your weapons, or do your items boost it?
+            // Build: does the choice fit your weapons and items, and the build the run is heading for?
             if (!isWeapon)
             {
                 HashSet<string> raises = RaisesOf(id, gameId);
                 List<string> boosted = me.Weapons.Where(x => ScalesOf(x).Overlaps(raises)).ToList();
-                if (boosted.Count > 0) Add("stats", Math.Min(2, boosted.Count), T("verstärkt ", "boosts ") + NameList(boosted));
+                List<string> planned = plan.Weapons.Where(x => ScalesOf(x).Overlaps(raises)).ToList();
+                double points = boosted.Count * Owned + planned.Count * Planned;
+                if (points > 0)
+                    Add("build", Math.Min(MaxBuild, points), boosted.Count > 0
+                        ? T("verstärkt ", "boosts ") + NameList(boosted)
+                        : T("passt zum Build: ", "fits the build: ") + NameList(planned));
             }
             else
             {
                 HashSet<string> scales = ScalesOf(id);
-                scales.ExceptWith(Universal);
-                List<string> helpers = me.Passives.Where(x => RaisesOf(x, GameId(x)).Overlaps(scales)).ToList();
-                if (helpers.Count > 0) Add("stats", Math.Min(2, helpers.Count), T("nutzt ", "uses ") + NameList(helpers));
+                double points = 0;
+                var uses = new List<string>();
+                var fits = new List<string>();
+                foreach (string item in me.Passives)
+                {
+                    double match = Match(item, scales);
+                    if (match > 0) { points += match * Owned; uses.Add(item); }
+                }
+                foreach (string item in plan.Passives)
+                {
+                    double match = Match(item, scales);
+                    if (match > 0) { points += match * Planned; fits.Add(item); }
+                }
+                if (points > 0)
+                    Add("build", Math.Min(MaxBuild, points), uses.Count > 0
+                        ? T("nutzt ", "uses ") + NameList(uses)
+                        : T("passt zum Build: ", "fits the build: ") + NameList(fits));
             }
 
             int tier = CommunityTier(id, me, Applies, out string via);
@@ -389,21 +421,71 @@ internal sealed class EvolutionAdvisor
             string reason = grade == 'D' ? null
                 : string.Join(" · ", found.OrderByDescending(f => f.points).Take(2).Select(f => f.reason));
 
-            // Clear advice from the wiki against this choice for the character: always D.
+            // Clear advice from the wiki against this choice for the character: always D, last.
             if (me.Character != null && _data.Avoid.TryGetValue(me.Character, out var avoided)
                 && avoided.TryGetValue(id, out Dictionary<string, string> why))
             {
                 grade = 'D';
+                score = -1;
                 string text = (_german && why.TryGetValue("de", out string de) ? de : null) ?? (why.TryGetValue("en", out string en) ? en : "");
                 reason = T("meiden: ", "avoid: ") + text;
             }
-            rows.Add(new OfferRow { Item = MakeIcon(id, 0), Grade = grade, Reason = reason });
+            rows.Add(new OfferRow { Item = MakeIcon(id, 0), Grade = grade, Reason = reason, Score = score });
         }
-        return rows;
+        // Best first; equal points keep the game's order (OrderBy is stable).
+        return rows.OrderByDescending(r => r.Score).ToList();
     }
 
-    /// <summary>Stats every weapon uses: they don't tell weapons apart.</summary>
+    /// <summary>Stats almost every weapon uses (over 90%): they tell weapons apart only a little.</summary>
     private static readonly string[] Universal = { "might", "cooldown" };
+
+    // How much an item helps a weapon with these stats: 1, or 0.5 if it only raises Might or
+    // Cooldown, 0 if none of its stats affect the weapon.
+    private double Match(string item, HashSet<string> weaponStats)
+    {
+        HashSet<string> raises = RaisesOf(item, GameId(item));
+        raises.IntersectWith(weaponStats);
+        if (raises.Count == 0) return 0;
+        return raises.All(s => Universal.Contains(s)) ? 0.5 : 1;
+    }
+
+    /// <summary>What the build still wants, beyond what you have.</summary>
+    private sealed class BuildPlan
+    {
+        /// <summary>Passive items: the character's recommended ones and the partners for evolutions of your weapons.</summary>
+        public readonly List<string> Passives = new();
+        /// <summary>Weapons recommended for the character.</summary>
+        public readonly List<string> Weapons = new();
+    }
+
+    private BuildPlan Plan(PlayerItems me, Func<string, bool> inGame)
+    {
+        var plan = new BuildPlan();
+        Dictionary<string, Dictionary<string, string>> avoided =
+            me.Character != null && _data.Avoid.TryGetValue(me.Character, out var a) ? a : null;
+        bool Wanted(string id) => avoided == null || !avoided.ContainsKey(id);
+
+        if (me.Character != null && _data.Recommendations.TryGetValue(me.Character, out Dictionary<string, int> recs))
+        {
+            foreach (KeyValuePair<string, int> rec in recs.OrderBy(kv => kv.Value))
+            {
+                if (!Wanted(rec.Key)) continue;
+                if (_data.Passives.ContainsValue(rec.Key)) { if (!me.Passives.Contains(rec.Key)) plan.Passives.Add(rec.Key); }
+                else if (_data.Weapons.ContainsValue(rec.Key) && !me.Weapons.Contains(rec.Key)) plan.Weapons.Add(rec.Key);
+            }
+        }
+        foreach (string weapon in me.Weapons)
+        {
+            foreach (EvolutionEntry e in _data.Evolutions)
+            {
+                if (!e.Weapons.Any(x => x.Id == weapon) || me.Weapons.Contains(e.Result) || !InGame(e, inGame)) continue;
+                if (e.Characters != null && (me.Character == null || !e.Characters.Contains(me.Character))) continue;
+                foreach (Ingredient p in e.Passives)
+                    if (!me.Passives.Contains(p.Id) && !plan.Passives.Contains(p.Id) && Wanted(p.Id)) plan.Passives.Add(p.Id);
+            }
+        }
+        return plan;
+    }
 
     // Stats a passive item raises: from the app's data (Spinach -> might, ...), otherwise from
     // the game's data (area, amount, duration, speed).

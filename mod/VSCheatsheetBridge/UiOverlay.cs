@@ -16,7 +16,7 @@ namespace VSCheatsheetBridge;
 //
 // Layout:
 //   [-] Evolutions                     ::     <- title bar: click collapses/expands, drag moves
-//   Level-up choices                          <- only while the level-up screen is open
+//   Level-up choices, best first              <- only while the level-up screen is open
 //   [A] [image] Hollow Heart   for Bloody Tear
 //   [D] [image] Garlic
 //   ------------------------------------
@@ -438,12 +438,12 @@ internal sealed class UiOverlay
     // A green, B yellow, C blue, D and ? grey.
     private static Color GradeColor(char grade) => grade switch { 'A' => Green, 'B' => Gold, 'C' => Blue, _ => Grey };
 
-    // The choices on the level-up screen with their grades, in the game's order. The reason
-    // follows the name, or goes on the next line if it doesn't fit.
+    // The choices on the level-up screen with their grades, best first. The reason follows the
+    // name, or goes on the next line if it doesn't fit.
     private float OfferRows(List<OfferRow> offers, float x, float y, float inner, float f, float gap, float part,
         float lineH, float small, float badge, System.Func<string, float> nameWidth)
     {
-        Text(x, y, inner, lineH, Plugin.Advisor.Text("Level-Up-Auswahl", "Level-up choices"), small, Gold, TextAlignmentOptions.MidlineLeft);
+        Text(x, y, inner, lineH, Plugin.Advisor.Text("Level-Up-Auswahl, beste zuerst", "Level-up choices, best first"), small, Gold, TextAlignmentOptions.MidlineLeft);
         y += lineH;
         float gradeW = GradeWidth(f);
         float nameX = x + gradeW + gap + part + gap;
