@@ -62,16 +62,19 @@ character, weapons and passive items of every player and
   the game offers something the app's data doesn't have yet. Collapsed, the overlay doesn't show
   the grades. Can be turned off with `LevelUpGrades`. The stats are read together with the
   images a few seconds into a run, also when `Icons` is off.
-- **Minimap (prototype, not yet tried in the game):** a small map in the top right corner with
-  you in the middle and the stage items, relics, chests and other pickups around you, with their
-  own sprites from the game (coloured squares if a sprite can't be read: chests gold, relics
-  violet, others blue). A faint frame marks the visible screen. Things beyond the map's range
-  sit faded at its edge, so their direction stays visible. Experience gems are left out. Like the
-  game's own pause map (relic Milky Way Map), it shows no walls or paths. The data comes from
-  the same place as that map: the game's `MapManager.GetAllWorldItems()` and the treasure chests
-  in the scene. Hidden together with the overlay (F8). Section `Minimap` in the settings. The
-  minimap shows even without the Milky Way Map relic; turn it off with `Enabled = false` if that
-  feels like cheating.
+- **Minimap (prototype):** a small map in the top right corner with you in the middle and the
+  stage items, relics, chests and other pickups around you, with their own sprites from the game
+  (coloured squares if a sprite can't be read: chests gold, relics violet, others blue). Enemies
+  are small red dots, bosses have their own sprite and are drawn larger (setting `Enemies`:
+  `all`, `bosses` or `off`). A faint frame marks the visible screen. Items and bosses beyond the
+  map's range sit faded at its edge, so their direction stays visible; enemies there are left out.
+  Experience gems are left out too. Like the game's own pause map (relic Milky Way Map), it shows
+  no walls or paths. The items come from the same place as that map: the game's
+  `MapManager.GetAllWorldItems()` and the treasure chests in the scene; the enemies from the
+  stage's list of spawned enemies. Drag the map with the mouse like the overlay (the position is
+  saved), F9 puts both back. Hidden together with the overlay (F8). Section `Minimap` in the
+  settings. The minimap shows even without the Milky Way Map relic; turn it off with
+  `Enabled = false` if that feels like cheating.
 - also serves the run locally at `http://127.0.0.1:47321` so the
   cheatsheet app can pick it up.
 
@@ -221,7 +224,7 @@ curl http://127.0.0.1:47321/state
 |---|---|
 | `/state` | current run as JSON |
 | `/events` | Server-Sent Events: new state on every change |
-| `/debug` | field names of the game objects, in case something stays empty after an update (`levelUpPage` and `levelUpItem` appear once a level-up screen was open, `mapManager` and `worldItem` once the minimap found the game's map data) |
+| `/debug` | field names of the game objects, in case something stays empty after an update (`levelUpPage` and `levelUpItem` appear once a level-up screen was open, `mapManager` and `worldItem` once the minimap found the game's map data, `stage` and `enemy` once it read the enemies) |
 
 Example for `/state`:
 
@@ -243,7 +246,9 @@ in the infobox of every wiki page (field `id`). The app stores them in its data 
 
 Testing the minimap: during a run the log should show `[Minimap] MapManager: ...` (the types
 found), `[Minimap] found the game's MapManager` and a line like `[Minimap] 12 world items,
-1 chests: RELIC 1, ...`. If the map stays empty, these lines and `/debug` show where it stops.
+1 chests: RELIC 1, ...`. Once there are 20 enemies, once per run: `[Minimap] 85 enemies, 0 bosses:
+BAT 60, ...` (the most common enemy types), and `[Minimap] boss on the stage: ...` for each boss.
+If the map or the enemies stay empty, these lines and `/debug` show where it stops.
 
 Plugin messages are written to `BepInEx/LogOutput.log`.
 
@@ -263,8 +268,8 @@ Plugin messages are written to `BepInEx/LogOutput.log`.
   level-up screen, default on)
 - Section `Minimap`: `Enabled` (default on), `Size` (fraction of the screen height, default 0.24),
   position `X`/`Y` (fractions of the screen, default top right), `Range` (from you to the map's
-  edge in half screen widths, default 4), `Opacity`, `IntervalMs` (how often it updates, default
-  200)
+  edge in half screen widths, default 4), `Opacity`, `Enemies` (`all`, `bosses` or `off`, default
+  `all`), `IntervalMs` (how often it updates, default 200)
 
 Older versions of the plugin wrote `Language = de` or `Language = en` into the config file. Set
 it to `auto` if the overlay should follow the game's language.

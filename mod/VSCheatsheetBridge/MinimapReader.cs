@@ -8,20 +8,34 @@ using UnityEngine;
 
 namespace VSCheatsheetBridge;
 
+/// <summary>How a point is drawn on the minimap.</summary>
+internal enum MapPointStyle
+{
+    /// <summary>Stage item, relic, chest...: its sprite; beyond the range faded at the edge.</summary>
+    Item,
+    /// <summary>A normal enemy: a small red dot, only within the range.</summary>
+    Enemy,
+    /// <summary>A boss: its sprite, larger; beyond the range at the edge.</summary>
+    Boss,
+}
+
 /// <summary>A point of interest for the minimap, in world units.</summary>
 internal sealed class MapPoint
 {
     public Vector2 Position;
     /// <summary>The object's own sprite in the world (null: draw a coloured square).</summary>
     public Sprite Sprite;
-    /// <summary>Pickup type from the game (e.g. TREASURE, RELIC...), or CHEST.</summary>
+    /// <summary>Pickup type from the game (e.g. TREASURE, RELIC...), CHEST, or the enemy type.</summary>
     public string Kind;
+    public MapPointStyle Style;
 }
 
 // Reads what the minimap shows, from the same places the game's own pause map uses:
 // - MapManager.GetAllWorldItems(): the pickups lying on the stage (stage items, relics, ...).
 //   MapManager belongs to the pause menu, so it may exist while inactive; Resources finds it.
 // - TreasureChest objects in the scene (the pause map adds chests separately).
+// - The enemies from the stage's list of spawned enemies (Stage._spawnedEnemies, as in the
+//   modding docs), bosses (EnemyController.IsBoss) separately. The game's pause map has no enemies.
 // - The player's position from the character.
 // Names per the game's decompiled code (game-api of VSEvolutionHelperEx, which hooks the same
 // MapManager). Everything via reflection with fallbacks; /debug lists the real field names.
@@ -30,8 +44,8 @@ internal static class MinimapReader
 {
     private const BindingFlags Inst = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
 
-    /// <summary>At most this many points, the nearest first.</summary>
-    private const int MaxPoints = 120;
+    /// <summary>At most this many items, enemies and bosses, the nearest first.</summary>
+    private const int MaxItems = 120, MaxEnemies = 250, MaxBosses = 20;
 
     private static bool _resolved;
     private static Type _mapManagerType, _chestType;
@@ -39,7 +53,10 @@ internal static class MinimapReader
     private static MethodInfo _castMapManager, _castChest, _getAllWorldItems;
     private static object _mapManager;
     private static double _retryAt;
-    private static bool _loggedFirst;
+    private static bool _loggedItems, _loggedEnemies;
+    private static readonly HashSet<string> LoggedBosses = new();
+    // Getters per enemy type, so hundreds of enemies don't mean hundreds of member lookups.
+    private static readonly Dictionary<(Type, string), Func<object, object>> Getters = new();
 
     private static void Resolve()
     {
@@ -69,11 +86,14 @@ internal static class MinimapReader
     {
         _mapManager = null;
         _retryAt = 0;
+        _loggedItems = _loggedEnemies = false;
+        LoggedBosses.Clear();
     }
 
     /// <summary>
-    /// Fills `points` with what is around the player. False if the player's position is unknown.
-    /// `range` is half a screen width in world units (from the camera).
+    /// Fills `points` with what is around the player, in drawing order: enemies, items, bosses.
+    /// False if the player's position is unknown. `halfScreen`: half a screen width in world units
+    /// (from the camera).
     /// </summary>
     public static bool Read(List<MapPoint> points, double now, out Vector2 player, out float halfScreen)
     {
@@ -91,19 +111,92 @@ internal static class MinimapReader
         halfScreen = cam != null && cam.orthographic ? cam.orthographicSize * cam.aspect : 0f;
         if (halfScreen <= 0f) halfScreen = 12f; // rough fallback until the camera is known
 
-        var found = new List<(float d, MapPoint point)>();
-        int worldItems = AddWorldItems(found, player, now);
-        int chests = AddChests(found, player);
+        var items = new List<(float d, MapPoint point)>();
+        int worldItems = AddWorldItems(items, player, now);
+        int chests = AddChests(items, player);
 
-        foreach (var f in found.OrderBy(f => f.d).Take(MaxPoints)) points.Add(f.point);
-
-        if (!_loggedFirst && (worldItems > 0 || chests > 0))
+        var enemies = new List<(float d, MapPoint point)>();
+        var bosses = new List<(float d, MapPoint point)>();
+        string show = (Plugin.MinimapEnemies?.Value ?? "all").Trim().ToLowerInvariant();
+        if (show != "off")
         {
-            _loggedFirst = true;
-            string kinds = string.Join(", ", found.GroupBy(f => f.point.Kind).Select(g => $"{g.Key} {g.Count()}"));
+            float range = MinimapOverlay.RangeFor(halfScreen);
+            AddEnemies(enemies, bosses, player, range * range, show != "bosses");
+        }
+
+        foreach (var f in enemies.OrderBy(f => f.d).Take(MaxEnemies)) points.Add(f.point);
+        foreach (var f in items.OrderBy(f => f.d).Take(MaxItems)) points.Add(f.point);
+        foreach (var f in bosses.OrderBy(f => f.d).Take(MaxBosses)) points.Add(f.point);
+
+        if (!_loggedItems && (worldItems > 0 || chests > 0))
+        {
+            _loggedItems = true;
+            string kinds = string.Join(", ", items.GroupBy(f => f.point.Kind).Select(g => $"{g.Key} {g.Count()}"));
             Plugin.Logger.LogInfo($"[Minimap] {worldItems} world items, {chests} chests: {kinds}");
         }
         return true;
+    }
+
+    // Enemies from the stage: within the range (squared, world units) as dots, bosses anywhere.
+    private static void AddEnemies(List<(float, MapPoint)> enemies, List<(float, MapPoint)> bosses,
+        Vector2 player, float rangeSq, bool all)
+    {
+        object stage = RunReader.GetMember(RunReader.GameManager(), "Stage", "_stage");
+        object list = RunReader.GetMember(stage, "SpawnedEnemies", "_spawnedEnemies");
+        if (list == null) return;
+
+        object first = null;
+        int total = 0;
+        foreach (object enemy in RunReader.Items(list))
+        {
+            if (enemy is not Component c || c == null) continue;
+            first ??= enemy;
+            total++;
+            Vector3 pos = c.transform.position;
+            float d = Distance(player, pos);
+            bool boss = Member(enemy, "IsBoss") is bool b && b;
+            if (boss)
+            {
+                string type = RunReader.EnumNameOf(Member(enemy, "EnemyType")) ?? "BOSS";
+                if (LoggedBosses.Add(type)) Plugin.Logger.LogInfo($"[Minimap] boss on the stage: {type}");
+                bosses.Add((d, new MapPoint { Position = new Vector2(pos.x, pos.y), Sprite = SpriteOf(c), Kind = type, Style = MapPointStyle.Boss }));
+            }
+            else if (all && d <= rangeSq)
+            {
+                enemies.Add((d, new MapPoint { Position = new Vector2(pos.x, pos.y), Kind = "ENEMY", Style = MapPointStyle.Enemy }));
+            }
+        }
+        if (first == null) return;
+        RunReader.AddDebugEntry("stage", stage);
+        RunReader.AddDebugEntry("enemy", first);
+
+        // Once per run: which enemy types are there, so missing ones can be found in the log.
+        if (!_loggedEnemies && total >= 20)
+        {
+            _loggedEnemies = true;
+            string types = string.Join(", ", RunReader.Items(list)
+                .Select(e => RunReader.EnumNameOf(Member(e, "EnemyType")) ?? "?")
+                .GroupBy(t => t).OrderByDescending(g => g.Count()).Take(10).Select(g => $"{g.Key} {g.Count()}"));
+            Plugin.Logger.LogInfo($"[Minimap] {total} enemies, {bosses.Count} bosses: {types}");
+        }
+    }
+
+    // A field or property by name, with the lookup cached per type.
+    private static object Member(object obj, string name)
+    {
+        if (obj == null) return null;
+        Type t = obj.GetType();
+        if (!Getters.TryGetValue((t, name), out Func<object, object> get))
+        {
+            PropertyInfo prop = t.GetProperty(name, Inst);
+            FieldInfo field = prop == null ? t.GetField(name, Inst) : null;
+            get = prop != null && prop.GetIndexParameters().Length == 0 ? prop.GetValue
+                : field != null ? field.GetValue
+                : _ => null;
+            Getters[(t, name)] = get;
+        }
+        try { return get(obj); }
+        catch (Exception ex) { RunReader.WarnOnce("minimap:" + name, ex); return null; }
     }
 
     private static int AddWorldItems(List<(float, MapPoint)> found, Vector2 player, double now)
@@ -123,7 +216,7 @@ internal static class MinimapReader
             string kind = RunReader.EnumNameOf(RunReader.GetMember(item, "PickupType", "_pickupType", "ItemType")) ?? item.GetType().Name;
             if (kind == "GEM") continue; // experience gems: far too many, the game's map skips them too
             Vector3 pos = c.transform.position;
-            found.Add((Distance(player, pos), new MapPoint { Position = new Vector2(pos.x, pos.y), Sprite = SpriteOf(c), Kind = kind }));
+            found.Add((Distance(player, pos), new MapPoint { Position = new Vector2(pos.x, pos.y), Sprite = SpriteOf(c), Kind = kind, Style = MapPointStyle.Item }));
             count++;
         }
         if (first != null) RunReader.AddDebugEntry("worldItem", first);
@@ -143,7 +236,7 @@ internal static class MinimapReader
                 if (o == null) continue;
                 if (_castChest.Invoke(o, null) is not Component c || c == null) continue;
                 Vector3 pos = c.transform.position;
-                found.Add((Distance(player, pos), new MapPoint { Position = new Vector2(pos.x, pos.y), Sprite = SpriteOf(c), Kind = "CHEST" }));
+                found.Add((Distance(player, pos), new MapPoint { Position = new Vector2(pos.x, pos.y), Sprite = SpriteOf(c), Kind = "CHEST", Style = MapPointStyle.Item }));
                 count++;
             }
         }

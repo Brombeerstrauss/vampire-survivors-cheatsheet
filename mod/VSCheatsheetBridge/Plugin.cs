@@ -45,6 +45,7 @@ public class Plugin : BasePlugin
     internal static ConfigEntry<float> MinimapY;
     internal static ConfigEntry<float> MinimapRange;
     internal static ConfigEntry<float> MinimapOpacity;
+    internal static ConfigEntry<string> MinimapEnemies;
     internal static float MinimapIntervalMs;
 
     public override void Load()
@@ -76,13 +77,16 @@ public class Plugin : BasePlugin
             "On the level-up screen, grade the offered weapons and items from A (best fit) to D (no fit known) " +
             "for your character and your current weapons and items.");
         MinimapEnabled = Config.Bind("Minimap", "Enabled", true,
-            "Prototype: a small map with the stage items, relics and chests around you. Hidden with the overlay (F8).");
+            "Prototype: a small map with the stage items, relics, chests and enemies around you. Hidden with the overlay (F8). " +
+            "Drag it with the mouse; F9 puts it back.");
         MinimapSize = Config.Bind("Minimap", "Size", 0.24f, "Size, fraction of the screen height.");
-        MinimapX = Config.Bind("Minimap", "X", 0.76f, "Left edge, fraction of the screen width (0 to 1).");
-        MinimapY = Config.Bind("Minimap", "Y", 0.02f, "Top edge, fraction of the screen height (0 to 1).");
+        MinimapX = Config.Bind("Minimap", "X", 0.76f, "Left edge, fraction of the screen width (0 to 1). Saved when dragging with the mouse.");
+        MinimapY = Config.Bind("Minimap", "Y", 0.02f, "Top edge, fraction of the screen height (0 to 1). Saved when dragging with the mouse.");
         MinimapRange = Config.Bind("Minimap", "Range", 4f,
             "How far the map reaches from you to its edge, in half screen widths. Things further away sit faded at the edge.");
         MinimapOpacity = Config.Bind("Minimap", "Opacity", 0.55f, "Background opacity (0 to 1).");
+        MinimapEnemies = Config.Bind("Minimap", "Enemies", "all",
+            "Enemies on the map: all (red dots, bosses with their image), bosses (only bosses) or off.");
         ConfigEntry<int> mapInterval = Config.Bind("Minimap", "IntervalMs", 200, "How often the map is updated (milliseconds).");
         MinimapIntervalMs = Math.Max(50, mapInterval.Value);
         IntervalMs = Math.Max(100, interval.Value);
@@ -155,6 +159,7 @@ public class BridgeBehaviour : MonoBehaviour
     private bool _mouseDown;
     private bool _pressed;
     private bool _pressOnHeader;
+    private bool _pressOnMap; // the press is on the minimap, not on the overlay
     private bool _dragging;
     private Vector2 _pressPos;
     private Vector2 _dragOffset;
@@ -273,6 +278,9 @@ public class BridgeBehaviour : MonoBehaviour
             {
                 Plugin.OverlayX.Value = (float)Plugin.OverlayX.DefaultValue;
                 Plugin.OverlayY.Value = (float)Plugin.OverlayY.DefaultValue;
+                Plugin.MinimapX.Value = (float)Plugin.MinimapX.DefaultValue;
+                Plugin.MinimapY.Value = (float)Plugin.MinimapY.DefaultValue;
+                _nextMap = 0; // move the map right away
                 _dirty = true;
                 Refresh();
             }
@@ -290,25 +298,26 @@ public class BridgeBehaviour : MonoBehaviour
     {
         try
         {
-            if (!_ui.Visible || !Application.isFocused) { _pressed = _dragging = false; return; }
+            if (!_ui.Visible || !Application.isFocused) { CancelDrag(); return; }
             bool down = (GetAsyncKeyState(0x01) & 0x8000) != 0;
             if (!down && !_mouseDown) return;
             bool wasDown = _mouseDown;
             _mouseDown = down;
             if (!TryGetMouse(out Vector2 mouse))
             {
-                if (!down) _pressed = _dragging = false;
+                if (!down) CancelDrag();
                 return;
             }
-            Rect r = _ui.ScreenRect;
-
             if (down && !wasDown)
             {
-                _pressed = r.Contains(mouse);
-                _pressOnHeader = _pressed && _ui.OnHeader(mouse);
+                // The overlay is drawn above the map, so it wins where both overlap.
+                _pressOnMap = !_ui.ScreenRect.Contains(mouse) && _map.Visible && _map.ScreenRect.Contains(mouse);
+                Rect pressed = _pressOnMap ? _map.ScreenRect : _ui.ScreenRect;
+                _pressed = pressed.Contains(mouse);
+                _pressOnHeader = _pressed && !_pressOnMap && _ui.OnHeader(mouse);
                 _dragging = false;
                 _pressPos = mouse;
-                _dragOffset = mouse - r.position;
+                _dragOffset = mouse - pressed.position;
             }
             else if (down && _pressed)
             {
@@ -316,15 +325,24 @@ public class BridgeBehaviour : MonoBehaviour
                 if (!_dragging && dx * dx + dy * dy > DragThreshold * DragThreshold) _dragging = true;
                 if (_dragging)
                 {
+                    Rect r = _pressOnMap ? _map.ScreenRect : _ui.ScreenRect;
                     float x = Mathf.Clamp(mouse.x - _dragOffset.x, 0f, Mathf.Max(0f, Screen.width - r.width));
                     float y = Mathf.Clamp(mouse.y - _dragOffset.y, 0f, Mathf.Max(0f, Screen.height - r.height));
-                    _ui.MoveTo(x, y);
+                    if (_pressOnMap) _map.MoveTo(x, y);
+                    else _ui.MoveTo(x, y);
                 }
             }
             else if (!down && _pressed)
             {
                 _pressed = false;
-                if (_dragging)
+                if (_dragging && _pressOnMap)
+                {
+                    _dragging = false;
+                    Plugin.MinimapX.Value = _map.ScreenRect.x / Mathf.Max(1, Screen.width);
+                    Plugin.MinimapY.Value = _map.ScreenRect.y / Mathf.Max(1, Screen.height);
+                    _map.EndDrag();
+                }
+                else if (_dragging)
                 {
                     _dragging = false;
                     Plugin.OverlayX.Value = _ui.ScreenRect.x / Mathf.Max(1, Screen.width);
@@ -340,9 +358,17 @@ public class BridgeBehaviour : MonoBehaviour
         }
         catch (Exception ex)
         {
-            _pressed = _dragging = false;
+            CancelDrag();
             RunReader.WarnOnce("drag", ex);
         }
+    }
+
+    // Lets go without saving: the map goes back to its saved position.
+    private void CancelDrag()
+    {
+        if (_dragging && !_pressOnMap) _dirty = true; // the overlay is rebuilt at its saved place
+        _pressed = _dragging = false;
+        _map.EndDrag();
     }
 
     // Mouse position in Unity's screen pixels, origin top left like the panel.
