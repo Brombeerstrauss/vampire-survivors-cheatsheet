@@ -12,9 +12,9 @@ using UnityEngine;
 namespace VSCheatsheetBridge;
 
 // Reads the current run (character, weapons, passive items), shows in game what each weapon
-// still needs for its next evolution, grades the choices on the level-up screen, and also
-// serves the run to the cheatsheet app via http://127.0.0.1:<port>. The plugin does not
-// change anything in the game itself.
+// still needs for its next evolution, grades the choices on the level-up screen, shows a small
+// map of the stage items around you (prototype), and also serves the run to the cheatsheet app
+// via http://127.0.0.1:<port>. The plugin does not change anything in the game itself.
 [BepInPlugin(Guid, Name, Version)]
 public class Plugin : BasePlugin
 {
@@ -39,6 +39,13 @@ public class Plugin : BasePlugin
     internal static ConfigEntry<bool> ShareCoopPassives;
     internal static ConfigEntry<bool> Icons;
     internal static ConfigEntry<bool> LevelUpGrades;
+    internal static ConfigEntry<bool> MinimapEnabled;
+    internal static ConfigEntry<float> MinimapSize;
+    internal static ConfigEntry<float> MinimapX;
+    internal static ConfigEntry<float> MinimapY;
+    internal static ConfigEntry<float> MinimapRange;
+    internal static ConfigEntry<float> MinimapOpacity;
+    internal static float MinimapIntervalMs;
 
     public override void Load()
     {
@@ -68,6 +75,16 @@ public class Plugin : BasePlugin
         LevelUpGrades = Config.Bind("Overlay", "LevelUpGrades", true,
             "On the level-up screen, grade the offered weapons and items from A (best fit) to D (no fit known) " +
             "for your character and your current weapons and items.");
+        MinimapEnabled = Config.Bind("Minimap", "Enabled", true,
+            "Prototype: a small map with the stage items, relics and chests around you. Hidden with the overlay (F8).");
+        MinimapSize = Config.Bind("Minimap", "Size", 0.24f, "Size, fraction of the screen height.");
+        MinimapX = Config.Bind("Minimap", "X", 0.76f, "Left edge, fraction of the screen width (0 to 1).");
+        MinimapY = Config.Bind("Minimap", "Y", 0.02f, "Top edge, fraction of the screen height (0 to 1).");
+        MinimapRange = Config.Bind("Minimap", "Range", 4f,
+            "How far the map reaches from you to its edge, in half screen widths. Things further away sit faded at the edge.");
+        MinimapOpacity = Config.Bind("Minimap", "Opacity", 0.55f, "Background opacity (0 to 1).");
+        ConfigEntry<int> mapInterval = Config.Bind("Minimap", "IntervalMs", 200, "How often the map is updated (milliseconds).");
+        MinimapIntervalMs = Math.Max(50, mapInterval.Value);
         IntervalMs = Math.Max(100, interval.Value);
 
         string dataPath = Path.Combine(Path.GetDirectoryName(typeof(Plugin).Assembly.Location) ?? ".", "cheatsheet-data.json");
@@ -156,6 +173,9 @@ public class BridgeBehaviour : MonoBehaviour
     private double _retryIconsAt = -1;
     private int _iconRetries;
     private readonly UiOverlay _ui = new();
+    private readonly MinimapOverlay _map = new();
+    private readonly List<MapPoint> _points = new();
+    private double _nextMap;
 
     private void Update()
     {
@@ -166,6 +186,11 @@ public class BridgeBehaviour : MonoBehaviour
             PollToggleKey();
         }
         PollDrag();
+        if (now >= _nextMap)
+        {
+            _nextMap = now + Plugin.MinimapIntervalMs;
+            UpdateMinimap(now);
+        }
         if (now < _next) return;
         _next = now + Plugin.IntervalMs;
         try
@@ -174,7 +199,7 @@ public class BridgeBehaviour : MonoBehaviour
             string key = snap.ContentKey();
             Plugin.Server.Publish(key, snap.ToJson(), snap.DebugJson);
             if (snap.InRun && !_inRun) _runStartedAt = now;
-            if (!snap.InRun && _inRun) { GameSprites.Reset(); _iconsReady = false; }
+            if (!snap.InRun && _inRun) { GameSprites.Reset(); MinimapReader.Reset(); _iconsReady = false; }
             if (snap.InRun != _inRun) _dirty = true;
             _inRun = snap.InRun;
 
@@ -199,6 +224,22 @@ public class BridgeBehaviour : MonoBehaviour
         catch (Exception ex)
         {
             RunReader.WarnOnce("update", ex);
+        }
+    }
+
+    // The minimap moves with the player, so it updates on its own timer instead of on run changes.
+    private void UpdateMinimap(double now)
+    {
+        try
+        {
+            if (!Plugin.MinimapEnabled.Value || !Plugin.OverlayVisible.Value || !_inRun) { _map.Hide(); return; }
+            if (MinimapReader.Read(_points, now, out Vector2 player, out float halfScreen)) _map.Show(player, halfScreen, _points);
+            else _map.Hide();
+        }
+        catch (Exception ex)
+        {
+            RunReader.WarnOnce("minimap", ex);
+            _map.Hide();
         }
     }
 
