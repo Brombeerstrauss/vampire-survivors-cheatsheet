@@ -198,6 +198,33 @@ export interface AvoidedItem {
   reason: LocalizedText
 }
 
+/** A community tier list that src/data/community-tiers.json is based on. */
+export interface CommunityTierSource {
+  id: string
+  name: string
+  url: string
+  /** Last update of the source (YYYY-MM-DD), as the page states it. */
+  updated: string
+  /** Weight in the mean, e.g. 2 for a current, detailed list. */
+  weight: number
+}
+
+/**
+ * General strength of a weapon or passive item, independent of the character: the weighted
+ * mean of the community tier lists that rate it. 1 = strong, 2 = good, 3 = decent.
+ */
+export interface CommunityTier {
+  id: WeaponId | PassiveId
+  tier: 1 | 2 | 3
+  /** IDs of the sources that rate this entry. */
+  sources: string[]
+}
+
+export interface CommunityTiers {
+  sources: CommunityTierSource[]
+  tiers: CommunityTier[]
+}
+
 /** All packs merged, as the app uses them. */
 export interface GameData {
   packs: Pack[]

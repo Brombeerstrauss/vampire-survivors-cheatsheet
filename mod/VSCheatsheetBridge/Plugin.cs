@@ -12,8 +12,9 @@ using UnityEngine;
 namespace VSCheatsheetBridge;
 
 // Reads the current run (character, weapons, passive items), shows in game what each weapon
-// still needs for its next evolution, and also serves the run to the cheatsheet app via
-// http://127.0.0.1:<port>. The plugin does not change anything in the game itself.
+// still needs for its next evolution, grades the choices on the level-up screen, and also
+// serves the run to the cheatsheet app via http://127.0.0.1:<port>. The plugin does not
+// change anything in the game itself.
 [BepInPlugin(Guid, Name, Version)]
 public class Plugin : BasePlugin
 {
@@ -37,6 +38,7 @@ public class Plugin : BasePlugin
     internal static ConfigEntry<float> FontScale;
     internal static ConfigEntry<bool> ShareCoopPassives;
     internal static ConfigEntry<bool> Icons;
+    internal static ConfigEntry<bool> LevelUpGrades;
 
     public override void Load()
     {
@@ -63,6 +65,9 @@ public class Plugin : BasePlugin
         ShareCoopPassives = Config.Bind("Overlay", "ShareCoopPassives", true,
             "Co-op: other players' passive items count toward your own evolutions.");
         Icons = Config.Bind("Overlay", "Icons", true, "Show game images in the overlay (off: text abbreviations only).");
+        LevelUpGrades = Config.Bind("Overlay", "LevelUpGrades", true,
+            "On the level-up screen, grade the offered weapons and items from A (best fit) to D (no fit known) " +
+            "for your character and your current weapons and items.");
         IntervalMs = Math.Max(100, interval.Value);
 
         string dataPath = Path.Combine(Path.GetDirectoryName(typeof(Plugin).Assembly.Location) ?? ".", "cheatsheet-data.json");
@@ -173,8 +178,9 @@ public class BridgeBehaviour : MonoBehaviour
             if (snap.InRun != _inRun) _dirty = true;
             _inRun = snap.InRun;
 
-            // Only read image names once the stage has surely finished loading.
-            if (_inRun && Plugin.Icons.Value && !GameSprites.Ready && now - _runStartedAt > 3000)
+            // Only read the game's weapon data (images, stats for the level-up grades) once the
+            // stage has surely finished loading.
+            if (_inRun && (Plugin.Icons.Value || Plugin.LevelUpGrades.Value) && !GameSprites.Ready && now - _runStartedAt > 3000)
                 GameSprites.LoadFrames();
             // With the game's data read, later evolution steps from DLCs that are not installed disappear.
             bool gameDataChanged = GameSprites.Ready != _iconsReady;

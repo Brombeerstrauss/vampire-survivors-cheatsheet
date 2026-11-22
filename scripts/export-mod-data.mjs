@@ -1,6 +1,7 @@
 // Builds the data for the mod's in-game overlay (mod/VSCheatsheetBridge) from the app's
-// game data: names in English and German, max levels, evolutions and the game ID mapping
-// (gameIds). That way there is only one data source.
+// game data: names in English and German, max levels, evolutions, the game ID mapping
+// (gameIds), the recommendations per character and the community tiers. That way there is
+// only one data source.
 //   node scripts/export-mod-data.mjs <target.json>
 // The mod's build runs this script by itself.
 import { readFileSync, writeFileSync } from 'node:fs'
@@ -19,6 +20,9 @@ const characters = load('characters', 'characters')
 const weapons = load('weapons', 'weapons')
 const passives = load('passives', 'passives')
 const evolutions = load('evolutions', 'evolutions')
+const recommendations = load('recommendations', 'recommendations')
+const statItems = read('src/data/stat-items.json')
+const { tiers: communityTiers } = read('src/data/community-tiers.json')
 
 const gameIdMap = (entries) => {
   const map = {}
@@ -38,6 +42,18 @@ for (const e of [...characters, ...weapons, ...passives]) {
   }
 }
 
+// Character -> weapon or passive item -> priority (1 = core, 2 = good, 3 = optional), for the
+// overlay's grades on the level-up screen. Several packs may add to the same character:
+// the best priority wins.
+const recommended = {}
+// Character -> weapon or item -> reason in both languages: clear advice against it (from the wiki).
+const avoid = {}
+for (const r of recommendations) {
+  const items = (recommended[r.character] ??= {})
+  for (const item of [...r.weapons, ...r.passives]) items[item.id] = Math.min(items[item.id] ?? 3, item.priority)
+  for (const item of r.avoid ?? []) (avoid[r.character] ??= {})[item.id] = item.reason
+}
+
 const data = {
   characters: gameIdMap(characters),
   weapons: gameIdMap(weapons),
@@ -50,7 +66,21 @@ const data = {
     passives: e.passives.map((p) => ({ id: p.id, max: p.level === 'max' })),
     ...(e.characters ? { characters: e.characters } : {}),
   })),
+  recommendations: recommended,
+  avoid,
+  // Weapon or item -> general strength from community tier lists (1 = strong, 2 = good, 3 = decent).
+  community: Object.fromEntries(communityTiers.map((t) => [t.id, t.tier])),
+  // Weapon -> the stats from the wiki that directly affect it, and passive item -> the stat it
+  // raises: for the level-up grades (does an item boost your weapons?).
+  scales: Object.fromEntries(weapons.filter((w) => w.affectedBy?.length).map((w) => [w.id, w.affectedBy])),
+  itemStats: Object.fromEntries(Object.entries(statItems).map(([stat, item]) => [item, [stat]])),
+  // Passive items that don't take one of the 6 slots (for the level-up grades' slot check).
+  noSlot: passives.filter((p) => p.noSlot).map((p) => p.id),
 }
 
 writeFileSync(target, JSON.stringify(data))
-console.log(`Mod data: ${evolutions.length} evolutions, ${Object.keys(names).length} names -> ${target}`)
+console.log(
+  `Mod data: ${evolutions.length} evolutions, ${Object.keys(names).length} names, ` +
+    `recommendations for ${Object.keys(recommended).length} characters, ` +
+    `community tiers for ${communityTiers.length} weapons and items -> ${target}`,
+)

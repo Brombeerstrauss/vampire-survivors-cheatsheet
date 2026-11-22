@@ -21,6 +21,47 @@ character, weapons and passive items of every player and
   hides it, **F9** resets it to the default position.
 - Co-op: one block per player. Other players' passive items count toward your own
   evolutions and are then tagged with their origin ("P2"). Can be turned off with `ShareCoopPassives`.
+- **Level-up grades:** while the level-up screen is open, the overlay lists its choices, best
+  first, each with a grade from A+ to D and the main reasons. The ranking follows what decides a
+  level-up in the game: evolutions are the biggest power spike, slots are scarce (6 weapons, 6
+  items), and an item helps every weapon whose stats it raises.
+  1. **Evolution first.** A choice that brings an evolution closer always ranks above choices
+     that don't and gets at least an A: a missing ingredient ("for Bloody Tear"), a level a
+     weapon needs while all ingredients are there ("max for ..."), or a new weapon whose
+     evolution items you already have ("pairs with Bracer"). **A+** if it also fits your
+     current build or is recommended for the character.
+  2. **Within each group, points** (per check only its best finding counts):
+     - *Evolution:* ingredient or max level with all ingredients 3, max level with ingredients
+       still missing 2. *Pairing:* evolves with items you have 2, with items your build still
+       wants 1.
+     - *Character:* the app's recommendation, priority 1/2/3 = 3/2/1.
+     - *Build:* a weapon is affected by stats your items raise (the wiki's "Stats and passive
+       items" table, the app's `affectedBy`; otherwise the stats its level-ups raise in the
+       game's data): 1 per item you have ("uses Bracer, Duplicator"), 0.5 per item your build
+       still wants ("fits the build: Spellbinder"), half that for Spinach and Empty Tome,
+       because Might and Cooldown affect almost every weapon. An item raises a stat that affects
+       your weapons: 1 per weapon you have ("boosts Knife"), 0.5 per recommended weapon. At most
+       3. "Your build still wants" means the character's recommended items and the partners for
+       your weapons' evolutions, so with few items the plan counts, and the more you have, the
+       more your actual build counts. Which stat an item raises comes from the app's data
+       (`src/data/stat-items.json`) and the game's data.
+     - *Community* tier lists (`src/data/community-tiers.json`): tier 1/2/3 = 2/1.5/1. A weapon
+       also counts with the tier of what it evolves into, unless that evolution already counted.
+     - *Slots:* a new item that would leave no room for the items your weapons still need for
+       their next evolution: -2 ("no room left for Hollow Heart"); a new weapon whose own
+       evolution item would find no room: -1; upgrading something you have when that kind has
+       at most one slot left: +1 ("no new slot"). Characters with extra slots aren't known yet,
+       the check assumes 6.
+
+     From 3 points A, from 2 B, from 1 C, below D.
+  3. Where the wiki clearly advises against a choice for the character (the app's "Better
+     avoid", e.g. Empty Tome for Babi-Onna, who ignores Cooldown), it gets a D with the reason
+     ("avoid: ...") and comes last.
+
+  **D** otherwise means the data knows no fit, which doesn't make it a bad choice. **?** means
+  the game offers something the app's data doesn't have yet. Collapsed, the overlay doesn't show
+  the grades. Can be turned off with `LevelUpGrades`. The stats are read together with the
+  images a few seconds into a run, also when `Icons` is off.
 - also serves the run locally at `http://127.0.0.1:47321` so the
   cheatsheet app can pick it up.
 
@@ -33,7 +74,10 @@ are on the `AllowedOrigins` list (by default the published app) or are served by
 as the app's dev server.
 
 *Prototype: the field names come from community documentation and other mods and have not yet
-been confirmed in the game.*
+been confirmed in the game. This applies above all to the level-up screen (`LevelUpPage`,
+`LevelUpItemUI`), whose names come from the decompiled code used by the mods
+[VSEvolutionHelperEx](https://github.com/n3rdyguy/VSEvolutionHelperEx) and
+[jev_vampire_survivors](https://github.com/oldmoldycake/jev_vampire_survivors).*
 
 ## Requirements
 
@@ -167,7 +211,7 @@ curl http://127.0.0.1:47321/state
 |---|---|
 | `/state` | current run as JSON |
 | `/events` | Server-Sent Events: new state on every change |
-| `/debug` | field names of the game objects, in case something stays empty after an update |
+| `/debug` | field names of the game objects, in case something stays empty after an update (`levelUpPage` and `levelUpItem` appear once a level-up screen was open) |
 
 Example for `/state`:
 
@@ -177,6 +221,10 @@ Example for `/state`:
    "weapons":[{"type":"WHIP","level":3}],
    "passives":[{"type":"MAXHEALTH","level":1}]}]}
 ```
+
+While the level-up screen is open, the player it belongs to also has `"offers":["POWER","GARLIC"]`:
+the weapons and items on its cards. The first three level-ups of a game session are also
+written to the log (`[LevelUp] P1 offered: ...`).
 
 The names are the game's internal IDs (`WHIP`, `MAXHEALTH` for Hollow Heart). They are listed
 in the infobox of every wiki page (field `id`). The app stores them in its data as
@@ -197,7 +245,8 @@ Plugin messages are written to `BepInEx/LogOutput.log`.
 - Section `Overlay`: `Language` (`auto` = like the game, `de` or `en`; default `auto`), `Visible`,
   `Collapsed` (only the title bar), `ToggleKey` (default `F8`), `ResetKey` (default `F9`), `Icons`,
   position `X`/`Y` and `Width` as a fraction of the screen (the width grows by itself for long
-  names, up to 0.26), `Opacity`, `FontScale`, `ShareCoopPassives`
+  names, up to 0.26), `Opacity`, `FontScale`, `ShareCoopPassives`, `LevelUpGrades` (grades on the
+  level-up screen, default on)
 
 Older versions of the plugin wrote `Language = de` or `Language = en` into the config file. Set
 it to `auto` if the overlay should follow the game's language.
