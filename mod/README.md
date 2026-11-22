@@ -17,8 +17,9 @@ character, weapons and passive items of every player and
 - Width: the panel grows by itself for long names; names that are still too long wrap.
 - Controls: a **click on the title bar** (`[-] Evolutions`) collapses the overlay to that bar
   and expands it again; collapsed, it shows how many evolutions are ready. **Dragging** with the
-  left mouse button anywhere on the panel moves it (the position is saved). **F8** shows and
-  hides it, **F9** resets it to the default position.
+  left mouse button anywhere on the panel moves it (the position is saved). **F8** switches in
+  turn between overlay and minimap, nothing, only the overlay, only the minimap; **F9** resets
+  both to the default position.
 - Co-op: one block per player. Other players' passive items count toward your own
   evolutions and are then tagged with their origin ("P2"). Can be turned off with `ShareCoopPassives`.
 - **Level-up grades:** while the level-up screen is open, the overlay lists its choices, best
@@ -72,7 +73,7 @@ character, weapons and passive items of every player and
   no walls or paths. The items come from the same place as that map: the game's
   `MapManager.GetAllWorldItems()` and the treasure chests in the scene; the enemies from the
   stage's list of spawned enemies. Drag the map with the mouse like the overlay (the position is
-  saved), F9 puts both back. Hidden together with the overlay (F8). Section `Minimap` in the
+  saved), F9 puts both back. F8 shows and hides it (see above). Section `Minimap` in the
   settings. The minimap shows even without the Milky Way Map relic; turn it off with
   `Enabled = false` if that feels like cheating.
 - also serves the run locally at `http://127.0.0.1:47321` so the
@@ -269,7 +270,7 @@ Plugin messages are written to `BepInEx/LogOutput.log`.
 - Section `Minimap`: `Enabled` (default on), `Size` (fraction of the screen height, default 0.24),
   position `X`/`Y` (fractions of the screen, default top right), `Range` (from you to the map's
   edge in half screen widths, default 4), `Opacity`, `Enemies` (`all`, `bosses` or `off`, default
-  `all`), `IntervalMs` (how often it updates, default 200)
+  `all`), `Visible` (switched with F8), `IntervalMs` (how often it updates, default 200)
 
 Older versions of the plugin wrote `Language = de` or `Language = en` into the config file. Set
 it to `auto` if the overlay should follow the game's language.

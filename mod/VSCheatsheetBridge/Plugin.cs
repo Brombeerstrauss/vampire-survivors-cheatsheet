@@ -40,6 +40,7 @@ public class Plugin : BasePlugin
     internal static ConfigEntry<bool> Icons;
     internal static ConfigEntry<bool> LevelUpGrades;
     internal static ConfigEntry<bool> MinimapEnabled;
+    internal static ConfigEntry<bool> MinimapVisible;
     internal static ConfigEntry<float> MinimapSize;
     internal static ConfigEntry<float> MinimapX;
     internal static ConfigEntry<float> MinimapY;
@@ -62,7 +63,8 @@ public class Plugin : BasePlugin
         OverlayVisible = Config.Bind("Overlay", "Visible", true, "Show the overlay on startup.");
         OverlayCollapsed = Config.Bind("Overlay", "Collapsed", false,
             "Only show the title bar. In the game, click the title bar to collapse or expand the overlay.");
-        ToggleKey = Config.Bind("Overlay", "ToggleKey", KeyCode.F8, "Key to show and hide the overlay.");
+        ToggleKey = Config.Bind("Overlay", "ToggleKey", KeyCode.F8,
+            "Key to show and hide the overlay and the minimap, in turn: both, nothing, only the overlay, only the map.");
         ResetKey = Config.Bind("Overlay", "ResetKey", KeyCode.F9, "Key to reset the overlay to its default position.");
         OverlayX = Config.Bind("Overlay", "X", 0.005f, "Left edge, fraction of the screen width (0 to 1). Saved when dragging with the mouse.");
         OverlayY = Config.Bind("Overlay", "Y", 0.11f, "Top edge, fraction of the screen height (0 to 1). Saved when dragging with the mouse.");
@@ -79,6 +81,7 @@ public class Plugin : BasePlugin
         MinimapEnabled = Config.Bind("Minimap", "Enabled", true,
             "Prototype: a small map with the stage items, relics, chests and enemies around you. Hidden with the overlay (F8). " +
             "Drag it with the mouse; F9 puts it back.");
+        MinimapVisible = Config.Bind("Minimap", "Visible", true, "Show the map on startup (F8 switches it, see ToggleKey).");
         MinimapSize = Config.Bind("Minimap", "Size", 0.24f, "Size, fraction of the screen height.");
         MinimapX = Config.Bind("Minimap", "X", 0.76f, "Left edge, fraction of the screen width (0 to 1). Saved when dragging with the mouse.");
         MinimapY = Config.Bind("Minimap", "Y", 0.02f, "Top edge, fraction of the screen height (0 to 1). Saved when dragging with the mouse.");
@@ -106,7 +109,7 @@ public class Plugin : BasePlugin
 
         ClassInjector.RegisterTypeInIl2Cpp<BridgeBehaviour>();
         AddComponent<BridgeBehaviour>();
-        Logger.LogInfo($"{Name} {Version} running on http://127.0.0.1:{port.Value}/state, toggle overlay with {ToggleKey.Value}, " +
+        Logger.LogInfo($"{Name} {Version} running on http://127.0.0.1:{port.Value}/state, show/hide overlay and map with {ToggleKey.Value}, " +
             "click its title bar to collapse/expand, drag it with the left mouse button");
     }
 
@@ -237,7 +240,7 @@ public class BridgeBehaviour : MonoBehaviour
     {
         try
         {
-            if (!Plugin.MinimapEnabled.Value || !Plugin.OverlayVisible.Value || !_inRun) { _map.Hide(); return; }
+            if (!Plugin.MinimapEnabled.Value || !Plugin.MinimapVisible.Value || !_inRun) { _map.Hide(); return; }
             if (MinimapReader.Read(_points, now, out Vector2 player, out float halfScreen)) _map.Show(player, halfScreen, _points);
             else _map.Hide();
         }
@@ -267,8 +270,9 @@ public class BridgeBehaviour : MonoBehaviour
             bool down = (GetAsyncKeyState(VirtualKey(Plugin.ToggleKey.Value)) & 0x8000) != 0;
             if (down && !_keyDown)
             {
-                Plugin.OverlayVisible.Value = !Plugin.OverlayVisible.Value;
+                NextVisibility();
                 _dirty = true;
+                _nextMap = 0; // show or hide the map right away
                 Refresh();
             }
             _keyDown = down;
@@ -292,13 +296,30 @@ public class BridgeBehaviour : MonoBehaviour
         }
     }
 
+    // F8 in turn: both -> nothing -> only the overlay -> only the map -> both. Without the
+    // minimap (Minimap.Enabled = false) it just shows and hides the overlay.
+    private static void NextVisibility()
+    {
+        bool overlay = Plugin.OverlayVisible.Value, map = Plugin.MinimapVisible.Value;
+        if (!Plugin.MinimapEnabled.Value) { Plugin.OverlayVisible.Value = !overlay; return; }
+        (overlay, map) = (overlay, map) switch
+        {
+            (true, true) => (false, false),
+            (false, false) => (true, false),
+            (true, false) => (false, true),
+            _ => (true, true),
+        };
+        Plugin.OverlayVisible.Value = overlay;
+        Plugin.MinimapVisible.Value = map;
+    }
+
     // Mouse on the panel, read directly from Windows. Press and move: drag (the position is saved
     // to the config on release). Press and release on the title bar without moving: collapse or expand.
     private void PollDrag()
     {
         try
         {
-            if (!_ui.Visible || !Application.isFocused) { CancelDrag(); return; }
+            if ((!_ui.Visible && !_map.Visible) || !Application.isFocused) { CancelDrag(); return; }
             bool down = (GetAsyncKeyState(0x01) & 0x8000) != 0;
             if (!down && !_mouseDown) return;
             bool wasDown = _mouseDown;
@@ -311,9 +332,10 @@ public class BridgeBehaviour : MonoBehaviour
             if (down && !wasDown)
             {
                 // The overlay is drawn above the map, so it wins where both overlap.
-                _pressOnMap = !_ui.ScreenRect.Contains(mouse) && _map.Visible && _map.ScreenRect.Contains(mouse);
+                bool onOverlay = _ui.Visible && _ui.ScreenRect.Contains(mouse);
+                _pressOnMap = !onOverlay && _map.Visible && _map.ScreenRect.Contains(mouse);
                 Rect pressed = _pressOnMap ? _map.ScreenRect : _ui.ScreenRect;
-                _pressed = pressed.Contains(mouse);
+                _pressed = onOverlay || _pressOnMap;
                 _pressOnHeader = _pressed && !_pressOnMap && _ui.OnHeader(mouse);
                 _dragging = false;
                 _pressPos = mouse;
