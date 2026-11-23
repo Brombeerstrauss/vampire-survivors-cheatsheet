@@ -109,7 +109,7 @@ internal sealed class UiOverlay
     }
 
     // Font from a text the game is currently showing.
-    private static TMP_FontAsset FindFont()
+    internal static TMP_FontAsset FindFont()
     {
         var found = Object.FindObjectsOfType(Il2CppType.Of<TextMeshProUGUI>());
         if (found == null) return null;

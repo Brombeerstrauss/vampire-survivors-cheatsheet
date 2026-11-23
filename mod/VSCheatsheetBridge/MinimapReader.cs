@@ -55,6 +55,31 @@ internal static class MinimapReader
     private static double _retryAt;
     private static bool _loggedItems, _loggedEnemies;
     private static readonly HashSet<string> LoggedBosses = new();
+    // Small pickups (setting Minimap.Minor): the game's own list (MapManager._minorItemTypes,
+    // read once it is filled) and these, in case the game's list is missing or shorter.
+    private static readonly HashSet<string> MinorKinds = new()
+    {
+        "COIN", "COINBAG1", "COINBAG2", "COINBAGMAX", "ALWAYS_COINBAG2", "STATIC_GOLDPILE", "CLOVER",
+        "ROSARY", "ROSARYX", "VACUUM", "OROLOGION", "ROAST", "ALWAYS_ROAST", "LITTLEHEART", "GILDED",
+        "HEALER", "PURIFY", "PURIFY2", "GOLDFINGER", "SORBETTO", "TP_HEART_REFRESH", "TP_WALL_CHICKEN",
+        "TP_NEUTRON_BOMB", "TP_KARMA_COIN", "TP_SOULSTEAL_LITTLEHEART",
+    };
+    private static readonly HashSet<string> GameMinorKinds = new();
+
+    private enum ItemGroup { Chest, Relic, Minor }
+
+    private static ItemGroup GroupOf(string kind) =>
+        kind == "CHEST" || kind.Contains("TREASURE") ? ItemGroup.Chest
+        : MinorKinds.Contains(kind) || GameMinorKinds.Contains(kind) ? ItemGroup.Minor
+        : ItemGroup.Relic;
+
+    private static bool Shown(ItemGroup group) => group switch
+    {
+        ItemGroup.Chest => Plugin.MinimapChests?.Value ?? true,
+        ItemGroup.Minor => Plugin.MinimapMinor?.Value ?? true,
+        _ => Plugin.MinimapRelics?.Value ?? true,
+    };
+
     // Getters per enemy type, so hundreds of enemies don't mean hundreds of member lookups.
     private static readonly Dictionary<(Type, string), Func<object, object>> Getters = new();
 
@@ -117,7 +142,7 @@ internal static class MinimapReader
 
         var enemies = new List<(float d, MapPoint point)>();
         var bosses = new List<(float d, MapPoint point)>();
-        string show = (Plugin.MinimapEnemies?.Value ?? "all").Trim().ToLowerInvariant();
+        string show = Plugin.EnemyMode();
         if (show != "off")
         {
             float range = MinimapOverlay.RangeFor(halfScreen);
@@ -207,6 +232,7 @@ internal static class MinimapReader
         try { list = _getAllWorldItems.Invoke(map, null); }
         catch (Exception ex) { RunReader.WarnOnce("minimap:items", ex); return 0; }
 
+        if (GameMinorKinds.Count == 0) ReadGameMinorKinds(map);
         int count = 0;
         object first = null;
         foreach (object item in RunReader.Items(list))
@@ -215,6 +241,7 @@ internal static class MinimapReader
             if (item is not Component c || c == null) continue;
             string kind = RunReader.EnumNameOf(RunReader.GetMember(item, "PickupType", "_pickupType", "ItemType")) ?? item.GetType().Name;
             if (kind == "GEM") continue; // experience gems: far too many, the game's map skips them too
+            if (!Shown(GroupOf(kind))) continue;
             Vector3 pos = c.transform.position;
             found.Add((Distance(player, pos), new MapPoint { Position = new Vector2(pos.x, pos.y), Sprite = SpriteOf(c), Kind = kind, Style = MapPointStyle.Item }));
             count++;
@@ -225,7 +252,7 @@ internal static class MinimapReader
 
     private static int AddChests(List<(float, MapPoint)> found, Vector2 player)
     {
-        if (_chestIl2Cpp == null || _castChest == null) return 0;
+        if (_chestIl2Cpp == null || _castChest == null || !Shown(ItemGroup.Chest)) return 0;
         int count = 0;
         try
         {
@@ -245,6 +272,15 @@ internal static class MinimapReader
             RunReader.WarnOnce("minimap:chests", ex);
         }
         return count;
+    }
+
+    // The game's own list of small pickups for its pause map, once it is filled.
+    private static void ReadGameMinorKinds(object map)
+    {
+        foreach (object t in RunReader.Items(RunReader.GetMember(map, "_minorItemTypes")))
+            if (RunReader.EnumNameOf(t) is string name) GameMinorKinds.Add(name);
+        if (GameMinorKinds.Count > 0)
+            Plugin.Logger.LogInfo($"[Minimap] small pickups per the game: {string.Join(", ", GameMinorKinds)}");
     }
 
     // The pause menu's MapManager, also while inactive. Searched again every 5 seconds until found.

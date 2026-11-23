@@ -66,14 +66,18 @@ character, weapons and passive items of every player and
 - **Minimap (prototype):** a small map in the top right corner with you in the middle and the
   stage items, relics, chests and other pickups around you, with their own sprites from the game
   (coloured squares if a sprite can't be read: chests gold, relics violet, others blue). Enemies
-  are small red dots, bosses have their own sprite and are drawn larger (setting `Enemies`:
-  `all`, `bosses` or `off`). A faint frame marks the visible screen. Items and bosses beyond the
+  are small red dots, bosses have their own sprite and are drawn larger. A faint frame marks the visible screen. Items and bosses beyond the
   map's range sit faded at its edge, so their direction stays visible; enemies there are left out.
   Experience gems are left out too. Like the game's own pause map (relic Milky Way Map), it shows
   no walls or paths. The items come from the same place as that map: the game's
   `MapManager.GetAllWorldItems()` and the treasure chests in the scene; the enemies from the
   stage's list of spawned enemies. Drag the map with the mouse like the overlay (the position is
-  saved), F9 puts both back. F8 shows and hides it (see above). Section `Minimap` in the
+  saved), F9 puts both back. F8 shows and hides it (see above). **While the game is paused**, four
+  buttons sit below the map; a click (mouse, touch or trackpad) switches what it shows:
+  `Gegner: alle/Bosse/aus` (enemies: all, only bosses, none), `Truhen` (chests), `Relikte/Items`
+  (relics and stage items such as weapons, coffins, merchants) and `Kleinkram` (small pickups:
+  coins, food, rosaries, vacuums... per the game's own list for its pause map, plus a list of
+  our own). **F10** switches the enemies too, e.g. on a back button in Steam Input. Section `Minimap` in the
   settings. The minimap shows even without the Milky Way Map relic; turn it off with
   `Enabled = false` if that feels like cheating.
 - also serves the run locally at `http://127.0.0.1:47321` so the
@@ -249,7 +253,10 @@ Testing the minimap: during a run the log should show `[Minimap] MapManager: ...
 found), `[Minimap] found the game's MapManager` and a line like `[Minimap] 12 world items,
 1 chests: RELIC 1, ...`. Once there are 20 enemies, once per run: `[Minimap] 85 enemies, 0 bosses:
 BAT 60, ...` (the most common enemy types), and `[Minimap] boss on the stage: ...` for each boss.
-If the map or the enemies stay empty, these lines and `/debug` show where it stops.
+`[Minimap] small pickups per the game: ...` lists what the game counts as small pickups. If the map
+or the enemies stay empty, these lines and `/debug` show where it stops. If the buttons never
+appear while paused, the log says `GameManager.IsPaused not found`; `Buttons = always` shows them
+anyway.
 
 Plugin messages are written to `BepInEx/LogOutput.log`.
 
@@ -270,7 +277,9 @@ Plugin messages are written to `BepInEx/LogOutput.log`.
 - Section `Minimap`: `Enabled` (default on), `Size` (fraction of the screen height, default 0.24),
   position `X`/`Y` (fractions of the screen, default top right), `Range` (from you to the map's
   edge in half screen widths, default 4), `Opacity`, `Enemies` (`all`, `bosses` or `off`, default
-  `all`), `Visible` (switched with F8), `IntervalMs` (how often it updates, default 200)
+  `all`), `Chests`, `Relics`, `Minor` (small pickups; all three default on, switched with the
+  buttons), `Buttons` (`paused`, `always` or `off`, default `paused`), `EnemiesKey` (default
+  `F10`), `Visible` (switched with F8), `IntervalMs` (how often it updates, default 200)
 
 Older versions of the plugin wrote `Language = de` or `Language = en` into the config file. Set
 it to `auto` if the overlay should follow the game's language.
