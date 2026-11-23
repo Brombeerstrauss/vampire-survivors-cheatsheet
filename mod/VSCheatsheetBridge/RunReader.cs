@@ -40,6 +40,49 @@ internal static class RunReader
     /// <summary>First existing field or property with one of the names.</summary>
     public static object GetMember(object obj, params string[] names) => Get(obj, names);
 
+    /// <summary>The first player's character (player 1), or null outside a run.</summary>
+    public static object FirstCharacter()
+    {
+        ResolveTypes();
+        object gm = FindGameManager();
+        return gm == null ? null : FindCharacters(gm).FirstOrDefault();
+    }
+
+    private static readonly Dictionary<string, Type> GameTypes = new();
+
+    /// <summary>A type from the game's assembly by its name (e.g. "MapManager"); null if not found (yet).</summary>
+    public static Type FindGameType(string name)
+    {
+        if (GameTypes.TryGetValue(name, out Type known)) return known;
+        foreach (Assembly a in AppDomain.CurrentDomain.GetAssemblies())
+        {
+            if (!(a.GetName().Name ?? "").StartsWith("VampireSurvivors")) continue;
+            Type[] types;
+            try { types = a.GetTypes(); }
+            catch (ReflectionTypeLoadException e) { types = e.Types.Where(t => t != null).ToArray(); }
+            catch { continue; }
+            foreach (Type t in types)
+            {
+                try
+                {
+                    if (t.Name == name && t.Namespace != null && t.Namespace.StartsWith("VampireSurvivors"))
+                    {
+                        GameTypes[name] = t;
+                        return t;
+                    }
+                }
+                catch { }
+            }
+        }
+        return null;
+    }
+
+    /// <summary>Name of an enum value from the game (Il2Cpp nullables included).</summary>
+    public static string EnumNameOf(object value) => EnumName(value);
+
+    /// <summary>Adds an object's field names to /debug (only rebuilt when its type changes).</summary>
+    public static void AddDebugEntry(string key, object o) => AddDebug(key, o);
+
     public static RunSnapshot Read()
     {
         ResolveTypes();
@@ -308,7 +351,7 @@ internal static class RunReader
     }
 
     // Il2Cpp lists and arrays are not .NET IEnumerables: Count/Length + indexer.
-    private static IEnumerable<object> Items(object list)
+    internal static IEnumerable<object> Items(object list)
     {
         if (list == null) yield break;
         Type t = list.GetType();
