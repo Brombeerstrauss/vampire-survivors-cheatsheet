@@ -221,7 +221,10 @@ Things to know:
 
 ## Testing
 
-Start the game, begin a run, then:
+Without the game: `mod/harness/` compiles the plugin against stand-ins and tests the minimap
+reader and the level-up grades on any PC, see [`harness/README.md`](harness/README.md).
+
+In the game: start it, begin a run, then:
 
 ```bash
 curl http://127.0.0.1:47321/state
