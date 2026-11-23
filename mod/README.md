@@ -19,7 +19,7 @@ character, weapons and passive items of every player and
   and expands it again; collapsed, it shows how many evolutions are ready. **Dragging** with the
   left mouse button anywhere on the panel moves it (the position is saved). **F8** switches in
   turn between overlay and minimap, nothing, only the overlay, only the minimap; **F9** resets
-  both to the default position.
+  both to the default position; **F7** opens the minimap's menu (see below).
 - Co-op: one block per player. Other players' passive items count toward your own
   evolutions and are then tagged with their origin ("P2"). Can be turned off with `ShareCoopPassives`.
 - **Level-up grades:** while the level-up screen is open, the overlay lists its choices, best
@@ -72,12 +72,14 @@ character, weapons and passive items of every player and
   no walls or paths. The items come from the same place as that map: the game's
   `MapManager.GetAllWorldItems()` and the treasure chests in the scene; the enemies from the
   stage's list of spawned enemies. Drag the map with the mouse like the overlay (the position is
-  saved), F9 puts both back. F8 shows and hides it (see above). **While the game is paused**, four
-  buttons sit below the map; a click (mouse, touch or trackpad) switches what it shows:
+  saved), F9 puts both back. F8 shows and hides it (see above). **F7** opens and closes its menu below
+  the map (and shows the map if F8 had hidden it). A click on a button (mouse, touch or
+  trackpad) changes the setting right away and saves it:
   `Gegner: alle/Bosse/aus` (enemies: all, only bosses, none), `Truhen` (chests), `Relikte/Items`
-  (relics and stage items such as weapons, coffins, merchants) and `Kleinkram` (small pickups:
+  (relics and stage items such as weapons, coffins, merchants), `Kleinkram` (small pickups:
   coins, food, rosaries, vacuums... per the game's own list for its pause map, plus a list of
-  our own). **F10** switches the enemies too, e.g. on a back button in Steam Input. Section `Minimap` in the
+  our own), `Größe -/+` (size), `Reichweite -/+` (range) and `Position zurücksetzen` (reset the
+  map's position). Section `Minimap` in the
   settings. The minimap shows even without the Milky Way Map relic; turn it off with
   `Enabled = false` if that feels like cheating.
 - also serves the run locally at `http://127.0.0.1:47321` so the
@@ -207,8 +209,8 @@ same `win-x64` BepInEx package and the same plugin files are used as on Windows.
 
 Things to know:
 
-- The overlay is visible by default, so it needs no key. F8 and F9 need a keyboard, or a button
-  bound to these keys in Steam's controller settings. The position can also be set with `X` and
+- The overlay is visible by default, so it needs no key. F7, F8 and F9 need a keyboard, or a
+  button bound to these keys in Steam's controller settings (e.g. the back buttons L4, R4, L5). The position can also be set with `X` and
   `Y` in the config file.
 - Keys, clicking and dragging use Windows functions (`user32.dll`). Proton provides them, but
   whether they behave the same there is not confirmed. If they fail, the overlay and the server
@@ -254,9 +256,7 @@ found), `[Minimap] found the game's MapManager` and a line like `[Minimap] 12 wo
 1 chests: RELIC 1, ...`. Once there are 20 enemies, once per run: `[Minimap] 85 enemies, 0 bosses:
 BAT 60, ...` (the most common enemy types), and `[Minimap] boss on the stage: ...` for each boss.
 `[Minimap] small pickups per the game: ...` lists what the game counts as small pickups. If the map
-or the enemies stay empty, these lines and `/debug` show where it stops. If the buttons never
-appear while paused, the log says `GameManager.IsPaused not found`; `Buttons = always` shows them
-anyway.
+or the enemies stay empty, these lines and `/debug` show where it stops.
 
 Plugin messages are written to `BepInEx/LogOutput.log`.
 
@@ -277,9 +277,9 @@ Plugin messages are written to `BepInEx/LogOutput.log`.
 - Section `Minimap`: `Enabled` (default on), `Size` (fraction of the screen height, default 0.24),
   position `X`/`Y` (fractions of the screen, default top right), `Range` (from you to the map's
   edge in half screen widths, default 4), `Opacity`, `Enemies` (`all`, `bosses` or `off`, default
-  `all`), `Chests`, `Relics`, `Minor` (small pickups; all three default on, switched with the
-  buttons), `Buttons` (`paused`, `always` or `off`, default `paused`), `EnemiesKey` (default
-  `F10`), `Visible` (switched with F8), `IntervalMs` (how often it updates, default 200)
+  `all`), `Chests`, `Relics`, `Minor` (small pickups; all three default on), `MenuKey` (default
+  `F7`), `Visible` (switched with F8), `IntervalMs` (how often it updates, default 200). Size,
+  range, position and what the map shows can also be changed in the F7 menu.
 
 Older versions of the plugin wrote `Language = de` or `Language = en` into the config file. Set
 it to `auto` if the overlay should follow the game's language.
