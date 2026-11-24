@@ -136,8 +136,9 @@ internal sealed class StageMapCalibration
 // - The image: MapManager._detailedMapSprite.
 // - Learning where the world lies on it: while the pause map is open, the game puts the player's
 //   marker (MapManager._Player) on the image. Its position on the image together with the
-//   player's position in the world is one sample; two pauses at places far enough apart on both
-//   axes are enough. The samples are saved per image (BepInEx/config/...stagemaps.json), so each
+//   player's position in the world is one sample, taken while the player stands still (in online
+//   co-op the game doesn't pause behind the menu); two openings at places far enough apart on
+//   both axes are enough. The samples are saved per image (BepInEx/config/...stagemaps.json), so each
 //   stage only needs to be learned once.
 // Names per the game's decompiled code (VSEvolutionHelperEx's game-api), read by reflection.
 // Only call from Update (main thread).
@@ -152,6 +153,15 @@ internal static class StageMap
     private static Image _image;
     private static Sprite _imageSprite;
     private static double _searchAt;
+
+    // While the pause map is open: where the player stood when it opened, whether they moved
+    // since, and the marker's last reading. In online co-op the game keeps running behind the
+    // menu, and the marker may stay where it was put when the map opened: a sample only counts
+    // while the player stands still and the marker holds its place.
+    private static bool _open, _moved, _haveLast;
+    private static Vector2 _openedAt;
+    private static float _lastU, _lastV;
+    private const float StandStill = 0.3f; // world units
 
     /// <summary>The current stage's map image, or null.</summary>
     public static Sprite Sprite { get; private set; }
@@ -170,6 +180,7 @@ internal static class StageMap
         _image = null;
         _imageSprite = null;
         _searchAt = 0;
+        _open = _moved = _haveLast = false;
     }
 
     /// <summary>Reads the map image and, while the pause map is open, learns from it.</summary>
@@ -212,13 +223,17 @@ internal static class StageMap
 
     private static void Learn(object mapManager, Sprite sprite, string key, StageMapCalibration cal, Vector2 player, float halfScreen, double now)
     {
-        // Only while the pause map is open: the game is paused (if that can be read) and the map
-        // is active and not faded out. Otherwise the marker may still show an earlier position.
-        if (mapManager is not Component map || map == null || map.gameObject == null || !map.gameObject.activeInHierarchy) return;
-        if (RunReader.GetMember(RunReader.GameManager(), "IsPaused", "_isPaused") is bool paused && !paused) return;
-        if (RunReader.GetMember(RunReader.GetMember(mapManager, "_CanvasGroup"), "alpha") is float alpha && alpha < 0.5f) return;
-        Image image = ImageShowing(map, sprite, now);
-        if (image == null || !image.gameObject.activeInHierarchy) return;
+        // Only while the pause map is open and shows the image (also in online co-op, where the
+        // game doesn't pause). Otherwise the marker may still show an earlier position.
+        Image image = Visible(mapManager, sprite, now);
+        if (image == null) { _open = _moved = _haveLast = false; return; }
+        if (!_open) { _open = true; _moved = false; _haveLast = false; _openedAt = player; }
+        else if (Math.Abs(player.x - _openedAt.x) > StandStill || Math.Abs(player.y - _openedAt.y) > StandStill)
+        {
+            if (!_moved) Plugin.Logger.LogInfo("[StageMap] you moved while the map was open: no sample this time (stand still a moment)");
+            _moved = true;
+        }
+        if (_moved) return;
         if (_loggedImageKey != key)
         {
             _loggedImageKey = key;
@@ -250,16 +265,41 @@ internal static class StageMap
         float u = (local.x - drawn.x) / drawn.width, v = (local.y - drawn.y) / drawn.height;
         if (u < -0.05f || u > 1.05f || v < -0.05f || v > 1.05f) return; // marker not on the image
 
+        // The marker must hold its place for two readings (it may be placed a moment after the
+        // map opens).
+        bool steady = _haveLast && Math.Abs(u - _lastU) < 0.002f && Math.Abs(v - _lastV) < 0.002f;
+        _lastU = u; _lastV = v; _haveLast = true;
+        if (!steady) return;
+
         StageMapCalibration.Change change = cal.Add(player.x, player.y, u, v);
         if (change == StageMapCalibration.Change.None) return;
         bool wasReady = cal.Ready;
         cal.Fit(halfScreen, 0.15f * halfScreen);
         if (change == StageMapCalibration.Change.New)
             Plugin.Logger.LogInfo($"[StageMap] sample {cal.Samples.Count}: world ({player.x:0.#}, {player.y:0.#}) -> image ({u:0.###}, {v:0.###})" +
-                (cal.Ready ? "" : " - pause again at least half a screen away, left/right and up/down"));
+                (cal.Ready ? "" : " - open the map again at least half a screen away, left/right and up/down"));
         if (cal.Ready && (!wasReady || change == StageMapCalibration.Change.New))
             Plugin.Logger.LogInfo($"[StageMap] {key} learned from {cal.Used} of {cal.Samples.Count} samples, largest error {cal.Error:0.##} world units");
         Save();
+    }
+
+    // The image showing the map in the open pause map, or null if the map is not visible:
+    // MapManager active, not faded out (its CanvasGroup), the image active and not transparent.
+    private static Image Visible(object mapManager, Sprite sprite, double now)
+    {
+        if (mapManager is not Component map || map == null || map.gameObject == null || !map.gameObject.activeInHierarchy) return null;
+        if (RunReader.GetMember(RunReader.GetMember(mapManager, "_CanvasGroup"), "alpha") is float alpha && alpha < 0.5f) return null;
+        Image image = ImageShowing(map, sprite, now);
+        if (image == null || !image.isActiveAndEnabled) return null;
+        try
+        {
+            if (image.canvasRenderer != null && image.canvasRenderer.GetInheritedAlpha() < 0.5f) return null;
+        }
+        catch (Exception ex)
+        {
+            RunReader.WarnOnce("stagemap:alpha", ex);
+        }
+        return image;
     }
 
     // The image in the pause map that shows the sprite. Searched again at most every 2 seconds.

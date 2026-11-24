@@ -54,6 +54,7 @@ internal static class MinimapReader
     private static object _mapManager;
     private static double _retryAt;
     private static bool _loggedItems, _loggedEnemies;
+    private static int _loggedOwn;
     private static readonly HashSet<string> LoggedBosses = new();
     // Small pickups (setting Minimap.Minor): the game's own list (MapManager._minorItemTypes,
     // read once it is filled) and these, in case the game's list is missing or shorter.
@@ -112,6 +113,7 @@ internal static class MinimapReader
         _mapManager = null;
         _retryAt = 0;
         _loggedItems = _loggedEnemies = false;
+        _loggedOwn = 0;
         LoggedBosses.Clear();
         StageMap.Reset();
     }
@@ -164,19 +166,45 @@ internal static class MinimapReader
         StageMap.Update(MapManager(now), player, halfScreen, now);
     }
 
-    // The first player's position and half the screen width in world units (from the camera).
+    // Your position and half the screen width in world units (from the camera).
     private static bool PlayerAndScreen(out Vector2 player, out float halfScreen)
     {
         player = default;
         halfScreen = 0f;
-        Component character = RunReader.FirstCharacter() as Component;
+        Camera cam = Camera.main;
+        Component character = OwnCharacter(cam);
         if (character == null) return false;
         Vector3 p = character.transform.position;
         player = new Vector2(p.x, p.y);
-        Camera cam = Camera.main;
         halfScreen = cam != null && cam.orthographic ? cam.orthographicSize * cam.aspect : 0f;
         if (halfScreen <= 0f) halfScreen = 12f; // rough fallback until the camera is known
         return true;
+    }
+
+    // Player 1, except in online co-op: there each player's camera follows their own character,
+    // so the character nearest to the camera is yours (player 1 may be someone else).
+    private static Component OwnCharacter(Camera cam)
+    {
+        List<object> all = RunReader.AllCharacters();
+        if (all.Count == 0) return null;
+        bool online = RunReader.GetMember(RunReader.GameManager(), "IsOnlineMultiplayer", "_isOnlineMultiplayer") is bool o && o;
+        if (all.Count == 1 || !online || cam == null) return all[0] as Component;
+        Vector3 c = cam.transform.position;
+        Component own = null;
+        float best = float.MaxValue;
+        int index = 0;
+        for (int i = 0; i < all.Count; i++)
+        {
+            if (all[i] is not Component ch || ch == null) continue;
+            float d = Distance(new Vector2(c.x, c.y), ch.transform.position);
+            if (d < best) { best = d; own = ch; index = i; }
+        }
+        if (_loggedOwn != index + 1)
+        {
+            _loggedOwn = index + 1;
+            Plugin.Logger.LogInfo($"[Minimap] online co-op: the map follows player {index + 1} (nearest to the camera)");
+        }
+        return own;
     }
 
     // Enemies from the stage: within the range (squared, world units) as dots, bosses anywhere.

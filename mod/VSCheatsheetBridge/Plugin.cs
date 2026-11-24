@@ -102,7 +102,8 @@ public class Plugin : BasePlugin
         MinimapMinor = Config.Bind("Minimap", "Minor", true, "Show small pickups (coins, food, rosaries, vacuums...).");
         MinimapStageMap = Config.Bind("Minimap", "StageMap", true,
             "Show the stage's map image (the one the game's pause map shows, e.g. after picking up a stage's map) behind the map. " +
-            "It is learned once per stage: open the pause menu twice, at places at least half a screen apart left/right and up/down.");
+            "It is learned once per stage: open the pause menu's map twice, standing still, at places at least half a screen apart " +
+            "left/right and up/down (also in online co-op, where the game keeps running).");
         StageMap.FilePath = Path.Combine(Path.GetDirectoryName(Config.ConfigFilePath) ?? ".", Guid + ".stagemaps.json");
         MenuKey = Config.Bind("Minimap", "MenuKey", KeyCode.F7,
             "Key to open and close the map's menu: what it shows, size, range, position. Click its buttons with the mouse or by touch.");

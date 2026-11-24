@@ -198,7 +198,9 @@ zusätzlich zum aktuellen Build oder zum Charakter passt; diese Karten stehen ob
 - **Kartenbild** (`StageMap.cs`): Hat die Stage ein Kartenbild in der Pausenkarte
   (`MapManager._detailedMapSprite`), zeigt die Minimap den Ausschnitt um den Spieler dahinter. Die
   Umrechnung Welt -> Bild rechnet das Spiel intern (Formel unbekannt), deshalb lernt der Mod sie:
-  Bei offener Pausenkarte (Spiel pausiert, MapManager aktiv) wird die Position der Spieler-Markierung
+  Bei sichtbarer Pausenkarte (MapManager aktiv, nicht ausgeblendet; im Online-Koop läuft das Spiel
+  dabei weiter, deshalb zählt eine Messung nur, solange der Spieler stillsteht und die Markierung
+  zwei Lesungen lang gleich bleibt) wird die Position der Spieler-Markierung
   `MapManager._Player` auf dem Bild (`Image` mit diesem Sprite, per `InverseTransformPoint` in 0..1
   umgerechnet) mit der Weltposition gepaart. Fit je Achse per kleinsten Quadraten
   (`u = Ax*x + Bx`, `v = Ay*y + By`), mind. eine halbe Bildschirmbreite Abstand je Achse,
@@ -206,6 +208,8 @@ zusätzlich zum aktuellen Build oder zum Charakter passt; diese Karten stehen ob
   Gezeichnet als `RawImage` mit `uvRect` (nur der Teil, der auf dem Bild liegt). Einstellung `StageMap`,
   Schalter "Kartenbild" im F7-Menü. **Im Spiel ungetestet**: ob `_Player` wirklich die Markierung auf
   dem Bild ist und ob das Bild ein `Image` unter dem MapManager ist, zeigen die `[StageMap]`-Logzeilen.
+- Online-Koop: Die Minimap folgt der Figur, die der Kamera am nächsten ist (die eigene), sonst Spieler 1
+  (`MinimapReader.OwnCharacter`, `GameManager.IsOnlineMultiplayer`). Im Spiel ungetestet.
 - Joker (Ante Chamber) sind laut Wiki Gegner (z. B. Spectral Joker, ID `LEM_SPECTRAL`); ob sie als Boss
   zählen, ist unbekannt.
 
@@ -222,7 +226,8 @@ zusätzlich zum aktuellen Build oder zum Charakter passt; diese Karten stehen ob
 ## 8. Offene Punkte
 
 1. **Im Spiel testen** (Steam Deck): Ziehen der Karte, Gegner/Bosse, F8-Reihenfolge, F7-Menü und seine
-   Klicks per Touch/Trackpad, Kartenbild (zweimal pausieren, `[StageMap]`-Zeilen im Log prüfen). Vorher prüfen, ob sich das Overlay ziehen lässt: wenn nicht, kommen
+   Klicks per Touch/Trackpad, Kartenbild (zweimal die Karte im Menü öffnen und kurz stillstehen,
+   `[StageMap]`-Zeilen im Log prüfen), Online-Koop (folgt die Minimap der eigenen Figur?). Vorher prüfen, ob sich das Overlay ziehen lässt: wenn nicht, kommen
    Maus-Eingaben unter Proton nicht an (dann betrifft es alles, nicht nur die Karte).
 2. **Joker**: aus dem Log die Zeilen `[Minimap] … enemies …` und `[Minimap] boss on the stage …` in der
    Ante Chamber auswerten; danach ggf. bestimmte Gegnertypen mit Bild statt als Punkt zeigen.

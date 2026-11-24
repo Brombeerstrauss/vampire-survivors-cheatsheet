@@ -83,9 +83,13 @@ character, weapons and passive items of every player and
 - **Stage map image on the minimap:** on stages where the game's pause map shows a picture of
   the stage (e.g. after picking up the stage's map), the minimap shows the part of it around
   you, behind the symbols. Where the world lies on that picture is computed by the game and
-  can't be read, so the plugin learns it: open the pause menu twice, at places at least half a
-  screen apart both left/right and up/down (e.g. once far top left, once far bottom right). Each
-  pause gives one sample: your position and where the game puts your marker on the picture. The
+  can't be read, so the plugin learns it: open the pause menu's map twice, at places at least
+  half a screen apart both left/right and up/down (e.g. once far top left, once far bottom right),
+  and stand still for a moment while it is open. Each opening gives one sample: your position and
+  where the game puts your marker on the picture. This also works in online co-op, where the game
+  keeps running behind the menu; if you move while the map is open, that opening doesn't count.
+  In online co-op the minimap follows your own character (the one the camera follows), not
+  player 1. The
   samples are saved per picture in `BepInEx/config/de.cheatsheet.vs.bridge.stagemaps.json`, so
   each stage is learned only once; more pauses make it more precise, a wrong sample is left out.
   In the F7 menu the button says `Kartenbild (lernt)` while learning and `Kartenbild (keins)` if

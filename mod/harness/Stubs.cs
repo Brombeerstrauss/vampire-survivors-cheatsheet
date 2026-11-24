@@ -119,6 +119,7 @@ namespace UnityEngine
         public Scene scene => default;
     }
     public enum RenderMode { ScreenSpaceOverlay }
+    public class CanvasRenderer : Component { public float GetInheritedAlpha() => 1f; }
     public class Canvas : Component { public RenderMode renderMode; public bool overrideSorting; public int sortingOrder; }
     public class Texture2D : Object { public int width, height; }
     public class Sprite : Object { public Texture2D texture; public Rect rect, textureRect; }
@@ -158,7 +159,7 @@ namespace UnityEngine
 }
 namespace UnityEngine.UI
 {
-    public class Image : UnityEngine.Component { public UnityEngine.Sprite sprite; public UnityEngine.Color color; public bool raycastTarget, preserveAspect; public UnityEngine.RectTransform rectTransform => null; }
+    public class Image : UnityEngine.Component { public UnityEngine.Sprite sprite; public UnityEngine.Color color; public bool raycastTarget, preserveAspect, isActiveAndEnabled = true; public UnityEngine.RectTransform rectTransform => null; public UnityEngine.CanvasRenderer canvasRenderer => null; }
     public class RawImage : UnityEngine.Component { public UnityEngine.Texture2D texture; public UnityEngine.Rect uvRect; public UnityEngine.Color color; public bool raycastTarget; public UnityEngine.RectTransform rectTransform => null; }
 }
 namespace TMPro
