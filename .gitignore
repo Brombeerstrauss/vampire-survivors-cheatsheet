@@ -28,3 +28,6 @@ __pycache__
 mod/**/bin
 mod/**/obj
 mod/release
+
+# Test-Harness des Mods (erzeugte Daten)
+mod/harness/cheatsheet-data.json

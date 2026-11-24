@@ -129,6 +129,7 @@ Custom images take precedence: put them in `public/custom-icons/` and add the fi
 | `src/components/` | Reusable UI building blocks |
 | `src/views/` | The four views: characters, run, weapons, settings |
 | `tools/wiki-import/` | The tool that generated the game data from the wiki |
+| `mod/` | The BepInEx plugin with the in-game overlay; `mod/harness/` tests its logic without the game |
 
 Tech: Vite, React, TypeScript, Tailwind CSS, vite-plugin-pwa (service worker for offline use), Vitest and Ajv for tests. All open source.
 

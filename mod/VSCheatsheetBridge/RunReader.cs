@@ -48,6 +48,14 @@ internal static class RunReader
         return gm == null ? null : FindCharacters(gm).FirstOrDefault();
     }
 
+    /// <summary>All players' characters (player 1 first), empty outside a run.</summary>
+    public static List<object> AllCharacters()
+    {
+        ResolveTypes();
+        object gm = FindGameManager();
+        return gm == null ? new List<object>() : FindCharacters(gm);
+    }
+
     private static readonly Dictionary<string, Type> GameTypes = new();
 
     /// <summary>A type from the game's assembly by its name (e.g. "MapManager"); null if not found (yet).</summary>

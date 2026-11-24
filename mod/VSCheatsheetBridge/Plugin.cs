@@ -47,6 +47,12 @@ public class Plugin : BasePlugin
     internal static ConfigEntry<float> MinimapRange;
     internal static ConfigEntry<float> MinimapOpacity;
     internal static ConfigEntry<string> MinimapEnemies;
+    internal static ConfigEntry<bool> MinimapChests;
+    internal static ConfigEntry<bool> MinimapRelics;
+    internal static ConfigEntry<bool> MinimapMinor;
+    internal static ConfigEntry<KeyCode> MenuKey;
+    internal static ConfigEntry<bool> MinimapStageMap;
+    internal static ConfigEntry<float> MinimapIconSize;
     internal static float MinimapIntervalMs;
 
     public override void Load()
@@ -80,16 +86,30 @@ public class Plugin : BasePlugin
             "for your character and your current weapons and items.");
         MinimapEnabled = Config.Bind("Minimap", "Enabled", true,
             "Prototype: a small map with the stage items, relics, chests and enemies around you. Hidden with the overlay (F8). " +
-            "Drag it with the mouse; F9 puts it back.");
+            "Drag it with the mouse; F9 puts it back. F7 opens its menu.");
         MinimapVisible = Config.Bind("Minimap", "Visible", true, "Show the map on startup (F8 switches it, see ToggleKey).");
-        MinimapSize = Config.Bind("Minimap", "Size", 0.24f, "Size, fraction of the screen height.");
+        MinimapSize = Config.Bind("Minimap", "Size", 0.24f, "Size, fraction of the screen height. Also changed in the map's menu (MenuKey).");
         MinimapX = Config.Bind("Minimap", "X", 0.76f, "Left edge, fraction of the screen width (0 to 1). Saved when dragging with the mouse.");
         MinimapY = Config.Bind("Minimap", "Y", 0.02f, "Top edge, fraction of the screen height (0 to 1). Saved when dragging with the mouse.");
         MinimapRange = Config.Bind("Minimap", "Range", 4f,
-            "How far the map reaches from you to its edge, in half screen widths. Things further away sit faded at the edge.");
+            "How far the map reaches from you to its edge, in half screen widths. Things further away sit faded at the edge. " +
+            "Also changed in the map's menu (MenuKey).");
         MinimapOpacity = Config.Bind("Minimap", "Opacity", 0.55f, "Background opacity (0 to 1).");
+        MinimapIconSize = Config.Bind("Minimap", "IconSize", 0.13f,
+            "Size of the item, chest and boss symbols, fraction of the map's size (0.04 to 0.3). Symbols beyond the range are smaller.");
         MinimapEnemies = Config.Bind("Minimap", "Enemies", "all",
-            "Enemies on the map: all (red dots, bosses with their image), bosses (only bosses) or off.");
+            "Enemies on the map: all (red dots, bosses with their image), bosses (only bosses) or off. " +
+            "Also switched in the map's menu (MenuKey).");
+        MinimapChests = Config.Bind("Minimap", "Chests", true, "Show treasure chests.");
+        MinimapRelics = Config.Bind("Minimap", "Relics", true, "Show relics and stage items (weapons, coffins, merchants...).");
+        MinimapMinor = Config.Bind("Minimap", "Minor", true, "Show small pickups (coins, food, rosaries, vacuums...).");
+        MinimapStageMap = Config.Bind("Minimap", "StageMap", true,
+            "Show the stage's map image (the one the game's pause map shows, e.g. after picking up a stage's map) behind the map. " +
+            "It is learned once per stage: open the pause menu's map twice, standing still, at places at least half a screen apart " +
+            "left/right and up/down (also in online co-op, where the game keeps running).");
+        StageMap.FilePath = Path.Combine(Path.GetDirectoryName(Config.ConfigFilePath) ?? ".", Guid + ".stagemaps.json");
+        MenuKey = Config.Bind("Minimap", "MenuKey", KeyCode.F7,
+            "Key to open and close the map's menu: what it shows, size, range, position. Click its buttons with the mouse or by touch.");
         ConfigEntry<int> mapInterval = Config.Bind("Minimap", "IntervalMs", 200, "How often the map is updated (milliseconds).");
         MinimapIntervalMs = Math.Max(50, mapInterval.Value);
         IntervalMs = Math.Max(100, interval.Value);
@@ -109,7 +129,7 @@ public class Plugin : BasePlugin
 
         ClassInjector.RegisterTypeInIl2Cpp<BridgeBehaviour>();
         AddComponent<BridgeBehaviour>();
-        Logger.LogInfo($"{Name} {Version} running on http://127.0.0.1:{port.Value}/state, show/hide overlay and map with {ToggleKey.Value}, " +
+        Logger.LogInfo($"{Name} {Version} running on http://127.0.0.1:{port.Value}/state, show/hide overlay and map with {ToggleKey.Value}, map menu with {MenuKey.Value}, " +
             "click its title bar to collapse/expand, drag it with the left mouse button");
     }
 
@@ -117,6 +137,19 @@ public class Plugin : BasePlugin
     {
         Server?.Stop();
         return true;
+    }
+
+    /// <summary>Setting Minimap.Enemies as "all", "bosses" or "off".</summary>
+    internal static string EnemyMode()
+    {
+        string v = (MinimapEnemies?.Value ?? "all").Trim().ToLowerInvariant();
+        return v == "bosses" || v == "off" ? v : "all";
+    }
+
+    /// <summary>Enemies on the map in turn: all -> bosses -> off -> all.</summary>
+    internal static void NextEnemyMode()
+    {
+        MinimapEnemies.Value = EnemyMode() switch { "all" => "bosses", "bosses" => "off", _ => "all" };
     }
 }
 
@@ -159,6 +192,8 @@ public class BridgeBehaviour : MonoBehaviour
     private const float DragThreshold = 5f;
 
     private bool _resetDown;
+    private bool _menuKeyDown;
+    private bool _menuOpen; // the map's menu (F7), not saved
     private bool _mouseDown;
     private bool _pressed;
     private bool _pressOnHeader;
@@ -207,7 +242,7 @@ public class BridgeBehaviour : MonoBehaviour
             string key = snap.ContentKey();
             Plugin.Server.Publish(key, snap.ToJson(), snap.DebugJson);
             if (snap.InRun && !_inRun) _runStartedAt = now;
-            if (!snap.InRun && _inRun) { GameSprites.Reset(); MinimapReader.Reset(); _iconsReady = false; }
+            if (!snap.InRun && _inRun) { GameSprites.Reset(); MinimapReader.Reset(); _iconsReady = false; _menuOpen = false; }
             if (snap.InRun != _inRun) _dirty = true;
             _inRun = snap.InRun;
 
@@ -240,8 +275,10 @@ public class BridgeBehaviour : MonoBehaviour
     {
         try
         {
+            // Learn the stage's map image from the pause map, also while the minimap is hidden.
+            if (Plugin.MinimapEnabled.Value && _inRun) MinimapReader.UpdateStageMap(now);
             if (!Plugin.MinimapEnabled.Value || !Plugin.MinimapVisible.Value || !_inRun) { _map.Hide(); return; }
-            if (MinimapReader.Read(_points, now, out Vector2 player, out float halfScreen)) _map.Show(player, halfScreen, _points);
+            if (MinimapReader.Read(_points, now, out Vector2 player, out float halfScreen)) _map.Show(player, halfScreen, _points, _menuOpen);
             else _map.Hide();
         }
         catch (Exception ex)
@@ -271,6 +308,7 @@ public class BridgeBehaviour : MonoBehaviour
             if (down && !_keyDown)
             {
                 NextVisibility();
+                if (!Plugin.MinimapVisible.Value) _menuOpen = false;
                 _dirty = true;
                 _nextMap = 0; // show or hide the map right away
                 Refresh();
@@ -289,6 +327,16 @@ public class BridgeBehaviour : MonoBehaviour
                 Refresh();
             }
             _resetDown = reset;
+
+            // F7: the map's menu. Opening it also shows the map if F8 had hidden it.
+            bool menu = (GetAsyncKeyState(VirtualKey(Plugin.MenuKey.Value)) & 0x8000) != 0;
+            if (menu && !_menuKeyDown && Plugin.MinimapEnabled.Value)
+            {
+                _menuOpen = !_menuOpen;
+                if (_menuOpen) Plugin.MinimapVisible.Value = true;
+                _nextMap = 0;
+            }
+            _menuKeyDown = menu;
         }
         catch (Exception ex)
         {
@@ -370,6 +418,10 @@ public class BridgeBehaviour : MonoBehaviour
                     Plugin.OverlayX.Value = _ui.ScreenRect.x / Mathf.Max(1, Screen.width);
                     Plugin.OverlayY.Value = _ui.ScreenRect.y / Mathf.Max(1, Screen.height);
                 }
+                else if (_pressOnMap && _map.ButtonAt(mouse) is int button && button >= 0)
+                {
+                    ClickMinimapButton(button);
+                }
                 else if (_pressOnHeader)
                 {
                     Plugin.OverlayCollapsed.Value = !Plugin.OverlayCollapsed.Value;
@@ -383,6 +435,28 @@ public class BridgeBehaviour : MonoBehaviour
             CancelDrag();
             RunReader.WarnOnce("drag", ex);
         }
+    }
+
+    // A click on one of the buttons in the map's menu. Every change is saved to the config.
+    private void ClickMinimapButton(int button)
+    {
+        switch (button)
+        {
+            case MinimapOverlay.Enemies: Plugin.NextEnemyMode(); break;
+            case MinimapOverlay.Chests: Plugin.MinimapChests.Value = !Plugin.MinimapChests.Value; break;
+            case MinimapOverlay.Relics: Plugin.MinimapRelics.Value = !Plugin.MinimapRelics.Value; break;
+            case MinimapOverlay.Minor: Plugin.MinimapMinor.Value = !Plugin.MinimapMinor.Value; break;
+            case MinimapOverlay.Smaller: Plugin.MinimapSize.Value = MinimapOverlay.NextSize(Plugin.MinimapSize.Value, -1); break;
+            case MinimapOverlay.Larger: Plugin.MinimapSize.Value = MinimapOverlay.NextSize(Plugin.MinimapSize.Value, 1); break;
+            case MinimapOverlay.Closer: Plugin.MinimapRange.Value = MinimapOverlay.NextRange(Plugin.MinimapRange.Value, -1); break;
+            case MinimapOverlay.Further: Plugin.MinimapRange.Value = MinimapOverlay.NextRange(Plugin.MinimapRange.Value, 1); break;
+            case MinimapOverlay.StageMapImage: Plugin.MinimapStageMap.Value = !Plugin.MinimapStageMap.Value; break;
+            case MinimapOverlay.ResetPosition:
+                Plugin.MinimapX.Value = (float)Plugin.MinimapX.DefaultValue;
+                Plugin.MinimapY.Value = (float)Plugin.MinimapY.DefaultValue;
+                break;
+        }
+        _nextMap = 0; // redraw right away
     }
 
     // Lets go without saving: the map goes back to its saved position.

@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Compiles the plugin's sources against stand-ins (Stubs.cs, FakeGame.cs) instead of the game,
+       so its logic can be tested without Vampire Survivors. See README.md. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <RootNamespace>VSCheatsheetBridge</RootNamespace>
+    <!-- The plugin only searches assemblies whose name starts with "VampireSurvivors". -->
+    <AssemblyName>VampireSurvivors.Harness</AssemblyName>
+    <StartupObject>Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../VSCheatsheetBridge/*.cs" />
+    <None Include="cheatsheet-data.json" CopyToOutputDirectory="PreserveNewest" Condition="Exists('cheatsheet-data.json')" />
+  </ItemGroup>
+</Project>

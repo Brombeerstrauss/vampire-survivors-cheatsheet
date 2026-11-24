@@ -19,7 +19,7 @@ character, weapons and passive items of every player and
   and expands it again; collapsed, it shows how many evolutions are ready. **Dragging** with the
   left mouse button anywhere on the panel moves it (the position is saved). **F8** switches in
   turn between overlay and minimap, nothing, only the overlay, only the minimap; **F9** resets
-  both to the default position.
+  both to the default position; **F7** opens the minimap's menu (see below).
 - Co-op: one block per player. Other players' passive items count toward your own
   evolutions and are then tagged with their origin ("P2"). Can be turned off with `ShareCoopPassives`.
 - **Level-up grades:** while the level-up screen is open, the overlay lists its choices, best
@@ -66,14 +66,34 @@ character, weapons and passive items of every player and
 - **Minimap (prototype):** a small map in the top right corner with you in the middle and the
   stage items, relics, chests and other pickups around you, with their own sprites from the game
   (coloured squares if a sprite can't be read: chests gold, relics violet, others blue). Enemies
-  are small red dots, bosses have their own sprite and are drawn larger (setting `Enemies`:
-  `all`, `bosses` or `off`). A faint frame marks the visible screen. Items and bosses beyond the
+  are small red dots, bosses have their own sprite and are drawn larger. A faint frame marks the visible screen. Items and bosses beyond the
   map's range sit faded at its edge, so their direction stays visible; enemies there are left out.
   Experience gems are left out too. Like the game's own pause map (relic Milky Way Map), it shows
   no walls or paths. The items come from the same place as that map: the game's
   `MapManager.GetAllWorldItems()` and the treasure chests in the scene; the enemies from the
   stage's list of spawned enemies. Drag the map with the mouse like the overlay (the position is
-  saved), F9 puts both back. F8 shows and hides it (see above). Section `Minimap` in the
+  saved), F9 puts both back. F8 shows and hides it (see above). **F7** opens and closes its menu below
+  the map (and shows the map if F8 had hidden it). A click on a button (mouse, touch or
+  trackpad) changes the setting right away and saves it:
+  `Gegner: alle/Bosse/aus` (enemies: all, only bosses, none), `Truhen` (chests), `Relikte/Items`
+  (relics and stage items such as weapons, coffins, merchants), `Kleinkram` (small pickups:
+  coins, food, rosaries, vacuums... per the game's own list for its pause map, plus a list of
+  our own), `Größe -/+` (size), `Reichweite -/+` (range), `Kartenbild` (stage map image, see
+  below) and `Position zurücksetzen` (reset the map's position).
+- **Stage map image on the minimap:** on stages where the game's pause map shows a picture of
+  the stage (e.g. after picking up the stage's map), the minimap shows the part of it around
+  you, behind the symbols. Where the world lies on that picture is computed by the game and
+  can't be read, so the plugin learns it: open the pause menu's map twice, at places at least
+  half a screen apart both left/right and up/down (e.g. once far top left, once far bottom right),
+  and stand still for a moment while it is open. Each opening gives one sample: your position and
+  where the game puts your marker on the picture. This also works in online co-op, where the game
+  keeps running behind the menu; if you move while the map is open, that opening doesn't count.
+  In online co-op the minimap follows your own character (the one the camera follows), not
+  player 1. The
+  samples are saved per picture in `BepInEx/config/de.cheatsheet.vs.bridge.stagemaps.json`, so
+  each stage is learned only once; more pauses make it more precise, a wrong sample is left out.
+  In the F7 menu the button says `Kartenbild (lernt)` while learning and `Kartenbild (keins)` if
+  the stage has no picture (yet). Delete the file to learn again. Section `Minimap` in the
   settings. The minimap shows even without the Milky Way Map relic; turn it off with
   `Enabled = false` if that feels like cheating.
 - also serves the run locally at `http://127.0.0.1:47321` so the
@@ -203,8 +223,8 @@ same `win-x64` BepInEx package and the same plugin files are used as on Windows.
 
 Things to know:
 
-- The overlay is visible by default, so it needs no key. F8 and F9 need a keyboard, or a button
-  bound to these keys in Steam's controller settings. The position can also be set with `X` and
+- The overlay is visible by default, so it needs no key. F7, F8 and F9 need a keyboard, or a
+  button bound to these keys in Steam's controller settings (e.g. the back buttons L4, R4, L5). The position can also be set with `X` and
   `Y` in the config file.
 - Keys, clicking and dragging use Windows functions (`user32.dll`). Proton provides them, but
   whether they behave the same there is not confirmed. If they fail, the overlay and the server
@@ -215,7 +235,10 @@ Things to know:
 
 ## Testing
 
-Start the game, begin a run, then:
+Without the game: `mod/harness/` compiles the plugin against stand-ins and tests the minimap
+reader and the level-up grades on any PC, see [`harness/README.md`](harness/README.md).
+
+In the game: start it, begin a run, then:
 
 ```bash
 curl http://127.0.0.1:47321/state
@@ -249,7 +272,12 @@ Testing the minimap: during a run the log should show `[Minimap] MapManager: ...
 found), `[Minimap] found the game's MapManager` and a line like `[Minimap] 12 world items,
 1 chests: RELIC 1, ...`. Once there are 20 enemies, once per run: `[Minimap] 85 enemies, 0 bosses:
 BAT 60, ...` (the most common enemy types), and `[Minimap] boss on the stage: ...` for each boss.
-If the map or the enemies stay empty, these lines and `/debug` show where it stops.
+`[Minimap] small pickups per the game: ...` lists what the game counts as small pickups.
+Stage map image: `[StageMap] map image <name>@<size>, ...` once the stage has one, then
+`[StageMap] shown by image ...` when the pause map is open, `[StageMap] sample 1: world (x, y)
+-> image (u, v)` per pause and `[StageMap] ... learned from 2 of 2 samples, largest error ...`.
+Warnings with `stagemap:` say where it stops (no image found in the pause map, marker missing). If the map
+or the enemies stay empty, these lines and `/debug` show where it stops.
 
 Plugin messages are written to `BepInEx/LogOutput.log`.
 
@@ -270,7 +298,11 @@ Plugin messages are written to `BepInEx/LogOutput.log`.
 - Section `Minimap`: `Enabled` (default on), `Size` (fraction of the screen height, default 0.24),
   position `X`/`Y` (fractions of the screen, default top right), `Range` (from you to the map's
   edge in half screen widths, default 4), `Opacity`, `Enemies` (`all`, `bosses` or `off`, default
-  `all`), `Visible` (switched with F8), `IntervalMs` (how often it updates, default 200)
+  `all`), `Chests`, `Relics`, `Minor` (small pickups; all three default on), `IconSize` (size of
+  the symbols as a fraction of the map, default 0.13), `StageMap` (stage
+  map image behind the map, default on), `MenuKey` (default
+  `F7`), `Visible` (switched with F8), `IntervalMs` (how often it updates, default 200). Size,
+  range, position and what the map shows can also be changed in the F7 menu.
 
 Older versions of the plugin wrote `Language = de` or `Language = en` into the config file. Set
 it to `auto` if the overlay should follow the game's language.
