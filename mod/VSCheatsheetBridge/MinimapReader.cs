@@ -113,6 +113,7 @@ internal static class MinimapReader
         _retryAt = 0;
         _loggedItems = _loggedEnemies = false;
         LoggedBosses.Clear();
+        StageMap.Reset();
     }
 
     /// <summary>
@@ -123,18 +124,8 @@ internal static class MinimapReader
     public static bool Read(List<MapPoint> points, double now, out Vector2 player, out float halfScreen)
     {
         points.Clear();
-        player = default;
-        halfScreen = 0f;
         Resolve();
-
-        Component character = RunReader.FirstCharacter() as Component;
-        if (character == null) return false;
-        Vector3 p = character.transform.position;
-        player = new Vector2(p.x, p.y);
-
-        Camera cam = Camera.main;
-        halfScreen = cam != null && cam.orthographic ? cam.orthographicSize * cam.aspect : 0f;
-        if (halfScreen <= 0f) halfScreen = 12f; // rough fallback until the camera is known
+        if (!PlayerAndScreen(out player, out halfScreen)) return false;
 
         var items = new List<(float d, MapPoint point)>();
         int worldItems = AddWorldItems(items, player, now);
@@ -159,6 +150,32 @@ internal static class MinimapReader
             string kinds = string.Join(", ", items.GroupBy(f => f.point.Kind).Select(g => $"{g.Key} {g.Count()}"));
             Plugin.Logger.LogInfo($"[Minimap] {worldItems} world items, {chests} chests: {kinds}");
         }
+        return true;
+    }
+
+    /// <summary>
+    /// The stage's map image for the minimap's background: reads it and learns where the world
+    /// lies on it while the pause map is open (StageMap). Also while the minimap is hidden.
+    /// </summary>
+    public static void UpdateStageMap(double now)
+    {
+        Resolve();
+        if (!PlayerAndScreen(out Vector2 player, out float halfScreen)) return;
+        StageMap.Update(MapManager(now), player, halfScreen, now);
+    }
+
+    // The first player's position and half the screen width in world units (from the camera).
+    private static bool PlayerAndScreen(out Vector2 player, out float halfScreen)
+    {
+        player = default;
+        halfScreen = 0f;
+        Component character = RunReader.FirstCharacter() as Component;
+        if (character == null) return false;
+        Vector3 p = character.transform.position;
+        player = new Vector2(p.x, p.y);
+        Camera cam = Camera.main;
+        halfScreen = cam != null && cam.orthographic ? cam.orthographicSize * cam.aspect : 0f;
+        if (halfScreen <= 0f) halfScreen = 12f; // rough fallback until the camera is known
         return true;
     }
 

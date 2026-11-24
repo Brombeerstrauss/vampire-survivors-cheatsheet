@@ -89,7 +89,7 @@ und werden nur vom Wiki eingebunden, nie kopiert.
 **Vor jedem Commit**
 - App: `npm test` (Logik + alle JSON-Dateien gegen Schema und Verweise), `npm run build` (inkl. TypeScript),
   `npm run lint`.
-- Mod: `dotnet run -- minimap` und `dotnet run -- grading` in `mod/harness/` (Abschnitt 5). Der echte
+- Mod: `dotnet run -- minimap`, `grading` und `stagemap` in `mod/harness/` (Abschnitt 5). Der echte
   Build braucht die Spieldateien und läuft nur bei mir.
 
 **Daten**
@@ -138,6 +138,7 @@ cd mod/harness
 dotnet run -- minimap
 node ../../scripts/export-mod-data.mjs cheatsheet-data.json   # einmal und nach Datenänderungen
 dotnet run -- grading
+dotnet run -- stagemap
 
 # Wiki-Import (Python, braucht Netz zum Wiki)
 bash tools/wiki-import/run.sh
@@ -164,6 +165,7 @@ Vorausgesetzt: Vampire Survivors 1.16.x (Unity 6, IL2CPP), BepInEx 6.0.0-be.788
 | `GameSprites.cs`, `WeaponStats.cs`, `GameText.cs` | Bilder, Waffenwerte und Namen aus den Spieldaten |
 | `MinimapReader.cs` | Punkte für die Minimap (Gegenstände, Truhen, Gegner, Bosse) |
 | `MinimapOverlay.cs` | Zeichnet Minimap und F7-Menü |
+| `StageMap.cs` | Kartenbild der Stage: lesen, Umrechnung aus der Pausenkarte lernen, speichern |
 | `VSCheatsheetBridge.csproj` | Version (`<Version>0.9.0</Version>`), Build, Daten-Export, Release-ZIP |
 
 **Level-up-Noten** (`EvolutionAdvisor.GradeOffers`): Punkte je Karte aus
@@ -189,9 +191,21 @@ zusätzlich zum aktuellen Build oder zum Charakter passt; diese Karten stehen ob
   `EnemyType`. Normale Gegner rote Punkte (nur in Reichweite, max. 250), Bosse mit eigenem Bild (max. 20).
 - Bedienung: F8 schaltet der Reihe nach beide → nichts → nur Overlay → nur Karte; mit der Maus ziehen
   (Position wird gespeichert); F9 setzt Overlay und Karte zurück; **F7** öffnet das Menü unter der Karte:
-  Gegner (alle/Bosse/aus), Truhen, Relikte/Items, Kleinkram, Größe −/+, Reichweite −/+, Position zurücksetzen.
+  Gegner (alle/Bosse/aus), Truhen, Relikte/Items, Kleinkram, Größe −/+, Reichweite −/+, Kartenbild,
+  Position zurücksetzen.
 - Einstellungen `[Minimap]`: `Enabled`, `Visible`, `Size`, `X`, `Y`, `Range`, `Opacity`, `Enemies`,
-  `Chests`, `Relics`, `Minor`, `MenuKey`, `IntervalMs`.
+  `Chests`, `Relics`, `Minor`, `StageMap`, `MenuKey`, `IntervalMs`.
+- **Kartenbild** (`StageMap.cs`): Hat die Stage ein Kartenbild in der Pausenkarte
+  (`MapManager._detailedMapSprite`), zeigt die Minimap den Ausschnitt um den Spieler dahinter. Die
+  Umrechnung Welt -> Bild rechnet das Spiel intern (Formel unbekannt), deshalb lernt der Mod sie:
+  Bei offener Pausenkarte (Spiel pausiert, MapManager aktiv) wird die Position der Spieler-Markierung
+  `MapManager._Player` auf dem Bild (`Image` mit diesem Sprite, per `InverseTransformPoint` in 0..1
+  umgerechnet) mit der Weltposition gepaart. Fit je Achse per kleinsten Quadraten
+  (`u = Ax*x + Bx`, `v = Ay*y + By`), mind. eine halbe Bildschirmbreite Abstand je Achse,
+  Ausreißer werden verworfen. Gespeichert je Bild in `BepInEx/config/de.cheatsheet.vs.bridge.stagemaps.json`.
+  Gezeichnet als `RawImage` mit `uvRect` (nur der Teil, der auf dem Bild liegt). Einstellung `StageMap`,
+  Schalter "Kartenbild" im F7-Menü. **Im Spiel ungetestet**: ob `_Player` wirklich die Markierung auf
+  dem Bild ist und ob das Bild ein `Image` unter dem MapManager ist, zeigen die `[StageMap]`-Logzeilen.
 - Joker (Ante Chamber) sind laut Wiki Gegner (z. B. Spectral Joker, ID `LEM_SPECTRAL`); ob sie als Boss
   zählen, ist unbekannt.
 
@@ -201,14 +215,14 @@ zusätzlich zum aktuellen Build oder zum Charakter passt; diese Karten stehen ob
 
 - `main` (Commit `423e41f`): App aktuell und live; Mod bis einschließlich PR #7 (Minimap mit Gegnern,
   Ziehen, F8-Reihenfolge).
-- Branch `claude/brave-hopper-pww0x5`, **noch nicht gemergt**: Minimap-Menü auf F7 (Commit `a6c84e1`),
-  Test-Harness in `mod/harness/` und diese Datei. Zum Übernehmen auf GitHub einen PR von diesem Branch
+- Branch `claude/brave-hopper-pww0x5`, **noch nicht gemergt**: Minimap-Menü auf F7, Kartenbild der
+  Stage auf der Minimap, Test-Harness in `mod/harness/` und diese Datei. Zum Übernehmen auf GitHub einen PR von diesem Branch
   nach `main` öffnen und mergen, oder den Branch als ZIP laden (Code → Branch wählen → Download ZIP).
 
 ## 8. Offene Punkte
 
 1. **Im Spiel testen** (Steam Deck): Ziehen der Karte, Gegner/Bosse, F8-Reihenfolge, F7-Menü und seine
-   Klicks per Touch/Trackpad. Vorher prüfen, ob sich das Overlay ziehen lässt: wenn nicht, kommen
+   Klicks per Touch/Trackpad, Kartenbild (zweimal pausieren, `[StageMap]`-Zeilen im Log prüfen). Vorher prüfen, ob sich das Overlay ziehen lässt: wenn nicht, kommen
    Maus-Eingaben unter Proton nicht an (dann betrifft es alles, nicht nur die Karte).
 2. **Joker**: aus dem Log die Zeilen `[Minimap] … enemies …` und `[Minimap] boss on the stage …` in der
    Ante Chamber auswerten; danach ggf. bestimmte Gegnertypen mit Bild statt als Punkt zeigen.
@@ -231,7 +245,7 @@ zusätzlich zum aktuellen Build oder zum Charakter passt; diese Karten stehen ob
 | Aufgabe | Dateien |
 |---|---|
 | Immer | `HANDOVER.md` |
-| Minimap | `mod/VSCheatsheetBridge/MinimapReader.cs`, `MinimapOverlay.cs`, `Plugin.cs`, `RunReader.cs`, `mod/harness/FakeGame.cs`, `MinimapTest.cs`, passende Log-Zeilen |
+| Minimap | `mod/VSCheatsheetBridge/MinimapReader.cs`, `MinimapOverlay.cs`, `StageMap.cs`, `Plugin.cs`, `RunReader.cs`, `mod/harness/FakeGame.cs`, `MinimapTest.cs`, `StageMapTest.cs`, passende Log-Zeilen |
 | Level-up-Noten / Overlay | `EvolutionAdvisor.cs`, `UiOverlay.cs`, `RunSnapshot.cs`, `scripts/export-mod-data.mjs`, `mod/harness/GradingTest.cs` |
 | App-Ansicht | die View aus `src/views/`, `src/components/ui.tsx`, `src/i18n/strings.ts`, ggf. `src/data/types.ts` |
 | Spieldaten | die JSON-Datei, das Schema aus `src/data/schema/`, `src/data/types.ts`, Wiki-Quelle |

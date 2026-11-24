@@ -78,8 +78,18 @@ character, weapons and passive items of every player and
   `Gegner: alle/Bosse/aus` (enemies: all, only bosses, none), `Truhen` (chests), `Relikte/Items`
   (relics and stage items such as weapons, coffins, merchants), `Kleinkram` (small pickups:
   coins, food, rosaries, vacuums... per the game's own list for its pause map, plus a list of
-  our own), `Größe -/+` (size), `Reichweite -/+` (range) and `Position zurücksetzen` (reset the
-  map's position). Section `Minimap` in the
+  our own), `Größe -/+` (size), `Reichweite -/+` (range), `Kartenbild` (stage map image, see
+  below) and `Position zurücksetzen` (reset the map's position).
+- **Stage map image on the minimap:** on stages where the game's pause map shows a picture of
+  the stage (e.g. after picking up the stage's map), the minimap shows the part of it around
+  you, behind the symbols. Where the world lies on that picture is computed by the game and
+  can't be read, so the plugin learns it: open the pause menu twice, at places at least half a
+  screen apart both left/right and up/down (e.g. once far top left, once far bottom right). Each
+  pause gives one sample: your position and where the game puts your marker on the picture. The
+  samples are saved per picture in `BepInEx/config/de.cheatsheet.vs.bridge.stagemaps.json`, so
+  each stage is learned only once; more pauses make it more precise, a wrong sample is left out.
+  In the F7 menu the button says `Kartenbild (lernt)` while learning and `Kartenbild (keins)` if
+  the stage has no picture (yet). Delete the file to learn again. Section `Minimap` in the
   settings. The minimap shows even without the Milky Way Map relic; turn it off with
   `Enabled = false` if that feels like cheating.
 - also serves the run locally at `http://127.0.0.1:47321` so the
@@ -258,7 +268,11 @@ Testing the minimap: during a run the log should show `[Minimap] MapManager: ...
 found), `[Minimap] found the game's MapManager` and a line like `[Minimap] 12 world items,
 1 chests: RELIC 1, ...`. Once there are 20 enemies, once per run: `[Minimap] 85 enemies, 0 bosses:
 BAT 60, ...` (the most common enemy types), and `[Minimap] boss on the stage: ...` for each boss.
-`[Minimap] small pickups per the game: ...` lists what the game counts as small pickups. If the map
+`[Minimap] small pickups per the game: ...` lists what the game counts as small pickups.
+Stage map image: `[StageMap] map image <name>@<size>, ...` once the stage has one, then
+`[StageMap] shown by image ...` when the pause map is open, `[StageMap] sample 1: world (x, y)
+-> image (u, v)` per pause and `[StageMap] ... learned from 2 of 2 samples, largest error ...`.
+Warnings with `stagemap:` say where it stops (no image found in the pause map, marker missing). If the map
 or the enemies stay empty, these lines and `/debug` show where it stops.
 
 Plugin messages are written to `BepInEx/LogOutput.log`.
@@ -280,7 +294,8 @@ Plugin messages are written to `BepInEx/LogOutput.log`.
 - Section `Minimap`: `Enabled` (default on), `Size` (fraction of the screen height, default 0.24),
   position `X`/`Y` (fractions of the screen, default top right), `Range` (from you to the map's
   edge in half screen widths, default 4), `Opacity`, `Enemies` (`all`, `bosses` or `off`, default
-  `all`), `Chests`, `Relics`, `Minor` (small pickups; all three default on), `MenuKey` (default
+  `all`), `Chests`, `Relics`, `Minor` (small pickups; all three default on), `StageMap` (stage
+  map image behind the map, default on), `MenuKey` (default
   `F7`), `Visible` (switched with F8), `IntervalMs` (how often it updates, default 200). Size,
   range, position and what the map shows can also be changed in the F7 menu.
 

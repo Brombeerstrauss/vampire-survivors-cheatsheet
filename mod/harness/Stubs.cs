@@ -47,6 +47,7 @@ namespace BepInEx.Configuration
     public class ConfigEntry<T> { public T Value { get; set; } public object DefaultValue { get; set; } }
     public class ConfigFile
     {
+        public string ConfigFilePath => System.IO.Path.Combine(System.IO.Path.GetTempPath(), "harness.cfg");
         public ConfigEntry<T> Bind<T>(string section, string key, T value, string description) => new() { Value = value, DefaultValue = value };
     }
 }
@@ -82,8 +83,9 @@ namespace UnityEngine
         private Transform _t;
         public Transform transform => _t ??= this as Transform ?? new Transform();
         public T GetComponentInChildren<T>() where T : Component => null;
+        public T[] GetComponentsInChildren<T>(bool includeInactive) where T : Component => Array.Empty<T>();
     }
-    public struct Vector3 { public float x, y, z; }
+    public struct Vector3 { public float x, y, z; public Vector3(float x, float y, float z) { this.x = x; this.y = y; this.z = z; } }
     public struct Scene { public bool IsValid() => true; }
     public class Camera : Component { public static Camera main => null; public bool orthographic; public float orthographicSize, aspect; }
     public class SpriteRenderer : Component { public Sprite sprite; }
@@ -93,6 +95,9 @@ namespace UnityEngine
     public class Transform : Component
     {
         public Vector3 position;
+        public Transform parent => null;
+        public Vector3 TransformPoint(Vector3 p) => p;
+        public Vector3 InverseTransformPoint(Vector3 p) => p;
         public void SetAsLastSibling() { }
         public void SetParent(Transform t, bool keep) { }
         public int childCount => 0;
@@ -101,6 +106,7 @@ namespace UnityEngine
     public class RectTransform : Transform
     {
         public Vector2 anchorMin, anchorMax, pivot, anchoredPosition, sizeDelta;
+        public Rect rect;
     }
     public class GameObject : Object
     {
@@ -109,11 +115,13 @@ namespace UnityEngine
         public T AddComponent<T>() where T : new() => new T();
         public void SetActive(bool b) { }
         public bool activeSelf => true;
+        public bool activeInHierarchy => true;
         public Scene scene => default;
     }
     public enum RenderMode { ScreenSpaceOverlay }
     public class Canvas : Component { public RenderMode renderMode; public bool overrideSorting; public int sortingOrder; }
-    public class Sprite : Object { }
+    public class Texture2D : Object { public int width, height; }
+    public class Sprite : Object { public Texture2D texture; public Rect rect, textureRect; }
     public struct Color
     {
         public float r, g, b, a;
@@ -151,6 +159,7 @@ namespace UnityEngine
 namespace UnityEngine.UI
 {
     public class Image : UnityEngine.Component { public UnityEngine.Sprite sprite; public UnityEngine.Color color; public bool raycastTarget, preserveAspect; public UnityEngine.RectTransform rectTransform => null; }
+    public class RawImage : UnityEngine.Component { public UnityEngine.Texture2D texture; public UnityEngine.Rect uvRect; public UnityEngine.Color color; public bool raycastTarget; public UnityEngine.RectTransform rectTransform => null; }
 }
 namespace TMPro
 {

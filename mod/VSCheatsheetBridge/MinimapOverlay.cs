@@ -17,7 +17,10 @@ namespace VSCheatsheetBridge;
 //   [x] Relikte/Items     [x] Kleinkram
 //   [Größe -]             [Größe +]
 //   [Reichweite -]        [Reichweite +]
-//   [Position zurücksetzen          ]
+//   [x] Kartenbild        [Position zurücksetzen]
+//
+// Behind the symbols: the stage's map image from the game's pause map, once StageMap has
+// learned where the world lies on it (setting Minimap.StageMap, "Kartenbild" in the menu).
 //
 // Same building blocks as UiOverlay (Canvas, Image), no OnGUI. The icons are pooled and only
 // moved, a few times per second from Update (Plugin.MinimapIntervalMs).
@@ -38,11 +41,12 @@ internal sealed class MinimapOverlay
 
     /// <summary>Menu buttons, in the order of ButtonLabel.</summary>
     public const int Enemies = 0, Chests = 1, Relics = 2, Minor = 3, Smaller = 4, Larger = 5,
-        Closer = 6, Further = 7, ResetPosition = 8;
-    private const int ButtonCount = 9, MenuRows = 5;
+        Closer = 6, Further = 7, StageMapImage = 8, ResetPosition = 9;
+    private const int ButtonCount = 10, MenuRows = 5;
     private static readonly float[] Sizes = { 0.12f, 0.16f, 0.2f, 0.24f, 0.28f, 0.32f, 0.36f, 0.4f, 0.45f, 0.5f };
     private static readonly float[] Ranges = { 2f, 3f, 4f, 6f, 8f, 12f };
     private Image _menuBackground;
+    private RawImage _stageMap;
     private readonly Image[] _buttons = new Image[ButtonCount];
     private readonly TextMeshProUGUI[] _labels = new TextMeshProUGUI[ButtonCount];
     private readonly Rect[] _buttonRects = new Rect[ButtonCount]; // from the panel's top left
@@ -120,6 +124,7 @@ internal sealed class MinimapOverlay
         _panel.sizeDelta = new Vector2(width, height);
         ScreenRect = new Rect(x, y, width, height);
         Place(_background, 0f, 0f, size, size, new Color(0f, 0f, 0f, Plugin.MinimapOpacity.Value));
+        ShowStageMap(player, RangeFor(halfScreen), size);
         if (menu)
         {
             Place(_menuBackground, 0f, size, width, height - size, new Color(0f, 0f, 0f, Mathf.Max(0.75f, Plugin.MinimapOpacity.Value)));
@@ -176,16 +181,49 @@ internal sealed class MinimapOverlay
         _root.SetActive(true);
     }
 
-    // Two buttons per row below the map, the last one over the whole width. Labels and states
-    // from the settings.
+    // The part of the stage's map image around the player, if it is known (StageMap).
+    private void ShowStageMap(Vector2 player, float range, float size)
+    {
+        Sprite sprite = StageMap.Sprite;
+        StageMapCalibration cal = StageMap.Current;
+        bool shown = false;
+        if (Plugin.MinimapStageMap.Value && sprite != null && cal != null && cal.Ready)
+        {
+            try
+            {
+                Texture2D tex = sprite.texture;
+                Rect tr;
+                try { tr = sprite.textureRect; } catch { tr = sprite.rect; } // textureRect fails for tightly packed sprites
+                if (tex != null && tex.width > 0 && tex.height > 0)
+                {
+                    var inTexture = new Rect(tr.x / tex.width, tr.y / tex.height, tr.width / tex.width, tr.height / tex.height);
+                    if (cal.Window(player.x, player.y, range, inTexture, out float l, out float t, out float r, out float b, out Rect uv))
+                    {
+                        if (_stageMap.texture != tex) _stageMap.texture = tex;
+                        _stageMap.uvRect = uv;
+                        var rt = _stageMap.rectTransform;
+                        rt.anchoredPosition = new Vector2(l * size, -t * size);
+                        rt.sizeDelta = new Vector2((r - l) * size, (b - t) * size);
+                        _stageMap.color = new Color(1f, 1f, 1f, 0.85f);
+                        shown = true;
+                    }
+                }
+            }
+            catch (System.Exception ex)
+            {
+                RunReader.WarnOnce("stagemap:draw", ex);
+            }
+        }
+        _stageMap.gameObject.SetActive(shown);
+    }
+
+    // Two buttons per row below the map. Labels and states from the settings.
     private void LayoutButtons(float width, float top, float rowH, float pad)
     {
-        float half = (width - 3f * pad) / 2f;
+        float w = (width - 3f * pad) / 2f;
         for (int b = 0; b < ButtonCount; b++)
         {
-            bool full = b == ResetPosition;
-            float w = full ? width - 2f * pad : half;
-            float bx = pad + (full ? 0f : (b % 2) * (half + pad));
+            float bx = pad + (b % 2) * (w + pad);
             float by = top + pad + (b / 2) * (rowH + pad);
             _buttonRects[b] = new Rect(bx, by, w, rowH);
             string label = ButtonLabel(b, out bool on);
@@ -226,6 +264,12 @@ internal sealed class MinimapOverlay
             case Larger: return T("Größe +", "Size +");
             case Closer: return T("Reichweite -", "Range -");
             case Further: return T("Reichweite +", "Range +");
+            case StageMapImage:
+                on = Plugin.MinimapStageMap.Value;
+                string status = StageMap.Status;
+                return Box(on) + T("Kartenbild", "Stage map") + (status == "ready" ? ""
+                    : status == "learning" ? T(" (lernt)", " (learning)")
+                    : T(" (keins)", " (none)"));
             default: return T("Position zurücksetzen", "Reset position");
         }
     }
@@ -285,6 +329,7 @@ internal sealed class MinimapOverlay
         _panel = panelGo.AddComponent<RectTransform>();
         _panel.anchorMin = _panel.anchorMax = _panel.pivot = new Vector2(0f, 1f);
         _background = NewImage("Background");
+        _stageMap = NewRawImage("StageMap");
         _menuBackground = NewImage("MenuBackground");
 
         for (int i = 0; i < _frame.Length; i++) _frame[i] = NewImage("Frame");
@@ -310,6 +355,18 @@ internal sealed class MinimapOverlay
         rt.anchorMin = rt.anchorMax = rt.pivot = new Vector2(0f, 1f);
         var img = go.AddComponent<Image>();
         img.raycastTarget = false;
+        return img;
+    }
+
+    private RawImage NewRawImage(string name)
+    {
+        var go = new GameObject(name);
+        go.transform.SetParent(_panel, false);
+        var rt = go.AddComponent<RectTransform>();
+        rt.anchorMin = rt.anchorMax = rt.pivot = new Vector2(0f, 1f);
+        var img = go.AddComponent<RawImage>();
+        img.raycastTarget = false;
+        go.SetActive(false);
         return img;
     }
 

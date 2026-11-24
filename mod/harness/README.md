@@ -12,6 +12,7 @@ cd mod/harness
 dotnet run -- minimap   # minimap reader: items, chests, enemies, bosses, groups, F8 cycle, menu steps
 node ../../scripts/export-mod-data.mjs cheatsheet-data.json   # once, and after data changes
 dotnet run -- grading   # level-up grades for a few characters and builds
+dotnet run -- stagemap  # learning where the world lies on a stage's map image, and the part the minimap shows
 ```
 
 When the plugin uses a new Unity, BepInEx or game member, add it to `Stubs.cs` or

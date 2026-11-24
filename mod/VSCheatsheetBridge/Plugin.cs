@@ -51,6 +51,7 @@ public class Plugin : BasePlugin
     internal static ConfigEntry<bool> MinimapRelics;
     internal static ConfigEntry<bool> MinimapMinor;
     internal static ConfigEntry<KeyCode> MenuKey;
+    internal static ConfigEntry<bool> MinimapStageMap;
     internal static float MinimapIntervalMs;
 
     public override void Load()
@@ -99,6 +100,10 @@ public class Plugin : BasePlugin
         MinimapChests = Config.Bind("Minimap", "Chests", true, "Show treasure chests.");
         MinimapRelics = Config.Bind("Minimap", "Relics", true, "Show relics and stage items (weapons, coffins, merchants...).");
         MinimapMinor = Config.Bind("Minimap", "Minor", true, "Show small pickups (coins, food, rosaries, vacuums...).");
+        MinimapStageMap = Config.Bind("Minimap", "StageMap", true,
+            "Show the stage's map image (the one the game's pause map shows, e.g. after picking up a stage's map) behind the map. " +
+            "It is learned once per stage: open the pause menu twice, at places at least half a screen apart left/right and up/down.");
+        StageMap.FilePath = Path.Combine(Path.GetDirectoryName(Config.ConfigFilePath) ?? ".", Guid + ".stagemaps.json");
         MenuKey = Config.Bind("Minimap", "MenuKey", KeyCode.F7,
             "Key to open and close the map's menu: what it shows, size, range, position. Click its buttons with the mouse or by touch.");
         ConfigEntry<int> mapInterval = Config.Bind("Minimap", "IntervalMs", 200, "How often the map is updated (milliseconds).");
@@ -266,6 +271,8 @@ public class BridgeBehaviour : MonoBehaviour
     {
         try
         {
+            // Learn the stage's map image from the pause map, also while the minimap is hidden.
+            if (Plugin.MinimapEnabled.Value && _inRun) MinimapReader.UpdateStageMap(now);
             if (!Plugin.MinimapEnabled.Value || !Plugin.MinimapVisible.Value || !_inRun) { _map.Hide(); return; }
             if (MinimapReader.Read(_points, now, out Vector2 player, out float halfScreen)) _map.Show(player, halfScreen, _points, _menuOpen);
             else _map.Hide();
@@ -439,6 +446,7 @@ public class BridgeBehaviour : MonoBehaviour
             case MinimapOverlay.Larger: Plugin.MinimapSize.Value = MinimapOverlay.NextSize(Plugin.MinimapSize.Value, 1); break;
             case MinimapOverlay.Closer: Plugin.MinimapRange.Value = MinimapOverlay.NextRange(Plugin.MinimapRange.Value, -1); break;
             case MinimapOverlay.Further: Plugin.MinimapRange.Value = MinimapOverlay.NextRange(Plugin.MinimapRange.Value, 1); break;
+            case MinimapOverlay.StageMapImage: Plugin.MinimapStageMap.Value = !Plugin.MinimapStageMap.Value; break;
             case MinimapOverlay.ResetPosition:
                 Plugin.MinimapX.Value = (float)Plugin.MinimapX.DefaultValue;
                 Plugin.MinimapY.Value = (float)Plugin.MinimapY.DefaultValue;

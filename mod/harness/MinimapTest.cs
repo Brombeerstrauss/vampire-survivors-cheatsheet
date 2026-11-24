@@ -67,7 +67,7 @@ public static class MinimapTest
         var modes = new List<string>();
         Plugin.MinimapEnemies.Value = "ALL ";
         for (int k = 0; k < 4; k++) { modes.Add(Plugin.EnemyMode()); Plugin.NextEnemyMode(); }
-        Console.WriteLine("F10 / button: " + string.Join(" -> ", modes));
+        Console.WriteLine("Enemies button: " + string.Join(" -> ", modes));
         float size = 0.24f; var sizes = new List<string>();
         for (int k = 0; k < 8; k++) { size = MinimapOverlay.NextSize(size, 1); sizes.Add(size.ToString("0.00")); }
         Console.WriteLine("Size +: " + string.Join(" ", sizes));
@@ -78,6 +78,11 @@ public static class MinimapTest
         for (int k = 0; k < 4; k++) { range = MinimapOverlay.NextRange(range, 1); ranges.Add(range); }
         for (int k = 0; k < 7; k++) { range = MinimapOverlay.NextRange(range, -1); ranges.Add(range); }
         Console.WriteLine("Range from 4, +4 then -7: " + string.Join(" ", ranges) + $"; from 5: -{MinimapOverlay.NextRange(5f, -1)} +{MinimapOverlay.NextRange(5f, 1)}");
+
+        // Stage map image: read from the map manager; no pause map image in the fakes, so it warns.
+        map._detailedMapSprite = new UnityEngine.Sprite { name = "TestStageMap", rect = new UnityEngine.Rect(0, 0, 512, 256) };
+        MinimapReader.UpdateStageMap(50000);
+        Console.WriteLine($"stage map status: {StageMap.Status}");
 
         Plugin.OverlayVisible = new BepInEx.Configuration.ConfigEntry<bool> { Value = true };
         Plugin.MinimapVisible = new BepInEx.Configuration.ConfigEntry<bool> { Value = true };

@@ -36,6 +36,7 @@ namespace VampireSurvivors.UI
     {
         public System.Collections.Generic.List<VampireSurvivors.Objects.Pickups.Pickup> Items = new();
         private System.Collections.Generic.List<VampireSurvivors.Objects.Pickups.Pickup> GetAllWorldItems() => Items;
+        public UnityEngine.Sprite _detailedMapSprite;
         public System.Collections.Generic.List<VampireSurvivors.Objects.Pickups.ItemType> _minorItemTypes = new() { VampireSurvivors.Objects.Pickups.ItemType.CLOVER, VampireSurvivors.Objects.Pickups.ItemType.MAP_TOKEN };
     }
 }
