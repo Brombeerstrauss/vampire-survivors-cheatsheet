@@ -138,7 +138,8 @@ internal sealed class MinimapOverlay
         // World units from the middle to the edge: a number of half screen widths.
         float range = RangeFor(halfScreen);
         float half = size / 2f;
-        float icon = Mathf.Max(6f, Mathf.Round(size * 0.08f));
+        // Symbols: a fraction of the map (setting Minimap.IconSize); enemy dots stay small.
+        float icon = Mathf.Max(8f, Mathf.Round(size * Mathf.Clamp(Plugin.MinimapIconSize.Value, 0.04f, 0.3f)));
 
         // The visible screen, as a faint frame around the player.
         float fw = Mathf.Min(half, halfScreen / range * half);
@@ -149,8 +150,8 @@ internal sealed class MinimapOverlay
         Place(_frame[2], half - fw, half - fh, 1f, fh * 2f, frameColor);
         Place(_frame[3], half + fw, half - fh, 1f, fh * 2f, frameColor);
 
-        float dot = Mathf.Max(2f, Mathf.Round(icon * 0.3f));
-        float bossIcon = Mathf.Round(icon * 1.4f);
+        float dot = Mathf.Max(2f, Mathf.Round(size * 0.024f));
+        float bossIcon = Mathf.Round(icon * 1.25f);
 
         // In list order: enemies first, so items and bosses are drawn on top of them.
         int i = 0;
@@ -175,7 +176,7 @@ internal sealed class MinimapOverlay
         for (; i < _icons.Count; i++) _icons[i].gameObject.SetActive(false);
 
         // The player last, so it is drawn on top.
-        float ps = Mathf.Max(5f, Mathf.Round(icon * 0.6f));
+        float ps = Mathf.Max(5f, Mathf.Round(icon * 0.5f));
         Place(_player, half - ps / 2f, half - ps / 2f, ps, ps, Color.white);
         _player.transform.SetAsLastSibling();
         _root.SetActive(true);

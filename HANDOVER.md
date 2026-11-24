@@ -1,6 +1,6 @@
 # Übergabe: Vampire Survivors Cheatsheet
 
-Stand: 23.11.2026. Für die Weiterarbeit mit einer anderen KI (z. B. in Mammouth AI) oder von Hand.
+Stand: 24.11.2026. Für die Weiterarbeit mit einer anderen KI (z. B. in Mammouth AI) oder von Hand.
 Abschnitt 1 ist zum Einfügen als erste Nachricht oder Projektanweisung gedacht, der Rest ist
 Nachschlagewerk. Lade diese Datei bei jeder neuen Unterhaltung mit hoch.
 
@@ -194,7 +194,7 @@ zusätzlich zum aktuellen Build oder zum Charakter passt; diese Karten stehen ob
   Gegner (alle/Bosse/aus), Truhen, Relikte/Items, Kleinkram, Größe −/+, Reichweite −/+, Kartenbild,
   Position zurücksetzen.
 - Einstellungen `[Minimap]`: `Enabled`, `Visible`, `Size`, `X`, `Y`, `Range`, `Opacity`, `Enemies`,
-  `Chests`, `Relics`, `Minor`, `StageMap`, `MenuKey`, `IntervalMs`.
+  `Chests`, `Relics`, `Minor`, `IconSize`, `StageMap`, `MenuKey`, `IntervalMs`.
 - **Kartenbild** (`StageMap.cs`): Hat die Stage ein Kartenbild in der Pausenkarte
   (`MapManager._detailedMapSprite`), zeigt die Minimap den Ausschnitt um den Spieler dahinter. Die
   Umrechnung Welt -> Bild rechnet das Spiel intern (Formel unbekannt), deshalb lernt der Mod sie:
@@ -217,18 +217,16 @@ zusätzlich zum aktuellen Build oder zum Charakter passt; diese Karten stehen ob
 
 ## 7. Aktueller Stand
 
-- `main` (Commit `423e41f`): App aktuell und live; Mod bis einschließlich PR #7 (Minimap mit Gegnern,
-  Ziehen, F8-Reihenfolge).
-- Branch `claude/brave-hopper-pww0x5`, **noch nicht gemergt**: Minimap-Menü auf F7, Kartenbild der
-  Stage auf der Minimap, Test-Harness in `mod/harness/` und diese Datei. Zum Übernehmen auf GitHub einen PR von diesem Branch
-  nach `main` öffnen und mergen, oder den Branch als ZIP laden (Code → Branch wählen → Download ZIP).
+- Alles ist auf `main`: App aktuell und live; Mod mit Minimap (Gegner, Ziehen, F8-Reihenfolge,
+  F7-Menü, Kartenbild der Stage, größere Symbole über `IconSize`), Test-Harness in `mod/harness/` und
+  diese Datei. Rückmeldung zum Kartenbild nach dem Test: "klappt so".
 
 ## 8. Offene Punkte
 
-1. **Im Spiel testen** (Steam Deck): Ziehen der Karte, Gegner/Bosse, F8-Reihenfolge, F7-Menü und seine
-   Klicks per Touch/Trackpad, Kartenbild (zweimal die Karte im Menü öffnen und kurz stillstehen,
-   `[StageMap]`-Zeilen im Log prüfen), Online-Koop (folgt die Minimap der eigenen Figur?). Vorher prüfen, ob sich das Overlay ziehen lässt: wenn nicht, kommen
-   Maus-Eingaben unter Proton nicht an (dann betrifft es alles, nicht nur die Karte).
+1. **Im Spiel noch nicht ausdrücklich bestätigt** (Steam Deck): Ziehen der Karte, Gegner/Bosse,
+   F8-Reihenfolge, F7-Menü per Touch/Trackpad, Online-Koop (folgt die Minimap der eigenen Figur?),
+   Größe der Symbole. Wenn Ziehen oder Klicks nicht gehen: prüfen, ob sich das Overlay ziehen lässt;
+   wenn nicht, kommen Maus-Eingaben unter Proton nicht an.
 2. **Joker**: aus dem Log die Zeilen `[Minimap] … enemies …` und `[Minimap] boss on the stage …` in der
    Ante Chamber auswerten; danach ggf. bestimmte Gegnertypen mit Bild statt als Punkt zeigen.
 3. **Leistung** auf dem Deck mit vielen Gegnern prüfen (alle 200 ms per Reflection). Notfalls

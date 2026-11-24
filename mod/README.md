@@ -298,7 +298,8 @@ Plugin messages are written to `BepInEx/LogOutput.log`.
 - Section `Minimap`: `Enabled` (default on), `Size` (fraction of the screen height, default 0.24),
   position `X`/`Y` (fractions of the screen, default top right), `Range` (from you to the map's
   edge in half screen widths, default 4), `Opacity`, `Enemies` (`all`, `bosses` or `off`, default
-  `all`), `Chests`, `Relics`, `Minor` (small pickups; all three default on), `StageMap` (stage
+  `all`), `Chests`, `Relics`, `Minor` (small pickups; all three default on), `IconSize` (size of
+  the symbols as a fraction of the map, default 0.13), `StageMap` (stage
   map image behind the map, default on), `MenuKey` (default
   `F7`), `Visible` (switched with F8), `IntervalMs` (how often it updates, default 200). Size,
   range, position and what the map shows can also be changed in the F7 menu.

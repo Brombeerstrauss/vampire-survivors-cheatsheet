@@ -52,6 +52,7 @@ public class Plugin : BasePlugin
     internal static ConfigEntry<bool> MinimapMinor;
     internal static ConfigEntry<KeyCode> MenuKey;
     internal static ConfigEntry<bool> MinimapStageMap;
+    internal static ConfigEntry<float> MinimapIconSize;
     internal static float MinimapIntervalMs;
 
     public override void Load()
@@ -94,6 +95,8 @@ public class Plugin : BasePlugin
             "How far the map reaches from you to its edge, in half screen widths. Things further away sit faded at the edge. " +
             "Also changed in the map's menu (MenuKey).");
         MinimapOpacity = Config.Bind("Minimap", "Opacity", 0.55f, "Background opacity (0 to 1).");
+        MinimapIconSize = Config.Bind("Minimap", "IconSize", 0.13f,
+            "Size of the item, chest and boss symbols, fraction of the map's size (0.04 to 0.3). Symbols beyond the range are smaller.");
         MinimapEnemies = Config.Bind("Minimap", "Enemies", "all",
             "Enemies on the map: all (red dots, bosses with their image), bosses (only bosses) or off. " +
             "Also switched in the map's menu (MenuKey).");
