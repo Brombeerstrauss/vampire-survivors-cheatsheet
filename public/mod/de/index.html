@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <title>Vampire Survivors Mod: Entwicklungen im Spiel, Level-up-Noten und Minikarte (BepInEx, Steam Deck)</title>
+    <meta
+      name="description"
+      content="Kostenloser Open-Source-Mod für Vampire Survivors (BepInEx 6 IL2CPP): Overlay im Spiel mit dem, was jede Waffe zur Entwicklung braucht, Noten A+ bis D für die Level-up-Auswahl und eine Minikarte mit Gegenständen, Truhen, Gegnern, Bossen und Stagekarte. Für Windows und Steam Deck, Deutsch und Englisch."
+    />
+    <link rel="canonical" href="https://brombeerstrauss.github.io/vampire-survivors-cheatsheet/mod/de/" />
+    <link rel="alternate" hreflang="en" href="https://brombeerstrauss.github.io/vampire-survivors-cheatsheet/mod/" />
+    <link rel="alternate" hreflang="de" href="https://brombeerstrauss.github.io/vampire-survivors-cheatsheet/mod/de/" />
+    <link rel="alternate" hreflang="x-default" href="https://brombeerstrauss.github.io/vampire-survivors-cheatsheet/mod/" />
+    <link rel="icon" href="../../favicon.ico" sizes="48x48" />
+    <link rel="icon" href="../../logo.svg" sizes="any" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Vampire Survivors Mod: Entwicklungen, Level-up-Noten, Minikarte" />
+    <meta
+      property="og:description"
+      content="Kostenloser BepInEx-Mod für Vampire Survivors: sieh im Spiel, was jede Waffe zur Entwicklung braucht, Noten A+ bis D für die Level-up-Auswahl und eine Minikarte. Windows und Steam Deck."
+    />
+    <meta property="og:url" content="https://brombeerstrauss.github.io/vampire-survivors-cheatsheet/mod/de/" />
+    <meta property="og:image" content="https://brombeerstrauss.github.io/vampire-survivors-cheatsheet/pwa-512x512.png" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta name="twitter:card" content="summary" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "VS Cheatsheet Bridge (Vampire Survivors Mod)",
+        "alternateName": ["Vampire Survivors Entwicklungen Overlay", "Vampire Survivors Minikarte Mod"],
+        "description": "BepInEx-6-Plugin (IL2CPP) für Vampire Survivors: Overlay im Spiel mit den Zutaten, die jeder Waffe zur Entwicklung fehlen, Noten A+ bis D für die Level-up-Auswahl und eine Minikarte mit Gegenständen, Truhen, Gegnern, Bossen und dem Kartenbild der Stage.",
+        "applicationCategory": "GameApplication",
+        "applicationSubCategory": "Spiel-Mod",
+        "operatingSystem": "Windows, Steam Deck und Linux (Proton)",
+        "softwareRequirements": "Vampire Survivors 1.16 (Steam), BepInEx 6.0.0-be.788 (Unity IL2CPP, win-x64)",
+        "inLanguage": ["de", "en"],
+        "isAccessibleForFree": true,
+        "license": "https://opensource.org/licenses/MIT",
+        "url": "https://brombeerstrauss.github.io/vampire-survivors-cheatsheet/mod/de/",
+        "downloadUrl": "https://github.com/Brombeerstrauss/vampire-survivors-cheatsheet/releases",
+        "sameAs": "https://github.com/Brombeerstrauss/vampire-survivors-cheatsheet/tree/main/mod",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+        "about": { "@type": "VideoGame", "name": "Vampire Survivors", "author": { "@type": "Organization", "name": "poncle" } }
+      }
+    </script>
+    <style>
+      :root { color-scheme: dark; }
+      body { margin: 0; background: #140b1f; color: #ece6f3; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+      main { max-width: 46rem; margin: 0 auto; padding: 2rem 1rem 4rem; }
+      h1 { font-size: 1.7rem; line-height: 1.25; color: #ffd75e; margin: 0 0 .5rem; }
+      h2 { font-size: 1.2rem; color: #ffd75e; margin: 2rem 0 .5rem; }
+      a { color: #ffd75e; }
+      .lead { color: #cfc6dc; }
+      .lang { float: right; font-size: .9rem; }
+      code { background: #2a1d3a; padding: .05rem .3rem; border-radius: .25rem; }
+      li { margin: .25rem 0; }
+      .note { color: #a99cbb; font-size: .9rem; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <a class="lang" href="../" hreflang="en" lang="en">English</a>
+      <h1>Vampire Survivors Mod: Entwicklungen im Spiel, Level-up-Noten und Minikarte</h1>
+      <p class="lead">
+        <strong>VS Cheatsheet Bridge</strong> ist ein kostenloser Open-Source-Mod für <strong>Vampire Survivors</strong>
+        auf Steam. Das BepInEx-6-Plugin (IL2CPP) zeigt im Spiel, was jeder Waffe zur Entwicklung noch fehlt, bewertet die
+        Waffen und Items auf dem Level-up-Bildschirm passend zu Charakter und Build und blendet eine kleine Minikarte ein.
+        Es läuft unter Windows und auf dem <strong>Steam Deck</strong> (Proton), auf Deutsch und Englisch, auch im Koop.
+      </p>
+
+      <h2>Funktionen</h2>
+      <ul>
+        <li><strong>Entwicklungen im Overlay</strong> mit den Bildern aus dem Spiel: für jede Waffe die Zutaten der
+          nächsten Entwicklung, was fehlt, welches Level noch nötig ist und wann die nächste Truhe die Entwicklung
+          bringt. Unions, Geschenke, Morphs und DLC-Entwicklungen sind dabei, bis zu zwei Schritte voraus.</li>
+        <li><strong>Level-up-Noten von A+ bis D</strong>: Jede Karte auf dem Level-up-Bildschirm wird für deinen Charakter
+          bewertet, für deine aktuellen Waffen und Items, die Entwicklungen, auf die du hinarbeitest, Community-Tierlisten
+          und deine freien Plätze. Entwicklungspartner stehen oben, klare Warnungen aus dem Wiki für deinen Charakter unten.</li>
+        <li><strong>Minikarte</strong>: Stage-Gegenstände, Relikte, Truhen, Kleinkram, Gegner als rote Punkte und Bosse mit
+          eigenem Bild rund um dich. Auf Stages mit Kartenbild (wie im Pausenmenü, z. B. nach dem Einsammeln der Karte der
+          Stage) zeigt die Minikarte dieses Bild hinter den Symbolen. Mit der Maus verschieben, im Menü (F7) wählen, was sie
+          zeigt, Größe und Reichweite ändern.</li>
+        <li><strong>Tasten</strong>: F8 schaltet zwischen Overlay und Minikarte, nur Overlay, nur Minikarte und nichts; F9
+          setzt die Positionen zurück; F7 öffnet das Menü der Minikarte. Auf dem Steam Deck in Steam Input auf die
+          Rücktasten legen.</li>
+        <li><strong>Koop</strong>: im Overlay ein Block pro Spieler; im Online-Koop folgt die Minikarte deiner eigenen Figur.</li>
+        <li><strong>Begleit-App</strong>: Der Mod kann deinen Run an die kostenlose Web-App
+          <a href="../../">Vampire Survivors Cheatsheet</a> übergeben (Entwicklungen, Run-Tracker, Empfehlungen für alle
+          Charaktere und DLCs).</li>
+      </ul>
+
+      <h2>Voraussetzungen</h2>
+      <ul>
+        <li>Vampire Survivors 1.16 (Steam, Windows-Version; auf dem Steam Deck über Proton)</li>
+        <li><a href="https://builds.bepinex.dev/projects/bepinex_be">BepInEx 6.0.0-be.788</a>, Paket
+          <code>BepInEx-Unity.IL2CPP-win-x64</code>. Ältere MelonLoader-Anleitungen gelten seit Spielversion 1.16 nicht mehr.</li>
+      </ul>
+
+      <h2>Download und Installation</h2>
+      <ol>
+        <li>BepInEx in den Spielordner entpacken (dort, wo <code>VampireSurvivors.exe</code> liegt) und das Spiel einmal
+          starten. Auf dem Steam Deck zusätzlich die Startoption <code>WINEDLLOVERRIDES="winhttp=n,b" %command%</code> setzen.</li>
+        <li>Das Plugin von der <a href="https://github.com/Brombeerstrauss/vampire-survivors-cheatsheet/releases">Release-Seite</a>
+          laden und das ZIP in den Spielordner entpacken, oder selbst bauen: unter Windows mit <code>dotnet build</code>,
+          unter Linux und auf dem Steam Deck mit <code>mod/build-linux.sh</code>.</li>
+        <li>Einen Run starten: Overlay und Minikarte erscheinen.</li>
+      </ol>
+      <p>Ausführliche Anleitung, alle Einstellungen und Hilfe bei Problemen (Englisch):
+        <a href="https://github.com/Brombeerstrauss/vampire-survivors-cheatsheet/blob/main/mod/README.md">Mod-Dokumentation auf GitHub</a>.
+        Quellcode: <a href="https://github.com/Brombeerstrauss/vampire-survivors-cheatsheet">GitHub-Repository</a> (MIT-Lizenz).</p>
+
+      <h2>Ist das sicher?</h2>
+      <p>Der Mod liest das Spiel nur aus: Er ändert keine Werte, Gegenstände oder Spielstände. Gedacht ist er für Einzelspieler
+        und Koop mit Freunden. Die Minikarte zeigt Dinge, die die Karte des Spiels erst mit dem Relikt Milky Way Map
+        zeigt; schalte sie in den Einstellungen aus, wenn dir das zu sehr nach Schummeln ist.</p>
+
+      <p class="note">Inoffizielles Fanprojekt, nicht mit poncle verbunden. Vampire Survivors ist eine Marke von poncle.</p>
+    </main>
+  </body>
+</html>

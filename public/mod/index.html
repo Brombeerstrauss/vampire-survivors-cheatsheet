@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <title>Vampire Survivors Mod: Evolution Overlay, Level-up Grades and Minimap (BepInEx, Steam Deck)</title>
+    <meta
+      name="description"
+      content="Free open-source Vampire Survivors mod (BepInEx 6 IL2CPP): in-game overlay with what each weapon needs to evolve, A+ to D grades for level-up choices, a minimap with items, chests, enemies, bosses and the stage map. Windows and Steam Deck, English and German."
+    />
+    <link rel="canonical" href="https://brombeerstrauss.github.io/vampire-survivors-cheatsheet/mod/" />
+    <link rel="alternate" hreflang="en" href="https://brombeerstrauss.github.io/vampire-survivors-cheatsheet/mod/" />
+    <link rel="alternate" hreflang="de" href="https://brombeerstrauss.github.io/vampire-survivors-cheatsheet/mod/de/" />
+    <link rel="alternate" hreflang="x-default" href="https://brombeerstrauss.github.io/vampire-survivors-cheatsheet/mod/" />
+    <link rel="icon" href="../favicon.ico" sizes="48x48" />
+    <link rel="icon" href="../logo.svg" sizes="any" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Vampire Survivors Mod: evolution overlay, level-up grades, minimap" />
+    <meta
+      property="og:description"
+      content="Free BepInEx mod for Vampire Survivors: see what each weapon needs to evolve, get A+ to D grades for level-up choices and a minimap. Windows and Steam Deck."
+    />
+    <meta property="og:url" content="https://brombeerstrauss.github.io/vampire-survivors-cheatsheet/mod/" />
+    <meta property="og:image" content="https://brombeerstrauss.github.io/vampire-survivors-cheatsheet/pwa-512x512.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="de_DE" />
+    <meta name="twitter:card" content="summary" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "VS Cheatsheet Bridge (Vampire Survivors mod)",
+        "alternateName": ["Vampire Survivors evolution overlay", "Vampire Survivors minimap mod"],
+        "description": "BepInEx 6 IL2CPP plugin for Vampire Survivors: in-game overlay with the ingredients each weapon still needs to evolve, A+ to D grades for the level-up choices, a minimap with stage items, chests, enemies, bosses and the stage map image.",
+        "applicationCategory": "GameApplication",
+        "applicationSubCategory": "Game mod",
+        "operatingSystem": "Windows, Steam Deck and Linux (Proton)",
+        "softwareRequirements": "Vampire Survivors 1.16 (Steam), BepInEx 6.0.0-be.788 (Unity IL2CPP, win-x64)",
+        "inLanguage": ["en", "de"],
+        "isAccessibleForFree": true,
+        "license": "https://opensource.org/licenses/MIT",
+        "url": "https://brombeerstrauss.github.io/vampire-survivors-cheatsheet/mod/",
+        "downloadUrl": "https://github.com/Brombeerstrauss/vampire-survivors-cheatsheet/releases",
+        "sameAs": "https://github.com/Brombeerstrauss/vampire-survivors-cheatsheet/tree/main/mod",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "about": { "@type": "VideoGame", "name": "Vampire Survivors", "author": { "@type": "Organization", "name": "poncle" } }
+      }
+    </script>
+    <style>
+      :root { color-scheme: dark; }
+      body { margin: 0; background: #140b1f; color: #ece6f3; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+      main { max-width: 46rem; margin: 0 auto; padding: 2rem 1rem 4rem; }
+      h1 { font-size: 1.7rem; line-height: 1.25; color: #ffd75e; margin: 0 0 .5rem; }
+      h2 { font-size: 1.2rem; color: #ffd75e; margin: 2rem 0 .5rem; }
+      a { color: #ffd75e; }
+      .lead { color: #cfc6dc; }
+      .lang { float: right; font-size: .9rem; }
+      code { background: #2a1d3a; padding: .05rem .3rem; border-radius: .25rem; }
+      li { margin: .25rem 0; }
+      .note { color: #a99cbb; font-size: .9rem; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <a class="lang" href="de/" hreflang="de" lang="de">Deutsch</a>
+      <h1>Vampire Survivors mod: evolution overlay, level-up grades and minimap</h1>
+      <p class="lead">
+        <strong>VS Cheatsheet Bridge</strong> is a free, open-source mod for <strong>Vampire Survivors</strong> on Steam.
+        It is a BepInEx 6 (IL2CPP) plugin that shows inside the game what each weapon still needs to evolve, grades
+        the weapons and items on the level-up screen for your character and build, and adds a small minimap. It runs
+        on Windows and on the <strong>Steam Deck</strong> (Proton), in English and German, also in co-op.
+      </p>
+
+      <h2>Features</h2>
+      <ul>
+        <li><strong>Evolution overlay</strong> with the game's own images: for every weapon the ingredients of its next
+          evolution, what is missing, which level is still needed ("Needed to evolve") and when the next chest brings
+          the evolution. Unions, gifts, morphs and DLC evolutions are included, up to two steps ahead.</li>
+        <li><strong>Level-up grades from A+ to D</strong>: each card on the level-up screen is graded for your character,
+          your current weapons and items, the evolutions you are building, community tier lists and your free slots.
+          Evolution partners come first, clear advice from the wiki against an item for your character comes last.</li>
+        <li><strong>Minimap</strong>: stage items, relics, chests, small pickups, enemies as red dots and bosses with their
+          own image, around you. On stages with a map picture (as in the pause menu, e.g. after picking up the
+          stage's map) the minimap shows that picture behind the symbols. Drag it with the mouse, choose what it shows
+          in its menu (F7), change size and range.</li>
+        <li><strong>Keys</strong>: F8 switches between overlay and minimap, overlay only, minimap only and nothing; F9
+          resets the positions; F7 opens the minimap's menu. On the Steam Deck, bind them to the back buttons in
+          Steam Input.</li>
+        <li><strong>Co-op</strong>: one block per player in the overlay; in online co-op the minimap follows your own
+          character.</li>
+        <li><strong>Companion app</strong>: the mod can pass your run to the free
+          <a href="../">Vampire Survivors Cheatsheet</a> web app (evolutions, run tracker, recommendations for all
+          characters and DLCs).</li>
+      </ul>
+
+      <h2>Requirements</h2>
+      <ul>
+        <li>Vampire Survivors 1.16 (Steam, Windows version; on the Steam Deck through Proton)</li>
+        <li><a href="https://builds.bepinex.dev/projects/bepinex_be">BepInEx 6.0.0-be.788</a>, package
+          <code>BepInEx-Unity.IL2CPP-win-x64</code>. Older MelonLoader guides no longer apply since game version 1.16.</li>
+      </ul>
+
+      <h2>Download and install</h2>
+      <ol>
+        <li>Extract BepInEx into the game folder (where <code>VampireSurvivors.exe</code> is) and start the game once.
+          On the Steam Deck also set the launch option <code>WINEDLLOVERRIDES="winhttp=n,b" %command%</code>.</li>
+        <li>Get the plugin from the <a href="https://github.com/Brombeerstrauss/vampire-survivors-cheatsheet/releases">releases
+          page</a> and extract the ZIP into the game folder, or build it yourself: on Windows with
+          <code>dotnet build</code>, on Linux and the Steam Deck with <code>mod/build-linux.sh</code>.</li>
+        <li>Start a run: the overlay and the minimap appear.</li>
+      </ol>
+      <p>Step-by-step guide, all settings and troubleshooting:
+        <a href="https://github.com/Brombeerstrauss/vampire-survivors-cheatsheet/blob/main/mod/README.md">mod documentation on GitHub</a>.
+        Source code: <a href="https://github.com/Brombeerstrauss/vampire-survivors-cheatsheet">GitHub repository</a> (MIT license).</p>
+
+      <h2>Is it safe?</h2>
+      <p>The mod only reads the game: it changes no stats, items or save files. It is meant for single player and
+        co-op with friends. The minimap shows things the game's own map only shows with the Milky Way Map relic; turn
+        it off in the settings if that feels like cheating.</p>
+
+      <p class="note">Unofficial fan project, not affiliated with poncle. Vampire Survivors is a trademark of poncle.</p>
+    </main>
+  </body>
+</html>

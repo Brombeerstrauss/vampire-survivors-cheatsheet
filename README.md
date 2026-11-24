@@ -1,10 +1,10 @@
 # Vampire Survivors Cheatsheet
 
-Unofficial companion app for **Vampire Survivors**, built as a web app (PWA). It runs in a browser on desktop, tablets and smartphones. You can add it to your device's home screen or install it as an app where your browser supports this; after the first visit, it also works offline.
+Free, unofficial cheat sheet and companion app for **Vampire Survivors**: every evolution, union and DLC weapon, a run tracker and recommendations for every character, plus an optional **in-game mod** (evolution overlay, level-up grades, minimap) for Windows and the Steam Deck. Built as a web app (PWA). It runs in a browser on desktop, tablets and smartphones. You can add it to your device's home screen or install it as an app where your browser supports this; after the first visit, it also works offline.
 
 The app is available in **English and German**. It starts in English; you can switch to German in the settings.
 
-**Open the app:** https://brombeerstrauss.github.io/vampire-survivors-cheatsheet/
+**Open the app:** https://brombeerstrauss.github.io/vampire-survivors-cheatsheet/ · **The mod:** https://brombeerstrauss.github.io/vampire-survivors-cheatsheet/mod/
 
 ## Features
 

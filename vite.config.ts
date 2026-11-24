@@ -38,7 +38,7 @@ export default defineConfig({
         name: 'Vampire Survivors Cheatsheet',
         short_name: 'VS Cheatsheet',
         description:
-          'Unofficial companion app for Vampire Survivors, in English and German',
+          'Unofficial companion app for Vampire Survivors in English and German: evolutions, run tracker, recommendations',
         start_url: '.',
         scope: '.',
         display: 'standalone',
@@ -56,6 +56,9 @@ export default defineConfig({
         // Activate new versions right away; otherwise an update waits until every app window is closed.
         skipWaiting: true,
         clientsClaim: true,
+        // The mod's pages and the sitemap are separate static files, not routes of the app:
+        // the service worker must not answer them with the app.
+        navigateFallbackDenylist: [/\/mod\//, /sitemap\.xml$/],
         // Precache everything so the app runs fully offline.
         globPatterns: ['**/*.{js,css,html,svg,png,webp,jpg,ico,json,woff2}'],
         // Original images from the wiki: stored the first time they are shown, then available offline.

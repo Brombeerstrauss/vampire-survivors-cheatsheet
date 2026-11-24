@@ -5,7 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#140b1f" />
     <meta name="color-scheme" content="dark" />
-    <meta name="description" content="Unofficial companion app for Vampire Survivors, in English and German" />
+    <meta
+      name="description"
+      content="Free Vampire Survivors cheat sheet and companion app in English and German: every evolution, union and DLC weapon, a run tracker that shows what is missing, recommendations for all characters. Works offline. Optional in-game mod for Steam and Steam Deck."
+    />
+    <link rel="canonical" href="https://brombeerstrauss.github.io/vampire-survivors-cheatsheet/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Vampire Survivors Cheatsheet: evolutions, run tracker, recommendations" />
+    <meta
+      property="og:description"
+      content="Free companion app for Vampire Survivors in English and German: all evolutions and DLCs, a run tracker and recommendations per character. Plus an optional in-game mod."
+    />
+    <meta property="og:url" content="https://brombeerstrauss.github.io/vampire-survivors-cheatsheet/" />
+    <meta property="og:image" content="https://brombeerstrauss.github.io/vampire-survivors-cheatsheet/pwa-512x512.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="de_DE" />
+    <meta name="twitter:card" content="summary" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Vampire Survivors Cheatsheet",
+        "alternateName": "VS Cheatsheet",
+        "description": "Unofficial companion app for Vampire Survivors in English and German: all evolutions, unions, gifts and morphs of the base game and every DLC, a run tracker that shows what each weapon still needs, and recommendations for all characters.",
+        "url": "https://brombeerstrauss.github.io/vampire-survivors-cheatsheet/",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "Any (web browser, installable as an app, works offline)",
+        "inLanguage": ["en", "de"],
+        "isAccessibleForFree": true,
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "about": { "@type": "VideoGame", "name": "Vampire Survivors", "author": { "@type": "Organization", "name": "poncle" } },
+        "sameAs": "https://github.com/Brombeerstrauss/vampire-survivors-cheatsheet"
+      }
+    </script>
     <!-- iPhone: full screen after "Add to Home Screen" -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
@@ -14,10 +46,29 @@
     <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="icon" href="/logo.svg" sizes="any" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png" />
-    <title>Vampire Survivors Cheatsheet</title>
+    <title>Vampire Survivors Cheatsheet: evolutions, run tracker and recommendations (EN/DE)</title>
   </head>
   <body>
-    <div id="root"></div>
+    <!-- Shown until the app has loaded (React replaces it), and readable for search engines. -->
+    <div id="root">
+      <main style="max-width: 40rem; margin: 0 auto; padding: 2rem 1rem; color: #ece6f3; font-family: system-ui, sans-serif; line-height: 1.6">
+        <h1 style="color: #ffd75e; font-size: 1.5rem">Vampire Survivors Cheatsheet</h1>
+        <p>
+          Free, unofficial companion app for Vampire Survivors in English and German: every character, weapon and passive
+          item of the base game and all DLCs, every evolution, union, gift and morph, a run tracker that shows what each
+          weapon still needs to evolve, and recommendations for every character. Works offline and can be installed as an app.
+        </p>
+        <p>
+          Kostenlose, inoffizielle Begleit-App für Vampire Survivors auf Deutsch und Englisch: alle Charaktere, Waffen,
+          Items und Entwicklungen aus Hauptspiel und DLCs, ein Run-Tracker und Empfehlungen für jeden Charakter.
+        </p>
+        <p>
+          With the <a style="color: #ffd75e" href="mod/">Vampire Survivors mod</a> (BepInEx, Windows and Steam Deck) you see
+          the evolutions inside the game, get A+ to D grades for level-up choices and a minimap.
+          <a style="color: #ffd75e" href="mod/de/">Mod auf Deutsch</a>.
+        </p>
+      </main>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -1,7 +1,11 @@
-# VS Cheatsheet Bridge (prototype)
+# Vampire Survivors mod: evolution overlay, level-up grades and minimap
 
-BepInEx plugin for Vampire Survivors (PC, Steam, Windows). During a run it reads the
-character, weapons and passive items of every player and
+**VS Cheatsheet Bridge** is a free, open-source BepInEx 6 (IL2CPP) mod for Vampire Survivors on
+Steam, for Windows and the Steam Deck (Proton). Overview page:
+https://brombeerstrauss.github.io/vampire-survivors-cheatsheet/mod/ (German:
+[mod/de/](https://brombeerstrauss.github.io/vampire-survivors-cheatsheet/mod/de/)).
+
+During a run it reads the character, weapons and passive items of every player and
 
 - shows an **in-game** overlay with the game's own images. Per weapon: the ingredients of the
   next evolution (faded = missing) and the result. The weapon name is red (ingredients
@@ -201,10 +205,12 @@ A release is built on a PC with the game and uploaded by hand:
 4. On GitHub, open Releases → Draft a new release. Create the tag `mod-v<version>`, upload the
    ZIP, name the game version in the notes and publish.
 
-## Steam Deck and Linux with Proton (untested)
+## Steam Deck and Linux with Proton
 
-Nobody has tried this yet. The steps assume that Steam runs the Windows version of the game
-through Proton, which is the case if the game folder contains `VampireSurvivors.exe`. Then the
+The plugin runs on the Steam Deck: overlay, minimap and stage map image were used there in the
+game. Whether every step below fits every setup is not confirmed, and `mod/build-linux.sh` may
+still need fixes. The steps assume that Steam runs the Windows version of the game through
+Proton, which is the case if the game folder contains `VampireSurvivors.exe`. Then the
 same `win-x64` BepInEx package and the same plugin files are used as on Windows.
 
 1. On the Steam Deck, switch to Desktop Mode. In Steam, right-click the game → Manage → Browse

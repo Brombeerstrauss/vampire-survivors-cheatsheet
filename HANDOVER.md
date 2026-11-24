@@ -166,7 +166,7 @@ Vorausgesetzt: Vampire Survivors 1.16.x (Unity 6, IL2CPP), BepInEx 6.0.0-be.788
 | `MinimapReader.cs` | Punkte für die Minimap (Gegenstände, Truhen, Gegner, Bosse) |
 | `MinimapOverlay.cs` | Zeichnet Minimap und F7-Menü |
 | `StageMap.cs` | Kartenbild der Stage: lesen, Umrechnung aus der Pausenkarte lernen, speichern |
-| `VSCheatsheetBridge.csproj` | Version (`<Version>0.9.0</Version>`), Build, Daten-Export, Release-ZIP |
+| `VSCheatsheetBridge.csproj` | Version (`<Version>0.10.0</Version>`), Build, Daten-Export, Release-ZIP |
 
 **Level-up-Noten** (`EvolutionAdvisor.GradeOffers`): Punkte je Karte aus
 - Entwicklung (3 bzw. 2) und Partner für eine Entwicklung (2 vorhanden, 1 geplant),
@@ -221,6 +221,14 @@ zusätzlich zum aktuellen Build oder zum Charakter passt; diese Karten stehen ob
   F7-Menü, Kartenbild der Stage, größere Symbole über `IconSize`), Test-Harness in `mod/harness/` und
   diese Datei. Rückmeldung zum Kartenbild nach dem Test: "klappt so".
 
+**Auffindbarkeit (Suchmaschinen):** statische Mod-Seiten `public/mod/index.html` (Englisch) und
+`public/mod/de/index.html` (Deutsch) mit Beschreibung, `hreflang`, Open Graph und JSON-LD
+(`SoftwareApplication`); `index.html` der App mit Beschreibung, JSON-LD (`WebApplication`) und einem
+lesbaren Grundtext in `#root`, den React beim Start ersetzt; `public/sitemap.xml`. Der Service Worker
+beantwortet `/mod/` und die Sitemap nicht mit der App (`navigateFallbackDenylist` in `vite.config.ts`).
+Eine `robots.txt` wirkt nur im Wurzelverzeichnis der Domain (`brombeerstrauss.github.io/`), nicht im
+Projektpfad, deshalb gibt es keine.
+
 ## 8. Offene Punkte
 
 1. **Im Spiel noch nicht ausdrücklich bestätigt** (Steam Deck): Ziehen der Karte, Gegner/Bosse,
@@ -232,8 +240,11 @@ zusätzlich zum aktuellen Build oder zum Charakter passt; diese Karten stehen ob
 3. **Leistung** auf dem Deck mit vielen Gegnern prüfen (alle 200 ms per Reflection). Notfalls
    `IntervalMs` erhöhen oder Gegner-Getter weiter optimieren.
 4. **Kleinkram-Liste** mit der Log-Zeile `[Minimap] small pickups per the game: …` abgleichen.
-5. Möglich, aber nicht begonnen: Steuerung des F7-Menüs per Controller (heute nur Klick), Release
-   `mod-v0.10.0` mit ZIP (Ablauf in `mod/README.md` "Making a release").
+5. **Auffindbarkeit, nur mit deinen Konten möglich:** Repo-Beschreibung und Topics auf GitHub setzen,
+   Google Search Console und Bing Webmaster Tools (Sitemap einreichen), Release `mod-v0.10.0` mit ZIP,
+   Seite auf Nexus Mods, Beitrag auf r/VampireSurvivors.
+6. Möglich, aber nicht begonnen: Steuerung des F7-Menüs per Controller (heute nur Klick).
+   Release-Ablauf: `mod/README.md` "Making a release".
 
 ## 9. Unsicherheiten
 
