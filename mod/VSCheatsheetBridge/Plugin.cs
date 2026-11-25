@@ -104,7 +104,8 @@ public class Plugin : BasePlugin
         MinimapChests = Config.Bind("Minimap", "Chests", true, "Show treasure chests.");
         MinimapRelics = Config.Bind("Minimap", "Relics", true, "Show relics and stage items (weapons, coffins, merchants...).");
         MinimapMinor = Config.Bind("Minimap", "Minor", true, "Show small pickups (food, rosaries, vacuums...).");
-        MinimapCoins = Config.Bind("Minimap", "Coins", false, "Show coins, coin bags and gold piles.");
+        MinimapCoins = Config.Bind("Minimap", "Coins", false,
+            "Show everything that gives gold: coins, coin bags, gold piles and Gilded Clovers.");
         MinimapStageMap = Config.Bind("Minimap", "StageMap", true,
             "Show the stage's map image (the one the game's pause map shows, e.g. after picking up a stage's map) behind the map. " +
             "It is learned once per stage: open the pause menu's map twice, standing still, at places at least half a screen apart " +

@@ -81,10 +81,17 @@ internal static class MinimapReader
 
     private enum ItemGroup { Chest, Relic, Minor, Coin }
 
-    // Coins: COIN, COINBAG1/2/MAX, ALWAYS_COINBAG2, TP_KARMA_COIN, STATIC_GOLDPILE (setting Minimap.Coins).
+    // Everything that gives gold (setting Minimap.Coins), per the wiki: Gold Coin, the coin bags,
+    // Gold Pile and Gilded Clover (gathers all gold and starts a Gold Fever). Not the Karma Coin
+    // (a Soul Steal) or the Gold Finger (mainly invulnerability): they stay small pickups.
+    private static readonly HashSet<string> CoinKinds = new()
+    {
+        "COIN", "COINBAG1", "COINBAG2", "COINBAGMAX", "ALWAYS_COINBAG2", "STATIC_GOLDPILE", "GILDED",
+    };
+
     private static ItemGroup GroupOf(string kind) =>
         kind == "CHEST" || kind.Contains("TREASURE") ? ItemGroup.Chest
-        : kind.Contains("COIN") || kind.Contains("GOLDPILE") ? ItemGroup.Coin
+        : CoinKinds.Contains(kind) || kind.Contains("COINBAG") || kind.Contains("GOLDPILE") ? ItemGroup.Coin
         : MinorKinds.Contains(kind) || GameMinorKinds.Contains(kind) ? ItemGroup.Minor
         : ItemGroup.Relic;
 

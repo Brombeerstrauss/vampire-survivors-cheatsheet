@@ -84,7 +84,8 @@ During a run it reads the character, weapons and passive items of every player a
   `Gegner: alle/Bosse/aus` (enemies: all, only bosses, none), `Truhen` (chests), `Relikte/Items`
   (relics and stage items such as weapons, coffins, merchants), `Kleinkram` (small pickups:
   food, rosaries, vacuums... per the game's own list for its pause map, plus a list of our own),
-  `Münzen` (coins, coin bags and gold piles; off by default), `Größe -/+` (size), `Reichweite -/+` (range), `Kartenbild` (stage map image, see
+  `Münzen` (everything that gives gold: coins, coin bags, gold piles, Gilded Clovers; off by
+  default), `Größe -/+` (size), `Reichweite -/+` (range), `Kartenbild` (stage map image, see
   below) and `Position zurücksetzen` (reset the map's position).
 - **Stage map image on the minimap:** on stages where the game's pause map shows a picture of
   the stage (e.g. after picking up the stage's map), the minimap shows the part of it around
@@ -310,8 +311,8 @@ Plugin messages are written to `BepInEx/LogOutput.log`.
 - Section `Minimap`: `Enabled` (default on), `Size` (fraction of the screen height, default 0.24),
   position `X`/`Y` (fractions of the screen, default top right), `Range` (from you to the map's
   edge in half screen widths, default 4), `Opacity`, `Enemies` (`all`, `bosses` or `off`, default
-  `all`), `Chests`, `Relics`, `Minor` (small pickups; all three default on), `Coins` (coins, coin bags
-  and gold piles, default off), `IconSize` (size of
+  `all`), `Chests`, `Relics`, `Minor` (small pickups; all three default on), `Coins` (everything that
+  gives gold, default off), `IconSize` (size of
   the symbols as a fraction of the map, default 0.13), `StageMap` (stage
   map image behind the map, default on), `MenuKey` (default
   `F7`), `Visible` (switched with F8), `IntervalMs` (how often it updates, default 200). Size,
