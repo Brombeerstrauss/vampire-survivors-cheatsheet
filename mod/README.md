@@ -73,9 +73,11 @@ During a run it reads the character, weapons and passive items of every player a
   are small red dots, bosses have their own sprite and are drawn larger. A faint frame marks the visible screen. Items and bosses beyond the
   map's range sit faded at its edge, so their direction stays visible; enemies there are left out.
   Experience gems are left out too. Like the game's own pause map (relic Milky Way Map), it shows
-  no walls or paths. The items come from the same place as that map: the game's
-  `MapManager.GetAllWorldItems()` and the treasure chests in the scene; the enemies from the
-  stage's list of spawned enemies. Drag the map with the mouse like the overlay (the position is
+  no walls or paths. The items come from the game's
+  `MapManager.GetAllWorldItems()`, the treasure chests in the scene and, searched every three
+  seconds, all other pickups lying in the scene: the items a stage starts with and portals are
+  not in that list. Where the pause map has its own symbol for a pickup (e.g. portals), that
+  symbol is drawn. The enemies come from the stage's list of spawned enemies. Drag the map with the mouse like the overlay (the position is
   saved), F9 puts both back. F8 shows and hides it (see above). **F7** opens and closes its menu below
   the map (and shows the map if F8 had hidden it). A click on a button (mouse, touch or
   trackpad) changes the setting right away and saves it:
@@ -279,6 +281,10 @@ found), `[Minimap] found the game's MapManager` and a line like `[Minimap] 12 wo
 1 chests: RELIC 1, ...`. Once there are 20 enemies, once per run: `[Minimap] 85 enemies, 0 bosses:
 BAT 60, ...` (the most common enemy types), and `[Minimap] boss on the stage: ...` for each boss.
 `[Minimap] small pickups per the game: ...` lists what the game counts as small pickups.
+15 seconds into each run: `[Minimap] pickups from the map's list: ...; more in the scene: ...`
+(which pickups come from where) and the stage's, pause map's and game manager's members with
+names like item, pickup, portal, token or event. If something is still missing on the map, these
+lines show where the game keeps it.
 Stage map image: `[StageMap] map image <name>@<size>, ...` once the stage has one, then
 `[StageMap] shown by image ...` when the pause map is open, `[StageMap] sample 1: world (x, y)
 -> image (u, v)` per pause and `[StageMap] ... learned from 2 of 2 samples, largest error ...`.

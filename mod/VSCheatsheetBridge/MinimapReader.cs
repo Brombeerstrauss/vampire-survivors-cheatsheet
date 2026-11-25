@@ -2,9 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Text.RegularExpressions;
 using Il2CppInterop.Runtime;
 using Il2CppInterop.Runtime.InteropTypes;
 using UnityEngine;
+using VampireSurvivors.Graphics;
 
 namespace VSCheatsheetBridge;
 
@@ -34,6 +36,10 @@ internal sealed class MapPoint
 // - MapManager.GetAllWorldItems(): the pickups lying on the stage (stage items, relics, ...).
 //   MapManager belongs to the pause menu, so it may exist while inactive; Resources finds it.
 // - TreasureChest objects in the scene (the pause map adds chests separately).
+// - All other pickups lying in the scene (searched every few seconds): the items a stage starts
+//   with and portals are not in GetAllWorldItems (the pause map adds them separately, from a
+//   source that can't be seen). Where the game has a map symbol for a pickup (map token, e.g.
+//   portals), that symbol is drawn.
 // - The enemies from the stage's list of spawned enemies (Stage._spawnedEnemies, as in the
 //   modding docs), bosses (EnemyController.IsBoss) separately. The game's pause map has no enemies.
 // - The player's position from the character.
@@ -45,12 +51,18 @@ internal static class MinimapReader
     private const BindingFlags Inst = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
 
     /// <summary>At most this many items, enemies and bosses, the nearest first.</summary>
-    private const int MaxItems = 120, MaxEnemies = 250, MaxBosses = 20;
+    private const int MaxItems = 150, MaxEnemies = 250, MaxBosses = 20;
 
     private static bool _resolved;
-    private static Type _mapManagerType, _chestType;
-    private static Il2CppSystem.Type _mapManagerIl2Cpp, _chestIl2Cpp;
-    private static MethodInfo _castMapManager, _castChest, _getAllWorldItems;
+    private static Type _mapManagerType, _chestType, _pickupType;
+    private static Il2CppSystem.Type _mapManagerIl2Cpp, _chestIl2Cpp, _pickupIl2Cpp;
+    private static MethodInfo _castMapManager, _castChest, _castPickup, _getAllWorldItems;
+
+    // Pickups found in the scene (every ScanMs), with their kind and symbol.
+    private const double ScanMs = 3000;
+    private static readonly List<(Component c, string kind, Sprite sprite)> ScenePickups = new();
+    private static double _scanAt, _runSeenAt = -1;
+    private static bool _loggedSources;
     private static object _mapManager;
     private static double _retryAt;
     private static bool _loggedItems, _loggedEnemies;
@@ -103,8 +115,15 @@ internal static class MinimapReader
             _chestIl2Cpp = Il2CppType.From(_chestType);
             _castChest = tryCast?.MakeGenericMethod(_chestType);
         }
+        _pickupType = RunReader.FindGameType("Pickup");
+        if (_pickupType != null)
+        {
+            _pickupIl2Cpp = Il2CppType.From(_pickupType);
+            _castPickup = tryCast?.MakeGenericMethod(_pickupType);
+        }
         Plugin.Logger.LogInfo($"[Minimap] MapManager: {_mapManagerType?.FullName ?? "not found"} " +
-            $"(GetAllWorldItems: {(_getAllWorldItems != null ? "yes" : "no")}), TreasureChest: {_chestType?.FullName ?? "not found"}");
+            $"(GetAllWorldItems: {(_getAllWorldItems != null ? "yes" : "no")}), TreasureChest: {_chestType?.FullName ?? "not found"}, " +
+            $"Pickup: {_pickupType?.FullName ?? "not found"}");
     }
 
     /// <summary>Forgets the MapManager, e.g. when a run ends (the scene changes).</summary>
@@ -114,6 +133,10 @@ internal static class MinimapReader
         _retryAt = 0;
         _loggedItems = _loggedEnemies = false;
         _loggedOwn = 0;
+        _loggedSources = false;
+        _runSeenAt = -1;
+        _scanAt = 0;
+        ScenePickups.Clear();
         LoggedBosses.Clear();
         StageMap.Reset();
     }
@@ -130,8 +153,9 @@ internal static class MinimapReader
         if (!PlayerAndScreen(out player, out halfScreen)) return false;
 
         var items = new List<(float d, MapPoint point)>();
-        int worldItems = AddWorldItems(items, player, now);
-        int chests = AddChests(items, player);
+        var seen = new HashSet<object>(); // game objects already on the map, by native pointer
+        int chests = AddChests(items, player, seen);
+        int worldItems = AddWorldItems(items, player, now, seen);
 
         var enemies = new List<(float d, MapPoint point)>();
         var bosses = new List<(float d, MapPoint point)>();
@@ -143,7 +167,9 @@ internal static class MinimapReader
         }
 
         foreach (var f in enemies.OrderBy(f => f.d).Take(MaxEnemies)) points.Add(f.point);
-        foreach (var f in items.OrderBy(f => f.d).Take(MaxItems)) points.Add(f.point);
+        // Small pickups last when there are too many: a far portal matters more than a near coin.
+        foreach (var f in items.OrderBy(f => GroupOf(f.point.Kind) == ItemGroup.Minor ? 1 : 0).ThenBy(f => f.d).Take(MaxItems))
+            points.Add(f.point);
         foreach (var f in bosses.OrderBy(f => f.d).Take(MaxBosses)) points.Add(f.point);
 
         if (!_loggedItems && (worldItems > 0 || chests > 0))
@@ -269,7 +295,7 @@ internal static class MinimapReader
         catch (Exception ex) { RunReader.WarnOnce("minimap:" + name, ex); return null; }
     }
 
-    private static int AddWorldItems(List<(float, MapPoint)> found, Vector2 player, double now)
+    private static int AddWorldItems(List<(float, MapPoint)> found, Vector2 player, double now, HashSet<object> seen)
     {
         object map = MapManager(now);
         if (map == null || _getAllWorldItems == null) return 0;
@@ -280,22 +306,145 @@ internal static class MinimapReader
         if (GameMinorKinds.Count == 0) ReadGameMinorKinds(map);
         int count = 0;
         object first = null;
+        var listKinds = new List<string>();
         foreach (object item in RunReader.Items(list))
         {
             first ??= item;
-            if (item is not Component c || c == null) continue;
-            string kind = RunReader.EnumNameOf(RunReader.GetMember(item, "PickupType", "_pickupType", "ItemType")) ?? item.GetType().Name;
+            if (item is not Component c || c == null || !seen.Add(Key(c))) continue;
+            string kind = KindOf(c);
             if (kind == "GEM") continue; // experience gems: far too many, the game's map skips them too
+            listKinds.Add(kind);
             if (!Shown(GroupOf(kind))) continue;
             Vector3 pos = c.transform.position;
-            found.Add((Distance(player, pos), new MapPoint { Position = new Vector2(pos.x, pos.y), Sprite = SpriteOf(c), Kind = kind, Style = MapPointStyle.Item }));
+            found.Add((Distance(player, pos), new MapPoint { Position = new Vector2(pos.x, pos.y), Sprite = TokenSprite(c) ?? SpriteOf(c), Kind = kind, Style = MapPointStyle.Item }));
             count++;
         }
         if (first != null) RunReader.AddDebugEntry("worldItem", first);
+
+        // Pickups in the scene that the list above doesn't have: the stage's own items, portals...
+        ScanScenePickups(now);
+        var extraKinds = new List<string>();
+        foreach (var (c, kind, sprite) in ScenePickups)
+        {
+            try
+            {
+                if (c == null || c.gameObject == null || !c.gameObject.activeInHierarchy || !seen.Add(Key(c))) continue; // collected, or already there
+                extraKinds.Add(kind);
+                if (!Shown(GroupOf(kind))) continue;
+                Vector3 pos = c.transform.position;
+                found.Add((Distance(player, pos), new MapPoint { Position = new Vector2(pos.x, pos.y), Sprite = sprite, Kind = kind, Style = MapPointStyle.Item }));
+                count++;
+            }
+            catch (Exception ex)
+            {
+                RunReader.WarnOnce("minimap:scenePickup", ex);
+            }
+        }
+        LogSources(map, now, listKinds, extraKinds);
         return count;
     }
 
-    private static int AddChests(List<(float, MapPoint)> found, Vector2 player)
+    private static string KindOf(Component c) =>
+        RunReader.EnumNameOf(Member(c, "PickupType") ?? RunReader.GetMember(c, "_pickupType", "ItemType")) ?? c.GetType().Name;
+
+    // The same game object can come with different wrappers: compare the native pointer.
+    private static object Key(Component c) => c.Pointer != IntPtr.Zero ? c.Pointer : c;
+
+    // All active pickups in the scene except experience gems, every ScanMs.
+    private static void ScanScenePickups(double now)
+    {
+        if (_pickupIl2Cpp == null || _castPickup == null || now < _scanAt) return;
+        _scanAt = now + ScanMs;
+        ScenePickups.Clear();
+        try
+        {
+            var all = UnityEngine.Object.FindObjectsOfType(_pickupIl2Cpp);
+            if (all == null) return;
+            object first = null;
+            foreach (UnityEngine.Object o in all)
+            {
+                if (o == null) continue;
+                if (_castPickup.Invoke(o, null) is not Component c || c == null) continue;
+                string kind = KindOf(c);
+                if (kind == "GEM") continue;
+                ScenePickups.Add((c, kind, TokenSprite(c) ?? SpriteOf(c)));
+                first ??= c;
+            }
+            if (first != null) RunReader.AddDebugEntry("scenePickup", first);
+        }
+        catch (Exception ex)
+        {
+            RunReader.WarnOnce("minimap:scan", ex);
+        }
+    }
+
+    // The symbol the game's pause map uses for this pickup (map token, e.g. portals), if loaded.
+    private static Sprite TokenSprite(Component c)
+    {
+        try
+        {
+            if (Member(c, "HasMapTokenData") is not bool has || !has) return null;
+            string frame = Member(c, "MapTokenFrameName") as string, texture = Member(c, "MapTokenTexture") as string;
+            return string.IsNullOrEmpty(frame) ? null : SpriteManager.GetSpriteFast(frame, texture);
+        }
+        catch (Exception ex)
+        {
+            RunReader.WarnOnce("minimap:token", ex);
+            return null;
+        }
+    }
+
+    // Once per run, 15 seconds in: where the pickups come from, and the stage's and pause map's
+    // collections with matching names. If something is still missing on the map, this shows where
+    // the game keeps it.
+    private static void LogSources(object map, double now, List<string> listKinds, List<string> extraKinds)
+    {
+        if (_runSeenAt < 0) _runSeenAt = now;
+        if (_loggedSources || now - _runSeenAt < 15000) return;
+        _loggedSources = true;
+        static string Kinds(List<string> k) => k.Count == 0 ? "none" : string.Join(", ", k.GroupBy(x => x).OrderByDescending(g => g.Count()).Take(12).Select(g => $"{g.Key} {g.Count()}"));
+        int tokens = ScenePickups.Count(p => p.c != null && Member(p.c, "HasMapTokenData") is bool b && b);
+        int stage = ScenePickups.Count(p => p.c != null && Member(p.c, "IsStagePickup") is bool b && b);
+        Plugin.Logger.LogInfo($"[Minimap] pickups from the map's list: {Kinds(listKinds)}; more in the scene: {Kinds(extraKinds)} " +
+            $"({stage} stage pickups, {tokens} with a map symbol)");
+        object gm = RunReader.GameManager();
+        Plugin.Logger.LogInfo($"[Minimap] stage members: {Members(RunReader.GetMember(gm, "Stage", "_stage"))}");
+        Plugin.Logger.LogInfo($"[Minimap] map members: {Members(map)}");
+        Plugin.Logger.LogInfo($"[Minimap] game manager members: {Members(gm)}");
+    }
+
+    private static readonly Regex Interesting = new("item|pickup|portal|teleport|token|target|event|gate|spawn|chest|treasure|relic|coffin|merchant",
+        RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+    // Members with matching names: collections with their number of entries, other things with their type.
+    private static string Members(object obj)
+    {
+        if (obj == null) return "-";
+        var parts = new List<string>();
+        foreach (PropertyInfo p in obj.GetType().GetProperties(Inst))
+        {
+            if (!Interesting.IsMatch(p.Name) || p.GetIndexParameters().Length > 0) continue;
+            Type t = p.PropertyType;
+            if (t.IsPrimitive || t == typeof(string) || t.IsEnum) continue;
+            try
+            {
+                object v = p.GetValue(obj);
+                PropertyInfo count = t.GetProperty("Count") ?? t.GetProperty("Length");
+                string what = v == null ? "null" : count != null ? $"{count.GetValue(v)} entries" : "set";
+                parts.Add($"{p.Name} ({ShortName(t)}: {what})");
+            }
+            catch
+            {
+                parts.Add($"{p.Name} ({ShortName(t)})");
+            }
+        }
+        return parts.Count == 0 ? "none" : string.Join(", ", parts);
+    }
+
+    private static string ShortName(Type t) =>
+        t.IsGenericType ? $"{t.Name.Split('`')[0]}<{string.Join(",", t.GetGenericArguments().Select(ShortName))}>" : t.Name;
+
+    private static int AddChests(List<(float, MapPoint)> found, Vector2 player, HashSet<object> seen)
     {
         if (_chestIl2Cpp == null || _castChest == null || !Shown(ItemGroup.Chest)) return 0;
         int count = 0;
@@ -306,7 +455,7 @@ internal static class MinimapReader
             foreach (UnityEngine.Object o in all)
             {
                 if (o == null) continue;
-                if (_castChest.Invoke(o, null) is not Component c || c == null) continue;
+                if (_castChest.Invoke(o, null) is not Component c || c == null || !seen.Add(Key(c))) continue;
                 Vector3 pos = c.transform.position;
                 found.Add((Distance(player, pos), new MapPoint { Position = new Vector2(pos.x, pos.y), Sprite = SpriteOf(c), Kind = "CHEST", Style = MapPointStyle.Item }));
                 count++;

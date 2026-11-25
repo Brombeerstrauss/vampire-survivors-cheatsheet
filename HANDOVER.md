@@ -185,6 +185,12 @@ zusätzlich zum aktuellen Build oder zum Charakter passt; diese Karten stehen ob
 - Gegenstände wie die Pausenkarte des Spiels: `MapManager.GetAllWorldItems()` (privat, per Reflection;
   der MapManager wird mit `Resources.FindObjectsOfTypeAll` gesucht, auch inaktiv), Truhen per
   `FindObjectsOfType(TreasureChest)`. Erfahrungs-Edelsteine (`GEM`) ausgelassen.
+- Zusätzlich alle aktiven `Pickup`-Objekte der Szene (`FindObjectsOfType`, alle 3 s, ohne `GEM`):
+  Stage-Gegenstände vom Start und Portale stehen nicht in `GetAllWorldItems`. Doppelte werden über
+  den nativen Zeiger erkannt. Hat ein Pickup ein Kartensymbol (`HasMapTokenData`, `MapTokenFrameName`,
+  `MapTokenTexture`), wird das gezeichnet. 15 s nach Laufbeginn einmal Log `[Minimap] pickups from the
+  map's list … more in the scene …` und Mitglieder von Stage/MapManager/GameManager mit passenden Namen.
+  Bei zu vielen Punkten fällt Kleinkram zuerst weg (max. 150).
 - Gruppen: Truhen (`CHEST`, `*TREASURE*`), Kleinkram (Liste des Spiels `MapManager._minorItemTypes`
   + eigene Liste in `MinimapReader.MinorKinds`), Rest = Relikte/Items.
 - Gegner: `GameManager.Stage._spawnedEnemies` (bzw. `SpawnedEnemies`), Boss über `IsBoss`, Typ über

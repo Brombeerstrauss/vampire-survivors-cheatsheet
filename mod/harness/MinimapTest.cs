@@ -51,6 +51,20 @@ public static class MinimapTest
         MinimapReader.Read(points, 30000, out _, out _);
         Console.WriteLine($"off: {System.Linq.Enumerable.Count(points, pt => pt.Style != MapPointStyle.Item)} enemies/bosses");
 
+        // Items the stage starts with and portals: only in the scene, not in the map's list.
+        // One pickup is in both (counted once); gems in the scene are skipped.
+        var shared = At(new Pickup { PickupType = ItemType.RELIC }, 40, 5);
+        map.Items.Clear();
+        map.Items.Add(shared);
+        UnityEngine.Object.Registry.Add(shared);
+        UnityEngine.Object.Registry.Add(At(new Pickup { PickupType = ItemType.WEAPON, IsStagePickup = true }, 200, 5));
+        UnityEngine.Object.Registry.Add(At(new Pickup { PickupType = ItemType.TELEPORTER, IsStagePickup = true, HasMapTokenData = true, MapTokenFrameName = "portal.png", MapTokenTexture = "items" }, -300, 40));
+        UnityEngine.Object.Registry.Add(At(new Pickup { PickupType = ItemType.GEM }, 11, 6));
+        Plugin.MinimapEnemies.Value = "off";
+        MinimapReader.Read(points, 60000, out _, out _);
+        MinimapReader.Read(points, 80000, out _, out _); // 15 s later: the sources are logged
+        Console.WriteLine("with scene pickups: " + string.Join(",", System.Linq.Enumerable.Select(points, pt => pt.Kind)));
+
         // Item groups
         Plugin.MinimapEnemies.Value = "off";
         Plugin.MinimapChests = new BepInEx.Configuration.ConfigEntry<bool> { Value = true };
