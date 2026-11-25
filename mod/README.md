@@ -73,16 +73,18 @@ During a run it reads the character, weapons and passive items of every player a
   are small red dots, bosses have their own sprite and are drawn larger. A faint frame marks the visible screen. Items and bosses beyond the
   map's range sit faded at its edge, so their direction stays visible; enemies there are left out.
   Experience gems are left out too. Like the game's own pause map (relic Milky Way Map), it shows
-  no walls or paths. The items come from the same place as that map: the game's
-  `MapManager.GetAllWorldItems()` and the treasure chests in the scene; the enemies from the
-  stage's list of spawned enemies. Drag the map with the mouse like the overlay (the position is
+  no walls or paths. The items come from the game's
+  `MapManager.GetAllWorldItems()`, the treasure chests in the scene and, searched every three
+  seconds, all other pickups lying in the scene: the items a stage starts with and portals are
+  not in that list. Where the pause map has its own symbol for a pickup (e.g. portals), that
+  symbol is drawn. The enemies come from the stage's list of spawned enemies. Drag the map with the mouse like the overlay (the position is
   saved), F9 puts both back. F8 shows and hides it (see above). **F7** opens and closes its menu below
   the map (and shows the map if F8 had hidden it). A click on a button (mouse, touch or
   trackpad) changes the setting right away and saves it:
   `Gegner: alle/Bosse/aus` (enemies: all, only bosses, none), `Truhen` (chests), `Relikte/Items`
   (relics and stage items such as weapons, coffins, merchants), `Kleinkram` (small pickups:
-  coins, food, rosaries, vacuums... per the game's own list for its pause map, plus a list of
-  our own), `Größe -/+` (size), `Reichweite -/+` (range), `Kartenbild` (stage map image, see
+  food, rosaries, vacuums... per the game's own list for its pause map, plus a list of our own),
+  `Münzen` (coins, coin bags and gold piles; off by default), `Größe -/+` (size), `Reichweite -/+` (range), `Kartenbild` (stage map image, see
   below) and `Position zurücksetzen` (reset the map's position).
 - **Stage map image on the minimap:** on stages where the game's pause map shows a picture of
   the stage (e.g. after picking up the stage's map), the minimap shows the part of it around
@@ -279,6 +281,10 @@ found), `[Minimap] found the game's MapManager` and a line like `[Minimap] 12 wo
 1 chests: RELIC 1, ...`. Once there are 20 enemies, once per run: `[Minimap] 85 enemies, 0 bosses:
 BAT 60, ...` (the most common enemy types), and `[Minimap] boss on the stage: ...` for each boss.
 `[Minimap] small pickups per the game: ...` lists what the game counts as small pickups.
+15 seconds into each run: `[Minimap] pickups from the map's list: ...; more in the scene: ...`
+(which pickups come from where) and the stage's, pause map's and game manager's members with
+names like item, pickup, portal, token or event. If something is still missing on the map, these
+lines show where the game keeps it.
 Stage map image: `[StageMap] map image <name>@<size>, ...` once the stage has one, then
 `[StageMap] shown by image ...` when the pause map is open, `[StageMap] sample 1: world (x, y)
 -> image (u, v)` per pause and `[StageMap] ... learned from 2 of 2 samples, largest error ...`.
@@ -304,7 +310,8 @@ Plugin messages are written to `BepInEx/LogOutput.log`.
 - Section `Minimap`: `Enabled` (default on), `Size` (fraction of the screen height, default 0.24),
   position `X`/`Y` (fractions of the screen, default top right), `Range` (from you to the map's
   edge in half screen widths, default 4), `Opacity`, `Enemies` (`all`, `bosses` or `off`, default
-  `all`), `Chests`, `Relics`, `Minor` (small pickups; all three default on), `IconSize` (size of
+  `all`), `Chests`, `Relics`, `Minor` (small pickups; all three default on), `Coins` (coins, coin bags
+  and gold piles, default off), `IconSize` (size of
   the symbols as a fraction of the map, default 0.13), `StageMap` (stage
   map image behind the map, default on), `MenuKey` (default
   `F7`), `Visible` (switched with F8), `IntervalMs` (how often it updates, default 200). Size,

@@ -15,9 +15,10 @@ namespace VSCheatsheetBridge;
 // F7 opens a menu below the map (Plugin.MenuKey); a click on a button (Plugin.ClickMinimapButton):
 //   [Gegner: alle]        [x] Truhen
 //   [x] Relikte/Items     [x] Kleinkram
+//   [ ] Münzen            [x] Kartenbild
 //   [Größe -]             [Größe +]
 //   [Reichweite -]        [Reichweite +]
-//   [x] Kartenbild        [Position zurücksetzen]
+//   [Position zurücksetzen              ]
 //
 // Behind the symbols: the stage's map image from the game's pause map, once StageMap has
 // learned where the world lies on it (setting Minimap.StageMap, "Kartenbild" in the menu).
@@ -40,9 +41,9 @@ internal sealed class MinimapOverlay
     private Vector2? _dragPos;
 
     /// <summary>Menu buttons, in the order of ButtonLabel.</summary>
-    public const int Enemies = 0, Chests = 1, Relics = 2, Minor = 3, Smaller = 4, Larger = 5,
-        Closer = 6, Further = 7, StageMapImage = 8, ResetPosition = 9;
-    private const int ButtonCount = 10, MenuRows = 5;
+    public const int Enemies = 0, Chests = 1, Relics = 2, Minor = 3, Coins = 4, StageMapImage = 5,
+        Smaller = 6, Larger = 7, Closer = 8, Further = 9, ResetPosition = 10;
+    private const int ButtonCount = 11, MenuRows = 6;
     private static readonly float[] Sizes = { 0.12f, 0.16f, 0.2f, 0.24f, 0.28f, 0.32f, 0.36f, 0.4f, 0.45f, 0.5f };
     private static readonly float[] Ranges = { 2f, 3f, 4f, 6f, 8f, 12f };
     private Image _menuBackground;
@@ -218,13 +219,16 @@ internal sealed class MinimapOverlay
         _stageMap.gameObject.SetActive(shown);
     }
 
-    // Two buttons per row below the map. Labels and states from the settings.
+    // Two buttons per row below the map, the last one over the whole width. Labels and states
+    // from the settings.
     private void LayoutButtons(float width, float top, float rowH, float pad)
     {
-        float w = (width - 3f * pad) / 2f;
+        float half = (width - 3f * pad) / 2f;
         for (int b = 0; b < ButtonCount; b++)
         {
-            float bx = pad + (b % 2) * (w + pad);
+            bool full = b == ResetPosition;
+            float w = full ? width - 2f * pad : half;
+            float bx = pad + (full ? 0f : (b % 2) * (half + pad));
             float by = top + pad + (b / 2) * (rowH + pad);
             _buttonRects[b] = new Rect(bx, by, w, rowH);
             string label = ButtonLabel(b, out bool on);
@@ -261,6 +265,9 @@ internal sealed class MinimapOverlay
             case Minor:
                 on = Plugin.MinimapMinor.Value;
                 return Box(on) + T("Kleinkram", "Small pickups");
+            case Coins:
+                on = Plugin.MinimapCoins.Value;
+                return Box(on) + T("Münzen", "Coins");
             case Smaller: return T("Größe -", "Size -");
             case Larger: return T("Größe +", "Size +");
             case Closer: return T("Reichweite -", "Range -");

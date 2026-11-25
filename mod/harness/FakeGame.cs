@@ -26,8 +26,13 @@ namespace VampireSurvivors.UI
 
 namespace VampireSurvivors.Objects.Pickups
 {
-    public enum ItemType { GEM, RELIC, ROSARY, MAP_TOKEN, COIN, TREASURE, CLOVER }
-    public class Pickup : UnityEngine.Component { public ItemType PickupType; }
+    public enum ItemType { GEM, RELIC, ROSARY, MAP_TOKEN, COIN, TREASURE, CLOVER, WEAPON, TELEPORTER }
+    public class Pickup : UnityEngine.Component
+    {
+        public ItemType PickupType;
+        public bool IsStagePickup, HasMapTokenData;
+        public string MapTokenFrameName, MapTokenTexture;
+    }
     public class TreasureChest : UnityEngine.Component { }
 }
 namespace VampireSurvivors.UI

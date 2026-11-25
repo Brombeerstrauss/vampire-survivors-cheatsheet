@@ -185,16 +185,22 @@ zusätzlich zum aktuellen Build oder zum Charakter passt; diese Karten stehen ob
 - Gegenstände wie die Pausenkarte des Spiels: `MapManager.GetAllWorldItems()` (privat, per Reflection;
   der MapManager wird mit `Resources.FindObjectsOfTypeAll` gesucht, auch inaktiv), Truhen per
   `FindObjectsOfType(TreasureChest)`. Erfahrungs-Edelsteine (`GEM`) ausgelassen.
-- Gruppen: Truhen (`CHEST`, `*TREASURE*`), Kleinkram (Liste des Spiels `MapManager._minorItemTypes`
+- Zusätzlich alle aktiven `Pickup`-Objekte der Szene (`FindObjectsOfType`, alle 3 s, ohne `GEM`):
+  Stage-Gegenstände vom Start und Portale stehen nicht in `GetAllWorldItems`. Doppelte werden über
+  den nativen Zeiger erkannt. Hat ein Pickup ein Kartensymbol (`HasMapTokenData`, `MapTokenFrameName`,
+  `MapTokenTexture`), wird das gezeichnet. 15 s nach Laufbeginn einmal Log `[Minimap] pickups from the
+  map's list … more in the scene …` und Mitglieder von Stage/MapManager/GameManager mit passenden Namen.
+  Bei zu vielen Punkten fällt Kleinkram zuerst weg (max. 150).
+- Gruppen: Münzen (`*COIN*`, `*GOLDPILE*`, standardmäßig aus), Truhen (`CHEST`, `*TREASURE*`), Kleinkram (Liste des Spiels `MapManager._minorItemTypes`
   + eigene Liste in `MinimapReader.MinorKinds`), Rest = Relikte/Items.
 - Gegner: `GameManager.Stage._spawnedEnemies` (bzw. `SpawnedEnemies`), Boss über `IsBoss`, Typ über
   `EnemyType`. Normale Gegner rote Punkte (nur in Reichweite, max. 250), Bosse mit eigenem Bild (max. 20).
 - Bedienung: F8 schaltet der Reihe nach beide → nichts → nur Overlay → nur Karte; mit der Maus ziehen
   (Position wird gespeichert); F9 setzt Overlay und Karte zurück; **F7** öffnet das Menü unter der Karte:
-  Gegner (alle/Bosse/aus), Truhen, Relikte/Items, Kleinkram, Größe −/+, Reichweite −/+, Kartenbild,
-  Position zurücksetzen.
+  Gegner (alle/Bosse/aus), Truhen, Relikte/Items, Kleinkram, Münzen, Kartenbild, Größe −/+,
+  Reichweite −/+, Position zurücksetzen.
 - Einstellungen `[Minimap]`: `Enabled`, `Visible`, `Size`, `X`, `Y`, `Range`, `Opacity`, `Enemies`,
-  `Chests`, `Relics`, `Minor`, `IconSize`, `StageMap`, `MenuKey`, `IntervalMs`.
+  `Chests`, `Relics`, `Minor`, `Coins`, `IconSize`, `StageMap`, `MenuKey`, `IntervalMs`.
 - **Kartenbild** (`StageMap.cs`): Hat die Stage ein Kartenbild in der Pausenkarte
   (`MapManager._detailedMapSprite`), zeigt die Minimap den Ausschnitt um den Spieler dahinter. Die
   Umrechnung Welt -> Bild rechnet das Spiel intern (Formel unbekannt), deshalb lernt der Mod sie:
