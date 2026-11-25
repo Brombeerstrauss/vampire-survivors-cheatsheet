@@ -72,6 +72,10 @@ public static class MinimapTest
         Plugin.MinimapMinor = new BepInEx.Configuration.ConfigEntry<bool> { Value = true };
         Plugin.MinimapCoins = new BepInEx.Configuration.ConfigEntry<bool> { Value = false };
         map.Items.Add(At(new Pickup { PickupType = ItemType.COIN }, 12, 6));
+        map.Items.Add(At(new Pickup { PickupType = ItemType.COINBAGMAX }, 13, 6));
+        map.Items.Add(At(new Pickup { PickupType = ItemType.STATIC_GOLDPILE }, 14, 6));
+        map.Items.Add(At(new Pickup { PickupType = ItemType.GILDED }, 15, 6));
+        map.Items.Add(At(new Pickup { PickupType = ItemType.TP_KARMA_COIN }, 16, 6));
         string Kinds() { MinimapReader.Read(points, 40000, out _, out _); return string.Join(",", System.Linq.Enumerable.Select(points, pt => pt.Kind)); }
         Console.WriteLine("all groups: " + Kinds());
         Plugin.MinimapMinor.Value = false;

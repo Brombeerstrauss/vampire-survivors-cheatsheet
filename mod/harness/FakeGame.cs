@@ -26,7 +26,7 @@ namespace VampireSurvivors.UI
 
 namespace VampireSurvivors.Objects.Pickups
 {
-    public enum ItemType { GEM, RELIC, ROSARY, MAP_TOKEN, COIN, TREASURE, CLOVER, WEAPON, TELEPORTER }
+    public enum ItemType { GEM, RELIC, ROSARY, MAP_TOKEN, COIN, TREASURE, CLOVER, WEAPON, TELEPORTER, COINBAGMAX, STATIC_GOLDPILE, GILDED, TP_KARMA_COIN }
     public class Pickup : UnityEngine.Component
     {
         public ItemType PickupType;

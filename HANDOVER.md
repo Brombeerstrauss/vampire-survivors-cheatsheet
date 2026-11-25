@@ -191,7 +191,8 @@ zusätzlich zum aktuellen Build oder zum Charakter passt; diese Karten stehen ob
   `MapTokenTexture`), wird das gezeichnet. 15 s nach Laufbeginn einmal Log `[Minimap] pickups from the
   map's list … more in the scene …` und Mitglieder von Stage/MapManager/GameManager mit passenden Namen.
   Bei zu vielen Punkten fällt Kleinkram zuerst weg (max. 150).
-- Gruppen: Münzen (`*COIN*`, `*GOLDPILE*`, standardmäßig aus), Truhen (`CHEST`, `*TREASURE*`), Kleinkram (Liste des Spiels `MapManager._minorItemTypes`
+- Gruppen: Münzen = alles, was Gold gibt (`COIN`, `COINBAG1/2/MAX`, `ALWAYS_COINBAG2`, `STATIC_GOLDPILE`,
+  `GILDED`; nicht `TP_KARMA_COIN`, nicht `GOLDFINGER`; standardmäßig aus), Truhen (`CHEST`, `*TREASURE*`), Kleinkram (Liste des Spiels `MapManager._minorItemTypes`
   + eigene Liste in `MinimapReader.MinorKinds`), Rest = Relikte/Items.
 - Gegner: `GameManager.Stage._spawnedEnemies` (bzw. `SpawnedEnemies`), Boss über `IsBoss`, Typ über
   `EnemyType`. Normale Gegner rote Punkte (nur in Reichweite, max. 250), Bosse mit eigenem Bild (max. 20).
