@@ -50,6 +50,7 @@ public class Plugin : BasePlugin
     internal static ConfigEntry<bool> MinimapChests;
     internal static ConfigEntry<bool> MinimapRelics;
     internal static ConfigEntry<bool> MinimapMinor;
+    internal static ConfigEntry<bool> MinimapCoins;
     internal static ConfigEntry<KeyCode> MenuKey;
     internal static ConfigEntry<bool> MinimapStageMap;
     internal static ConfigEntry<float> MinimapIconSize;
@@ -102,7 +103,8 @@ public class Plugin : BasePlugin
             "Also switched in the map's menu (MenuKey).");
         MinimapChests = Config.Bind("Minimap", "Chests", true, "Show treasure chests.");
         MinimapRelics = Config.Bind("Minimap", "Relics", true, "Show relics and stage items (weapons, coffins, merchants...).");
-        MinimapMinor = Config.Bind("Minimap", "Minor", true, "Show small pickups (coins, food, rosaries, vacuums...).");
+        MinimapMinor = Config.Bind("Minimap", "Minor", true, "Show small pickups (food, rosaries, vacuums...).");
+        MinimapCoins = Config.Bind("Minimap", "Coins", false, "Show coins, coin bags and gold piles.");
         MinimapStageMap = Config.Bind("Minimap", "StageMap", true,
             "Show the stage's map image (the one the game's pause map shows, e.g. after picking up a stage's map) behind the map. " +
             "It is learned once per stage: open the pause menu's map twice, standing still, at places at least half a screen apart " +
@@ -446,6 +448,7 @@ public class BridgeBehaviour : MonoBehaviour
             case MinimapOverlay.Chests: Plugin.MinimapChests.Value = !Plugin.MinimapChests.Value; break;
             case MinimapOverlay.Relics: Plugin.MinimapRelics.Value = !Plugin.MinimapRelics.Value; break;
             case MinimapOverlay.Minor: Plugin.MinimapMinor.Value = !Plugin.MinimapMinor.Value; break;
+            case MinimapOverlay.Coins: Plugin.MinimapCoins.Value = !Plugin.MinimapCoins.Value; break;
             case MinimapOverlay.Smaller: Plugin.MinimapSize.Value = MinimapOverlay.NextSize(Plugin.MinimapSize.Value, -1); break;
             case MinimapOverlay.Larger: Plugin.MinimapSize.Value = MinimapOverlay.NextSize(Plugin.MinimapSize.Value, 1); break;
             case MinimapOverlay.Closer: Plugin.MinimapRange.Value = MinimapOverlay.NextRange(Plugin.MinimapRange.Value, -1); break;

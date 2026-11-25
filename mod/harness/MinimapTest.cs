@@ -70,6 +70,8 @@ public static class MinimapTest
         Plugin.MinimapChests = new BepInEx.Configuration.ConfigEntry<bool> { Value = true };
         Plugin.MinimapRelics = new BepInEx.Configuration.ConfigEntry<bool> { Value = true };
         Plugin.MinimapMinor = new BepInEx.Configuration.ConfigEntry<bool> { Value = true };
+        Plugin.MinimapCoins = new BepInEx.Configuration.ConfigEntry<bool> { Value = false };
+        map.Items.Add(At(new Pickup { PickupType = ItemType.COIN }, 12, 6));
         string Kinds() { MinimapReader.Read(points, 40000, out _, out _); return string.Join(",", System.Linq.Enumerable.Select(points, pt => pt.Kind)); }
         Console.WriteLine("all groups: " + Kinds());
         Plugin.MinimapMinor.Value = false;
@@ -78,6 +80,8 @@ public static class MinimapTest
         Console.WriteLine("no chests either: " + Kinds());
         Plugin.MinimapRelics.Value = false;
         Console.WriteLine("nothing: '" + Kinds() + "'");
+        Plugin.MinimapCoins.Value = true;
+        Console.WriteLine("only coins switched on: " + Kinds());
         var modes = new List<string>();
         Plugin.MinimapEnemies.Value = "ALL ";
         for (int k = 0; k < 4; k++) { modes.Add(Plugin.EnemyMode()); Plugin.NextEnemyMode(); }

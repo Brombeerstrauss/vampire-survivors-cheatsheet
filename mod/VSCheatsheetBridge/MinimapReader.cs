@@ -79,10 +79,12 @@ internal static class MinimapReader
     };
     private static readonly HashSet<string> GameMinorKinds = new();
 
-    private enum ItemGroup { Chest, Relic, Minor }
+    private enum ItemGroup { Chest, Relic, Minor, Coin }
 
+    // Coins: COIN, COINBAG1/2/MAX, ALWAYS_COINBAG2, TP_KARMA_COIN, STATIC_GOLDPILE (setting Minimap.Coins).
     private static ItemGroup GroupOf(string kind) =>
         kind == "CHEST" || kind.Contains("TREASURE") ? ItemGroup.Chest
+        : kind.Contains("COIN") || kind.Contains("GOLDPILE") ? ItemGroup.Coin
         : MinorKinds.Contains(kind) || GameMinorKinds.Contains(kind) ? ItemGroup.Minor
         : ItemGroup.Relic;
 
@@ -90,6 +92,7 @@ internal static class MinimapReader
     {
         ItemGroup.Chest => Plugin.MinimapChests?.Value ?? true,
         ItemGroup.Minor => Plugin.MinimapMinor?.Value ?? true,
+        ItemGroup.Coin => Plugin.MinimapCoins?.Value ?? false,
         _ => Plugin.MinimapRelics?.Value ?? true,
     };
 
@@ -168,7 +171,7 @@ internal static class MinimapReader
 
         foreach (var f in enemies.OrderBy(f => f.d).Take(MaxEnemies)) points.Add(f.point);
         // Small pickups last when there are too many: a far portal matters more than a near coin.
-        foreach (var f in items.OrderBy(f => GroupOf(f.point.Kind) == ItemGroup.Minor ? 1 : 0).ThenBy(f => f.d).Take(MaxItems))
+        foreach (var f in items.OrderBy(f => GroupOf(f.point.Kind) is ItemGroup.Minor or ItemGroup.Coin ? 1 : 0).ThenBy(f => f.d).Take(MaxItems))
             points.Add(f.point);
         foreach (var f in bosses.OrderBy(f => f.d).Take(MaxBosses)) points.Add(f.point);
 
